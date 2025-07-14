@@ -9,96 +9,85 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "languages": [ 
-      {
-        "language": "en",
-      },
-      {
-        "language": "es",
-        "dropdowns": [
-          {
-            "dropdown": "Documentación",
-            "icon": "book",
-            "description": "Cómo usar el producto de Example Co.",
-          },
-          {
-            "dropdown": "Changelog",
-            "icon": "history",
-            "description": "Actualizaciones y cambios",
-          }
-        ]
-      }
-    ] 
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "UNIDEX Consoles",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-       ]
-    }
+    "languages": [
+            {
+              "language": "en",
+              "tabs": [
+                  {
+                    "tab": "Guides",
+                    "groups": [
+                      {
+                        "group": "Get Started",
+                        "pages": [
+                          "index",
+                          "quickstart",
+                          "development"
+                        ]
+                      },
+                      {
+                        "group": "Essentials",
+                        "pages": [
+                          "essentials/markdown",
+                          "essentials/code",
+                          "essentials/images",
+                          "essentials/settings",
+                          "essentials/navigation",
+                          "essentials/reusable-snippets"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tab": "UNIDEX Consoles",
+                    "groups": [
+                      {
+                        "group": "API Documentation",
+                        "pages": [
+                          "api-reference/introduction"
+                        ]
+                      },
+                      {
+                        "group": "Endpoint Examples",
+                        "pages": [
+                          "api-reference/endpoint/get",
+                          "api-reference/endpoint/create",
+                          "api-reference/endpoint/delete",
+                          "api-reference/endpoint/webhook"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tab": "API Reference",
+                    "groups": [
+                      {
+                        "group": "API Documentation",
+                        "pages": [
+                          "api-reference/introduction"
+                        ]
+                      },
+                      {
+                        "group": "Endpoint Examples",
+                        "pages": [
+                          "api-reference/endpoint/get",
+                          "api-reference/endpoint/create",
+                          "api-reference/endpoint/delete",
+                          "api-reference/endpoint/webhook"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "global": {
+                  "anchors": [
+                   ]
+                }
+            },
+            {
+                "language": "es",
+                "dropdowns": []
+            }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
