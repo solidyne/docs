@@ -9,6 +9,26 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "languages": [ 
+      {
+        "language": "en",
+      },
+      {
+        "language": "es",
+        "dropdowns": [
+          {
+            "dropdown": "Documentación",
+            "icon": "book",
+            "description": "Cómo usar el producto de Example Co.",
+          },
+          {
+            "dropdown": "Changelog",
+            "icon": "history",
+            "description": "Actualizaciones y cambios",
+          }
+        ]
+      }
+    ] 
     "tabs": [
       {
         "tab": "Guides",
