@@ -48,27 +48,29 @@
                       },
                       {
                         "group": "UX24",
-                        {
-                          "group": "Instalacion",
-                          "pages": [
-                            "api-reference/endpoint/get",
-                            "api-reference/endpoint/create",
-                            "api-reference/endpoint/delete",
-                            "api-reference/endpoint/webhook"
-                          ]
-                        },
-                        {
-                          "group": "Operacion",
-                          "pages": [
-                            "api-reference/introduction"
-                          ]
-                        },
-                        {
-                          "group": "Control Remoto",
-                          "pages": [
-                            "api-reference/introduction"
-                          ]
-                        }
+                        "pages": [
+                            {
+                              "group": "Instalacion",
+                              "pages": [
+                                "api-reference/endpoint/get",
+                                "api-reference/endpoint/create",
+                                "api-reference/endpoint/delete",
+                                "api-reference/endpoint/webhook"
+                              ]
+                            },
+                            {
+                              "group": "Operacion",
+                              "pages": [
+                                "api-reference/introduction"
+                              ]
+                            },
+                            {
+                              "group": "Control Remoto",
+                              "pages": [
+                                "api-reference/introduction"
+                              ]
+                            }
+                        ]
                       }
                     ]
                   }
