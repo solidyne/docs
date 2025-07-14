@@ -41,20 +41,32 @@
                     "tab": "Consolas UNIDEX",
                     "groups": [
                       {
-                        "group": "API Documentation",
+                        "group": "Introducion",
                         "pages": [
                           "api-reference/introduction"
                         ]
                       },
                       {
-                        "group": "Endpoint Examples",
+                        "group": "Instalacion",
                         "pages": [
                           "api-reference/endpoint/get",
                           "api-reference/endpoint/create",
                           "api-reference/endpoint/delete",
                           "api-reference/endpoint/webhook"
                         ]
-                      }
+                      },
+                      {
+                        "group": "Operacion",
+                        "pages": [
+                          "api-reference/introduction"
+                        ]
+                      },
+                      {
+                        "group": "Control Remoto",
+                        "pages": [
+                          "api-reference/introduction"
+                        ]
+                      },
                     ]
                   }
                 ]
