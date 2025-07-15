@@ -1,0 +1,77 @@
+---
+title: "UX24-instalacion"
+description: "Instalacion de consola UX24"
+---
+
+# Fuente de alimentación
+
+La unidad cuenta con una fuente de alimentación interna de tipo conmutada, **110/240V 50/60Hz.**
+
+En el panel trasero (ver imagen a continuación) se ubica la llave de encendido; el fusible general (1A) y el conector para el cable de alimentación (tipo Interlock) que se provee junto a la consola.
+
+![ux24-power-input](/images/ux24/ux24_powerinput.png)
+
+# Puesta a tierra
+
+UX24 se conecta a tierra a través del cable del alimentación. No utilizar adaptadores o cables que supriman la clavija de toma a tierra. Se recomienda además conectar el borne de puesta a tierra del chasis a la tierra de la instalación, usando cable de 4 mm o superior.
+
+La instalación eléctrica general debe contar con una puesta a tierra adecuada. Como referencia, en la Sección 7 – DIAGRAMAS Y ANEXOS, hay un plano de instalación de puesta a tierra para una FM.
+
+<Danger>
+  **¡ATENCIÓN\!**
+
+  **Verificar que la computadora vinculada directamente a UX24 por USB tenga una puesta a tierra adecuada.**
+</Danger>
+
+
+# Sobre el cableado RJ45
+
+Las consolas vienen con sus entradas y salidas provistas de **conectores tipo RJ45 y se cablean con cable multipar CAT-5 blindado.**
+
+Con el advenimiento del audio sobre IP (AoIP) se comenzaron a usar conectores RJ45 y cable multipar blindado para reemplazar a los distintos conectores de audio, estandarizando toda la instalación con un único tipo de conector y un mismo tipo de cable. El uso de estos conectores permitió además reducir el tamaño de las consolas.
+
+El uso de cable estructurado facilita la instalación pues se proyecta el cableado con un único tipo de cable, que no requiere soldaduras, y que puede transporte señales analógicas, audio digital o datos. La conexión a una entrada o salida de audio convencional (micrófonos, parlantes, reproductores, interfaces) seguirá requiriendo algún tipo de conector de audio. Para eso se ofrecen tramos de terminación RJ-45 hembra al conector de audio que sea necesario.
+
+# Kits de cables pre-armados
+
+Solidyne provee (opcionalmente) kits de cables y adaptadores pensados para realizar la conexión de la consola sin realizar soldaduras. Las opciones:
+
+- Kit genérico de cables pre-armados para instalaciones nuevas.
+- Kit genérico de tramos adaptadores para conectar la UNIDEX en instalaciones pre-existentes.
+- Kit personalizado por el usuario.
+
+En los siguientes enlace se detallan todas las opciones de cables disponibles:
+
+http://www.solidynepro.com/consola-de-audio-de-bc-accesorios-y-cables/
+
+Inventario de cables y adaptadores (PDF) 
+
+https://www.solidynepro.com/descargas/folletos_ingles/RJ45cablesUDX-EngCast.pdf
+
+# Panel trasero
+
+El panel trasero concentra todas las conexiones de la consola. Se emplean conectores RJ45 para todas las conexiones de audio, con excepción de las salidas para auriculares y parlantes de la cabina de control.
+
+<Tip>
+  Cada entrada se puede asignar a cualquiera de los 24 canales, físicos o virtuales.
+</Tip>
+
+Las señal en las salidas (excepto las salidas PGM) se pueden configurar a cualquiera de los buses, o a algunas de las entradas. Los niveles/ganancias y otros parámetros de las E/S se configuran desde la pantalla táctil (ver SECCIÓN 4 – Puesta en marcha y ruteo).
+
+<Info>
+  En la Sección 7 – DIAGRAMAS Y ANEXOS, se incluye una infografía (PDF en línea) que resume las opciones de conexión de UNIDEX UX24.
+</Info>
+
+![Ux24 Rearpanel Notes Pn](/images/ux24/ux24_rearpanel_notes.png)
+
+### <Icon icon="a" iconType="regular" color="#3864ff" size={22} /> **- **Entradas para micrófonos
+
+La consola cuenta con cuatro entradas para micrófonos, balanceadas electrónicamente. Tienen alimentación de 48V conmutable en cada entrada. Usan conectores RJ45, que se conectan usando un cable SOL-M25/1XLRF (RJ45 macho a XLR hembra, 2,5 metros). También se pueden adquirir tramos cortos para conectar a XLR cerca de la consola.
+
+Los 4 micro-interruptores permiten cambiar en -12dB la ganancia de los preamplificadores. El interruptor hacia abajo reduce la ganancia.
+
+<Note>
+  NOTA
+
+  Los pines del RJ45 son compatibles con cables RJ45-XLR estéreo balanceados, pero la entrada de micrófono utiliza solo los pines del canal IZQUIERDO. Si utiliza un cable adaptador estéreo balanceado, el XLR derecho queda sin utilizar.
+</Note>

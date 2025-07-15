@@ -43,7 +43,7 @@
                       {
                         "group": "Introducion",
                         "pages": [
-                          "api-reference/introduction"
+                          "unidex/unidex"
                         ]
                       },
                       {
@@ -52,22 +52,19 @@
                             {
                               "group": "Instalacion",
                               "pages": [
-                                "api-reference/endpoint/get",
-                                "api-reference/endpoint/create",
-                                "api-reference/endpoint/delete",
-                                "api-reference/endpoint/webhook"
+                                "unidex/ux24-instalacion",
                               ]
                             },
                             {
                               "group": "Operacion",
                               "pages": [
-                                "api-reference/introduction"
+                                "api-reference/endpoint/get"
                               ]
                             },
                             {
                               "group": "Control Remoto",
                               "pages": [
-                                "api-reference/introduction"
+                                "api-reference/endpoint/create"
                               ]
                             }
                         ]
