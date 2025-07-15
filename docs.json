@@ -43,7 +43,7 @@
                       {
                         "group": "Introducion",
                         "pages": [
-                          "unidex/unidex"
+                          "api-reference/endpoint/webhook"
                         ]
                       },
                       {
@@ -52,7 +52,7 @@
                             {
                               "group": "Instalacion",
                               "pages": [
-                                "unidex/ux24-instalacion",
+                                "unidex/ux24-instalacion"
                               ]
                             },
                             {
