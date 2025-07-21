@@ -52,30 +52,6 @@
               "language": "en",
               "tabs": [
                   {
-                    "tab": "Guides",
-                    "groups": [
-                      {
-                        "group": "Get Started",
-                        "pages": [
-                          "index",
-                          "quickstart",
-                          "development"
-                        ]
-                      },
-                      {
-                        "group": "Essentials",
-                        "pages": [
-                          "essentials/markdown",
-                          "essentials/code",
-                          "essentials/images",
-                          "essentials/settings",
-                          "essentials/navigation",
-                          "essentials/reusable-snippets"
-                        ]
-                      }
-                    ]
-                  },
-                  {
                     "tab": "UNIDEX Consoles",
                     "groups": [
                       {
@@ -95,26 +71,7 @@
                       }
                     ]
                   },
-                  {
-                    "tab": "API Reference",
-                    "groups": [
-                      {
-                        "group": "API Documentation",
-                        "pages": [
-                          "api-reference/introduction"
-                        ]
-                      },
-                      {
-                        "group": "Endpoint Examples",
-                        "pages": [
-                          "api-reference/endpoint/get",
-                          "api-reference/endpoint/create",
-                          "api-reference/endpoint/delete",
-                          "api-reference/endpoint/webhook"
-                        ]
-                      }
-                    ]
-                  }
+                  
                 ],
                 "global": {
                   "anchors": [
