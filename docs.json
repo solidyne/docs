@@ -15,10 +15,16 @@
         "tabs": [                  
           {
             "tab": "Consolas UNIDEX",
-            "pages": [
-                      "es/unidex/UNIDEX-introduccion"
-              ],
             "anchors": [
+              {
+                "anchor": "UNIDEX",
+                "icon": "book-open",
+                "description": "UNIDEX UX24 y UX18",
+                "pages": [
+                      "es/unidex/UNIDEX-introduccion",
+                      "es/unidex/UNIDEX-adaptadores"
+                    ]
+              },
               {
                 "anchor": "UX24",
                 "icon": "book-open",
