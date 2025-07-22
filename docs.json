@@ -26,6 +26,14 @@
                 "pages": [
                       "es/unidex/ux24-instalacion"
                     ]
+              },
+              {
+                "anchor": "UX18",
+                "icon": "book-open",
+                "description": "Consola UX218",
+                "pages": [
+                      "es/unidex/ux24-instalacion"
+                    ]
               }
             ]
           },
