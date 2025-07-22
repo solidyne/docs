@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Solidyne Docs",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -15,52 +15,37 @@
         "tabs": [                  
           {
             "tab": "Consolas UNIDEX",
-            "dropdowns": [
+            "groups": [
               {
-                "dropdown": "UX24",
-                "icon": "book-open",
-                "description": "Consola UX24",
+                "group": "Introducción",
+                "pages": [
+                  "unidex/UNIDEX-introduccion"
+                ]
+              },
+              {
+                "group": "UX24",
                 "groups": [
                   {
-                    "group": "Introducción",
+                    "group": "Instalación",
                     "pages": [
-                      "unidex/UNIDEX-introduccion"
+                      "unidex/ux24-instalacion"
                     ]
                   },
                   {
-                    "group": "UX24",
-                    "groups": [
-                      {
-                        "group": "Instalación",
-                        "pages": [
-                          "unidex/ux24-instalacion"
-                        ]
-                      },
-                      {
-                        "group": "Operación",
-                        "pages": [
-                          "api-reference/endpoint/get"
-                        ]
-                      },
-                      {
-                        "group": "Control Remoto",
-                        "pages": [
-                          "api-reference/endpoint/create"
-                        ]
-                      }
+                    "group": "Operación",
+                    "pages": [
+                      "api-reference/endpoint/get"
+                    ]
+                  },
+                  {
+                    "group": "Control Remoto",
+                    "pages": [
+                      "api-reference/endpoint/create"
                     ]
                   }
                 ]
               }
             ]
-          },
-          {
-            "tab": "Consolas Classic",
-            "pages": []
-          },
-          {
-            "tab": "Procesadores",
-            "pages": []
           }
         ]
       },
@@ -89,10 +74,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": []
-    }
+    ]
   },
   "logo": {
     "light": "/logo/LOGOSOLIDYNE.svg",
@@ -120,3 +102,4 @@
     }
   }
 }
+
