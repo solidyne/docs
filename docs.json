@@ -29,9 +29,68 @@
                 "anchor": "UX24",
                 "icon": "book-open",
                 "description": "Consola UX24",
-                "pages": [
-                      "es/unidex/ux24-instalacion"
-                    ]
+                "groups": [
+                  {
+                    {
+    					"group": "INTRODUCCION",
+    					"pages": [
+    						"es/unidex/UNIDEX-introduccion"
+    					]
+    				},
+                    {
+    					"group": "INSTALACION",
+    					"pages": [
+    						"es/unidex/ux24-instalacion-cableado",
+                            "es/unidex/ux24-instalacion-panel",
+                            "es/unidex/ux24-instalacion-gpio",
+                            "es/unidex/ux24-instalacion-onoff",
+    					]
+    				},
+                    {
+    					"group": "ADAPTADORES UNIDEX",
+    					"pages": [
+    						"es/unidex/UNIDEX-adaptadores"
+    					]
+    				},
+                    {
+      					"group": "MONITOREO",
+      					"pages": [
+      						
+      					]
+      				},
+                    {
+      					"group": "CONFIGURACION",
+      					"pages": [
+      						
+      					]
+      				},
+                    {
+                        "group": "OPERACIÓN",
+                        "pages": [
+                            
+                        ]
+        			},
+                    {
+                        "group": "PROCESADO",
+                        "pages": [
+                            
+                        ]
+        			},
+                    {
+                        "group": "ACCESO VIA WEB",
+                        "pages": [
+                            
+                        ]
+        			},
+                    {
+                        "group": "ESPECIFICACIONES",
+                        "pages": [
+                            
+                        ]
+        			},
+                  }
+                  
+                ]
               },
               {
                 "anchor": "UX18",
