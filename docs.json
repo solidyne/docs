@@ -56,9 +56,9 @@
             "tab": "UNIDEX Consoles",
             "groups": [
               {
-                "group": "API Documentation",
+                "group": "Set Up",
                 "pages": [
-                  "api-reference/introduction"
+                  "unidex-eng/ux24_installation"
                 ]
               },
               {
