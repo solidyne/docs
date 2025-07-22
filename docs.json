@@ -18,9 +18,9 @@
             "pages": [
                       "es/unidex/UNIDEX-introduccion"
               ],
-            "dropdowns": [
+            "anchors": [
               {
-                "dropdown": "UX24",
+                "anchor": "UX24",
                 "icon": "book-open",
                 "description": "Consola UX24",
                 "pages": [
