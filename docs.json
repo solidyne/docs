@@ -15,6 +15,9 @@
         "tabs": [                  
           {
             "tab": "Consolas UNIDEX",
+            "pages": [
+                      "es/unidex/UNIDEX-introduccion"
+              ],
             "dropdowns": [
               {
                 "dropdown": "UX24",
@@ -42,23 +45,9 @@
         "tabs": [
           {
             "tab": "UNIDEX Consoles",
-            "groups": [
-              {
-                "group": "Set Up",
-                "pages": [
-                  "unidex-eng/ux24_installation"
+            "pages": [
+                  "en/ux24_installation"
                 ]
-              },
-              {
-                "group": "Endpoint Examples",
-                "pages": [
-                  "api-reference/endpoint/get",
-                  "api-reference/endpoint/create",
-                  "api-reference/endpoint/delete",
-                  "api-reference/endpoint/webhook"
-                ]
-              }
-            ]
           }
         ]
       }
