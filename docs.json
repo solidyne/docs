@@ -74,10 +74,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": []
-    }
+    ]
   },
   "logo": {
     "light": "/logo/LOGOSOLIDYNE.svg",
