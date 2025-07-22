@@ -10,75 +10,74 @@
   "favicon": "/favicon.svg",
   "navigation": {
     "languages": [
-            {
-                "language": "es",
-                "tabs": [                  
+      {
+        "language": "es",
+        "tabs": [                  
+          {
+            "tab": "Consolas UNIDEX",
+            "groups": [
+              {
+                "group": "Introducción",
+                "pages": [
+                  "unidex/UNIDEX-introduccion"
+                ]
+              },
+              {
+                "group": "UX24",
+                "groups": [
                   {
-                    "tab": "Consolas UNIDEX",
-                    "groups": [
-                      {
-                        "group": "Introdución",
-                        "pages": [  "UNIDEX-introduccion.mdx"                        
-                        ]
-                      },
-                      {
-                        "group": "UX24",
-                        "pages": [
-                            {
-                              "group": "Instalación",
-                              "pages": [
-                                "unidex/ux24-instalacion"
-                              ]
-                            },
-                            {
-                              "group": "Operacion",
-                              "pages": [
-                                "api-reference/endpoint/get"
-                              ]
-                            },
-                            {
-                              "group": "Control Remoto",
-                              "pages": [
-                                "api-reference/endpoint/create"
-                              ]
-                            }
-                        ]
-                      }
+                    "group": "Instalación",
+                    "pages": [
+                      "unidex/ux24-instalacion"
+                    ]
+                  },
+                  {
+                    "group": "Operación",
+                    "pages": [
+                      "api-reference/endpoint/get"
+                    ]
+                  },
+                  {
+                    "group": "Control Remoto",
+                    "pages": [
+                      "api-reference/endpoint/create"
                     ]
                   }
                 ]
-            },
-            {
-              "language": "en",
-              "tabs": [
-                  {
-                    "tab": "UNIDEX Consoles",
-                    "groups": [
-                      {
-                        "group": "API Documentation",
-                        "pages": [
-                          "api-reference/introduction"
-                        ]
-                      },
-                      {
-                        "group": "Endpoint Examples",
-                        "pages": [
-                          "api-reference/endpoint/get",
-                          "api-reference/endpoint/create",
-                          "api-reference/endpoint/delete",
-                          "api-reference/endpoint/webhook"
-                        ]
-                      }
-                    ]
-                  },
-                  
-                ],
-                "global": {
-                  "anchors": [
-                   ]
-                }
-            }
-    ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "UNIDEX Consoles",
+            "groups": [
+              {
+                "group": "API Documentation",
+                "pages": [
+                  "api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Endpoint Examples",
+                "pages": [
+                  "api-reference/endpoint/get",
+                  "api-reference/endpoint/create",
+                  "api-reference/endpoint/delete",
+                  "api-reference/endpoint/webhook"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": []
+    }
   },
   "logo": {
     "light": "/logo/LOGOSOLIDYNE.svg",
