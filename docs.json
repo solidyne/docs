@@ -15,6 +15,7 @@
         "tabs": [                  
           {
             "tab": "Consolas UNIDEX",
+            "pages": ["index"],
             "groups": [
               {
                 "group": "Introducción",
