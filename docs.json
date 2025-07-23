@@ -39,43 +39,52 @@
                     {
     					"group": "ADAPTADORES UNIDEX",
     					"pages": [
-    						"es/unidex/UNIDEX-adaptadores"
+    						"es/unidex/UNIDEX-adaptadores",
+                            "es/unidex/UDX-2MIC",
+                            "es/unidex/UDX-2TEL"
     					]
     				},
                     {
       					"group": "MONITOREO",
       					"pages": [
-      						
+      						"es/unidex/ux-StudioBox-HD5",
+                            "es/unidex/ux-StudioBox-HD3"
       					]
       				},
                     {
       					"group": "CONFIGURACION",
       					"pages": [
-      						
+      						"es/unidex/ux24-EntradasySalidas",
+                            "es/unidex/ux24-sistema"
       					]
       				},
                     {
                         "group": "OPERACIÓN",
                         "pages": [
-                            
+                            "es/unidex/ux24-op-zonas",
+                            "es/unidex/ux24-op-canales"
                         ]
         			},
                     {
                         "group": "PROCESADO",
                         "pages": [
-                            
+                            "es/unidex/ux-proc-eq",
+                            "es/unidex/ux-proc-dynamic",
+                            "es/unidex/ux-proc-deesser"
                         ]
         			},
                     {
                         "group": "ACCESO VIA WEB",
                         "pages": [
-                            
+                            "es/unidex/ux24-remote-conect",
+                          "es/unidex/ux24-remote-interfaz",
+                          "es/unidex/ux24-remote-firmware"
                         ]
         			},
                     {
                         "group": "ESPECIFICACIONES",
                         "pages": [
-                            
+                            "es/unidex/ux24-especificaciones"
                         ]
         			} 
                 ]
@@ -92,11 +101,11 @@
           },
           {
             "tab": "Consolas Classic",
-            "pages": []
+            "pages": ["es/classic-index"]
           },
           {
             "tab": "Procesadores",
-            "pages": []
+            "pages": ["es/procesadores-index"]
           }
         ]
       },
