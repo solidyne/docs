@@ -30,7 +30,6 @@
                 "icon": "book-open",
                 "description": "Consola UX24",
                 "groups": [
-                  {
                     {
     					"group": "INTRODUCCION",
     					"pages": [
@@ -43,7 +42,7 @@
     						"es/unidex/ux24-instalacion-cableado",
                             "es/unidex/ux24-instalacion-panel",
                             "es/unidex/ux24-instalacion-gpio",
-                            "es/unidex/ux24-instalacion-onoff",
+                            "es/unidex/ux24-instalacion-onoff"
     					]
     				},
                     {
@@ -87,9 +86,7 @@
                         "pages": [
                             
                         ]
-        			},
-                  }
-                  
+        			} 
                 ]
               },
               {
