@@ -1,0 +1,94 @@
+---
+title: "Armado de cables con RJ45"
+description: "Diagramas para el cableado estructurado"
+---
+
+Para preparar los cables de conexión, se recomienda:
+
+- Utilizar conectores **RJ45 blindados**.
+- Usar cable **CAT-5 STP o S/FTP de primera calidad**.
+- Asegurarse de que el blindaje del conector esté correctamente unido a la malla del cable.
+
+La siguiente tabla muestra la nomenclatura estándar de colores y numeración del conector RJ45.
+
+## Nomenclatura estándar del conector RJ45
+
+<img
+  src="/images/RJ-45_TIA-568B.png"
+  alt="RJ45 vista frontal - Pines según TIA-568B"
+  style={{ maxWidth:"300px",height:"auto",marginBottom:"1rem" }}
+/>
+
+| **PIN** | **COLOR DE CABLE** |
+| :-----: | ------------------ |
+| 1       | Naranja / Blanco   |
+| 2       | Naranja            |
+| 3       | Verde / Blanco     |
+| 4       | Azul               |
+| 5       | Azul / Blanco      |
+| 6       | Verde              |
+| 7       | Marrón / Blanco    |
+| 8       | Marrón             |
+
+## Configuración de pines para conexiones de audio balanceadas
+
+| **PIN** | **FUNCIÓN**            | **COLOR DE CABLE** |
+| :-----: | ---------------------- | ------------------ |
+| 1       | Canal izquierdo (\+)   | Naranja / Blanco   |
+| 2       | Canal izquierdo (–)    | Naranja            |
+| 3       | Canal derecho (\+)     | Verde / Blanco     |
+| 4       | Tierra                 | Azul               |
+| 5       | Reservado              | Azul / Blanco      |
+| 6       | Canal derecho (–)      | Verde              |
+| 7       | –15 V (opcionalmente)  | Marrón / Blanco    |
+| 8       | \+15 V (opcionalmente) | Marrón             |
+
+## Configuración de pines para conexiones de audio NO balanceadas
+
+| **PIN** | **FUNCIÓN**            | **COLOR DE CABLE** |
+| :-----: | ---------------------- | ------------------ |
+| 1       | Canal izquierdo (\+)   | Naranja / Blanco   |
+| 2       | NC                     | Naranja            |
+| 3       | Canal derecho (\+)     | Verde / Blanco     |
+| 4       | Tierra                 | Azul               |
+| 5       | Reservado              | Azul / Blanco      |
+| 6       | NC                     | Verde              |
+| 7       | –15 V (opcionalmente)  | Marrón / Blanco    |
+| 8       | \+15 V (opcionalmente) | Marrón             |
+
+## Patchs adapadores a conectores de audio convencionales
+
+### RJ45 a RCA no balanceado
+
+<img
+  src="/images/RJ45-a-RCA.jpg"
+  alt="RJ45 a RCA"
+  style={{ maxWidth:"550px",height:"auto",marginBottom:"1rem" }}
+/>
+
+### RJ45 a XLR balanceado
+
+<img
+  src="/images/RJ45-a-XLR.jpg"
+  alt="RJ45 a RCA"
+  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
+/>
+
+<Info>
+  - Las entradas de **MICRÓFONO** RJ45 hembra en la UX24 usan solo el **canal IZQUIERDO** de la conexión balanceada.
+  - Solidyne provee los cables SOL-M25/1XLRF y SOL-M12/1XLRF para conexión de micrófonos (un único XLR conectado al canal izquierdo).
+</Info>
+
+### RJ45 a plug TRS balanceado
+
+<img
+  src="/images/RJ45-a-TRS.jpg"
+  alt="RJ45 a RCA"
+  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
+/>
+
+<Warning>
+  Los adaptadores SOL-M12/minijack (a miniplug hembra) se pueden conectar a SALIDAS balanceadas o no balanceadas. No se recomienda para desbalancear entradas dado que dejan sin conectar el pin (-) pudiendo introducir ruido.
+
+  Los adaptadores SOL-M12/RCAM (a RCA macho) se pueden conectar a ENTRADAS balanceadas para desbalancearlas, dado que conectan la señal (-) del balanceado a tierra. **NO DEBEN USARSE SOBRE SALIDAS BALANCEADAS**, porque las salidas deben desbalancearse dejando el pin (-) sin conexión.
+</Warning>
