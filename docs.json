@@ -8,6 +8,13 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
+  "integrations": {
+    "scripts": [
+      "scripts/export-to-pdf.js"
+    ],
+    "stylesheets": [
+    ]
+  },
   "navigation": {
     "languages": [
       {
