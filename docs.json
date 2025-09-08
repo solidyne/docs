@@ -150,11 +150,11 @@
        "description": "download this page as PDF",
        "icon": "sparkle",
        "href": {
-         "base": "https://www.sejda.com/html-to-pdf?save-link=https://solidyne.mintlify.app/",
+         "base": "https://www.sejda.com/html-to-pdf?",
          "query": [
            {
-             "key": "",
-             "value":"$path&pageOrientation=auto"
+             "key": "save-link",
+             "value":"https://solidyne.mintlify.app/$path&pageOrientation=auto"
            }
          ]
         }
