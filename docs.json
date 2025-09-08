@@ -144,7 +144,13 @@
   },
   "contextual": {
     "options": [
-      "copy"
+      "copy",
+      {
+        "title": "download PDF",
+        "description": "download this page as PDF",
+        "icon": "x",
+        "href": "https://www.sejda.com/html-to-pdf?save-link=$page&pageOrientation=auto"
+      }
    ]
   },
   "footer": {
