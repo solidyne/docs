@@ -146,11 +146,33 @@
     "options": [
       "copy",
       {
-        "title": "download PDF",
-        "description": "download this page as PDF",
-        "icon": "x",
-        "href": "https://www.sejda.com/html-to-pdf?save-link=$page&pageOrientation=auto"
-      }
+       "title": "Download PDF",
+       "description": "download this page as PDF",
+       "icon": "sparkle",
+       "href": {
+         "base": "https://www.sejda.com/html-to-pdf?pageOrientation=auto&",
+         "query": [
+           {
+             "key": "save-link",
+             "value": "https://solidyne.mintlify.app/$path"
+           }
+         ]
+        }
+       },
+      {
+       "title": "Ask Gemini",
+       "description": "Ask Google Gemini about the current page",
+       "icon": "sparkle",
+       "href": {
+         "base": "https://gemini.google.com/app",
+         "query": [
+           {
+             "key": "q",
+             "value": "Ask question about https://mintlify.com/docs$path.md"
+           }
+         ]
+        }
+       }
    ]
   },
   "footer": {
