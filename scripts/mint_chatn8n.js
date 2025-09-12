@@ -1,5 +1,3 @@
-
-
 const agentInitScript2 = document.createElement("script");
 agentInitScript2.type = "module";
 agentInitScript2.innerHTML = `
@@ -38,7 +36,7 @@ agentInitScript2.innerHTML = `
         "title": "SOLIDYNE AI",
         "titleAvatarSrc": "https://www.svgrepo.com/show/339963/chat-bot.svg",
         "avatarSize": 34,
-        "welcomeMessage": "Hola ! puedes consultar y te responderé solo con información de nuestra documentación.\n\nHello! You can ask questions and I will respond with information from the documentation. \n\n",
+        "welcomeMessage": "Hola ! puedes consultar y te responderé solo con información de nuestra documentación.\\n\\nHello! You can ask questions and I will respond with information from the documentation. \\n\\n",
         "errorMessage": "Please connect me to n8n first",
         "backgroundColor": "#ffffff",
         "height": 800,
@@ -71,7 +69,7 @@ agentInitScript2.innerHTML = `
           "textColor": "#1e1e1f",
           "sendButtonColor": "#f36539",
           "maxChars": 100,
-          "maxCharsWarningMessage": "You exceeded the characters limit. Please input less than 100 characters.\nTe excediste en la cantidad máxima de 50 caracteres",
+          "maxCharsWarningMessage": "You exceeded the characters limit. Please input less than 100 characters.\\nTe excediste en la cantidad máxima de 50 caracteres",
           "autoFocus": false,
           "borderRadius": 13,
           "sendButtonBorderRadius": 50
