@@ -3,7 +3,8 @@ agentInitScript2.type = "module";
 agentInitScript2.innerHTML = `
   import Chatbot from "https://cdn.n8nchatui.com/v1/embed.js";
   Chatbot.init({
-    "n8nChatUrl": "YOUR_N8N_CHAT_TRIGGER_NODE_WEBHOOK_URL",
+    "n8nChatUrl": "http://ip.solidynepro.com:5678/webhook-test/bf4dd093-bb02-472c-9454-7ab9af97bd1d
+",
     "metadata": {}, // Include any custom data to send with each message to your n8n workflow
     "theme": {
       "button": {
@@ -37,7 +38,7 @@ agentInitScript2.innerHTML = `
         "titleAvatarSrc": "https://www.svgrepo.com/show/339963/chat-bot.svg",
         "avatarSize": 34,
         "welcomeMessage": "Hola ! puedes consultar y te responderé solo con información de nuestra documentación.\\n\\nHello! You can ask questions and I will respond with information from the documentation. \\n\\n",
-        "errorMessage": "Please connect me to n8n first",
+        "errorMessage": "El sistema esta temporalmente fuera de servicio!!\\nThe system is temporarily out of service!\\nContact: info@solidynepro.com",
         "backgroundColor": "#ffffff",
         "height": 800,
         "width": 600,
