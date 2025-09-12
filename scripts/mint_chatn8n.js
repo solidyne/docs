@@ -40,7 +40,7 @@ agentInitScript2.innerHTML = `
         "errorMessage": "Please connect me to n8n first",
         "backgroundColor": "#ffffff",
         "height": 800,
-        "width": 400,
+        "width": 600,
         "fontSize": 16,
         "starterPrompts": [
           "que diferencia tienen las consolas UX18 y UX24?",
