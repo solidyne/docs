@@ -1,7 +1,8 @@
 
-const agentInitScript = document.createElement("script");
-agentInitScript.type = "module";
-agentInitScript.innerHTML = `
+
+const agentInitScript2 = document.createElement("script");
+agentInitScript2.type = "module";
+agentInitScript2.innerHTML = `
   import Chatbot from "https://cdn.n8nchatui.com/v1/embed.js";
   Chatbot.init({
     "n8nChatUrl": "YOUR_N8N_CHAT_TRIGGER_NODE_WEBHOOK_URL",
@@ -79,4 +80,4 @@ agentInitScript.innerHTML = `
     }
     });
 `;
-document.body.append(agentInitScript);
+document.body.append(agentInitScript2);
