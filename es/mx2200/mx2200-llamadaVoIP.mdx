@@ -1,0 +1,114 @@
+---
+title: "Llamada por VoIP (SIP)"
+description: "Conectar con los Estudios vía llamada SIP"
+---
+
+La opción **SIP CALL** permite establecer una **comunicación bidireccional en tiempo real** a través de Internet.\
+Es equivalente a una llamada VoIP convencional (similar a Skype o WhatsApp).
+
+Se utiliza cuando se requiere:
+
+- Interacción inmediata con los estudios.
+- Simplicidad de conexión en redes sobre las que no se tiene control (Internet público, Wi-Fi de locaciones diversas).
+
+La comunicación se establece sin configuraciones complejas en los extremos, incluso en condiciones de **ancho de banda limitado**.
+
+- Configurada a baja tasa de bit, asegura continuidad aun con Internet restringido.
+- Configurada a máxima calidad, el audio es equivalente al sonido directo en los estudios.
+
+El uso es simple: una agenda pre-cargada muestra los contactos disponibles. El usuario selecciona uno y realiza la llamada. En el estudio, el operador recibe la comunicación en una computadora o equipo compatible. También es posible **recibir llamadas entrantes desde los estudios**.
+
+---
+
+<Tabs>
+  <Tab title="Realizar llamada SIP">
+    <Steps>
+      <Step title="Acceder al Connection Center">
+        Gire el **encoder** hasta la pantalla **CONNECTION CENTER** y púlselo para ingresar a las opciones.\
+        También puede acceder desde la pantalla principal pulsando el encoder.
+
+        <img
+          src="/images/mx2200/mx2200_display_connection_center.png"
+          alt="Mx2200 Display Connection Center Pn"
+          title="Mx2200 Display Connection Center Pn"
+          style={{ width:"51%" }}
+        />
+      </Step>
+      <Step title="Seleccionar SIP CALL">
+        En las opciones, seleccione **SIP CALL** y púlselo. Se abrirá la agenda de contactos SIP.
+
+        <img
+          src="/images/mx2200/mx2200-connection_center_agenda.png"
+          alt="Mx2200 Connection Center Agenda Pn"
+          title="Mx2200 Connection Center Agenda Pn"
+          style={{ width:"51%" }}
+        />
+      </Step>
+      <Step title="Elegir contacto">
+        Gire el encoder para seleccionar el contacto deseado.\
+        Pulse para iniciar la llamada.
+
+        <img
+          src="/images/mx2200/mx2200-connection_center_SIPcalling.png"
+          alt="Mx2200 Connection Center SI Pcalling Pn"
+          title="Mx2200 Connection Center SI Pcalling Pn"
+          style={{ width:"52%" }}
+        />
+      </Step>
+      <Step title="Conexión establecida">
+        Cuando el operador en estudios atienda, la pantalla mostrará **SIP CALL ENABLED**.
+      </Step>
+      <Step title="Finalizar la llamada">
+        Regrese al **CONNECTION CENTER** y pulse nuevamente en **SIP CALL**.
+
+        <img
+          src="/images/mx2200/mx2200-connection_center_cortar.png"
+          alt="Mx2200 Connection Center Cortar Pn"
+          title="Mx2200 Connection Center Cortar Pn"
+          style={{ width:"52%" }}
+        />
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Recibir llamada SIP">
+    Cuando el operador en los estudios llama a la MX2200:
+
+    <img
+      src="/images/mx2200/mx2200-display-atender.png"
+      alt="Mx2200 Display Atender Pn"
+      title="Mx2200 Display Atender Pn"
+      className="mx-auto"
+      style={{ width:"47%" }}
+    />
+
+    - La pantalla de MX2200 muestra un cuadro de diálogo para **Aceptar/Rechazar** la llamada.
+    - Se reproduce un **ring en CUE**.
+
+    <Warning>
+      Para poder recibir llamadas entrantes en MX2200, es necesario **desactivar el cifrado de llamadas** en el software de comunicaciones utilizado.
+
+      En Linphone: _Preferencias → Llamadas y Chat → Cifrado = Ninguno_.\
+      Si el cifrado está activo, la consola no podrá tomar la llamada.
+    </Warning>
+  </Tab>
+  <Tab title="Retorno desde Estudio">
+    - La MX2200 envía al Estudio la señal de **Programa (PGM)**.
+    - El Estudio devuelve **retorno (mix-minus)**: señal del piso sin la propia señal de la consola.
+    - La consola mezcla en **CUE** el PGM \+ retorno de Estudios.
+    - El usuario puede quitar de auriculares la señal de PGM para escuchar únicamente el **retorno de Estudios** (ver sección _Monitoreo_).
+  </Tab>
+</Tabs>
+
+## Recepción de MX2200 en los Estudios
+
+La llamada SIP puede recibirse con cualquier sistema compatible:
+
+- **DECODERs hardware**.
+- **Software VoIP** en PC.
+
+El usuario puede elegir libremente el servicio SIP:
+
+- Los servicios pagos son recomendados por estabilidad.
+- También existen opciones gratuitas, destacando [Linphone](https://www.linphone.org).
+
+En el decodificador se configura la **cuenta/contacto SIP** asignada al estudio (el contacto al que llama la consola).

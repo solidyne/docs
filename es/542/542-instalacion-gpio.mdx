@@ -1,0 +1,47 @@
+---
+title: "Señales GPIO"
+description: "Conexión de las entradas y salidas de proposito general (GPIO)"
+---
+
+## Conector GPIO
+
+Solidyne 542APC posee una entrada y una salida de propósito general (GPIO) disponibles sobre un conector tipo **DB9**. Las señales en el conector son:
+
+<img
+  src="/images/542/GPIO_DB9.png"
+  alt="GPIO DB9 Pn"
+  title="GPIO DB9 Pn"
+  style={{ width:"35%" }}
+/>
+
+| **PIN** | **SEÑAL**              |
+| ------- | ---------------------- |
+| 1       | GPI - VOLTAJE          |
+| 2       | GPI - COMÚN            |
+| 3       | NO CONECTADO           |
+| 4       | GPO - COLECTOR ABIERTO |
+| 5       | 12 VCC / 100 mA MAX    |
+| 6 a 9   | CHASIS                 |
+
+## Conexión y usos de la GPI
+
+La entrada de propósito general (GPI) permite conmutar el ajuste de procesado hacia un ajuste optimizado para voces cuando los micrófonos son activados al aire.
+
+GPI se activa aplicando una **tensión entre 5 y 15** \*\*voltios \*\*sobre el **PIN-1**. No usa referencia de tierra interna. El PIN-2 se conecta como GPI-COM a la señal externa. Esto evita lazos de realimentación que pueden producir ruido.
+
+GPI no tiene polaridad, la activación se produce con tensiones positivas o negativas dentro del rango de trabajo.
+
+Cuando la tensión en GPI es cero, se retorna al preset de procesado principal. La conmutación de los presets de procesado se indica en la pantalla OLED del equipo.
+
+Cuando Solidyne 542APC se instala en los estudios, el disparo de la GPI se puede resolver conectando la salida de tensión de la luz de aire directamente a la GPI del 542APC.\
+Verificar que la tensión “tally light” que entrega la consola se encuentre dentro del rango soportado (5-15 VCC).
+
+Cuando Solidyne 542APC está en planta transmisora, el disparo de la GPI puede resolverse utilizando un contacto a distancia (relay) del enlace Estudio-Planta si el equipo utilizado lo provee.
+
+## Conexión y usos de la GPO
+
+La salida de propósito general (GPO) permite comandar un dispositivo externo ante una determinada condición del procesador.
+
+Se conecta sobre el PIN 4 del DB9. Es un contacto tipo “Colector Abierto” normal-abierto, que se cierra (se conecta a tierra de chasis) cuando está activo. **Soporta 100 mA máximo**.
+
+Las condiciones que activan la GPO se establecen desde la pantalla de Control WEB, en la opción de menú **CONFIGURACIÓN**.

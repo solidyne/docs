@@ -1,0 +1,86 @@
+---
+title: "Encendido, apagado y resets"
+description: "Arranque y apagado. Reiniciar módulos del sistema"
+---
+
+## Secuencia de arranque
+
+Al encender la consola, UX24 inicia su sistema operativo. Una vez completada la secuencia de arranque, se muestra la **pantalla principal** y se cargan:
+
+1. El **perfil de usuario predeterminado.**
+2. La **última escena activa** antes del apagado.
+
+## Perfil de usuario y permisos
+
+El perfil de usuario determina el **nivel de acceso a funciones** dentro de la consola.\
+Desde la configuración, se puede definir qué perfil se carga automáticamente al encender la unidad.\
+De fábrica, la consola inicia con el perfil **ADMIN**, que tiene acceso completo.
+
+### Niveles de usuario disponibles
+
+1. **BASIC** – Acceso restringido a funciones esenciales
+2. **EXPERT** – Acceso avanzado (requiere contraseña)
+3. **ADMIN** – Acceso total (requiere contraseña)
+
+<Info>
+  Durante el arranque, **no se solicita contraseña**, incluso si el perfil predeterminado tiene protección.\
+  Para que UX24 arranque en modo restringido y exija contraseña para acceder a funciones avanzadas, se debe **cambiar el perfil predeterminado** a uno distinto de ADMIN.
+</Info>
+
+Para más información sobre configuración de usuarios, ver:\
+**SETTINGS → USERS**
+
+## Apagado del CPU
+
+La consola UX24 posee un **CPU interno** que debe **apagarse de forma segura** antes de desconectar la consola completamente.
+
+### Procedimiento de apagado del CPU:
+
+1. En la **pantalla principal**, tocar el ícono **“\+”** ubicado en el sector **STATUS**.
+
+   <img
+     src="/images/ux24/STATUS+.png"
+     alt="STATUS+ Pn"
+     title="STATUS+ Pn"
+     style={{ width:"24%" }}
+   />
+2. En la ventana emergente, seleccionar la opción **POWER-OFF**.
+
+   <img
+     src="/images/ux24/UX24_ODROID_STATUS+POWEROFF.png"
+     alt="UX24 ODROID STATUS+POWEROFF Pn"
+     title="UX24 ODROID STATUS+POWEROFF Pn"
+     style={{ width:"53%" }}
+   />
+
+<Warning>
+  Esta función **no apaga toda la consola**, solo apaga el CPU principal del sistema.\
+  El apagado total se realiza mediante la **llave mecánica** de encendido/apagado ubicada en el panel trasero.
+</Warning>
+
+Luego de apagar el CPU, **espere unos segundos** antes de apagar la consola por completo, para permitir el cierre correcto de procesos internos.
+
+## Acciones del sistema
+
+Las acciones del sistema están disponibles desde la pantalla principal, accediendo a la opción **STATUS → "\+"**.
+
+Estas funciones permiten **reiniciar por separado distintas etapas del sistema**, y no se utilizan durante la operación normal.
+
+<Info>
+  Las acciones de reinicio son herramientas técnicas de mantenimiento.\
+  En condiciones normales de uso, **no es necesario ejecutarlas**.
+</Info>
+
+### Opciones disponibles
+
+- **RESET USB**\
+  Reinicia únicamente la etapa USB.\
+  Fuerza al sistema operativo a reconocer nuevamente los dispositivos USB conectados.
+- **RESET MIXER**\
+  Reinicia el motor de mezcla interno de UX24 y la superficie de control.\
+  No afecta al CPU ni a la pantalla.
+- **RESET DISPLAY**\
+  Reinicia el computador de a bordo que gestiona el **streaming** y la **interfaz gráfica**.
+- **FULL RESET**\
+  Reinicia todas las etapas del sistema UX24.\
+  Equivale a un apagado completo y encendido del equipo.

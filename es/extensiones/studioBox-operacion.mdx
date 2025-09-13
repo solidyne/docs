@@ -1,0 +1,81 @@
+---
+title: "Uso de Bahías StudioBox"
+description: "Uso de las bahías para monitoreo en el Estudio"
+---
+
+## Operación de las StudioBox
+
+### Auriculares en el estudio
+
+- **StudioBox HD5**: maneja hasta **cinco auriculares** con controles de nivel independientes.
+- **StudioBox HD3**: admite **tres auriculares** y cuenta con **dos perillas de nivel** (auriculares 2 y 3 comparten control de volumen).
+
+<Icon icon="volume" iconType="solid" color="#ff8b00" size={20} /> El **volumen máximo** que pueden alcanzar los auriculares se establece en la pantalla MONITOR de la consola (ver _MONITOR → ADVANCED_).
+
+Ambas cajas manejan **doble canal de monitoreo**:
+
+1. **STUDIO MONITOR**\
+   Señal recibida por _Studio Monitor Input_.\
+   En consolas UNIDEX la fuente de audio se asigna desde la pantalla de monitoreo (**PGM, REC, AUX, VBUS, CUE, ON-AIR**).\
+   Al pulsar el botón **TalkBack**, el micrófono de órdenes envía señal a los parlantes y auriculares.
+
+   > Los parlantes se silencian automáticamente cuando los micrófonos están al aire.
+2. **AUX IN**\
+   Entrada de línea auxiliar. Hasta tres auriculares pueden asignarse a esta entrada (HD5).\
+   En UNIDEX puede conectarse una salida que replique la asignación de estudio, pero con conmutación de órdenes propia, permitiendo hablar a un grupo específico de auriculares (**AUX**) o a todos.
+
+<Note>
+  Ver en [StudioBox conexiones](/es/unidex/ux-StudioBox-conexiones) los detalles sobre la configuración con doble canal de talkback.
+</Note>
+
+---
+
+### Monitores en el estudio
+
+La salida para parlantes de estudio tiene control de nivel propio.\
+Los monitores reproducen la señal de la entrada **STUDIO**, según la asignación hecha en la consola.
+
+<Note>
+  **Volumen en parlantes:** Ajuste los parlantes monitores activos para un nivel de escucha confortable con el control **LOUDSPEAKER LEVEL** de la StudioBox posicionado al centro.
+</Note>
+
+---
+
+### Reverse Intercom
+
+El **botón blanco** tiene dos funciones:
+
+1. **Micrófonos apagados**:
+   - Pulsar para hablar hacia _Control_.
+   - La caja incorpora un **micrófono de superficie**.
+   - En _Cabina de Control_, el operador escucha la señal en el canal **CUE** de la consola.
+   - Para responder, desde la Cabina de Control el operador usa el botón **TalkBack** de la consola.
+   - Ajustes:
+     - Preset **mic gain** (ubicado en la StudioBox bajo el micrófono).
+
+       <img
+         src="/images/ux24/ux-studiobox-preset.jpg"
+         alt="Ux Studiobox Preset Jp"
+         title="Ux Studiobox Preset Jp"
+         style={{ width:"23%" }}
+       />
+     - **Intercom Input Gain** en la consola, en pantalla _MONITOR → ADVANCED_.
+2. **Micrófonos al aire**:
+   - El botón se comporta como Tally Light. se ilumina en rojo indicando **EN EL AIRE**.
+
+---
+
+### Timer / Clock (solo en HD5)
+
+<img
+  src="/images/ux24/ux-studiobox-dispaly.jpg"
+  alt="Ux Studiobox Dispaly Jp"
+  title="Ux Studiobox Dispaly Jp"
+  style={{ width:"35%" }}
+/>
+
+- **Micrófonos apagados**: muestra la hora actual.
+  - Ajuste manual con los botones **SET** (HORAS/MINUTOS) y flechas **ARRIBA/ABAJO**.
+- **Micrófonos al aire**: muestra el tiempo transcurrido al aire.
+
+La función contador de tiempo en el aire se puede desactivar quitando un puente interno (requiere remover la tapa del módulo). Esto desactiva el modo _contador_ y el display muestra siempre la hora actual.

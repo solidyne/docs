@@ -1,0 +1,48 @@
+---
+title: "Sobre transmisión en MONO"
+description: "Uso estratégico de la conmutación mono/estéreo "
+---
+
+## Introducción
+
+La transmisión **monoaural**, aunque no es práctica extendida, es utilizada por algunas emisoras de FM ubicadas en ciudades con **alta congestión** y con escasos controles/regulación en el espectro electromagnético.
+
+Cuando el contenido emitido es principalmente **palabra hablada** (magazines, noticieros, deportes, programas periodísticos), la transmisión en estéreo no aporta ventajas significativas, pues su beneficio se limita principalmente a la música.
+
+## Ventajas técnicas del modo mono
+
+- Mejora el **alcance de la emisora**.
+- Reduce significativamente las **interferencias**.
+- La energía que en estéreo se dispersa en un ancho de banda mayor, en mono se concentra en apenas **un cuarto del ancho de banda**.
+- Esto aumenta hasta **4 veces la potencia efectiva al aire** (_NAB Engineering Handbook_).
+- Mejora la **cobertura** al reducir:
+  - Interferencias de emisoras cercanas.
+  - Distorsión por trayectorias múltiples en áreas urbanas.
+
+<img
+  src="/images/542/542-Mono.jpg"
+  alt="542 Mono Jp"
+  title="542 Mono Jp"
+  style={{ width:"55%" }}
+/>
+
+## Uso estratégico del modo mono
+
+La transmisión mono puede usarse de forma **programada** para:
+
+- Mejorar la recepción y cobertura en horarios de **programas hablados (talk-shows)**.
+- Competir por la audiencia en horarios donde la inteligibilidad es más crítica que la musicalidad.
+- Alternar entre **mono y estéreo** según el contenido emitido o según horarios.
+
+## Formas de conmutación a mono
+
+- **Por preset:**\
+  Cada preset puede incluir un atributo que activa el modo MONO al seleccionarlo.\
+  El procesador permanecerá en MONO hasta que un nuevo preset lo modifique.
+- **Micrófonos al aire (GPI):**\
+  Usando la entrada GPI, se conmuta a un preset de **VOCES** que tenga activo el modo MONO.\
+  (Ver sección **GPIO** para más detalles).
+- **Control manual:**\
+  Desde la aplicación de control **Lite Commander**.
+- **Conmutación automática por horarios:**\
+  Mediante programación en **Lite Commander**.

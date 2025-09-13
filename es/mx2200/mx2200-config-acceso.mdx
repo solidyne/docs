@@ -1,0 +1,45 @@
+---
+title: "Configuración remota"
+description: "Acceso vía red"
+---
+
+import discovery from '/snippets/discovery.mdx';
+
+## Configuración
+
+Todas las opciones y modos de emisión por Internet se pueden acceder de dos maneras:
+
+1. **Desde la pantalla a bordo**: usando el comando rotativo (**encoder**).
+2. **Remotamente (recomendado)**: usando una computadora y un navegador web.
+
+## Acceso web
+
+<Steps>
+  <Step title="Conectar la consola a la red">
+    - **Ethernet (recomendado)** mediante el puerto RJ45.
+    - O bien mediante la **antena Wi-Fi**.
+  </Step>
+  <Step title="Conectar la computadora">
+    La computadora debe estar en la **misma red que la MX2200** y preferentemente usando el mismo método de acceso (Ethernet o Wi-Fi).
+
+    <Note>
+      Algunas redes Wi-Fi no permiten acceder a dispositivos conectados por cable (LAN).
+    </Note>
+  </Step>
+  <Step title="Abrir navegador e ingresar IP">
+    Ingrese en el navegador la **dirección IP** de la MX2200 (correspondiente al método usado: Ethernet o Wi-Fi).
+  </Step>
+  <Step title="Obtener la IP desde la consola">
+    Gire la perilla **CONTROL (encoder)** y acceda a la pantalla **SETUP**.\
+    Los tres primeros ítems muestran el estado de conexión y la IP asignada para Ethernet, Wi-Fi y Módem.
+  </Step>
+  <Step title="Obtener la IP desde la computadora">
+    También puede conocerse la IP lanzando la herramienta **Solidyne Multi-Discovery** en la PC.
+  </Step>
+</Steps>
+
+---
+
+### Solidyne Multi-Discovery
+
+<discovery />

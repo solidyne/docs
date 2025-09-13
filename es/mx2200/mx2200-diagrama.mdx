@@ -1,0 +1,45 @@
+---
+title: "Flujo de trabajo"
+description: "Diagrama general del flujo de trabajo en MX2200"
+---
+
+El diagrama ejemplifica un escenario operativo que permite visualizar todas las posibilidades de la **MX2200**.
+
+![Mx2200 Flujo Jp](/images/mx2200/mx2200-flujo.jpg)
+
+## Mezcla de programa
+
+- **4 micrófonos dinámicos** (dos comparten el fader MIC 3\+4).
+- **1 teléfono móvil**:
+  - Puede utilizarse con un micrófono Bluetooth.
+  - Puede vincularse Bluetooth a una segunda consola **Solidyne MX2100** para manejar varios micrófonos y auricualres.
+- **Notebook vía USB**: reproduce audio directamente en la consola, permitiendo generar todo el contenido desde la locación remota.
+
+## Emisión hacia los estudios
+
+La **MX2200** obtiene acceso a Internet mediante:
+
+- Conexión a una red Wi-Fi
+- Conexión a una LAN por cable
+- Módem 4G
+
+**Enlace al estudio:**
+
+- La conexión se realiza mediante **llamadas SIP** full-duplex, sin retardos audibles.
+- El establecimiento de la llamada es inmediato: la consola marca y el estudio atiende (o viceversa).
+- Un servidor en Internet (**Cloud Service**) conecta inicialmente ambos extremos (1 y 2). Una vez establecida, la conexión se transforma en un **túnel privado (Internet Tunneling)** entre la consola y el estudio (3).
+- En paralelo a la llamada SIP, el **CODEC de la MX2200** puede transmitir:
+  - Un streaming RTP hacia una dirección IP
+  - Otro streaming hacia un servidor web (Icecast/Shoutcast), con calidades diferenciadas
+- Como respaldo, puede utilizarse:
+  - Una **línea terrestre (POTS)**
+  - El **teléfono móvil Bluetooth** (si no se emplea para sumarlo a programa)
+
+## Recepción en el estudio
+
+La llamada SIP se recibe utilizando una computadora con software de terceros para gestión de cuentas VoIP. Existen opciones gratuitas, como [Linphone](https://www.linphone.org/).
+
+## Grabación
+
+La **MX2200** permite grabar en su memoria interna más de **100 horas** de programa en formato **MP3 @192 kbps**.\
+La grabación puede activarse en simultáneo con la transmisión.

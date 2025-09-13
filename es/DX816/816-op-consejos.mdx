@@ -1,0 +1,90 @@
+---
+title: "Consejos generales"
+description: "Consejos generales para la operación de la consola"
+---
+
+## Verificación operativa de la consola
+
+Procedimiento básico para comprobar la conexión:
+
+1. Use una fuente de señal (micrófono, reproductor, etc.).
+   - En canales 4 o 5, seleccione correctamente la entrada (BAL/LIN).
+   - Error común: ausencia de señal por entrada mal asignada.
+2. Pulse el botón **CUE** en el canal de entrada.
+3. Seleccione **CUE** como fuente en monitoreo y ajuste el nivel de CUE.
+   - El audio debe escucharse en auriculares (y en monitores si están asignados).
+
+**Para enviar la señal al aire:**
+
+1. Pulse **PGM** en el canal para enviarlo a la salida principal.
+2. Abra el atenuador del canal al nivel deseado.
+   - La señal se enviará al aire y se visualizará en los vúmetros de programa.
+
+<Warning>
+  La ganancia debe ajustarse en cada canal (excepto USB) mediante los presets de ganancia del panel, de modo que la posición normal de trabajo del atenuador principal sea **–15 dB (zona gris)**.
+</Warning>
+
+---
+
+## Grabación de programas
+
+Las consolas serie DX poseen dos buses estéreo de salida:
+
+- **PGM (Programa)**: señal enviada al aire.
+- **REC (Recording)**: señal auxiliar, uusalmente destinada a grabación.
+
+Cada canal puede asignarse a **PGM** o **REC** mediante botones de asignación, lo que permite grabar mientras se transmite otra señal.
+
+### Grabación vía USB
+
+Las señales de PGM y REC están disponibles en la computadora a través de **USB**.
+
+En **<sup>Windows©</sup>**:
+
+- **Dispositivo de grabación USB 1** → corresponde a **USB-1**, señal de PGM.
+- **Dispositivo de grabación USB 2** → corresponde a **USB-2**, señal de REC.
+
+En la **computadora**:
+
+- Configurar la aplicación de grabación para que use el dispositivo adecuado.
+
+En la **consola**:
+
+- En monitoreo, asignar **REC** a los parlantes de Control o Estudio si se desea que los locutores escuchen la grabación.
+- Quitar de **PGM** y asignar a **REC** los canales a grabar (ej: micrófonos).
+
+  → Estos canales NO saldrán al aire.
+- La radio sigue al aire con otro canal (ej: Line-1 en PGM).
+
+**Ajuste de nivel:**
+
+- Verificar niveles en vúmetros de REC de la consola y en el software.
+- Ajustar desde la consola con el atenuador del canal → **0 VU = –15 dBfs**.
+
+<Danger>
+  Los dispositivos de grabación **USB-1 y USB-2 no tienen control de nivel de entrada por software**.\
+  El ajuste se realiza siempre en la consola.
+</Danger>
+
+**Monitoreo:**
+
+- Los locutores pueden monitorear por auriculares o parlantes.
+- Para reproducir lo grabado: asignar a **REC** el canal correspondiente a esa PC.
+
+<Warning>
+  Evite lazos de realimentación en la PC. Silencie en el software de grabación (o en Windows) posibles retornos de la entrada USB-2 (REC)
+</Warning>
+
+Al finalizar, restablezca los controles a su posición original.
+
+---
+
+### Grabación de líneas telefónicas
+
+El canal **TELCO** puede asignarse a cualquiera de las salidas mediante el botón **PGM/REC**.
+
+Ejemplo: grabar un reportaje telefónico mientras al aire suena música.
+
+- Asignar el **híbrido** y un **micrófono** a la salida **REC**.
+- Proceder con la comunicación como en _Canal de híbrido_.
+- Asignar monitoreo a **REC** para escuchar la conversación.

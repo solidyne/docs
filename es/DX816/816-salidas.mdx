@@ -1,0 +1,53 @@
+---
+title: "Salidas de audio"
+description: "Descripción y conexionado de las salidas de audio"
+---
+
+<img
+  src="/images/816/816-trasero-fuente.png"
+  alt="816 Trasero Fuente Pn"
+  title="816 Trasero Fuente Pn"
+  className="mx-auto"
+  style={{ width:"63%" }}
+/>
+
+### Salida de programa
+
+La salida principal se denomina **PROGRAMA (PGM)**. Normalmente es la señal que se envía al aire y está disponible en varias formas:
+
+- **RJ45**: entrega señal PGM balanceada.\
+  Utilice siempre este conector para llevar señal analógica al procesador de audio o al enlace.\
+  Los procesadores Solidyne **362HD** y **542APC** incluyen conectores RJ45 en sus entradas balanceadas, por lo que la conexión con una DX816/822 se realiza con un cable tipo Ethernet **STP blindado RJ45-RJ45**.\
+  La distribución de pines para RJ45 balanceados es la misma tanto en entradas como en salidas (ver [Entradas de audio](/es/DX816/816-entradas)).
+- **TRS hembra**: entrega señal PGM estéreo no balanceada.
+- **USB (Canal USB-1)**: la señal PGM se envía hacia la computadora conectada, utilizada habitualmente para streaming por Internet.
+- **AoIP (opcional)**: en consolas con módulo /AoIP, PGM está disponible en múltiples formatos (PCM, MP3) sobre conexión Ethernet.
+
+---
+
+### Salida REC (auxiliar)
+
+La salida de **grabación (REC)** también se ofrece en varios formatos:
+
+- Balanceada en conector **RJ45**.
+- Estéreo no balanceada en **TRS**.
+- Digital USB a través del **Canal USB-2**.
+- Streaming sobre \*\*Ethernet \*\*en modelos con doble módulo /AoIP.
+
+El nivel de salida nominal de la consola es **\+4 dBu @ 0VU**.\
+Cuando se utilizan salidas balanceadas en modo desbalanceado, el nivel cae 6 dB, por lo tanto **0VU = –2 dBu**.
+
+<Danger>
+  **No utilizar plugs mono (TS)** para conectar las salidas TRS estéreo.
+</Danger>
+
+<Note>
+  Si conecta un equipo con nivel de entrada **–10 dBV** a la salida de la consola, el nivel puede ser excesivo y producir saturación. En esos casos deberá emplearse un **atenuador fijo (divisor resistivo)** para reducir el nivel.
+</Note>
+
+---
+
+### Streaming decodificado
+
+La salida **Audio Out to Bal Line 1 **está disponible solo en consolas con opción **/AoIP**.\
+Entrega una señal balanceada analógica con el **audio decodificado del streaming entrante** y se utiliza para re-inyectar el audio decodificado a una entrada de línea analógica.

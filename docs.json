@@ -7,105 +7,420 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
+  "contextual": {
+    "options": [
+      "copy",
+      "chatgpt",
+      "claude"
+    ]
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "languages": [
       {
         "language": "es",
-        "tabs": [                  
+        "tabs": [
           {
             "tab": "Consolas UNIDEX",
             "anchors": [
               {
-                "anchor": "UX24",
+                "anchor": "Serie UNIDEX",
                 "icon": "book-open",
-                "description": "Consola UX24",
+                "description": "Instalación y configuración de consolas UNIDEX",
                 "groups": [
                   {
-                    "group": "INTRODUCCION",
+                    "group": "INTRODUCCIÓN",
                     "pages": [
-                      "es/unidex/UNIDEX-introduccion"
+                      "es/unidex/unidex-introduccion"
                     ]
                   },
-                          {
+                  {
+                    "group": "CABLEADO",
+                    "pages": [
+                      "es/unidex/instalacion-cableado_estructurado",
+                      "es/unidex/instalacion-cableado-kits",
+                      "es/unidex/instalacion-RJ45-pinout",
+                      "es/unidex/instalacion-cableado_monitoreo",
+                      "es/puesta-a-tierra"
+                    ]
+                  },
+                  {
                     "group": "INSTALACION",
                     "pages": [
-                      "es/unidex/ux24-instalacion-cableado",
-                                  "es/unidex/ux24-instalacion-panel",
-                                  "es/unidex/ux24-instalacion-gpio",
-                                  "es/unidex/ux24-instalacion-onoff"
+                      "es/unidex/instalacion-entradas",
+                      "es/unidex/instalacion-salidas",
+                      "es/unidex/instalacion-usb",
+                      "es/unidex/instalacion-red",
+                      "es/unidex/instalacion-gpio",
+                      "es/unidex/resets"
                     ]
                   },
                   {
-                    "group": "ADAPTADORES UNIDEX",
+                    "group": "CONFIGURACION",
                     "pages": [
-                      "es/unidex/UNIDEX-adaptadores",
-                                  "es/unidex/UDX-2MIC",
-                                  "es/unidex/UDX-2TEL"
+                      "es/unidex/config-entradas-salidas",
+                      "es/unidex/config-sistema",
+                      "es/unidex/configuracion-DANTE"
                     ]
                   },
                   {
-                    "group": "MONITOREO",
+                    "group": "PROCESADO",
                     "pages": [
-                        "es/unidex/ux-StudioBox-HD5",
-                                  "es/unidex/ux-StudioBox-HD3"
-                      ]
-                    },
-                          {
-                      "group": "CONFIGURACION",
-                      "pages": [
-                        "es/unidex/ux24-EntradasySalidas",
-                                  "es/unidex/ux24-sistema"
-                      ]
-                    },
-                          {
-                              "group": "OPERACIÓN",
-                              "pages": [
-                                  "es/unidex/ux24-op-zonas",
-                                  "es/unidex/ux24-op-canales"
-                              ]
-                    },
-                          {
-                              "group": "PROCESADO",
-                              "pages": [
-                                  "es/unidex/ux-proc-eq",
-                                  "es/unidex/ux-proc-dynamic",
-                                  "es/unidex/ux-proc-deesser"
-                              ]
-                    },
-                          {
-                              "group": "ACCESO VIA WEB",
-                              "pages": [
-                                  "es/unidex/ux24-remote-conect",
-                                "es/unidex/ux24-remote-interfaz",
-                                "es/unidex/ux24-remote-firmware"
-                              ]
-                    },
-                          {
-                              "group": "ESPECIFICACIONES",
-                              "pages": [
-                                  "es/unidex/ux24-especificaciones"
-                              ]
-                    } 
+                      "es/unidex/op-procesado"
+                    ]
+                  },
+                  {
+                    "group": "ACCESO VIA WEB",
+                    "pages": [
+                      "es/unidex/remote-interfaz",
+                      "es/multi-discovery",
+                      "es/unidex/remote-firmware"
+                    ]
+                  },
+                  {
+                    "group": "ESPECIFICACIONES",
+                    "pages": [
+                      "es/unidex/especificaciones"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "Extensiones",
+                "icon": "book-open",
+                "description": "Extensiones y expansiones para UNIDEX",
+                "groups": [
+                  {
+                    "group": "INTERFACES UDX",
+                    "pages": [
+                      "es/extensiones/UNIDEX-adaptadores",
+                      "es/extensiones/UDX-2MIC",
+                      "es/extensiones/UDX-2TEL",
+                      "es/extensiones/udx-tel-bt",
+                      "es/extensiones/udx-usb"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "UX24",
+                "icon": "book-open",
+                "description": "Operación de UX24",
+                "groups": [
+                  {
+                    "group": "CONFIGURACIÓN",
+                    "pages": [
+                      "es/ux24/ux24-conectividad",
+                      "es/ux24/ux24-instalacion-trasero",
+                      "es/ux24/ux24-config-streaming"
+                    ]
+                  },
+                  {
+                    "group": "OPERACIÓN",
+                    "pages": [
+                      "es/ux24/ux24-op-zonas",
+                      "es/ux24/ux24-op-canales",
+                      "es/ux24/ux24-op-monitoreado",
+                      "es/ux24/ux24-op-escenas",
+                      "es/ux24/ux24-op-telco"
+                    ]
+                  }
                 ]
               },
               {
                 "anchor": "UX18",
                 "icon": "book-open",
-                "description": "Consola UX218",
-                "pages": [
-                      "es/unidex/ux18-instalacion"
+                "description": "Operación de UX18",
+                "groups": [
+                  {
+                    "group": "CONFIGURACIÓN",
+                    "pages": [
+                      "es/ux18/ux18-conectividad",
+                      "es/ux18/ux18-instalacion-trasero",
+                      "es/ux18/ux18-doble-talkback",
+                      "es/ux18/ux18-config-streaming"
                     ]
+                  },
+                  {
+                    "group": "OPERACIÓN",
+                    "pages": [
+                      "es/ux18/ux18-op-zonas",
+                      "es/ux18/ux18-op-canales",
+                      "es/ux18/ux18-op-monitoreado",
+                      "es/ux18/ux18-op-escenas",
+                      "es/ux18/ux18-op-telco"
+                    ]
+                  }
+                ]
               }
             ]
           },
           {
             "tab": "Consolas Classic",
-            "pages": ["es/classic-index"]
+            "anchors": [
+              {
+                "anchor": "DX816/822",
+                "icon": "book-open",
+                "description": "Documentación serie DX",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/classic-index",
+                      "es/DX816/816-resumen"
+                    ]
+                  },
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/DX816/816-diagramas",
+                      "es/DX816/816-entradas",
+                      "es/DX816/816-salidas",
+                      "es/DX816/816-usb",
+                      "es/DX816/816-monitoreo",
+                      "es/DX816/816-telco",
+                      "es/DX816/816-GPIO-tally"
+                    ]
+                  },
+                  {
+                    "group": "OPERACION",
+                    "pages": [
+                      "es/DX816/816-op-intro",
+                      "es/DX816/816-op-mics",
+                      "es/DX816/816-op-lineas",
+                      "es/DX816/816-op-monitoreo",
+                      "es/DX816/816-op-hibrido",
+                      "es/DX816/816-op-bluetooth",
+                      "es/DX816/816-voip",
+                      "es/DX816/816-op-consejos"
+                    ]
+                  },
+                  {
+                    "group": "STREAMING",
+                    "pages": [
+                      "es/DX816/816-streaming",
+                      "es/DX816/816-stl",
+                      "es/DX816/816-decoder",
+                      "es/DX816/816-icecast"
+                    ]
+                  },
+                  {
+                    "group": "ADICIONALES",
+                    "pages": [
+                      "es/DX816/816-specs",
+                      "es/DX816/816-mantenimiento"
+                    ]
+                  }
+                ]
+              },
+              {
+              "anchor": "D612",
+              "icon": "book-open",
+              "description": "Documentación D612",
+              "groups": [
+                {
+                  "group": "INTRODUCCION",
+                  "pages": [
+                    "es/612/612-resumen"                    
+                  ]
+                },
+                {
+                  "group": "INSTALACIÓN",
+                  "pages": [
+                    "es/612/612-fuente",
+                    "es/612/612-entradas",
+                    "es/612/612-salidas",
+                    "es/612/612-monitoreo",
+                    "es/612/612-telco"                    
+                  ]
+                },
+                {
+                  "group": "OPERACION",
+                  "pages": [
+                    "es/612/612-op-intro",
+                    "es/612/612-op-microfonos",
+                    "es/612/612-op-lineas",
+                    "es/612/612-op-monitoreo",
+                    "es/612/612-op-hibrido",
+                    "es/612/612-op-grabacion"
+                  ]
+                },
+                {
+                  "group": "STREAMING",
+                  "pages": [
+                    "es/612/612-AoIP"
+                  ]
+                }                
+              ]
+              }
+            ]
+          },
+          {
+            "tab": "Exteriores",
+            "anchors": [
+              {
+                "anchor": "MX2200",
+                "icon": "book-open",
+                "description": "Documentación del codec-mixer MX2200",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/mx2200/mx2200-resumen"
+                    ]
+                  },
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/mx2200/mx2200-conectividad",
+                      "es/mx2200/mx2200-diagrama",
+                      "es/mx2200/mx2200-firmware-update"
+                    ]
+                  },
+                  {
+                    "group": "CONFIGURACION",
+                    "pages": [
+                      "es/mx2200/mx2200-config-acceso",
+                      "es/mx2200/mx2200-config-display"
+                    ]
+                  },
+                  {
+                    "group": "OPERACION",
+                    "pages": [
+                      "es/mx2200/mx2200-op-descripcion",
+                      "es/mx2200/mx2200-op-lineas-intro",
+                      "es/mx2200/mx2200-op-bluetooth",
+                      "es/mx2200/mx2200-op-linea_fija",
+                      "es/mx2200/mx2200-op-grabacion"
+                    ]
+                  },
+                  {
+                    "group": "ENLACE AL ESTUDIO",
+                    "pages": [
+                      "es/mx2200/mx2200-enlaces-internet",
+                      "es/mx2200/mx2200-llamadaVoIP",
+                      "es/mx2200/mx2200-rtp",
+                      "es/mx2200/mx2200-streaming-server",
+                      "es/mx2200/mx2200-enlace-telefonico"
+                    ]
+                  },
+                  {
+                    "group": "INFO TECNICA",
+                    "pages": [
+                      "es/mx2200/mx2200-notas-sip",
+                      "es/mx2200/mx2200-specs"
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             "tab": "Procesadores",
-            "pages": ["es/procesadores-index"]
+            "anchors": [
+              {
+                "anchor": "542 APC",
+                "icon": "book-open",
+                "description": "Documentación del procesador 542 APC",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/procesadores-index"
+                    ]
+                  },
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/542/542-guia",
+                      "es/542/542-instalacion-montaje",
+                      "es/542/542-instalacion-cableado",
+                      "es/542/542-instalacion-gpio",
+                      "es/542/542-firmware"
+                    ]
+                  },
+                  {
+                    "group": "CONFIGURACION",
+                    "pages": [
+                      "es/542/542-acceso_local",
+                      "es/542/542-instalacion-web",
+                      "es/542/542-entradas-salidas",
+                      "es/542/542-sistema",
+                      "es/542/542-alarmas"
+                    ]
+                  },
+                  {
+                    "group": "FM",
+                    "pages": [
+                      "es/542/542-FM_output",
+                      "es/542/542-sintonizador",
+                      "es/542/542-RDS",
+                      "es/542/542-mono",
+                      "es/542/542-LiteCommander"
+                    ]
+                  },
+                  {
+                    "group": "AUDIO",
+                    "pages": [
+                      "es/542/542-acceso_avanzado_web",
+                      "es/542/542-procesado-primeras_etapas",
+                      "es/542/542-procesado-AGC",
+                      "es/542/542-procesado-compresores",
+                      "es/542/542-presets"
+                    ]
+                  },
+                  {
+                    "group": "SERVICIOS AoIP",
+                    "pages": [
+                      "es/542/542-opcionAoIP",
+                      "es/542/542-streamer",
+                      "es/542/542-dante"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "Audimax 362",
+                "icon": "book-open",
+                "description": "Documentación del procesador Audimax 362",
+                "groups": [
+                  {
+                    "group": "GRUPO1",
+                    "pages": [
+                      "es/audimax362-grupo1-pagina1",
+                      "es/audimax362-grupo1-pagina2"
+                    ]
+                  },
+                  {
+                    "group": "GRUPO2",
+                    "pages": [
+                      "es/audimax362-grupo2-pagina1",
+                      "es/audimax362-grupo2-pagina2"
+                    ]
+                  },
+                  {
+                    "group": "GRUPO3",
+                    "pages": [
+                      "es/audimax362-grupo3-pagina1",
+                      "es/audimax362-grupo3-pagina2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Accesorios",
+            "groups": [
+              {
+                "group": "StudioBox",
+                "pages": [
+                  "es/extensiones/studioBox-descripcion",
+                  "es/extensiones/studioBox-conexiones",
+                  "es/extensiones/studioBox-operacion"
+                ]
+              }
+            ]
           }
         ]
       },
@@ -115,8 +430,8 @@
           {
             "tab": "UNIDEX Consoles",
             "pages": [
-                  "en/ux24_installation"
-                ]
+              "en/ux24_installation"
+            ]
           }
         ]
       }
@@ -141,39 +456,6 @@
       "label": "Webpage",
       "href": "https://www.solidynepro.com"
     }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      {
-       "title": "Download PDF",
-       "description": "download this page as PDF",
-       "icon": "sparkle",
-       "href": {
-         "base": "https://www.sejda.com/html-to-pdf?",
-         "query": [
-           {
-             "key": "save-link",
-             "value":"https://solidyne.mintlify.app/$path&pageOrientation=auto"
-           }
-         ]
-        }
-       },
-      {
-       "title": "Ask Gemini",
-       "description": "Ask Google Gemini about the current page",
-       "icon": "sparkle",
-       "href": {
-         "base": "https://gemini.google.com/app",
-         "query": [
-           {
-             "key": "q",
-             "value": "Ask question about https://mintlify.com/docs$path.md"
-           }
-         ]
-        }
-       }
-   ]
   },
   "footer": {
     "socials": {

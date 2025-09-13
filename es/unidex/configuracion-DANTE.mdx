@@ -1,0 +1,95 @@
+---
+title: "AES67 - DANTE"
+description: "Conexión y configuración de redes DANTE"
+---
+
+Los modelos UNIDEX /A67 cuentan un módulo DANTE/AES67 que brinda **16 entradas y 16 salidas** mono AoIP.
+
+El uso de UNIDEX en una red AoIP requiere disponer de nodos de conexión DANTE compatibles, para ingresar señales que pueden ser:
+
+- Preamplificadores de micrófono.
+- Computadoras reproduciendo con DANTE VIRTUAL SOUNDCARD
+- Señales de línea, por ejemplo que provienen de otra consola DANTE. 
+
+Cualquier interfaz DANTE compatible se puede conectar a UNIDEX. \
+Las computadoras pueden reproducir directamente vía AoIP. Para esto deben estar equipadas con una "virtual soundcard" DANTE, que es un software de Audinate que brinda canales AoIP a traves de una red gigabit. Estos controladres no son muy costosos y son ampliamente utilizados para interconectar computadoras a la consola y entre sí.
+
+<Warning>
+  La implementación de DANTE requiere conocimientos de audio sobre red.
+</Warning>
+
+## Conexión del puerto DANTE 
+
+### Consideraciones generales
+
+- El puerto Ethernet DANTE se conecta a un switch gigabit QoS usando cable CAT5e o CAT6, para montar la red AoIP.
+- Tipicamente la consola se comportará como Master Clock en en la red. 
+- UNIDEX soporta conexión redundante, en donde dos redes físicas reales, montadas con distintos switches, operan en paralelo. Se utiliza en grandes instalaciones AoIP para blindar la transmisión ante fallo en una de las redes. La conmutación entre redes es automática. 
+- La red AoIP se puede utilizar para conectar del puerto REMOTE CONTROL de UNIDEX y controlar remotamente la consola desde las computadoras de la red AoIP. 
+
+### Configuración en la red DANTE
+
+En UNIDEX, la pantalla **SETTINGS - AoIP **notifica el estado del módulo DANTE/AES67 y de la red.
+
+La gestión de los dispositivos de entrada y salida, tanto de la consola UNIDEX como de otras interfaces, por ejemplo computadoras, se hace desde una computadora conectada a la red que corre el software [**DANTE CONTROLLER**](https://www.getdante.com/products/software-essentials/dante-controller/) desarrollado por la firma Audinet, una matriz de software que permite asignar entrdas y salidas entre los dispositivos en red.  
+
+Para más información y ejemplos de implementación descargue el siguiente documento (PDF):
+
+[DANTE/AES67 - Ejemplo de implementación](http://www.solidynepro.com/descargas/productos/UNIDEX_UX24-A67_Dante_ESP.pdf)
+
+### Entradas y salidas DANTE en UX24
+
+**ENTRADAS**\
+En las consolas UX24 **la instalación del módulo DANTE /A67 sustituye 8 entradas analógicas estéreo** (módulo 8-IN). \
+Las entradas **UNIDEX 5, 6, 7, 8** y las **balanceadas 9, 10, 11, 12** son reemplazadas por las entradas AoIP-1 a la AoIP-16.
+
+**SALIDAS DANTE**\
+La instalación del módulo DANTE /A67 no afecata a las salidas de UX24. \
+El módulo DANTE brinda 16 envíos AoIP mono (8 estéreo) replicando 5 salidas estéreo existentes de la consola y agregando otras 3 (6 en mono) vía AoIP, asignables.
+
+| **Dante Output** | UX24 **Standard Outputs** |
+| :--------------: | :-----------------------: |
+| AoIP 1 (L)       | PGM-L                     |
+| AoIP 2 (R)       | PGM-R                     |
+| AoIP 3 (L)       | OUT1-L                    |
+| AoIP 4 (R)       | OUT1-R                    |
+| AoIP 5 (L)       | OUT2-L                    |
+| AoIP 6 (R)       | OUT2-R                    |
+| AoIP 7 (L)       | Studio Headphones L       |
+| AoIP 8 (R)       | Studio Headphones R       |
+| AoIP 9 (L)       | Studio Speakers L         |
+| AoIP 10 (R)      | Studio Speakers R         |
+| AoIP 11          | _asignable_               |
+| AoIP 12          | _asignable_               |
+| AoIP 13          | _asignable_               |
+| AoIP 14          | _asignable_               |
+| AoIP 15          | _asignable_               |
+| AoIP 16          | _asignable_               |
+
+### Entradas y salidas DANTE en UX18
+
+**ENTRADAS**\
+En las consolas UX18 **la instalación del módulo DANTE /A67 no afecta a las entradas disponibles** en la consola.  DANTE **suma 16 entradas** adicionales vía AoIP.
+
+**SALIDAS DANTE**\
+La instalación del módulo DANTE /A67 no afecata a las salidas de UX18. \
+El módulo DANTE brinda 16 envíos AoIP mono (8 estéreo) replicando 4 salidas estéreo existentes en la consola y agregando otras 4 (u 8 mono) vía AoIP, asignables.
+
+| **Dante Output** | UX18 **Standard Outputs** |
+| :--------------: | :-----------------------: |
+| AoIP 1 (L)       | PGM-L                     |
+| AoIP 2 (R)       | PGM-R                     |
+| AoIP 3 (L)       | REC-L                     |
+| AoIP 4 (R)       | REC-R                     |
+| AoIP 5 (L)       | AUX-L                     |
+| AoIP 6 (R)       | AUX-R                     |
+| AoIP 7 (L)       | VBUS L                    |
+| AoIP 8 (R)       | VBUS R                    |
+| AoIP 9 (L)       | _asignable_               |
+| AoIP 10 (R)      | _asignable_               |
+| AoIP 11          | _asignable_               |
+| AoIP 12          | _asignable_               |
+| AoIP 13          | _asignable_               |
+| AoIP 14          | _asignable_               |
+| AoIP 15          | _asignable_               |
+| AoIP 16          | _asignable_               |

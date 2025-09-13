@@ -1,0 +1,85 @@
+---
+title: "Recibir streaming"
+description: "Configuración para decodificar un streaming entrante"
+---
+
+## Audio stream generado desde otra consola
+
+El módulo AoIP puede configurarse para **recibir un streaming RTP** generado desde otra consola Solidyne con soporte de streaming (ej.: **D612**, serie **2600**, serie **Unidex**, coder/link **ADA102**).\
+El equipo codificador debe tener el **mismo firmware (STL)**.
+
+De fábrica, la consola viene en modo **CODER (Studio Encoder)**. Para recibir, debe configurarse como **DECODER**.
+
+### Configuración de recepción (Decoder)
+
+1. Acceder al módulo IP desde un navegador web (ver [Acceso al módulo IP](/es/DX816/816-stl).
+2. En menú superior, clic en **Location**.
+3. \*\*Cambiar \*\*el modo a **→** **Transmitter Decoder**.
+   - De fábrica: **Studio Encoder**, generar un streaming unidireccional.
+   - Como **Decoder**, se adoptan valores predeterminados (solo modificar IP y puertos).
+4. Ir a **Configuration → Streaming**.
+5. En **Port**, ingresar el puerto usado en el codificador (el equipo que transmite).
+6. En **URL**, dejar **0.0.0.0**.
+7. Pulsar **Apply** para confirmar.
+
+### Ajuste del buffer (RTP delay)
+
+El **buffer de entrada** (expresado en milisegundos) evita interrupciones de audio cuando el ancho de banda es insuficiente:
+
+| Formato de audio     | Buffer recomendado                           |
+| -------------------- | -------------------------------------------- |
+| PCM                  | 40–80 ms                                     |
+| Comprimido (ej. MP3) | \>80 ms (depende del códec y decodificación) |
+
+<Tip>
+  A mayor buffer → menos cortes, pero mayor **retardo de audio**.\
+  El valor óptimo depende del **ancho de banda** y del **formato** usado.
+</Tip>
+
+El formato de audio lo define siempre el **equipo transmisor**.
+
+### Conexión del audio decodificado
+
+- El audio recibido por Ethernet se envía a **entradas balanceadas** mediante cable externo (RJ45 a RJ45, provisto).
+- Conexión: **AoIP Output Option → BAL-1 o BAL-2**.
+- En DX822 con dos módulos AoIP: salida derivada hacia ambas entradas (BAL-1 y BAL-2) mediante cable especial “Y” (suministrado).
+
+---
+
+## Recepción usando un computador
+
+Es posible recibir transmisión desde una DX /AoIP en una computadora con software compatible RTP.\
+Recomendado: **VLC Player** (gratuito – [videolan.org/vlc](http://www.videolan.org/vlc/)).
+
+**Configuración de formato en VLC:**
+
+- **PCM16 @ 44.1 kHz**, o
+- **MP3** en alguno de sus modos.
+
+Otros formatos pueden requerir un archivo **SDP** de carga (payload).
+
+**Procedimiento en VLC:**
+
+- Menú: **Medio → Abrir ubicación de red**.
+- En campo URL ingresar:  
+
+  `[protocolo]://[IP_fuente]:[puerto]`
+
+<img
+  src="/images/816/816-vlc-decoding.jpg"
+  alt="816 Vlc Decoding Jp"
+  title="816 Vlc Decoding Jp"
+  style={{ width:"54%" }}
+/>
+
+Por ejemplo:
+
+RTP://0.0.0.0:3030
+
+- `RTP` → protocolo.
+- `0.0.0.0` → cualquier IP entrante.
+- `3030` → puerto usado.
+
+<Note>
+  Algunas versiones de VLC aceptan: `RTP://@:3030`
+</Note>

@@ -1,0 +1,238 @@
+---
+title: "Operación de canales"
+description: "Operación de UX24 - Canales"
+---
+
+## Canales físicos
+
+La consola **UNIDEX UX24** dispone de 24 canales. El gabinete principal presenta 12 canales físicos con atenuadores soft-touch de 100 mm.
+
+Otros 12 canales pueden operarse desde la **pantalla táctil** o de forma remota vía web. Opcionalmente, se pueden agregar hasta dos módulos de **expansión UX6** (6 atenuadores cada uno) para alcanzar 18 o 24 canales físicos.
+
+<img
+  src="/images/ux24/ux24-operacion-canales.jpg"
+  alt="Canal fisico"
+  title="Canal fisico"
+  style={{ width:"10%" }}
+  className="mx-auto"
+/>
+
+### 1 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Buses
+
+La señal en cada canal se puede asignar a 4 buses de mezcla: **PGM**, **REC**, **AUX** y **VBUS**.
+
+- En canales físicos, la asignación a PGM, REC y AUX se realiza mediante tres botones de acceso rápido. Cuando el canal está asignado, el botón se ilumina en naranja.
+- Para todos los canales, la asignación a VBUS se hace desde la pantalla CHANNEL en el menú principal o desde el control web.
+
+### 2 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Botón CUE/SELECT
+
+Cumple tres funciones:
+
+- **CUE:** Escucha previa (_pre-fader_). Permite escuchar la señal presente en el canal previo al atenuador y al botón ON-AIR.
+- **SELECT:** Selección del canal para ajustes y configuración.
+- **TALKBACK:** El modo TALK-BACK se utiliza en comunicaciones (canalales TELCO y USB asignados a software de llamadas). Manteniendo pulsado CUE se activa el micrófono de talk-back para hablar.
+
+#### 3 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Botón ON-AIR
+
+Activa el canal.\
+Cuando está encendido, la señal se envía a los buses asignados según el nivel del atenuador.
+
+#### 4 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Display OLED
+
+Muestra:
+
+- Nivel de señal previo al atenuador. La indicación **CLIP** indica que la señal de entrada alcanza 0 dBfs y requiere reducir la ganancia.
+- Nombre o etiqueta del canal.
+- Estado en modos especiales como SELECT o TELCO.
+
+  <Note>
+    **Sobre brillo de los OLED**\
+    El brillo se reduce tras 5 minutos de inactividad y se apaga a los 15 minutos.\
+    Cualquier acción sobre los controles reactiva la pantalla.
+  </Note>
+
+#### 5 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Atenuador principal
+
+Controla el nivel de la señal en los buses de mezcla.\
+Si el nivel se modifica desde la pantalla CHANNEL o remotamente vía web, el valor de atenuación real puede no coincidir con la posición física del fader (no motorizado). En ese caso, la pantalla OLED destella mostrando el valor actual.\
+Moviendo el atenuador, el valor se sincroniza progresivamente.
+
+## La función SELECT
+
+El modo **SELECT** convierte temporalmente los botones **CUE** en botones de selección de canal.\
+Cuando está activo, los botones CUE se iluminan en azul y las pantallas OLED de los canales muestran el texto SELECT.
+
+Esta función se utiliza para elegir un canal y visualizarlo o realizar ajustes sobre él.\
+La pantalla muestra la información de un único canal a la vez.\
+Por ejemplo, para ajustar un ecualizador, el operador debe seleccionar primero el canal correspondiente para visualizar sus controles.
+
+### Activación del modo SELECT
+
+El modo SELECT se activa en cualquiera de las siguientes situaciones:
+
+- Al pulsar **CHANNEL** en la pantalla principal.
+- Al pulsar **PROCESS** en la pantalla principal.
+- Al pulsar **SELECT** en la pantalla CHANNEL o en una pantalla de procesos (EQ, compresor, etc.).
+
+Estando activo el modo SELECT, es posible elegir un canal de dos formas:
+
+1. **MODO A**\
+   Pulsando un botón CUE/SELECT el canal se muestra en pantalla. El modo SELECT permanece activo, pudiéndose seleccionar otros canales (esto permite comparar/revisar canales fácilmente). El botón CUE/SELECT del canal actualmente seleccionado permanece destellando.
+2. **MODO B**\
+   Girando el encoder para recorrer los canales. El encoder recorre los 24 canales, sean físicos o virtuales.
+
+Para confirmar la selección de un canal, pulsar el botón SELECT en la pantalla o pulsar el encoder. También se confirma si se toca un control del canal en la pantalla.
+Al confirmar, modo SELECT se desactiva y los botones CUE/SELECT vuelven a su modo de trabajo normal (CUE).
+
+## Canales "virtuales"
+
+UNIDEX UX24 maneja 12 canales **desde la pantalla a bordo**, en su modelo estándar, o **6 canales virtuales** cuando está equipada con una extensión de atenuadores **UDX6**.\
+La pantalla **VIRTUAL MIXER** permite controlar todas las funciones de estos canales.
+
+<Tip>
+  **Pulsando el encoder** en la pantalla principal se accede al mezclador de canales, que se presenta en grupos de 6 canales cada una.
+</Tip>
+
+Cuando uno o más canales virtuales están al aire, el control **VIRTUAL** (encoder) en la pantalla principal **destella en rojo** para indicar esta condición.
+
+Para facilitar la operación táctil, los controles de cada canal virtual están divididos en dos pantallas.
+
+La pantalla **LEVEL** muestra los atenuadores y los botones de activación ON AIR.
+
+<img
+  src="/images/ux24/unidex-virtual-level.png"
+  alt="Unidex Virtual Level Pn"
+  title="Unidex Virtual Level Pn"
+  style={{ width:"60%" }}
+  className="mx-auto"
+/>
+
+La pantalla **BUSES** muestra los botones de asignación PGM, REC, AUX, VBUS y el CUE.
+
+<img
+  src="/images/ux24/unidex-virtual-buses.png"
+  alt="Unidex Virtual Buses Pn"
+  title="Unidex Virtual Buses Pn"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+## Pantalla de canal (CHANNEL)
+
+La **pantalla de canal** muestra todos los valores y configuraciones asociados a un canal.\
+Incluye funciones básicas, como el ajuste de ganancia de la entrada, y opciones avanzadas que requieren permisos especiales.
+
+#### Acceso a la pantalla de canal
+
+1. **Desde la pantalla principal**, pulsar el botón **CHANNEL**.
+
+   <img
+     src="/images/ux24/ux24-boton-channel.png"
+     alt="Ux24 Boton Channel Pn"
+     title="Ux24 Boton Channel Pn"
+     style={{ width:"20%" }}
+   />
+
+   Esto abrirá la pantalla en el último canal seleccionado y activará el **modo SELECT**.\
+   En el menú, la opción CHANNEL cambiará a SELECT para permitir activarlo o desactivarlo.
+2. **Seleccionar un canal**:\
+   Con **SELECT** activo, los botones **CUE/SELECT** permiten elegir un canal. Mientras el modo de selección esté activo, se pueden ir alternando distintos canales para comparar sus ajustes.
+   - Los **canales virtuales** se seleccionan girando el **encoder**, que recorre los 24 canales.
+   - En pantalla, la zona del nombre de canal se muestra en **celeste** para los canales físicos y en **violeta** para los canales virtuales.
+3. **Salir del modo SELECT**:\
+   Para confirmar y salir, pulsar el botón **SELECT** en la pantalla o presionar el **encoder**.\
+   El modo selección también se cancela automáticamente cuando se modifica algún parámetro en el canal seleccionado.
+
+<img
+  src="/images/ux24/ux24-channel-pantalla.png"
+  alt="Ux24 Channel Pantalla Pn"
+  title="Ux24 Channel Pantalla Pn"
+  className="mx-auto"
+  style={{ width:"68%" }}
+/>
+
+### Elementos de la pantalla CHANNEL
+
+#### 1 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Vúmetro
+
+Indicador de nivel visible en todas las pantallas.\
+Muestra el nivel de un bus de mezcla, habitualmente **PROGRAMA**, en escala VU con pico retenido.
+
+- Tocando la leyenda PGM, se puede cambiar para mostrar AUX, REC o VBUS.
+- El número a la derecha indica el valor máximo, en VU o dBfs. Tocando el número se conmuta entre ambas unidades. El cambio de unidad VU/dBfs se aplica a todas las pantallas.
+
+#### 2 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Balance
+
+En entradas estéreo ajusta la relación entre canales izquierdo y derecho.\
+En entradas mono actúa como _pan-pot_.\
+Para cambiar el valor, toque el control y gire el encoder. Pulse el encoder para confirmar.
+
+#### 3 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Nivel del canal
+
+Representa al atenuador físico y modifica el nivel de señal en los buses.\
+En canales con atenuadores mecánicos, el valor en pantalla refleja la posición física. Si se modifica el nivel desde la pantalla, el valor real cambia pero el atenuador físico no se mueve (no es motorizado). En este caso, en la pantalla OLED del canal destella el valor actual para indicar que difiere de la posición física del fader.
+
+<Note>
+  El nivel en las salidas puede diferir del mostrado en los medidores debido a compensaciones de ganancia de salida. La coincidencia se da solo cuando la salida está ajustada a su nivel nominal (4 dBu para salidas analógicas).
+</Note>
+
+#### 4 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Buses
+
+Muestran las asignaciones del canal a buses de mezcla.
+
+- En canales físicos reflejan los botones PGM, REC y AUX.
+- En canales virtuales permiten asignar a cualquier bus.
+- En ambos permite asignar el canal al bus **VBUS**, que no tiene botón de asignación de hardware.
+
+La activación/desactivación se hace desde la pantalla táctil y, en canales físicos, se refleja también en los botones mecánicos.
+
+### 5 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Nombre
+
+Permite asignar un nombre de hasta 10 caracteres. En canales físicos se muestra en la pantalla OLED del canal. \
+Tocando el nombre se despliega una ventana para edición del texto.
+
+#### 6 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Input Config
+
+Incluye el control de ganancia y la información de la entrada asignada.
+
+- Perfil ADMIN: acceso a configuración completa tocando SETTINGS o reasignación desde menú desplegable.
+- **Ganancia**: ajuste en decibelios mediante pantalla táctil y encoder.
+
+#### 7 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Modo
+
+Define el comportamiento del canal según el tipo de señal:
+
+- **LINE**: para cualquier fuente distinta de micrófonos y comunicaciones.
+- **MIC**: para señales de micrófono, sean entradas a bordo, adaptadores UDX externos o preamplificadores de terceros conectados a entradas de línea.
+- **TELCO**: para comunicaciones (líneas terrestres, VoIP, celulares Bluetooth), controlando desde pantalla TELCO adaptadores UNIDEX compatibles.
+
+#### 8 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Channel Actions
+
+Funciones específicas según el \*\*MODO \*\*del canal.
+
+- **CUE SOLO**: al activar CUE en el canal, apaga CUE en otros canales con esta opción activa.\
+  Los canales que no tengan activo CUE SOLO no son afectados, pudiendo estar CUE encendido en más de un canal a la vez. \
+  Si todos los canales trabajan en modo CUE SOLO, habrá un único CUE encendido. Una configuración habitual es usar el modo CUE SOLO en las líneas (computadoras y reproductores de audio) y en modo normal micrófonos y canales TELCO.
+- **CUE AUTO OFF**: apaga CUE automáticamente al poner el canal al aire.
+
+**Acciones para canales en modo MIC:**
+
+- **MASTER MIC A/B**: asigna el canal a uno o ambos botones maestros.
+- **STUDIO A/B**: asocia el canal a la señalización de uno de los estudios.
+- **CTRL ROOM MIC**: silencia los parlantes del Control (no los del Estudio) al poner el canal al aire.
+
+#### 9 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Process
+
+Muestra los procesadores disponibles en la entrada asignada y su estado (activo/inactivo).
+
+- Encendido/apagado tocando el nombre (excepto perfil BASIC).
+- Edición de ajustes desde EDIT (solo perfil ADMIN).
+
+  <Note>
+    Los procesos disponibles no son propios de cada canal, sino que dependen de la entradas que tienen asignadas.
+  </Note>
+
+#### 10 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Output Routing
+
+Indica si el canal está asociado a una salida directa (ej. adaptadores UNIDEX para líneas TELCO).\
+La configuración de ruteo es accesible en perfil ADMIN desde SETTINGS.

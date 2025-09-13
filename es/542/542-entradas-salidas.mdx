@@ -1,0 +1,89 @@
+---
+title: "Entradas y salidas de audio"
+description: "Configuración de las entradas y salidas de audio"
+---
+
+## Entradas de audio
+
+En el modo avanzado (**SETUP**), seleccione en el menú lateral la opción **AUDIO INPUT**.\
+Cada entrada cuenta con los siguientes controles:
+
+![542 Web Inputs Pn](/images/542/542-web-inputs.png)
+
+### Ganancia (GAIN)
+
+- Ajusta el nivel de la señal de entrada en un rango de **±14 dB**.
+- Para entradas analógicas, el valor **0 dB** corresponde a **\+4 dBu**, referido a **–18 dBfs (AES K18)**. \
+  Esto implica **18 dB de headroom** (margen de sobrecarga).
+
+<Tip>
+  La ganancia debe ajustarse de manera que los **picos a 0 VU en la consola** oscilen entre **–22 y –9 dBfs** en el indicador de nivel del procesador.
+</Tip>
+
+### Trim R
+
+- Compensación de ganancia para el canal derecho.
+- Rango de ajuste: **±3 dB**.
+- Permite corregir **desequilibrios entre canales**.
+
+### ST/MONO
+
+- Conmuta la entrada entre:
+  - **STEREO**
+  - **MONO** (suma de canales izquierdo y derecho).
+
+### Entrada principal y alternativas
+
+El 542APC conmuta automáticamente entre entradas según la presencia o ausencia de señal.
+
+- Se define una **entrada principal**.
+- Se pueden configurar hasta **dos entradas alternativas** (FAIL BACKUP 1 y 2).
+- El equipo conmuta en este orden:
+  1. Entrada principal
+  2. FAIL BACKUP 1
+  3. FAIL BACKUP 2
+
+#### Parámetros de conmutación
+
+- **LEVEL** → umbral por debajo del cual se considera caída la señal.
+  - Ajustable entre **–45 y –80 dB** (pasos de 5 dB).
+- **FAIL TIME** → tiempo en segundos que la señal debe permanecer por debajo del umbral **LEVEL** para activar la conmutación.
+
+### Filtros de entrada
+
+- **HI PASS** (pasa-altos, tipo Chebyshev)
+  - Opciones: 0 (desactivado), 20 Hz (valor de fábrica), 40 Hz, 60 Hz, 80 Hz.
+  - Elimina señales subsónicas, típicamente captadas por micrófonos.
+- **LOW PASS** (pasa-bajos)
+  - Opciones: 15 kHz, 16 kHz, 20 kHz.
+  - Puede desactivarse (**None**).
+
+## Salidas de audio
+
+En el modo avanzado (**SETUP**), seleccione en el menú lateral la opción **AUDIO OUTPUT**.
+
+El procesador cuenta con **cuatro salidas de audio**, cada una con **ajuste de nivel independiente.**
+
+![542 Web Outputs Pn](/images/542/542-web-outputs.png)
+
+1. **Salida analógica balanceada** (XLR)
+2. **Salida analógica no balanceada** (RJ45)
+3. **Salida digital AES-3**
+4. **Streaming sobre Ethernet (AoIP)**
+
+### PRE-énfasis
+
+Todas las salidas cuentan con conmutación de **pre-énfasis**. La activación entrega la salida con la curva de énfasis de 50 uS o 75 uS, según configuración.
+
+La salida con pre-énfasis se utiliza en configuraciones en las que el excitador o el transmisor aplican de-énfasis al audio de entrada.
+
+### Conmutación de fuente de señal
+
+Las salidas **RJ45 analógica**, **AES-3 digital** y **AoIP** pueden configurarse para enviar:
+
+- Señal procesada.
+- Señal proveniente del receptor de FM.
+
+<Info>
+  Cuando una salida transmite la señal del receptor FM, el nivel de salida refleja el **nivel real al aire**, suponiendo: Modulación = 100%; Ganancia de entrada del **FM Receiver** = 0 dB.
+</Info>

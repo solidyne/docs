@@ -1,0 +1,46 @@
+---
+title: "Salidas"
+description: "Conexión de las salidas en UNIDEX UX24 y UX18"
+---
+
+## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Salidas analógicas
+
+Cada salida utiliza un conector **RJ45**, que transporta las señales **izquierda y derecha** en un único cable. En algunas aplicaciones, estas salidas estéreo pueden configurarse como **dos canales mono independientes**. Por ejemplo, los adaptadores **UDX para líneas telefónicas** utilizan las salidas no balanceadas mono para enviar señal a las líneas de comunicación externas.
+
+<Info>
+  Las salidas rotuladas como PGM y/o REC (balanceadas) entregan la mezcla del BUS de manera predeterminada.
+
+  Otras salidas son asignables, se pueden configurar para entregar cualquiera de los buses de mezlca o incluso redireccionar entradas (DIRECT OUT)
+</Info>
+
+## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Salidas digitales AES3
+
+- Se conectan mediante cable **RJ45–RJ45 CAT5** y adaptador **SOL-F3/XLRM**.
+- Utilizan el mismo **pin-out** que las salidas analógicas balanceadas estéreo, aunque **solo se transmite el canal izquierdo**.
+- Soportan también la conexión de señales **S/PDIF**.
+- Son balanceadas a transformador
+
+### Asignación de salidas AES3 en UX24
+
+- **AES-1** → Bus **PGM**
+- **AES-2** → Bus **REC**
+- **AES-3 y AES-4** → Asignables desde pantalla `SETTINGS → OUTPUTS`
+
+### Asignación de salidas AES3 en UX18
+
+- **AES-1** → asignable
+- **AES-2** → asignable
+
+<Warning>
+  **MUY IMPORTANTE:** 
+
+  Las **SALIDAS** **AES3 SOLO OPERAN A 48 kHz**.
+
+  \
+  Es imprescindible **configurar el dispositivo** de grabación en Windows a **48.000 Hz** para evitar errores de compatibilidad. Para configurar la frecuencia de muestreo en Windows 10:
+
+  1. Abrir el menú **Configuración del sistema** y seleccionar **Sonido**.
+  2. En **Ajustes de sonido**, abrir las **propiedades del dispositivo de entrada**.
+  3. Ingresar a **Otros ajustes del dispositivo**.
+  4. En la pestaña **Avanzado**, establecer la **frecuencia de muestreo en 48.000 Hz**.
+</Warning>

@@ -1,0 +1,80 @@
+---
+title: "UX24 Panel Trasero"
+description: "Instalacion de consola UX24 , Panel Trasero"
+keywords: ["install'","ux24"]
+---
+
+## Fuente de alimentación
+
+La unidad cuenta con una fuente de alimentación interna de tipo conmutada, **110/240V 50/60Hz.**
+
+En el panel trasero se ubica la **llave de encendido**; el fusible general (1A) y el conector para el cable de alimentación tipo Interlock (provisto con la consola).
+
+<img
+  src="/images/ux24/ux24_powerinput.png"
+  alt="RJ45 a RCA"
+  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
+  title=""
+/>
+
+## Puesta a tierra
+
+UX24 se conecta a tierra a través del cable del alimentación. No utilizar adaptadores o cables que supriman la clavija de toma a tierra. Se recomienda además conectar el borne de puesta a tierra del chasis a la tierra de la instalación, usando cable de 4 mm o superior.
+
+La instalación eléctrica general debe contar con una puesta a tierra adecuada. Como referencia, puede consultar el [plano de conexiones a tierra para FM](/es/puesta-a-tierra).
+
+<Danger>
+  **¡ATENCIÓN\!**
+
+  **Asegúrese que la computadora conectada a UX24 vía USB tenga una puesta a tierra adecuada.**
+</Danger>
+
+## Entradas, salidas y puertos
+
+El panel trasero concentra todas las conexiones de la consola. Se emplean conectores RJ45 para todas las conexiones de audio, con excepción de las salidas para auriculares y parlantes de la cabina de control.
+
+También encontramos puertos **Ethernet**, puerto **USB**, conexiones para **luces de aire** (Tally Light) y control **GPIO**.
+
+<Info>
+  Ver Infografía de conexiónes (PDF).
+</Info>
+
+![Ux24 Rearpanel Notes Pn](/images/ux24/ux24_rearpanel_notes.png)
+
+<Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} />  [ENTRADAS](/es/unidex/instalacion-entradas) (click para ampliar info)
+
+- 4 entradas para micrófonos.
+  - Utilizan conectores RJ45. Se conectan mediante un cable **SOL-M25/1XLRF** (RJ45 macho a XLR hembra, 2,5 metros). También se pueden adquirir tramos más cortos para conectar a XLR cerca de la consola.
+- 16 entradas UNIDEX mono agrupables en pares estéreo.
+- 4 balanceadas estéreo.
+- 4 digitales AES3
+- 4 USB audio estéreo.
+- 1 streaming de audio (reemplaza AES3-1)
+- OPCIÓN: DANTE x16
+
+<Note>
+  **MODELOS CON OPCIÓN DANTE** (UX24-A67)
+
+  Cuando UX24 incluye la opción DANTE/AES67 sustituye las entradas:
+
+  **UNIDEX 5, 6, 7 y 8**   Son reemplazadas por AoIP 1, 2, 3 y 4.\
+  **BAL 9, 10, 11 y 12**.   Son reemplazadas por AoIP 5, 6, 7 y 8.
+</Note>
+
+<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [**SALIDAS**](/es/unidex/instalacion-salidas)
+
+- 2 PGM balanceadas
+- 4 estero balanceadas
+- 4 estéreo no balanceadas
+- 4 digitales AES3
+- 4 USB audio estéreo
+- 2 audio streams
+- OPCIÓN: DANTE x16
+
+<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [SALIDA STUDIO](/es/unidex/instalacion-cableado_monitoreo)
+
+<Icon icon="usb-drive" iconType="solid" color="#008dff" size={24} />  [USB](/es/unidex/instalacion-usb)
+
+<Icon icon="network-wired" iconType="solid" color="#ffc044" size={23} />  [ETHERNET](/es/unidex/instalacion-red)
+
+<Icon icon="arrow-down-arrow-up" color="#ffc044" size={24} />  [GPIO](/es/unidex/instalacion-gpio)

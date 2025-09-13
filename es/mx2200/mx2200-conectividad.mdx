@@ -1,0 +1,170 @@
+---
+title: "Conexiones y puesta en marcha"
+description: "Descripción de las opciones de conexión y configuración inicial."
+---
+
+## Conectores en el panel trasero
+
+<img
+  src="/images/mx2200/mx2200-trasero.png"
+  alt="Mx2200 Trasero Pn"
+  title="Mx2200 Trasero Pn"
+  className="mx-auto"
+  style={{ width:"92%" }}
+/>
+
+### Alimentación (1)
+
+1. **Entrada para fuente externa**: Conector tubular 2 mm (pin \+).
+   - Fuente conmutada 90/240 V → salida **12 V / 1.5 A**.
+   - También admite batería externa de 12 V (respetar la polaridad).
+2. **Batería interna**: autonomía aprox. **4 horas** (llamada SIP por Ethernet, sin Wi-Fi ni Bluetooth).
+3. **Recarga**: se realiza con el equipo **encendido y conectado** a la fuente externa.
+   - Tiempo de carga completa (batería totalmente descargada): **10 horas**.
+
+<Warning>
+  El uso de **fuentes externas no provistas de fábrica** ocasionará la **pérdida de la garantía**.
+</Warning>
+
+---
+
+### Luz de aire (2)
+
+- Conector tubular 2,5 mm (pin \+).
+- Entrega **12 VDC**, soporta hasta **200 mA**.
+- Cuando se conecta una luz de aire:
+  - La salida de **auriculares #1** pasa a comportarse como salida para **monitores**.
+  - Se silencia automáticamente cuando se activan los micrófonos, para evitar acoples.
+
+---
+
+### USB Audio (3)
+
+- Conexión digital a la computadora mediante cable USB A/B (usar el cable provisto).
+- Recomendación: no exceder **4 m** de longitud.
+
+  <Warning>
+    Asegúrese de que la computadora esté **puesta a tierra**.\
+    Si no lo está, podría dañarse la entrada USB de la consola o de la computadora.
+  </Warning>
+- Compatible con Windows 7/11, Linux Ubuntu y macOS (reconocimiento automático).
+- El sistema detecta:
+  - **Dispositivo de reproducción USB** → entrada LINE USB en la consola.
+  - **Dispositivo de grabación USB** → salida de audio desde PGM.
+
+  <Note>
+    En Windows puede gestionarse en: **Panel de Control → Sonido → Audio** → selección de dispositivos de reproducción y grabación.
+  </Note>
+
+---
+
+### Micrófonos (4)
+
+- Cuatro entradas balanceadas (XLR) para micrófonos dinámicos.
+- **MIC 3 y MIC 4** comparten el mismo atenuador.
+- Recomendación: usar micrófonos de la misma marca y modelo en entradas compartidas.
+
+---
+
+### Auriculares (5)
+
+- Cuatro salidas TRS 1/8” (minijack).
+- Todas entregan el mismo nivel, controlado por la perilla de **CUE MONITOR**.
+- Salida #1 puede usarse como salida de **parlantes monitores**:
+  - Se silencia automáticamente cuando una **luz de aire** está conectada y se activa al enviar micrófonos a PGM..
+
+---
+
+### Línea telefónica terrestre (6)
+
+- Conector RJ11 para conexión de línea POTS.
+- Puede conectarse directamente a la central pública o a una PBX (central privada).
+- Protección interna contra descargas con varistores.
+
+  <Warning>
+    Se recomienda protección adicional en zonas de tormenta (descargadores gaseosos y fusibles).\
+    Los daños ocasionados por rayos **no están cubiertos por la garantía**.
+  </Warning>
+- **Preset NULL** permite ajustar rechazo del híbrido.
+
+  <Accordion title="Ajuste de rechazo (NULL)" icon="gear">
+    Se realiza al conectar la consola a la línea. Si la consola se desconecta y se vuelve a conectar luego a esa misma línea telefónica, no es necesario repetir el ajuste. \
+    Pero se deberá re-ajustar cada vez que se conecte a una línea diferente.
+
+    <Steps>
+      <Step title="Preparar la señal">
+        Enviar contenido hablado a PGM desde la computadora. Si no se dispone contenido hablado, se puede hablar en vivo usando los micrófonos.
+      </Step>
+      <Step title="Establecer llamada">
+        Realizar una llamada usando la línea fija (PHONE).
+      </Step>
+      <Step title="Silenciar al interlocutor">
+        Pedir al otro extremo que active **mute** o permanezca en silencio. \
+        Se puede llamar a un teléfono móvil propio y silenciar el micrófono.
+      </Step>
+      <Step title="Escuchar en CUE">
+        Quitar PGM de auriculares (botón PGM en CUE liberado).
+        Escuchar la línea en CUE.
+      </Step>
+      <Step title="Ajustar preset NULL">
+        Girar el preset NULL hasta encontrar el punto de **mínimo retorno**.
+      </Step>
+      <Step title="Finalizar">
+        Cortar la comunicación.
+      </Step>
+    </Steps>
+  </Accordion>
+
+---
+
+### Entrada de línea estéreo (7)
+
+- Conector TRS 1/4” no balanceado.
+  - Se controla con el atenuador LINE cuando **USB no está conectado**.
+  - Si USB está activo, LINE pasa a ser entrada secundaria (desde sección PHONE).
+
+<Warning>
+  Si el enlace se realiza vía Bluetooth, **LINE IN no puede sumarse** desde la sección PHONE.\
+  Solo estará disponible desde el atenuador LINE si no se conecta USB Audio.
+</Warning>
+
+---
+
+### Inserción de programa (8)
+
+- Entrada **Stream-In** TRS 1/4” con corte.
+- Al conectarse, **reemplaza la mezcla interna** de PGM en **streaming y USB**.
+- Permite usar procesadores externos:  _PGM Out → Procesador → Stream-In_.
+
+---
+
+### Salida de programa (9)
+
+- **Stereo PGM Out** (TRS 1/4”).
+- Envía la mezcla completa: micrófonos, USB, línea auxiliar y líneas telefónicas.
+
+---
+
+### Ethernet (red por cable)  (10)
+
+- Puerto RJ45 para conexión a red local.
+- Usos:
+  - Acceso vía web a configuración del CODEC.
+  - Conexión a Internet para SIP y streaming.
+  - Acceso vía web a grabaciones.
+- Configuración de fábrica: **DHCP habilitado**.
+
+---
+
+### Puertos USB (Wi-Fi y módem)  (11)
+
+- Puertos USB 2.0 tipo A.
+- Permiten conectar:
+  - **Antena Wi-Fi**.
+  - **Módem 4G** (requiere cable de extensión de 1 m).
+
+<Warning>
+  **No conectar un módem USB directamente al puerto**. Puede causar **interferencias audibles**.\
+  Use siempre un cable extensor para separar el módem de la consola.\
+  Esto también le permitirá reorientar el MODEM en caso de obtener la indicación de señal débil.
+</Warning>

@@ -1,0 +1,146 @@
+---
+title: "Procesado de audio"
+description: "Procesadores de audio integrados en UX24 y UX18 "
+---
+
+## PANTALLA PROCESS
+
+Para acceder, pulsar **PROCESS** en la pantalla principal. Esto activa además el **modo SELECT** para elegir un canal.
+
+<img
+  src="/images/ux24/ux24-pantalla-processs.jpg"
+  alt="Ux24 Pantalla Processs Jp"
+  title="Ux24 Pantalla Processs Jp"
+  style={{ width:"65%" }}
+  className="mr-auto"
+/>
+
+Los procesadores están **fijos en cada entrada**, no en el canal. No pueden reasignarse a otros canales, buses o salidas. Los procesos disponibles dependen del **tipo de entrada** asignada al canal.
+
+| **ENTRADA** | **EQ \+ Filtros** | **Comp. \+ Gate** | **De-esser** |
+| :---------: | :---------------: | :---------------: | :----------: |
+| MIC         | 4 bandas          | **sí**            | **sí**       |
+| UNIDEX      | 3 bandas          | **sí**            | no           |
+| USB         | 3 bandas          | no                | no           |
+| AES3        | 3 bandas          | no                | no           |
+| BALANCED    | 3 bandas          | no                | no           |
+
+**Funciones de la pantalla PROCESS**
+
+- Ver qué procesadores hay en el canal y si están activos o en **BYPASS**.
+- Activar/desactivar un procesador tocando **BYPASS**.
+- Acceder a sus ajustes tocando el ícono o el botón contextual.
+
+**Selección de canal**
+
+- En modo SELECT, usar **CUE/SELECT** en la mesa o el **encoder** para recorrer los 24 canales (físicos en celeste, virtuales en violeta).
+- Cualquier acción en PROCESS cancela SELECT, aplicando cambios al canal activo.
+- Desde PROCESS también se puede activar SELECT y elegir otro canal.
+
+**Ajuste de parámetros:**\
+Se realiza combinando el **encoder** y las **opciones táctiles**, según lo indicado para cada procesador.
+
+<Note>
+  Los ajustes del los procesos se pueden **guardar en la escena** .
+</Note>
+
+---
+
+## ECUALIZADOR PARAMÉTRICO
+
+<img
+  src="/images/ux24/ux24-EQ.png"
+  alt="Ux24 EQ Pn"
+  title="Ux24 EQ Pn"
+  style={{ width:"71%" }}
+/>
+
+**1 - NOMBRE:** Indica número y nombre del canal. Los canales virtuales muestran la zona de nombre en violeta.
+
+**2 - BANDAS:** Selección de banda. En pantalla se muestran los parámetros de una banda a la vez.\
+Cada banda tiene un color que la identifica en el gráfico y en la zona de parámetros.\
+Todas las entradas tienen 3 bandas paramétricas, excepto las entradas MIC-1 a MIC-4 que cuentan con cuatro bandas.
+
+**3 - CONTROLES:** Parámetros de cada banda de EQ. El color de fondo cambia con la banda seleccionada.
+
+- **GAIN:** Ganancia en dB, con un rango de ± 9 dB.
+- **FREQ:** Ajusta la frecuencia de trabajo. Todas las bandas cubren de 20 Hz a 20 kHz.
+- **Q:** Ancho de la campana del EQ. Determina la precisión de la corrección aplicada.
+- **TYPE:** Modo de trabajo de la banda. Se conmuta tocando la opción TYPE en pantalla.
+  - Banda #1: peak, low-shelf o HPF.
+  - Banda #2 (y #3 en entradas de micrófono): peak o HPF/LPF.
+  - Banda #3 (#4 en entradas de mic): peak, hi-shelf o LPF.
+- **ON/OFF:** Encendido/apagado de la banda. Se conmuta tocando ON/OFF en pantalla.
+
+**4 - BY-PASS:** Deshabilita toda la etapa de ecualización. También aparece en la pantalla PROCESS.\
+Se conmuta tocando BY-PASS en pantalla.
+
+**5 - SELECT:** Activa el modo selección de canal.
+
+**6 - BACK:** Retorna a la pantalla anterior.
+
+### Filtros Pasa-Alto / Pasa-Bajo
+
+- Banda #1 puede funcionar como filtro pasa-alto (HPF) de 2º orden (12 dB/oct).
+- Banda #3 (Banda #4 en entradas MIC-1 a MIC-4) puede funcionar como filtro pasa-bajo (LPF) de 2º orden (12 dB/oct).
+- Banda #2 (y Banda #3 en entradas MIC-1 a MIC-4) puede trabajar como HPF o LPF.\
+  Si se configuran dos bandas como pasa-alto o pasa-bajo en la misma frecuencia, la atenuación total del corte será de **24 dB/oct**.
+
+---
+
+## DYNAMICS
+
+El procesador **DYNAMIC** incluye una **compuerta de ruido** y un \*\*compresor \*\*dinámico.
+
+<img
+  src="/images/ux24/ux24-dynamics.jpg"
+  alt="Ux24 Dynamics Jp"
+  title="Ux24 Dynamics Jp"
+  style={{ width:"65%" }}
+/>
+
+**1 - CURVA DE COMPRESIÓN:** Muestra gráficamente la relación entrada-salida del procesador dinámico, incluyendo la compuerta (gate) y el compresor.
+
+**2 - NIVEL DE ENTRADA:** Indica el nivel de pico de la señal en la entrada del compresor (dBfs).
+
+### 3 - Compuerta de Ruido (GATE)
+
+- **Threshold:** Umbral de acción de la compuerta (dB).
+- **Attenuation:** Atenuación aplicada a la señal cuando la compuerta está activa.
+- **Style:** Cambia el tiempo de recuperación entre valores preestablecidos.
+- **Active:** Indicador que se enciende en rojo cuando la compuerta está cerrada.
+
+### 4 - Compresor dinámico
+
+Controles para ajuste de:
+
+- Umbral (threshold)
+- Relación (ratio)
+- Tiempo de ataque (attack)
+- Tiempo de recuperación (release)
+- Retención (hold)
+- Nivel de salida (output gain)
+
+**5 - BYPASS:** Desactiva por completo la etapa de procesado dinámico (compuerta \+ compresor).
+
+---
+
+## DE-ESSER
+
+<img
+  src="/images/ux24/ux24-deesser.jpg"
+  alt="Ux24 Deesser Jp"
+  title="Ux24 Deesser Jp"
+  style={{ width:"65%" }}
+/>
+
+Las entradas **MIC-1** a **MIC-4** cuentan con un **de-esser** para reducción de sibilancias.\
+Este procesador funciona como un compresor multibanda, atenuando únicamente el rango de frecuencias definido cuando el nivel de la señal supera el umbral establecido.
+
+**Controles:**
+
+- **1 - Type:** Ajustes preestablecidos.
+- **2 - Frequency start:** Frecuencia de corte inferior. Se ajusta según las características de la voz. Usualmente entre 4.500 y 5.500 Hz.
+- **3 - Frequency end:** Frecuencia de corte superior. Se ajusta según las características de la voz. Usualmente entre 7.000 y 10.000 Hz.
+- **4 - Threshold:** Nivel de umbral en dB. Cuando la señal en la banda de trabajo supera este valor, es atenuada con una **relación fija de 15:1**.
+- **5 - Gain reduction:** Indica la reducción de nivel aplicada, en dB.

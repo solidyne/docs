@@ -1,0 +1,77 @@
+---
+title: "Sistema y niveles de acceso"
+description: "Configuraciones de sistema y niveles de acceso "
+---
+
+## Configuraciones de sistema
+
+La opción SYS CONFIG de la pantalla SETTINGS permite configurar distintas funciones de sistema.
+
+<img
+  src="/images/ux24/unidex-config-sysconfig.jpg"
+  alt="Unidex Config Sysconfig Jp"
+  title="Unidex Config Sysconfig Jp"
+  style={{ width:"75%" }}
+/>
+
+### **1** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Start On-Air Input
+
+Define la entrada que se pondrá automáticamente al aire si la consola se reinicia debido a una falla en el suministro eléctrico.\
+Para entradas estéreo, se puede seleccionar cualquiera de los canales del par.
+
+La entrada elegida debe estar asignada a un canal físico o virtual. La consola siempre inicia con la última escena utilizada; por lo tanto, si la emisora trabaja en modo automatizado, asegúrese de que la escena seleccionada tenga asignada al menos un canal con la entrada definida para “arranque automático”.
+
+La fuente de audio conectada a esa entrada también debe reanudarse de forma autónoma.
+
+**Default Bus**\
+Indica los buses que se activarán en el canal asignado a la entrada definida en `Start on-air input`.
+
+**Level**\
+Nivel preconfigurado, independiente de la posición del fader físico. Si el fader se mueve, el nivel cambiará al valor correspondiente a su posición actual.
+
+### **2** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Ajustes de red (acceso remoto)
+
+Configura la conexión de red para el control remoto a través de Ethernet Control.\
+Por defecto, la consola trabaja en modo **DHCP**. La dirección IP asignada por el router se muestra en la pantalla principal (campo _UNIDEX IP_ en el sector **STATUS**).
+
+Mediante esta IP, es posible acceder a la consola desde cualquier computadora en la misma LAN usando un navegador web.\
+UNIDEX incorpora un servidor HTML5 interno que provee la interfaz gráfica para operar y configurar todas sus funciones.
+
+### **1** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Clock Settings
+
+Abre una ventana para ajustar la hora. El ajuste se puede realizar de tres maneras:
+
+1. **Sincronización automática por puerto STREAMING**\
+   Conecte el puerto Ethernet STREAMING a una LAN con acceso a Internet. La sincronización se realiza automáticamente contra un reloj patrón internacional (UTC), sin intervención del usuario.
+2. **Sincronización automática por puerto CONTROL**\
+   Conecte el puerto Ethernet CONTROL a una LAN con acceso a Internet. Esto sincroniza el reloj interno de la consola (_UX-Core_). Luego, sincronice manualmente la computadora de control (pantalla táctil) pulsando la opción **SYNC FROM UX-CORE**.
+3. **Ajuste manual**\
+   Introduzca la hora manualmente en casos donde no haya acceso a Internet.
+
+**Zona horaria**\
+Defina el huso horario correspondiente en el campo `Time Zone`.
+
+---
+
+## Usuarios y niveles de acceso
+
+Se acceden desde la pantalla **SETTINGS**, en la opción **USERS**.\
+UNIDEX dispone de tres niveles de usuario:
+
+- **ADMIN**
+- **EXPERT**
+- **BASIC**
+
+Los perfiles **ADMIN** y **EXPERT** están protegidos por contraseña, definida desde esta pantalla.\
+Solo el usuario **ADMIN** puede modificar contraseñas.\
+Las contraseñas predeterminadas son los nombres de usuario en minúsculas: `admin` y `expert`.
+
+#### Cómo iniciar con acceso restringido
+
+La opción `DEFAULT USER` define el usuario que se carga al encender la consola.\
+El usuario predeterminado es **ADMIN** y, en el arranque, el sistema nunca solicita contraseña.
+
+Para **restringir el acceso** a funciones avanzadas, se recomienda cambiar el usuario predeterminado (**ADMIN**) a **BASIC** o **EXPERT**, según el nivel de restricción deseado.
+
+- Si la consola inicia con nivel **BASIC**, el operador deberá ingresar la contraseña de **EXPERT** o **ADMIN** para acceder a funciones restringidas.
+- Si inicia con nivel **EXPERT**, solo se bloquean las funciones que requieren nivel **ADMIN**.

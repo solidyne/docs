@@ -1,0 +1,96 @@
+---
+title: "Interfaz de control WEB"
+description: "Acceso, configuración y ajustes desde la interfaz web"
+---
+
+<Icon icon="link-simple" iconType="solid" color="#0a00ff" size={22} />  [Cómo configurar el acceso WEB](/es/542/542-instalacion-web)
+
+## Pantalla inicial de MONITOREO
+
+Al acceder vía red al procesador, la interfaz de control web presenta **pantallas de monitoreo** que muestran la acción y el estado actual de las distintas etapas del equipo.
+
+![542 Web Home Pn](/images/542/542-web-home.png)
+
+- Estas pantallas **no permiten modificar configuraciones**.
+- Para editar parámetros es necesario activar el **modo SETUP**, pulsando el botón ubicado en el ángulo superior derecho de la ventana.
+
+Las pantallas de monitoreo se organizan en secciones que pueden **desplegarse o contraerse** pulsando el ícono (±):
+
+1. Monitoreo general (_sección fija_)
+2. Presets y Sound Wizards
+3. FM Receiver – Monitor Analyzer
+4. Audio Inputs and Outputs
+5. Time Graph
+
+### Sección _Monitoreo General_
+
+La parte superior es **fija** y se mantiene visible en todos los modos (MONITOREO y SETUP).
+
+Incluye:
+
+- **Nivel de la entrada** activa (RMS y picos en dBFS).
+- Indicadores de acción de **procesos**:
+  - Estado de los Enhancers (activo/inactivo).
+  - Acción de los AGC (dB).
+  - Atenuación de compresores y limitadores (dB).
+  - Estado de recortadores y limitador de banda ancha (dB).
+  - Recortador de MPX (dB).
+- **Niveles de salida** de audio:
+  - Indicador doble de nivel pico y RMS.
+  - Niveles de sonoridad según norma EBU-R128.
+
+En el renglón superior se muestra:
+
+- Dirección **IP** del equipo.
+- Fuente de señal y volumen de auriculares.
+- Usuario actual (para control de acceso con contraseña).
+- Botón para conmutar al modo **SETUP**.
+
+---
+
+### Sección _Preset and Sound Wizard_
+
+Muestra el **preset de procesado actual** y los controles simplificados **Wizard**, que permiten personalizar rápidamente el carácter del sonido.
+
+- El usuario puede cambiar de preset y ajustar parámetros básicos (brillo, bajos, compresión, loudness).
+- Con la opción **CLICK HERE TO EDIT**, se accede al modo **SETUP** para guardar cambios o crear nuevos presets.
+
+---
+
+### Sección _FM Receiver – Monitor Analyzer_
+
+Presenta los parámetros principales del análisis de la transmisión FM. La configuración avanzada del receptor y reportes detallados se obtienen en el modo **SETUP**, opción de menú **FM Receiver**.
+
+---
+
+### Sección _Audio Inputs and Outputs_
+
+Muestra indicadores de nivel de:
+
+- Entradas de audio.
+- Salidas de audio.
+- Salidas compuestas **MPX1** y **MPX2**.
+
+---
+
+### Sección _Time Graph_
+
+Gráfico que muestra la **evolución de la modulación en el tiempo**.\
+Permite alternar entre:
+
+- Nivel de MPX.
+- Modulación medida por el receptor de FM.
+- Potencia MPX según **ITU BS412**.
+
+## Acceso avanzado a configuración y ajustes
+
+El botón **SETUP**, ubicado en la parte superior de la pantalla, permite **editar los parámetros y ajustes** del procesador **542APC**.
+
+- El acceso a este modo puede estar protegido por **contraseña**.
+- Al ingresar, aparece un **menú lateral desplegable** en la izquierda de la pantalla, desde donde se acceden todas las instancias de ajuste y configuración.
+
+<Info>
+  - Siempre que se modifique un valor de procesado de audio, se debe pulsar **SAVE PRESET** para conservar el cambio. La opción SAVE permanecerá destellando mientras existan cambios no almacenados.
+  - Los cambios de **configuración del sistema** se guardan automáticamente.
+  - El **preset de procesado activo** es un valor de sistema: cada vez que se cambia, el ajuste se guarda automáticamente.
+</Info>

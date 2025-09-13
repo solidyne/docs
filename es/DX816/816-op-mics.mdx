@@ -1,0 +1,74 @@
+---
+title: "Canales de micrófono"
+description: "Operación de los canales de micrófonos"
+---
+
+## Características generales
+
+Los módulos de micrófono de la serie DX tienen **3 canales**, aunque permite conectar hasta **5 micrófonos** en su panel trasero.
+
+⟶ Las entradas **MIC-2** y **MIC-3** permiten la conexión de un segundo micrófono (2b y 3b).
+
+⟶ Los faders 2 y 3 manejan dos micrófonos a la vez cuando se conectan las entradas 2b y/o 3b.
+
+El modelo **DX822** tiene dos módulos de 3 micrófonos. Maneja **6 atenuadores de micrófono** y admite hasta **10 micrófonos** (4 entradas dobles).
+
+<img
+  src="/images/816/816-panel-mics.png"
+  alt="816 Panel Mics Pn"
+  title="816 Panel Mics Pn"
+  className="mx-auto"
+  style={{ width:"64%" }}
+/>
+
+1. **Preset de ganancia.** Debe ajustarse para que el atenuador trabaje por encima de la marca de sobrecarga **OVL (–30 dB)**.
+
+   ⟶ Trabajar por debajo de este nivel amplifica innecesariamente, provocando recortes en picos. ⟶ Lo ideal es trabajar con el fader dentro de la **zona óptima (–10 a –20 dB)**.
+2. Allimentación **_phantom 48V._** Se activa/desactiva para todas las entradas del módulo.
+
+<Note>
+  Los micrófonos dinámicos pueden conectarse sin riesgo a entradas con phantom 48V, ya que su transformador interno desacopla la tensión continua.
+</Note>
+
+3. **EQ**. Activa/desactiva la ecualización para todos los micrófonos del módulo.
+4. **EQ.** Controles de ganancia de las bandas de frecuencia.
+5. **BUSES:** Asignación a buses de salida \*\*PGM \*\*y **REC**. Los micrófonos se asignan en conjunto a PGM, REC o a ambas. La asignación es post-EQ.
+6. **CUE:** envía la señal pre-fader al circuito de escucha previa. Se activa en cada canal.
+7. **Zona de trabajo:** Esta zona indica la posición correcta de trabajo, para un nivel de señal nominal y ajuste correcto de la ganancia de entrada. \
+   La ganancia debe ajustarse para que el atenuador trabaje por encima de  -30 dB. La  indicación  **OVL (9)** indica sobrecarga (overload), es decir, excesiva ganancia en la entrada.
+8. **Atenuador principal (fader)**. Ajusta el nivel de la señal en la mezcla. Además de levantar los faders, para habilitar los micrófonos se debe pulsar el botón MASTER MIC ubicado a la derecha de los faders.
+
+---
+
+## Ecualización
+
+La ecualización es global y tiene efecto sobre todos los canales de micrófono. El objetivo es permitir ajustes generales a la ecualización que respondan a características de la acústica de la sala, que es común a todos los micrófonos.
+
+**Características de la EQ:**
+
+- \*\*Bandas 1 y 4 \*\*(graves/agudos): en modo **Shelving**, rango ±15 dB.
+- **Banda 2**: Peak EQ. Centrada en 160 Hz. Puede suavizar el efecto "poping" o "popeo".
+- **Banda 3**: Centrada en 6,3 kHz. Puede suavizar el efecto de "seseo" y sonidos sibilantes.
+
+<img
+  src="/images/816/816-eq-curvas.png"
+  alt="816 Eq Curvas Pn"
+  title="816 Eq Curvas Pn"
+  className="mx-auto"
+  style={{ width:"53%" }}
+/>
+
+---
+
+## Compresión
+
+El compresor dinámico reduce las grandes variaciones de nivel en los micrófonos. \
+El diseño evita artefactos audibles y simplifica la operación. Basta con elevar el nivel de los faders de micrófono hasta que los vúmetros lleguen a la zona roja.
+
+- Actúa sobre la mezcla de los canales de micrófono.
+- No se puede deshabilitar.
+- Actúa cuando la señal supera **0 VU**.
+- Por debajo de ese nivel, la señal <u>no es afectada</u>.
+- Relación de compresión: **10:1**, con tiempos de ataque y recuperación rápidos.
+- El compresor reducirá la ganancia en un valor indicado por el medidor **MIC Compressor**.
+- Valores de compresión de **5 a 15 dB** son óptimos cuando se operan varios micrófonos simultáneamente.

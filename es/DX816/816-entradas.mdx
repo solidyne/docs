@@ -1,0 +1,96 @@
+---
+title: "Entradas de audio"
+description: "Descripción y conexionado de las entradas de audio"
+---
+
+## Entradas de línea
+
+Las consolas DX816/822 presentan diversos tipos de entradas, que se combinan en los diferentes canales de la consola:
+
+- **BAL-LINE**: entradas balanceadas.
+- **LINE**: entradas no balanceadas.
+- **LINE-1 y LINE-2**: ofrecen doble entrada (balanceada y no balanceada), conmutables desde el panel frontal. El control de ganancia es común a ambas entradas. Puede ser necesario reajustarlo según el equipo conectado.
+
+<Note>
+  Las entradas de línea no balanceadas tienen nivel nominal **–10 dBV** sobre **10 KΩ** .
+</Note>
+
+**Entradas auxiliares en canales USB:**\
+Los canales digitales USB incluyen entradas auxiliares analógicas estéreo, no balanceadas, mediante conector TRS de 3,5 mm (⅛”).\
+La **conmutación es automática**: al insertar un plug TRS, el audio USB queda silenciado.
+
+### Conexión de las entradas balanceadas
+
+Las entradas balanceadas utilizan conectores **RJ45** blindados y requieren cable multipar blindado categoría 5. Puede adquirirse el kit de cables prearmados **MNGDX822**, que incluye los cables necesarios para la conexión.
+
+Para armar los cables de conexión, se recomienda:
+
+- Utilizar conectores **RJ45 blindados**.
+- Usar cable **CAT-5 STP o S/FTP de primera calidad**.
+- Asegurarse de que el blindaje del conector esté correctamente unido a la malla del cable.
+
+La siguiente tabla muestra la nomenclatura estándar de colores y numeración del conector RJ45.
+
+## Nomenclatura estándar del conector RJ45
+
+<img
+  src="/images/ux24/RJ-45_TIA-568B.png"
+  alt="RJ45 vista frontal - Pines según TIA-568B"
+  style={{ maxWidth:"300px",height:"auto",marginBottom:"1rem" }}
+  title=""
+/>
+
+| **PIN** | **COLOR DE CABLE** |
+| :-----: | ------------------ |
+| 1       | Naranja / Blanco   |
+| 2       | Naranja            |
+| 3       | Verde / Blanco     |
+| 4       | Azul               |
+| 5       | Azul / Blanco      |
+| 6       | Verde              |
+| 7       | Marrón / Blanco    |
+| 8       | Marrón             |
+
+## Configuración de pines para conexión de audio balanceado
+
+| **PIN** | **FUNCIÓN**            | **COLOR DE CABLE** |
+| :-----: | ---------------------- | ------------------ |
+| 1       | Canal izquierdo (\+)   | Naranja / Blanco   |
+| 2       | Canal izquierdo (–)    | Naranja            |
+| 3       | Canal derecho (\+)     | Verde / Blanco     |
+| 4       | Tierra                 | Azul               |
+| 5       | Reservado              | Azul / Blanco      |
+| 6       | Canal derecho (–)      | Verde              |
+| 7       | –15 V (opcionalmente)  | Marrón / Blanco    |
+| 8       | \+15 V (opcionalmente) | Marrón             |
+
+---
+
+## Entradas para micrófonos
+
+Las entradas de micrófono son balanceadas electrónicamente y utilizan conectores **XLR estándar**.
+
+<img
+  src="/images/816/816-trasero-mics.jpg"
+  alt="816 Trasero Mics Jp"
+  title="816 Trasero Mics Jp"
+  className="mx-auto"
+  style={{ width:"56%" }}
+/>
+
+- El panel trasero presenta 5 conectores XLR.
+- Las entradas **MIC-4** y **MIC-5** comparten el preamplificador con **MIC-2** y **MIC-3**, respectivamente. Canal 2 y Canal 3 pueden manejar maneja dos micrófonos cada uno:
+  - Canal 2 ⟶ Entradas MIC-2 y MIC-4
+  - Canal 3 ⟶ Entradas MIC-3 y MIC-5
+
+<Warning>
+  Cuando se utilizan dos micrófonos sobre un mismo canal, deben ser de **igual marca y modelo** para garantizar homogeneidad en la señal.
+</Warning>
+
+### Alimentación "Phantom" 48V
+
+El botón **48V** en el frente del módulo activa la alimentación phantom flotante para **todos los micrófonos**. En el modelo DX822, un segundo interruptor conmuta la alimentación sobre las entradas MIC-6 a MIC-10.
+
+<Info>
+  Los micrófonos dinámicos soportan alimentación phantom de 48V, por lo que es posible mezclar micrófonos dinámicos y de condensador sin riesgo.
+</Info>

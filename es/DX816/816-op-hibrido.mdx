@@ -1,0 +1,133 @@
+---
+title: "Comunicaciones telefónicas"
+description: "Líneas telefónicas, celulares y aplicacioens VoIP"
+---
+
+## Canal de híbrido: operaciones
+
+El canal TELCO concentra las comunicicaciones telefónicas. Incluye un híbrido telefónico de **2 líneas terrestres**, **1 enlace Bluetooth** para vincular un celular y puede sumar **comunicación VoIP** desde una computadora en **USB-2**. Las tres (o cuatro, contando VoIP) pueden estar **en conferencia**.
+
+Adicionalmente, se pueden sumar más líneas mediante un híbrido externo. Estas líneas no consumen canales extra de la consola, pues se suman directamente al canal TELCO, que actúa como control MASTER para puesta al aire de las líneas externas.
+
+<img
+  src="/images/816/816-panel-hib.png"
+  alt="816 Panel Hib Pn"
+  title="816 Panel Hib Pn"
+  className="mx-auto"
+  style={{ width:"31%" }}
+/>
+
+### Controles en el panel
+
+ 1. **PGM-REC.** Asigna el canal TELCO a las salidas PGM o REC. REC habilita la grabación de llamadas (asignando los micrófonos a REC) mientras al aire se reproduce otro contenido.
+
+    <Warning>
+      No está soportado asignar TELCO a ambos buses a la vez. \
+      Si no hay audio de híbrido al aire, verificar que **PGM-REC** esté en **PGM**.
+    </Warning>
+ 2. **VOX-IP.**  Envía **retorno de líneas** telefónicas hacia el puerto **USB-2** (bus REC). Esto configura una mezcla mix-minus para las aplicaciones de comunicaciones que corren en la computadora, que recibe retorno de las fuentes activas en TELCO (líneas terrestre, móvil Bluetooth, híbrido externo)
+ 3. **Canal Bluetooth.**  Botón de puesta al aire del dispositivo Bluetooth.
+ 4. **Control Bluetooth.**  Botón de activavión y modos de la interfaz Bluetooth.
+ 5. **Canales del híbrido.**  Botones de control del híbrido telefónico para las líneas terrestres.
+ 6. **NULL.**  Ajusta el rechazo para las línaeas terrestres.
+ 7. **Nivel de CUE.**  Ajusta el nivel del llamado en el circuito de escucha previa. Es un ajuste de instalación, usualmente no debe ser modificado durante la operación normal.
+ 8. **TALK.**  Habilita el micrófono Talk-Back para hablar a las líneas telefónicas. Es de tipo retenido; para apagar, volver a pulsar.
+ 9. La  indicación  **OVL**  indica el comienzo de la zona correcta de trabajo. El ajuste de ganancia para las líneas terrestres es automático. Para Bluetooth dependerá del ajuste de nivel del teléfono, que debe ajustarse para que el atenuador trabaje por encima de -30 dB.
+10. **Atenuador principal:** Ajusta eivel de las llamadas en la mezcla.
+11. **HOLD-CUE:** Sistema automático que cambia le modo de la llamada según la posición del atenuador.
+    - **a)** Si el atenuador esta cerrado, la llamada se deriva al circuito CUE. El operador pude hablar con la línea pulsando TALK [8] y escucha por el canal CUE.
+    - **b)** Si el atenuador está en la zona punteada HOLD, la llamada queda RETENIDA. Se envía a la línea el audio de PGM (o REC según asignación) pero la línea no sale al aire.
+    - **c)** Por encima de la zona HOLD, la llamada se envía al aire con nivel determinado por el fader.
+
+---
+
+## Modos de trabajo
+
+- **A) Conductor-operador**: el propio conductor atiende y pone llamadas al aire.
+- **B) Producción**: productores/telefonistas atienden/generan llamadas y las transfieren a Control.
+
+### Caso A – Conductor-operador (paso a paso)
+
+1. **Ingreso de llamada**: el botón de línea destella azul al sonar.
+2. **Atender**: pulsar el botón de la línea → queda **rojo**. Para celular, pulsar **CELL PHONE [3]** (requiere estar previamente vinculado por Bluetooth).
+3. **Pre-escucha y charla privada**:
+   - Mantener el **fader cerrado** en **posición CUE [11]**.
+   - Quien llama escucha **programa** (o REC, según asignación); la **línea** se oye en **CUE**.
+   - Pulsar y manter el botón **TALK [8]** para hablar (se mutean parlantes de Control; quedan auriculares). Se utiliza el mcrófono Talk-Back.
+4. **Espera (HOLD)**: mover el fader a la **zona HOLD** → la llamada queda en espera escuchando programa; se desconecta de CUE.
+5. **Al aire / conferencia**: subir el **fader TELECOM** hasta nivel adecuado en vúmetros.
+   - Todas las líneas con su botón **en rojo** salen al aire **en conferencia**.
+   - Para entrevistas individuales, dejar **solo una** en rojo.
+6. **Cortar**: bajar fader y **liberar** (apagar rojo) las líneas.
+   - En celular: pulsar **CELL PHONE [3]** para quitar el audio del canal. Para cortar definitivamente, toque **corto** en **BLUETOOTH [4]**. También puede desconectar Bluetooth en el celular si desea continuar la llamada desde el móvil.
+
+### Caso B – Producción (paso a paso)
+
+1. **Teléfonos en Producción**: Phone-1, Phone-2 y el **celular** (ver conexiones en [Conexión de líneas telefónicas](/es/DX816/816-telco)).
+2. **Transferir a Control**: al atender/gestionar en Producción, avisar al operador para que **tome** la línea desde la consola (pulsar botón). Luego **colgar** en Producción.
+3. **Celular**: desde el teléfono móvil pasar a **modo headset (Bluetooth)** y avisar a Control para que pulse **CELL PHONE [3].** Con fader en posición HOLD la línea queda en espera escuchando programa.
+4. **Al aire**: subir el fader principal.
+5. **Cortar**: bajar fader y apagar botones de línea. En celular, cortar con **toque corto en BLUETOOTH**.
+6. **Devolver a Producción**: descolgar el teléfono de esa línea en Producción y luego el operador **libera** el botón en la consola. En celular, salir de **Headset** en el teléfono para quitar la llamada de Bluetooth.
+
+### Sumar una línea a una comunicación que ya está al aire
+
+El sistema de híbrido incorporado en la serie DX está pensado para operar con un llamado a la vez. **Si una llamada está al aire, no es posible retener en consola una segunda llamada** en espera.
+
+Sin embargo, el sistema soporta establecer conferencias entre las tres líneas, pero cuando se habilita una seguna línea, entra directamente al aire en conferencia.
+
+<Info>
+  Para trabajar con llamadas en espera, complementar el sistema instalando un híbrido externo conectado a la entrada/salida EXTERNAL HIBRYD. \
+  El módulo \*\*Solidyne HL240 \*\*maneja 2 líneas terrestres y dos celulares Bluetooth con llamada en espera y niveles de mezcla independientes.
+</Info>
+
+Si se cuenta con una central local, se pueden retener y transferir a consola una llamada usando la central, pero las líneas retenidas de este modo no recibirán retorno de la transmisión de aire.
+
+**Procdedimiento:**
+
+- Para enviar una línea a conferencia (ya hay un llamado al aire) Producción le avisa a la persona que está comunicada que en unos instantes irá al aire en conferencia.
+- Si la central local lo permite, poner el llamado en espera, avisar al operador y transferir la llamada al interno que corresponda (recomendado).
+- El interno suena mostrando RING en consola, el operador atiende y la llamada pasa al aire.
+- Si no se dispone de central local, mantener descolgado el teléfono, avisar al operador y una vez que éste tome la línea en la consola, colgar. Esta alternativa está desaconsejada, pues puede producir chasquidos al aire al colgar el teléfono en producción.
+
+<Note>
+  Si se requiere trabajar regularmente con llamdas en espera, recomendamos sumar un sistema de híbrido externo a la consola o al menos configurar una central interna para gestionar los llamados.
+</Note>
+
+### Sumar un celular a una comunicación que ya está al aire
+
+- En ese caso la Producción le avisa a la persona que está comunicada por celular que en unos instantes irá al aire en conferencia.
+- A continuación activa en pantalla el modo “manos libres por Bluetooth” y le avisa al operador.
+- Cuando el operador pulsa el botón CELLULAR, la linea celular es agregada en conferencia.
+
+---
+
+<Danger>
+  Para conferencia entre **dos líneas terrestres**, deben pertenecer a la **misma central pública** o a la **misma PBX**. No es posible hacerlo entre **centrales distintas** ni con **convertidores IP** diferentes.
+</Danger>
+
+---
+
+## Nivel de la llamadas al aire
+
+- Cuando se trabaja con las líneas terrestres, cuidar de no exceder el nivel TELCO al aire. Los híbridos analógicos no cancelan 100% y una parte del PGM retorna; con exceso de nivel puede “ensuciar” voces de estudio.
+- Una llamada **no siempre necesita** llegar a **0 VU** para igualar **sonoridad**: el teléfono carece de graves (que hacen “picar” más los vúmetros) y la sonoridad la define la **banda media**; el procesador del aire igualará niveles.
+
+<Warning>
+  Si la voz del locutor **se colorea** al salir al aire con línea fija, revisar **Ajuste de rechazo (Null)**.\
+  Si la escucha en **CUE** satura o tiene mucho ruido, reducir **CUE LEVEL [7]**.
+</Warning>
+
+---
+
+## Retorno a línea telefónica
+
+Los híbridos Solidyne incorporados en la serie DX **no tienen control manual de nivel de envío** a línea. Incluyen **procesado de retorno** con **AGC** y **limitador** \+ **filtrado** (banda **400–2.200 Hz**):
+
+- El retorno se **ajusta automáticamente** al nivel máximo que admiten las centrales digitales (2 Vpp en la línea ).
+- Simplifica la operación del híbrido en consola.
+- Evita distorsión, intermodulación y degradación del factor de rechazo.
+
+<Note>
+  Para una correcta operación, el control automático de nivel de envío requiere que el nivel de los **micrófonos se mantenga en 0VU** promedio (picos por encima del 0 VU).
+</Note>

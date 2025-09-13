@@ -1,0 +1,67 @@
+---
+title: "USB audio"
+description: "Conexión y configuración de las conexiones USB"
+---
+
+## Conexión de los puertos USB
+
+Los puertos **USB-1** y **USB-2** permiten conexión directa a la computadora, utilizando cables **USB A/B estándar**. Soportan puertos 1.1, 2.0 o 3.0.
+
+<img
+  src="/images/image.png"
+  alt="image.png"
+  title="image.png"
+  className="mx-auto"
+  style={{ width:"10%" }}
+/>
+
+Asegúrese de utilizar **cables de buena calidad**. Cables malos pueden ocasionar la caída de la conexión USB durante la reproducción de audio o fallos intermitentes.
+
+Se recomienda colocar la computadora próxima a la consola, utilizando cables de 2 a 3 metros. Si se emplean extensiones, no superar los 4 metros.
+
+<Warning>
+  Antes de conectar USB a la computadora, asegúrese de que ambos equipos tengan una **puesta a tierra efectiva** mediante sus fichas de tres contactos. **Verificación rápida:**
+
+  - Con un tester en escala de 25 V alterna, mida entre los chasis de la PC y de la consola. El valor debe ser **cero voltios**.
+  - Recién entonces conecte la ficha USB.
+  - Si no existe puesta a tierra, puede dañarse el puerto USB.
+</Warning>
+
+- Los puertos USB son compatibles con **Windows© y Linux**.
+- Si ambos se conectan a una misma computadora, **conectar primero USB-1**.
+- Para usar un único canal, debe conectarse siempre **USB-1**.
+
+  <Danger>
+    El puerto **USB-2 solo funciona si USB-1 está conectado y activo**.
+  </Danger>
+- Si se conectan dos computadoras distintas, tenga en cuenta que USB-2 no funcionará cuando la PC conectada a USB-1 está apagada. Por esto USB-1 se asigna a la PC de emisión al aire, que permanece activa las 24 horas.
+
+## Instalación en Windows<sup>©</sup>
+
+<Steps>
+  <Step>
+    En Windows la conexión es Plug&Play. El sistema reconoce e instala automáticamente los controladores. El puerto aparece como **“dispositivo de reproducción USB 1”** y **“dispositivo de grabación USB 1”**.
+  </Step>
+  <Step>
+    En la torreta de VU, el indicador **Digital IN/Out** mostrará “4” (entrada \+ salida estéreo reconocidas).
+  </Step>
+  <Step>
+    Al conectar el segundo canal (USB-2), el indicador cambia a “8” y la PC muestra un segundo dispositivo de reproducción y grabación.
+  </Step>
+  <Step>
+    Los puertos se pueden conectar a una misma computadora o a dos equipos distintos.
+  </Step>
+</Steps>
+
+---
+
+## Buses PGM y REC sobre USB
+
+La conexión USB permite enviar directamente dos buses de señal hacia la computadora:
+
+- **USB-1 / PGM**: aparece en Windows© como “Dispositivo de grabación USB 1”.
+- **USB-2 / REC**: aparece en Windows© como “Dispositivo de grabación USB 2”.
+
+No requiere instalación adicional. Los dispositivos aparecen automáticamente al conectar los canales de entrada USB a la computadora (o a dos computadoras distintas).
+
+Para detalles de uso en grabación, ver **Grabación de programas**.

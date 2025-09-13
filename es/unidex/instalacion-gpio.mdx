@@ -1,0 +1,131 @@
+---
+title: "GPIO y Tally Light"
+description: "Control de dispositivos externos vía GPIO en UNIDEX"
+---
+
+## Control por GPIO
+
+El conector **GPIO** _(General Purpose Input/Output)_ ofrece entradas y salidas que permiten controlar funciones de la consola (GPI) como la activación de mic; o controlar dispositivos externos (GPO) como luces de señalización o el procesado de audio.
+
+- **GPI**  soporta señales de disparo de 5-15V/150mA (activo alto).
+- **GPO 1 a 7** son de tipo _“open drain”_, soportan señales de 5 – 24 V / 250 mA.
+- **GPO 8** (solo en UX24) entrega 12V hasta 250 mA (activo alto). Puede por ejemplo alimentar un relay.
+
+## Señales en el conector GPIO (UX24)
+
+<img
+  src="/images/ux24/unidex_gpio_pinout.jpg"
+  alt="Unidex Gpio Pinout Jp"
+  title="Unidex Gpio Pinout Jp"
+  style={{ width:"41%" }}
+/>
+
+<Note>
+  En **UX18** solo están dispones las GPI 1 y 2 y las GPO 1 a 7.
+</Note>
+
+## Configuración de las GPIO
+
+La configuración de las acciones que disparan las GPIO se hace desde la pantalla `SETTINGS→GPIO`.
+
+<img
+  src="/images/ux24/unidex-config-GPIO.png"
+  alt="Unidex Config GPIO Pn"
+  title="Unidex Config GPIO Pn"
+  style={{ width:"70%" }}
+/>
+
+Cada **GP-IN** y **GP-OUT** se puede asociar a un canal y a una acción determinada.
+
+Las acciones disponibles para las **GPI** son:
+
+`UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A;  MASTER MIC B`
+
+Las acciones disponibles para las **GPO** son:
+
+`UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING;  OUTPUT +12V` (solo GPO8 en UX24)
+
+<Tip>
+  **EJEMPLOS**\
+  La siguiente configuración para **GPI**:
+
+  GPI 1  |  CHANNEL ON/OFF  |  CHANNEL 1
+
+  ...hará que el Canal 1 se encienda o apague según la señal de control presente en la entrada **GPI 1**.
+
+  La siguiente configuración para **GPO**:
+
+  GPO 1  |   CHANNEL ON/OFF  |  CHANNEL 6
+
+  ...hará que cambie de estado la salida **GPO 1** según se enciendo o apague el Canal 6.
+</Tip>
+
+## Casos de aplicación
+
+### Brazo soporte con LED (GPO)
+
+Las salidas **GPO 1 a 7** pueden funcionar como **llaves electrónicas**, conmutando LEDs conectados a una fuente de alimentación externa, siempre que el consumo no supere los **250 mA**.
+
+<Danger>
+  Si el consumo excede los **250 mA**, debe utilizarse un **relay externo** para la conmutación.
+  Se recomienda usar **GPO 8** para comandar directamente un relay de bobina 12 V con consumo de hasta 250 mA.
+</Danger>
+
+La figura muestra un ejemplo de conexión directa de un **brazo de micrófono con LED**, utilizando **GPO-1**.
+
+<img
+  src="/images/ux24/unidex_GPIO_brazo.jpg"
+  alt="Unidex GPIO Brazo Jp"
+  title="Unidex GPIO Brazo Jp"
+  style={{ width:"51%" }}
+/>
+
+En la **configuración de GPIO**, las salidas GPO deben asignarse a la función de encendido/apagado del canal MIC correspondiente.
+
+Ejemplo típico:
+
+- **GPO 1 →** ON/OFF Canal MIC 1
+- **GPO 2 →** ON/OFF Canal MIC 2
+- etc.
+
+### Silenciar micrófono (uso de GPI)
+
+Las entradas **GPI** permiten ejecutar acciones automatizadas en la consola.
+
+Una de las más útiles es el silenciado temporal del canal (MUTE), ideal para implementar un **botón de tos** en el estudio. Esto permite al locutor silenciar su micrófono sin intervención del operador.
+
+El siguiente ejemplo muestra la conexión de un **pulsador momentáneo** para activar **GPI 1**.
+
+<img
+  src="/images/ux24/gpio-mute.png"
+  alt="Gpio Mute Pn"
+  title="Gpio Mute Pn"
+  style={{ width:"52%" }}
+/>
+
+En este caso:
+
+- **GPO 8** se configura como salida fija de **12 V** (alimentación).
+- **GPI 1** se configura con la acción **MUTE** y se asocia al canal deseado.
+
+Durante el silencio activado por GPI, si el operador **mueve el fader manualmente**, la consola le devuelve el control, y el micrófono vuelve al aire automáticamente.
+
+## Luces de señalización "EN EL AIRE"
+
+En el panel trasero de la consola se encuentra  **la salidas de 12 V / 250 mA** para conexión de luces de señalización **“EN EL AIRE”**. UX24 soporta un segundo circuito de señalización para el Estudio B.
+
+- Se pueden conectar hasta **dos luces de aire Solidyne LA100** por salida.
+- Para luces de otras marcas, asegúrese de que el consumo total **no supere los 250 mA**.
+
+Opcionalmente, las salidas **GPO 1 a 7** pueden utilizarse para controlar **luces individuales de micrófono**.
+
+<Warning>
+  Las salidas de luz de aire están protegidas por un componente **PTC (fusistor)** que actúa por temperatura.\
+  Si la corriente excede los **250 mA**, la salida se desconecta automáticamente para proteger la consola.
+
+  Para restablecer la salida:
+
+  1. Desconectar la carga (la luz).
+  2. Revisar el sistema para identificar la causa del sobreconsumo (ej. exceso de LEDs o cortocircuito).
+  3. Esperar a que el PTC se enfríe antes de reconectar.
+</Warning>

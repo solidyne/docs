@@ -1,0 +1,186 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Mint Starter Kit",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "languages": [
+      {
+        "language": "es",
+        "tabs": [                  
+          {
+            "tab": "Consolas UNIDEX",
+            "anchors": [
+              {
+                "anchor": "UX24",
+                "icon": "book-open",
+                "description": "Consola UX24",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/unidex/UNIDEX-introduccion"
+                    ]
+                  },
+                          {
+                    "group": "INSTALACION",
+                    "pages": [
+                      "es/unidex/ux24-instalacion-cableado",
+                                  "es/unidex/ux24-instalacion-panel",
+                                  "es/unidex/ux24-instalacion-gpio",
+                                  "es/unidex/ux24-instalacion-onoff"
+                    ]
+                  },
+                  {
+                    "group": "ADAPTADORES UNIDEX",
+                    "pages": [
+                      "es/unidex/UNIDEX-adaptadores",
+                                  "es/unidex/UDX-2MIC",
+                                  "es/unidex/UDX-2TEL"
+                    ]
+                  },
+                  {
+                    "group": "MONITOREO",
+                    "pages": [
+                        "es/unidex/ux-StudioBox-HD5",
+                                  "es/unidex/ux-StudioBox-HD3"
+                      ]
+                    },
+                          {
+                      "group": "CONFIGURACION",
+                      "pages": [
+                        "es/unidex/ux24-EntradasySalidas",
+                                  "es/unidex/ux24-sistema"
+                      ]
+                    },
+                          {
+                              "group": "OPERACIÓN",
+                              "pages": [
+                                  "es/unidex/ux24-op-zonas",
+                                  "es/unidex/ux24-op-canales"
+                              ]
+                    },
+                          {
+                              "group": "PROCESADO",
+                              "pages": [
+                                  "es/unidex/ux-proc-eq",
+                                  "es/unidex/ux-proc-dynamic",
+                                  "es/unidex/ux-proc-deesser"
+                              ]
+                    },
+                          {
+                              "group": "ACCESO VIA WEB",
+                              "pages": [
+                                  "es/unidex/ux24-remote-conect",
+                                "es/unidex/ux24-remote-interfaz",
+                                "es/unidex/ux24-remote-firmware"
+                              ]
+                    },
+                          {
+                              "group": "ESPECIFICACIONES",
+                              "pages": [
+                                  "es/unidex/ux24-especificaciones"
+                              ]
+                    } 
+                ]
+              },
+              {
+                "anchor": "UX18",
+                "icon": "book-open",
+                "description": "Consola UX218",
+                "pages": [
+                      "es/unidex/ux18-instalacion"
+                    ]
+              }
+            ]
+          },
+          {
+            "tab": "Consolas Classic",
+            "pages": ["es/classic-index"]
+          },
+          {
+            "tab": "Procesadores",
+            "pages": ["es/procesadores-index"]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "UNIDEX Consoles",
+            "pages": [
+                  "en/ux24_installation"
+                ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": []
+    }
+  },
+  "logo": {
+    "light": "/logo/LOGOSOLIDYNE.svg",
+    "dark": "/logo/LOGOSOLIDYNENEGATIVO.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:info@solidynepro.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Webpage",
+      "href": "https://www.solidynepro.com"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      {
+       "title": "Download PDF",
+       "description": "download this page as PDF",
+       "icon": "sparkle",
+       "href": {
+         "base": "https://www.sejda.com/html-to-pdf?",
+         "query": [
+           {
+             "key": "save-link",
+             "value":"https://solidyne.mintlify.app/$path&pageOrientation=auto"
+           }
+         ]
+        }
+       },
+      {
+       "title": "Ask Gemini",
+       "description": "Ask Google Gemini about the current page",
+       "icon": "sparkle",
+       "href": {
+         "base": "https://gemini.google.com/app",
+         "query": [
+           {
+             "key": "q",
+             "value": "Ask question about https://mintlify.com/docs$path.md"
+           }
+         ]
+        }
+       }
+   ]
+  },
+  "footer": {
+    "socials": {
+      "instagram": "https://www.instagram.com/solidynepro/",
+      "youtube": "https://www.youtube.com/user/solidynebroadcast",
+      "linkedin": "https://ar.linkedin.com/company/solidyne-srl",
+      "facebook": "https://www.facebook.com/SolidynePRO/"
+    }
+  }
+}

@@ -1,0 +1,205 @@
+---
+title: "Descripción general y funciones"
+description: "Operación de MX2200. Descripción de los controles y funciones generales."
+---
+
+## Areas operativas
+
+Las fuentes de audio (micrófonos, computadora y líneas telefónicas) ingresan a la consola a través de los canales de entrada, que las amplifican.\
+La consola mezcla todas las señales para generar una única señal principal llamada **Programa (PGM)**.
+
+El nivel de cada fuente se maneja mediante los faders principales. La mezcla final se envía hacia los estudios por uno o más canales de transmisión.
+
+En la consola pueden distinguirse distintas áreas:
+
+<img
+  src="/images/mx2200/mx2200-panel_secciones.png"
+  alt="Mx2200 Panel Secciones Pn"
+  title="Mx2200 Panel Secciones Pn"
+  className="mx-auto"
+  style={{ width:"72%" }}
+/>
+
+1. **INTERCOM**: controles para hablar hacia las líneas telefónicas y auriculares.
+2. **TELECOMUNICACIONES**: controles para manejar la línea terrestre y un teléfono móvil vinculado por Bluetooth.
+3. **PANTALLA Y CONTROL ROTATIVO**: permiten manejar las opciones de conexión por Internet (streaming y SIP) y la grabación.
+4. **TECLADO DTMF**: se utiliza para ingresar caracteres en campos de texto y discar (DTMF) en llamadas por línea terrestre.
+5. **FADERS**: permiten mezclar señales de micrófonos y líneas (USB o analógica) para generar el PGM. Se recomienda mantener el nivel en torno a **0 VU (-10 dBFS)**.
+6. **DISTRIBUCIÓN DE CONEXIONES**: indicaciones para ubicar fácilmente los conectores principales en el panel trasero.
+
+---
+
+## Fuente de alimentación
+
+El equipo posee una batería interna que permite operar hasta **4 horas** (ver especificaciones).\
+El nivel se indica en pantalla y se recomienda conectar el cargador cuando cae al **10%**.\
+El tiempo de carga completa, si la batería está descargada, es de **10 horas**.
+
+<Warning>
+  La recarga de la batería requiere que el equipo esté **ENCENDIDO** y conectado a la fuente externa.
+</Warning>
+
+- El cargador incluido entrega **12 VCC / 2 A** y funciona en redes de **110/240V 50/60 Hz**.
+- La consola puede usarse conectada al cargador incluso con la batería al 100%.
+- Si se desconecta la alimentación externa con el equipo encendido, el sistema conmuta automáticamente a modo batería.
+
+---
+
+## Encendido / apagado
+
+El botón de encendido/apagado está en el panel trasero.
+
+- Al encender, aparece una pantalla de inicio durante 15 segundos y luego la pantalla principal.
+- Para apagar, pulsar nuevamente: el sistema se apaga tras 5 segundos.
+- Se recomienda esperar unos segundos antes de volver a encender.
+
+---
+
+## Pantalla y control rotativo
+
+La navegación se realiza mediante el encoder rotativo:
+
+- **Giro**: navegar entre pantallas u opciones dentro de una pantalla.
+- **Toque corto**:
+  - sobre pantalla: ingresar a sus ítems
+  - sobre ítem: editarlo
+  - sobre valor: confirmar cambio
+- **Toque largo (1 s)**: cancelar opción o cambio
+
+El teclado **DATA ENTRY** permite ingresar caracteres alfanuméricos:
+
+- Pulsando sucesivamente una tecla se ciclan los caracteres asociados.
+- Girando el encoder se mueve la posición a editar.
+- Confirmación: toque corto. Cancelación: toque largo.
+
+### Pantallas principales (vista rápida)
+
+1. **HOME SCREEN**
+
+   <img
+     src="/images/mx2200/mx2200_display_home.jpg"
+     alt="Mx2200 Display Home Jp"
+     style={{ width:"45%" }}
+   />
+   - Indicadores de nivel de PGM (L/R) en dBFS. La marca en **0 VU (-10 dBFS)** se muestra más brillante. Evitar que la señal supere permanentemente este nivel.
+   - Indicador de nivel de recepción (Rx) para llamadas SIP.
+   - Estado de redes (4G/Ethernet/Wi-Fi).
+   - Estado de conexiones SIP, RTP y streaming (activo, apagado o error).
+   - Nivel de batería (enchufar al 10%).
+   - Acceso rápido a agenda de **Contactos SIP** pulsando el encoder.
+2. **CONNECTION CENTER**
+
+   <img
+     src="/images/mx2200/mx2200_display_connection_center.png"
+     alt="Mx2200 Display Connection Center Pn"
+     title="Mx2200 Display Connection Center Pn"
+     style={{ width:"45%" }}
+   />
+   - Muestra las tres modalidades de conexión y su estado actual.
+   - Permite establecer o interrumpir cada conexión.
+3. **SETUP**
+
+   <img
+     src="/images/mx2200/mx2200_display_SETUP-1.bmp"
+     alt="Mx2200 Display SETUP 1 Bm"
+     title="Mx2200 Display SETUP 1 Bm"
+     style={{ width:"45%" }}
+   />
+   - Muestra direcciones IP activas.
+   - Desde aquí se accede a todas las opciones de configuración:
+      1. Wi-Fi
+      2. Ethernet
+      3. Módem 4G
+      4. RTP Stream
+      5. HTTP Stream (webcasting)
+      6. Cuenta SIP
+      7. Agenda SIP
+      8. Info batería
+      9. Zona horaria (para grabaciones)
+     10. Versión de firmware
+
+   La configuración también se puede realizar remotamente vía navegador web.
+4. **RECORDING**
+
+   <img
+     src="/images/mx2200/mx2200_display_recording.bmp"
+     alt="Mx2200 Display Recording Bm"
+     title="Mx2200 Display Recording Bm"
+     style={{ width:"46%" }}
+   />
+   - Muestra y edita parámetros de grabación en memoria interna.
+
+---
+
+## Canales
+
+### Micrófonos
+
+- La MX2200 maneja **3 canales de micrófono** y admite un cuarto compartido con el fader de MIC 3.
+- Las ganancias son **automáticas**, ajustándose según la posición del fader. Esto optimiza la relación señal/ruido y evita saturación de preamplificadores.
+- El botón **MASTER MIC** habilita los micrófonos, los envía al PGM, activa la **Luz de Aire** y silencia auriculares #1 (cuando hay conectada una Luz de AIre).
+- Los micrófonos **no** se envían a CUE; solo se escuchan en auriculares cuando están en programa.
+
+#### Compresor de micrófonos
+
+- El compresor dinámico actúa al superar el umbral de **-10 dBFS (0 VU)**.
+- Relación alta, atenuando hasta **20 dB**.
+- Indicador **MIC COMP** de 3 estados:
+  - Verde: alcanza umbral (-10 dBFS)
+  - Rojo: atenuación máxima, próximo a clipping (-5 dBFS)
+  - Clipping: indicado con retención de 3 s
+
+Cuando se usan dos micrófonos en el canal compartido (MIC 3\+4), la señal debe mantenerse en zona amarilla y ocasionalmente roja.
+
+<Info>
+  **Sobre mezclas en estéreo**\
+  Aunque la MX2200 transmite en estéreo, los canales de micrófono generan una **mezcla mono**.\
+  Para capturas en estéreo (ej. sonido ambiente), se requiere una consola auxiliar conectada a la entrada de línea, usualmente con micrófonos de condensador y alimentación phantom.
+</Info>
+
+---
+
+### USB y línea analógica
+
+- El fader **USB/LINE IN** controla el audio USB si hay computadora conectada.
+- Si no hay USB, toma la señal de la entrada analógica estéreo **LINE IN**.
+- Con USB conectado, la LINE IN puede usarse a través del control de línea telefónica (**PHONE**) cuando el híbrido no está en uso.
+- Para enviar a programa: subir fader. Nivel óptimo cuando picos alcanzan **0 VU**.
+- Para escuchar en CUE: oprimir el botón **CUE** sobre el fader.
+
+<Note>
+  **Audio USB**\
+  Al conectar el puerto USB a una computadora, el sistema operativo instala un **dispositivo de grabación USB** que recibe la mezcla PGM.
+</Note>
+
+---
+
+## Monitoreo
+
+- El control **CUE MONITOR** ajusta el nivel en las cuatro salidas de auriculares.
+- Toda señal en CUE se envía a todas las salidas.
+- El botón **PGM** permite silenciar la señal de programa en auriculares y escuchar solo lo presente en CUE.
+
+<img
+  src="/images/mx2200/mx2200-monitoreo-auriculares.png"
+  alt="Mx2200 Monitoreo Auriculares Pn"
+  title="Mx2200 Monitoreo Auriculares Pn"
+  className="mx-auto"
+  style={{ width:"32%" }}
+/>
+
+Si se necesita control de volumen individual, usar auriculares con control propio o un distribuidor externo (recomendado).
+
+### Salida para parlantes monitores
+
+- Con una luz de aire conectada, la salida de auriculares #1 funciona como salida de altavoces.
+- Esta se silencia cuando se activan micrófonos para evitar acoples.
+- El audio se mantiene en auriculares #2, #3 y #4.
+
+### Talk to CUE
+
+Pulsando el botón **TALK** en la zona CUE MONITOR:
+
+- Se interrumpe la señal en auriculares.
+- Se envía la voz del micrófono incorporado.
+- Permite al operador comunicarse con el equipo en auriculares sin gritar ni hacer señas, y sin quitárselos.

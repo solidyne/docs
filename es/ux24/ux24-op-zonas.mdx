@@ -1,0 +1,90 @@
+---
+title: "Operación de UX24"
+description: "Operación de UX24 - Areas en la superficie de la consola"
+---
+
+## Zonas y controles del panel principal UX24
+
+![Ux24 Operacion Zonas Jp](/images/ux24/ux24-operacion-zonas.jpg)
+
+**A — Controles de canal**\
+Controles tradicionales con faders, botones de asignación, puesta al aire y escucha previa (PFL).\
+Se operan de forma convencional y permiten manejar directamente comunicaciones de línea, VoIP y celulares vía Bluetooth (mediante adaptadores UNIDEX TELCO).
+
+**B — Pantalla táctil**\
+Pantalla de 7" utilizada para operar múltiples funciones de la consola.\
+Incluye 6 botones de acceso rápido y un encoder rotativo.\
+Tanto los botones como el encoder son **controles contextuales**, por lo que su función varía según la pantalla activa.
+
+**C — Zona de monitoreo y órdenes**\
+Área destinada al control de monitoreo y al circuito de talkback.
+
+**D — Control remoto**\
+Permite operar y configurar la consola a distancia.\
+Cualquier computadora con navegador web puede acceder a la consola mediante su dirección IP.\
+Es útil para manejar canales virtuales, usar una tableta como extensión de faders o configurar un estudio remoto.
+
+## Pantalla principal
+
+### Indicadores de nivel
+
+Los indicadores **PGM**, **REC**, **AUX** y **VBUS** muestran:
+
+- Nivel promedio en **VU** (barra azul de movimiento lento).
+- Nivel de pico en **dBfs** (segmento amarillo flotante).
+
+La escala está tabulada en dBfs, donde **–20 dBfs corresponde a 0 VU**.\
+El valor numérico a la derecha indica el máximo actual (en VU o dBfs) y se conmuta tocando sobre el número.\
+El indicador principal permanece visible en todas las pantallas y se puede cambiar de bus tocando el nombre del bus sobre la izquierda.
+
+<Tip>
+  **Nota sobre niveles:**\
+  Los indicadores muestran el nivel del **bus**.
+
+  - En salidas digitales, el nivel coincide con el de salida si la ganancia está en 0.
+  - En salidas analógicas, 0 VU = –20 dBfs, con niveles nominales de **\+4 dBu** (balanceadas) y **0 dBu** (no balanceadas).\
+    Si se fija un nivel de ganancia superior al nominal, se reduce el margen de sobrecarga y puede haber recorte antes de que el indicador lo muestre.
+</Tip>
+
+### CUE Level
+
+Indica el nivel del bus **CUE**, después de la perilla física de nivel.
+
+### Status
+
+- **Unidex IP:** Dirección IP para control remoto. Ingresar en un navegador web (recomendado: Google Chrome) para acceder a la interfaz de control. Requiere conexión del puerto _Ethernet Remote Control_ a la LAN.
+- **Stream IP:** Dirección IP del módulo de streaming. Ingresar en un navegador para configurar servicios de streaming. Requiere conexión del puerto _Ethernet Streaming_ a la LAN.
+- **SCENE:** Nombre de la escena actualmente activa.
+- **USER:** Perfil de usuario activo (ADMIN, EXPERT o BASIC).
+- **MSG:** Mensajes del sistema.
+- **“\+” Avanzado:** Abre opciones de mantenimiento (incluye apagado del CPU interno antes de cortar energía).
+
+### Reloj central
+
+Muestra la hora actual.\
+Se sincroniza automáticamente si la consola está conectada a Internet, o de forma manual (ver pantalla SETTINGS -\> SYS CONFIG).
+
+### Contador EN EL AIRE
+
+Inicia una cuenta ascendente (**hh:mm:ss**) al activar micrófonos. Al apagarlos, el valor permanece en pantalla.
+
+### Menú contextual
+
+Seis botones ubicados debajo de la pantalla ofrecen acceso rápido a funciones principales.\
+Su función varía según la pantalla activa. La navegación y edición se realiza con la pantalla táctil y el encoder.
+
+Accesos directos en la pantalla principal:
+
+- **SETTINGS:** Configuración avanzada y del sistema (solo ADMIN).
+- **SCENE:** Gestión de escenas y perfiles de usuario.
+- **PROCESS:** Acceso a ecualización, compresión, de-esser y compuerta de ruido (los procesos disponibles varían para cada entrada).
+- **VIRTUAL:** Pulsando el encoder, se accede la pantalla de control de los canales virtuales (12, 6 o ninguno, según expansiones UX6).
+- **MONITOR:** Asignación de fuentes de audio para Estudio y Cabina de Control, con funciones avanzadas de monitoreo.
+- **TELCO:** Gestión de líneas telefónicas, Bluetooth o VoIP, con controles de nivel y ganancia.
+- **CHANNEL:** Información y control del canal seleccionado, incluyendo ganancia, paneo, procesadores y reasignación de fuente.
+
+<Note>
+  **Modo ahorro de energía**
+  Las pantallas se apagan tras 15 minutos de inactividad.
+  Se reactivan moviendo un fader o pulsando un botón Intercom.
+</Note>

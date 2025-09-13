@@ -1,0 +1,109 @@
+---
+title: "Especificaciones técnicas"
+description: "Especificaciones técnicas de UNIDEX"
+---
+
+### Características generales
+
+- 24 canales; 12 atenuadores en el panel, expandibles a 24 mediante módulos UX-6.
+- Atenuadores virtuales operables desde la pantalla táctil.
+- Interfaz web interna (HTML5) para operación remota vía LAN.
+- Distribución de entradas configurable sobre los 24 canales.
+- 12 escenas de usuario (configuración de entradas, asignación de canales, ajustes de procesos).
+- Pantalla táctil de 7” (1024×600 píxeles).
+- Pantalla OLED en cada canal (nombre, nivel de entrada, nivel de atenuación, indicaciones).
+
+### Entradas (32)
+
+- 4 MIC con alimentación \+48V.
+- 4 línea estéreo balanceada.
+- 4 estéreo AES3.
+- 4 estéreo USB (cuatro dispositivos de reproducción en una computadora).
+- 16 UNIDEX mono balanceadas (8 estéreo) para hasta 16 micrófonos adicionales u 8 dispositivos TELCO.
+- Procesos DSP en cada entrada.
+
+### Salidas (28)
+
+- 2 PGM estéreo balanceadas.
+- 4 estéreo balanceadas asignables.
+- 8 no balanceadas (mix-minus).
+- 4 estéreo AES3.
+- 4 estéreo USB (cuatro dispositivos de grabación en una computadora).
+- 2 streaming AoIP estéreo (RTP, Icecast/Shoutcast).
+- 2 monitoreo estéreo para cabina de control (parlantes y auriculares).
+- 2 monitoreo estéreo para estudios (parlantes y auriculares \+ talkback).
+
+### GPIO, intercom y auxiliares
+
+- 2 salidas “En el aire” (12 VCC, 250 mA).
+- 4 GPI (3.3–15 V, activa alta).
+- 8 GPO (7 colector abierto \+ 24V/250 mA, 1 × 12V/250 mA).
+- Entrada estéreo no balanceada para monitoreo de aire.
+- Entrada de talkback desde estudios (Studio Box).
+- Micrófono de órdenes integrado.
+- 4 botones de intercom asignables.
+- Intercom PTT en todos los canales TELCO con botón CUE.
+
+### Especificaciones de audio
+
+- 24 canales.
+- 4 buses estéreo (PGM, REC, AUX, VBUS asignable).
+- 1 bus PFL (CUE).
+- 24 bits / 48 kHz.
+- Procesos DSP fijos por tipo de entrada: EQ paramétrico (3 o 4 bandas), compuerta de ruido, compresor/limitador, de-esser.
+- Envíos mix-minus y talkback automáticos (TELCO).
+- **Latencia**: 1.2 ms (línea analógica → salida analógica), 1.4 ms (MIC con EQ \+ dinámica \+ de-esser).
+
+### Entradas y salidas digitales
+
+- Rango dinámico: 120 dBA.
+- Respuesta en frecuencia: 20 Hz–20 kHz ±0.1 dB.
+- THD: menor a 0.002 %.
+
+### USB
+
+- 1 USB 2.0 (4 dispositivos estéreo de reproducción/grabación sobre PC).
+- Controlador ASIO 2.2 (ASIO y WDM simultáneos).
+- Soporta VST hosts de 32/64 bits en tiempo real.
+- Multi-cliente (varias aplicaciones ASIO en paralelo).
+- Compatible con Windows 7/8/10 (32 y 64 bits).
+
+### Entradas analógicas
+
+- Nivel máx: \+26 dBu | mín: –24 dBu | nominal: \+4 dBu.
+- Rango dinámico: 112 dBA.
+- Respuesta: 20 Hz–20 kHz ±0.25 dB.
+- THD\+N: 0.01 %.
+
+### Entradas de micrófono
+
+- Nivel máx: –24 dBu | mín: –75 dBu | nominal: –50 dBu (150 Ω).
+- Ruido EIN @ –50 dBu: –121 dBA.
+- Respuesta: 20 Hz–20 kHz ±0.5 dB.
+- THD\+N: 0.01 %.
+- Alimentación individual \+48V.
+
+### Salidas analógicas
+
+- Ruteo flexible.
+- Balanceadas.
+- Nominal: \+4 dBu | máx: \+24 dBu.
+- Rango dinámico: \>110 dBA.
+- Respuesta: 20 Hz–20 kHz ±0.5 dB.
+- THD: típ. 0.005 % @ 1 kHz.
+
+### Opción Dante AES67
+
+- 16×16 canales Dante AoIP (hasta 512×512 en red).
+- Reemplaza 4 entradas de línea estéreo y 4 UNIDEX estéreo por 16 entradas Dante.
+- Salidas AoIP: PGM, REC, AUX, auriculares de control y estudio, \+3 estéreo asignables.
+
+### Dimensiones y peso
+
+- **UX24 (12 atenuadores):**\
+  Ancho: 730 mm | Profundidad: 455 mm (550 mm con tapa trasera) | Altura: 130 mm.\
+  Peso: 8 kg.
+- **Embalaje:** 850×610×270 mm.\
+  Con cables y accesorios: 15 kg.\
+  Adaptador UDX: 0.33 kg c/u.\
+  Kit cables RJ45: 4 kg.

@@ -1,0 +1,192 @@
+---
+title: "Gestión de Presets"
+description: "Gestionar y crear presets de procesado"
+---
+
+## Presets de procesado
+
+La unidad cuenta con 16 presets de fábrica y 16 memorias libres para que el usuario almacene sus propios ajustes.
+
+- Los presets de fábrica son de solo lectura: no pueden borrarse ni modificarse.
+- Los presets de usuario están configurados de fábrica con un procesado moderado.
+
+### Gestión de los presets
+
+Desde la sección de MONITOREO del control web se acceden los presets de procesado.
+
+<img
+  src="/images/542/542-presets.png"
+  alt="542 Presets Pn"
+  title="542 Presets Pn"
+  className="mx-auto"
+  style={{ width:"79%" }}
+/>
+
+**CURRENT PRESET** corresponde al ajuste activo, es decir, el que está sonando al aire.\
+**REFERENCE PRESET** permite cargar un segundo ajuste y compararlo con el actual, pulsando ON AIR.
+
+### Crear presets de procesado
+
+Para poder copiar y editar presets, se debe acceder a modo **SETUP**. \
+El usuario puede editar directamente un preset de usuario, o copiar un preset de fábrica y luego modificarlo (recomendado).
+
+<Warning>
+  Solo se puede editar el preset cargado en CURRENT PRESET cuando está al aire.\
+  Si está al aire la opción REFERENCE, la edición se desactiva.
+</Warning>
+
+El preset cargado como referencia sirve para comparar ajustes, tanto auditivamente como visualizando los valores de los procesos.
+
+**Para copiar un preset de fábrica:**
+
+1. Cargar en el campo CURRENT PRESET el preset de fábrica que se desea copiar. Cuando se carga un preset de solo lectura en este campo, el botón **SAVE** cambia a **EDIT – Copy to UserMem**.
+2. Pulsar **EDIT – Copy to UserMem**. Aparecerá una pantalla para elegir la posición de usuario donde guardar la copia.
+
+   <img
+     src="/images/542/542-preset_copiar.png"
+     alt="542 Preset Copiar Pn"
+     title="542 Preset Copiar Pn"
+     style={{ width:"44%" }}
+   />
+3. En esta pantalla también se puede editar el nombre del preset.
+4. Pulsar **APPLY**. El preset de fábrica se copiará en la memoria de usuario elegida, \*\*sobreescribiendo \*\*la existente.
+
+---
+
+### Administrar presets
+
+El **Preset Manager** se accede desde el menú lateral de la pantalla Control WEB. Permite:
+
+- Exportar un preset a un archivo en disco.
+- Importar un preset desde archivo.
+- Copiar presets de fábrica a memorias de usuario.
+- Renombrar un preset.
+- Asignar la propiedad **MONO**, que fuerza la transmisión en mono.
+- Asignar la propiedad **VOICE**, optimizada para voces.
+
+![542 Preset Manager Jp](/images/542/542-PresetManager.jpg)
+
+#### Exportar e importar presets
+
+Para exportar un preset:
+
+1. Seleccionar en la lista el preset deseado.
+2. Pulsar el botón **EXPORT (Download)**.
+3. Se genera un archivo con nombre `[preset_name].542`.
+4. El archivo se guarda en la carpeta de descargas predeterminada del navegador.
+
+---
+
+## Presets de fábrica
+
+Los presets almacenan configuraciones de procesado que determinan el sonido de la radio al aire.\
+Los de fábrica fueron creados para cubrir distintas necesidades: máxima calidad, máxima sonoridad, refuerzo de graves, refuerzo de agudos, optimizados para la voz, etc.
+
+- Los ajustes **01 a 03** son para voces.
+- Los ajustes **04 a 16** son de propósito general, organizados principalmente sonoridad.
+
+El usuario puede copiar y modificar presets de fábrica, creando así sus propios ajustes.
+
+Al elegir y configurar un preset de procesado, es importante definir si se usará un único preset para todo el día o si habrá conmutación automática por micrófono o por horario.\
+Un único preset requiere un ajuste de compromiso que funcione con todas las voces y músicas. La conmutación automática elimina compromisos, pues cada tipo de material se procesa con su ajuste óptimo, reduciendo la fatiga auditiva típica de procesadores rígidos.
+
+### Presets para voces
+
+Los presets **VOICE SOFT, MID y LOUD** están diseñados para procesar voces.\
+Cuando se habilitan micrófonos, el 542APC puede conmutar automáticamente a estos ajustes.
+
+<Info>
+  Para conmutar el preset al abrir micrófonos, ver **GPIO config**.
+</Info>
+
+La principal diferencia respecto a los ajustes para música está en los tiempos de ataque y recuperación del AGC, compresores y limitador de banda ancha.
+
+**AGC de banda ancha:**
+
+- Debe recuperarse lo bastante rápido como para compensar, por ejemplo, una llamada telefónica con bajo nivel. Esto se logra con la ventana rápida. Si los tiempos globales son demasiado rápidos, generarán fluctuaciones audibles.
+- El umbral de retención debe estar 6–8 dB por encima del usado para música, para evitar cambios constantes.
+- El ataque debe ser rápido, pero no tanto como para producir saltos de nivel por gritos o carcajadas.
+
+**AGC multibanda:**
+
+- No debe tener mucho rango de corrección: entre 2 y 3 dB.
+- El enlace entre bandas no debe superar los 3 dB, salvo en graves, donde se permiten 4–5 dB.
+- El EQ dinámico puede usarse para definir un perfil de ecualización.
+
+**Limitadores:**
+
+- Ataque rápido, especialmente en LOW, para contener impulsos de mucha energía de la voz.
+- Compresores también rápidos, aunque en graves se toleran hasta 35 ms.
+- Ataques lentos provocan recorte excesivo en limitadores y clippers, ensuciando brevemente la voz.
+- Los tiempos de recuperación son más flexibles:
+  - Recuperaciones lentas → sonido más suave y natural.
+  - Recuperaciones rápidas → más sonoridad, procesado más agresivo.
+- Las voces no toleran demasiada compresión multibanda: un DRIVE excesivo les quita naturalidad.
+
+<Note>
+  Cuando cree un ajuste para voces, mantenga un perfil de ecualización similar al de la música. Ajuste el Density EQ de voces para que se corresponda con el de música.
+</Note>
+
+<Tip>
+  Si usa conmutación por GPI, conviene que **SuperBass** y **Stereo Enhancer** tengan el mismo estado en ambos presets. El realce estéreo no afecta voces (monoaurales), pero sí la música de fondo durante la transición.
+</Tip>
+
+---
+
+### El Preset _Soft Processing_
+
+El preset más suave, con mayor dinámica y menor sonoridad. Está orientado a música orquestal, jazz e instrumentos acústicos. Su objetivo es conservar el equilibrio original de la mezcla y mantener la expresión dinámica dentro de los límites de la transmisión FM.
+
+Excesiva compresión multibanda puede ocasionar un desequilibrio espectral que es audible en la música Jazz y de orquestas. Por el tipo de instrumentos, y los planos sonoros que se manejan en estos géneros, un buen oído juzgará excesivo un nivel de procesado que resultaría adecuado para  otros estilos como el rock y el pop.
+
+- Compresores y limitadores multibanda con umbrales altos → menor compresión, posibilidad de ataques más lentos.
+- Density EQ en torno a –4 dB → mayor rango dinámico a expensas de menor sonoridad.
+- Ajuste delicado en MID-2, Presence y HI, debido a la importancia de instrumentos solistas.
+- Graves reforzados de forma sutil, con recuperación de 0,5 s en LOW.
+- Agudos sin énfasis adicional, priorizando calidez y definición. Tiempo de recuperación de la banda HI lento. Tener en cuenta que el oyente puede enfatizar los agudos en su sistema si así lo desea.
+
+Respecto a voces, este ajuste no les da gran impacto ni graves marcados, ya que usa poca compresión. Para voces conviene Voice-Soft mediante conmutación GPI.
+
+---
+
+### Presets _DeepBass_ y _XtendedBass_
+
+Ambos enfatizan graves.
+
+- **DeepBass:** refuerza graves profundos (≈96 Hz) y mantiene punch. Ajusta el umbral de compresión en LOW y lleva el clipper casi al 100%.
+- **XtendedBass:** utiliza el proceso **SuperBass** para extender frecuencias bajas en la zona 100–300 Hz.
+
+DeepBass es ideal si se prioriza como destino sistemas con buena respuesta en graves, mientras que XtendedBass es mejor para sistemas pequeños, asegurando presencia en graves.
+
+---
+
+### Presets _Vocal Music_
+
+Presets diseñados para música donde la voz es protagonista. Usan material orquestado y música con bases rítmicas, pero priorizan que la voz se escuche limpia y definida.
+
+- MB-AGC con acción muy limitada para evitar coloraciones.
+- Recuperación de compresores ajustada cuidadosamente:
+  - Muy rápida → voces ásperas, pierden naturalidad.
+  - Ajustada correctamente → voces suaves y claras.
+
+---
+
+### Presetsa _MaxLoudness_
+
+Ajustes de máxima sonoridad. El objetivo es lograr gran nivel en el aire con mínima distorsión.
+
+- Equilibrio espectral alterado, enfatizando medios.
+- Reducción fuerte de la dinámica para aumentar energía promedio.
+- Los presets MaxLoudness 1, 2 y 3 son de uso general, adecuados para diversos estilos.
+- MaxLoudness-3 está diseñado para hits pop con bases electrónicas y altos niveles de loudness, similares a la masterización moderna.
+
+La combinación de compresión dura con ganancias altas genera un sonido compacto, que puede resultar áspero al aire. Muchas emisoras lo buscan deliberadamente para priorizar sonoridad frente a definición.
+
+---
+
+### Presets optimizados para ITU BS.412
+
+Los presets **BS412 Hi End** y **BS412 Punch** están optimizados para trabajar con el control de potencia MPX ITU BS.412, obligatorio en países europeos, aunque también pueden usarse con el control apagado.
+
+- Permiten aprovechar mejor el rango dinámico regulado entre la potencia MPX y la modulación 100%.
+- Ajustados de fábrica con pre-énfasis de 50 μs.

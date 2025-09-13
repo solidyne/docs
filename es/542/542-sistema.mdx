@@ -1,0 +1,82 @@
+---
+title: "Configuraciones de sistema"
+description: "Configuraciones del sistema "
+---
+
+## Ajustes generales de sistema
+
+![542 SYSTEM General Pn](/images/542/542-SYSTEM-General.png)
+
+### GPIO CONFIG
+
+- **GPI VOICE CHANGE PRESET**:\
+  Cuando la GPI se activa, conmuta el preset de procesado.
+  - La señal de disparo se genera en el Estudio al habilitar los micrófonos.
+  - Puede llegar al procesador por conexión **hardware** o vía **LAN** (modelos con opción /AoIP).
+  - El campo a la derecha define el preset a aplicar (por defecto: **VOICE-LOUD**).
+- **GPO TRIGGER**:\
+  Lista de eventos que pueden activar la salida GPO:
+  1. AUDIO SILENCE
+  2. INPUT FAIL BACKUP
+  3. OVERMODULATION
+  4. LOW RF POWER
+  5. FORCE FM MONO
+
+<Info>
+  Ver detalles de [conexión de las GPIO](/es/unidex/instalacion-gpio)
+</Info>
+
+---
+
+### SECURITY
+
+Permite habilitar contraseña desmarcando la opción **Disable Password Protection** (default: activado).
+
+- Contraseña predeterminada: `1234`.
+- Para modificarla, escribir en el campo **PASSWORD** y pulsar **APPLY**.
+- Reglas: hasta**8 caracteres** , solo letras **MAY**y números.
+- **FRONT PANEL CHANGES (LOCK/UNLOCK)**:\
+  Bloquea o habilita el acceso desde el panel frontal.\
+  Si está bloqueado, se requiere la contraseña para modificar desde el frente.
+
+---
+
+### User Interface (Interfaz de usuario)
+
+- **LOUDNESS EBU REFERENCE**: Nivel de referencia de sonoridad en el monitoreo general (default: 0 dBfs).
+- **AUTO-OPEN LEFT MENU**: Despliega automáticamente el menú al acercar el mouse.
+- **ENABLE TOOLTIPS**: Activa mensajes emergentes de ayuda sobre controles e indicadores.
+
+---
+
+### NETWORK
+
+- Configuración de red.
+- De fábrica: modo **DHCP**.
+- Puede asignarse una **IP estática** desactivando DHCP.
+- La dirección IP se informa en el frente del equipo o vía LAN con la herramienta **Solidyne Multi-Discovery**.
+
+<Info>
+  Para más detalles ver [Conexión y acceso Ethernet](/es/542/542-instalacion-web).
+</Info>
+
+---
+
+### TECHNICAL REPORT
+
+Genera un reporte con parámetros de funcionamiento y configuración del equipo.
+
+- El reporte se guarda en la carpeta de descargas del navegador.
+- Puede enviarse al **soporte técnico** para diagnóstico.
+
+---
+
+### Status y Logs
+
+- **SYSTEM TIME**:
+  - Si el equipo tiene acceso a Internet, sincroniza hora con un servidor **NTP**.
+  - También puede sincronizarse desde la PC con **SYNC FROM PC**.
+  - Fecha y hora se usan solo en reportes y registros.
+- **SYSLOG**:
+  - Registro de eventos en memoria interna.
+  - Uso reservado a **personal especializado** en diagnóstico y soporte técnico.
