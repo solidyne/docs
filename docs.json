@@ -415,6 +415,19 @@
             "tab": "Procesadores",
             "anchors": [
               {
+                "anchor": "Procesadores",
+                "icon": "book-open",
+                "description": "Línea de procesadores para transmisión",
+                "groups": [                  
+                  {
+                    "group": "INTRODUCCIÓN",
+                    "pages": [
+                      "es/resumen-procesadores"                      
+                    ]
+                  }
+                ]
+              },
+              {
                 "anchor": "542 APC",
                 "icon": "book-open",
                 "description": "Documentación del procesador 542 APC",
@@ -509,6 +522,17 @@
             "tab": "Híbridos",
             "anchors": [
               {
+                "anchor": "Híbridos",
+                "groups": [
+                  {
+                    "group": "INTRODUCCIÓN",
+                    "pages": [
+                      "es/resumen-hibridos"
+                    ]
+                  }                  
+                ]
+              },
+              {
                 "anchor": "HL240",
                 "groups": [
                   {
@@ -591,22 +615,12 @@
           },
           {
             "tab": "Discontinuados",
-            "anchors": [
+            "groups": [
               {
-                "anchor": "consolas",
-                "groups": []
-              },
-              {
-                "anchor": "procesadores",
-                "groups": []
-              },
-              {
-                "anchor": "hibridos",
-                "groups": []
-              },
-              {
-                "anchor": "otros",
-                "groups": []
+                "group": "Discontinuados",
+                  "pages": [
+                  "es/extensiones/studioBox-descripcion"
+                ]
               }
             ]
           }
