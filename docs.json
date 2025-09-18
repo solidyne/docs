@@ -24,7 +24,7 @@
             "tab": "Consolas UNIDEX",
             "anchors": [
               {
-                "anchor": "Serie UNIDEX",
+                "anchor": "Línea UNIDEX",
                 "icon": "book-open",
                 "description": "Instalación y configuración de consolas UNIDEX",
                 "groups": [
