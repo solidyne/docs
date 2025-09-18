@@ -159,9 +159,9 @@
             "tab": "Consolas Classic",
             "anchors": [
               {
-                "anchor": "Broadcast Classics",
+                "anchor": "Broadcast Classic",
                 "icon": "book-open",
-                "description": "Consolas serie Broadcast Classic",
+                "description": "Consolas línea Broadcast Classic",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
@@ -174,7 +174,7 @@
               {
                 "anchor": "DX816/822",
                 "icon": "book-open",
-                "description": "Documentación serie Broadcast Classics",
+                "description": "Consolas DX816 y 822 de la línea Broadcast Classic",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
