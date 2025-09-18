@@ -1,0 +1,119 @@
+---
+title: "Enlace con la radio"
+description: "Opciones de conexión a la radio mediante teléfono móvil"
+---
+
+## Conexión a celular por Bluetooth
+
+La MX2100 soporta la conexión de un teléfono celular vía **Bluetooth**, para transmisión hacia estudios o para sumar un celular a la transmisión cuando el enlace se realiza desde un computador externo o línea terrestre.
+
+- Compatible con cualquier teléfono con Bluetooth.
+- Elimina la dependencia de cables manos libres, distintos según marca y modelo.
+- Distancia máxima: hasta 5 metros; recomendado: llevar el móvil encima pero separado de la consola (bolsillo de camisa o cinturón en el lado opuesto).
+- Ventaja: la señal se mantiene digital desde el celular hasta el interior del MX2100, logrando mejor calidad de audio.
+
+---
+
+### Vincular el celular a la consola
+
+El primer emparejamiento solo debe hacerse una vez por cada teléfono. A partir de allí, la conexión es automática cuando se activa Bluetooth en ambos equipos.
+
+<Steps>
+  <Step title="Apagar Bluetooth en la consola">
+    Verificar que el LED Bluetooth (ubicado en el teclado DTMF) esté apagado.
+
+    - Si destella verde cada 2 segundos → está encendido.
+    - Para apagarlo: mantener pulsadas las teclas **“#” y “9”** hasta que el LED se apague.
+  </Step>
+  <Step title="Activar modo búsqueda en la consola">
+    Con Bluetooth apagado, mantener presionadas **“#” y “9”** durante ~10 segundos hasta que el LED destelle en forma rápida alternando verde/rojo.\
+    Esto indica que la MX2100 entró en modo búsqueda.
+  </Step>
+  <Step title="Buscar dispositivos en el celular">
+    En el teléfono, iniciar la búsqueda de dispositivos Bluetooth.\
+    El procedimiento depende del modelo, consulte el manual del móvil.
+  </Step>
+  <Step title="Seleccionar la consola">
+    El teléfono mostrará el dispositivo **Solidyne BTM641** (en modelos antiguos: BTM751).
+
+    - Si solicita clave: ingresar **0000**.
+    - El ID del MX2100 queda almacenado en el móvil.
+    - El LED de la consola cambia a verde intermitente lento (un destello cada 2 segundos), indicando conexión activa.
+  </Step>
+</Steps>
+
+<Warning>
+  Bluetooth se enciende manteniendo “#” y “9” (o cualquier combinación entre filas 3 y 4) por ~5 segundos, soltando al encender LED verde.
+
+  - Verde lento = encendido.
+  - Verde/rojo rápido = modo búsqueda.
+</Warning>
+
+<Note>
+  En algunos teléfonos, tras detectar el dispositivo es necesario presionar **“conectar”** para que quede activo. Otros lo activan automáticamente.
+</Note>
+
+---
+
+### Re-conectar dispositivo vinculado
+
+Para reconectar un celular previamente emparejado:
+
+<Steps>
+  <Step title="Encender Bluetooth en la consola">
+    Pulsar **“#” y “9”** hasta que el LED encienda verde (5 segundos aprox.).
+  </Step>
+  <Step title="Encender Bluetooth en el teléfono">
+    Cuando el móvil confirme conexión, ya está listo para operar.\
+    Al realizar o recibir llamadas, el audio se envía a la consola.
+  </Step>
+</Steps>
+
+<Note>
+  En algunos teléfonos la reconexión no es automática y debe elegirse manualmente el dispositivo **Solidyne BTM641** en la lista de equipos Bluetooth.
+</Note>
+
+---
+
+### Ajuste del volumen
+
+- Ajustar el volumen de Bluetooth en el celular al **máximo**, para obtener la mejor relación señal/ruido.
+- El ajuste debe hacerse **durante una llamada** vía Bluetooth.
+- El volumen del teléfono es independiente del volumen de Bluetooth.
+- El valor queda almacenado en la memoria del celular.
+- Si cambia de teléfono, deberá reajustar el nivel al máximo.
+
+<Warning>
+  Si se ajusta el volumen sin estar en una llamada Bluetooth, solo se cambia el volumen del parlante del teléfono, **no** el de Bluetooth.
+</Warning>
+
+---
+
+### Apagar Bluetooth en la consola
+
+Para evitar consumo de batería cuando no se utiliza, apagar Bluetooth manteniendo presionadas **“#” y “9”** hasta que el LED se apague por completo.
+
+---
+
+<Accordion title="Conexión a teléfono móvil por cable (obsoleto)" icon="mobile">
+  El conector **RJ-11 “Cellular&Phone”** permite conectar un celular mediante un accesorio de **manos libres**.
+
+  - Se utiliza como respaldo del enlace de la computadora externa, especialmente cuando Bluetooth está en uso para enviar al aire otro celular.
+  - El celular transmite al MX2100 las señales de micrófono (punta del miniplug) y parlante (anillo).
+  - La consola envía la señal de programa al celular, que la retransmite a la radio.
+  - El retorno desde la radio llega al celular y de allí a la consola, integrándose a la mezcla de auriculares (STUDIO).
+  - Mientras se usa este conector, el micrófono y parlante del celular quedan desconectados.
+
+  <img
+    src="/images/mx2100/mx2100-manos-libres.jpg"
+    alt="Mx2100 Manos Libres Jp"
+    title="Mx2100 Manos Libres Jp"
+    className="mx-auto"
+    style={{ width:"53%" }}
+  />
+  <Note>
+    El cable de conexión varía según marca y modelo del celular. Es necesario adquirir el accesorio “manos libres” específico para cada teléfono y seguir la documentación del fabricante.
+  </Note>
+  
+</Accordion>
+

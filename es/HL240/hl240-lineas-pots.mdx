@@ -1,0 +1,86 @@
+---
+title: "Líneas telefónicas (POTS)"
+description: "Conexión y ajuste de líneas telefónicas tradicionales"
+---
+
+## Conexionado
+
+En el panel posterior hay dos pares de conectores RJ11: **PHONE SET/LINE 1** y **PHONE SET/LINE 2**.\
+Allí se conectan los pares telefónicos (líneas POTS) y sus teléfonos asociados.
+
+Los teléfonos operan normalmente mientras las líneas no están tomadas por el HL240-VQ (modo OFF). Cuando una línea es tomada (modo ON) se desconecta del teléfono.
+
+Las líneas pueden provenir de una central pública o de una central privada (PBX).\
+El uso de PBX deteriora el rechazo del híbrido, por lo que se recomienda conectar el HL240-VQ directamente a líneas de centrales públicas.
+
+El híbrido telefónico cuenta con filtros internos de rechazo de RF en bandas de **AM, VHF y UHF**.\
+Si utiliza líneas ADSL (con señal de Internet), asegúrese de contar con el filtro de RF correspondiente.
+
+Las conexiones telefónicas están protegidas contra descargas de alta tensión (centellas o rayos no directos) mediante varistores de óxido metálico, soportando sobretensiones de hasta 2 kV.
+
+<Warning>
+  Es imprescindible instalar protectores gaseosos externos en las líneas provenientes de centrales públicas, conectados a una buena puesta a tierra (jabalina).\
+  En caso de descargas directas por rayo, la garantía del equipo no cubre daños.
+</Warning>
+
+<Info>
+  Como referencia, puede consultar el [**Diagrama general de puesta a tierra**](/es/diagrama-tierras)** en estaciones de radio**.
+</Info>
+
+---
+
+## Ajuste del factor de rechazo
+
+El ajuste de rechazo del híbrido se aplica solo a líneas terrestres analógicas.\
+Su función es minimizar el retorno de señal local que vuelve por la línea.
+
+<Note>
+  En una línea analógica, las fuentes locales (micrófonos del estudio) y el audio del otro extremo se mezclan en el mismo par de hilos.\
+  El híbrido telefónico separa ambas señales, pero la separación nunca es completa: una pequeña parte del audio enviado a la línea retorna a la consola.
+</Note>
+
+Si el híbrido está desajustado, el retorno de señal local será elevado y deteriorará la calidad de la voz directa.\
+El rechazo se ajusta en fábrica con impedancias normalizadas, pero es necesario reajustarlo en cada instalación.
+
+Los controles **NULL-1** y **NULL-2** (panel trasero) permiten calibrar el rechazo de cada línea.
+
+**Procedimiento:**
+
+<Steps>
+  <Step title="Establecer llamada">
+    Usar el teléfono asociado y realizar una llamada (a otra línea terrestre o a un móvil).
+  </Step>
+  <Step title="Inyectar tono de referencia">
+    Pulsar el botón **AUDIO TONE**. Se inyectará un tono en la línea.\
+    Este tono no interrumpe la señal enviada desde la consola, por lo que debe silenciarse el envío.
+  </Step>
+  <Step title="Ajustar rechazo">
+    Girar el control **NULL** (multivueltas) en ambos sentidos, observando el indicador **OUTPUT LEVEL**.\
+    Buscar la posición con el menor nivel de señal.
+  </Step>
+  <Step title="Monitoreo opcional">
+    Escuchar la variación del tono residual usando auriculares conectados a la salida **HEADPHONES** o monitorear desde la consola.
+  </Step>
+  <Step title="Repetir en la otra línea">
+    Realizar el mismo ajuste para la segunda línea.
+  </Step>
+</Steps>
+
+---
+
+## Sistema de prioridad
+
+El sistema de prioridad se aplica únicamente a las líneas terrestres.\
+Cuando se detecta señal local (micrófonos del estudio), el audio proveniente de la línea se atenúa en **10 dB**.
+
+Este sistema tiene dos objetivos:
+
+- Dar prioridad al locutor en un debate: si ambos hablan a la vez, prevalece la voz del estudio.
+- Mejorar la calidad de la voz local, reduciendo la señal residual que el híbrido no logra rechazar.
+
+**Consejos prácticos:**
+
+- Evite usar música de fondo (_cortinas_), o manténgala a muy bajo nivel, ya que podría disparar el sistema de prioridad y atenuar el audio entrante.
+- En entrevistas y diálogos, la acción del sistema de prioridad es natural y no percibida por el oyente.
+- En aplicaciones especiales (ej.: concursos donde el oyente debe identificar una canción), la atenuación puede resultar indeseada.\
+  En estos casos, se recomienda utilizar teléfonos Bluetooth.

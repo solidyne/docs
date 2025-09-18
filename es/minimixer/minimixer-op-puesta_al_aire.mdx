@@ -1,0 +1,68 @@
+---
+title: "Puesta al aire"
+description: "Canales de micrófono, líneas y monitoreo"
+---
+
+## Micrófonos
+
+El MiniMixer permite conectar hasta **4 micrófonos dinámicos**.\
+Las entradas **MIC 3** y **MIC 4** comparten el mismo fader.
+
+- El botón **MASTER MIC** habilita todos los micrófonos al aire y activa la salida de la **Luz de Aire (Tally Light)**.
+- La suma de micrófonos es comprimida internamente.
+  - El compresor actúa cuando la señal alcanza **0 VU**.
+  - Es importante que el canal **MIC 3+4** llegue a 0 VU para que el compresor pueda compensar diferencias de nivel entre distintas voces.
+- La acción del compresor se visualiza en el indicador **MIC COMP**.
+
+---
+
+## Líneas
+
+- El fader **USB/LINE IN** controla la entrada digital **USB** cuando la computadora está conectada.
+- Si USB no está conectado, este fader controla la señal de **LINE IN**.
+- Cuando USB está en uso, la entrada LINE IN también puede aprovecharse como entrada alternativa desde los controles de la zona **PHONE**, que permiten conmutar entre **PHONE** y **LINE IN**.
+  - Esto permite sumar al aire: 4 micrófonos + 2 líneas estéreo + Bluetooth.
+
+Para enviar **USB/LINE IN** al aire:
+
+- Levantar directamente el fader.
+- El nivel correcto de trabajo se logra cuando los picos alcanzan **0 VU**.
+
+La señal **USB/LINE IN** también puede preescucharse en CUE con el fader cerrado, presionando el botón **CUE** ubicado encima del mismo.
+
+<Info>
+  El puerto **USB** genera un envío de la señal de programa hacia la computadora.\
+  Este flujo de audio es utilizado para realizar el **streaming por Internet**.
+</Info>
+
+## Monitoreo
+
+El control de auriculares en la zona **CUE MONITOR** establece el nivel para las cuatro salidas de auriculares.
+
+<img
+  src="/images/minimixer/minimixer-monitoreo.png"
+  alt="Minimixer Monitoreo Pn"
+  title="Minimixer Monitoreo Pn"
+  className="mx-auto"
+  style={{ width:"38%" }}
+/>
+
+- Para contar con control de volumen individual en cada auricular, se deben usar auriculares con control propio de nivel, o bien conectar un distribuidor de auriculares externo a cualquiera de las salidas.
+- Cuando una señal se envía a **CUE**, esta se distribuye a todas las salidas de auriculares.
+- El botón **PGM** en la zona **CUE MONITOR** permite silenciar la señal de programa en auriculares y escuchar únicamente las señales en **CUE**.
+
+---
+
+### Salida para parlantes monitores
+
+- La salida de **Auriculares #1** puede funcionar como salida para parlantes monitores, con silenciado automático cuando está conectada la salida de **Luz de Aire**.
+- Al habilitar los micrófonos, la activación de la Luz de Aire silencia automáticamente la salida de auriculares #1, evitando acoples entre parlantes y micrófonos.
+- El audio se mantiene disponible en las demás salidas de auriculares.
+
+---
+
+### Talk
+
+- El botón **TALK** interrumpe momentáneamente la señal en auriculares y envía la voz del micrófono interno incorporado en la consola.
+- Esto permite que el operador se comunique directamente con todos los auriculares, incluso si los miembros del equipo están alejados.
+- De esta forma se evitan señas visuales o la necesidad de quitarse los auriculares (que están recibiendo señal de programa) para poder dialogar.

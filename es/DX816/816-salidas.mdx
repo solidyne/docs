@@ -15,10 +15,15 @@ description: "Descripción y conexionado de las salidas de audio"
 
 La salida principal se denomina **PROGRAMA (PGM)**. Normalmente es la señal que se envía al aire y está disponible en varias formas:
 
-- **RJ45**: entrega señal PGM balanceada.\
-  Utilice siempre este conector para llevar señal analógica al procesador de audio o al enlace.\
-  Los procesadores Solidyne **362HD** y **542APC** incluyen conectores RJ45 en sus entradas balanceadas, por lo que la conexión con una DX816/822 se realiza con un cable tipo Ethernet **STP blindado RJ45-RJ45**.\
-  La distribución de pines para RJ45 balanceados es la misma tanto en entradas como en salidas (ver [Entradas de audio](/es/DX816/816-entradas)).
+- **RJ45**: entrega señal **PGM balanceada**.\
+  Utilice siempre este conector para llevar señal analógica al procesador de audio o al enlace.
+
+  <Tip>
+    [Diagramas de pines y cables adaptadores para armado de cables](/es/diagramas/RJ45-pinout).
+  </Tip>
+  <Info>
+    Los procesadores Solidyne **362HD** y **542APC** incluyen entradas analógicas conectorizadas con RJ45. La conexión se realiza con un cable tipo Ethernet **STP blindado RJ45-RJ45**.
+  </Info>
 - **TRS hembra**: entrega señal PGM estéreo no balanceada.
 - **USB (Canal USB-1)**: la señal PGM se envía hacia la computadora conectada, utilizada habitualmente para streaming por Internet.
 - **AoIP (opcional)**: en consolas con módulo /AoIP, PGM está disponible en múltiples formatos (PCM, MP3) sobre conexión Ethernet.
@@ -47,7 +52,7 @@ Cuando se utilizan salidas balanceadas en modo desbalanceado, el nivel cae 6 dB,
 
 ---
 
-### Streaming decodificado
+### Audio del streaming decodificado
 
-La salida **Audio Out to Bal Line 1 **está disponible solo en consolas con opción **/AoIP**.\
+La salida **Audio Out to Bal Line 1** está disponible solo en consolas con opción **/AoIP**.\
 Entrega una señal balanceada analógica con el **audio decodificado del streaming entrante** y se utiliza para re-inyectar el audio decodificado a una entrada de línea analógica.

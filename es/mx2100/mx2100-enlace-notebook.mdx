@@ -1,0 +1,109 @@
+---
+title: "Enlace con laptop + Internet"
+description: "Descripción de la operación cuando se transmite usando un computador externo"
+---
+
+## Caso 1: Móvil remoto en tiempo real
+
+<img
+  src="/images/mx2100/mx2100-enlace-bluetooth.png"
+  alt="Mx2100 Enlace Bluetooth Pn"
+  title="Mx2100 Enlace Bluetooth Pn"
+  className="mx-auto"
+  style={{ width:"96%" }}
+/>
+
+### Sobre la transmisión
+
+- La comunicación con la radio se establece desde una **laptop conectada por USB** a la MX2100.
+- Alternativamente, puede usarse una **tablet o smartphone conectado por Bluetooth**.
+- El dispositivo móvil utiliza una aplicación de comunicaciones, por ejemplo **Skype®** para comunicarse con los Estudios.
+- Las conexiones a celular por Bluetooth o línea terrestre pueden utilizarse como **respaldo** del enlace vía Internet.
+
+<Warning>
+  En Estudios, conviene que el operador **NO envíe múisica de fondo en el retorno**. \
+  Solo deben enviarse las voces.\
+  En aplicaciones como Skype® la comunicación es _half-duplex_, y la cortina podría provocar interrupciones en el audio del móvil.
+</Warning>
+
+<Note>
+  Si se usara Bluetooth para comunicarse con la radio en una situación de emergencia, el control **MIC-4/LIN/Bluetooth** debe permanecer cerrado para evitar un lazo.\
+  El retorno Bluetooth ingresa directamente a la mezcla de auriculares.
+</Note>
+
+### Sobre el retorno de Estudios
+
+- La mezcla generada en la consola se envía por USB a la laptop, que la transmite a los Estudios.
+- Desde la laptop, el retorno de Estudios ingresa por USB a la consola, directamente a la **mezcla de auriculares**.
+- La conexión de un micrófono en la entrada **MIC-3** produce la **conmutación del retorno USB** a la mezcla de auriculares.
+- En auriculares, el operador escucha tanto el retorno de Estudios como la mezcla de programa (**MIC-1, MIC-2, MIC-3**).
+
+<Danger>
+  En una comunicación bidireccional con Estudios vía Internet, un micrófono debe conectarse **SIEMPRE a la entrada MIC-3**. Esto asegura que el retorno USB se derive a los auriculares.\
+  Si no se conecta un micrófono a MIC-3:
+
+  - No se escuchará el retorno de Estudios.
+  - La señal USB en el control _MIC-3/USB_ no puede usarse, porque enviaría al aire el retorno de Estudios.
+</Danger>
+
+---
+
+## Caso 2: Comunicación unidireccional de alta calidad
+
+El diagrama muestra un escenario donde la consola portátil opera como **estudio remoto**, transmitiendo hacia Estudios mediante un **streaming de audio de alta calidad**.
+
+<img
+  src="/images/mx2100/mx2100-enlace-laptop.jpg"
+  alt="Mx2100 Enlace Laptop Jp"
+  title="Mx2100 Enlace Laptop Jp"
+  className="mx-auto"
+  style={{ width:"94%" }}
+/>
+
+### Sobre la transmisión
+
+- La consola se conecta por **USB a una laptop con acceso a Internet**.
+- La comunicación con el Estudio se establece desde la Netbook:
+  - Usando **Solidyne Audicom®** para generar el streaming.
+  - O cualquier otro software de codificación compatible.
+
+  <Note>
+    Skype® u otras apps de VoIP no aplican en este caso, dado que solo sirve para voz, mientras que aquí se requiere transmitir \*\*audio estéreo \*\*de alta calidad.
+  </Note>
+- Como \*\*respaldo \*\*pueden usarse:
+  - Un celular cableado.
+  - O una línea fija conectada al RJ-11 de la consola.
+
+### Sobre el retorno de Estudios
+
+- El flujo de datos unidireccional permite enviar audio en **alta calidad**, pero no es posible dialogar con Estudios debido a los retardos del streaming.
+- En esta condición, **toda la señal es generada desde la MX2100**.
+- Si fuera obligatorio tener retorno desde Estudios, se recomienda hacerlo mediante:
+  - Teléfono celular (cableado o vía Bluetooth).
+- El retorno se escucha en auriculares, sin retardo.
+
+### Sobre las señales que pueden manejarse
+
+**Micrófonos y líneas**
+
+- Disponibles: MIC-1 y MIC-2.
+- **MIC-3 queda** **sin conexión**, para habilitar el envío al aire de la entrada USB (audio proveniente de la computadora).
+
+<Note>
+  La conexión de un micrófono en MIC-3 **produce la conmutación del retorno USB a la mezcla de auriculares**, lo cual corresponde solo al caso de una comunicación bidireccional con Estudios.
+</Note>
+
+**Teléfono celular**
+
+- Un celular vinculado vía **Bluetooth** permite sacar al aire un entrevistado o periodista remoto (control _MIC-4/LIN/Bluetooth_).
+- También puede enlazarse una segunda MX2100 vía celular.
+
+<Note>
+  Cuando la consola está conectada por USB (a computadora o cargador), el micrófono interno **MIC-4 se desactiva**, y en su lugar aparece el retorno de Bluetooth.\
+  Esto permite enviar al aire una comunicación telefónica cuando Bluetooth no se usa para enlazar la MX2100 con Estudios (se asume que el enlace principal lo hace la computadora).
+</Note>
+
+<Warning>
+  La señal Bluetooth está siempre presente en la mezcla de auriculares, con nivel fijo.\
+  Cuando se envía Bluetooth al aire mediante el control _MIC-4/LIN/Bluetooth_, se debe ajustar observando el vúmetro de la consola.
+</Warning>

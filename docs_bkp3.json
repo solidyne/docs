@@ -1,0 +1,367 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Mint Starter Kit",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "contextual": {
+   "options": [
+     "copy",
+     "chatgpt",
+     "claude"     
+   ]
+ },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "languages": [
+      {
+        "language": "es",
+        "tabs": [                  
+          {
+            "tab": "Consolas UNIDEX",
+            "anchors": [
+              {
+                "anchor": "Serie UNIDEX",
+                "icon": "book-open",
+                "description": "Instalación y configuración de consolas UNIDEX",
+                "groups": [
+                  {
+                   "group": "INTRODUCCIÓN",
+                    "pages": [
+                      "es/unidex/unidex-introduccion"                      
+                    ]
+                  },
+                  {
+                    "group": "CABLEADO",
+                    "pages": [
+                      "es/unidex/instalacion-cableado_estructurado",
+                      "es/unidex/instalacion-cableado-kits",
+                      "es/unidex/instalacion-RJ45-pinout",
+                      "es/unidex/instalacion-cableado_monitoreo",
+                      "es/puesta-a-tierra"
+                    ]
+                  },
+                  {
+                    "group": "INSTALACION",
+                    "pages": [
+                      "es/unidex/instalacion-entradas",
+                      "es/unidex/instalacion-salidas",
+                      "es/unidex/instalacion-usb",
+                      "es/unidex/instalacion-red",
+                      "es/unidex/instalacion-gpio",
+                      "es/unidex/resets"
+                     ]
+                  },
+                  {
+      				 "group": "CONFIGURACION",
+      				 "pages": [
+            			  "es/unidex/config-entradas-salidas",
+                    "es/unidex/config-sistema",                        
+                    "es/unidex/configuracion-DANTE"
+      				 	   ]
+      			  },                                              
+                  {
+                  "group": "PROCESADO",
+                  "pages": [
+                    "es/unidex/op-procesado"                            
+                    ]
+        			    },
+                  {
+                  "group": "ACCESO VIA WEB",
+                  "pages": [
+                    "es/unidex/remote-interfaz",
+                    "es/multi-discovery",
+                    "es/unidex/remote-firmware"
+                    ]
+        			    },
+                  {
+                  "group": "ESPECIFICACIONES",
+                  "pages": [
+                   "es/unidex/especificaciones"
+                    ]
+            			} 
+                ]
+              },
+              {
+                "anchor": "Extensiones",
+                "icon": "book-open",
+                "description": "Extensiones y expansiones para UNIDEX",
+                "groups": [                                         
+                  {
+                  "group": "INTERFACES UDX",
+                  "pages": [
+                     "es/extensiones/UNIDEX-adaptadores",
+                     "es/extensiones/UDX-2MIC",
+                     "es/extensiones/UDX-2TEL",
+                     "es/extensiones/udx-tel-bt",
+                     "es/extensiones/udx-usb"                   
+                    ]
+            	   }
+                ]
+              },              
+              {
+                "anchor": "UX24",
+                "icon": "book-open",
+                "description": "Operación de UX24",
+                "groups": [                                         
+                  {
+                  "group": "CONFIGURACIÓN",
+                  "pages": [
+                    "es/ux24/ux24-conectividad",                    
+                    "es/ux24/ux24-instalacion-trasero",
+                    "es/ux24/ux24-config-streaming"
+                    ]
+            	   },
+                  {
+                  "group": "OPERACIÓN",
+                  "pages": [
+                    "es/ux24/ux24-op-zonas",
+                    "es/ux24/ux24-op-canales",
+                    "es/ux24/ux24-op-monitoreado",
+                    "es/ux24/ux24-op-escenas",
+                    "es/ux24/ux24-op-telco"
+                    ]
+            	   }
+                ]
+              },                  
+              {
+                "anchor": "UX18",
+                "icon": "book-open",
+                "description": "Operación de UX18",
+                "groups": [                  
+                   {
+                  "group": "CONFIGURACIÓN",
+                  "pages": [
+                    "es/ux18/ux18-conectividad",                    
+                    "es/ux18/ux18-instalacion-trasero",
+                    "es/ux18/ux18-doble-talkback",
+                    "es/ux18/ux18-config-streaming"
+                    ]
+            	   },
+                  {
+                  "group": "OPERACIÓN",
+                  "pages": [
+                    "es/ux18/ux18-op-zonas",
+                    "es/ux18/ux18-op-canales",
+                    "es/ux18/ux18-op-monitoreado",
+                    "es/ux18/ux18-op-escenas",
+                    "es/ux18/ux18-op-telco"
+                    ]
+     		    }                   
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Consolas Classic",
+            "anchors": [
+              {
+                "anchor": "DX816/822",
+                "icon": "book-open",
+                "description": "Documentación serie DX",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/classic-index",
+                      "es/DX816/816-resumen"
+                    ]
+                  },
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/DX816/816-diagramas",
+                      "es/DX816/816-entradas",
+                      "es/DX816/816-salidas",
+                      "es/DX816/816-usb",
+                      "es/DX816/816-monitoreo",
+                      "es/DX816/816-telco",
+                      "es/DX816/816-GPIO-tally"
+                    ]
+                  },
+                  {
+                    "group": "OPERACION",
+                    "pages": [
+                      "es/DX816/816-op-intro",
+                      "es/DX816/816-op-mics",
+                      "es/DX816/816-op-lineas",
+                      "es/DX816/816-op-monitoreo",
+                      "es/DX816/816-op-hibrido",
+                      "es/DX816/816-op-bluetooth",
+                      "es/DX816/816-voip",
+                      "es/DX816/816-op-consejos"
+                    ]
+                  },
+                  {
+                    "group": "STREAMING",
+                    "pages": [
+                      "es/DX816/816-streaming",
+                      "es/DX816/816-stl",
+                      "es/DX816/816-decoder",
+                      "es/DX816/816-icecast"
+                    ]
+                  },
+                  {
+                    "group": "ADICIONALES",
+                    "pages": [
+                      "es/DX816/816-specs",
+                      "es/DX816/816-mantenimiento"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },          {
+            "tab": "Procesadores",
+            "anchors": [
+              {
+                "anchor": "542 APC",
+                "icon": "book-open",
+                "description": "Documentación del procesador 542 APC",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/procesadores-index"
+                    ]
+                  },
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/542/542-guia",
+                      "es/542/542-instalacion-montaje",
+                      "es/542/542-instalacion-cableado",
+                      "es/542/542-instalacion-gpio",
+                      "es/542/542-firmware"
+                    ]
+                  },
+                  {
+                    "group": "CONFIGURACION",
+                    "pages": [
+                      "es/542/542-acceso_local",
+                      "es/542/542-instalacion-web",
+                      "es/542/542-entradas-salidas",
+                      "es/542/542-sistema",
+                      "es/542/542-alarmas"
+                    ]
+                  },
+                   {
+                    "group": "FM",
+                    "pages": [
+                      "es/542/542-FM_output",
+                      "es/542/542-sintonizador",
+                      "es/542/542-RDS",
+                      "es/542/542-mono",                      
+                      "es/542/542-LiteCommander"
+                    ]
+                  },
+                  {
+                    "group": "AUDIO",
+                    "pages": [
+                      "es/542/542-acceso_avanzado_web",
+                      "es/542/542-procesado-primeras_etapas",
+                      "es/542/542-procesado-AGC",
+                      "es/542/542-procesado-compresores",
+                      "es/542/542-presets"
+                    ]
+                  },
+                  {
+                    "group": "SERVICIOS AoIP",
+                    "pages": [
+                      "es/542/542-opcionAoIP",
+                      "es/542/542-streamer",
+                      "es/542/542-dante"                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "Audimax 362",
+                "icon": "book-open",
+                "description": "Documentación del procesador Audimax 362",
+                "groups": [
+                  {
+                    "group": "GRUPO1",
+                    "pages": [
+                      "es/audimax362-grupo1-pagina1",
+                      "es/audimax362-grupo1-pagina2"
+                    ]
+                  },
+                  {
+                    "group": "GRUPO2",
+                    "pages": [
+                      "es/audimax362-grupo2-pagina1",
+                      "es/audimax362-grupo2-pagina2"
+                    ]
+                  },
+                  {
+                    "group": "GRUPO3",
+                    "pages": [
+                      "es/audimax362-grupo3-pagina1",
+                      "es/audimax362-grupo3-pagina2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Monitoreo",    
+              "groups": [                                         
+                  {
+                  "group": "StudioBox",
+                  "pages": [
+                    "es/extensiones/studioBox-descripcion",
+                    "es/extensiones/studioBox-conexiones",
+                    "es/extensiones/studioBox-operacion"
+                    ]
+            	   }
+                ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "UNIDEX Consoles",
+            "pages": [
+                  "en/ux24_installation"
+                ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": []
+    }
+  },
+  "logo": {
+    "light": "/logo/LOGOSOLIDYNE.svg",
+    "dark": "/logo/LOGOSOLIDYNENEGATIVO.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:info@solidynepro.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Webpage",
+      "href": "https://www.solidynepro.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "instagram": "https://www.instagram.com/solidynepro/",
+      "youtube": "https://www.youtube.com/user/solidynebroadcast",
+      "linkedin": "https://ar.linkedin.com/company/solidyne-srl",
+      "facebook": "https://www.facebook.com/SolidynePRO/"
+    }
+  }
+}

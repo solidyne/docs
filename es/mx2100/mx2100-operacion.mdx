@@ -1,0 +1,100 @@
+---
+title: "Operación de la consola"
+description: "Descripción de los controles"
+---
+
+<img
+  src="/images/mx2100/mx2100-frente.png"
+  alt="Mx2100 Frente Pn"
+  title="Mx2100 Frente Pn"
+  className="mx-auto"
+  style={{ width:"71%" }}
+/>
+
+## Panel frontal
+
+### Encendido
+
+El equipo se enciende pulsando el botón **ON**, ya sea que se encuentre conectado al cargador o funcionando con batería interna.
+
+<Note>
+  Cuando la unidad está conectada por USB, al cargador o a una computadora, el LED indicador de carga (**CHG**) permanece encendido aunque la consola esté apagada.\
+  Autonomía de batería: 16 horas en uso continuo.\
+  Tiempo de carga total: 12 horas.\
+  El sistema de carga reduce automáticamente la corriente cuando alcanza 100 %, por lo que puede quedar conectada indefinidamente.
+</Note>
+
+<Warning>
+  Recuerde apagar la consola luego de usarla para evitar consumo innecesario de batería.
+</Warning>
+
+---
+
+## Mezclador de programa
+
+La señal de programa (**PGM**) se genera a partir de la suma de las fuentes: **MIC-1, MIC-2, MIC-3, MIC-4 (incorporado), LINE, Bluetooth y USB**.\
+Algunas entradas comparten controles y su disponibilidad depende de la forma de conexión de la consola.
+
+- La señal PGM se envía a la radio vía teléfono o computadora con Internet.
+- También está presente en el conector **BAL OUT** del panel trasero.
+
+**Control MIC-3/USB**
+
+Conmuta entre la entrada MIC-3 o el computador conectado al USB. Cuando MX2100 se usa conectada a una computadora para transmisión vía Internet, un micrófono **debe conectarse a MIC-3**. En esta condición, USB no entra a la mezcla PGM, pero se escucha en auriculares como retorno directo.
+
+**Control MIC-4/LIN/Bluetooth**
+
+Maneja la señal del mic incorporado, de la entrada de LINEA o del dispositivo Bluetooth; dependiendo de la condición de trabajo:
+
+- Señal de MIC-4 disponible si **NO** se usa USB ni la entrada de línea.
+- Señal de LINE disponible solo cuando LIN-4 está conectada (anula MIC-4).
+- Retorno Bluetooth disponible en mezcla PGM solo cuando la consola está conectada por USB (escenario de transmisión desde la computadora externa).
+
+## Auriculares
+
+La mezcla de auriculares varía según el modo de uso:
+
+- **(a) Comunicación telefónica (fija o Bluetooth):**
+  - Mezcla PGM: MIC-1, MIC-2, MIC-3 y Line/MIC-4.
+  - Retorno directo de Estudios (híbrido o Bluetooth).
+  - Tono de ring en llamadas entrantes.
+- **(b) USB y computadora externa con streaming unidireccional:**
+  - Mezcla PGM: MIC-1, MIC-2, USB y Bluetooth (usado para sacar al aire otro celular).
+  - Retorno desde USB (no se usa retorno desde Estudios por el retardo del streaming).
+- **(c) USB y computadora externa con enlace en tiempo real (VoIP):**
+  - Mezcla PGM: MIC-1, MIC-2, MIC-3 y LINE.
+  - Retorno USB (Estudios).
+  - Retorno Bluetooth.
+  - Retorno híbrido.
+
+<Note>
+  El periodista en exteriores se escucha a sí mismo a través de la mezcla de programa.\
+  No es necesario que el operador en Estudios reenvíe su señal.
+</Note>
+
+<Warning>
+  El piso de ruido en auriculares aumenta si el híbrido está activo (botón **ON-AIR** presionado).\
+  Verificar que no esté presionado cuando el híbrido no se utiliza.
+</Warning>
+
+---
+
+## Indicador de nivel
+
+- Indicador de doble LED muestra la acción del compresor interno.
+- LED verde: nivel bajo, sin compresión.
+- LED rojo: indica compresión.
+- A mayor compresión, mayor intensidad del LED rojo.
+
+<Note>
+  El nivel adecuado de trabajo se logra cuando los picos de señal activan ocasionalmente el LED rojo.
+</Note>
+
+---
+
+### Acción del compresor
+
+La MX2100 incorpora un **compresor \+ limitador automático**, que mantiene constantes los picos de señal en la salida.
+
+- Mejora la relación señal/ruido.
+- Asegura uniformidad en los distintos canales de transmisión.

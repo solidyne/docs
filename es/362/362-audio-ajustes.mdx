@@ -1,0 +1,112 @@
+---
+title: "Ajustes de audio"
+description: "Personalización del perfil sonoro."
+---
+
+## Nivel de entrada
+
+El Audimax 362HD **no posee control de nivel de entrada manual**.\
+El ajuste es automático, mediante el sistema **AGC**.
+
+- En el panel trasero hay conectores de entrada para equipos **balanceados (XLR y RJ45)** y **no balanceados (RCA)**.
+- Puede conectarse desde consolas no profesionales (–10 dBV) hasta consolas de radiodifusión con salidas balanceadas de nivel \+4 dBu o incluso \+8/\+12 dBu.
+- El **AGC elimina variaciones de nivel** propias de la operación o del material grabado:
+  - Si el nivel permanece bajo, compensa la señal para mantener uniforme la salida.
+  - Si el nivel supera constantemente 0 VU, atenúa para evitar sobrecarga.
+
+De esta forma, la señal de programa llega a las etapas de procesado con un nivel constante, logrando un sonido al aire uniforme y siempre con el mismo grado de procesado.
+
+### Verificar el nivel de entrada
+
+El AGC (imagen sección 2) cuenta con un indicador de tres instancias:
+
+<img
+  src="/images/362/362-frente-niveles.png"
+  alt="362 Frente Niveles Pn"
+  title="362 Frente Niveles Pn"
+  className="mx-auto"
+  style={{ width:"57%" }}
+/>
+
+- El primer LED (verde) debe permanecer encendido en presencia de música o voz.
+- El segundo LED (amarillo) debe encender en picos o encenderse de forma estable.
+- El tercer LED (rojo) **nunca debe quedar encendido permanentemente**.
+
+---
+
+## Personalización del sonido
+
+El **Audimax 362HD** ha sido diseñado para una operación fácil e intuitiva. No se requieren conocimientos especializados en procesado de audio para ponerlo en marcha y ajustar su sonido.
+
+Configuración inicial: simplemente coloque todos los controles al centro… ¡y listo\! \
+Estará saliendo al aire con un sonido correcto.
+
+La personalización del sonido se realiza mediante **siete controles rotativos** en el panel frontal.
+
+<img
+  src="/images/362/362-frente-controles.png"
+  alt="362 Frente Controles Pn"
+  title="362 Frente Controles Pn"
+  className="mx-auto"
+  style={{ width:"66%" }}
+/>
+
+### Dynamic Equalizer
+
+El ecualizador dinámico de 3 bandas actúa sobre los **umbrales de compresión** de cada banda.\
+A diferencia de un ecualizador convencional, **su efecto aumenta a mayor nivel de la señal**.
+
+- Asegúrese de que el compresor multibanda **esté accionando** (LEDs "Multiband compressor").
+- Ajuste las perillas _Dinamic Equalizer_ de **graves, medios y agudos**:
+  - Hacia la izquierda → aumenta la compresión en esa banda.
+  - Hacia la derecha → disminuye la compresión, liberando la banda y reforzando esas frecuencias.
+
+<Note>
+  Es conveniente mantener una relación equilibrada entre las tres bandas. Diferencias extremas generan desbalance entre graves, medios y agudos.
+</Note>
+
+- Para lograr impacto en graves, libere un poco más esta banda respecto a medios y agudos.
+- Recuerde que el oyente puede reforzar graves en su receptor; por lo tanto, conviene entregar un sonido con graves limpios y no sobrecomprimidos.
+
+### Band Energy
+
+Estos controles **aumentan la densidad de picos en las bandas**, modificando los **tiempos de recuperación** del compresor.
+
+- Hacia la derecha → sonido **compacto y agresivo** (recuperación rápida).
+- Hacia la izquierda → sonido \*\*suave y mayor dinámica \*\*(recuperación lenta).
+
+### Compresor multibanda
+
+Es el corazón del procesado. Los indicadores muestran la acción de los **compresores de banda**.
+
+<img
+  src="/images/362/362-frente-bandas.png"
+  alt="362 Frente Bandas Pn"
+  title="362 Frente Bandas Pn"
+  className="mx-auto"
+  style={{ width:"61%" }}
+/>
+
+El control **Multiband** ajusta la ganancia de entrada a los compresores.\
+Es el control que más impacta en la **sonoridad de la radio**.
+
+- Hacia la izquierda → sonido suave, menos procesado, con menor energía.
+- Hacia la derecha → sonido fuerte, con más energía, pero con menor dinámica y menos naturalidad.
+
+<Warning>
+  Un procesado excesivo puede dar un sonido muy fuerte pero **aplastado** (sin nada de dinámica) y voces poco naturales.
+</Warning>
+
+<Info>
+  Un nivel de trabajo adecuado se logra cuando los indicadores del compresor multibanda actúan sin llegar a encender al máximo.
+</Info>
+
+- Para voces naturales y equilibradas: posición media o menor del control Multiband.
+- Para procesado más intenso: usar tiempos de **recuperación lentos** (Band Energy hacia la izquierda).
+
+---
+
+## Relación entre controles
+
+Para que **Dynamic EQ** y **Band Energy** trabajen, es necesario que el **compresor multibanda esté activo**. Esto significa que en cada banda deben encenderse al menos los primeros LEDs.\
+Sin compresión multibanda, los controles no tienen efecto, ya que están asociados al trabajo de compresión.

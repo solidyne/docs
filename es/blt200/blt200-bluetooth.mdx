@@ -1,0 +1,121 @@
+---
+title: "Vincular un móvil Bluetooth"
+description: "Description of your new file."
+---
+
+## Conceptos generales
+
+Cualquier teléfono móvil puede conectarse a BLT200 vía Bluetooth.\
+La interfaz dispone de dos dispositivos Bluetooth denominados **A** y **B**.
+
+<img
+  src="/images/blt200/UDX-BLT-200FRONT.jpg"
+  alt="UDX BLT 200FRONT Jp"
+  title="UDX BLT 200FRONT Jp"
+  className="mx-auto"
+  style={{ width:"52%" }}
+/>
+
+Cada canal tiene su propio control rotativo de nivel de salida.\
+En el teléfono, el volumen Bluetooth debe ajustarse siempre al máximo para obtener la mejor relación señal/ruido (ver más adelante).
+
+Los botones **CONTROL A** y **CONTROL B** son luminosos y destellan con distinta cadencia según el estado del Bluetooth.
+
+### Modos de iluminación del botón CONTROL
+
+| Modo | Estado                                                                  | Indicación                                                                                        |
+| :--: | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| A    | Móvil conectado (sin llamada activa)                                    | Encendido breve (1s) en amarillo, apagado largo (2s).                                             |
+| B    | Llamada en curso / Móvil no conectado (Bluetooth encendido sin vínculo) | Encendido lento (2s) en amarillo, apagado corto (1s). Cuando se conecta un móvil vuelve a modo A. |
+| C    | Modo búsqueda (Pairing)                                                 | Destello rápido en amarillo.                                                                      |
+| D    | Llamada entrante                                                        | Encendido permanente en azul.                                                                     |
+
+<Info>
+  No confundir estas tres acciones:
+
+  - **Activar/desactivar Bluetooth en el móvil**: habilita o deshabilita el sistema Bluetooth del teléfono.
+  - **Vincular (Pairing)**: el móvil detecta y registra por primera vez un dispositivo externo (ej.: auriculares, manos libres, canal A o B del BLT200).
+  - **Conectar/desconectar**: el móvil se conecta a un dispositivo ya vinculado. Esta acción no requiere repetir el emparejamiento.\
+    Cuando el móvil tiene Bluetooth activado, puede conectarse o desconectarse fácilmente de los dispositivos vinculados desde la lista de dispositivos registrados.\
+    Los dispositivos no vinculados previamente no aparecerán en esa lista.
+</Info>
+
+## Emparejar un móvil con BLT200
+
+Para vincular un canal Bluetooth con un móvil, siga estos pasos:
+
+<Steps>
+  <Step title="Apagar Bluetooth en BLT200">
+    Verifique que el canal que desea vincular (A o B) esté apagado.\
+    Si el botón CONTROL destella, mantenga presionado hasta que se apague.
+  </Step>
+  <Step title="Activar modo emparejamiento">
+    Desde Bluetooth apagado, mantenga presionado el botón CONTROL unos 8 segundos.\
+    La luz pasará de parpadeo lento a parpadeo rápido en amarillo.\
+    Esto indica que el canal entró en modo **Pairing**.
+  </Step>
+  <Step title="Buscar dispositivos desde el móvil">
+    En el teléfono, active Bluetooth y busque nuevos dispositivos.\
+    Según el modelo de móvil, este procedimiento puede variar.
+  </Step>
+  <Step title="Seleccionar el dispositivo">
+    Aparecerán **Solidyne BLT-A** y **Solidyne BLT-B**.\
+    Seleccione el correspondiente según el canal a usar.
+  </Step>
+</Steps>
+
+<Tip>
+  En el móvil es posible cambiar el nombre “Solidyne BLT-A” o “Solidyne BLT-B” para diferenciar mejor los canales o las unidades BLT200 en uso.
+</Tip>
+
+Una vez emparejado, el botón CONTROL destella lentamente en amarillo (modo conectado sin llamada).\
+El emparejamiento se mantiene mientras se use el mismo móvil en ese canal.\
+Para vincular otro móvil o el mismo en el otro canal, repita el procedimiento.
+
+<Warning>
+  Un mismo móvil puede vincularse a ambos canales A y B, pero solo puede estar **conectado** a uno de ellos a la vez.\
+  Tampoco es posible conectar simultáneamente dos móviles a un mismo canal.
+</Warning>
+
+### Distancia al móvil
+
+Aunque el alcance es de hasta 3 metros, se recomienda mantener el teléfono cerca de la interfaz, pero nunca apoyado directamente sobre el BLT200.
+
+---
+
+## Re-conectar un móvil ya vinculado
+
+Un móvil previamente emparejado puede desconectarse de BLT200 en varias situaciones:
+
+- **Si se apaga Bluetooth en el móvil.**\
+  Normalmente esto transfiere la llamada en curso al teléfono.\
+  Al volver a encender Bluetooth, la reconexión puede ser automática o manual según el modelo.
+- **Si durante una llamada se desconecta el canal Bluetooth en el teléfono.**\
+  La llamada pasa al teléfono.\
+  Al reconectar, vuelve al BLT200.
+- **Si se activa el modo “Altavoz” en el teléfono.**\
+  Esto quita la llamada de BLT200 y la pasa al teléfono.\
+  Al reactivar Bluetooth, la llamada vuelve al BLT200.
+- **Si se apaga el canal Bluetooth en BLT200.**
+
+La reconexión no será posible si ese canal fue emparejado con otro teléfono y este último se encuentra conectado.
+
+---
+
+## Ajuste del volumen
+
+<Warning>
+  En el teléfono, el volumen Bluetooth debe ajustarse siempre al máximo para asegurar una adecuada recepción y la mejor relación señal/ruido.
+</Warning>
+
+El ajuste debe realizarse durante una llamada establecida por Bluetooth.\
+El volumen del altavoz del móvil es independiente del volumen Bluetooth: si se ajusta fuera de una llamada, solo se modifica el altavoz, no la transmisión Bluetooth.
+
+El nivel de Bluetooth queda guardado en el teléfono.\
+Si se vincula un nuevo móvil, asegúrese de volver a ajustar el volumen al máximo.
+
+---
+
+## Apagar Bluetooth en BLT200
+
+Para apagar un canal Bluetooth, mantener pulsado el botón CONTROL correspondiente hasta que deje de destellar.

@@ -31,7 +31,7 @@
                   {
                     "group": "INTRODUCCIÓN",
                     "pages": [
-                      "es/unidex/unidex-introduccion"
+                      "es/unidex/unidex-resumen"
                     ]
                   },
                   {
@@ -161,12 +161,12 @@
               {
                 "anchor": "DX816/822",
                 "icon": "book-open",
-                "description": "Documentación serie DX",
+                "description": "Documentación serie Broadcast Classics",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
                     "pages": [
-                      "es/classic-index",
+                      "es/resumen-linea-classic",
                       "es/DX816/816-resumen"
                     ]
                   },
@@ -214,50 +214,99 @@
                 ]
               },
               {
-              "anchor": "D612",
-              "icon": "book-open",
-              "description": "Documentación D612",
-              "groups": [
-                {
-                  "group": "INTRODUCCION",
-                  "pages": [
-                    "es/612/612-resumen"                    
-                  ]
-                },
-                {
-                  "group": "INSTALACIÓN",
-                  "pages": [
-                    "es/612/612-fuente",
-                    "es/612/612-entradas",
-                    "es/612/612-salidas",
-                    "es/612/612-monitoreo",
-                    "es/612/612-telco"                    
-                  ]
-                },
-                {
-                  "group": "OPERACION",
-                  "pages": [
-                    "es/612/612-op-intro",
-                    "es/612/612-op-microfonos",
-                    "es/612/612-op-lineas",
-                    "es/612/612-op-monitoreo",
-                    "es/612/612-op-hibrido",
-                    "es/612/612-op-grabacion"
-                  ]
-                },
-                {
-                  "group": "STREAMING",
-                  "pages": [
-                    "es/612/612-AoIP"
-                  ]
-                }                
-              ]
+                "anchor": "D612",
+                "icon": "book-open",
+                "description": "Documentación D612",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/612/612-resumen"
+                    ]
+                  },
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/612/612-fuente",
+                      "es/612/612-entradas",
+                      "es/612/612-salidas",
+                      "es/612/612-monitoreo",
+                      "es/612/612-telco"
+                    ]
+                  },
+                  {
+                    "group": "OPERACION",
+                    "pages": [
+                      "es/612/612-op-intro",
+                      "es/612/612-op-microfonos",
+                      "es/612/612-op-lineas",
+                      "es/612/612-op-monitoreo",
+                      "es/612/612-op-hibrido",
+                      "es/612/612-op-grabacion"
+                    ]
+                  },
+                  {
+                    "group": "STREAMING",
+                    "pages": [
+                      "es/612/612-AoIP"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "MiniMixer",
+                "icon": "book-open",
+                "description": "Mini-consola de Estudio",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/minimixer/minimixer-resumen"
+                    ]
+                  },
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/minimixer/minimixer-conexiones",
+                      "es/minimixer/minimixer-bluetooth"                      
+                    ]
+                  },
+                  {
+                    "group": "OPERACION",
+                    "pages": [
+                      "es/minimixer/minimixer-op-controles",
+                      "es/minimixer/minimixer-op-puesta_al_aire",
+                      "es/minimixer/minimixer-op-bluetooth",
+                      "es/minimixer/minimixer-op-lineas",
+                      "es/minimixer/minimixer-op-grabacion"                      
+                    ]
+                  },
+                  {
+                    "group": "INFO TÉCNICA",
+                    "pages": [
+                      "es/minimixer/minimixer-specs"
+                    ]
+                  }
+                ]
               }
             ]
           },
           {
             "tab": "Exteriores",
             "anchors": [
+              {
+                "anchor": "PORTÁTILES",
+                "icon": "book-open",
+                "description": "Equipos para transmisiones remotas",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/resumen-portatiles"
+                    ]
+                  }
+                ]
+              },
               {
                 "anchor": "MX2200",
                 "icon": "book-open",
@@ -312,6 +361,41 @@
                     ]
                   }
                 ]
+              },
+              {
+                "anchor": "MX2100",
+                "icon": "book-open",
+                "description": "Mini-consola de transmisión telefónica",
+                "groups": [
+                  {
+                    "group": "INTRODUCCIÓN",
+                    "pages": [
+                      "es/mx2100/mx2100-resumen"
+                    ]
+                  },
+                  {
+                    "group": "CONEXIONES",
+                    "pages": [
+                      "es/mx2100/mx2100-conexiones",
+                      "es/mx2100/mx2100-celular",
+                      "es/mx2100/mx2100-fija"
+                    ]
+                  },
+                  {
+                    "group": "OPERACIÓN",
+                    "pages": [
+                      "es/mx2100/mx2100-operacion",
+                      "es/mx2100/mx2100-enlace-telefonico",
+                      "es/mx2100/mx2100-enlace-notebook"
+                    ]
+                  },
+                  {
+                    "group": "INFO TÉCNICA",
+                    "pages": [
+                      "es/mx2100/mx2100-specs"                      
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -322,13 +406,7 @@
                 "anchor": "542 APC",
                 "icon": "book-open",
                 "description": "Documentación del procesador 542 APC",
-                "groups": [
-                  {
-                    "group": "INTRODUCCION",
-                    "pages": [
-                      "es/procesadores-index"
-                    ]
-                  },
+                "groups": [                  
                   {
                     "group": "INSTALACIÓN",
                     "pages": [
@@ -385,27 +463,104 @@
                 "description": "Documentación del procesador Audimax 362",
                 "groups": [
                   {
-                    "group": "GRUPO1",
+                    "group": "INTRODUCCIÓN",
                     "pages": [
-                      "es/audimax362-grupo1-pagina1",
-                      "es/audimax362-grupo1-pagina2"
+                      "es/362/362-resumen"                      
                     ]
                   },
                   {
-                    "group": "GRUPO2",
+                    "group": "INSTALACIÓN",
                     "pages": [
-                      "es/audimax362-grupo2-pagina1",
-                      "es/audimax362-grupo2-pagina2"
+                      "es/362/362-instalacion",
+                      "es/362/362-instalacion-audio",
+                      "es/362/362-instalacion-MPX",
+                      "es/362/362-escenarios"
                     ]
                   },
                   {
-                    "group": "GRUPO3",
+                    "group": "CONFIGURACIÓN",
                     "pages": [
-                      "es/audimax362-grupo3-pagina1",
-                      "es/audimax362-grupo3-pagina2"
+                      "es/362/362-audio-ajustes"                      
+                    ]
+                  },
+                  {
+                    "group": "INFO TECNICA",
+                    "pages": [
+                      "es/362/362-specs"                      
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "tab": "Híbridos",
+            "anchors": [
+              {
+                "anchor": "HL240",
+                "groups": [
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/hl240/hl240-montaje",
+                      "es/hl240/hl240-conexiones",
+                      "es/hl240/hl240-lineas-bluetooth",
+                      "es/hl240/hl240-lineas-pots",
+                      "es/hl240/hl240-lineas-VoIP"
+                    ]
+                  },
+                  {
+                    "group": "OPERACIÓN",
+                    "pages": [
+                      "es/hl240/hl240-operacion",
+                      "es/hl240/hl240-vqr"
+                    ]
+                  },
+                  {
+                    "group": "INFO TECNICA",
+                    "pages": [
+                      "es/hl240/hl240-specs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "BLT200",
+                "groups": [
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/blt200/blt200-resumen",
+                      "es/blt200/blt200-conexiones",
+                      "es/blt200/blt200-bluetooth"
+                    ]
+                  },
+                  {
+                    "group": "OPERACIÓN",
+                    "pages": [
+                      "es/blt200/blt200-operacion"
+                    ]
+                  },
+                  {
+                    "group": "INFO TECNICA",
+                    "pages": [
+                      "es/blt200/blt200-specs"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Software",
+            "anchors": [
+              {
+                "anchor": "AUDICOM",
+                "groups": []
+              },
+              {
+                "anchor": "ADMICOM",
+                "groups": []
               }
             ]
           },
@@ -419,6 +574,27 @@
                   "es/extensiones/studioBox-conexiones",
                   "es/extensiones/studioBox-operacion"
                 ]
+              }
+            ]
+          },
+          {
+            "tab": "Discontinuados",
+            "anchors": [
+              {
+                "anchor": "consolas",
+                "groups": []
+              },
+              {
+                "anchor": "procesadores",
+                "groups": []
+              },
+              {
+                "anchor": "hibridos",
+                "groups": []
+              },
+              {
+                "anchor": "otros",
+                "groups": []
               }
             ]
           }

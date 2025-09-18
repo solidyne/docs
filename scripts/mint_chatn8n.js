@@ -3,7 +3,7 @@ agentInitScript2.type = "module";
 agentInitScript2.innerHTML = `
   import Chatbot from "https://cdn.n8nchatui.com/v1/embed.js";
   Chatbot.init({
-    "n8nChatUrl": "https://solidynepro.loca.lt/webhook/e104e40e-6134-4825-a6f0-8a646d882662/chat",
+    "n8nChatUrl": "https://n8n.solidyne.dx.com.ar/webhook/e104e40e-6134-4825-a6f0-8a646d882662/chat",
     "metadata": {}, // Include any custom data to send with each message to your n8n workflow
     "theme": {
       "button": {

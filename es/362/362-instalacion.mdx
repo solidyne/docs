@@ -1,0 +1,42 @@
+---
+title: "Instalación general"
+description: "Montaje, alimentación, puesta a tierra."
+---
+
+import tierras from '/snippets/snippet-tierras.mdx'
+
+## Montaje
+
+Es conveniente tener en cuenta las siguientes recomendaciones al instalar:
+
+- Los procesadores Solidyne Audimax 362HD están previstos para su instalación en un rack normalizado de 483 mm (19"), ocupando una unidad de altura.\
+  También es posible colocarlo sobre una mesa utilizando los apoyos de goma auto-adhesivos provistos.
+- La temperatura ambiente deberá mantenerse entre **5 °C y 40 °C**.\
+  Debe evitarse la incidencia directa de la luz solar sobre el procesador, así como la proximidad de fuentes de calor o fuertes campos electromagnéticos (transformadores de potencia, grandes motores, etc.).\
+  Su protección interna contra campos de RF permite el montaje próximo a transmisores de AM/FM.
+
+<Danger>
+  Evite la instalación en lugares muy húmedos o con atmósfera salina, ya que esto puede provocar corrosión en los circuitos impresos y componentes electrónicos.
+</Danger>
+
+## Alimentación
+
+<img
+  src="/images/362/362-trasero-fuente.png"
+  alt="362 Trasero Fuente Pn"
+  title="362 Trasero Fuente Pn"
+  className="mx-auto"
+  style={{ width:"33%" }}
+/>
+
+- **Llave selectora de tensión 110/220 V**: verificar que se encuentre en la posición correcta según la tensión de red. \
+  Se toleran variaciones de hasta ±10 % (ejemplo: 200–240 V para la posición de 220 V).
+
+<Warning>
+  Si la tensión de red excede este rango, instale estabilizadores de acción rápida para evitar daños al equipo.
+</Warning>
+
+- **Conector de alimentación Interlock** y **fusible general de 1 A**.
+- **Interruptor de encendido**.
+
+<tierras />
