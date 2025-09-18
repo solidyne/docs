@@ -538,24 +538,24 @@
                   {
                     "group": "INSTALACIÓN",
                     "pages": [
-                      "es/hl240/hl240-montaje",
-                      "es/hl240/hl240-conexiones",
-                      "es/hl240/hl240-lineas-bluetooth",
-                      "es/hl240/hl240-lineas-pots",
-                      "es/hl240/hl240-lineas-VoIP"
+                      "es/HL240/hl240-montaje",
+                      "es/HL240/hl240-conexiones",
+                      "es/HL240/hl240-lineas-bluetooth",
+                      "es/HL240/hl240-lineas-pots",
+                      "es/HL240/hl240-lineas-VoIP"
                     ]
                   },
                   {
                     "group": "OPERACIÓN",
                     "pages": [
-                      "es/hl240/hl240-operacion",
-                      "es/hl240/hl240-vqr"
+                      "es/HL240/hl240-operacion",
+                      "es/HL240/hl240-vqr"
                     ]
                   },
                   {
                     "group": "INFO TECNICA",
                     "pages": [
-                      "es/hl240/hl240-specs"
+                      "es/HL240/hl240-specs"
                     ]
                   }
                 ]
