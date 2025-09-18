@@ -159,6 +159,19 @@
             "tab": "Consolas Classic",
             "anchors": [
               {
+                "anchor": "Broadcast Classics",
+                "icon": "book-open",
+                "description": "Consolas serie Broadcast Classic",
+                "groups": [
+                  {
+                    "group": "INTRODUCCION",
+                    "pages": [
+                      "es/resumen-linea-classic"
+                    ]
+                  }
+                ]
+              },
+              {
                 "anchor": "DX816/822",
                 "icon": "book-open",
                 "description": "Documentación serie Broadcast Classics",
@@ -166,7 +179,6 @@
                   {
                     "group": "INTRODUCCION",
                     "pages": [
-                      "es/resumen-linea-classic",
                       "es/DX816/816-resumen"
                     ]
                   },
