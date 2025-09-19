@@ -646,6 +646,10 @@
     "light": "/logo/LOGOSOLIDYNE.svg",
     "dark": "/logo/LOGOSOLIDYNENEGATIVO.svg"
   },
+  "links": {
+    "internal": { "target": "_self" },
+    "external": { "target": "_blank" }
+  },
   "navbar": {
     "links": [
       {
