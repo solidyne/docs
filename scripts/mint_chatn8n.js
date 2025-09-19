@@ -1,7 +1,7 @@
 const agentInitScript2 = document.createElement("script");
 agentInitScript2.type = "module";
 agentInitScript2.innerHTML = `
-  import Chatbot from "https://solidyne.mintlify.app/scripts/embed_soli.js";
+  import Chatbot from "https://solidyne.dx.com.ar/int/embed_soli.js";
   Chatbot.init({
     "n8nChatUrl": "https://n8n.solidyne.dx.com.ar/webhook/e104e40e-6134-4825-a6f0-8a646d882662/chat",
     
