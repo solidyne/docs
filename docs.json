@@ -22,10 +22,14 @@
         "tabs": [
           {
             "tab": "Indices",
-            "pages": [
-              "es/indice/discontinued"
-            ],
             "groups": [
+              {
+                "group": "Manuales",
+                "pages": [
+                  "/index",
+                  "es/indice/discontinued"
+                ]
+              },
               {
                 "group": "Documentación accesoria",
                 "pages": [
