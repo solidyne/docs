@@ -32,7 +32,7 @@ Para un correcto funcionamiento de **AUDICOM**, verifique que las configuracione
 
 - Muchas consolas de radiodifusión actuales incluyen canales con conexión **USB**, eliminando la necesidad de placas de audio adicionales.
 - AUDICOM funciona con interfaces que soporten controladores **WASAPI, DirectSound o MME**.
-- En el caso de interfaces multicanal, asegúrese de que el hardware sea compatible con **WDM o WASAPI**.\\
+- En el caso de interfaces multicanal, asegúrese de que el hardware sea compatible con **WDM o WASAPI**.
 
   <Note>
     ASIO no es soportado por AUDICOM.
@@ -152,7 +152,8 @@ Durante la instalación se deben completar los datos de usuario y terminal. Es f
 - `.wav` codificados en MPEG Layer 3: usados en sistemas antiguos, hoy en desuso.
 - **ADPCM** (típicamente extensión `.wav`): existieron distintas variantes; algunas aún soportadas por Windows. AUDICOM soporta **MS-ADPCM** y cualquier variante compatible con **ACM** si está disponible el códec correspondiente.
 - **MP2 / WAV-MP2 (MPEG Layer 2)**: extensión `.mp2` o `.wav`. Utilizados por sistemas con placas ANTEX, Digigram u otras. Pueden usarse directamente sin reconversión si se instala un códec adecuado (no incluido con AUDICOM).
-- **Dolby AC2**: extensiones `.wav` o `.atx`.\
+- **Dolby AC2**: extensiones `.wav` o `.atx`.\\
+
   <Danger>
     No son soportados por AUDICOM.
   </Danger>
@@ -175,8 +176,9 @@ CUÑAS
 ```
 
 - Estas carpetas se denominan **carpetas de medios**.
+
 <Warning>
-    No deben contener subcarpetas; en caso de existir, AUDICOM las ignora.
+  No deben contener subcarpetas; en caso de existir, AUDICOM las ignora.
 </Warning>
 
 Si los archivos del sistema anterior son compatibles, basta con organizarlos en estas carpetas para poder utilizarlos inmediatamente al aire.

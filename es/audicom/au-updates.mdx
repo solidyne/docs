@@ -1,5 +1,50 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+description: "Actualización y reinstalación"
+title: "Actualizaciones"
 ---
+## Actualización / Reinstalación
 
+Para cambiar la computadora de aire o reinstalar AUDICOM, siga este procedimiento:
+
+<Steps>
+  <Step title="Instalar en la nueva computadora">
+    Instale AUDICOM con el instalador original.  
+    La nueva computadora debe tener el **mismo nombre de red** que la computadora original.
+  </Step>
+
+  <Step title="Reemplazar carpeta AUDICOM">
+    Sustituya en la nueva computadora la carpeta `C:\AUDICOM` creada por el instalador, por la carpeta `C:\AUDICOM` de la computadora actual.
+  </Step>
+
+  <Step title="Reemplazar carpeta ADMICOM">
+    Sustituya en la nueva computadora la carpeta `C:\ADMICOM` creada por el instalador, por la carpeta `C:\ADMICOM` de la computadora actual.
+  </Step>
+
+  <Step title="Actualizar versión (opcional)">
+    Si desea actualizar la versión de AUDICOM, debe contar con un **contrato de soporte y actualizaciones vigente**.  
+    El servicio de soporte anual incluye acceso remoto de un técnico especializado para actualizar y configurar el sistema.
+  </Step>
+</Steps>
+
+El usuario puede instalar actualizaciones descargándolas desde [www.solidyne.ar](http://www.solidyne.ar).  
+Para instalar una actualización seleccione la opción **“Modular - Reinstall”**:  
+- Instala los mismos programas que el modo genérico, pero permite elegir módulos de manera individual desde un menú.  
+- Usualmente las actualizaciones se distribuyen en un único archivo ejecutable descargable desde la web.  
+
+<Danger>  
+Aunque el instalador no sobrescribe información del usuario, **siempre realice copias de respaldo actualizadas de la carpeta `C:\AUDICOM`** antes de actualizar.  
+</Danger>
+
+### Archivos a respaldar
+
+- `\Audicom\AUDIO`: archivos de audio.  
+- `\Audicom\DB`: base de datos musical, contiene `user.ini` (usuarios) y `data.sqlite` (Media Asset Management).  
+- `\Audicom\Log\*.log`: programación de tandas publicitarias.  
+- `\Audicom\Pgm\*.pgm`: organización de programas y bloques. Incluye playlists (`.pls`, `.m3u`, `.txt`).  
+- `\Audicom\Air\*.air`: registros de títulos emitidos al aire.  
+  <Note>Respaldar solo si la emisora desea mantener un historial completo. Cada archivo .air ocupa aprox. 80 KB.</Note>  
+- `\Admicom\`: contiene toda la base de datos de administración.  
+
+<Danger>  
+Nunca reinstale la **base de datos demo** ni los **archivos de programación de demostración**, ya que sobrescribiría la base de datos real de la emisora.  
+</Danger>

@@ -1,0 +1,151 @@
+---
+description: "Manejo de señales remotas. Control de periféricos."
+title: "Señales GPIO"
+---
+
+## Control vía USB
+
+La interfaz **E/S USB (GPIO USB)** es un accesorio que se comercializa en forma independiente (consulte a su distribuidor).
+
+- Dispone de 2 entradas y 2 salidas de control.
+- Permite controlar externamente funciones de transporte de AUDICOM.
+- AUDICOM también puede enviar comandos para controlar dispositivos externos.
+
+Ejemplo: en consolas que transmiten señales de control, estas se pueden usar para comandar la reproducción en AUDICOM.
+
+- Al abrir el fader o habilitar el botón de aire, AUDICOM inicia la reproducción.
+- Al cerrarlo, detiene la reproducción.
+
+<Note>
+  El envío y recepción de comandos debe habilitarse desde el panel de configuración de AUDICOM.
+</Note>
+
+<img
+  src="/images/audicom/au-USB-GPIO.jpg"
+  alt="Au USB GPIO Jp"
+  title="Au USB GPIO Jp"
+  className="mx-auto"
+  style={{ width:"44%" }}
+/>
+
+### Advertencia
+
+<Danger>
+  Los terminales de tierra de la interfaz USB comparten la tierra con el puerto USB de la PC.\
+  Al no estar aislados internamente, pueden exponer el potencial de tierra USB de la computadora.
+
+  - Verifique los circuitos antes de realizar la conexión.
+  - Una tensión inversa o un pico alto puede dañar la interfaz o la computadora.
+  - Las salidas entregan 5 V y poseen resistencia interna de 250 Ohms para limitar la corriente.
+  - Las entradas son de **contacto seco**, se conmutan conectándolas directamente a tierra.
+</Danger>
+
+---
+
+## Opciones para manejo de señales remotas
+
+### Enlace vía Internet
+
+Una estación “cabecera” puede controlar a una estación “repetidora”, que solo reemplaza tandas comerciales por contenidos locales.\
+Más detalles en el capítulo **Herramientas para Internet**.
+
+### Bloques remotos
+
+Antes llamados “satelitales”. Automatizan la conmutación entre audio local y una fuente externa (satélite, decoder de streaming, etc.).\
+También permiten controlar estaciones repetidoras.
+
+Modos disponibles:
+
+- **SatFill (Relleno)**: conmutación según horarios.
+- **SatSlave (Maestro-Esclavo)**: control centralizado de terminales remotas.
+
+El módulo **Multicast** maneja transmisiones directas a estaciones vía Internet (ver Herramientas para Internet).
+
+### Bloque remoto SatFill (Relleno)
+
+- Se usa cuando es necesario conmutar programación local con fuentes externas (satélite, enlaces punto a punto, etc.).
+- En la Pantalla de Aire, estos bloques aparecen como **SYNC**.
+- Mientras el evento SYNC está activo, se reproduce la señal externa.
+- Al finalizar, AUDICOM retoma la programación local de CyberPlay.
+
+### Bloque remoto SatSlave (Maestro-Esclavo)
+
+- Permite enlazar terminales AUDICOM en distintas localidades.
+- La terminal Maestro envía la orden mediante instrucción **/REGIONAL**, que genera un pulso vía E/S USB (ej. GPO).
+- Las terminales Esclavas conmutan entre programación de la Maestra y programación local.
+- El último bloque puede programarse como **Syncro**, garantizando conmutación a horario si no llega el pulso.
+
+### Retransmisión de señales externas con SatFill
+
+Ejemplo: una terminal de aire conmutando entre señal local y señal satelital.
+
+Formas de conmutación:
+
+**a) Controlando módulos de consola vía puerto USB**
+
+- La señal externa entra en un módulo de la consola.
+- AUDICOM envía comandos por la interfaz USB para activar/desactivar módulos VCA.
+- Conexiones:
+  - **Datos**: interfaz USB ↔ consola.
+  - **Audio**: señal de satélite y señal local hacia módulos de consola.
+
+**b) Conmutando por software la entrada de línea**
+
+- La señal externa entra en la línea de una placa de sonido.
+- AUDICOM conmuta entre esa entrada y el audio local.
+- Solo controla una entrada; para más señales se requiere placa multicanal.
+- En consola: salida PGM-1 para audio local, entrada de línea para satélite.
+
+### Retransmisión de streaming con SatFill
+
+AUDICOM soporta bloques **iLink** para reproducir streaming de audio en forma directa.
+
+### Control de estaciones remotas desde terminal Maestro
+
+Configuración basada en bloques SatSlave:
+
+- **Terminal Maestro**: envía señal de programa y pulsos de control.
+- **Terminal Esclavo**: recibe programación y órdenes de conmutación.
+
+El Maestro al encontrar /REGIONAL cambia una salida de puerto (USB o paralelo), transmitiendo la orden al Esclavo.\
+El Esclavo conmuta entre señal satelital y programación local.
+
+#### Terminal central (subida al satélite)
+
+<img
+  src="/images/audicom/au-subida-sat.jpg"
+  alt="Au Subida Sat Jp"
+  title="Au Subida Sat Jp"
+  className="mx-auto"
+  style={{ width:"57%" }}
+/>
+
+- Conexiones de la interfaz USB descritas en **Señales de control por USB**.
+- La entrada /REGIONAL cambia de estado (ej. SAT-1 DataBit 2) y puede conmutar la consola de audio.
+- También puede ingresar directamente a la placa de audio sin consola.
+
+#### Terminales remotas (bajada de satélite)
+
+<img
+  src="/images/audicom/au-sat-bajada.jpg"
+  alt="Au Sat Bajada Jp"
+  title="Au Sat Bajada Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+- Conexiones de la interfaz USB descritas en **Control vía puerto paralelo**.
+
+#### Configuración de comandos de control
+
+- En caso de varias placas de sonido, puede definirse cuál será la entrada de línea para bloques satelitales.
+- Se configura en `Audicom.ini` bajo la sección `[Hardware]`:
+
+```ini
+[Hardware]
+LineInID=0
+```
+
+- El valor `0` indica la placa predeterminada de Windows.
+- El valor `1` corresponde a la segunda placa, aunque el orden puede variar según la enumeración de Windows.
+- En algunos casos será necesario determinar la entrada deseada por prueba y error.
