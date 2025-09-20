@@ -49,7 +49,7 @@ Dependiendo del fabricante, algunas interfaces multicanal solo funcionan en modo
 - Por seguridad, se recomienda fijarla al chasis con un precinto o cable, o colocarla en el interior del gabinete.
 - La llave habilita los distintos módulos según la configuración del sistema.
 
-### Instalación _Full_
+## Instalación _Full_
 
 El instalador en modo **Full** instala todos los módulos y accesorios de AUDICOM.\
 Se recomienda para la primera instalación, cuando no existen instalaciones previas.
@@ -138,3 +138,65 @@ Durante la instalación se deben completar los datos de usuario y terminal. Es f
   className="mx-auto"
   style={{ width:"60%" }}
 />
+
+## Migración desde otros sistemas
+
+### Archivos de audio soportados
+
+- **PCM**: Archivos `.wav` sin compresión, 16/24 bits a 44.1/48 kHz.
+- **MP3**: 64 – 320 kbps a 44.1 kHz.
+- **FLAC**: soportado.
+
+**Formatos antiguos y obsoletos:**
+
+- `.wav` codificados en MPEG Layer 3: usados en sistemas antiguos, hoy en desuso.
+- **ADPCM** (típicamente extensión `.wav`): existieron distintas variantes; algunas aún soportadas por Windows. AUDICOM soporta **MS-ADPCM** y cualquier variante compatible con **ACM** si está disponible el códec correspondiente.
+- **MP2 / WAV-MP2 (MPEG Layer 2)**: extensión `.mp2` o `.wav`. Utilizados por sistemas con placas ANTEX, Digigram u otras. Pueden usarse directamente sin reconversión si se instala un códec adecuado (no incluido con AUDICOM).
+- **Dolby AC2**: extensiones `.wav` o `.atx`.\
+  <Danger>
+    No son soportados por AUDICOM.
+  </Danger>
+
+### Ubicación de los archivos de audio y video
+
+AUDICOM trabaja con una estructura de carpetas rígida, para asegurar el mantenimiento y la organización de la información.
+
+Todos los archivos de audio y video deben organizarse en subcarpetas del sistema:
+
+```
+\AUDICOM\AUDIO
+POP 80s
+POP 90s
+SALSA
+ROCK-NOVEDADES
+SFX
+PROMOS
+CUÑAS
+```
+
+- Estas carpetas se denominan **carpetas de medios**.
+<Warning>
+    No deben contener subcarpetas; en caso de existir, AUDICOM las ignora.
+</Warning>
+
+Si los archivos del sistema anterior son compatibles, basta con organizarlos en estas carpetas para poder utilizarlos inmediatamente al aire.
+
+Para crear carpetas y copiar medios al sistema se deben usar los módulos **File Manager** o **Media Manager**, que garantizan la correcta estructura.\
+El usuario solo selecciona disco y nombre de carpeta.\
+Consulte los capítulos **Audicom Media Manager** y **Audicom File Manager** para más información.
+
+### Base de datos
+
+Para la operación automatizada (AutoDJ), es obligatorio que los archivos de medios se ingresen en la **Base de Datos de medios**.
+
+- Esto se realiza desde **Media Manager** (recomendado) o **File Manager**.
+- El módulo **InfoMusic Producción** permite gestionar la base de datos.
+
+Consulte el capítulo **InfoMusic** para más detalles.
+
+### Pautado de programación
+
+AUDICOM ofrece varias opciones para generar pautas comerciales y de contenidos:
+
+- El módulo **Admicom** administra la pauta comercial mediante su propia base de datos, independiente de la de medios.
+- La generación de la programación de contenidos se realiza desde **CyberPlay Editor** y **Admicom**.

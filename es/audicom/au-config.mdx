@@ -32,18 +32,21 @@ El panel también**puede abrirse después de la instalación**  desde el grupo d
 
 #### Fuentes de audio
 
+![A Config Fuentesde Audio Jp](/images/audicom/aConfig_FuentesdeAudio.jpg)
+
 - **Servidores**: Define las unidades de disco habilitadas para cada terminal.
   - Deben declararse en modo **UNC**, por ejemplo: `\\Server` o `\\PC-AIRE`.
 
 <Warning>
-  Incluso en instalaciones sin servidor dedicado, es indispensable definir los archivos mediante **path UNC de red**.\
-  Si se configura como disco `C`, las demás terminales no podrán acceder a los contenidos del computador de aire.
+  Incluso en instalaciones sin servidor dedicado, es indispensable definir los archivos mediante **path UNC de red**. Si se configura como disco `C`, las demás terminales no podrán acceder a los contenidos del computador de aire.
 </Warning>
 
 - **Ubicación Partners (pisadores)**: Carpeta para presentaciones pregrabadas de canciones (voces secas).
 - **Ubicación Promos de reemplazo**: Carpeta con contenidos que sustituyen promos y artísticas de programas enlazados por iLink con cabecera remota.
 
 #### Bases de datos
+
+![A Config Basede Datos Jp](/images/audicom/aConfig_BasedeDatos.jpg)
 
 - **Base de datos del MAM (Media Asset Management)**: Ubicación única de la base musical.
   - Puede alojarse en el servidor (`\\SERVER\Audicom\db`) o en el computador de aire (`\\AIRE\Audicom\db`).
@@ -55,12 +58,22 @@ El panel también**puede abrirse después de la instalación**  desde el grupo d
   - En emisoras múltiples, cada estación mantiene sus propios formatos (ej.: `\\Estación-1\Audicom`, `\\Estación-2\Audicom`).
   - Desde cualquier terminal Audicom o el **AutoDJ Editor** puede accederse a las diferentes terminales de aire.
 
+<Note>
+  **Personalización avanzada de la base de datos musical**
+
+  Es importante mencionar que algunos aspectos de la base de datos pueden modificarse **ANTES **de comenzar la carga de archivos de audio en el sistema. Editando el archivo de configuración audicom.ini es posible redefinir algunos campos de la base de datos como las definiciones de CATEGORÍA, TEMPO, MODO; entre otras. Para más detalles consultar vía e-mail a [soporteaudicom@solidyne.ar](mailto:soporteaudicom@solidyne.ar) 
+</Note>
+
 #### Fuentes de noticias
+
+![A Config Fuentede Noticias Jp](/images/audicom/aConfig_FuentedeNoticias.jpg)
 
 - **Ubicación del texto**: Carpeta especial del _File Manager_ que admite archivos de texto.
 - **Ubicación Teleprompter**: Función discontinuada. No modificar.
 
 ### Preferencias
+
+![A Config Preferencias Jp](/images/audicom/aConfig_Preferencias.jpg)
 
 #### Identificación del computador
 
@@ -81,6 +94,8 @@ El panel también**puede abrirse después de la instalación**  desde el grupo d
 
 #### Opciones del CyberPlay
 
+![A Config Preferencias Cyber Play Jp](/images/audicom/aConfig_Preferencias-CyberPlay.jpg)
+
 - **Pausas en cada bloque en vivo**: Inserta un punto de detención antes de cada bloque.
 - **Cargar la programación de mañana a las**: Hora en la cual se cargan pautas del día siguiente.
 - **Tamaño automático de comentarios**: Ajusta altura de ventana si no hay espacio suficiente.
@@ -89,6 +104,8 @@ El panel también**puede abrirse después de la instalación**  desde el grupo d
 - **Tiempo de CUE en final de archivos**: Define la duración de escucha en modo _CUE END_.
 
 #### Botoneras de acceso rápido
+
+![A Config Live Assist Jp](/images/audicom/aConfig_LiveAssist.jpg)
 
 - **Cantidad de columnas**: Número de columnas en botonera Live Assist (predeterminado 4).
 - **Cantidad de filas**: Número de filas en función de la altura del monitor (predeterminado 12).
@@ -117,6 +134,8 @@ El panel también**puede abrirse después de la instalación**  desde el grupo d
 
 ### Enlaces de audio
 
+![A Config Enlaces Audio Jp](/images/audicom/aConfig_enlaces_audio.jpg)
+
 - **Enlace IP iLink (Audicom ↔ Audicom)**:
   - **Tiempo de espera ante un corte**: Tiempo antes de iniciar programación de emergencia si se pierde conexión con cabecera.\\
 
@@ -131,9 +150,20 @@ El panel también**puede abrirse después de la instalación**  desde el grupo d
 - Los títulos pueden mostrarse con colores distintos según el tiempo desde la última emisión.
 - Los rangos y colores se definen en este panel.
 
+  ![A Config Colores Jp](/images/audicom/aConfig_colores.jpg)
+
 ### HTH (Hora actual y datos del tiempo)
 
 - Permite generar anuncios de hora y datos meteorológicos a partir de archivos pregrabados definidos en “Locuciones personalizadas”.
+
+  ![A Config Hth Jp](/images/audicom/aConfig_hth.jpg)
+
+  <img
+    src="/images/audicom/aConfig_ubicacion_voces.jpg"
+    alt="A Config Ubicacion Voces Jp"
+    title="A Config Ubicacion Voces Jp"
+    style={{ width:"100%" }}
+  />
 
 #### Beep de hora en punto
 
@@ -141,10 +171,16 @@ El panel también**puede abrirse después de la instalación**  desde el grupo d
 - Para salir al aire debe estar activo el botón **Hora en punto (O’clock)** en la zona Meteor.
 - Se reproduce por la salida asignada a **Live Assist 2**.
 
+  ![A Config Beep Hora Jp](/images/audicom/aConfig_beep_hora.jpg)
+
 ### Fonts
 
 - Define las características del texto en **CyberPlay, File Manager, Playlist Manager y Live Assist**.
 
+![A Config FONTS Jp](/images/audicom/aConfig_FONTS.jpg)
+
 ### Video
+
+![A Config Video Pn](/images/audicom/aConfigVideo.png)
 
 - **FPS del monitor Multiview**: opción discontinuada.
