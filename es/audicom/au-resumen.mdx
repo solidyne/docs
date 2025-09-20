@@ -2,3 +2,96 @@
 title: "Audicom"
 description: "Software de gestión de medios y automatización para emisoras"
 ---
+
+<Info>
+  Este es el manual de uso de **AUDICOM-14**. Se recomienda leerlo con atención y consultarlo en caso de duda.  Para asistencia técnica: [**soporteaudicom@solidyne.ar**](mailto:soporteaudicom@solidyne.ar)
+</Info>
+
+## Introducción
+
+**AUDICOM-14 Black Edition** es una suite de herramientas orientada a la gestión y automatización de emisoras de radio y medios audiovisuales.\
+Su diseño modular y flexible le permite adaptarse tanto a flujos de trabajo de emisoras pequeñas como a grandes medios con múltiples estudios.
+
+## Modelos
+
+### Audicom Black
+
+Versión destinada a emisoras de radio tradicionales (sin contenidos de video).
+
+- Integra el módulo de pautado de comerciales **Admicom**, que administra órdenes publicitarias, certificación de pautas y auditoría de menciones en vivo (PNT).
+- Permite la administración centralizada de cadenas de emisoras, enlazando estaciones remotas vía streaming y sincronizando materiales a través de Internet.
+- Publica contenidos en múltiples plataformas: transmisión al aire, streaming web, podcasts y enlaces de streaming con metadatos inteligentes.
+- Los metadatos permiten enlazar emisoras remotas por Internet o VPN, generando tandas diferenciadas e identificaciones locales.
+
+### Audicom Black Video
+
+Diseñado para medios audiovisuales y transmisiones por Internet.
+
+- Incorpora **Audicom Video Composer**, un switcher de video con generador gráfico integrado para el manejo de cámaras en estudio.
+- Soporta reproducción de video HD en todos sus módulos, combinando fuentes como cámaras, Skype, Zoom y gráficos.
+- El módulo **AutoVJ** automatiza la dirección de cámaras en función de las señales de micrófono que recibe desde la consola de puesta al aire, liberando al operador de esa tarea.
+- **AV Composer** codifica y genera el streaming de audio y video, transmitiéndolo a servidores para su difusión en distintas plataformas.
+- Esta tecnología permite a los medios expandirse y competir en el entorno digital sin necesidad de grandes cambios en estructura o costos.
+
+## Gestión integrada
+
+Audicom no es solo un playout de audio y video, sino que abarca todos los niveles de producción y operación de los estudios de una emisora.
+
+### Gestión al aire de audio y video
+
+**Vista cronológica 00-24 hs**
+
+- La pantalla principal de puesta al aire (**CyberPlay**) organiza la programación diaria de 00 a 24 horas.
+- Integra comerciales, segmentos en vivo, contenidos automatizados, noticias, material pregrabado, enlaces remotos y eventos especiales.
+- Puede utilizarse también en modo “tandero” para manejar únicamente la pauta comercial.
+
+**Contenidos en vivo**
+
+- El operador dispone de 4 listas auxiliares de reproducción (**Playlist Manager**).
+- Cuenta con dos botoneras de acceso rápido (**Live Assist**), un grabador de un toque (**Instant Rec**) y un motor de búsqueda sobre base de datos SQL.
+- Dispone además de canales de monitoreo dedicados.
+- Todos los módulos gestionan audio y video, excepto **iRec**, que solo graba audio.
+
+**Programación automática**
+
+- **AutoDJ** automatiza sesiones musicales en tiempo real mediante IA.
+- **BotNews** genera y lee al aire noticias de último momento utilizando voces creadas con IA generativa.
+- Se integran además contenidos remotos (streaming y comunicaciones), material pregrabado y tandas comerciales.
+- El operador puede crear bloques de musicalización asistida en cualquier momento y tiene control sobre lo generado por AutoDJ.
+
+**Dirección automática de cámaras**
+
+- Para emisoras con transmisión en video desde estudios, **Audicom Video Composer** automatiza los cortes de cámara en función de las señales de la consola.
+- Puede funcionar sin operador de cámaras o bien permitir la dirección manual, como en un estudio de TV.
+
+## Producción
+
+### Gestión comercial
+
+- El módulo de Tráfico y Facturación **Admicom** administra la base de datos de clientes y agencias, contratos, distribución de tandas comerciales y generación de la pauta diaria.
+- Permite auditar spots emitidos, generar reportes para clientes y exportar planillas para sistemas externos de gestión.
+- En emisoras con menor carga comercial, es posible gestionar la pauta manualmente mediante listas de reproducción.
+
+### Gestión integral de contenidos
+
+- La programación diaria de 00 a 24 hs se organiza en **CyberPlay Editor**, que contempla todos los eventos: bloques comerciales, menciones PNT, bloques en vivo, noticias de último momento o contenidos remotos.
+- El sistema funciona de manera continua, incluso sin asistencia presencial.
+
+### Programación musical automatizada
+
+- **AutoDJ** ofrece un sistema avanzado de programación musical basado en IA.
+- A diferencia de los sistemas que generan listados aleatorios, analiza las características de cada tema para seleccionar música en tiempo real, ajustándose a bloques comerciales, noticias u otros eventos prioritarios.
+- Permite definir segmentos horarios con criterios de musicalización personalizados.
+- La música puede presentarse con locuciones pregrabadas que se insertan en intro, outro o puntos intermedios de las canciones.
+- En versiones futuras, será posible generar estas locuciones directamente con voces de IA sin necesidad de grabaciones previas.
+
+## Expansiones
+
+### Web Tools
+
+Paquete de servicios por suscripción anual que amplía las prestaciones del sistema:
+
+- **Asistencia al locutor en vivo**: acceso vía web a un escritorio con información del título al aire, próximos eventos, PNTs, fuentes RSS y chat interno entre puestos Audicom.
+- **Noticias y voces IA**: habilita el uso de librerías de voces y fuentes RSS para que **BotNews** genere y lea segmentos informativos.
+- **Datos meteorológicos**: se actualizan automáticamente para anuncios de audio o sobreimpresos en video en AV Composer.
+- **Soporte técnico remoto**: habilitado para todas las instancias de Audicom.

@@ -1,0 +1,140 @@
+---
+title: "Instalación"
+description: "Instalación de Audicom en sus distintas versiones"
+---
+
+## Instalación
+
+### Configuración de la computadora y placas de audio
+
+#### Configuración general: Recomendaciones
+
+Para un correcto funcionamiento de **AUDICOM**, verifique que las configuraciones de la computadora y Windows cumplan los siguientes requisitos:
+
+ 1. **Sistema Operativo**: Windows 10/11
+ 2. **Antivirus**: Configúrelo para excluir las carpetas `C:/Audicom` y `C:/Admicom` en todas las terminales de la red. Asegúrese de que las excepciones se respeten al 100 %.
+ 3. Se recomienda **desactivar el APM (Administrador Avanzado de Energía)** desde el BIOS de la computadora. Al hacerlo, Windows puede solicitar la reinstalación de algunos componentes.
+ 4. Si el equipo tiene placa de sonido integrada, puede usarse como canal de monitoreo (CUE).\\
+
+    <Danger>
+      No utilice audio “on board” para la salida de programa. Estas placas no cumplen los requisitos mínimos de calidad para sistemas profesionales con AUDICOM.
+    </Danger>
+ 5. No se recomienda el uso de **salvapantallas**. Configure, en su lugar, el apagado automático del monitor cuando AUDICOM trabaje en modo automático.
+ 6. **No active tareas programadas de mantenimiento** de Windows.
+ 7. Configure el tamaño de fuente en **100 %**. Usar 125 % o 150 % puede afectar la visualización de ventanas de AUDICOM.
+ 8. Desactive los **sonidos de Windows**, ya que podrían salir al aire accidentalmente.
+ 9. Configure la **Barra de tareas** para ocultarse automáticamente, optimizando el uso de la pantalla para AUDICOM.
+10. Evite teclados con teclas de apagado o “sleep”. Si el operador las presiona por error, puede apagar la máquina de aire.
+    - Desactive estas funciones desde la administración avanzada de energía (APM) en el BIOS.
+    - El procedimiento varía según el modelo de computadora y sistema operativo, y en algunos casos no es posible desactivarlas.
+
+#### Placas de sonido soportadas
+
+- Muchas consolas de radiodifusión actuales incluyen canales con conexión **USB**, eliminando la necesidad de placas de audio adicionales.
+- AUDICOM funciona con interfaces que soporten controladores **WASAPI, DirectSound o MME**.
+- En el caso de interfaces multicanal, asegúrese de que el hardware sea compatible con **WDM o WASAPI**.\\
+
+  <Note>
+    ASIO no es soportado por AUDICOM.
+  </Note>
+
+Dependiendo del fabricante, algunas interfaces multicanal solo funcionan en modo ASIO para audio multicanal, pero en modo Windows pueden operar como un único dispositivo estéreo de entrada/salida.
+
+- **Placas incorporadas**: Pueden usarse como canal de reproducción para monitoreo (CUE). No se recomienda su uso para salida al aire.
+- **Sistemas AoIP**: AUDICOM soporta dispositivos virtualizados en sistemas de Audio sobre IP como **Dante** y **LiveWire**.
+
+### Llave de licencias
+
+- AUDICOM requiere una **llave de licencias USB** para funcionar.
+- Por seguridad, se recomienda fijarla al chasis con un precinto o cable, o colocarla en el interior del gabinete.
+- La llave habilita los distintos módulos según la configuración del sistema.
+
+### Instalación _Full_
+
+El instalador en modo **Full** instala todos los módulos y accesorios de AUDICOM.\
+Se recomienda para la primera instalación, cuando no existen instalaciones previas.
+
+Incluye:
+
+- **Seguridad**: Controladores para la llave de licencias.
+- **AUDICOM**: todos los módulos principales (Aire, Media Manager, File Manager, InfoMusic Producción, CyberPlay Editor, AutoDJ Editor, herramientas para Internet —requiere suscripción anual—, archivos de ayuda, entre otros).
+- **Admicom**: generación automática de tandas y facturación (versiones Multicast y HD).
+- **Media**: contenidos de demostración (música, videoclips, efectos, cortes promocionales) —opcional—.
+- **Programación**: demostraciones —opcional—.
+- **AutoRec 202**: grabación 24 h en MP3. Comercializado por separado, pero habilitado en 2 canales mediante licencia AUDICOM.
+- **Reaper**: editor de audio (software de terceros desarrollado por Cocko’s).
+
+Una vez finalizada la instalación:
+
+- Se solicitará **reiniciar el equipo**.
+- Se creará un grupo de programas AUDICOM en el menú **Inicio** de Windows.
+- Todos los archivos se instalarán en la carpeta `C:\AUDICOM`, compartida con acceso total para el usuario actual.
+
+**Estructura de carpetas:**
+
+- `AIR`: registros de emisión al aire.
+- `AUDIO`: carpetas de audio utilizadas por AUDICOM.\\
+
+  <Warning>
+    Todos los archivos de audio deben estar organizados dentro de esta carpeta.
+  </Warning>
+- `DB`: base de datos musical.
+- `LA-ICONS`: íconos para el módulo Live Assist.
+- `LOG`: pautas de programación comercial.
+- `PGM`: pautas de programación musical.
+- `METEOR`: archivos de hora y datos meteorológicos.
+- `TEXT`: archivos de texto del sistema.
+
+<Note>
+  Esta estructura es fija. Su ubicación está definida en el archivo `Audicom.ini`, que debe modificarse al instalar AUDICOM en red.\
+  Ver: **Audicom en Red \> Configuración del Software**.
+</Note>
+
+#### AStart (Configuración de los servicios Web Tools)
+
+Durante la instalación se deben completar los datos de usuario y terminal. Es fundamental registrar esta información con cuidado y conservarla.
+
+<img
+  src="/images/audicom/au-aStart-1.jpg"
+  alt="Au A Start 1 Jp"
+  title="Au A Start 1 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+<img
+  src="/images/audicom/au-aSStart-2.jpg"
+  alt="Au A S Start 2 Jp"
+  title="Au A S Start 2 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+<img
+  src="/images/audicom/au-aStart-3.jpg"
+  alt="Au A Start 3 Jp"
+  title="Au A Start 3 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+- Un **multimedio** agrupa varias emisoras, cada una con sus usuarios WebTools.
+  - Ejemplo: “Radio Nacional” puede contener “AM Nacional”, “Nacional Rock”, “Nacional Folklórica”.
+- El **nombre del multimedio** será requerido para acceder al Panel de Administración de WebTools, donde se crean usuarios para cada emisora.
+- En emisoras autónomas, el alias (con sufijo **-admin**) será el nombre predeterminado para administración.
+- Estos datos se confirman mediante un correo enviado por el servidor **AUDICOM WebTools**, validando la creación de la cuenta.
+
+<img
+  src="/images/audicom/au-aStart-4.jpg"
+  alt="Au A Start 4 Jp"
+  title="Au A Start 4 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+<img
+  src="/images/audicom/au-aStart-5.jpg"
+  alt="Au A Start 5 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
