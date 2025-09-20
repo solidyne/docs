@@ -317,7 +317,7 @@
                       "es/minimixer/minimixer-op-controles",
                       "es/minimixer/minimixer-op-puesta_al_aire",
                       "es/minimixer/minimixer-op-bluetooth",
-                      "es/minimixer/minimixer-op-lineas",
+                      "es/minimixer/minimixer-op-linea",
                       "es/minimixer/minimixer-op-grabacion"                      
                     ]
                   },
@@ -637,17 +637,6 @@
                   "es/extensiones/studioBox-descripcion",
                   "es/extensiones/studioBox-conexiones",
                   "es/extensiones/studioBox-operacion"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Discontinuados",
-            "groups": [
-              {
-                "group": "Discontinuados",
-                  "pages": [
-                  "es/discontinuados"
                 ]
               }
             ]
