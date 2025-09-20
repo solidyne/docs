@@ -21,6 +21,30 @@
         "language": "es",
         "tabs": [
           {
+            "tab": "Indice",
+            "pages": [
+              "es/indice/discontinued"
+            ],
+            "groups": [
+              {
+                "group": "Documentación accesoria",
+                "pages": [
+                  "es/indice/disassembling",
+                  "es/indice/audiovisual",
+                  "es/indice/tech-docs"
+                ]
+              },
+              {
+                "group": "Soporte Técnico",
+                "pages": [
+                  "es/indice/downloads",
+                  "es/indice/schematics",
+                  "es/indice/contact"
+                ]
+              }
+            ]
+          },
+          {
             "tab": "Consolas UNIDEX",
             "anchors": [
               {
