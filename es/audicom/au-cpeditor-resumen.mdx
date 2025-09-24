@@ -1,0 +1,102 @@
+---
+title: "CyberPlay Editor"
+description: "Programacion de contenidos."
+---
+
+## Programación manual
+
+Las **tandas de avisos publicitarios** y los **programas** se crean por separado y se guardan en archivos distintos:
+
+- **.LOG** para tandas comerciales.
+- **.PGM** para bloques de programa.
+
+Las tandas comerciales pueden crearse **manual**mente con **CyberPlay Editor** (este capítulo) o **automáticamente** con el **módulo de Tráfico de ADMICOM** (ver capítulo **ADMICOM**).\
+Los **bloques de programa** se definen en **CyberPlay Editor** en diferentes segmentos horarios: programas en vivo, **AutoDJ**, playlists prearmadas, bloques satelitales, etc.
+
+Tandas y bloques se crean mediante **instrucciones propias de AUDICOM**. No es necesario memorizarlas: hay **asistentes** (p. ej., _Magic Programming_) y herramientas de edición visual que agilizan el pautado.
+
+---
+
+## Descripción general
+
+- Ingrese al escritorio AUDICOM con el usuario **programacion** y abra **CyberPlay Editor**.
+- Requiere permiso en su **perfil de usuario** (ver **Niveles de Acceso**).
+
+AUDICOM compone la pauta a partir de:
+
+- **.LOG** (tandas publicitarias)
+- **.PGM** (bloques musicales, en vivo, satelitales, etc.)
+
+Los **comandos** de tandas y programas y los **nombres de archivos** (promocionales, temas, spots, etc.) se editan en las ventanas **LOG** y **PGM** de CyberPlay Editor.\
+Muchos comandos pueden gestionarse **gráficamente** desde **CyberPlay-Test** o con asistentes como **Magic Programming**.
+
+<Tip>
+  Piense en la **grilla clásica** de la radio: programación por día **00:00 a 24:00**. Eso es lo que definirá en CyberPlay Editor.
+</Tip>
+
+
+Las instrucciones comienzan con **/ (slash)** salvo que se indique lo contrario.\
+Cada instrucción va en **una sola línea**.
+
+- El **primer bloque** debe **comenzar 00:00** y el **último terminar 24:00**.
+- El uso de **mayúsculas/minúsculas** es indistinto.
+- Si hay un horario **sin bloque**, CyberPlay mostrará un bloque **gris** con **EMPTY**.
+
+<Warning>
+  Si la pauta no comienza a **00:00** o no cierra a **24:00**, el sistema **no identificará** el cambio de día y la programación resultará **errónea**.
+</Warning>
+
+La **ventana de estado** reporta: errores de sintaxis, bloques vacíos, superposiciones horarias, **formatos AutoDJ** inexistentes y otros problemas.
+
+---
+
+## Archivos LOG y PGM – Pauta de programación
+
+Las fechas de emisión de **tandas (.LOG)** y **programas (.PGM)** pueden definirse así:
+
+- Para una **fecha específica** (ej.: 1998-12-25).
+- Para un **día de la semana de un mes** (ej.: todos los **lunes de abril**).
+- Para un **día fijo de la semana** (ej.: **todos los lunes** del año).
+- Para un **mes** (ej.: **agosto**).
+- Para **todo un año**.
+
+### Orden de prioridad al cargar PGM/LOG
+
+Cuando **CyberPlay** arma la programación, carga **PGM** y **LOG** según este orden:
+
+1. `YYYYMMDD.LOG` / `YYYYMMDD.PGM`\
+   Año-Mes-Día (ej.: `20040501`) para el **1 de mayo de 2004**.
+2. `WED11.LOG` / `WED11.PGM`\
+   Todos los **miércoles de noviembre**.
+3. `SUN00.LOG` / `SUN00.PGM`\
+   **Cualquier domingo** del año (el `00` indica “todos”).
+4. `MONTH04.LOG` / `MONTH04.PGM`\
+   **Todo abril**.
+5. `MONTH00.LOG` / `MONTH00.PGM`\
+   **Todos los días del año**.
+
+<Note>
+  Abreviaturas: **SUN** Domingo, **MON** Lunes, **TUE** Martes, **WED** Miércoles, **THU** Jueves, **FRI** Viernes, **SAT** Sábado, **MONTH** Mes.
+</Note>
+
+---
+
+## Carga de la programación en Aire
+
+- El módulo de **Aire** carga cada día la programación del **día siguiente** usando **LOG/PGM** y el **orden de prioridad** anterior.
+  - Ej.: el **14/08/2005** puede tomar `980814.LOG` (tandas del día) y `MONTH08.PGM` (bloques del mes de agosto).
+- La carga **automática** ocurre a las **18:00** (configurable en **Panel de Configuración**).
+
+Si se modifican:
+
+- **Archivos del día en curso**
+- **Archivos del día siguiente** luego de la hora de recarga automática
+
+<Warning>
+  El responsable de programación **debe avisar** al **operador de Aire** para que ejecute la **recarga manual** de archivos (ver **Reload** en la sección de CyberPlay).
+</Warning>
+
+<Danger>
+  Realice **backups periódicos** de `C:\Audicom\LOG` y `C:\Audicom\PGM` (ubicaciones por defecto).\
+  Si se borran accidentalmente, se **pierde la programación**.
+</Danger>

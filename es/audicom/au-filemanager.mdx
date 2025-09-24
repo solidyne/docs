@@ -1,0 +1,140 @@
+---
+title: "File Manager"
+description: "Administrador de archivos. Descripción. "
+keywords: ["File Manager","Media Manager","gestión de medios"]
+tags: "Software,Audicom"
+---
+
+## Introducción
+
+<Note>
+  El módulo **File Manager** fue discontinuado a partir de **AUDICOM 14 (Audicom Black)** y reemplazado por **Media Manager**.\
+  Aunque sigue incluido en la distribución para evitar un cambio brusco, recomendamos migrar a **Media Manager**, ya que File Manager será eliminado en futuras versiones.
+</Note>
+
+Se accede desde el menú **“+ herramientas”** de la barra superior del escritorio principal.\
+El módulo está organizado en pestañas que muestran los archivos de audio disponibles en cada terminal (discos locales o en red).
+
+**Características:**
+
+- Usa una **estructura de carpetas fija** (las carpetas externas serán ignoradas).
+- Los archivos se clasifican por tipo (Música, Spots, Comerciales, Efectos, etc.).
+- Los títulos pueden:
+  - reproducirse al aire,
+  - insertarse en la pauta de programación,
+  - o cargarse en las botoneras de acceso instantáneo Live Assist.
+
+<Note>
+  En cada terminal se visualizan solo las carpetas declaradas en esa terminal (**audioDrives**).\
+  Además, el Administrador puede restringir el acceso de cada usuario a determinadas carpetas desde **Niveles de Acceso**.
+</Note>
+
+---
+
+## Descripción general
+
+La ventana principal muestra los archivos de la carpeta seleccionada con los siguientes campos:\
+**Intérprete – Título – Duración – Formato – Ubicación**.
+
+- Para ver otras carpetas: clic en las pestañas superiores (Tabs).
+- Si existen más de 18 carpetas: use los botones de desplazamiento `<-- -->`.
+- Tamaño y posición de la ventana son configurables.
+- El orden de columnas puede cambiarse con un clic sobre el encabezado.
+- También es posible realizar **búsqueda rápida por letra**:
+  - Ejemplo: Si presiona “A”, el cursor se posiciona sobre el primer archivo que comience con “A” en la columna activa.
+
+---
+
+## Colores de los títulos (última salida al aire)
+
+Los archivos musicales registrados en la base de datos aparecen en distintos colores según el tiempo desde su última emisión:
+
+- **Rojo**: \< 4 horas
+- **Naranja**: 4–12 horas
+- **Verde**: 12–24 horas
+- **Negro**: \> 24 horas
+
+Los márgenes de tiempo se configuran en el **Panel de Configuración**.
+
+---
+
+## Colores de las carpetas
+
+Cada carpeta puede asignarse a un color para facilitar su identificación.
+
+- Los filtros permiten mostrar solo carpetas de un color específico.
+- Los colores son únicos y válidos para todas las terminales de la red.
+- Se definen al crear la carpeta o desde la ventana **INFO**.
+
+<Tip>
+  Recomendamos crear una tabla de referencia visible en el estudio.\
+  Ejemplo: rojo = música, verde = avisos, amarillo = efectos.
+</Tip>
+
+---
+
+## Botones principales
+
+### Update (Actualizar)
+
+`[Teclado Numérico /]`
+
+- Actualiza la carpeta seleccionada para mostrar nuevos archivos.
+- Por defecto, File Manager guarda en memoria el listado al abrir una carpeta; los cambios no aparecen hasta presionar **Update**.
+- La ventana indica fecha y hora de la última actualización.
+
+### Insert
+
+`[Enter]`
+
+- Inserta el título seleccionado en la ventana **CyberPlay** (encima del cursor amarillo).
+- También admite **Drag & Drop**.
+- Es posible insertar múltiples títulos seleccionados de una vez.
+
+### Cue Start / Stop
+
+`[Delete]`
+
+- Reproduce el título seleccionado en **previo**.
+- Doble clic = reproducción en previo.
+- Segundo clic o Delete = reproducir los 5 segundos finales (Cue End).
+- Click derecho = detener previo.
+
+<Warning>
+  Si el sistema trabaja con **una única placa de sonido**, no hay canal de monitoreo.\
+  En ese caso, el doble clic reproduce el archivo directamente **al aire**.
+</Warning>
+
+### Play
+
+- Reproduce el título seleccionado por la salida de **Programa** (igual a CyberPlay).
+- Si CyberPlay ya está en reproducción, el archivo se mezcla al aire.
+- Incluye vúmetros, contador de tiempo y barra de posición.
+
+### Stop / Pausa
+
+- **Una vez**: detiene y queda en pausa (puede reanudar).
+- **Doble clic**: detiene completamente y pasa al siguiente archivo.
+
+### Audio Edit
+
+- Se accede desde menú contextual o ventana expandida.
+- Abre el archivo en el editor asociado según la extensión (.wav, .mp3, .txt).
+- Por defecto, los .wav se abren en **FX5**.
+- Si se instala otro editor, Windows puede asignarlo automáticamente.
+
+### Syncro
+
+Permite **sincronizar carpetas** entre dos ubicaciones (izquierda/derecha).
+
+Opciones:
+
+- **Sincronizar izquierda**: copia desde derecha → izquierda.
+- **Sincronizar derecha**: copia desde izquierda → derecha.
+- **Ambas**: ambas carpetas terminan con idéntico contenido.
+
+---
+
+<Info>
+  Aunque File Manager sigue siendo funcional, recomendamos migrar progresivamente al **Media Manager**, que reemplaza todas estas funciones con un diseño más moderno y escalable.
+</Info>
