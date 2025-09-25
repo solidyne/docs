@@ -14,21 +14,22 @@ Un bloque en vivo define un tramo de programación en el que la conducción y lo
 
 **Parámetros de la instrucción**
 
-- /HH:MM-HH:MM
+`/HH:MM-HH:MM`
 
-  → Hora de **inicio** y **fin** del bloque (formato 24 h).
-- '/Live'
+→ Hora de **inicio** y **fin** del bloque (formato 24 h).
 
-  → Indica que el bloque es **en vivo** (manual).
-- [Título del bloque]
+`/Live`
 
-  → **Opcional**; permite nombrar el bloque (hasta **32 caracteres**). Los corchetes no se escriben en el archivo: solo indican que el título es opcional.
+→ Indica que el bloque es **en vivo** (manual).
+
+`[Título del bloque]`
+
+→ **Opcional**; permite nombrar el bloque (hasta **32 caracteres**). Los corchetes no se escriben en el archivo: solo indican que el título es opcional.
 
 **Ejemplo**\\
 
 `/Block /17:00-20:00 /Live ENTREVISTAS AL ATARDECER`
 
-\
 Bloque en vivo que comienza a las **17:00** y finaliza a las **20:00**. Durante ese lapso, AUDICOM gestionará únicamente las tandas; el resto del contenido (música, artísticos, micrófono) lo maneja el operador en tiempo real.
 
 ---
@@ -331,7 +332,7 @@ Se ejecuta “Título-1” y, 5 s después, entra el sponsor con mezcla al 25%
 
 ### Bloques con Sponsors
 
-El comando `/Sponsor` permite asociar archivos de audio (sponsors, separadores, cortinas, etc.) al comienzo, desarrollo o finalización de un bloque de programación.  
+El comando `/Sponsor` permite asociar archivos de audio (sponsors, separadores, cortinas, etc.) al comienzo, desarrollo o finalización de un bloque de programación.\
 Siempre debe colocarse **después** de la línea de comando del bloque.
 
 **Sintaxis general:**
@@ -339,28 +340,25 @@ Siempre debe colocarse **después** de la línea de comando del bloque.
 
 #### Parámetros principales
 
-- **+Open="Título"**  
+- **\+Open="Título"**\
   Archivo reproducido al inicio del bloque (por ejemplo, una presentación del programa).
-
-- **+Mid="Título"**  
+- **\+Mid="Título"**\
   Archivo reproducido después de cada tanda del bloque (p. ej., “continuamos con nuestro programa…”).
-
-- **+Close="Título"**  
+- **\+Close="Título"**\
   Archivo reproducido al final del bloque (cierre del programa).
 
-#### Símbolos (+ y *)
+#### Símbolos (+ y \*)
 
-- En bloques **AutoDj**:  
-  - `+` → el archivo Sponsor se superpone (“pisa”) la música en reproducción.  
-  - `*` → el Sponsor se reproduce y luego continúa la música, sin superposición.  
-
-- En bloques **Live**, **SatFill** y **SatSlave**:  
+- En bloques **AutoDj**:
+  - `+` → el archivo Sponsor se superpone (“pisa”) la música en reproducción.
+  - `*` → el Sponsor se reproduce y luego continúa la música, sin superposición.
+- En bloques **Live**, **SatFill** y **SatSlave**:\
   No hay diferencia entre `+` y `*`; ambos son interpretados como `*`.
 
 #### Parámetros opcionales
 
-- `/SS`: tiempo en segundos desde el inicio del tema musical hasta que entra el Sponsor.  
-- `/KK`: nivel relativo de mezcla entre Sponsor y música. Valores posibles: `10`, `25`, `50`, `100`.  
+- `/SS`: tiempo en segundos desde el inicio del tema musical hasta que entra el Sponsor.
+- `/KK`: nivel relativo de mezcla entre Sponsor y música. Valores posibles: `10`, `25`, `50`, `100`.
 
 Si no se especifican `/SS/KK`, el Sponsor comienza al inicio del tema y la mezcla respeta el nivel configurado en el control **MIX**.
 
@@ -370,12 +368,11 @@ Si no se especifican `/SS/KK`, el Sponsor comienza al inicio del tema y la mezcl
 
 **Ejemplo 1 — Bloque en vivo con sponsors en apertura, tanda y cierre**
 
-
 /Block /22:00-24:00 /Live
-/Sponsor EJEMPLO *Open="Título-1" *Mid="Título-2" *Close="Título-3"
+/Sponsor EJEMPLO \*Open="Título-1" \*Mid="Título-2" \*Close="Título-3"
 
-- Al inicio del bloque (22:00) se reproduce **Título-1**.  
-- Al finalizar cada tanda dentro del bloque se emite **Título-2**.  
+- Al inicio del bloque (22:00) se reproduce **Título-1**.
+- Al finalizar cada tanda dentro del bloque se emite **Título-2**.
 - Como cierre, al terminar el bloque, se reproduce **Título-3**.
 
 ---
@@ -383,15 +380,15 @@ Si no se especifican `/SS/KK`, el Sponsor comienza al inicio del tema y la mezcl
 **Ejemplo 2 — Bloque AutoDj con sponsors y mezcla controlada**
 
 /Block /03:00-07:00 /AutoDj="Clásica" Música sin Tiempo
-/Sponsor SEPARADORES *Open="Título-1" +Mid="Título-2"/03/50 *Close="Título-3"
+/Sponsor SEPARADORES \*Open="Título-1" +Mid="Título-2"/03/50 \*Close="Título-3"
 
-- **Título-1** abre el bloque, seguido de la música de AutoDj.  
-- En cada tanda, se reproduce un tema musical y, **3 segundos** después, entra **Título-2**, superpuesto al tema con una relación de mezcla del **50%**.  
+- **Título-1** abre el bloque, seguido de la música de AutoDj.
+- En cada tanda, se reproduce un tema musical y, **3 segundos** después, entra **Título-2**, superpuesto al tema con una relación de mezcla del **50%**.
 - Al finalizar el último tema del bloque, se emite **Título-3** como cierre.
 
 ---
 
 <Note>
-En los bloques AutoDj, el Sponsor de cierre (`Close`) se ejecuta al comienzo del **último tema del bloque**.  
-En los bloques **Live** y **Satelitales**, el cierre se produce **al finalizar la última tanda**.
+  En los bloques AutoDj, el Sponsor de cierre (`Close`) se ejecuta al comienzo del **último tema del bloque**.\
+  En los bloques **Live** y **Satelitales**, el cierre se produce **al finalizar la última tanda**.
 </Note>
