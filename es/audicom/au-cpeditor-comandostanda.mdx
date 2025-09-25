@@ -1,0 +1,289 @@
+---
+title: "Comandos para tandas comerciales"
+description: "Tandas comerciales y comandos relacionados"
+---
+
+A continuación se describen los principales comandos utilizados en la **programación de tandas publicitarias** en AUDICOM. \
+Muchos de estos comandos se pueden usar también en bloques especiales de programación (ver [Comandos para bloques de contenidos](/es/audicom/au-cpeditor-comandosbloques))
+
+Mantenga la sintaxis exactamente como se indica y valide siempre en la previsualización de **CyberPlay-Test**.
+
+---
+
+## Tanda de avisos publicitarios
+
+`/Tanda [Nombre] /HH:MM XYZ`
+
+- **/HH:MM** → Hora de salida (hh:mm).
+- **XYZ** → Variables de flexibilidad (opcionales):
+  - **X = S (Start)** → la hora corresponde al **inicio** de la tanda.
+  - **X = E (End)** → la hora corresponde a la **finalización** de la tanda.
+  - **Y = C (Clock)** → tanda a la hora exacta (error promedio ± 6 s).
+  - **Y = F (Flexible)** → tanda con flexibilidad.
+  - **Z** → minutos de tolerancia (entero).
+
+<Note>
+  Si no se declaran variables, se asume **SF5** (inicio flexible con 5 minutos de tolerancia).\
+  Las variables **YZ** no se aplican si no se especifica **X** (S/E).
+</Note>
+
+<Info>
+  En tandas generadas por **Admicom** puede verse un asterisco al final, por ejemplo `*23/36`, que indica **duración** y **importe** pautado.\
+  Si una tanda de **comienzo exacto** empieza con una instrucción **Meteor**, el **error indicado** puede ser mayor al real porque los tiempos Meteor son **estimados**.
+</Info>
+
+**Ejemplos (válidos):**
+
+/Tanda /08:15 SF5
+/Tanda Programa Nuestros Hijos /22:30 SC
+/Tanda /17:00 EC
+
+---
+
+## Random
+
+`/RND,carpeta,n*prefijo`
+
+- Selecciona **n** archivos aleatorios de la **carpeta** (ubicada en `\Audicom\Audio`).
+- El **prefijo** (opcional) limita la selección a nombres que **empiecen** con esos caracteres.
+
+**Ejemplo:**
+
+/Tanda /08:15 SF5
+Aviso-1
+Aviso-2
+/RND,Spots,3\*XF
+Aviso-3
+
+<Warning>
+  **Random** no usa la Base de Datos ni controla la **antigüedad** de pasadas. La probabilidad de repetición disminuye con **más archivos** en la carpeta.\
+  Los títulos generados por **Random** **no** se mezclan por **fundido** (sin crossfade).
+</Warning>
+
+<Note>
+  `/RND` puede utilizarse también dentro de **ExactTime**.
+</Note>
+
+---
+
+## Hora
+
+`/Time /n`
+
+Locución de la **hora actual**.
+
+- `/1` voz masculina
+- `/2` voz femenina
+- `/3` mixto
+
+El parámetro es **opcional**. Si no se indica, se usa la voz marcada en el **botón** de hora del escritorio de aire (y lo **actualiza**).
+
+**Ejemplo:**
+
+/Tanda /08:15 SF5
+Aviso-1
+/Time
+Aviso-2
+
+<Info>
+  Los tiempos **Meteor** en la pauta son **estimados**. La locución **/Time** se arma **al aire** a hora exacta; la estimación **no** afecta su disparo real.
+</Info>
+
+---
+
+## Temperatura
+
+`/Temp`
+
+Locución de **temperatura actual**.
+
+**Ejemplo:**
+
+/Tanda /20:30
+/Temp
+Aviso-1
+Aviso-2
+
+---
+
+## Humedad
+
+`/Hum`
+
+Locución de **humedad actual**.
+
+**Ejemplo:**
+
+/Tanda /07:00
+Aviso-1
+/Hum
+Aviso-2
+
+---
+
+## Presión
+
+`/Pres`
+
+Locución de **presión atmosférica**.
+
+**Ejemplo:**
+
+/Tanda TANDA-X /17:00 EF3
+Aviso-1
+Aviso-2
+/Temp
+/Pres
+
+---
+
+## Lluvia caída
+
+`/Rain`
+
+Locución de **lluvia caída**.
+
+<Note>
+  Si la lluvia es **cero**, el informe **no** sale al aire (se saltea).
+</Note>
+
+**Ejemplo:**
+
+/Tanda /10:45 SF8
+Aviso-1
+Aviso-2
+/Temp
+/Pres
+/Rain
+
+---
+
+## Informe meteorológico completo
+
+`/Meteor`
+
+Secuencia: **hora → temperatura → humedad → presión → lluvia** (si \> 0).
+
+**Ejemplo:**
+
+/Tanda /00:00
+Aviso-1
+Aviso-2
+/Meteor
+Aviso-3
+
+---
+
+## Comentarios
+
+`; Comentario`
+
+Toda línea que comienza con `;` se interpreta como **comentario** y aparece en **CyberPlay**.
+
+**Ejemplo:**
+
+/Tanda /09:15 SF1
+Aviso-1
+;Este es un ejemplo de un comentario.
+;Puede haber varias líneas de comentarios.
+Aviso-2
+/Time
+Aviso-3
+
+---
+
+## Pausas
+
+`/Pause`
+
+Inserta una **pausa**. El sistema queda en **STOP** hasta que el operador presiona **Play**.
+
+**Ejemplo:**
+
+/Tanda Ejemplo comando Pause /13:30 ES3
+Aviso-1
+Aviso-2
+/Temp
+/Hum
+; El programa queda en Stop hasta Play
+/Pause
+Aviso-3
+
+---
+
+## Pausas con texto
+
+`/Text [Nombre] /SSS`\
+`(líneas de texto…)`\
+`(línea en blanco)`
+
+- Inserta **pausa** con **texto** mostrado en la ventana de **comentarios**.
+- `/SSS` es el **tiempo estimado** (segundos) de lectura (referencial).
+- Debe finalizar con **una línea en blanco**.
+
+**Ejemplo:**
+
+/Tanda Tanda Demo /08:30 SC
+Aviso-1
+Aviso-2
+Aviso-3
+; A continuación se ejecuta Text
+/Text /30
+Si el texto es tipeado directamente en la ventana,
+presione Enter para saltos de línea cuando llegue al ancho.
+Si pega desde el portapapeles, puede quedar en una sola línea.
+
+Aviso-4
+Aviso-5
+Aviso-6
+
+---
+
+## Eventos encadenados
+
+`@Archivo1`\
+`@Archivo2`\
+`@Archivo3`\
+`@Archivo4`
+
+- Encadena hasta **4 títulos**.
+- Si **falta** cualquiera de ellos, **ninguno** sale al aire.
+
+**Ejemplo (micro de noticias):**
+
+/Tanda /12:00 SF5
+/Time
+Aviso-1
+Aviso-2
+@Presentacion Noticias
+@Noticias de las 12 Hs
+@Cierre Noticias
+; Si no existe "Noticias de las 12 Hs",
+; tampoco salen "Presentación" ni "Cierre".
+Aviso-3
+Aviso-4
+
+<Info>
+  Aplicación típica: **noticias automáticas** con presentación, cuerpo y cierre grabados.
+</Info>
+
+---
+
+## Regional
+
+`/Regional`
+
+- Envía una **señal de control** a estaciones remotas en modo **SatSlave** (GPIO).
+- Durante la tanda: **LPT Pin 4 = 1** (conmutan a satélite).
+- Al finalizar: **LPT Pin 4 = 0** (retoman programación local).
+
+**Ejemplo:**
+
+/Tanda Tanda Demo /08:30 SC
+Aviso-1
+Aviso-2
+Aviso-3
+/Regional
+Aviso-4
+Aviso-5
+Aviso-6
