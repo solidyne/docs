@@ -1,0 +1,122 @@
+---
+title: "AutoDj  Editor: descripción"
+description: "Campos y valores del AutoDJ Editor"
+---
+
+## Parámetros del AutoDJ
+
+El módulo **AutoDj Editor** permite configurar una serie de parámetros que determinan cómo se seleccionan los títulos musicales y elementos adicionales dentro de un bloque automático. Estos parámetros permiten un control detallado sobre estilos, intérpretes, autores, géneros, tempo, modo, y también la inserción de elementos como **promocionales, presentaciones o comandos Meteor**. A continuación, se describen los principales:
+
+---
+
+### Estilos (Styles)
+
+Permite definir los estilos musicales que AutoDj utilizará dentro de un formato.
+
+- Un formato puede incluir **un solo estilo, varios o todos los disponibles**.
+- Los estilos se **rotan automáticamente**, sin predominio de uno sobre otro, salvo cuando un estilo tenga pocos títulos disponibles (en ese caso, aparecerá con menor frecuencia).
+- AutoDj **NUNCA seleccionará** un título que pertenezca a un estilo no contemplado en este campo.
+- El orden en la ventana no influye en la salida al aire, excepto si se activa el **Modo Inducido (Induced Mode)**.
+
+En **Modo Inducido**, el programador puede establecer cuántos títulos deben emitirse por cada estilo en una secuencia.\
+Por ejemplo: _Instrumental-Instrumental-Jazz-Jazz-Jazz-Blues_ → AutoDj programará dos títulos instrumentales, tres de jazz y uno de blues, reiniciando la secuencia al finalizar.
+
+La lista puede reordenarse manualmente mediante Drag & Drop.
+
+---
+
+### Intérpretes (Performers)
+
+Define los intérpretes a incluir en la programación.
+
+- La opción **“Repetir cada”** evita que dos títulos del mismo intérprete se emitan en forma consecutiva.
+- El número configurado indica cuántos títulos de **intérpretes distintos** deben aparecer entre dos del mismo intérprete.
+- Este valor actúa como una regla flexible: AutoDj intentará cumplirlo, aunque no siempre sea posible en bases de datos muy limitadas.
+
+---
+
+### Autores (Authors)
+
+Permite restringir la selección de títulos según los **autores** especificados.\
+El sistema solo elegirá títulos cuyo autor coincida con los definidos en el formato.
+
+---
+
+### Incluir Top Hits (Include Top Hits)
+
+Permite que los títulos marcados como **Top Hit** salgan al aire con una periodicidad definida.
+
+Ejemplo: Si se selecciona **Top 40 cada 1 hora**, AutoDj procurará insertar un título marcado como Top 40 aproximadamente cada 60 minutos de programación.
+
+---
+
+### Géneros (Genders)
+
+Permite establecer restricciones de repetición según el **género** (solista, dúo, orquesta, etc.).
+
+- Se define un número mínimo de títulos de **géneros diferentes** que deben sonar entre dos títulos del mismo género.
+- Así se evita, por ejemplo, que se emitan de forma consecutiva varios temas de solistas.
+
+---
+
+### Tempo / Modo
+
+Las matrices de **Tempo** (velocidad) y **Modo** (sonoridad) permiten configurar compatibilidades entre títulos consecutivos.
+
+- Se puede indicar que **no se sucedan** dos temas con determinadas combinaciones de tempo o modo.
+- Ejemplo: si en la fila _Suave_ se marca la columna _Muy Fuerte_, AutoDj evitará programar un tema _Muy Fuerte_ después de uno _Suave_.
+
+> **Regla de predicción:**\
+> Para el **primer título de un bloque**, al no haber un tema previo, cualquier título puede ser elegido, salvo que su fila entera esté bloqueada en la matriz. En ese caso, perderá prioridad.
+
+**Notas importantes:**
+
+- Si un título no tiene definido tempo/modo en la base de datos, se considera válido con cualquier otro.
+- Estas reglas son de **baja prioridad** frente a las de Estilo o Intérprete.
+- La efectividad depende de la cantidad de títulos disponibles: a mayor base de datos, mayor eficiencia en la aplicación de las matrices.
+
+Ejemplo práctico:
+
+- Si se desea que **no salgan temas fuertes o muy fuertes**, se deben marcar tanto las **columnas** como las **filas** correspondientes a esos valores, asegurando que nunca aparezcan ni al inicio ni en la continuidad.
+
+---
+
+### Promocionales (Promos)
+
+Permite que AutoDj inserte **promocionales** de la radio entre los temas musicales.
+
+- La opción **Every Titles** define cada cuántos temas se insertará un promo.
+- El campo **Promos** permite filtrar por un prefijo en el nombre.\
+  Ejemplo: Si `Promo=Verano` y `Every Titles=3`, AutoDj insertará un promo cuyo título comience con “Verano” cada tres canciones (si existen en la base de datos).
+
+**Uso de categorías en InfoMusic:**
+
+- **PROMOS:** válidos para cualquier momento del día. Se usan también para ajustes de tiempo.
+- **PROMOPGM:** específicos de ciertos programas. Solo se insertan cuando se ejecuta un formato que los contemple.
+- **Separadores:** no se insertan automáticamente, quedan fuera del control del AutoDj.
+
+<Note>
+  En el archivo `Autodj.ini`, la línea `promoPgmClass=PromoPgm` puede modificarse para que AutoDj use la categoría **Promo** en lugar de **PromoPgm** en la inserción periódica.
+</Note>
+
+---
+
+### Presentaciones (Partners)
+
+Habilita el uso de **archivos asociados (Partners)** que contienen **presentaciones previas** a cada tema.
+
+- Si está activada, cada canción sonará con su presentación asociada.
+- Si está desactivada, los títulos se reproducen sin presentaciones, aunque los archivos existan en el sistema.
+
+---
+
+### Insert Meteor
+
+Permite insertar automáticamente comandos **Meteor** (hora, temperatura, humedad, etc.) cada cierta cantidad de títulos.
+
+- La opción **VOICE** define la voz que se usará:
+  - `1 = Masculina`
+  - `2 = Femenina`
+  - `3 = Extra`
+
+De esta manera, AutoDj puede integrar automáticamente información meteorológica entre la música, manteniendo la continuidad del programa.

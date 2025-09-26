@@ -1,0 +1,55 @@
+---
+title: "AutoDj Editor"
+description: "Plantillas de reglas para programación musical automatizada"
+---
+
+### Descripción general
+
+Crear una programación musical automática con AUDICOM es un proceso simple, basado en la definición de bloques automáticos (**AutoDj**) con un **formato** previamente establecido. Estos bloques se pautan desde **CyberPlay Editor** y son ejecutados en el aire por el motor **AutoDj**, un sistema de **selección musical avanzada** que trabaja sobre la base de datos de música y las hojas de formato de estilo.
+
+<Tip>
+  En el capítulo [**programación manual**](/es/audicom/au-cpeditor-comandosmusica) se explica cómo pautar los bloques AutoDj. 
+</Tip>
+
+---
+
+### Para acceder al módulo **AutoDj Editor**:
+
+1. Abrir el menú **Inicio de Windows**.
+2. Ir al grupo **Programas → AUDICOM**.
+3. Hacer clic en **AutoDj Editor**.
+
+Se abrirá la pantalla principal del módulo.
+
+---
+
+### Función del módulo
+
+El **AutoDj Editor** permite **crear y editar FORMATOS** musicales que serán usados por el motor AutoDj.\
+Cada formato contiene los **parámetros de selección** que AUDICOM utiliza para elegir títulos: estilo, género, intérprete, entre otros.
+
+Cuando un bloque AutoDj está activo, el sistema:
+
+- **Genera la programación automáticamente** siguiendo el formato establecido.
+- **Revisa los títulos disponibles** en la base de datos.
+- **Asigna un puntaje** a cada título según el grado de coincidencia con los parámetros definidos.
+
+---
+
+### Lógica de selección
+
+- El orden de revisión comienza por los títulos que **más tiempo llevan sin emitirse**.
+- Cada título recibe un **puntaje entre 0 y 100**.
+- Si un título supera los **90 puntos**, se inserta directamente en la programación de **CyberPlay**.
+- Este valor de 90 es la **tolerancia de AutoDj** y puede ajustarse en el archivo `AUTODJ.INI`, modificando la variable **Tolerancia**.
+- Si ningún título alcanza el puntaje mínimo requerido, se selecciona el que obtenga **la mejor calificación relativa**.
+
+---
+
+### Ejemplo de ponderación
+
+Cada parámetro tiene un **peso diferente** en la puntuación:
+
+- El **Estilo** de un título puede otorgar más puntos que el **Modo**, ya que se considera más relevante para mantener la coherencia de la programación musical.
+
+De esta manera, AutoDj garantiza que la música programada siga un criterio definido por la emisora, respetando tanto la **rotación temporal** como las **características estilísticas** que se quieran destacar en la programación.

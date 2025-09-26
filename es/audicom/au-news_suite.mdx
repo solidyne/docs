@@ -1,0 +1,121 @@
+---
+title: "News Suite"
+description: "Editor de textos para contenidos leídos"
+---
+
+AUDICOM ofrece diversas facilidades para el manejo de noticias en forma automática.\
+Las noticias pueden ser **programadas** o **instantáneas**, y se integran tanto a la programación habitual como a transmisiones en vivo o automáticas.
+
+---
+
+## Introducción
+
+Existen dos grandes modos de operación:
+
+- **Noticias programadas**\
+  Se dividen en:
+  - **De ocurrencia segura**: noticias previstas con antelación, ya incluidas en la programación. Ejemplo: comandos `/METEOR` (hora, temperatura, etc.).\
+    Se insertan mediante **Inclusión Especial (ExactTime)** y deben definirse directamente en la programación (`.PGM`).
+  - **De ocurrencia incierta**: noticias que se emitirán a una hora determinada, pero cuya ocurrencia no puede garantizarse.\
+    Para este caso se usan **ítems encadenados** dentro de un **ExactTime** (apertura, promo, noticia, cierre). La secuencia se emite solo si **todos** los archivos existen.\
+    Los archivos usan **metanombres** para ser válidos únicamente en la fecha actual.
+- **Noticias instantáneas**\
+  Diseñadas para radios con programación automática (AutoDJ, i-Link, satélite).\
+  El sistema **NEWS** corre en segundo plano, monitorea carpetas y emite al aire las noticias que arriban (por e-mail, FTP o telefonía), para luego continuar con la programación habitual.
+
+Las noticias pueden provenir de **AUDICOM WebTools (mail-link)** o de aplicaciones de **Voice Mailing**.\
+El sistema **News Suite** permite además trabajar con **archivos de texto** asociados a **archivos de audio**, facilitando la edición colaborativa en red.
+
+---
+
+## Módulo News Suite
+
+Se accede desde el **escritorio de periodismo** mediante el botón **News Suite**.\
+Es un **editor de texto** orientado a la redacción de noticias e informes, compatible con archivos `.txt`.
+
+- Permite trabajar con múltiples ventanas y usar **Cortar, Copiar y Pegar** como en cualquier procesador de texto.
+- El texto se ajusta a la **línea verde** de la ventana: esa es la medida visible en la **Pantalla de Aire** y en el **Teleprompter**.
+
+### Estimación de tiempo de lectura
+
+News Suite calcula la duración estimada del texto en base a una velocidad de lectura configurable en **caracteres por segundo (c.p.s.)**.
+
+- Valor por defecto: **15 c.p.s.**
+- Se modifica desde: **Edit \> Set Speed**.
+- Para conocer la duración, pulse **F9**: el sistema muestra cantidad de palabras, letras y duración estimada.
+
+### Archivos de texto con audio asociado
+
+Se pueden vincular hasta **dos audios** con un texto:
+
+1. Redacte y guarde el archivo de texto.
+2. Abra **File Manager** y expanda la segunda ventana.
+3. En una ventana muestre textos y en la otra los audios.
+4. Arrastre el audio al archivo de texto: quedará asociado.
+
+El archivo pasa a nombrarse:
+
+`@@Noticia@Audio-1@Audio-2.txt`
+
+- La **doble @** indica que tiene audios asociados.
+- El formato del `.txt` no se altera, solo su nombre.
+- Audios recomendados: **WAV (PCM)** para facilitar edición.
+
+### Ubicación de archivos de texto
+
+La estructura de carpetas se define en `Audicom.ini`:
+
+[Directories]
+TextDir=\\AIRE\\C\\Audicom\\TEXT
+
+- Solo se consideran carpetas dentro de `TEXT`.
+- Se muestran en **violeta** en File Manager.
+- Para crear una carpeta, use un **tab vacío**.
+- Desde File Manager es posible abrir un texto directamente en News Suite (doble clic o botón **Edit**).
+
+---
+
+## BotNews (Noticias de último momento)
+
+El módulo **NEWS** es una aplicación que corre en **segundo plano**.
+
+- Verifica periódicamente carpetas definidas por el usuario.
+- Inserta la noticia en la programación **sin requerir cambios manuales**.
+- Si el Módulo de Aire está activo, coloca la noticia **después del título en curso**.
+- Si no está activo, NEWS se abre en primer plano para la reproducción manual.
+
+### Configuración principal
+
+- **Directorio origen de noticias**: carpeta donde llegan los audios (WAV/MP3). Pueden recibirse vía **correo**, **FTP** o **Voice Mail**.
+- **Apertura**: archivo reproducido antes de la noticia (opcional).
+- **Filtro de Noticia**: permite restringir por prefijo (ej.: “N\_” → solo archivos que comiencen así).
+- **Cierre**: archivo reproducido después de la noticia (opcional).
+- **Directorio origen 2**: permite definir una **segunda carpeta** con su propio esquema de apertura/cierre.
+- **Safe Time**: retardo en minutos antes de emitir una noticia recién llegada, para permitir confirmación o regrabación. Usualmente 10–12 minutos.
+- **Botón Start**: activa la espera en segundo plano. Inserta una **pausa** en la programación y al finalizar el tema en curso emite la noticia.
+- **Botón Play**: útil cuando el Módulo de Aire no está abierto; permite reproducir manualmente.
+- **Botón Cancel**: cierra NEWS (no debe usarse mientras emite).
+
+Una vez emitidos, los archivos se mueven a:\
+`\Audicom\Audio\OldNews`
+
+y se renombran con el formato:\
+`Dia_Hora_Minuto.wav`
+
+<Note>
+  El módulo NEWS soporta **Autorun**: si está activado en **AConfig**, se inicia automáticamente si no hay interacción durante 1 minuto.\
+  NEWS **no fue diseñado** para usarse mientras el Módulo de Aire está en un bloque **LIVE**.
+</Note>
+
+---
+
+## Funcionamiento interno
+
+- NEWS revisa dos carpetas configurables en busca de noticias.
+- Diferencia **apertura**, **noticia** y **cierre** (todos opcionales, pero deben estar en la misma carpeta).
+- Archivos válidos: **WAV** (1–2 canales, 8/16 bits, 11–44 kHz) o **MP3**.
+- Si la carpeta es en red, debe haber **permiso de escritura** para mover noticias a `OldNews` y evitar repeticiones.
+- NEWS evita interrumpir tandas: solo se inserta si faltan más de **25 segundos** para terminar el título en curso.
+- El tiempo de confirmación por defecto es de **30 segundos**, modificable desde la pantalla principal.
+
+---
