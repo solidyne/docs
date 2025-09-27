@@ -3,119 +3,93 @@ title: "News Suite"
 description: "Editor de textos para contenidos leídos"
 ---
 
-AUDICOM ofrece diversas facilidades para el manejo de noticias en forma automática.\
-Las noticias pueden ser **programadas** o **instantáneas**, y se integran tanto a la programación habitual como a transmisiones en vivo o automáticas.
-
----
-
 ## Introducción
 
-Existen dos grandes modos de operación:
+AUDICOM ofrece diferentes formas de **programar noticias** para que sean emitidas de forma automática, ya sea que se generen en la radio o que lleguen remotamente por **correo electrónico** o **teléfono**. Existen dos modos principales: **noticias programadas** y **noticias instantáneas**.
 
-- **Noticias programadas**\
-  Se dividen en:
-  - **De ocurrencia segura**: noticias previstas con antelación, ya incluidas en la programación. Ejemplo: comandos `/METEOR` (hora, temperatura, etc.).\
-    Se insertan mediante **Inclusión Especial (ExactTime)** y deben definirse directamente en la programación (`.PGM`).
-  - **De ocurrencia incierta**: noticias que se emitirán a una hora determinada, pero cuya ocurrencia no puede garantizarse.\
-    Para este caso se usan **ítems encadenados** dentro de un **ExactTime** (apertura, promo, noticia, cierre). La secuencia se emite solo si **todos** los archivos existen.\
-    Los archivos usan **metanombres** para ser válidos únicamente en la fecha actual.
-- **Noticias instantáneas**\
-  Diseñadas para radios con programación automática (AutoDJ, i-Link, satélite).\
-  El sistema **NEWS** corre en segundo plano, monitorea carpetas y emite al aire las noticias que arriban (por e-mail, FTP o telefonía), para luego continuar con la programación habitual.
+### Noticias programadas
 
-Las noticias pueden provenir de **AUDICOM WebTools (mail-link)** o de aplicaciones de **Voice Mailing**.\
-El sistema **News Suite** permite además trabajar con **archivos de texto** asociados a **archivos de audio**, facilitando la edición colaborativa en red.
+Las noticias programadas se dividen en dos categorías:
 
----
+- **De ocurrencia segura**\
+  Son aquellas cuya existencia está confirmada y se incluyen directamente en la programación.\
+  Ejemplo: comandos `/METEOR` (hora, temperatura, etc.).\
+  En este caso, se recomienda definirlas directamente en la programación de la radio (`.PGM`) o mediante una **Inclusión Especial (ExactTime)**.
+- **De ocurrencia incierta**\
+  Son noticias que deberían emitirse en un horario definido, pero cuya llegada no está asegurada.\
+  Se implementan mediante **ítems encadenados** dentro de una Inclusión Especial (ExactTime).\
+  Estos permiten definir hasta **4 archivos consecutivos** (apertura, promocional, noticia y cierre).
+  - La secuencia **solo se emite** si todos los archivos existen.
+  - Si falta uno, se cancela toda la secuencia.
+  - El archivo de la noticia usa un **metanombre**, que cambia cada día, garantizando su validez solo para esa fecha.
 
-## Módulo News Suite
+Para más detalles, consulte: **“Inclusión Especial” en “Pautar Contenidos → Programación Manual → Crear bloques de contenido”**.
 
-Se accede desde el **escritorio de periodismo** mediante el botón **News Suite**.\
-Es un **editor de texto** orientado a la redacción de noticias e informes, compatible con archivos `.txt`.
+Las noticias programadas pueden provenir de:
 
-- Permite trabajar con múltiples ventanas y usar **Cortar, Copiar y Pegar** como en cualquier procesador de texto.
-- El texto se ajusta a la **línea verde** de la ventana: esa es la medida visible en la **Pantalla de Aire** y en el **Teleprompter**.
+- **AUDICOM WebTools** (mail-link).
+- **Software de Voice Mailing** (telefónico).
 
-### Estimación de tiempo de lectura
+### Noticias instantáneas
 
-News Suite calcula la duración estimada del texto en base a una velocidad de lectura configurable en **caracteres por segundo (c.p.s.)**.
+Diseñadas para radios que transmiten en **programación automática** (`AutoDJ`, `i-Link`, satélite), sin necesidad de cambiar manualmente la programación.
 
-- Valor por defecto: **15 c.p.s.**
-- Se modifica desde: **Edit \> Set Speed**.
-- Para conocer la duración, pulse **F9**: el sistema muestra cantidad de palabras, letras y duración estimada.
+- El sistema **NEWS** es una aplicación que corre en segundo plano y verifica periódicamente la llegada de noticias.
+- Si arriba una noticia (por e-mail o teléfono, según la implementación), el sistema la envía al aire y luego retoma la programación habitual.
 
-### Archivos de texto con audio asociado
+## News Suite
 
-Se pueden vincular hasta **dos audios** con un texto:
+El módulo **News Suite** está pensado para operación en **vivo**.
+
+- Permite trabajar con **archivos de texto** asociados a **archivos de audio**.
+- Puede insertar noticias en la **Pantalla de Aire**, ya sean **solo texto** o **texto + audio**.
+- En redes, múltiples periodistas pueden redactar sus noticias en diferentes terminales y enviarlas al jefe de noticias, quien las organiza y reenvía a la terminal del operador.
+- El operador asocia cada texto a los **archivos de audio** correspondientes para su emisión.
+
+<img
+  src="/images/audicom/au-news_suite.png"
+  alt="Au News Suite Pn"
+  title="Au News Suite Pn"
+  className="mx-auto"
+  style={{ width:"59%" }}
+/>
+
+Accedemos al módulo **News Suite** desde el menú **“+”** en la **barra de herramientas**.\
+Se trata de un **editor de texto** destinado a la redacción de **noticias** e **informes periodísticos**.
+
+- Trabaja con archivos estándar en formato **TXT**.
+- Su operación es similar a la de otros procesadores básicos (ej.: Bloc de Notas de Windows).
+- Permite trabajar con **múltiples archivos abiertos a la vez**.
+
+La **línea verde** que aparece a la derecha indica el **ancho al que será ajustado el texto** en la **ventana de comentarios** de la Pantalla de Aire y en la interfaz **WebTools**.\
+Para visualizar el texto tal como lo verá el locutor, se debe ajustar manualmente la ventana hasta la línea verde.
+
+**Estimación de Tiempo de Lectura**
+
+News Suite incorpora una herramienta que permite **estimar el tiempo de lectura** de un texto.
+
+- El cálculo se basa en una variable de **velocidad de lectura** expresada en **caracteres por segundo (c.p.s.)**.
+- El valor por defecto es **15 c.p.s.** (valor promedio).
+- Puede modificarse desde el menú: **Edit \> Set Speed**.
+
+Para conocer la duración estimada de un texto:
+
+- Pulse el **ícono del reloj** o la tecla **F9**.
+- Aparecerá un cuadro con:
+  - Cantidad total de palabras.
+  - Total de caracteres.
+  - Tiempo estimado de lectura (minutos y segundos).
+
+
+### Archivos de Texto con Audio Asociado
+
+Cada archivo de texto puede asociarse a uno o dos **archivos de audio**.
+
+**Procedimiento:**
 
 1. Redacte y guarde el archivo de texto.
-2. Abra **File Manager** y expanda la segunda ventana.
-3. En una ventana muestre textos y en la otra los audios.
-4. Arrastre el audio al archivo de texto: quedará asociado.
+2. Abra el **File Manager** y expanda la segunda ventana (flecha roja en el ángulo inferior derecho).
+3. Visualice en una ventana los **archivos de texto** y en la otra los **archivos de audio** a asociar.
+4. Seleccione el archivo de texto y arrastre el archivo de audio hacia él.
 
-El archivo pasa a nombrarse:
-
-`@@Noticia@Audio-1@Audio-2.txt`
-
-- La **doble @** indica que tiene audios asociados.
-- El formato del `.txt` no se altera, solo su nombre.
-- Audios recomendados: **WAV (PCM)** para facilitar edición.
-
-### Ubicación de archivos de texto
-
-La estructura de carpetas se define en `Audicom.ini`:
-
-[Directories]
-TextDir=\\AIRE\\C\\Audicom\\TEXT
-
-- Solo se consideran carpetas dentro de `TEXT`.
-- Se muestran en **violeta** en File Manager.
-- Para crear una carpeta, use un **tab vacío**.
-- Desde File Manager es posible abrir un texto directamente en News Suite (doble clic o botón **Edit**).
-
----
-
-## BotNews (Noticias de último momento)
-
-El módulo **NEWS** es una aplicación que corre en **segundo plano**.
-
-- Verifica periódicamente carpetas definidas por el usuario.
-- Inserta la noticia en la programación **sin requerir cambios manuales**.
-- Si el Módulo de Aire está activo, coloca la noticia **después del título en curso**.
-- Si no está activo, NEWS se abre en primer plano para la reproducción manual.
-
-### Configuración principal
-
-- **Directorio origen de noticias**: carpeta donde llegan los audios (WAV/MP3). Pueden recibirse vía **correo**, **FTP** o **Voice Mail**.
-- **Apertura**: archivo reproducido antes de la noticia (opcional).
-- **Filtro de Noticia**: permite restringir por prefijo (ej.: “N\_” → solo archivos que comiencen así).
-- **Cierre**: archivo reproducido después de la noticia (opcional).
-- **Directorio origen 2**: permite definir una **segunda carpeta** con su propio esquema de apertura/cierre.
-- **Safe Time**: retardo en minutos antes de emitir una noticia recién llegada, para permitir confirmación o regrabación. Usualmente 10–12 minutos.
-- **Botón Start**: activa la espera en segundo plano. Inserta una **pausa** en la programación y al finalizar el tema en curso emite la noticia.
-- **Botón Play**: útil cuando el Módulo de Aire no está abierto; permite reproducir manualmente.
-- **Botón Cancel**: cierra NEWS (no debe usarse mientras emite).
-
-Una vez emitidos, los archivos se mueven a:\
-`\Audicom\Audio\OldNews`
-
-y se renombran con el formato:\
-`Dia_Hora_Minuto.wav`
-
-<Note>
-  El módulo NEWS soporta **Autorun**: si está activado en **AConfig**, se inicia automáticamente si no hay interacción durante 1 minuto.\
-  NEWS **no fue diseñado** para usarse mientras el Módulo de Aire está en un bloque **LIVE**.
-</Note>
-
----
-
-## Funcionamiento interno
-
-- NEWS revisa dos carpetas configurables en busca de noticias.
-- Diferencia **apertura**, **noticia** y **cierre** (todos opcionales, pero deben estar en la misma carpeta).
-- Archivos válidos: **WAV** (1–2 canales, 8/16 bits, 11–44 kHz) o **MP3**.
-- Si la carpeta es en red, debe haber **permiso de escritura** para mover noticias a `OldNews` y evitar repeticiones.
-- NEWS evita interrumpir tandas: solo se inserta si faltan más de **25 segundos** para terminar el título en curso.
-- El tiempo de confirmación por defecto es de **30 segundos**, modificable desde la pantalla principal.
-
----
+El archivo de texto pasará a renombrarse de este modo:
