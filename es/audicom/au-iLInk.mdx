@@ -1,0 +1,91 @@
+---
+title: "iLink"
+description: "Retransmisión en estaciones repetidoras"
+---
+
+Con una apariencia muy similar a **CyberPlay**, el **iLink** recrea la **lista única y continua de aire**. iLink es un **control de visualización**: cuando AUDICOM opera en modo iLink, **toda** la programación se repite desde la **cabecera**, **excepto**:
+
+- los **bloques de tandas comerciales** (bloques verdes), y
+- la **artística** de la emisora cabecera, que se **reemplaza automáticamente** por sus equivalentes **locales**.
+
+La información mostrada por iLink corresponde a los **archivos programados en el CyberPlay de la cabecera**. Con esa data el control sabe **cuándo** pasar de **Remoto** a **Local**, reproducir el audio local y **volver** exactamente cuando continúa el programa en la cabecera.
+
+Además de enlazarse por Internet a una cabecera remota, iLink permite **reemplazar tandas de duración variable con precisión**, rellenando con **temas musicales**, **promos** o **arpegios** hasta alcanzar la **duración exacta** requerida.
+
+**Artística local:** iLink reemplaza la artística de cabecera por piezas **locales** de **igual duración**, en **tiempo real**, sin que el oyente lo perciba.
+
+**Resguardo (foldback):** si la conexión a Internet se corta, iLink dispara un **bloque de música** con un **formato musical predefinido** por horario. Las **tandas comerciales regionales** se siguen emitiendo en sus **horarios**. Al restablecer la conexión, iLink **espera** a que termine el tema en curso y **retoma** el enlace.
+
+**Requisitos en repetidora:**
+
+- AUDICOM **Multicast** instalado.
+- Acceso a Internet de **banda ancha**.
+
+---
+
+## Canal de reproducción iLink
+
+La reproducción del streaming iLink usa el **dispositivo de reproducción predeterminado** de Windows.\
+Para cambiarlo, ajuste el **dispositivo predeterminado** en la **configuración de sonido de Windows**.
+
+---
+
+## Programación del evento iLink en CyberPlay Editor
+
+En la repetidora, programe un **evento iLink** dentro de la **programación (PGM)** con el **horario** del enlace a la cabecera. Puede crear **un único bloque iLink** para todo el día o **varios bloques** en distintos horarios.
+
+El bloque iLink es similar a los bloques **Live**, **AutoDj** o **Satelitales**. Se crea con el asistente **Magic Programming**, opción **“Bloque iLink”**.
+
+### STEPS
+
+1. **Crear bloque iLink (Asistente)**\
+   Abra **Magic Programming** y elija **“Bloque iLink”**.
+2. **Nombre del programa (dirección de enlace)**\
+   Ingrese la **dirección de acceso al streaming** generada por iRDS en la cabecera (campo **iLink address**).
+   - Ejemplo por **IP y puerto**: `iLink://190.247.72.170:8081`
+   - Ejemplo por **servidor** (si iRDS publica en un servidor): `iLink://encoder.iviplanet.com/AUDICOM`
+
+   **Desde / Hasta:** defina el **inicio** y **fin** del bloque iLink.
+3. **Paso intermedio no utilizado**\
+   Pulse **Continuar**.
+4. **Formato musical (relleno y contingencia)**\
+   Seleccione el **formato AutoDj** que iLink usará cuando:\
+   a) La **tanda cabecera dura más** que la **tanda regional** → se ajusta con **canciones**.\
+   b) Se **pierde Internet** → iLink programa **música** y mantiene **tandas regionales** hasta reconectar.
+
+   **Recomendación:** el formato debe incluir **canciones de duraciones diversas** para facilitar la **compensación de tiempos**. Evite **Modo Inducido** si restringe demasiado la selección (p. ej., una secuencia rígida **Hits-80 → Hits-90 → Hits-00** limita las coincidencias de duración).
+5. **Paso final no utilizado**\
+   Pulse **Continuar** y **guarde**.
+
+**Ejemplo de instrucción de bloque iLink (en el PGM):**\
+`/Block /00:00-24:00 /ILink="AutoDj Jazz" iLink://190.247.72.170:8080`
+
+Puede crear **múltiples bloques iLink** con **distintos formatos de relleno** según el contenido de cada programa de cabecera.
+
+---
+
+## Evento iLink con protocolo xLink (sin retardo)
+
+Cuando se requiere **repetidora sin retardo**, la cabecera transmite **solo metadata** con **xLink**, y el **audio** llega a la repetidora por una **conexión física** (analógica o digital) a su **entrada de línea**. La repetidora recibe **metadata vía LAN** y reemplaza **avisos** y **artística** localmente.
+
+En el **PGM** de la repetidora, programe una instrucción iLink en modo **xLink**:
+
+`/Block /08:00-14:00 /ILink="formato de autodj" xLink://url/placaDeAudio/entrada`
+
+**Parámetros:**
+
+- **URL** → IP del servidor con iRDS/xLink activo. Ej.: `192.168.0.50` (puerto por defecto `8088`).
+- **Placa de audio** → nombre del **dispositivo de entrada**. Ej.: `Realtek High Definition Audio`.
+- **Entrada** → la **fuente** del dispositivo. Ej.: `Entrada de línea`.
+
+<Note>
+  También puede definir dispositivo y entrada de xLink en el archivo de configuración para no repetirlos en cada bloque.\
+  Sección `\[Hardware]` con:
+  \
+  `xLinkDeviceIn=HD Audio device`
+  \
+  `xLinkLineInName=Line In`
+</Note>
+
+**Instrucción completa — ejemplo:**\
+`/Block /08:00-14:00 /ILink="Latinos" xLink://192.168.0.50/Realtek High Definition Audio/Entrada de línea`

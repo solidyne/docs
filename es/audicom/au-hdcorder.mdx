@@ -1,0 +1,151 @@
+---
+title: "HD Corder"
+description: "Grabador de audio"
+---
+
+## Generalidades
+
+Accedemos a este módulo desde el menú **Inicio de Windows**:
+
+- Seleccione el grupo **Programas** → **AUDICOM** → **HD Corder**.
+
+Este módulo permite **grabar archivos rápidamente**. Una vez grabado, el archivo puede editarse para:
+
+- remover silencios,
+- eliminar una porción,
+- duplicar fragmentos,
+- concatenar archivos y guardarlos como uno solo.
+
+Cuando el archivo está listo, puede ingresarse en la **Base de Datos** a través de **InfoMusic**.
+
+HD Corder se divide en dos secciones: **Grabación** y **Edición**, que se describen a continuación.
+
+---
+
+## Sección Editor
+
+### Controles
+
+- **Stop**:
+  - Si se presiona durante la reproducción, detiene la señal y deja el cursor en el punto de inicio.
+  - Si se presiona cuando no hay reproducción, devuelve el cursor al inicio del archivo.
+
+### Ventana de edición
+
+Muestra gráficamente las señales de audio.
+
+- Para desplazarse: use la **barra de desplazamiento** inferior.
+- Para seleccionar un área: arrastre con botón izquierdo.
+- Para modificar el final de la selección: use el botón derecho.
+
+### Zoom In / Out
+
+Permite modificar la escala de tiempo en pantalla:
+
+- **Zoom In (+)**: muestra mayor detalle (tiempo reducido).
+- **Zoom Out (-)**: muestra la totalidad del archivo (tiempo ampliado).
+
+### Save (Guardar)
+
+Al pulsar **Save**, aparecen las opciones:
+
+- **Save**: guarda sobre el archivo actual.
+- **Save As**: guarda con un nuevo nombre.
+- **Save Selected**: guarda solo la selección como un archivo independiente.
+
+### Herramientas
+
+- **Undo**: deshace la última acción.
+- **InfoMusic**: abre InfoMusic para ingresar el título en la Base de Datos.
+- **Mark Intro**: define el tiempo de introducción (Intro) en el punto del cursor, que se marca con una flecha roja.
+  - Para borrar el Intro, lleve el cursor al inicio y seleccione **Set Intro**.
+  - El valor queda guardado automáticamente en la Base de Datos.
+
+### Cortar
+
+Corta el área seleccionada. El punto de corte se indica con un cambio de color.\
+Puede revertirse con **Undo**.
+
+### Cómo grabar un archivo
+
+<Steps>
+  <Step title="Iniciar grabación">
+    Presione **Rec**. Ingrese nombre, carpeta destino y modo de grabación.
+  </Step>
+  <Step title="Ajustar niveles">
+    Regule la señal para que los picos alcancen **\+4**.
+  </Step>
+  <Step title="Finalizar grabación">
+    Presione **Edit** para pasar el archivo a la sección Edición, donde aparecerá la forma de onda.
+  </Step>
+  <Step title="Registrar en Base de Datos">
+    Si es música, ingréselo en **InfoMusic** para que pueda usarse en **AutoDJ**.
+  </Step>
+  <Step title="Usar Auto Start / Auto Stop">
+    Tras pulsar **Rec**, active ambos botones y luego **Play**.\
+    El sistema quedará en **Standby** y comenzará a grabar al superar el nivel de disparo.
+  </Step>
+  <Step title="Solo Auto Stop">
+    Active durante la grabación.\
+    La grabación finaliza automáticamente al desaparecer la señal.
+  </Step>
+</Steps>
+
+### Cómo cargar archivos
+
+Arrastre archivos desde **File Manager** (_Drag and Drop_).
+
+- Si está marcada la opción **INSERT**, el archivo se inserta en la posición del cursor, mostrado con un color distinto.
+
+---
+
+## Sección Grabación
+
+### Controles de reproducción
+
+Controlan la escucha durante la grabación.
+
+### Rec (Grabación)
+
+Al presionar, se abre un cuadro de diálogo para configurar:
+
+- **Título**: hasta 32 caracteres.
+- **Comentario**: texto opcional (se recomienda ingresarlo también en InfoMusic).
+- **Categoría**: carpeta destino.
+- **Modo**: `MO` (Mono) o `2S` (Estéreo).
+- **Velocidad**: frecuencia de muestreo (afecta fidelidad y tamaño).
+
+<Note>
+  Los siguientes caracteres no están permitidos en nombres de archivo: `/ * \ " | ? < > :`\
+  No se reconocen archivos con puntos (`.`) en el nombre, por ejemplo: `99.5.wav`.\
+  Sí se admite `995.wav`, que puede registrarse en InfoMusic como **99.5**.
+</Note>
+
+Si los vúmetros no muestran señal al grabar, verifique en el **Mezclador de Windows** que esté seleccionada la **entrada de línea**.
+
+### AutoStart
+
+Inicia la grabación automáticamente al detectar señal de entrada.
+
+- El comportamiento se ajusta en `Audicom.ini` dentro de `[AutoRecord]`:
+  - `StartLevel`: nivel mínimo para iniciar.
+  - `StartHoldTime`: tiempo que debe mantenerse ese nivel.
+  - `StartRecordTime`: audio que se almacena en buffer y se inserta al inicio para evitar cortes.
+
+### AutoStop
+
+Detiene la grabación automáticamente al desaparecer la señal.
+
+- Configuración en `Audicom.ini` → `[AutoRecord]`:
+  - `StopLevel`: nivel mínimo para detener.
+  - `StopHoldTime`: tiempo que debe mantenerse ese nivel.
+  - `StopRecordTime`: recorte aplicado al final para reducir silencios.
+
+Ajustado de fábrica para temas con **fade out** o finales sostenidos.
+
+- Para finales abruptos puede quedar un silencio de 1–2 s.
+- Ajustar manualmente los parámetros si se requiere, considerando que los fades largos podrían truncarse.
+
+### InfoMusic
+
+Ejecuta InfoMusic para registrar el título grabado en la Base de Datos.
