@@ -1,0 +1,64 @@
+---
+title: "Reportes"
+description: "Reportes de emisión y estadísticas"
+keywords: ["reportes", "comerciales", "tanda", "publicidad", "programación"]
+tags: ["Software", "Admicom"]
+---
+
+## Reportes desde Admicom
+
+Admicom ofrece diversas opciones de generación de reportes que permiten controlar las campañas, verificar emisiones y obtener documentación exportable en distintos formatos (impresión, Excel o PDF).
+
+### Reporte de ventas
+
+Genera un informe de los avisos emitidos de un cliente específico dentro de un rango de fechas.\
+Se accede desde `Reporte -> Ventas`.
+
+En el formulario se completan:
+
+- **Emisora** (si se gestiona más de una).
+- **Cliente**.
+- **Rango de fechas**.
+
+Al pulsar **Reporte**, se despliega el detalle de los avisos correspondientes al cliente, ordenados alfabéticamente. El informe puede imprimirse, exportarse a Excel compatible o guardarse en PDF.
+
+---
+
+### Liquidación de agencia
+
+Permite obtener un listado de los avisos correspondientes a una Agencia de Publicidad.\
+El reporte incluye el detalle de los avisos emitidos en cada emisora (en instalaciones con múltiples emisoras).
+
+Las opciones de salida son: impresión, exportación a Excel o guardado en PDF.
+
+---
+
+### PNT / Auspicios
+
+Genera un reporte de **Propaganda No Tradicional (PNT)** y **Auspicios** para un día específico.
+
+---
+
+### Perfil de tanda
+
+Muestra de manera gráfica la densidad de tandas comerciales a lo largo del día.\
+Este reporte solo está disponible para tandas ya generadas. Si se intenta generar un perfil sobre una fecha sin tandas, se muestra el mensaje **“Tanda inexistente”**.
+
+- **Eje horizontal:** Horas del día (0 a 24 Hs).
+- **Eje vertical:** Minutos de publicidad acumulados por cada hora.
+
+La línea roja **Max** representa el límite máximo de publicidad permitido por hora, configurado en `Configuración Emisora -> Estación`.\
+Admicom nunca supera este límite en tandas generadas automáticamente, aunque podría superarse si se modifica una tanda manualmente desde otros módulos (ejemplo: CyberPlay Editor).
+
+---
+
+### Campaña de un aviso
+
+Muestra en forma simplificada la pauta de un aviso comercial, indicando las apariciones programadas.
+
+Para reportes basados en las emisiones reales al aire se utiliza el módulo **Aaudit**, que genera informes a partir de los registros de emisión.\
+El reporte puede imprimirse, exportarse a Excel compatible o guardarse en PDF.
+
+<Note>
+  IMPORTANTE: Además de los reportes de Admicom, el módulo **Aaudit** permite auditar y verificar las emisiones efectivamente realizadas en aire.
+</Note>
