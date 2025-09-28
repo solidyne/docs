@@ -1,0 +1,261 @@
+---
+title: "WebTools"
+description: "Description of your new file."
+---
+
+El **panel de servicios WebTools** permite visualizar, mediante un navegador web, información en tiempo real sobre la lista de emisión al aire.\
+Un locutor, sin más que cambiar de pestaña en su navegador, puede ver la **cuenta regresiva** del título actualmente al aire o los títulos próximos a emitirse.
+
+Además de monitoreo, **WebTools** incluye:
+
+- **Transferencia de archivos**
+- **Actualización del clima**
+- **Panel de noticias vía RSS**
+
+> Se accede desde cualquier dispositivo con acceso a Internet, sin necesidad de conectarse a la LAN de la emisora.
+
+<Note>
+  Los servicios WebTools requieren acceso a Internet en la terminal de Aire.
+</Note>
+
+---
+
+## WebTools Cliente
+
+En la terminal de Aire, **WebTools Cliente** envía al servidor WebTools la información de los títulos en reproducción.\
+Se ejecuta al iniciar AUDICOM y mantiene además actualizados:
+
+- **Datos del clima**
+- **Noticias dinámicas vía RSS** (volcadas a archivos de texto para uso de otros módulos de AUDICOM)
+
+El servicio aparece **minimizado** en la barra de tareas de Windows.\
+Con clic derecho se accede a la interfaz.
+
+### Datos del tiempo (Meteor)
+
+1. Pulse **Config** para abrir el panel de configuración.
+2. Ingrese las **coordenadas geográficas** de la emisora.
+   - Puede obtenerlas haciendo clic en el mapa.
+   - Para más precisión, use **Google Maps** (clic derecho sobre un punto → copiar coordenadas).
+
+Con las coordenadas cargadas, los datos se actualizan automáticamente siempre que haya Internet.
+
+---
+
+## Pantallas WebTools
+
+Se accede a través de un navegador ingresando:\
+`http://www.audicom.us/Panel`
+
+Al instalar AUDICOM, el asistente **AStart** solicita:
+
+- Nombre de la estación
+- Usuario y contraseña
+
+Con esos datos se crea la **cuenta WebTools** y se envía un correo de confirmación.
+
+> No extravíe ese correo, contiene los datos de acceso.
+
+---
+
+## Panel de Vivo
+
+El **Panel de Vivo** es el entorno principal de WebTools.\
+Desde un menú en el ángulo inferior izquierdo se accede a distintas herramientas. Las ventanas pueden moverse y redimensionarse.
+
+### CyberPlay
+
+Muestra en tiempo real lo que ocurre en la terminal de Aire:
+
+- **Título actual**
+- **Historial** de títulos emitidos
+- **Próximos** a salir al aire
+
+Incluye contenidos de:
+
+- Lista principal (CyberPlay)
+- Listas auxiliares (Playlist Manager 1 y 2)
+- Botoneras de acceso rápido (Live Assist 1 y 2)
+
+### Clima
+
+Muestra datos del tiempo de ciudades configuradas.
+
+- Para agregar una ciudad:\
+  `Panel Vivo -> Agregar clima` → Ingresar ciudad → Buscar → Guardar.
+
+La nueva ventana aparece en el Panel.
+
+### Contenido RSS
+
+Permite agregar fuentes de noticias dinámicas.\
+Pasos:
+
+1. Copiar la **URL RSS** desde el sitio (ejemplo: ícono RSS en **Telesur**).
+2. En WebTools: `Inicio -> Panel Vivo -> Agregar RSS` → pegar URL.
+3. Asignar un **nombre corto** para identificar la fuente.
+
+Las ventanas RSS se actualizan cada **10 minutos**, con cuenta regresiva visible.\
+El botón **“Más tiempo”** extiende el intervalo de actualización (útil para locutores mientras leen).
+
+### Avisos PNT (Publicidad No Tradicional)
+
+- Los avisos PNT aparecen en ventanas emergentes con el **texto a leer**.
+- El locutor cierra la ventana una vez leído → queda registrado:
+  - **Hora de lectura**
+  - **Fragmento de audio del programa**
+
+De este modo, AUDICOM realiza un **control dinámico** sobre los PNT.
+
+### Pizarra
+
+Funciona como un **chat interno**, visible para todos los usuarios conectados.
+
+### Eliminar elementos
+
+Desde `Inicio -> Configuración`, puede eliminar elementos del panel.\
+El ícono de la derecha de cada ventana permite quitarlos.
+
+### Administrador de archivos
+
+Permite **transferir archivos** de audio a la emisora desde cualquier lugar con acceso a Internet (ejemplo: un reportaje grabado en un bar o aeropuerto).
+
+<Note>
+  Para habilitar el administrador de archivos web desde fuera de la emisora:
+
+  - Redirigir los **puertos 777 a 780** hacia la IP LAN de la PC de Aire.
+  - Asignar **IP fija** a la PC de Aire (DHCP deshabilitado).
+  - La IP fija debe ser inferior al rango del servidor DHCP del router.
+</Note>
+
+## Mail-Link y Noticias Remotas
+
+Esta capacidad permite a los usuarios enviar **mails con adjuntos** (audio en MP3 o texto en TXT) directamente a las computadoras que corren AUDICOM.\
+La dirección de destino es:
+
+`nombreDeLaEmisora@audicom.us`
+
+De este modo, un periodista puede grabar una entrevista en su teléfono móvil y enviarla vía e-mail a la emisora.
+
+- Los archivos adjuntos se copian automáticamente a una carpeta del sistema.
+- El sistema envía un **correo de confirmación** al remitente cuando el archivo se transfiere al servidor de audio.
+- Opcionalmente:
+  - El **asunto del correo** puede indicar la carpeta de destino.
+  - El cuerpo del correo puede contener una **palabra clave de seguridad** para restringir envíos no autorizados.
+
+Estos reportes pueden ser programados en automático con **BotNews**, que agrega presentaciones y cierres, o incluso generar locuciones por IA cuando los reportes llegan en formato texto.
+
+---
+
+## Dirección de correo Mail-Link
+
+La dirección se forma con el **alias** de la emisora, definido en el asistente **AStart**, seguido de `@audicom.us`.
+
+Ejemplo:\
+Alias: `demoFM` → Dirección Mail-Link: `demoFM@audicom.us`
+
+Si no fue creada, ejecute **AStart** desde:\
+`Inicio -> AUDICOM -> AStart`\
+o directamente:\
+`C:\Audicom\Astart.exe`
+
+El envío puede hacerse desde **PC, notebook o smartphone**, sin configuración especial.
+
+---
+
+## Archivos y Carpetas
+
+- El correo debe contener **un único archivo MP3**.
+- AUDICOM Web Tools recibe el correo y copia el archivo en una carpeta de audio.
+
+Si el **asunto** incluye el nombre de una carpeta existente (ej: `REPORTES`), el archivo se copia allí.\
+Si no coincide con ninguna carpeta, se almacena en la predeterminada: `eMail`.
+
+---
+
+## Cómo pautar los envíos
+
+Para que AUDICOM procese los correos, **Web Tools** debe estar corriendo en la emisora.
+
+### Pautar en horarios determinados
+
+Se utilizan **Inclusiones Especiales (ExactTime)**:
+
+`/Block /07:00-12:00 /Live`\
+`/Exacttime /007:45`\
+`; INFORME de TRANSITO`\
+`@Transito Apertura`\
+`@transito-<dd><mm><aaaa>`\
+`@Transito CIERRE`
+
+Ejemplo: El reporte de tránsito `transito-14032013.mp3` se emite a las **07:45**.\
+Al día siguiente, al no existir un nuevo archivo con fecha actual, el bloque se cancela automáticamente.
+
+Para múltiples envíos diarios, se agrega la **hora** al nombre del archivo:
+
+`/Block /07:00-12:00 /Live`\
+`/Exacttime /07:30`\
+`@transito730-<dd><mm><aaaa>`\
+`/Exacttime /08:30`\
+`@transito830-<dd><mm><aaaa>`\
+`/Exacttime /09:30`\
+`@transito930-<dd><mm><aaaa>`\
+`/Exacttime /10:30`\
+`@transito1030-<dd><mm><aaaa>`
+
+---
+
+### Salida inmediata con NEWS
+
+El módulo **NEWS** monitorea una carpeta.\
+Cuando detecta un nuevo archivo:
+
+- Espera a que termine el título en curso.
+- Interrumpe la programación automática.
+- Inserta el audio recibido, con apertura/cierre opcionales.
+
+Se recomienda configurar NEWS para usar la carpeta `eMail` o crear otra específica.
+
+---
+
+## Cliente FTP
+
+**WebTools** incluye un **servidor FTP** para transferir archivos.
+
+Requisitos:
+
+1. Usuario/contraseña creados en AUDICOM (**Niveles de Acceso**).
+2. El usuario debe tener permisos de escritura/renombrar.
+
+**Parámetros de acceso local:**\
+`FTP IP: 192.168.100.253`\
+`FTP User: usuarioAUDICOM`\
+`FTP Pass: usuarioAUDICOM`\
+`FTP Port: 779`
+
+**Acceso desde Internet:**\
+Redirigir los puertos `778` y `779` hacia la IP de la PC de Aire.
+
+---
+
+## Administración de WebTools
+
+El **panel de administración** permite:
+
+- Crear, eliminar o modificar usuarios.
+- Definir emisoras, terminales y permisos.
+- Configurar emisoras de un mismo multimedio.
+
+Acceso: `www.audicom.us/ConfigManager`
+
+Usuario: `[alias]-admin`\
+Contraseña: `****`
+
+---
+
+## Opciones del Panel de Administración
+
+- **Configurar medio**: Modifica nombre, alias, contraseña y correo del medio.
+- **Emisoras**: Permite ver y editar datos.
+- **Terminales**: Define estudios disponibles.
+- **Usuarios**: Crea usuarios y los asigna a emisoras.

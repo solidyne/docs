@@ -8,6 +8,14 @@ Con una apariencia muy similar a **CyberPlay**, el **iLink** recrea la **lista �
 - los **bloques de tandas comerciales** (bloques verdes), y
 - la **artística** de la emisora cabecera, que se **reemplaza automáticamente** por sus equivalentes **locales**.
 
+<img
+  src="/images/audicom/au-iLink.jpg"
+  alt="Au I Link Jp"
+  title="Au I Link Jp"
+  className="mx-auto"
+  style={{ width:"47%" }}
+/>
+
 La información mostrada por iLink corresponde a los **archivos programados en el CyberPlay de la cabecera**. Con esa data el control sabe **cuándo** pasar de **Remoto** a **Local**, reproducir el audio local y **volver** exactamente cuando continúa el programa en la cabecera.
 
 Además de enlazarse por Internet a una cabecera remota, iLink permite **reemplazar tandas de duración variable con precisión**, rellenando con **temas musicales**, **promos** o **arpegios** hasta alcanzar la **duración exacta** requerida.
@@ -40,8 +48,23 @@ El bloque iLink es similar a los bloques **Live**, **AutoDj** o **Satelitales**.
 
 1. **Crear bloque iLink (Asistente)**\
    Abra **Magic Programming** y elija **“Bloque iLink”**.
+
+   <img
+     src="/images/audicom/au-magicprogramming-iLink.jpg"
+     alt="Au Magicprogramming I Link Jp"
+     title="Au Magicprogramming I Link Jp"
+     className="mr-auto"
+     style={{ width:"46%" }}
+   />
 2. **Nombre del programa (dirección de enlace)**\
    Ingrese la **dirección de acceso al streaming** generada por iRDS en la cabecera (campo **iLink address**).
+
+   <img
+     src="/images/audicom/au-magicprogramming-iLink_2.jpg"
+     alt="Au Magicprogramming I Link 2 Jp"
+     title="Au Magicprogramming I Link 2 Jp"
+     style={{ width:"45%" }}
+   />
    - Ejemplo por **IP y puerto**: `iLink://190.247.72.170:8081`
    - Ejemplo por **servidor** (si iRDS publica en un servidor): `iLink://encoder.iviplanet.com/AUDICOM`
 
@@ -53,11 +76,20 @@ El bloque iLink es similar a los bloques **Live**, **AutoDj** o **Satelitales**.
    a) La **tanda cabecera dura más** que la **tanda regional** → se ajusta con **canciones**.\
    b) Se **pierde Internet** → iLink programa **música** y mantiene **tandas regionales** hasta reconectar.
 
+   <img
+     src="/images/audicom/au-magicprogramming-iLink_4.jpg"
+     alt="Au Magicprogramming I Link 4 Jp"
+     title="Au Magicprogramming I Link 4 Jp"
+     style={{ width:"47%" }}
+   />
+
    **Recomendación:** el formato debe incluir **canciones de duraciones diversas** para facilitar la **compensación de tiempos**. Evite **Modo Inducido** si restringe demasiado la selección (p. ej., una secuencia rígida **Hits-80 → Hits-90 → Hits-00** limita las coincidencias de duración).
 5. **Paso final no utilizado**\
    Pulse **Continuar** y **guarde**.
 
-**Ejemplo de instrucción de bloque iLink (en el PGM):**\
+**Ejemplo de instrucción de bloque iLink (en el PGM):**
+
+\
 `/Block /00:00-24:00 /ILink="AutoDj Jazz" iLink://190.247.72.170:8080`
 
 Puede crear **múltiples bloques iLink** con **distintos formatos de relleno** según el contenido de cada programa de cabecera.
@@ -83,9 +115,98 @@ En el **PGM** de la repetidora, programe una instrucción iLink en modo **xLink*
   Sección `\[Hardware]` con:
   \
   `xLinkDeviceIn=HD Audio device`
-  \
   `xLinkLineInName=Line In`
 </Note>
 
 **Instrucción completa — ejemplo:**\
 `/Block /08:00-14:00 /ILink="Latinos" xLink://192.168.0.50/Realtek High Definition Audio/Entrada de línea`
+
+## Reemplazo de tandas comerciales (iLink)
+
+Durante un **evento iLink**, AUDICOM reproduce el **streaming** de la cabecera.\
+Cuando la cabecera entra en **tanda comercial**, iLink **interrumpe** el streaming y emite la **tanda regional**.
+
+> Debe existir la **misma cantidad de tandas** en cabecera y en la emisora regional.
+
+## Cantidad de tandas: comportamientos
+
+- **Cabecera con más tandas que la regional:** al terminar todas las tandas regionales, se **retoma** el audio de cabecera; **no** se repiten tandas regionales ni se genera relleno adicional.
+- **Cabecera con menos tandas que la regional:** las **tandas regionales sobrantes** se **ignoran**.
+
+## Duración de cada tanda: ajustes automáticos
+
+Lo usual es preacordar la duración de cada tanda. Si no coinciden, iLink actúa así:
+
+### Cabecera **más larga** que la regional → rellenar tiempo restante
+
+**Nivel 1 (Música):** intenta cubrir la diferencia con **canciones** según el **formato AutoDj** definido para el bloque iLink. Si no logra el **ajuste exacto** (muy común si la diferencia es \< ~3 min), pasa al Nivel 2.\
+**Nivel 2 (Promos):** rellena con archivos `Clase=Promo` según el tiempo faltante. Si el remanente es demasiado **corto** para un promo (suelen durar \>2–3 s), pasa al Nivel 3.\
+**Nivel 3 (Fills):** rellena con `Clase=Fill` (arpegios/efectos de **1–5 s** aprox.). Al ser efectos breves, AUDICOM puede **cortarlos finamente** si hiciera falta (raro).
+
+### Cabecera **más corta** que la regional
+
+iLink **emite la tanda regional completa** y luego vuelve a cabecera.
+
+<Note>
+  Evite este escenario: el bloque de cabecera se “engancha empezado”.
+</Note>
+
+---
+
+## Programación contra streaming “clásico”
+
+Es posible enlazar una cabecera **sin AUDICOM** (o un programa vía Internet). El bloque se arma como iLink, con estas salvedades:
+
+- Use el esquema `mms://` en lugar de `iLink://`.
+- No hay control remoto de tandas: las **tandas locales** salen por **hora exacta** según **LOG/PGM**.
+
+**Ejemplo de bloque:**\
+`/Block /22:00-23:59 /ILink="Relleno Pop" mms://encoder.su-servidor.com:8080/RadioDemo`
+
+---
+
+## Reemplazo de cortes promocionales (artística de cabecera)
+
+Puede definirse el **reemplazo de promos/IDs** de la cabecera por **artística regional**.\
+Ej.: cuando en cabecera suena `BsAs_identificacion-1`, en Córdoba suena `Cba_identificacion-1`.
+
+**Regla por prefijo:** los archivos de cabecera a reemplazar comparten un **prefijo**, p. ej. `BsAs_`.\
+Los regionales usan otro prefijo (p. ej. `Cba_`) y deben tener **igual duración** (tolerancia **±0,5 s**). Si no hay coincidencia de duración, **no** se reemplaza.
+
+<Note>
+  Solo se reemplazan archivos **pautados** en la programación y los **lanzados desde Live Assist por el canal principal** (no en modo MIX). Si se dispara “pisando” música, **no** se reemplaza.
+</Note>
+
+### Dónde ubicar los archivos regionales
+
+Coloque los reemplazos en:\
+`C:\Audicom\Audio\Replace`
+
+> Conozca la **duración** de los cortes de cabecera a reemplazar y prepare **al menos** un archivo regional **equivalente**.
+
+---
+
+## Instrucción `/replace` dentro del bloque iLink
+
+Solo **un** criterio `/replace` por **cada** bloque iLink. Variantes:
+
+- `/replace ORIGINAL=`\
+  Reemplaza el archivo **exacto** `ORIGINAL` por **cualquier** archivo en `Replace` de **igual duración**.
+- `/replace ORIGINAL*=`\
+  Reemplaza **todos** los que comiencen con `ORIGINAL` por **cualquiera** en `Replace` de **igual duración**.
+- `/replace ORIGINAL*=REEMPLAZO`\
+  Reemplaza todos los que comiencen con `ORIGINAL` por el archivo **específico** `REEMPLAZO` (misma duración).
+- `/replace ORIGINAL*=REEMPLAZO*`\
+  Reemplaza todos los que comiencen con `ORIGINAL` por **cualquiera** en `Replace` que **comience** con `REEMPLAZO` (misma duración).
+- `/replace ORIGINAL=REEMPLAZO`\
+  Reemplaza `ORIGINAL` por `REEMPLAZO` (misma duración).
+
+**Coincidencia de duración:** si `REEMPLAZO` **no** coincide, se busca **cualquier** archivo en `Replace` con **igual duración** (±0,5 s). Si no hay, el reemplazo **se aborta**.
+
+**Ejemplo por prefijos:**\
+`/replace BsAs_*=Cba_*`\
+Reemplaza todo lo que comience con `BsAs_` por archivos que comiencen con `Cba_` **de igual duración**.
+
+<Note>
+  Aunque solo hay un `/replace` por bloque, puede crear **múltiples bloques iLink** en el día, **cada uno** con su propio criterio de reemplazo.
+</Note>
