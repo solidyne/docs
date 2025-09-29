@@ -616,133 +616,15 @@
             ]
           },
           {
-            "tab": "Audicom",
+            "tab": "Software",
             "anchors": [
               {
                 "anchor": "AUDICOM",
-                "icon": "book-open",
-                "description": "Documentación del sistema Audicom",
-                "groups": [
-                  {
-                    "group": "Introducción",
-                    "pages": [
-                      "es/audicom/au-resumen"
-                    ]
-                  },
-                  {
-                    "group": "Instalación",
-                    "pages": [
-                      "es/audicom/au-setup",
-                      "es/audicom/au-setup-config",
-                      "es/audicom/au-red-configuracion",
-                      "es/audicom/au-red-usuarios",
-                      "es/audicom/au-red-operacion",
-                      "es/audicom/au-setup-gpio",
-                      "es/audicom/au-setup-rds",
-                      "es/audicom/au-setup-autostart"
-                    ]
-                  },
-                  {
-                    "group": "Estudio de Aire",
-                    "pages": [
-                      "es/audicom/au-op-desktop",
-                      "es/audicom/au-op-ilogon",
-                      "es/audicom/au-cyberplay-resumen",
-                      "es/audicom/au-cyberplay-transporte",
-                      "es/audicom/au-cyberplay-herramientas",
-                      "es/audicom/au-liveassist",
-                      "es/audicom/au-playlistmanager",
-                      "es/audicom/au-mediamanager",
-                      "es/audicom/au-filemanager",
-                      "es/audicom/au-filemanager-operacion",
-                      "es/audicom/au-irec"
-                    ]
-                  },
-                  {
-                    "group": "Programación de Contenidos",
-                    "pages": [
-                      "es/audicom/au-cpeditor-resumen",
-                      "es/audicom/au-cpeditor-comerciales",
-                      "es/audicom/au-cpeditor-comandostanda",
-                      "es/audicom/au-cpeditor-bloques",
-                      "es/audicom/au-cpeditor-comandosbloques",
-                      "es/audicom/au-cpeditor-comandosmusica",
-                      "es/audicom/au-cpeditor-comandosremoto",
-                      "es/audicom/au-cpeditor-operacion"
-                    ]
-                  },
-                  {
-                    "group": "Programación Musical",
-                    "pages": [
-                      "es/audicom/au-adjeditor-resumen",
-                      "es/audicom/au-adjeditor-descripcion",
-                      "es/audicom/au-adjeditor-plantillas",
-                      "es/audicom/au-adjeditor-operacion"
-                    ]
-                  },
-                  {
-                    "group": "Gestión de Medios",
-                    "pages": [
-                      "es/audicom/au-infomusic_descripcion",
-                      "es/audicom/au-infomusic-medios",
-                      "es/audicom/au-infomusic-operacion",
-                      "es/audicom/au-autoedit"
-                    ]
-                  },
-                  {
-                    "group": "Noticias",
-                    "pages": [
-                      "es/audicom/au-botNews",
-                      "es/audicom/au-news_suite",
-                      "es/audicom/au-hdcorder"
-                    ]
-                  },
-                  {
-                    "group": "Manejo de Enlaces y Streaming",
-                    "pages": [
-                      "es/audicom/au-internet",
-                      "es/audicom/au-iLInk"
-                    ]
-                  },
-                  {
-                    "group": "Herramientas para Internet",
-                    "pages": [
-                      "es/audicom/au-webtools",
-                      "es/audicom/au-audicast"
-                    ]
-                  },
-                  {
-                    "group": "Mantenimiento",
-                    "pages": [
-                      "es/audicom/au-mantenimiento",
-                      "es/audicom/au-updates"
-                    ]
-                  }
-                ]
+                "groups": []
               },
               {
                 "anchor": "ADMICOM",
-                "icon": "book-open",
-                "description": "Módulo de administración comercial",
-                "groups": [
-                  {
-                    "group": "Configuración y uso",
-                    "pages": [
-                      "es/audicom/admicom-descripcion",
-                      "es/audicom/admicom-config-emisora",
-                      "es/audicom/admicom-config-comercial",
-                      "es/audicom/admicom-programacion-avisos"
-                    ]
-                  },
-                  {
-                    "group": "Reportes y facturación",
-                    "pages": [
-                      "es/audicom/admicom-reportes",
-                      "es/audicom/au-audit",
-                      "es/audicom/admicom-facturacion"
-                    ]
-                  }
-                ]
+                "groups": []
               }
             ]
           },
