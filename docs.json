@@ -749,6 +749,9 @@
           },
           {
             "tab": "Accesorios",
+            "pages": [
+                  "es/index-accesorios"
+               ],
             "groups": [
               {
                 "group": "StudioBox",
