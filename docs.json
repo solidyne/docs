@@ -127,6 +127,12 @@
                       "es/extensiones/udx-tel-bt",
                       "es/extensiones/udx-usb"
                     ]
+                  },
+                  {
+                    "group": "EXTENSIÓN UX6",
+                    "pages": [
+                      "es/extensiones/ux6"                      
+                    ]
                   }
                 ]
               },
