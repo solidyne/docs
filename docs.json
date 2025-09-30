@@ -567,6 +567,7 @@
                   {
                     "group": "INSTALACIÓN",
                     "pages": [
+                      "es/HL240/hl240-resumen",
                       "es/HL240/hl240-montaje",
                       "es/HL240/hl240-conexiones",
                       "es/HL240/hl240-lineas-bluetooth",
