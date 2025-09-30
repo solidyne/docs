@@ -194,7 +194,7 @@
                   {
                     "group": "INTRODUCCION",
                     "pages": [
-                      "es/resumen-linea-classic"
+                      "es/index-linea-classic"
                     ]
                   }
                 ]
@@ -342,7 +342,7 @@
                   {
                     "group": "INTRODUCCION",
                     "pages": [
-                      "es/resumen-portatiles"
+                      "es/index-portatiles"
                     ]
                   }
                 ]
@@ -450,7 +450,7 @@
                   {
                     "group": "INTRODUCCIÓN",
                     "pages": [
-                      "es/resumen-procesadores"                      
+                      "es/index-procesadores"                      
                     ]
                   }
                 ]
@@ -555,7 +555,7 @@
                   {
                     "group": "INTRODUCCIÓN",
                     "pages": [
-                      "es/resumen-hibridos"
+                      "es/index-hibridos"
                     ]
                   }                  
                 ]
