@@ -138,7 +138,7 @@
                   {
                     "group": "CONFIGURACIÓN",
                     "pages": [
-                      "es/ux24/ux24-conectividad",
+                      "es/ux24/ux24-resumen",
                       "es/ux24/ux24-instalacion-trasero",
                       "es/ux24/ux24-config-streaming"
                     ]
@@ -163,7 +163,7 @@
                   {
                     "group": "CONFIGURACIÓN",
                     "pages": [
-                      "es/ux18/ux18-conectividad",
+                      "es/ux18/ux18-resumen",
                       "es/ux18/ux18-instalacion-trasero",
                       "es/ux18/ux18-doble-talkback",
                       "es/ux18/ux18-config-streaming"
