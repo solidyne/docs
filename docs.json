@@ -749,10 +749,13 @@
           },
           {
             "tab": "Accesorios",
-            "pages": [
-                  "es/index-accesorios"
-               ],
             "groups": [
+              {
+                "group": "Accesorios",
+                "pages": [                  
+                  "es/index-accesorios"
+                ]
+              },
               {
                 "group": "StudioBox",
                 "pages": [
