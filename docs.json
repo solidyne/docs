@@ -27,23 +27,23 @@
                 "group": "Manuales",
                 "pages": [
                   "/index",
-                  "es/indice/discontinued"
+                  "es/otros_docs/discontinued"
                 ]
               },
               {
                 "group": "Documentación accesoria",
                 "pages": [
-                  "es/indice/disassembling",
-                  "es/indice/audiovisual",
-                  "es/indice/tech-docs"
+                  "es/otros_docs/disassembling",
+                  "es/otros_docs/audiovisual",
+                  "es/otros_docs/tech-docs"
                 ]
               },
               {
                 "group": "Soporte Técnico",
                 "pages": [
-                  "es/indice/downloads",
-                  "es/indice/schematics",
-                  "es/indice/contact"
+                  "es/otros_docs/downloads",
+                  "es/otros_docs/schematics",
+                  "es/otros_docs/contact"
                 ]
               }
             ]
