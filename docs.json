@@ -101,13 +101,13 @@
                     "group": "ACCESO VIA WEB",
                     "pages": [
                       "es/unidex/remote-interfaz",
-                      "es/multi-discovery",
-                      "es/unidex/remote-firmware"
+                      "es/multi-discovery"                      
                     ]
                   },
                   {
-                    "group": "ESPECIFICACIONES",
+                    "group": "OTROS DOCS",
                     "pages": [
+                      "es/unidex/remote-firmware",
                       "es/unidex/especificaciones"
                     ]
                   }

@@ -1,9 +1,8 @@
 ---
 title: "Servicios de streaming"
 description: "Configuración de los servicios de streaming"
-keywords: ["configuración", "streaming", "RTP", "Icecast", "Shoutcast", "enlace STL", "stream entrante"]
+keywords: ["configuración","streaming","RTP","Icecast","Shoutcast","enlace STL","stream entrante"]
 tags: ["consolas IP", "UNIDEX", "UX24"]
-
 ---
 
 Las consolas UX24 pueden generar **dos streams de audio independientes** y decodificar un streaming de audio entrante.
@@ -94,17 +93,38 @@ La pestaña **RTP LINK** permite configurar el envío de streaming a una direcci
 - **GPO**: Habilita el envío de señales de **luz de aire (Tally Light)** vía TCP/IP para equipos Solidyne compatibles.
   - **Estudio A y B** (líneas 1 y 2 respectivamente)
   - **Estudio B y A** (orden invertido)
-  - **A\+B** (la señal se activa en ambas líneas, cualquiera sea el estudio activo)
+  - **A+B** (la señal se activa en ambas líneas, cualquiera sea el estudio activo)
 
 ### Down-Stream (RX)
 
-Permite configurar un \_streaming \_entrante. Cuando el módulo **DOWN-STREAM** está activado (**ENABLE**), el audio decodificado se envía internamente a la entrada **AES-1**, que cambia su nombre a **STREAM-1**.\
+Permite configurar un _streaming_ _entrante_. Cuando el módulo **DOWN-STREAM** está activado (**ENABLE**), el audio decodificado se envía internamente a la entrada **AES-1**, que cambia su nombre a **STREAM-1**.\
 En este modo, el conector AES-1 del panel trasero queda deshabilitado.
 
-Formatos soportados:
+- **RUN/STOP**\
+  Inicia o detiene la decodificación de _streaming_ cuando se confirman los cambios con **APPLY**.
 
-- Streams públicos HTTP y MMS codificados en **PCM 16** 44.1/48 kHz, **MP3** u **OPUS**.
-- Streams RTP en **PCM 16** 44.1 kHz o **MP3**.
+  <Tip>
+    Para optimizar los recursos del sistema, mantener detenido cuando el servicio no se utiliza.
+  </Tip>
+- **PROTOCOL**\
+  Define el tipo de _streaming_ entrante. Se soportan los siguientes formatos:
+  - Streams públicos **HTTP** y **MMS** codificados en PCM 16 (44.1/48 kHz), MP3 u Opus.
+  - Streams **RTP** en PCM 16 (44.1 kHz) y MP3.
+- **SERVER URL/IP**\
+  Nombre o dirección IP del servidor que genera el _streaming_.
+- **PORT**\
+  Puerto TCP por donde ingresa el _streaming_.\
+  Valor por omisión: **0**.
+- **MOUNTPOINT**\
+  Nombre único que identifica al _stream_.
+- **APPLY**\
+  Aplica los cambios en la configuración.
+
+<Note>
+  **Paso a paso** Descargar un guía paso a paso para [configurar un streaming entrante](http://www.solidyne.dx.com.ar/wordpress-files/DW/doc-guides/UNIDEX_AplicationNote-Incoming_streaming.pdf).
+</Note>
+
+---
 
 ### Network (Streamer Module)
 
