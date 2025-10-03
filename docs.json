@@ -114,29 +114,6 @@
                 ]
               },
               {
-                "anchor": "Extensiones",
-                "icon": "book-open",
-                "description": "Extensiones y expansiones para UNIDEX",
-                "groups": [
-                  {
-                    "group": "INTERFACES UDX",
-                    "pages": [
-                      "es/extensiones/UNIDEX-adaptadores",
-                      "es/extensiones/UDX-2MIC",
-                      "es/extensiones/UDX-2TEL",
-                      "es/extensiones/udx-tel-bt",
-                      "es/extensiones/udx-usb"
-                    ]
-                  },
-                  {
-                    "group": "EXPANSIONES",
-                    "pages": [
-                      "es/extensiones/ux6"                      
-                    ]
-                  }
-                ]
-              },
-              {
                 "anchor": "UX24",
                 "icon": "book-open",
                 "description": "Operación de UX24",
@@ -183,6 +160,29 @@
                       "es/ux18/ux18-op-monitoreado",
                       "es/ux18/ux18-op-escenas",
                       "es/ux18/ux18-op-telco"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "Extensiones",
+                "icon": "book-open",
+                "description": "Extensiones y expansiones para UNIDEX",
+                "groups": [
+                  {
+                    "group": "INTERFACES UDX",
+                    "pages": [
+                      "es/extensiones/UNIDEX-adaptadores",
+                      "es/extensiones/UDX-2MIC",
+                      "es/extensiones/UDX-2TEL",
+                      "es/extensiones/udx-tel-bt",
+                      "es/extensiones/udx-usb"
+                    ]
+                  },
+                  {
+                    "group": "EXPANSIONES",
+                    "pages": [
+                      "es/extensiones/ux6"                      
                     ]
                   }
                 ]
