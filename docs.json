@@ -105,7 +105,7 @@
                     ]
                   },
                   {
-                    "group": "OTROS DOCS",
+                    "group": "ADICIONALES",
                     "pages": [
                       "es/unidex/remote-firmware",
                       "es/unidex/especificaciones"
@@ -247,7 +247,8 @@
                       "es/DX816/816-streaming",
                       "es/DX816/816-stl",
                       "es/DX816/816-decoder",
-                      "es/DX816/816-icecast"
+                      "es/DX816/816-icecast",
+                      "es/multi-discovery"
                     ]
                   },
                   {
@@ -294,7 +295,8 @@
                   {
                     "group": "STREAMING",
                     "pages": [
-                      "es/612/612-AoIP"
+                      "es/612/612-AoIP",
+                      "es/multi-discovery"
                     ]
                   }
                 ]
@@ -400,9 +402,10 @@
                     ]
                   },
                   {
-                    "group": "INFO TECNICA",
+                    "group": "ADICIONALES",
                     "pages": [
                       "es/mx2200/mx2200-notas-sip",
+                      "es/multi-discovery",
                       "es/mx2200/mx2200-specs"
                     ]
                   }
@@ -512,6 +515,7 @@
                     "pages": [
                       "es/542/542-opcionAoIP",
                       "es/542/542-streamer",
+                      "es/multi-discovery",
                       "es/542/542-dante"
                     ]
                   }
