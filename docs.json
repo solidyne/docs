@@ -101,7 +101,7 @@
                     "group": "ACCESO VIA WEB",
                     "pages": [
                       "es/unidex/remote-interfaz",
-                      "es/multi-discovery"                      
+                      "es/unidex/unidex-discovery"                      
                     ]
                   },
                   {
