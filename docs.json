@@ -405,7 +405,7 @@
                     "group": "ADICIONALES",
                     "pages": [
                       "es/mx2200/mx2200-notas-sip",
-                      "es/multi-discovery",
+                      "es/mx2200/mx2200-discovery",
                       "es/mx2200/mx2200-specs"
                     ]
                   }
