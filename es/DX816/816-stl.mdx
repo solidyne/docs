@@ -5,8 +5,6 @@ keywords: ["streamer", "stl", "enlace", "streaming"]
 tags: ["consolas de estudio", "linea Classic", "DX816/AoIP", "DX822/AoIP"]
 ---
 
-import discovery from '/snippets/discovery.mdx';
-
 ## Enlace Estudio–Planta
 
 - En estudios, la consola con opción **/AoIP** opera como **codificador** y genera un streaming de audio hacia la planta transmisora.
@@ -31,7 +29,12 @@ import discovery from '/snippets/discovery.mdx';
    Si no hay DHCP, el módulo buscará una **IP libre** (puede demorar unos minutos).
 4. Obtener la IP con **Solidyne Multi-Discovery**.
 
-   <discovery />
+  <Note>
+     **Solidyne Multi-Discovery**
+
+     Si no se tiene acceso físico a la consola, se puede [**descargar la herramienta Multi-Discovery**](/es/DX816/816-discovery) que detecta dispositivos Solidyne conectados a la red.
+</Note>
+
 5. Abrir un navegador (Firefox/Chrome) e ingresar la **IP** encontrada. Aparecerá el **Panel de Control IP**.
 
 ---

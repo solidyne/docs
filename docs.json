@@ -248,7 +248,7 @@
                       "es/DX816/816-stl",
                       "es/DX816/816-decoder",
                       "es/DX816/816-icecast",
-                      "es/multi-discovery"
+                      "es/DX816/816-discovery"
                     ]
                   },
                   {
