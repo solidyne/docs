@@ -54,7 +54,6 @@
               {
                 "anchor": "Línea UNIDEX",
                 "icon": "book-open",
-                "description": "Instalación y configuración de consolas UNIDEX",
                 "groups": [
                   {
                     "group": "INTRODUCCIÓN",
@@ -101,7 +100,7 @@
                     "group": "ACCESO VIA WEB",
                     "pages": [
                       "es/unidex/remote-interfaz",
-                      "es/unidex/unidex-discovery"                      
+                      "es/unidex/unidex-discovery"
                     ]
                   },
                   {
@@ -116,7 +115,6 @@
               {
                 "anchor": "UX24",
                 "icon": "book-open",
-                "description": "Operación de UX24",
                 "groups": [
                   {
                     "group": "CONFIGURACIÓN",
@@ -141,7 +139,6 @@
               {
                 "anchor": "UX18",
                 "icon": "book-open",
-                "description": "Operación de UX18",
                 "groups": [
                   {
                     "group": "CONFIGURACIÓN",
@@ -167,7 +164,6 @@
               {
                 "anchor": "Extensiones",
                 "icon": "book-open",
-                "description": "Extensiones y expansiones para UNIDEX",
                 "groups": [
                   {
                     "group": "INTERFACES UDX",
@@ -182,7 +178,7 @@
                   {
                     "group": "EXPANSIONES",
                     "pages": [
-                      "es/extensiones/ux6"                      
+                      "es/extensiones/ux6"
                     ]
                   }
                 ]
@@ -195,7 +191,6 @@
               {
                 "anchor": "Línea Classic",
                 "icon": "book-open",
-                "description": "Consolas línea Broadcast Classic",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
@@ -208,7 +203,6 @@
               {
                 "anchor": "DX816/822",
                 "icon": "book-open",
-                "description": "Consolas DX816 y 822 de la línea Broadcast Classic",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
@@ -263,7 +257,6 @@
               {
                 "anchor": "D612",
                 "icon": "book-open",
-                "description": "Documentación D612",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
@@ -304,7 +297,6 @@
               {
                 "anchor": "MiniMixer",
                 "icon": "book-open",
-                "description": "Mini-consola de Estudio",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
@@ -316,7 +308,7 @@
                     "group": "INSTALACIÓN",
                     "pages": [
                       "es/minimixer/minimixer-conexiones",
-                      "es/minimixer/minimixer-bluetooth"                      
+                      "es/minimixer/minimixer-bluetooth"
                     ]
                   },
                   {
@@ -326,7 +318,7 @@
                       "es/minimixer/minimixer-op-puesta_al_aire",
                       "es/minimixer/minimixer-op-bluetooth",
                       "es/minimixer/minimixer-op-linea",
-                      "es/minimixer/minimixer-op-grabacion"                      
+                      "es/minimixer/minimixer-op-grabacion"
                     ]
                   },
                   {
@@ -345,7 +337,6 @@
               {
                 "anchor": "PORTÁTILES",
                 "icon": "book-open",
-                "description": "Equipos para transmisiones remotas",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
@@ -358,7 +349,6 @@
               {
                 "anchor": "MX2200",
                 "icon": "book-open",
-                "description": "Documentación del codec-mixer MX2200",
                 "groups": [
                   {
                     "group": "INTRODUCCION",
@@ -414,7 +404,6 @@
               {
                 "anchor": "MX2100",
                 "icon": "book-open",
-                "description": "Mini-consola de transmisión telefónica",
                 "groups": [
                   {
                     "group": "INTRODUCCIÓN",
@@ -441,7 +430,7 @@
                   {
                     "group": "INFO TÉCNICA",
                     "pages": [
-                      "es/mx2100/mx2100-specs"                      
+                      "es/mx2100/mx2100-specs"
                     ]
                   }
                 ]
@@ -454,12 +443,11 @@
               {
                 "anchor": "Procesadores",
                 "icon": "book-open",
-                "description": "Línea de procesadores para transmisión",
-                "groups": [                  
+                "groups": [
                   {
                     "group": "INTRODUCCIÓN",
                     "pages": [
-                      "es/index-procesadores"                      
+                      "es/index-procesadores"
                     ]
                   }
                 ]
@@ -467,8 +455,7 @@
               {
                 "anchor": "542 APC",
                 "icon": "book-open",
-                "description": "Documentación del procesador 542 APC",
-                "groups": [                  
+                "groups": [
                   {
                     "group": "INSTALACIÓN",
                     "pages": [
@@ -524,12 +511,11 @@
               {
                 "anchor": "Audimax 362",
                 "icon": "book-open",
-                "description": "Documentación del procesador Audimax 362",
                 "groups": [
                   {
                     "group": "INTRODUCCIÓN",
                     "pages": [
-                      "es/362/362-resumen"                      
+                      "es/362/362-resumen"
                     ]
                   },
                   {
@@ -544,13 +530,13 @@
                   {
                     "group": "CONFIGURACIÓN",
                     "pages": [
-                      "es/362/362-audio-ajustes"                      
+                      "es/362/362-audio-ajustes"
                     ]
                   },
                   {
                     "group": "INFO TECNICA",
                     "pages": [
-                      "es/362/362-specs"                      
+                      "es/362/362-specs"
                     ]
                   }
                 ]
@@ -568,7 +554,7 @@
                     "pages": [
                       "es/index-hibridos"
                     ]
-                  }                  
+                  }
                 ]
               },
               {
@@ -633,7 +619,6 @@
               {
                 "anchor": "AUDICOM",
                 "icon": "book-open",
-                "description": "Documentación del sistema Audicom",
                 "groups": [
                   {
                     "group": "Introducción",
@@ -735,7 +720,6 @@
               {
                 "anchor": "ADMICOM",
                 "icon": "book-open",
-                "description": "Módulo de administración comercial",
                 "groups": [
                   {
                     "group": "Configuración y uso",
@@ -763,7 +747,7 @@
             "groups": [
               {
                 "group": "Indice",
-                "pages": [                  
+                "pages": [
                   "es/index-accesorios"
                 ]
               },
@@ -773,6 +757,12 @@
                   "es/extensiones/studioBox-descripcion",
                   "es/extensiones/studioBox-conexiones",
                   "es/extensiones/studioBox-operacion"
+                ]
+              },
+              {
+                "group": "Cables y adaptadores",
+                "pages": [
+                  "es/accesorios/cables-y-adaptadores/catalogo"
                 ]
               }
             ]
@@ -790,10 +780,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": []
-    }
+    ]
   },
   "logo": {
     "light": "/logo/LOGOSOLIDYNE.svg",
