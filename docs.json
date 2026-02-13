@@ -102,13 +102,6 @@
                       "es/unidex/remote-interfaz",
                       "es/unidex/unidex-discovery"
                     ]
-                  },
-                  {
-                    "group": "ADICIONALES",
-                    "pages": [
-                      "es/unidex/remote-firmware",
-                      "es/unidex/especificaciones"
-                    ]
                   }
                 ]
               },
@@ -132,6 +125,14 @@
                       "es/ux24/ux24-op-monitoreado",
                       "es/ux24/ux24-op-escenas",
                       "es/ux24/ux24-op-telco"
+                    ]
+                  },
+                  {
+                    "group": "Firmware & Specs",
+                    "icon": "pen-ruler",
+                    "pages": [
+                      "es/unidex/remote-firmware",
+                      "es/unidex/especificaciones"
                     ]
                   }
                 ]
@@ -158,6 +159,10 @@
                       "es/ux18/ux18-op-escenas",
                       "es/ux18/ux18-op-telco"
                     ]
+                  },
+                  {
+                    "group": "Firmware & Specs",
+                    "pages": []
                   }
                 ]
               },
