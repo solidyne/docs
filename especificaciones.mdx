@@ -1,0 +1,113 @@
+---
+title: 'Especificaciones Técnicas'
+---
+
+
+<AccordionGroup>
+  <Accordion title="Características generales">
+    | Ítem | Valor |
+    | --- | --- |
+    | Canales | 18 |
+    | Entradas | 24 |
+    | Garantía | 1 año |
+    | Distribución de entradas | Configurable sobre los 18 canales |
+    | Escenas de usuario | 12 (configuración de entradas, asignación de canales, ajustes de procesos) |
+    | Pantalla táctil | 7” incorporada (800 × 480 píxeles) |
+    | Pantalla OLED por canal | Nombre, nivel y funciones asignadas |
+    | Control remoto | Interfaz web interna (HTML5) para operación vía LAN |
+  </Accordion>
+
+  <Accordion title="Entradas">
+    | Entrada | Cantidad / detalle |
+    | --- | --- |
+    | Micrófono (con +48V) | 4 |
+    | Líneas balanceadas electrónicamente | 8 |
+    | UNIDEX mono balanceadas | 8 (admite hasta 8 micrófonos adicionales; 8 dispositivos Telco) |
+    | USB | 4 estéreo (dos dispositivos de reproducción en una PC) |
+    | Procesos de audio | DSP en cada entrada |
+  </Accordion>
+
+  <Accordion title="Salidas">
+    | Salida | Cantidad / detalle |
+    | --- | --- |
+    | Salidas estéreo balanceadas | 2 (PGM y REC) |
+    | Salidas no balanceadas | 8 (mix-minus) |
+    | USB | 4 estéreo (dos dispositivos de grabación en una PC) |
+    | Streaming AoIP | 2 estéreo (RTP, Icecast/Shoutcast) |
+    | Monitoreo Cabina de Control | 2 estéreo (parlantes y auriculares) |
+    | Monitoreo Estudios | 2 estéreo (parlantes y auriculares + talkback) |
+  </Accordion>
+
+  <Accordion title="GPIO, Intercom y auxiliares">
+    | Ítem | Valor |
+    | --- | --- |
+    | Luz “En el Aire” | 2 salidas (Estudio A y B) – 12 VCC / 250 mA |
+    | GPI | 4 (entradas uso general, activa alta 3.3 ~ 15 V) |
+    | GPO | 8 (7 colector abierto + 1 × 12 VCC @ 250 mA) |
+    | Entrada monitoreo de aire | 1 estéreo no balanceada (sintonizador externo) |
+    | Talk-back desde estudios | 1 entrada (en conector StudioBox) |
+    | Micrófono de órdenes | Integrado (talk-back) |
+    | Botones de intercom | 4 asignables a distintas salidas |
+    | Intercom PTT en TELCO | En todos los canales TELCO con botón CUE |
+  </Accordion>
+
+  <Accordion title="Especificaciones de audio y buses">
+    | Ítem | Valor |
+    | --- | --- |
+    | Canales | 18 |
+    | Buses estéreo | 4 (PGM, REC, AUX con asignación directa desde superficie; VBUS asignable desde pantalla) |
+    | Bus PFL | 1 (CUE) |
+    | Resolución / Sample rate | 24 bits @ 48 kHz |
+    | Procesado DSP | En todas las entradas (fijo por entrada; varía según tipo de entrada) |
+    | Procesos disponibles | EQ paramétrico 3/4 bandas; Compuerta; Compresor/limitador; De-esser |
+    | Envíos automáticos | Mix-minus y talkback/intercom (TELCO) |
+    | Latencia | 1.2 ms (línea analógica a salida analógica) / 1.4 ms (entrada MIC a salida usando EQ + dinámica + de-esser) |
+  </Accordion>
+
+  <Accordion title="USB">
+    | Ítem | Valor |
+    | --- | --- |
+    | Puerto | 1 × USB 2.0 (dos dispositivos estéreo de reproducción/grabación sobre una PC) |
+    | Controlador | ASIO 2.2 (soporta reproducción simultánea en ASIO y WDM) |
+    | Hosts VST | 32-bit y 64-bit ASIO (plug-ins en tiempo real) |
+    | Multi-cliente | Sí (más de una aplicación ASIO en paralelo) |
+    | Sistema operativo | Windows 10/8/7 (32 & 64 bits) |
+  </Accordion>
+
+  <Accordion title="Entradas analógicas">
+    | Ítem | Valor |
+    | --- | --- |
+    | Nivel de entrada | Máx: +26 dBu · Mín: –24 dBu · Nominal: +4 dBu |
+    | Rango dinámico | 112 dBA |
+    | Respuesta en frecuencia | 20 Hz – 20 kHz ± 0.25 dB |
+    | THD+N | 0.01 % |
+  </Accordion>
+
+  <Accordion title="Entradas de micrófono">
+    | Ítem | Valor |
+    | --- | --- |
+    | Nivel de entrada | Máx: –24 dBu · Mín: –75 dBu · Nominal: –50 dBu / 150 Ω |
+    | Ruido | EIN @ –50 dBu: –121 dBA |
+    | Respuesta en frecuencia | 20 Hz – 20 kHz ± 0.5 dB |
+    | THD+N | 0.01 % |
+    | Phantom | +48 V individual |
+  </Accordion>
+
+  <Accordion title="Salidas analógicas">
+    | Ítem | Valor |
+    | --- | --- |
+    | Ruteo | Flexible |
+    | Tipo | Balanceadas |
+    | Nivel | Nominal: +4 dBu · Máx: +24 dBu |
+    | Rango dinámico | &gt; 110 dBA |
+    | Respuesta en frecuencia | 20 Hz – 20 kHz ± 0.5 dB |
+    | THD | typ 0.005 % @ 1 kHz |
+  </Accordion>
+
+  <Accordion title="Dimensiones y peso">
+    | Ítem | Valor |
+    | --- | --- |
+    | Dimensiones (ancho × profundidad × altura) | 590 × 380 × 110 mm |
+    | Peso (con embalaje) | 7 kg |
+  </Accordion>
+</AccordionGroup>

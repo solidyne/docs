@@ -128,7 +128,7 @@
                     ]
                   },
                   {
-                    "group": "Firmware & Specs",
+                    "group": "Info Técnica y Servicio",
                     "icon": "pen-ruler",
                     "pages": [
                       "es/unidex/remote-firmware",
@@ -161,8 +161,10 @@
                     ]
                   },
                   {
-                    "group": "Firmware & Specs",
-                    "pages": []
+                    "group": "Info Técnica y Servicio",
+                    "pages": [
+                      "especificaciones"
+                    ]
                   }
                 ]
               },
@@ -251,7 +253,7 @@
                     ]
                   },
                   {
-                    "group": "ADICIONALES",
+                    "group": "Info Técnica y Servicio",
                     "pages": [
                       "es/DX816/816-specs",
                       "es/DX816/816-mantenimiento"
@@ -327,7 +329,7 @@
                     ]
                   },
                   {
-                    "group": "INFO TÉCNICA",
+                    "group": "INFO TECNICA",
                     "pages": [
                       "es/minimixer/minimixer-specs"
                     ]
@@ -397,7 +399,7 @@
                     ]
                   },
                   {
-                    "group": "ADICIONALES",
+                    "group": "Info Técnica y Servicio",
                     "pages": [
                       "es/mx2200/mx2200-notas-sip",
                       "es/mx2200/mx2200-discovery",
@@ -433,7 +435,7 @@
                     ]
                   },
                   {
-                    "group": "INFO TÉCNICA",
+                    "group": "Info Técnica y Servicio",
                     "pages": [
                       "es/mx2100/mx2100-specs"
                     ]
