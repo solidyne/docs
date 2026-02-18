@@ -230,7 +230,7 @@
                     ]
                   },
                   {
-                    "group": "OPERACION",
+                    "group": "OPERACIÓN",
                     "pages": [
                       "es/DX816/816-op-intro",
                       "es/DX816/816-op-mics",
@@ -282,7 +282,7 @@
                     ]
                   },
                   {
-                    "group": "OPERACION",
+                    "group": "OPERACIÓN",
                     "pages": [
                       "es/612/612-op-intro",
                       "es/612/612-op-microfonos",
