@@ -68,7 +68,7 @@
                       "es/unidex/instalacion-cableado-kits",
                       "es/unidex/instalacion-RJ45-pinout",
                       "es/unidex/instalacion-cableado_monitoreo",
-                      "es/puesta-a-tierra"
+                      "es/diagramas/diagrama-tierras"
                     ]
                   },
                   {
@@ -129,7 +129,6 @@
                   },
                   {
                     "group": "Info Técnica y Servicio",
-                    "icon": "pen-ruler",
                     "pages": [
                       "es/unidex/remote-firmware",
                       "es/unidex/especificaciones"
@@ -163,6 +162,7 @@
                   {
                     "group": "Info Técnica",
                     "pages": [
+                      "acualizacion-del-firmware",
                       "especificaciones"
                     ]
                   }
