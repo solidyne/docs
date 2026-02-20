@@ -162,8 +162,8 @@
                   {
                     "group": "Info Técnica",
                     "pages": [
-                      "acualizacion-del-firmware",
-                      "especificaciones"
+                      "es/ux18/ux18-acualizacion-del-firmware",
+                      "es/ux18/ux18-especificaciones"
                     ]
                   }
                 ]
