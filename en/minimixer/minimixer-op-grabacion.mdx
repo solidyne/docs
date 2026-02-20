@@ -1,0 +1,106 @@
+---
+title: "Grabación"
+description: "Grabación de la mezcla de micrófonos"
+keywords: ["grabación"]
+tags: ["consolas de estudio", "línea Classic", "minimixer"]
+---
+
+El **MiniMixer** permite grabar la mezcla de micrófonos en la computadora al mismo tiempo que se transmiten contenidos desde la misma PC.
+
+La salida **MIC REC** entrega la mezcla de micrófonos (post compresor), disponible incluso cuando los canales de micrófono están apagados.
+
+---
+
+## Diagrama de conexión
+
+<Frame  className="bg-white p-4 rounded-xl">
+  <img
+    src="/images/minimixer/minimixer-grabacion.png"
+    alt="Minimixer Grabacion Pn"
+    title="Minimixer Grabacion Pn"
+    className="mx-auto"
+    style={{ width:"80%" }}
+  />
+</Frame>
+
+### Conexión básica
+
+- La computadora debe contar con una entrada de línea analógica (habitual en equipos de escritorio tipo tower o mini-tower).
+- El cable divisor en “Y” conecta en paralelo los tres TRS.
+  - Puede adquirirse junto con el kit de cables **Solidyne MNG-Mini** (ver sección Cables y Accesorios).
+  - También puede usarse cualquier divisor estándar tipo “Y” TRS 1/8” → 2 × TRS 1/8” hembra, con cables TRS-TRS hacia la entrada LINE IN de la consola y de la computadora.
+- El software de grabación debe configurarse para trabajar con la entrada y salida de línea internas de la PC (u otra interfaz de audio que se haya conectado para la grabación de micrófonos).
+- En el diagrama de referencia, los altavoces aparecen conectados directamente a la salida de la computadora.
+
+---
+
+### Conexión alternativa con interfaz ASIO
+
+Si se dispone de una interfaz de audio con soporte **ASIO**:
+
+- La salida de la interfaz ASIO puede conectarse directamente a la entrada **LINE IN** del MiniMixer.
+- Se debe utilizar un software con soporte ASIO (ej.: **Reaper**, **Vegas**, **Audition**).
+- Durante la grabación, el monitoreo interno de entrada se activa en el canal del software, mientras que los micrófonos se escuchan en MiniMixer a través de **LINE IN**.
+- Durante la reproducción, el material grabado se reproduce directamente hacia la consola.
+
+<Warning>
+  Las placas de audio integradas en las PC suelen presentar latencias de ~0,5 segundos, lo que hace imposible monitorear la propia voz en tiempo real.\
+  En estos casos, la conexión debe resolverse mediante el esquema básico explicado anteriormente.
+</Warning>
+
+---
+
+### Procedimiento de grabación
+
+<Steps>
+  <Step title="Reproducir programación desde la computadora">
+    La PC reproduce la programación de **Audicom-MX** (u otro software) que ingresa por USB al MiniMixer (fader #4).\
+    El VUmetro de la consola debe marcar picos en **0 VU** para mantener el nivel correcto de streaming.
+  </Step>
+  <Step title="Configurar el estado de micrófonos">
+    El botón **MASTER MIC** debe estar **apagado**, ya que los micrófonos no deben salir al aire.\
+    La luz de aire permanece apagada.
+  </Step>
+  <Step title="Monitorear transmisión o grabación">
+    - Para monitorear en auriculares la transmisión de streaming: presionar el botón **PGM** en la zona **CUE MONITOR**.
+    - Para grabar: mantener este botón liberado, de modo de no escuchar la transmisión.
+  </Step>
+  <Step title="Enviar micrófonos a la salida de grabación">
+    Levantar los faders de **MIC-1**, **MIC-2** y **MIC 3+4**.\
+    Ajustar niveles observando el indicador **MIC COMP**, que debe mostrar dos LEDs encendidos.
+  </Step>
+  <Step title="Monitorear durante la grabación">
+    Utilizar auriculares conectados a la consola.
+
+    - Si hay altavoces en **Headphone-1**, deben silenciarse para evitar acoples, ya que al no encenderse la luz de aire no actúa el silenciado automático.
+  </Step>
+  <Step title="Escuchar mezcla de micrófonos en auriculares">
+    En la zona **PHONE**:
+
+    - Colocar **PHONE/LINE IN** en posición **LINE IN**.
+    - Poner **CUE/PGM** en posición **CUE**.
+    - Llevar el control de nivel al máximo.\
+      El ajuste final del volumen se realiza con el control de **CUE MONITOR**.
+  </Step>
+  <Step title="Reproducir la grabación">
+    Ejecutar el archivo desde la computadora y escucharlo mediante altavoces o auriculares conectados a la misma.
+  </Step>
+</Steps>
+
+<Tip>
+  **Monitoreo en reproducción**
+
+  Si la computadora monitorea mediante altavoces:
+
+  - Conviene cerrar totalmente el nivel en la zona **PHONE**, o bajar los faders de micrófonos, para evitar que los auriculares reciban filtraciones de audio de los parlantes.
+</Tip>
+
+---
+
+### Software de grabación
+
+- **Audacity** (instalado junto con Audicom-MX): editor multipista de código libre ([www.audacityteam.org](http://www.audacityteam.org)).
+  - Permite grabar la voz en una pista y luego sumar música y efectos en pistas adicionales.
+- **HDCorder**: editor incluido en Audicom-MX para grabaciones y ediciones simples.
+
+Consultar la documentación de **Audicom** para mayor detalle.

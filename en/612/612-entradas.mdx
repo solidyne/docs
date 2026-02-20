@@ -1,0 +1,98 @@
+---
+title: "Entradas"
+description: "Conexión de las entradas"
+keywords: ["micrófonos", "phantom", "entradas", "USB"]
+tags: ["consolas de estudio", "linea Classic", "D612"]
+---
+
+## Canales de entrada
+
+En el panel trasero de la consola se concentran todos los conectores de entrada y salida.
+
+<Note>
+  La calidad del conexionado de las distintas fuentes a la consola garantiza una operación segura y libre de fallas. Tómese el tiempo necesario para realizar las conexiones con cuidado, utilizando siempre materiales de primera calidad.
+</Note>
+
+## Entradas de micrófono
+
+Los canales de micrófono son balanceados electrónicamente y usan conectores XLR estándar.
+
+<img
+  src="/images/612/612-trasero-mics.jpg"
+  alt="612 Trasero Mics Jp"
+  title="612 Trasero Mics Jp"
+  className="mx-auto"
+  style={{ width:"43%" }}
+/>
+
+- Cada canal presenta **dos conectores XLR**, sumados internamente.
+- Al utilizar dos micrófonos en el mismo canal, conviene que sean de la misma marca y modelo, preferentemente dinámicos.
+- Las diferencias de nivel de voz son compensadas por los compresores internos de la consola.
+
+La llave **48V**, ubicada en el panel frontal, activa la alimentación phantom de 48V en todas las entradas.
+
+<Note>
+  Los micrófonos dinámicos pueden recibir tensión phantom sin riesgo de daño, ya que su bobina móvil tiene conexión flotante que desacopla la tensión.
+</Note>
+
+## Entradas de línea
+
+Cada canal de línea posee dos entradas estéreo, seleccionables desde el frente de la consola:
+
+<img
+  src="/images/612/612-trasero-lineas.jpg"
+  alt="612 Trasero Lineas Jp"
+  title="612 Trasero Lineas Jp"
+  className="mx-auto"
+  style={{ width:"46%" }}
+/>
+
+- **Canales 3 y 4:** entradas no balanceadas sobre conectores **RCA** (LIN-1 y LIN-2) y entradas balanceadas en un conector **DIN-5** (BAL-1 y BAL-2).
+- **Canal 5:** digital. Es un puerto USB para conexión directa a la computadora. Admite una entrada auxiliar no balanceada (RCA).
+
+<Note>
+  En equipos con opción /AoIP, la entrada auxiliar LIN-2 queda internamente asignada al módulo de streaming y no puede usarse para otras señales.
+</Note>
+
+Para conectar equipos con salida balanceada se requiere armar un cable DIN-5 a dos XLR hembra o a un conector TRS estéreo de ¼”, según corresponda.
+
+**Distribución DIN-5 a XLR**
+
+| <img   src="/images/612/612-DIN5-male.jpg"   alt="DIN5 Male"   style={{ width:"50px" }} />            <br />DIN-5 (estéreo balanceado) | <img   src="/images/612/612-XLR3-female.jpg"   alt="XLR3 Female"   style={{ width:"50px" }} />            <br />XLR Hembra |
+| :------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
+| Pin 1 → Audio (-) Derecho                                                                                                              | Pin 1 → Tierra (malla)                                                                                                     |
+| Pin 2 → Audio (\+) Derecho                                                                                                             | Pin 2 → Audio (\+)                                                                                                         |
+| Pin 3 → Audio (-) Izquierdo                                                                                                            | Pin 3 → Audio (-)                                                                                                          |
+| Pin 4 → Audio (\+) Derecho                                                                                                             |                                                                                                                            |
+| Pin 5 → Audio (\+) Izquierdo                                                                                                           |                                                                                                                            |
+
+- Las entradas no balanceadas RCA aceptan equipos con salida -10 dBV sobre 10 kΩ (equipos domésticos).
+- El control de ganancia es común a ambas entradas y actúa siempre sobre la entrada seleccionada.
+
+## Entrada digital USB
+
+El Canal 5 conecta directamente la consola a una computadora mediante un puerto USB (cable estándar USB A/B).
+
+- Compatible con puertos 1.1, 2.0 y 3.0.
+- Se recomienda usar cables de 2–3 m de longitud; no exceder los 4 m incluso con extensiones.
+- Compatible con Windows® 7/10, Linux y macOS.
+- Los controladores son instalados automáticamente; no se requieren drivers adicionales.
+
+<Warning>
+  Antes de conectar la consola a la PC por USB, verifique que la computadora disponga de **puesta a tierra**  efectiva mediante el borne de bronce en el panel trasero.
+
+  - Use un tester en escala de 25 VCA entre los chasis de PC y consola; la lectura debe ser **0 V**.
+  - Si no hay conexión a tierra, podría dañarse la entrada USB de la consola o de la PC.
+</Warning>
+
+Al conectar la consola encendida, Windows® detecta un “dispositivo de reproducción USB” y un “dispositivo de grabación USB”. En la consola, el indicador **Digital IN/Out** mostrará **U4**, confirmando que la entrada y salida estéreo fueron reconocidas.
+
+En Windows® puede verificarse en: **Panel de Control → Dispositivos de sonido y audio**, donde se definen los dispositivos de reproducción y grabación predeterminados.
+
+En las aplicaciones de software seleccione el los dispositivos USB de reproducción y grabación.
+
+Si la PC no tiene otra interfaz de audio, Windows® usará como predeterminados los dispositivos USB-1 (entrada Canal 5 y salida PGM/REC de la D612).
+
+<Info>
+  El Canal 5 también dispone de una entrada auxiliar estéreo no balanceada con conectores RCA para equipos convencionales.
+</Info>

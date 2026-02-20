@@ -1,0 +1,120 @@
+---
+title: "Compresores y limitadores"
+description: "Ajuste de las etapas de Compresión y Limitación"
+keywords: ["compresores", "limitadores", "densityEQ", "clippers", "drive"]
+tags: ["procesadores", "542"]
+---
+
+## Compresión dinámica
+
+La reducción de la dinámica se produce por la combinación de tres etapas: **compresión**, **limitación** y **recorte**.\
+Estas etapas trabajan de forma complementaria para disminuir la dinámica de la señal y aumentar la energía promedio. A mayor acción conjunta, más “denso” y “compacto” será el sonido. Por lo tanto, los ajustes deben hacerse en conjunto.
+
+En términos generales:
+
+- El compresor trabaja con pendientes suaves y umbrales bajos, reduciendo la dinámica en un rango amplio de niveles.
+- El limitador actúa con pendientes abruptas y umbrales más altos, aplicando gran reducción de ganancia para que la señal no supere el umbral. Su acción puede ser muy notoria.
+- Los tiempos de ataque suelen ser más lentos en el compresor y muy rápidos en el limitador. De este modo, los ataques que quedan por debajo del umbral del limitador se preservan, aportando naturalidad. Los ataques que lo superan son atenuados por el limitador, dependiendo del ajuste de DRIVE.
+
+---
+
+## Compresor multibanda
+
+Las cinco bandas de trabajo corresponden a las definidas en el AGC multibanda. Cada compresor es independiente y cuenta con los siguientes ajustes:
+
+![542 Procesado Compresor Pn](/images/542/542-procesado-compresor.png)
+
+- **Umbral (THS):** nivel a partir del cual empieza a actuar el compresor. Una vez alcanzado el umbral, entra en juego el tiempo de ataque y luego la atenuación según la relación de compresión.
+- **Ratio:** define la atenuación aplicada en un rango de 1:1 a 10:1. Los compresores utilizan transición suave (_soft knee_). Como regla general, a menor umbral, menor ratio; a mayor umbral, mayor ratio. Un umbral bajo con compresión suave afecta a más señales, lo que combinado con el limitador produce un sonido más compacto.
+- **Ataque:** tiempo que tarda en actuar el compresor luego de superar el umbral. Cuanto mayor sea, más impacto tendrá esa banda, pero también más recorte deberá realizar el limitador y el cliper. El ajuste depende del material:
+  - Rock/pop → tiempos más lentos, aportan impacto y sensación de rango dinámico.
+  - Percusión → conviene usar ataques lentos en bandas LOW y M1 para mayor “punch”.
+  - Música orquestal/jazz/piano → convienen ataques rápidos para preservar naturalidad.
+- **Recuperación (Release):** tiempo para recuperar la ganancia unitaria al caer por debajo del umbral. Es un ajuste clave para la sensación de rango dinámico:
+  - Recuperación lenta → el compresor actúa todo el tiempo, como un _leveler_. Mantiene dinámica pero no genera grandes incrementos de sonoridad.
+  - Recuperación rápida → refuerza transitorios y ataques. Ejemplos:
+    - Música electrónica → recovery corto en graves para que cada _kick_ sea afectado por el ataque.
+    - Banda de agudos → recovery rápido aumenta presencia y brillo, pero puede endurecer el sonido.
+- **Retención (Hold):** tiempo durante el cual se mantiene la compresión una vez activada, independientemente de la variación de entrada. A mayor retención, menor agresividad del proceso pero también menor sonoridad.
+
+---
+
+## Limitador multibanda
+
+Los limitadores aplican una relación fija cercana a 100:1.
+
+![542 Procesado MB Limiter Pn](/images/542/542-procesado-MBLimiter.png)
+
+Cada banda dispone de cinco controles:
+
+- **Umbral (THS) y DRIVE:**
+  - DRIVE aplica ganancia antes de la limitación. Equivale a un control de nivel de salida en el compresor compresor. Si se aumenta DRIVE manteniendo el umbral, más picos son limitados y aumenta la energía de la banda.
+  - Si se baja el umbral, aumenta la limitación pero se reduce la energía. Para compensarlo, se puede elevar la banda en el **Density EQ**.
+- **Ataque (ATK):** durante el tiempo de ataque, el limitador deja pasar picos que serán contenidos más adelante por los recortadores. Ataques rápidos minimizan el recorte, pero el sonido se vuelve “chato” y poco natural.
+- **Hold y Release:** funcionan de modo análogo a los del compresor.
+
+---
+
+## Density EQ
+
+El **ecualizador de densidad** permite ajustar el balance espectral del sonido, dosificando cuánto aporta cada banda a la mezcla final.
+
+<img
+  src="/images/542/542-procesado-densityEQ.png"
+  alt="542 Procesado Density EQ Pn"
+  className="mx-auto"
+  style={{ width:"72%" }}
+/>
+
+Cuanto más se eleva una banda en el Density EQ, más cerca queda de su recortador y mayor es la sonoridad, pero también se reduce la dinámica por recorte suave, lo que genera un sonido más áspero.
+
+## Clippers (etapas de recorte)
+
+![542 Procesado Clippers Pn](/images/542/542-procesado-clippers.png)
+
+### Band Clippers
+
+Los limitadores de banda funcionan como recortadores suaves (_soft clippers_), conteniendo los picos que atraviesan la etapa de compresión debido a los tiempos de ataque.
+
+El control principal ajusta el **umbral de recorte**. La referencia “0” equivale al 100% de modulación de audio.
+
+- Umbral por debajo de cero → esa banda nunca llegará a modular al 100% por sí sola, aunque la suma de bandas sí lo haga.
+- Umbral en cero o superior → no garantiza alcanzar el 100%, pues depende del nivel en el Density EQ.
+
+Los indicadores de nivel muestran la señal de cada banda y la cantidad de limitación.\
+Por encima del umbral, el indicador marca la **señal limitada** en color naranja.
+
+En la práctica, los band clippers se ajustan en 100% o hasta 1 dB por debajo de cero, excepto la banda de graves, que suele configurarse entre 2 y 6 dB por debajo para dejar margen en la suma final.
+
+---
+
+### Limitador de banda ancha (WB Limiter)
+
+La suma de las bandas se realiza después de los limitadores individuales. Aunque estén ajustados en 100%, la suma genera picos por encima de ese valor. El **limitador de banda ancha** contiene esos picos, manteniendo la señal en 100%.
+
+Este limitador “predice” la atenuación necesaria con un sistema de _look ahead_ (ataque cero), evitando distorsión armónica. El umbral es fijo en 100% de modulación.
+
+- El control **DRIVE** permite amplificar la mezcla, aumentando la acción del limitador y, por ende, la energía total.
+- El control **SHAPE** introduce recorte suave para trabajar con limitaciones más altas, minimizando efectos de intermodulación. Este recorte solo entra en acción con densidades elevadas de picos, quedando enmascarado al oído.
+- El 
+
+<Info>
+  La limitación en banda ancha aumenta la sonoridad hasta reducciones de 6 dB. Más allá de ese punto, no aporta beneficios y puede generar un sonido plano y sin profundidad.
+</Info>
+
+---
+
+## Recortador de MPX (MPX Clipper)
+
+Al final de la cadena, las señales **suma (L\+R)** y **resta (L–R)** son recortadas por separado con un recortador suave. El umbral se ubica en 100% de modulación.
+
+El control **DRIVE** aplica ganancia antes del recorte:
+
+- DRIVE = 0 → el recorte es prácticamente nulo.
+- DRIVE = 1 dB → implica 1 dB de recorte.
+- Valores de 0,5 a 1 dB son tolerables en la mayoría de los casos.
+- Valores mayores generan un sonido más áspero, que algunos identifican como **“FM style”**.
+
+<Warning>
+  Usar esta técnica solo si se requiere alcanzar niveles de sonoridad muy altos en el aire.
+</Warning>

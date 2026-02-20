@@ -1,0 +1,122 @@
+---
+title: "Especificaciones técnicas"
+description: "Especificaciones técnicas "
+keywords: ["especificaciones"]
+tags: "consolas de estudio,linea Classic,DX816,DX822"
+---
+
+<AccordionGroup>
+  <Accordion title="Entradas de audio">
+    | Modelo    | Configuración MIC                                                                                                                                                     |
+    | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **DX816** | 5 entradas MIC balanceadas (XLR)<br />Fader1 = MIC-1<br />Fader2 = MIC-2+2b<br />Fader3 = MIC-3+3b                                                                    |
+    | **DX822** | 10 entradas MIC balanceadas (XLR)<br />Fader1 = MIC-1<br />Fader2 = MIC-2+2b<br />Fader3 = MIC-3+3b<br />Fader4 = MIC-4<br />Fader5 = MIC-5+5b<br />Fader6 = MIC-6+6b |
+
+    | Tipo de entrada              | Conector | Cantidad |
+    | ---------------------------- | -------- | -------- |
+    | Línea balanceada estéreo     | RJ45     | 2        |
+    | Línea no balanceada estéreo  | RCA      | 2        |
+    | Línea no balanceada estéreo  | TRS 1/8" | 2        |
+    | Sintonizador externo estéreo | TRS 1/4" | 1        |
+    | Entradas digitales estéreo   | USB B    | 2        |
+
+    **Phantom:** 48V en todas las entradas MIC, conmutable desde el panel frontal.
+  </Accordion>
+  <Accordion title="Niveles de entrada">
+    | Tipo                | Nivel             | Impedancia  |
+    | ------------------- | ----------------- | ----------- |
+    | MIC                 | –10 dBu / –75 dBu | 150 / 250 Ω |
+    | Línea balanceada    | –20 dBu / +26 dBu | 600 ~ 10 kΩ |
+    | Línea no balanceada | –15 dBu / +12 dBu | 600 ~ 10 kΩ |
+  </Accordion>
+  <Accordion title="Salidas analógicas">
+    | Salida                          | Nivel                                                       |
+    | ------------------------------- | ----------------------------------------------------------- |
+    | PGM & REC (balanceadas)         | \+4 dBm nominal<br />\+28 dBu (10 kΩ)<br />\+20 dBm (600 Ω) |
+    | Híbrido externo (no balanceada) | \+4 dBu                                                     |
+  </Accordion>
+  <Accordion title="Niveles digitales">
+    Recomendación K-15 para radiodifusión: **0VU = –15 dBFS**
+  </Accordion>
+  <Accordion title="Monitoreo e híbrido">
+    | Salida                            | Conector        | Nivel / características                                            |
+    | --------------------------------- | --------------- | ------------------------------------------------------------------ |
+    | Estudio (parlantes)               | RJ45            | \+4 dBu, silenciado automático                                     |
+    | Cabina de Control (parlantes)     | Mini-jack       | \+4 dBu, silenciado automático                                     |
+    | Estudio (auriculares)             | RJ45            | \+10 dBu, con amp. hasta 8 auriculares                             |
+    | Cabina de Control (auriculares)   | Jack estéreo    | \+10 dBu                                                           |
+    | Envío híbrido externo (MIX-Minus) | TRS             | \+4 dBu / 10 kΩ                                                    |
+    | CUE (escucha previa)              | Speaker Interno | Mono. Conmutable a parlantes y/o auriculares de Control y Estudio. |
+  </Accordion>
+  <Accordion title="GPO">
+    | Canales             | Tipo             | Especificación |
+    | :------------------ | :--------------- | :------------- |
+    | MIC-1, MIC-2, MIC-3 | Colector abierto | \+24 V @ 0,1 A |
+    | Línea 6 & 7         | Colector abierto | \+24 V @ 0,1 A |
+  </Accordion>
+  <Accordion title="Talk-back">
+    - MIC Talkback incluido, tipo PZM con cancelación de ruido.
+    - Limitador de audio.
+    - Envío a línea telefónica o parlantes/auriculares de Estudio.
+  </Accordion>
+  <Accordion title="Tally Light">
+    | Señal    | Especificación                       |
+    | -------- | ------------------------------------ |
+    | On-air   | 12 VDC @ 0,15 A (dos luces Solidyne) |
+    | Conector | Tubular 2.1 mm (pin interno)         |
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="Audio">
+    | Parámetro               | Especificación                                                                                |
+    | ----------------------- | --------------------------------------------------------------------------------------------- |
+    | Respuesta en frecuencia | 20–20.000 Hz ±0.5 dB (LIN -\> PGM)                                                            |
+    | Ecualizador MIC         | 4 bandas: 80 Hz (shelving), 160 Hz (bell), 6.3 kHz (bell), 8 kHz (shelving), ±15 dB           |
+    | Compresor MIC           | Umbral 0VU, ataque \< 10 ms, ratio 10:1, compresión máx. 20 dB, variación \< 2 dB ante +15 dB |
+    | Ruido MIC               | EIN = –120 dBu / 150 Ω                                                                        |
+    | Ruido línea             | S/N \> 75 dBA                                                                                 |
+    | Rango dinámico          | \>90 dBA (calidad CD)                                                                         |
+    | Diafonía PGM–REC        | \>70 dBA @ 1 kHz                                                                              |
+    | Distorsión              | \<0.03 % THD (30–15.000 Hz)                                                                   |
+    | Fase                    | \<3º L/R @ 50–10.000 Hz                                                                       |
+    | Correlación estéreo     | Error \<0.2 dB L/R en rango 0–40 dB del fader                                                 |
+    | Headroom                | 22 dB @ LIN -\> PGM Ref +4 dBu / 10 kΩ                                                        |
+  </Accordion>
+  <Accordion title="VU-meters">
+    - 4 vúmetros electrónicos para PGM & REC.
+    - Medición cuasi-peak.
+    - Indicación de compresión: 0–15 dB.
+  </Accordion>
+  <Accordion title="Híbrido telefónico">
+    | Característica        | Especificación                                                              |
+    | --------------------- | --------------------------------------------------------------------------- |
+    | Tipo                  | Híbrido activo de 3 líneas (2 terrestres + 1 celular Bluetooth 4.0 @16 kHz) |
+    | Respuesta             | 300–3.400 Hz                                                                |
+    | Ruido                 | \>60 dBA S/N                                                                |
+    | Rechazo               | \>40 dB                                                                     |
+    | Ajuste                | Desde panel frontal                                                         |
+    | Circuito de prioridad | 12 dB cuando interrumpe locutor local                                       |
+    | Lógica                | Un único fader de 100 mm controla CUE, Hold y Live                          |
+    | Protección            | Entradas flotantes a transformador + varistores SIOV                        |
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="Alimentación">
+    | Característica | Especificación               |
+    | -------------- | ---------------------------- |
+    | Conector       | Tubular 1.8 mm (pin interno) |
+    | Fuente         | Switching 90–240 V, 20 VA    |
+    | Salida         | 28 VDC @ 0,57 A              |
+  </Accordion>
+  <Accordion title="Dimensiones / peso">
+    | Dimensión   | Valor              |
+    | ----------- | ------------------ |
+    | Profundidad | 350 mm             |
+    | Ancho       | 550 mm             |
+    | Altura      | 130 mm             |
+    | Peso envío  | 8 kg               |
+    | Embalaje    | 600 × 500 × 180 mm |
+  </Accordion>
+</AccordionGroup>

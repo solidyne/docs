@@ -1,0 +1,99 @@
+---
+title: "Procesado VQR"
+description: "Restauración del audio con procesado VQR."
+keywords: ["VQR"]
+tags: ["híbridos", "HL240"]
+---
+
+## Fundamentos
+
+El procesado **VQR (Voice Quality Restoration)** fue desarrollado por Solidyne para su línea de híbridos analógicos con líneas terrestres.\
+Su objetivo es **mejorar la calidad de audio de una llamada**, reconstruyendo el espectro perdido durante la transmisión telefónica.
+
+Las líneas convencionales (POTS) limitan el ancho de banda a un rango aproximado de **300 Hz – 3.000 Hz**, suficiente para la inteligibilidad, pero que elimina frecuencias bajas y altas que aportan sensación de naturalidad.
+
+- El sistema VQR puede **reconstruir graves hasta 50 Hz**.
+- También es capaz de generar componentes de alta frecuencia, devolviendo brillo y claridad a la voz.
+- Aunque se desarrolló para líneas terrestres, el VQR también mejora llamadas realizadas a través de **telefonía móvil**.
+
+<Tip>
+  Los mejores resultados se obtienen al usar consolas de exteriores y micrófonos dinámicos de buena calidad.
+</Tip>
+
+<Info>
+  Para una explicación técnica detallada, consultar el documento: [Teoría del sistema VQR](https://www.solidynepro.com/descargas/manual_antiguos/TeoriadelsistemaVQR.pdf)
+</Info>
+
+---
+
+## Uso del procesado VQR
+
+El VQR se activa pulsando su botón a la posición **ON**.\
+El usuario controla la reconstrucción mediante tres perillas:
+
+<img
+  src="/images/hl240/hl240-VQR.png"
+  alt="Hl240 VQR Pn"
+  title="Hl240 VQR Pn"
+  className="mx-auto"
+  style={{ width:"47%" }}
+/>
+
+- **LOW BAND** (graves)
+- **HI BAND** (agudos)
+- **NOISE** (reductor de ruido)
+
+### Control LOW BAND
+
+Regula la cantidad de graves añadidos a la señal.
+
+- Hacia la izquierda (OFF): sin reconstrucción en bajas frecuencias.
+- Girando en sentido horario: se refuerzan las frecuencias graves.
+
+<Note>
+  La efectividad depende de la calidad del audio original (teléfono usado, nivel de envío desde la consola, interferencias, etc.).\
+  Cuanto peor sea la calidad de la llamada, menor será la mejora aportada por el VQR.
+</Note>
+
+<Warning>
+  Monitorear siempre el resultado en **monitores principales**.\
+  El uso de auriculares o altavoces de baja calidad puede dar una falsa sensación de exceso de graves.
+</Warning>
+
+### Control HI BAND
+
+Regula la cantidad de agudos añadidos a la señal.
+
+- Hacia la izquierda: procesado desactivado en agudos.
+- En sentido horario: refuerzo progresivo de las altas frecuencias.
+
+<Warning>
+  El ajuste de agudos es más crítico que el de graves:\
+  un exceso puede producir un sonido artificial, con agudos crujientes molestos para el oyente.
+</Warning>
+
+<Tip>
+  En emisoras AM suele requerirse mayor énfasis en alta frecuencia, por lo que el control HI BAND ofrece un rango muy amplio.
+</Tip>
+
+<Note>
+  Es importante que la señal alcance la etapa VQR con los picos de audio alcanzando la zona roja de vúmetro. Si el nivel es demasiado bajo o alto, la reconstrucción será defectuosa.
+</Note>
+
+### Control NOISE (reductor de ruido)
+
+Este control activa una **compuerta de ruido** (Expander-Gate).\
+Su función es atenuar el ruido de fondo durante las pausas en la conversación.
+
+- Perilla a la izquierda (OFF): compuerta desactivada.
+- Girando a la derecha: aumenta el umbral, es decir, el nivel por debajo del cual la compuerta atenúa el ruido.
+
+**Consideraciones:**
+
+- Si el piso de ruido es demasiado alto, siempre estará por encima del umbral y la compuerta no actuará correctamente.
+- Si el ruido es muy variable (ejemplo: ambiente callejero), conviene no usar la compuerta para evitar un fondo entrecortado.
+- Si el ruido es constante (zumbido o soplido), puede ser preferible dejarlo presente, ya que el oído tiende a enmascararlo.
+
+<Note>
+  El criterio del operador determinará cuándo es beneficioso activar la compuerta y cuándo es mejor mantener el ruido ambiente.
+</Note>

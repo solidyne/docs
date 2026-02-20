@@ -1,0 +1,74 @@
+---
+title: "Operación de la serie DX"
+description: "Operación de las consolas DX816"
+keywords: ["operación"]
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+---
+
+## Introducción
+
+En la consola pueden distinguirse varias áreas principales:
+
+- Canales de entrada.
+- Canal de Telecomunicaciones.
+- Asignación de monitoreo y órdenes a estudio.
+- Escucha previa (**CUE**).
+- Indicadores de nivel.
+
+Las diferentes fuentes de audio (micrófonos, computadoras, interfaces de audio, enlaces, líneas telefónicas, etc.) ingresan a la consola a través de los **canales de entrada**, que las amplifican.
+
+La consola mezcla todas las señales para generar dos salidas principales:
+
+- **PGM**: señal enviada al procesador de audio y luego al transmisor o streaming.
+- **REC**: señal de grabación independiente o auxiliar.
+
+El operador controla el nivel de cada señal con los **atenuadores principales**.\
+Mediante los botones de asignación (**PGM / REC**), las señales se envían a las salidas correspondientes.
+
+Con los botones **CUE** se pueden escuchar estas señales antes de enviarlas al aire.
+
+- Los canales de línea se envían al aire al abrir el atenuador.
+- Los canales de micrófono requieren además pulsar el botón **MASTER MIC**.
+- Los canales de línea **BAL-1** y **BAL-2** disponen de doble entrada (balanceada y no balanceada), seleccionable desde el panel frontal.
+
+---
+
+## Entradas de micrófono
+
+- **DX816**: cuenta con 3 faders de micrófono, pero las entradas MIC-2 y MIC-3 incluyen un segundo conector (MIC-2b y MIC-3b) que comparte preamplificador. De este modo, los canales 2 y 3 pueden manejar dos micrófonos a la vez, permitiendo hasta **5 micrófonos**.
+- **DX822**: lo mismo ocurre con los canales MIC-4 y MIC-5 (con entradas gemelas MIC-4b y MIC-5b). En total permite **10 micrófonos en 6 faders**.
+
+<Warning>
+  Se recomienda que los micrófonos en entradas gemelas sean de **igual marca y modelo**, para mantener uniformidad en la señal.
+</Warning>
+
+- Todas las entradas de micrófono soportan **alimentación _phantom_ de 48V** conmutable en grupo.
+- En DX816, la **ecualización **es global para todos los micrófonos.
+- En DX822, un segundo ecualizador actúa sobre MIC-4, MIC-5 y MIC-6 (y sus entradas gemelas).
+
+La **compresión** afecta únicamente a los canales de micrófono. Su acción depende del nivel en programa. El **indicador de reducción de ganancia** muestra el trabajo del compresor.\
+Si dos micrófonos comparten un canal, el compresor empareja sus niveles, suavizando diferencias por proximidad o intensidad de voz.
+
+<Note>
+  Los micrófonos dinámicos están diseñados para soportar **48V phantom**, por lo que pueden mezclarse con micrófonos de condensador sin riesgo.
+</Note>
+
+---
+
+## Entradas de línea y módulos digitales
+
+- Los canales **BAL-1 y BAL-2** manejan entradas balanceadas y auxiliares no balanceadas, seleccionables desde el panel frontal.
+- Los módulos **USB** gestionan dos señales estéreo vía USB.
+- La conexión USB envía a la computadora las señales **PGM (USB-1)** y **REC (USB-2)**.
+- En modelos con opción **AoIP**, se pueden instalar hasta dos módulos Ethernet para transmisión/recepción de streaming.
+  - Señales disponibles: PGM y REC.
+  - Cada módulo AoIP también recibe un streaming, que se asigna a un canal de línea.
+
+---
+
+## Indicadores
+
+La torreta de la consola incluye:
+
+- **Vúmetros LED** de programa y grabación (nivel pico-promedio).
+- **Indicador de compresor de micrófonos**.

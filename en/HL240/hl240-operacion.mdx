@@ -1,0 +1,159 @@
+---
+title: "Operación"
+description: "Operación y puesta al aire"
+keywords: ["operación"]
+tags: ["híbridos", "HL240"]
+---
+
+## Líneas terrestres
+
+Las líneas telefónicas se manejan con un **botón** y una **perilla de nivel**:
+
+<img
+  src="/images/hl240/hl204-frente-lineas.png"
+  alt="Hl204 Frente Lineas Pn"
+  title="Hl204 Frente Lineas Pn"
+  className="mx-auto"
+  style={{ width:"57%" }}
+/>
+
+- **ON**: toma la línea telefónica.
+- **Rotativo-HOLD**: En esta posicoón (todo a hacia la izquierda) retiene la llamada con audio de aire.
+- **Rotativo-AIRE**: Hacia la derecha, ajusta el nivel en la mezcla de salida.
+- **OFF**: libera la línea y la devuelve al teléfono asociado.
+
+Cuando ingresa una llamada, el botón de la línea se ilumina con la cadencia del timbre.\
+La llamada también sonará en el teléfono asociado.
+
+- Para **atender desde el HL240-VQ**, pulsar el botón de la línea.
+- Para **llamar desde el estudio**, discar en el teléfono y luego transferir al HL240-VQ pulsando el botón de línea y colgando el auricular.
+
+<Tip>
+  **Para conferencia:** si hay una llamada al aire, colocar la segunda en **HOLD** antes de tomarla, evitando que se sume directamente al aire.\
+  Mientras está en HOLD, la persona escucha el programa que está al aire.
+</Tip>
+
+---
+
+## Móviles vía Bluetooth
+
+HL240-VQ maneja hasta **dos teléfonos móviles vinculados por Bluetooth**.
+
+<img
+  src="/images/hl240/hl240-frente-BLT.png"
+  alt="Hl240 Frente BLT Pn"
+  title="Hl240 Frente BLT Pn"
+  className="mx-auto"
+  style={{ width:"42%" }}
+/>
+
+La operación es similar a trabajar con líneas terrestres:
+
+- Pulsar y mantener el botón **BLT** para encender el canal (LED destellando).
+- Encender Bluetooth en el móvil ya vinculado.
+- Conectar el móvil al dispositivo Solidyne BLT-1 o BLT-2.
+- Las llamadas entrantes o salientes del móvil cursan a través del canal Bluetooth.
+
+<Note>
+  Para evitar interferencias, mantener la distancia entre el móvil y el HL240-VQ lo más corta posible.
+</Note>
+
+---
+
+## Recibir una llamada
+
+Las llamadas entrantes (línea terrestre o móvil) pueden atenderse desde el teléfono asociado o desde el HL240-VQ.\
+Los botones **LINE** y **BLT** destellan con la cadencia del timbre.
+
+- **Bluetooth**: un toque en el botón BLT atiende la llamada en el móvil. Si se desea atender y dialogar desde el teléfono, primero debe desconectarse de Bluetooth y luego reconectar para transferir al híbrido.
+- **Líneas terrestres**: pulsar **ON/OFF** para que el híbrido tome la línea. También se puede atender desde el teléfono asociado y transferir al HL240-VQ pulsando ON/OFF antes de colgar.
+
+---
+
+## Llamada en espera y talk-back
+
+El equipo siempre envía retorno de audio al teléfono remoto, independientemente de la perilla de nivel.
+
+- Con la perilla en posición **HOLD** y una llamada activa, el audio de la línea no se suma a la salida, pero el otro extremo escucha el programa en curso (señal de **AUDIO IN**).
+- En esta condición, se puede hablar a las líneas usando el micrófono **Talkback** integrado.
+
+  Al pulsar **Talkback** se interrumpe temporalmente la señal de AUDIO IN y envía la voz del operador **a todas las líneas**.
+
+  <img
+    src="/images/hl240/hl240-talkback.png"
+    alt="Hl240 Talkback Pn"
+    title="Hl240 Talkback Pn"
+    className="mx-auto"
+    style={{ width:"33%" }}
+  />
+
+<Warning>
+  Talkback **no debe usarse cuando hay una llamada al aire**, ya que interrumpe el audio de programa hacia el interlocutor.
+</Warning>
+
+Las líneas se pueden escuchar monitoreando el canal HL240-VQ en la consola de mezcla. También se pueden usar auriculares conectados “HEADPHONES” en el panel trasero de la unidad.
+
+---
+
+## Puesta al aire
+
+El HL240-VQ incluye un mezclador interno para conferencias.\
+La mezcla se ajusta con las perillas del panel frontal y se envía a la consola mediante **AUDIO OUT**.
+
+<Steps>
+  <Step title="Enviar a la mezcla de salida">
+    Colocar la perilla de nivel en el centro. Si hablamos en privado con la línea fuera del aire, aprovechar este momento para ajustar el nivel.
+  </Step>
+  <Step title="Habilitar en consola">
+    Abrir en la consola el canal asignado al HL240-VQ.
+  </Step>
+  <Step title="Ajustar nivel al aire">
+    Si no hubo charla previa (o fue desde el teléfono), realizar el ajuste final de nivel en vivo desde el HL240-VQ. Los picos en el indicador **OUTPUT LEVEL** a +4 dBu.
+  </Step>
+</Steps>
+
+---
+
+## Finalizar la llamada
+
+- **En líneas telefónicas**:
+  - OFF desconecta la línea del híbrido y la devuelve al teléfono asociado.
+  - Si se presiona OFF con el teléfono colgado durante una llamada, la comunicación se corta.
+  - Para transferir al teléfono, primero sacar la llamada del aire, descolgar y luego presionar OFF.
+- **En canales Bluetooth**:
+  - Pulsar brevemente el botón BLT o cortar desde el móvil.
+  - Antes de cortar, retirar la llamada del aire.
+  - Si se corta directamente desde HL240-VQ, se emitirá un _beep_ de finalización que podría salir al aire.
+
+---
+
+## Nivel de envío a las líneas
+
+El audio que se envía a las líneas entra por **AUDIO IN**.\
+El control **INPUT LEVEL (Send to Lines)** ajusta este nivel.
+
+El nivel de envío debe mantenerse con picos entre **–2 y +4 dBu**.
+
+<Warning>
+  Un envío excesivo deteriora el rechazo, generando realimentación de señal por la línea y ensuciando la voz directa.
+</Warning>
+
+---
+
+## Nivel de salida
+
+La salida balanceada entrega la mezcla de líneas y canales Bluetooth.\
+Ajustar las perillas de nivel para que el indicador **OUTPUT LEVEL** muestre picos en **\+4 dBu**.
+
+Esto asegura una correcta excitación del procesado **VQR**.
+
+<Note>
+  Al operar con Bluetooth, verificar que el volumen del móvil esté al máximo.
+</Note>
+
+### Salidas directas
+
+Las salidas **PH-1** y **BLT-1** entregan señal **pre-fader** con nivel fijo.\
+Permiten monitorear Línea-1 y Bluetooth-1 en la consola, incluso si otras líneas están al aire.
+
+Aunque se usen las salidas directas, las señales siguen disponibles en la mezcla principal del HL240-VQ.

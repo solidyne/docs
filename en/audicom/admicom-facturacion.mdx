@@ -1,0 +1,61 @@
+---
+title: "Integración con sistemas de facturación externos"
+description: "Exportar reportes a planillas para integración con otros sistemas"
+keywords: ["reportes", "comerciales", "tanda", "publicidad", "programación"]
+tags: ["Software", "Admicom", "audicom"]
+---
+
+En **ADMICOM**, la opción `Reportes > Ventas` permite exportar la base de datos completa para integrarla con un sistema de facturación de terceros.
+
+El procedimiento es sencillo:
+
+1. Seleccionar el rango de fechas de exportación.
+2. Pulsar **Reporte**.
+3. Hacer clic en el botón **Exportar a Excel**.
+
+Este proceso debe realizarse **una vez al mes**, de modo de obtener la totalidad de los campos comerciales que ADMICOM guarda sobre cada orden publicitaria. El archivo resultante puede ser importado por cualquier software de facturación externo que utilice la emisora.
+
+---
+
+### Reportes de gestión personalizados
+
+ADMICOM también permite generar **plantillas de reportes personalizados** que pueden exportarse a formato Excel para ser utilizados por la gerencia de la emisora.
+
+Estos reportes permiten analizar datos como:
+
+- Montos a facturar por cliente.
+- Ventas por programa.
+- Ventas por agencia.
+- Distribución por rubro comercial.
+- Totales por mes.
+
+En el módulo `Reportes > Ventas`, el panel superior derecho incluye las herramientas de personalización:
+
+- El usuario puede trabajar con un **cubo de 3 ejes (X, Y, Z)** para organizar los datos.
+- Una vez diseñado el reporte, se puede **guardar** para reutilizarlo o **cargar** uno ya existente con los botones `CARGAR / GUARDAR`.
+- El botón **PIVOTEAR** permite aplicar filtros y generar prácticamente cualquier tipo de reporte posible.
+
+Cuando los datos están listos, basta con exportarlos con el botón **Excel**. El archivo resultante puede:
+
+- Importarse a otros programas que lean planillas de cálculo.
+- Ser utilizado directamente en Excel para diseñar gráficos y reportes de gestión más detallados.
+
+---
+
+### Campos clave para la integración
+
+De todos los campos disponibles en los reportes, algunos resultan **cruciales para interrelacionar ADMICOM con el sistema de facturación externo**:
+
+- **Número de Agencia:**\
+  Código de campaña asignado por las agencias.\
+  Usualmente tiene el formato `1234/0`, donde el dígito después de la barra indica revisiones (ej. `1234/1` tras un proceso de _Anula y Reemplaza_).
+- **Número Interno:**\
+  Código que asigna ADMICOM a cada nueva orden cargada.\
+  Este número es **único** y también sigue la convención `1234/0`.\
+  Al usar la función _Anula y Reemplaza_, la pauta original se mantiene con fecha vencida, y se genera una nueva versión con numeración incremental (`1234/1`, `1234/2`, etc.).\
+  Este campo es el más adecuado para identificar de forma unívoca las órdenes en un sistema de facturación externo.
+- **Cliente:**\
+  Nombre del cliente al que se debe facturar.
+- **Bruto:**\
+  Monto total a facturar.\
+  (El reporte también incluye montos parciales y descuentos intermedios que pueden ser útiles para ciertos sistemas de gestión).

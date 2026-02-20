@@ -1,0 +1,260 @@
+---
+title: "Desde el display"
+description: "Configuraciones desde el frente del equipo"
+keywords: ["control", "bloqueo", "contraseña", "display", "setup", "configuración"]
+tags: ["procesadores", "542"]
+---
+
+## Control desde el panel frontal
+
+Los aspectos esenciales del 542APC se pueden definir directamente desde el frente del equipo.\
+La unidad presenta una **pantalla OLED** y una **rueda de comando con función pulsador**.
+
+1. Girando la rueda se navegan las opciones.
+2. Pulsando la rueda se accede a las opciones de una pantalla.
+3. Girando nuevamente se navegan las opciones dentro de esa pantalla.
+4. Para modificar una opción:
+   - Pulse la rueda sobre la opción.
+   - Gire para cambiar su valor o estado.
+   - Pulse nuevamente para confirmar.
+5. Para salir, seleccione **BACK** y confirme.
+
+---
+
+### Pantalla inicial y presets
+
+- Al encender, aparece por unos segundos la **pantalla de inicio** con la versión de firmware.
+- Luego se muestra la **dirección IP**, la **MAC** y el **preset de procesado actual**.
+
+  <img
+    src="/images/542/542-oled-home.png"
+    alt="542 Oled Home Pn"
+    title="542 Oled Home Pn"
+    style={{ width:"45%" }}
+  />
+
+Para cambiar presets:
+
+1. Pulse la rueda.
+2. Gire para navegar entre los **32 presets** (16 de fábrica \+ 16 de usuario).
+3. Pulse la rueda para confirmar.
+
+---
+
+### Pantalla de bloqueo (LOCK)
+
+La pantalla **LOCK** se accede girando la rueda desde la pantalla inicial.\
+Permite activar/desactivar el acceso por contraseña.
+
+<img
+  src="/images/542/542-oled-lock.png"
+  alt="542 Oled Lock Pn"
+  title="542 Oled Lock Pn"
+  style={{ width:"45%" }}
+/>
+
+- Para **bloquear**, seleccione LOCK y pulse.
+- Para **desbloquear**, pulse nuevamente sobre LOCK.
+  - Si está activa la contraseña, será solicitada (predeterminada: `1234`).
+
+<Info>
+  Cuando el equipo está bloqueado, se pueden navegar pantallas pero no modificar opciones.
+</Info>
+
+---
+
+### Pantalla de entradas (INPUTS)
+
+Muestra el nivel de señal de todas las entradas.\
+La entrada activa se indica con una pequeña **flecha** a la derecha del número de entrada.\
+Predeterminada de fábrica: **Analógica XLR**.
+
+<img
+  src="/images/542/542-oled-entradas.jpg"
+  alt="542 Oled Entradas Jp"
+  title="542 Oled Entradas Jp"
+  style={{ width:"32%" }}
+/>
+
+#### Cambiar la entrada (desde panel frontal)
+
+1. Gire la rueda hasta visualizar **INPUT**.
+2. Pulse la rueda para cambiar la entrada activa.
+3. Gire para elegir la entrada (ejemplo: `2:ANALOG2`).
+4. Pulse para confirmar.
+5. La entrada activa queda indicada con una flecha.
+6. El ajuste de ganancia se realiza desde **CONFIGURACIÓN**.
+
+---
+
+### Monitor de salidas
+
+Muestra el nivel de señal en cada salida.\
+El ajuste de niveles se realiza desde el menú **SETUP**, con procedimiento similar al de entradas.
+
+<img
+  src="/images/542/542-oled-salidas.png"
+  alt="542 Oled Salidas Pn"
+  title="542 Oled Salidas Pn"
+  style={{ width:"45%" }}
+/>
+
+---
+
+### Monitor de procesado
+
+Muestra la acción de los procesadores internos.
+
+<img
+  src="/images/542/542-oled-procesado.png"
+  alt="542 Oled Procesado Pn"
+  title="542 Oled Procesado Pn"
+  style={{ width:"45%" }}
+/>
+
+- AGC de banda completa y multibanda
+- Compresores y limitadores multibanda
+- Limitador de banda ancha
+- Recortador final
+
+<Note>
+  Los parámetros de procesado se ajustan únicamente desde las **pantallas de control web**.
+</Note>
+
+---
+
+### Auriculares
+
+Permite ajustar el **nivel de auriculares**.
+
+<img
+  src="/images/542/542-oled-auris.jpg"
+  alt="542 Oled Auris Jp"
+  title="542 Oled Auris Jp"
+  style={{ width:"33%" }}
+/>
+
+- Gire la rueda para modificar directamente el volumen.
+
+Fuentes de señal disponibles:\
+a) Entradas analógicas o digitales\
+b) Sintonizador FM interno\
+c) Salida del AGC\
+d) Audio final procesado (con de-énfasis)
+
+Para cambiar la fuente:
+
+1. Pulse la rueda.
+2. Gire para seleccionar la fuente.
+3. Pulse para confirmar.
+
+Para \*\*salir \*\*de la pantalla HEADPHONES:
+
+- **Mantenga pulsada la rueda** hasta que aparezca un menú emergente con opciones.
+
+---
+
+### Configuración de sistema (SETUP)
+
+Desde el panel frontal se pueden editar las principales configuraciones del equipo.
+
+1. Gire la rueda hasta visualizar **SETUP MENU**.
+
+   <img
+     src="/images/542/542-oled-sistema.png"
+     alt="542 Oled Sistema Pn"
+     title="542 Oled Sistema Pn"
+     style={{ width:"45%" }}
+   />
+2. Pulse para visualizar las opciones.
+
+   <img
+     src="/images/542/542-oled-sistema-setup.png"
+     alt="542 Oled Sistema Setup Pn"
+     title="542 Oled Sistema Setup Pn"
+     style={{ width:"45%" }}
+   />
+
+#### Configuración de entrada
+
+- `INPUT SEL`: selecciona la entrada activa.
+- `GAIN`: ajusta la ganancia de la entrada activa en un rango de **±14 dB**.
+  - Nivel \+4 dBu equivale a –18 dBfs (AES K18), con **18 dB de headroom**.
+  - Ajuste la ganancia para que los picos a**0 VU en la consola**  estén entre\*\*–22 y –9 dBfs \*\* en el indicador del procesador.
+
+  <img
+    src="/images/542/542-oled-setup-entradas.jpg"
+    alt="542 Oled Setup Entradas Jp"
+    title="542 Oled Setup Entradas Jp"
+    style={{ width:"34%" }}
+  />
+
+Para modificar la ganancia:
+
+1. Gire la rueda, seleccione `IN` y pulse.
+2. (Opcional) Para cambiar la entrada, girar la rueda, seleccionar `INPUT SEL` y pulsar. Girar hasta visualizar la entrada deseada y pulsar para confirmar.
+3. Seleccione `GAIN` y pulse.
+4. Gire para ajustar ganancia.
+5. Pulse para confirmar.
+6. Seleccione **BACK** para salir.
+7. Gire hasta **BACK** en el menú SETUP para finalizar.
+8. Los cambios se guardan automáticamente.
+
+#### Configuración de salidas
+
+- `OUTPUT ADJ`: permite elegir una salida.
+- `GAIN`: ajusta el nivel de la salida seleccionada, con procedimiento similar al explicado para las entradas.
+
+#### Generador estéreo
+
+<img
+  src="/images/542/542-oled-setup-gen_estereo.jpg"
+  alt="542 Oled Setup Gen Estereo Jp"
+  title="542 Oled Setup Gen Estereo Jp"
+  style={{ width:"30%" }}
+/>
+
+Permite ajustar:
+
+- Nivel de sub-portadora piloto ST
+- Nivel de sub-portadora RDS
+- Niveles de MPX-1 y MPX-2 (volts pico a pico).
+
+#### Receptor de FM
+
+<img
+  src="/images/542/542-oled-setup-sintonizador.jpg"
+  alt="542 Oled Setup Sintonizador Jp"
+  title="542 Oled Setup Sintonizador Jp"
+  style={{ width:"31%" }}
+/>
+
+Permite ingresar:
+
+- Tipo de banda FM
+- Frecuencia a sintonizar
+
+#### Configuración Ethernet
+
+<img
+  src="/images/542/542-oled-setup-ethernet.jpg"
+  alt="542 Oled Setup Ethernet Jp"
+  title="542 Oled Setup Ethernet Jp"
+  style={{ width:"32%" }}
+/>
+
+Configura el puerto Ethernet de control remoto.\
+De fábrica: **DHCP activado**.\
+La IP asignada se muestra en la pantalla de inicio.
+
+---
+
+### Monitor de FM
+
+El sintonizador interno permite analizar parámetros de la transmisión.
+
+Pantallas disponibles:
+
+- **FM MONITOR**
+- **FM MODULATION MONITOR**
+- **RDS ANALYZER**

@@ -1,0 +1,36 @@
+---
+title: "Monitoreo con doble canal de talkback"
+description: "Conexión y uso de Studiobox con doble canal de talkback en UX18"
+keywords: ["instalación", "talkback", "studiobox"]
+tags: ["consolas IP", "UNIDEX", "UX18"]
+---
+
+UX18 permite configurar sus salidas para utilizar la entrada **AUX** de las StudioBox con circuitos de órdenes diferenciados. De este modo, el operador puede hablar a un grupo de auriculares en privado, o a todos los participantes.
+
+![Studiobox Doble Talkback Pn](/images/ux24/studiobox-doble-talkback.png)
+
+El diagrama muestra la conexión y configuración de **StudioBox HD5** con doble canal de talk-back sobre una UNIDEX UX-18.\
+Para el caso de **StudioBox HD3**, la conexión es la misma.
+
+### Conexión
+
+- La entrada **STUDIO MONITOR** de la StudioBox se conecta a la salida **STUDIO MONITOR** en la consola, utilizando un tramo STP RJ45 a RJ45 pin a pin (cables SOL P25 o P50).
+- La entrada **AUX-IN** de StudioBox se conecta a una **salida asignable** de la consola (OUT1 a OUT4) utilizando un tramo STP RJ45 a RJ45 pin a pin (cables SOL P25 o P50).
+
+### Configuración
+
+- En StudioBox, asignar uno o más auriculares a la entrada **AUX**.
+- En UX18, la salida conectada a AUX IN se configura del siguiente modo (ver SETTINGS → OUTPUTS):
+  - **Source:** `STUDIO`. La señal que entrega la salida sigue a la asignación hecha en la pantalla _MONITOR_.
+  - **Talk-Back Ch:** Seleccionar un canal (o grupo) para vincularlo a la salida.\
+    Al activar Talk-Back en ese canal, la señal se enviará, a través de esta salida, a los auriculares asignados a **AUX IN**.\
+    Por ejemplo: si se quiere hablar en privado con los auriculares de _MIC-1_, se asignará “Talk-Back Ch” al canal MIC-1.
+  - **Studio Talk-Back link:** `Habilitado`.
+
+### Operación
+
+- Con la configuración anterior, todos los auriculares escuchan la señal asignada en la consola para monitoreo en el Estudio (pantalla MONITOR).
+- El **botón Talk-Back principal** permite hablar hacia todos los auriculares, a través del micrófono de órdenes.
+- El **botón CUE/SELECT** del canal o grupo vinculado permite hablar **solo** hacia los auriculares asignados a AUX.\
+  Para hacerlo, pulsar y mantener presionado **CUE/SELECT** en el canal.\
+  El display del canal indicará `TLBK`.

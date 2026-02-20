@@ -1,0 +1,166 @@
+---
+title: "Configuración en red"
+description: "Configuración y uso de Audicom en red"
+keywords: ["red"]
+tags: ["Software", "Audicom"]
+---
+
+## Ejemplo de instalación en red Windows
+
+Para el correcto funcionamiento de AUDICOM en red se requiere:
+
+- **Red Microsoft TCP/IP** (predeterminada en Windows).
+- Se recomienda **red dedicada** (propio router, sin compartir con áreas administrativas).
+- Velocidad sugerida: **1 Gbit** (suficiente en la mayoría de instalaciones).
+- Cada PC debe tener:
+  - **Partición dedicada al sistema operativo** (10 GB es suficiente).
+  - Carpeta de instalación en `C:\Audicom`.
+  - Carpeta `Audicom` compartida en **modo lectura/escritura**.
+  - Servicio de **Compartir archivos e impresoras** habilitado.
+
+<Note>
+  Aunque el acceso vía **UNC** es más lento que el acceso por unidad lógica DOS, **UNC es la recomendación oficial** para asegurar la compatibilidad en red.
+</Note>
+
+Ejemplo de red con tres terminales:
+
+1. **Terminal de Aire**: `947AUDICOM-PC`
+2. **Contenidos artísticos**: `Produccion`
+3. **Comerciales**: `Comercial`
+
+> Consejo: nombrar cada máquina según el estudio al que pertenece (ej.: `AM`, `FM`, `Produccion`) para facilitar la identificación en red.
+
+---
+
+## Configuración de AUDICOM en red
+
+La configuración inicial se realiza desde el **Panel de Configuración AUDICOM**, pestaña **Carpetas (Folders)**.
+
+- Al primer inicio, defina el **File Server** con la ruta de red donde se encuentran los archivos del sistema.\
+  Ejemplo:
+  - `\\Server`
+  - `\\947AUDICOM-PC` (servidor de Aire)
+
+### Configuración en el computador de Aire / Servidor
+
+Es fundamental configurar el acceso **mediante UNC** (ej.: `\\AIR-AUDICOM\Audicom`) en lugar de `C:\Audicom`.
+
+De esta forma, **todas las referencias en la Base de Datos quedan en modo UNC** y son accesibles por las demás terminales.\
+Si se configuran en modo local (`C:\Audicom`), las otras terminales no podrán localizar los archivos.
+
+<Note>
+  Aún si la instalación no posee un servidor dedicado (el propio PC de Aire almacena los archivos), es indispensable usar un **path UNC** para asegurar que la Base de Datos sea única y accesible desde todas las estaciones.
+</Note>
+
+<Frame caption="Configuración de carpetas en el computador de puesta al aire (servidor de archivos)">
+  <img
+    src="/images/audicom/aConfig_carpetas.png"
+    alt="A Config Carpetas Pn"
+    title="A Config Carpetas Pn"
+    className="mx-auto"
+    style={{ width:"84%" }}
+  />
+</Frame>
+
+### Configuración en estaciones de trabajo
+
+(Producción, Programación Artística, Comerciales)
+
+- Todas las terminales deben compartir la carpeta `Audicom` con acceso **TOTAL** (lectura/escritura).
+- Las aplicaciones se instalan en cada terminal, pero los **archivos de medios y la Base de Datos residen en el PC de Aire**.
+- Módulos adicionales (Administración, Facturación) solo se instalan en la terminal **Administración Comercial**.
+- Cada terminal se personaliza de acuerdo a su función (Producción, Comerciales, Aire, etc.).
+
+<Frame caption="Configuración de carpetas en las estaciones de trabajo (Producción, Programación, Comerciales)">
+  
+
+  <img
+    src="/images/audicom/aConfig_carpetas_unc.png"
+    alt="A Config Carpetas Unc Pn"
+    title="A Config Carpetas Unc Pn"
+    className="mx-auto"
+    style={{ width:"85%" }}
+  />
+</Frame>
+
+## Ubicación de la Base de Datos
+
+`ADBDir=C:\Audicom\DB`  
+Indica la ubicación de la **Base de Datos musical AUDICOM**.
+
+En una configuración simple de **dos terminales** (Producción ↔ Aire, sin servidor dedicado), lo más práctico es ubicar la Base de Datos en el **computador de emisión al Aire**.  
+La terminal de Producción se configura (desde el **Panel de Configuración**) para apuntar a esa base de datos remota usando un **path UNC**:  
+
+`\\947AUDICOM-PC\Audicom\DB`  
+
+
+
+### Redes con múltiples terminales de Aire
+En escenarios más complejos (AM, FM, Producción, Noticias, Comercial, Servidor), se trabaja con **Bases de Datos distribuidas**:
+
+- Cada terminal de Aire (`AM`, `FM`) aloja su propia Base de Datos local.  
+- Esto optimiza el acceso y garantiza independencia si ocurre un fallo en la red o servidor.  
+- La terminal de Producción se configura para leer/escribir en una de ellas (ej. `FM`) pero puede cambiar a `AM` para administrar su Base de Datos.
+
+Ejemplo de configuración (modo UNC):  
+
+- `AM` → `ADBDir=\\AM\Audicom\DB`  
+- `FM` → `ADBDir=\\FM\Audicom\DB`  
+- `Produccion` → `ADBDir=\\FM\Audicom\DB`  
+
+Cada terminal de Aire trabaja con su Base de Datos local. Desde Producción, InfoMusic-Prod permite administrar ambas.  
+
+
+
+## Archivos de Programación
+
+- `LogDir=C:\Audicom\LOG`  
+- `PgmDir=C:\Audicom\PGM`  
+
+Aquí se almacenan los archivos **.log** (comercial) y **.pgm** (musical).  
+En el ejemplo, las estaciones de trabajo acceden a las carpetas **LOG** y **PGM** de la terminal de Aire.  
+
+En redes con múltiples estaciones de emisión, el usuario puede acceder a todas las terminales usando **CyberPlay Editor**.
+
+---
+
+## Servidor/es (discos del sistema)
+
+`Servidor/es= \\947AUDICOM-PC\Audicom\Audio`  
+
+Define los discos de almacenamiento del sistema.  
+En red, el acceso siempre es vía **UNC**, nunca con rutas locales (`C:\`).
+
+- La carpeta **predeterminada** es `\Audicom\Audio`.  
+- No se admiten **subcarpetas** fuera de `Audio`.  
+- Cada volumen debe contener una única carpeta `\Audicom\Audio`.  
+
+Para declarar varios volúmenes, se enumeran separados por `;` (sin espacios):  
+
+`Servidor/es=\947AUDICOM-PC;\947AUDICOM-PC\D;\Produccion;\Produccion\D`
+
+
+<Note>
+No es necesario compartir toda la unidad `C:\`.  
+Se comparte únicamente la carpeta `Audicom` (acceso total).  
+En discos adicionales (`D:\`, `E:\`), sí se recomienda compartir la unidad completa.
+</Note>
+
+Ejemplo:  
+`\\947AUDICOM-PC` → comparte solo `C:\Audicom`  
+`\\947AUDICOM-PC\D` → comparte todo el disco `D:\`  
+
+El orden de las unidades en la línea **Servidor/es** afecta a File Manager: primero mostrará las carpetas de la primera unidad listada (usualmente locales), y después las de red.
+
+
+## Formatos musicales
+
+El módulo **AutoDj Editor** guarda la configuración en `Autodj.ini`.  
+El **módulo de Aire** siempre lee el archivo local para programar bloques automáticos.
+
+- En Producción, AutoDj Editor accede vía UNC al archivo ubicado en la terminal de Aire.  
+- En instalaciones con más de una estación de emisión, AutoDj Editor permite seleccionar la **Terminal actual** en un menú desplegable.  
+
+<Note>
+Si se crea un formato en una terminal equivocada, el programa de Aire no lo reconocerá, ya que siempre lee el `Autodj.ini` local.
+</Note>

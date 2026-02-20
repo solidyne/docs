@@ -1,0 +1,222 @@
+---
+title: "InfoMusic: Controles y Operación"
+description: "Uso de InfoMusic y gestión de los títulos"
+keywords: ["base de datos", "ingesta", "infomusic"]
+tags: ["Software", "Audicom"]
+---
+
+## Función Scan 
+
+**Registro simultáneo de archivos / Comprobación de ingresados**
+
+La herramienta **Scan** explora todos los archivos contenidos en una carpeta y reporta los que **no** están registrados en la Base de Datos, para poder darlos de alta de forma masiva o individual.
+
+**Procedimiento paso a paso:**
+
+1. Pulse **Scan** y seleccione la carpeta a explorar.
+   - En redes, navegue vía entorno UNC para que la referencia a archivos sea del tipo `\\Servidor\Recurso\Ruta`.
+2. Pulse **Abrir (Open)**. Se muestra una ventana con **la lista de archivos no registrados**.
+   - Seleccione uno o varios: arrastre el mouse con botón izquierdo o use **Ctrl + clic**.
+3. Use los controles de la ventana:
+   - **Clear**: limpia la lista (deja la ventana en blanco).
+   - **Scan**: realiza una **nueva exploración** y **agrega** resultados a la lista actual.
+   - **Close**: cierra la ventana Scan. Si vuelve a pulsar **Scan**, aparecerá la **última lista** retenida en memoria (hasta cerrar InfoMusic-Prod).
+   - **Add**: inicia el **alta** de los archivos seleccionados.
+
+**Alta con Add (dos modalidades):**
+
+- **Un solo archivo**:\
+  Copia su nombre en **File Name** y **Title** (equivale a cargarlo con **Nuevo**). Complete los campos restantes y pulse **Save** para registrar.\
+  Si es **MP3**, se intentan leer metadatos desde **ID3** (si disponibles).
+- **Varios archivos**:\
+  Al pulsar **Add**, aparece un **formulario de parámetros comunes** (se aplican a _todos_ los seleccionados) para agilizar el alta masiva:
+  - **Clase**: tipo de archivo (`Música`, `Promos`, `Spots`, `Fills`, etc.).
+  - **Estilo**: `Rock`, `Pop`, `Jazz`, `Clásica`, `Electrónica`, etc. (defina y sostenga una taxonomía consistente).
+  - **Intérprete**: útil si todos pertenecen al mismo artista.
+  - **Fade In / Out**: tiempos de fundido inicial y final. Por omisión InfoMusic sugiere **2,5 s**.
+  - **Interpretar Nombre de Archivo como**: mapeo automático de `Intérprete` y `Título` a partir del nombre del archivo.\
+    Ej.: para archivos `Depeche Mode - I Feel You.mp3`, seleccione el patrón **`<Intérprete>-<Título>`**:
+    - `Intérprete` = `Depeche Mode`
+    - `Título` = `I Feel You`
+
+  Al confirmar con **OK**, los títulos se agregan **directamente** a la Base de Datos. Al finalizar, aparece un **resumen**: es posible que algunos archivos no ingresen si ya existe un **Título** igual o si el archivo es **inválido**.
+
+<Note>
+  Antes de usar alta masiva, **normalice** los nombres al patrón `Intérprete - Título` (con espacios) para mejorar el mapeo y mantener orden en copias de seguridad.
+</Note>
+
+---
+
+## Búsqueda de registros (Search) `[F5]`
+
+InfoMusic brinda una gran flexibilidad a la hora de buscar títulos. Puede realizar búsquedas **simples** (por título) o **combinadas** (filtrando por múltiples campos).
+
+### Búsqueda por título (modo básico)
+
+- Escriba en **TÍTULO** y pulse **AtoZ**.
+- Con **EXHAUSTIVA activada**: devuelve todos los títulos que **contengan** la palabra en **cualquier posición**.
+- Con **EXHAUSTIVA desactivada**: devuelve solo títulos que **comiencen** con la palabra.
+- Si ingresa **una sola letra**, verá los títulos que comienzan con esa letra.
+
+### Búsqueda combinando parámetros
+
+- Complete uno o más campos (Autor, Estilo, Clase, Sello, etc.) y pulse **Iniciar búsqueda** (o **F5**).
+- Los campos que **no** desea filtrar deben quedar **vacíos**.
+
+**Ejemplos:**
+
+- `Autor = Mozart` → lista de **todos** los temas de Mozart.\
+  Agregando `Sello = EMI` → quedan **solo** los editados por EMI.\
+  Sumando `Estilo = Ópera` → música **operística de Mozart** editada por **EMI**.
+- `Clase = Promos` → todas las **Promos** registradas.
+- Título específico: para “Mi Buenos Aires Querido”, puede buscar por `Querido` (exhaustiva) o por `M` + `Intérprete = Carlos Gardel` para acotar a títulos de Gardel que comienzan con `M`.
+
+---
+
+## Ventana “Registros Encontrados”
+
+Muestra el **resultado** de la búsqueda en **orden alfabético**, con **duración** y **ruta** del archivo asociado. Los colores siguen la convención de **File Manager** (tiempo desde la última emisión):
+
+- **Rojo**: `< 4 horas`
+- **Naranja**: `4 a 12 horas`
+- **Verde**: `12 a 24 horas`
+- **Negro**: `> 24 horas`
+
+---
+
+## Menú contextual (clic derecho)
+
+Opciones disponibles sobre cualquier título:
+
+- **Play / Stop**: reproducción del archivo.
+- **FileManager**: abre el módulo **File Manager**.
+- **Delete**: elimina el **registro** de la Base de Datos.
+- **Sort by name**: ordena alfabéticamente.
+- **Sort by length**: ordena por **duración** (ascendente).
+
+---
+
+## Botones de desplazamiento `[↑ / ↓]`
+
+Permiten recorrer **uno a uno** los elementos de **Selected Records**, moviéndose por la lista con las **flechas** del cursor.
+
+---
+
+## Guardar registro (Save) `[F2]`
+
+**Guarda** el título con todos sus parámetros en la Base de Datos.
+
+- Con carga individual (vía **Nuevo**), recuerde **Save** para registrar.
+- Con alta **masiva** (vía **Scan + Add**), los títulos quedan **registrados directamente** (no requiere Save).
+- **Cualquier modificación** posterior de metadatos requiere **Save** para persistir.
+
+---
+
+## Borrar registro
+
+Elimina un **título** de la Base de Datos:
+
+- Si **NO** marca **Borrar archivo**, solo se elimina el **registro** (el audio **permanece** en disco).
+- Si marca **Borrar archivo**, elimina el **registro** y el **archivo de audio** (pide confirmación).\
+  Acción **irreversible**.
+
+**Recuerde:** Los archivos que **no** figuran en la Base de Datos **no** pueden ser usados por **AutoDJ**; por lo tanto, no se considerarán al musicalizar bloques automáticos.
+
+---
+
+## Vaciar campos
+
+- **Vaciar todo** `[F6]`: limpia **todos** los campos del formulario.
+- **Vaciar excepto Intérprete** `[F7]`: limpia todos los campos **menos** `Intérprete` (útil para búsquedas por artista).
+
+---
+
+## Imprimir
+
+Opciones disponibles (a través de la **impresora predeterminada de Windows**):
+
+- **Imprimir los datos del registro**: imprime **todos los parámetros** del título seleccionado.
+- **Títulos consultados con ubicación**: imprime el **listado completo** mostrado en “Registros Encontrados”, con **duración** y **ruta**.
+- **Títulos consultados con intérprete**: imprime el **listado completo** mostrado, incluyendo el **Intérprete** de cada registro.
+
+---
+
+## Salir (Exit)
+
+Minimiza la pantalla de **InfoMusic-Prod**.\
+Para restaurar, pulse el botón **InfoMusic** en la **Barra de Aplicaciones AUDICOM**.
+
+---
+
+# Bases de Datos en Red
+
+En sistemas en **Red** puede operar **una o varias** Bases de Datos simultáneamente (según las terminales de Aire). AUDICOM puede trabajar con **múltiples BD** gracias a **SDB (Bases Sincronizadas)**.\
+En grandes redes, los archivos se **graban y registran en Producción**, y luego se **envían** a las terminales de Aire.\
+Para configuraciones detalladas, ver **“AUDICOM en Red \> Bases de Datos”**.
+
+Desde una terminal de producción es posible **navegar** por cualquiera de las BD de la red (muy útil con varias terminales de Aire).\
+Las terminales disponibles aparecen en el menú **“Terminal actual”**.
+
+- **Default host** apunta a la **terminal local**, salvo redefinición en `audicom.ini`.
+- Al **primer despliegue** del menú se **explora la red** buscando terminales AUDICOM activas (puede demorar). El resultado queda **en caché**.
+- Para **actualizar** el listado, use **`_update hosts...`**.
+
+---
+
+## Transfer — Transferencia de archivos entre distintas terminales
+
+Cuando el operador incorpora títulos en **Producción**, luego debe **exportarlos** a otras terminales de la red (típico en redes con múltiples AIRE).\
+Al pulsar **Transfer**, se accede a funciones avanzadas para **migrar títulos** entre distintas **Bases de Datos**.
+
+### ¿Qué desea copiar?
+
+Defina **qué** registros exportar (cuatro opciones):
+
+1. **Título actual en pantalla**: exporta **solo** el título seleccionado.
+2. **Títulos mostrados en resultados de la consulta**: exporta el **resultado de una búsqueda** (útil para mover por Estilo, Intérprete, etc.).
+3. **Títulos ingresados en los últimos N días**: exporta **todos** los títulos incorporados en los últimos **N** días (p. ej., `3` = últimos **3** días).
+4. **Todos los títulos de la Base de Datos**: exporta la **BD completa** (permite duplicar todos los datos; ver **Filtro de estilos**).
+
+### ¿A dónde desea copiar?
+
+Defina las **terminales destino**. Verá un listado con la ubicación de AUDICOM (p. ej., `\\AIRE\C`). Elija:
+
+- **1 terminal**: exporta a **una** terminal (selección desde el menú desplegable derecho).
+- **Todas las terminales**: exporta a **todas** las terminales con BD operativa.
+- **Terminales específicas**: indique varias terminales destino con **UNC** separadas por **punto y coma**:
+  - `\\FM\C\Audicom\Db; \\AM\C\Audicom\Db`
+
+### Filtro de estilos
+
+Valida los **Estilos** de cada terminal al exportar. Si en destino **no existe** el Estilo del título exportado, puede **rechazar** la transferencia o **crear** el Estilo en destino.
+
+- **Sí, los estilos deben existir en destino**:\
+  No se transfieren títulos cuyo Estilo **no** exista en la terminal destino.\
+  _Ejemplo_: Dos FMs con perfiles distintos. Si exporta “últimos 5 días” a **FM-1** (Rock & Pop) y **FM-2** (Clásicos ’80 y Melódicos), cada terminal **aceptará solo los títulos** cuyos Estilos existan en su propia BD.
+- **No, copiar sin validar la existencia del Estilo en destino**:\
+  Se transfieren **todos** los títulos; si falta un Estilo, se **crea** en destino.
+
+### Incluir el audio
+
+Decida si desea **copiar los archivos de audio** o **solo** transferir los **registros** de la Base:
+
+- **Sí, copiar el audio a la ubicación equivalente**:\
+  Copia los audios a las terminales destino usando las **mismas carpetas** de Producción.\
+  Si en Producción el archivo está en `\Audicom\Audio\Tango`, se busca `Tango` entre los **audioDrives** de destino; si no existe, se **crea** en `C:` del destino.
+
+<Note>
+  Si el **disco C:** de destino **no** tiene espacio suficiente, la operación **fallará**.\
+  En ese caso, transfiera **solo registros** y luego copie el audio manualmente con **File Manager** (al salir al aire, AUDICOM corrige la ubicación registrada).\
+  La **segunda ventana** de File Manager puede limitarse a un **disco** para facilitar copiado y ofrece **Syncro** para sincronizar carpetas.
+</Note>
+
+<Note>
+  Las unidades deben declararse en formato **UNC**.\
+  Si hubiese unidades locales referenciadas como **letras DOS**, se interpretan en su **equivalente UNC**.\
+  Ej.: si `audicom.ini` contiene `AudioDrives=CD`, InfoMusic-Prod lo interpretará como\
+  `\\nombre_de_la_terminal\C; \\nombre_de_la_terminal\D`.
+</Note>
+
+- **No copiar el audio**:\
+  Transfiere **solo** las **referencias** de BD.\
+  Los archivos permanecen en Producción o en su ubicación original cuando se registraron.

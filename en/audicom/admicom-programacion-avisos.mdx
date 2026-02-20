@@ -1,0 +1,212 @@
+---
+title: "Programación de la campaña comercial"
+description: "Cómo registrar clientes, pautar avisos y generar la pauta comercial (.log) en Admicom"
+keywords: ["comerciales", "tanda", "publicidad", "programación"]
+tags: ["Software", "Admicom", "audicom"]
+---
+
+Esta sección permite **ingresar Fichas de Cliente**, **definir la programación** de los avisos y **generar los archivos de pauta comercial** (`.log`). Antes de comenzar, asegúrate de tener configurado:
+
+- La **grilla de tandas** en **Configuración Emisora → Tanda comercial**.
+- Las **categorías de cliente** (y sus **prioridades**) en **Configuración Comercial → Categoría de cliente**.
+- Los **rubros comerciales** en **Configuración Comercial → Rubro comercial**.
+- Los **medios de pago** en **Configuración Comercial → Medio de pago**.
+
+---
+
+## Ficha del Cliente
+
+Accede a **Programación campaña → Cliente** para registrar un cliente en la base de datos de Admicom.\
+Cada cliente se asocia a una **Categoría**, y **esa categoría define la prioridad de emisión** de todos sus avisos. Esta prioridad se utiliza cuando:
+
+- Varios comerciales del **mismo rubro** compiten por una tanda que **no acepta rubros repetidos**.
+- Dos o más avisos con **misma “posición en tanda”** compiten dentro de una misma tanda.
+
+Completa la ficha y pulsa **Guardar** para confirmar.
+
+---
+
+## Comercial (pautado de la campaña)
+
+El núcleo de Admicom está en **Programación Campaña → Comercial**. Aquí defines **qué se emite, cuándo y cómo**.
+
+### Datos principales
+
+- **Estación**: emisora para la que se pauta el aviso (abreviado y nombre completo).
+- **Agencia**: agencia de publicidad (opcional).
+- **Cliente**: titular del aviso (debe existir en “Cliente”).
+- **Nombre**: identificador de la campaña (ej.: _Celuphone Día del Padre_).
+- **Rubro**: rubro comercial asociado.
+- **Ejecutivo**: vendedor que negoció la pauta (opcional).
+- **Nº Interno / Nº de Orden de Agencia**: referencias administrativas.
+- **Origen**: etiqueta de agrupación (ej.: _Canje_, _Pauta estatal_, _Bien público_).
+- **Medio de pago**: tomado de la configuración comercial.
+- **Comentarios**: texto libre.
+- **Bruto**: monto **fijo mensual** (si aplica). Se **suma** a lo variable por segundo.
+- **Prop. Agencia**: porcentaje de comisión de la agencia.
+- **Descuentos**: importe de descuentos aplicados.
+
+### Controles de la ventana de pautado
+
+- **Buscar campaña**: lista avisos vigentes; puedes acotar por **Emisora**, **Cliente** o **Archivo**.
+  - **Activo** (predeterminado): muestra avisos **actuales y futuros**.\
+    Si deshabilitas **Activo**, también verás **contratos vencidos** (en rojo).\
+    Tras cambiar esta opción, pulsa **Buscar** nuevamente para refrescar resultados.
+  - Para revisar/modificar un aviso, haz **doble clic** en el resultado.
+- **Nuevo**: limpia campos para ingresar un aviso desde cero.
+- **Modificar**: edita la pauta del aviso actual.
+- **Eliminar**: borra la pauta del aviso actual.
+- **Copiar**: duplica la pauta para **replicarla en otras emisoras** de la cadena.
+- **Anula y reemplaza**: clona la campaña para **modificar sin perder la historia**.\
+  La original queda como `[orden]/0`; el reemplazo pasa a `[orden]/1`, y así sucesivamente.\
+  El efecto práctico es **dividir** la campaña en pasado (hasta hoy, `/0`) y **nuevo esquema** desde mañana (`/1`).
+
+---
+
+## Campaña de un aviso
+
+Puedes combinar dos formas de pautado: **Programación detallada** (por día/hora específicos) y **Programación simple** (reglas generales).\
+Si un aviso está programado **en ambos modos**, **las apariciones se suman**.
+
+### Programación detallada
+
+Permite asignar apariciones **en fechas y franjas horarias específicas** de un mes.
+
+1. **Selecciona el mes** en el almanaque.
+2. Pulsa **Nuevo** para crear una pauta detallada.
+3. Completa los parámetros:
+
+**Parámetros disponibles**
+
+- **Tipo de comercial**:
+  - **Convencional (Audio)**, **PNT** (mención en vivo) o **Auspicio**.
+- **Archivo y Duración**: selecciona el audio; la duración se completa de forma automática.\
+  Tienes controles para **escuchar** el archivo.
+- **Hora inicio / fin**: franja horario para esta pauta detallada.
+- **Valor Seg**: tarifa **por segundo** válida para estas apariciones.
+- **Posición en la tanda**: _Comienzo_, _Segundo aviso_, _Penúltimo_, _Cierre_ o _Indistinto_.\
+  Si hay competencia por la misma posición, se ordena por **prioridad de categoría** del cliente.
+- **Texto PNT**: si es una mención en vivo, aquí va el texto que verá el locutor en WebTools.
+
+<Note>
+  **Auspicios**: para que se emitan deben estar **en hora exacta** y **debe existir una tanda** en ese horario. Los auspicios **no** aparecen en la pauta comercial; se reportan mediante **informes de auspicios**.
+</Note>
+
+En la grilla del mes, cada celda representa un **día** dentro del **rango horario** elegidos: **ingresa la cantidad de apariciones** por celda.\
+Esta modalidad facilita ajustes por **picos de audiencia** o **objetivos diarios**.
+
+---
+
+### Programación simple
+
+Define reglas generales de aparición (por **vigencia**, **días**, **rango horario**, **programas** o **hora exacta**).
+
+**Campos comunes**
+
+- **Tipo de comercial**: Convencional, PNT o Auspicio.
+- **Archivo y Duración**: la duración se completa automáticamente al cargar el audio.
+- **Posición en la tanda**: _Comienzo_, _Segundo aviso_, _Penúltimo_, _Cierre_, _Indistinto_.\
+  En empates, se prioriza por **categoría** del cliente.
+- **Locutor**: identifica **voz masculina** o **femenina** (útil para PNT).
+- **Fecha Ini. / Fecha Fin**: vigencia de la pauta.\
+  Deja **Fecha Fin vacía** para continuidad **indefinida**.
+- **Valor Seg**: importe por segundo a facturar por cada emisión.
+- **Texto PNT**: el texto que verá el locutor en WebTools.
+- **Días de la semana**: selecciona en cuáles días se emite.
+
+**Modalidades de pauta**
+
+- **Por RANGO HORARIO**\
+  Define un intervalo (ej. 10:00–22:00) y la **cantidad de inclusiones** en ese rango (ej. 4).\
+  Si la cantidad **coincide** con la **cantidad de tandas** que existen en ese rango, la distribución típica será **una inclusión por tanda**.
+
+  <Note>
+    Puedes **contar las tandas** de un día consultando los archivos **LOG** en **CyberPlay Editor** (las tandas quedan numeradas en la generación).
+  </Note>
+- **Por PROGRAMA**\
+  Asocia el aviso a **programas/segmentos** definidos en **Configuración Emisora → Tanda comercial**.\
+  La ventaja es operativa: **si el programa cambia de día u horario**, el aviso se **reubica automáticamente** sin editar cada pauta.
+- **Por HORA EXACTA**\
+  Se **especifican las horas** en las cuales deberá programarse el aviso.\
+  **Obviamente, debe existir una tanda** definida para esa hora.\
+  **Si no hay tanda** para esa hora, el aviso será programado en **la tanda más cercana**.\
+  Para **ingresar un horario**, escríbelo en el campo y pulsa **“Agregar horario”** para añadirlo a la lista.\
+  **“Borrar horario”** elimina el horario seleccionado en la lista.
+
+---
+
+## Buenas prácticas y recordatorios
+
+- Combina **Programación simple** (reglas globales) con **Detallada** (fino por día/hora) para afinar **cobertura** y **frecuencia**.
+- Respeta los **límites de minutos por hora** (definidos por normativa o por “Tiempo máximo de tanda” en la estación).\
+  Admicom **no excederá** ese límite; en caso de saturación, rechazará avisos según **prioridad**.
+- Usa **“Anula y reemplaza”** para **versionar campañas** sin perder registros; evita editar directamente campañas históricas.
+
+---
+
+## Funciones especiales para programación de avisos
+
+### Avisos alternados
+Es posible ingresar manualmente en el campo archivo dos o más avisos distintos, separados por un caracter **pipe** (`|`). De esta forma, se programarán ambos avisos en forma alternada. El límite de avisos está dado por la longitud del campo título. Los nombres de los archivos deberán tipearse manualmente, sin extensión.
+
+**Ejemplo:**  
+`YPF-1|YPF-2`  
+En este caso se programarán alternadamente los avisos `YPF-1` e `YPF-2`.
+
+---
+
+### Avisos concatenados
+Es posible relacionar hasta dos avisos para que sean pautados uno a continuación del otro. Los nombres de los avisos se escriben seguidos y separados por el signo `>` (mayor). Tampoco es necesario escribir la extensión del archivo.
+
+**Ejemplo:**  
+`aviso1>aviso2`  
+
+Esto generará la siguiente secuencia en la tanda:  
+- `AVISO1`  
+- `AVISO2`  
+
+Los nombres de archivo también pueden combinarse con instrucciones AUDICOM. Esto resulta útil para anuncios de hora, temperatura, etc.
+
+**Ejemplo:**  
+`AUSPICIO_TIEMPO>/TEMP`  
+
+Generará en la pauta:  
+- `AUSPICIO_TIEMPO`  
+- `/TEMP`
+
+---
+
+### Instrucciones AUDICOM
+Algunas instrucciones de AUDICOM pueden programarse como si fueran avisos comerciales. Para ello se ingresan manualmente en lugar del nombre de archivo. Se recomienda crear una categoría dedicada a estas instrucciones.
+
+- **Meteor:** Instrucciones como `/Time`, `/Temp`, `/Hum`, `/Pres`, `/Meteor` programan los anuncios meteorológicos con las voces pregrabadas.  
+  Se crea una campaña especial con el cliente `AUDICOM` y se pautan las instrucciones por hora de salida.  
+
+- **Random:** La instrucción `/RND,<Carpeta>,<Cantidad>` reproduce un archivo aleatorio de la carpeta indicada.  
+  Ejemplo: `/RND,Seguridad Vial,1`  
+  Cada vez que sea pautada, saldrá al aire un archivo elegido aleatoriamente de la carpeta `Seguridad Vial`.  
+
+- **Pausas:** La instrucción `/Pause` inserta una pausa en la tanda comercial, deteniendo temporalmente la reproducción en el programa de Aire.
+
+---
+
+## Generar Tanda
+(Programación Campaña -> Generar Tanda) Desde aquí se generan los archivos de programación comercial que utiliza la terminal de Aire AUDICOM para construir la grilla integrada en CyberPlay (tandas + música + eventos en vivo).
+
+**Pasos:**
+1. Definir en `Fecha Inicio` y `Fecha Fin` el rango de días para generar la pauta comercial. Por defecto solo se crea la pauta del día actual, pero puede generarse una semana completa.  
+2. Elegir en la lista las emisoras para las cuales se generará la pauta.  
+3. Pulsar **Generar**. Admicom producirá los archivos de pautado comercial (`.log`) para los días seleccionados.
+
+Las tandas generadas pueden visualizarse en el módulo **CyberPlay Editor**, donde se muestra la grilla integrada (tandas, música, eventos). Además, el módulo **Aaudit** permite obtener reportes de lo efectivamente emitido al aire.
+
+---
+
+### Avisos rechazados
+Al finalizar la generación de tandas se muestra un informe con los avisos rechazados, indicando el cliente y la tanda/segmento correspondiente. Las causas pueden ser:
+
+- **SEG:** Tiempo excedido. Se alcanzó el máximo de publicidad permitido por hora (definido en `Configuración Emisora -> Estación`). Todas las tandas de esa hora rechazarán nuevos avisos.  
+- **CAT:** Conflicto de categoría. Dos avisos del mismo rubro intentan entrar en una tanda que no permite repetición. Solo se emitirá el de mayor prioridad.  
+- **POS:** Conflicto de posiciones. Dos avisos con igual prioridad y misma ubicación compiten en una tanda. Revisar la prioridad de categorías o cambiar la posición en tanda.  
+- **REP:** Aviso repetido. Se intentó programar el mismo aviso dos veces en la misma tanda, lo cual no está permitido.
+

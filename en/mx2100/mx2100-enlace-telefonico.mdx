@@ -1,0 +1,77 @@
+---
+title: "Enlace telefónico"
+description: "Comuniación con el Estudio vía teléfono móvil o línea fija."
+keywords: ["línea terrestre", "bluetooth"]
+tags: ["consolas portátiles", "MX2100"]
+---
+
+La comunicación se realiza desde el teléfono conectado a la consola, ya sea línea terrestre o celular .\
+A continuación se describe la operación para ambos casos.
+
+
+### Teléfono celular
+
+- **Vía Bluetooth:**
+  1. Desde el celular, llamar a la radio.
+  2. Una vez establecida la comunicación, usar los micrófonos y auriculares conectados a la MX2100 para dialogar con Estudios.
+  3. Si la radio llama al periodista, se escucha el **ring** en auriculares y la señal de llamada en el móvil.
+  4. La llamada puede aceptarse desde el propio celular o pulsando brevemente **# 9** en la consola.
+- **Vía cable manos libres (en deshuso):**
+  1. Realizar la llamada desde el celular.
+  2. Una vez establecida, pulsar el botón **PHONE** en la consola.
+  3. Conectar el cable “manos libres” (ya conectado a la entrada **Cellular & Phone** de la MX2100) al conector del móvil.
+  4. A partir de este momento, el diálogo se hace usando los micrófonos y auriculares de la consola.
+
+<Note>
+  Para finalizar la comunicación desde un teléfono celular, cortar y desconectar empleando el teclado del móvil (consultar manual del teléfono).
+</Note>
+
+---
+
+### Línea terrestre
+
+1. Presionar el botón **PHONE** para tomar la línea.
+2. Discar el número de la radio usando el teclado DTMF de la consola.
+3. Una vez establecida la comunicación:
+   - Hablar desde los micrófonos conectados a la MX2100.
+   - Escuchar a Estudios en los auriculares.
+   - La señal de programa (salida de la consola) se envía a la radio a través de la línea.
+4. Para finalizar la comunicación: presionar nuevamente el botón **PHONE**, que quedará en posición hacia afuera, cortando la llamada.
+5. En llamadas entrantes desde la radio:
+   - El **RING** de llamada se escucha en auriculares.
+   - La llamada se atiende directamente desde la consola.
+
+---
+
+### Si la comunicación se interrumpe...
+
+- **Teléfono celular:**
+  - El propio celular da por finalizada la llamada.
+  - El operador de MX2100 puede esperar que la radio vuelva a llamar y atender desde el móvil, o presionar **# 9** en la consola para contestar.
+  - El enlace con la radio queda restablecido.
+- **Línea terrestre:**
+  - Si la llamada se corta, soltar el botón **ON-AIR** para iniciar o recibir la nueva comunicación.
+  - En caso de llamada entrante desde la radio:
+    - Se escucha el **RING** en auriculares.
+    - Atender directamente desde la consola pulsando **ON-AIR**.
+
+---
+
+## Diagrama: transmisión vía celular Bluetooth
+
+<img
+  src="/images/mx2100/mx2100-diagrama.png"
+  alt="Mx2100 Diagrama Pn"
+  title="Mx2100 Diagrama Pn"
+  className="mx-auto"
+  style={{ width:"65%" }}
+/>
+
+- La consola transmite hacia Estudios usando un **celular vinculado por Bluetooth**.
+- Como respaldo de la transmisión puede conectarse una **línea terrestre**.
+- El retorno de Estudios ingresa, por Bluetooth, directamente a la **mezcla de auriculares**.
+- Se envía al aire la mezcla de hasta **tres micrófonos** y **una entrada de línea** (que permite conectar, por ejemplo, un grabador portátil).
+
+<Warning>
+  La conexión de la entrada de línea **anula el micrófono interno (MIC-4)**.
+</Warning>

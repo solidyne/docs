@@ -1,0 +1,39 @@
+---
+title: "Actualización del firmware"
+description: "Procedimiento para actualizar el software interno"
+keywords: ["firmware"]
+tags: ["consolas portátiles", "CODECS", "MX2200"]
+---
+
+La actualización del sistema se realiza desde la interfaz web de la consola:
+
+<Steps>
+  <Step title="Acceder al sistema de actualización">
+    Ingrese en el navegador la dirección IP de la consola seguida del subpath **/update**.\
+    Ejemplo: `http://192.168.0.121/update`
+  </Step>
+  <Step title="Verificar paquetes disponibles">
+    En pantalla se muestran los paquetes de software instalados y, si los hubiera, las versiones más recientes disponibles para actualizar.
+  </Step>
+  <Step title="Descargar actualización">
+    Pulse **Download** para bajar la versión más reciente.\
+    El paquete se guarda en la **memoria interna de la consola**.
+  </Step>
+  <Step title="Instalar actualización">
+    Una vez finalizada la descarga, se habilita la opción **Install**.\
+    Pulse para iniciar el proceso de instalación.
+  </Step>
+</Steps>
+
+<img
+  src="/images/mx2200/mx2200-firmware-update.png"
+  alt="Mx2200 Firmware Update Pn"
+  title="Mx2200 Firmware Update Pn"
+  style={{ width:"67%" }}
+/>
+
+<Info>
+  - La consola permite la actualización incluso por **Wi-Fi**.
+  - Como el paquete se almacena localmente antes de instalarse, la consola podrá completar la instalación de forma autónoma.
+  - La sección **Hardware Info **muestra información del **hardware** como la cantidad de ciclos de carga de la batería.
+</Info>

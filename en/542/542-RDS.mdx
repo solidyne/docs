@@ -1,0 +1,107 @@
+---
+title: "Configuración de RDS"
+description: "Configuración de la etapa Radio Data Sistem"
+keywords: ["RDS"]
+tags: ["procesadores", "542"]
+---
+
+## RDS
+
+El procesador **542APC** cuenta con un codificador RDS interno.\
+RDS es un sistema que permite añadir a la señal de FM información adicional mediante un canal de datos. Entre sus funciones principales:
+
+- Presentación en pantalla del nombre de la red de emisoras y del tipo de programa recibido (noticias, deportes, música, variedades, religioso, etc.).
+- Sintonía automática a una red de emisoras seleccionada por el usuario.\
+  Permite escuchar la misma estación durante un viaje largo sin necesidad de cambiar manualmente de frecuencia, cuando la señal de una emisora se debilita.
+- Recepción automática de información de tráfico.\
+  El receptor conmuta dentro de la misma red a la emisora que transmite información vial y luego regresa automáticamente a la emisora previamente seleccionada.
+
+### Configuración básica del RDS
+
+La configuración y control del RDS se realiza vía **Ethernet (IP)** en el puerto ETHERNET del 542APC.\
+Los parámetros básicos se definen desde la **interfaz web** en la opción **FM OUTPUT**, donde se muestra un diagrama con RDS y el acceso a su configuración.
+
+<img
+  src="/images/542/542-RDS_CONFIG.png"
+  alt="542 RDS CONFIG Pn"
+  title="542 RDS CONFIG Pn"
+  className="mx-auto"
+  style={{ width:"73%" }}
+/>
+
+#### Parámetros configurables
+
+- **TCP RDS PORT**\
+  Define el **puerto TCP** para la comunicación con un software externo RDS.\
+  Valor predeterminado: `9762`.\
+  Para modificarlo, ingrese el nuevo valor y presione **APPLY**.
+
+  <Note>
+    Para comandar el codificador RDS en tiempo real, por ejemplo para enviar informacion de la música emitida, se requiere una computadora externa con el software Magic RDS o Solidyne Audicom. 
+  </Note>
+- **Default PS (Program Service)**\
+  Texto fijo, generalmente el nombre de la emisora.\
+  Longitud máxima: **8 caracteres** (según estándar RDS).
+- **PI (Program Identification)**\
+  Identifica una red de emisoras o repetidoras de una cadena, permitiendo al receptor cambiar automáticamente según la calidad de recepción.\
+  Formato: número **hexadecimal de 4 dígitos** (0000 a FFFF).
+- **Program Type**\
+  Define el tipo de contenido emitido (ej: noticias, deportes, música).
+- **M/S (Music/Speech)**\
+  Indica si el contenido es música o palabra.
+- **TA State (Traffic Announcement)**\
+  Bandera on/off que indica cuándo hay un anuncio de tráfico al aire.\
+  Se controla manualmente o vía **GPI remoto**.
+- **Traffic PS**\
+  Se muestra en lugar del campo PS cuando está activo el flag de tráfico.\
+  Si no se utiliza, debe dejarse en blanco.
+- **DYN PS (Dynamic Program Service)**\
+  Permite mostrar mensajes dinámicos (hasta **64 caracteres**) reemplazando secuencialmente el PS fijo. Ejemplos de uso: títulos de canciones, intérprete, noticias, comerciales.\
+  El texto se desplaza con la velocidad definida en el campo **Scroll**.
+- **Loop**\
+  Tiempo entre repeticiones del texto dinámico. Durante este período se muestra el **PS estático**.
+- **Scroll**\
+  Velocidad de desplazamiento (alta o baja).\
+  La velocidad alta no es compatible con algunos receptores, especialmente en automóviles o en zonas de baja recepción. Esto se debe a que el desplazamiento PS **no está incluido en el estándar RDS**. Se recomienda evitar la velocidad alta.
+
+<Note>
+  El uso de Dynamic PS está restringido en algunos países y no forma parte del estándar RDS.\
+  Algunos receptores pueden no mostrar correctamente el campo Dynamic/Scrolling PS.\
+  El fabricante no es responsable del uso indebido de esta función.
+</Note>
+
+### Uso avanzado con Magic RDS
+
+Para funciones avanzadas, se requiere el software externo **Magic RDS** (Windows), conectado a la misma red del 542APC.\
+Este software permite actualizar dinámicamente los datos (ej: títulos de canciones) desde distintos sistemas de automatización de aire (playout).
+
+### Integración con Audicom
+
+Si la emisora utiliza **Solidyne Audicom**, no es necesario Magic RDS. La comunicación es directa entre Audicom y el procesador mediante LAN. Para más detalles, consulte la documentación de Audicom.
+
+#### Instalación de Magic RDS
+
+Una versión del software puede descargarse en: `www.solidynepro.com/DW/setupRDS.rar`
+
+Pasos de configuración (solo válido para la versión distribuída por Solidyne):
+
+1. Instalar y ejecutar Magic RDS.
+2. Ir a **Opciones → Preferencias**.
+3. En la ventana de preferencias, elegir la pestaña **General**.
+4. Cambiar el tipo de conexión a **Ethernet TCP/IP**.
+5. En **Puerto**, ingresar el TCP configurado en el 542APC (por defecto 9762).
+6. En **Host**, ingresar la dirección IP del 542APC (visible en la pantalla del equipo).
+
+<Tip>
+  Si se usará RDS con actualización en tiempo real vinculada a un software de automatización, configure el **542APC con IP fija**.
+</Tip>
+
+### Acceso remoto
+
+El procesador puede recibir datos RDS vía **Internet** cuando está ubicado en otra red.\
+Requisitos:
+
+- El ISP debe asignar una **IP fija** en la LAN remota.
+- Configurar la LAN para redirigir (port forwarding):
+  - **Puerto 80** → IP local del 542APC
+  - **Puerto 9762** (u otro configurado para RDS) → IP local del 542APC

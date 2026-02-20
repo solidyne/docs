@@ -1,0 +1,77 @@
+---
+title: "Conexion a consola"
+description: "Conexiones de audio de HL240"
+keywords: ["conexiones"]
+tags: ["híbridos", "HL240"]
+---
+
+## Entradas y salidas
+
+**AUDIO IN (SEND TO LINES)**\
+Entrada no balanceada en jack TS ¼”. Recibe la señal que se envía a las líneas telefónicas y a los móviles Bluetooth.\
+Se conecta a una salida _mix-minus_ de la consola: una mezcla de fuentes locales (micrófonos, otras comunicaciones) que no contiene el audio del HL240-VQ.
+
+El nivel de envío se ajusta desde el control **INPUT LEVEL** en el panel frontal. Dependiendo de la configuración, también puede ajustarse desde la consola.
+
+**AUDIO OUT (MIX)**\
+Salida balanceada en conector XLR macho. Entrega la mezcla de audio de las líneas, ajustada mediante los controles rotativos **BLUETOOTH** y **PHONE LINE**.
+
+**DIRECT OUT PH-1 y BLT-1**\
+Salidas no balanceadas en jack ¼”. Entregan las señales de Línea-1 y Bluetooth-1 con nivel fijo (pre-fader).\
+Cada salida se conecta a una entrada de línea de la consola, permitiendo manejarlas de forma independiente a la mezcla principal.
+
+**HEADPHONES**\
+Salida estéreo para auriculares. Entrega la misma señal de la salida AUDIO OUT.
+
+---
+
+## Conexión a consolas con envío/retorno a híbrido externo
+
+Si la consola de puesta al aire tiene un conector especial para envío y retorno de híbrido externo, la conexión se realiza con un cable derivación tipo “Y” (inserción).
+
+<img
+  src="/images/hl240/hl240-diagrama-hibridoexterno.png"
+  alt="Hl240 Diagrama Hibridoexterno Pn"
+  title="Hl240 Diagrama Hibridoexterno Pn"
+  className="mx-auto"
+  style={{ width:"53%" }}
+/>
+
+Las series **Solidyne 2300, 2600, DX816/822 y D612** proveen esta conexión a través de un jack TRS ¼”. El híbrido externo se opera desde controles dedicados en la consola, sin ocupar canales de línea.
+
+La siguiente tabla describe la correspondencia del cable “Híbrido Externo” soportado por estas consolas Solidyne:
+
+**Cableado "Y" para “Híbrido Externo” ↔ HL240-VQ**
+
+| Jack "Híbrido Externo" en consola | AUDIO IN (TS ¼") | AUDIO OUT (MIX) – XLR hembra |
+| --------------------------------- | ---------------- | ---------------------------- |
+| **Punta** (envío mix-minus)       | Punta            | —                            |
+| **Anillo** (retorno)              | —                | pin 2                        |
+| **Cuerpo** (masa)                 | Cuerpo           | pin 1 (pin 3 n/c)            |
+
+<Note>
+  En otros modelos de consolas Solidyne o de otros fabricantes, consulte el manual para identificar las conexiones de envío/retorno a híbrido externo.
+</Note>
+
+---
+
+## Conexión a consolas sin facilidades para híbridos
+
+En consolas para sonido directo o de grabación, que generalmente no poseen conexión de envío/retorno para híbrido externo, el HL240-VQ se conecta a un canal de línea y a una salida de bus o mezcla auxiliar.
+
+![Hl240 Diagrama Consola Generica Pn](/images/hl240/hl240-diagrama-consola-generica.png)
+
+- La salida **AUDIO OUT** del HL240-VQ envía la mezcla de líneas (terrestres y Bluetooth). Conectar esta salida a una entrada de línea balanceada en la consola.
+- La entrada **AUDIO IN (SEND TO LINES)** recibe audio desde la consola y lo envía a las líneas. Conectar esta entrada a una salida auxiliar (AUX, REC, FX, etc.), distinta de la salida principal (LR).
+
+En la consola, el canal por el cual ingresa la señal del HL240-VQ **no debe asignarse a la mezcla auxiliar** que se envía al HL240, ya que se producirá un lazo de realimentación.
+
+<Danger>
+  Nunca envíe la mezcla principal (salida LR) al HL240-VQ, ya que se producirá un lazo de realimentación cuando ese canal sea sumado al aire.
+</Danger>
+
+<Note>
+  Algunas consolas (ejemplo: Solidyne serie UNIDEX) permiten configurar salidas como _mix-minus_. Esto evita usar un bus auxiliar dedicado.
+</Note>
+
+---

@@ -1,0 +1,157 @@
+---
+title: "Especificaciones técnicas"
+description: "Especificaciones técnicas"
+keywords: ["especificaciones"]
+tags: "consolas IP,UX18"
+---
+
+<AccordionGroup>
+  <Accordion title="Características generales">
+    | Ítem                  | Especificación                                                        |
+    | --------------------- | --------------------------------------------------------------------- |
+    | Canales               | 18 canales                                                            |
+    | Atenuadores físicos   | 10 en el panel. 4 pueden trabajar como grupos (submezclas)            |
+    | Atenuadores virtuales | 8 Operables desde pantalla táctil, asignables a los grupos            |
+    | Control remoto        | Interfaz web interna (HTML5) vía LAN                                  |
+    | Ruteo                 | Entradas asignables a los 18 canales                                  |
+    | Escenas               | 12 escenas de usuario                                                 |
+    | Pantalla táctil       | 7” — 1024 × 600 px, multi-touch                                       |
+    | Displays por canal    | OLED en canales 1 a 6 (nombre, nivel de entrada, atenuación, estados) |
+  </Accordion>
+  <Accordion title="Entradas">
+    #### Entradas analógicas
+
+    | Tipo          | Cantidad | Detalle                                                                            |
+    | ------------- | -------: | ---------------------------------------------------------------------------------- |
+    | Micrófono     | 5        | alimentación +48 V conmutable por canal                                            |
+    | Línea estéreo | 3        | 2 balanceadas + 1 no balanceada                                                    |
+    | UNIDEX        | 4        | Configurables dual-mono / estéreo. Soporta adaptadores UDX (mic, Telco, USB, etc.) |
+
+    #### Entradas digitales
+
+    | Tipo                   | Cantidad    | Detalle                                                |
+    | ---------------------- | ----------: | ------------------------------------------------------ |
+    | AES3                   | 2 (estéreo) | Entradas AES3 soportan 44.1 y 48 kHz                   |
+    | USB                    | 4 (estéreo) | 4 dispositivos de reproducción desde una PC            |
+    | Bluetooth              | 1           | Vinculación de móviles (Hands Free + A2DP music input) |
+    | Dante/AES67 (opcional) | 16          | Solo en opción **UX18/A67**                            |
+  </Accordion>
+  <Accordion title="Salidas">
+    #### Salidas analógicas
+
+    | Tipo              | Cantidad    | Detalle                            |
+    | ----------------- | ----------: | ---------------------------------- |
+    | PGM               | 2 (estéreo) | 1 balanceada + 1 no balanceada     |
+    | REC               | 1           | Balanceada                         |
+    | Asignables        | 4 (estéreo) | No balanceadas                     |
+    | Monitoreo Control | 2 (estéreo) | Parlantes + auriculares            |
+    | Monitoreo Estudio | 2 (estéreo) | Parlantes + auriculares + talkback |
+
+    #### Salidas digitales
+
+    | Tipo                   | Cantidad    | Detalle                                  |
+    | ---------------------- | ----------: | ---------------------------------------- |
+    | AES3                   | 2 (estéreo) | Salidas AES3 trabajan a 48 kHz           |
+    | USB                    | 4 (estéreo) | 4 dispositivos de grabación en una PC    |
+    | Streaming              | 2           | RTP + Icecast/Shoutcast (independientes) |
+    | Dante/AES67 (opcional) | 16          | Solo en opción **UX18/A67**              |
+  </Accordion>
+  <Accordion title="GPIO, intercom y auxiliares">
+    | Ítem                               | Especificación                                                |
+    | ---------------------------------- | ------------------------------------------------------------- |
+    | Luz “En el Aire”                   | 12 VCC / 250 mA                                               |
+    | GPI                                | 2 entradas (activa alta 3.3 ~ 15 V)                           |
+    | GPO                                | 7 salidas (colector abierto; +24 V @ 250 mA)                  |
+    | Air monitor (sintonizador externo) | 1 entrada estéreo no balanceada (también asignable a canales) |
+    | Reverse talkback desde Estudio     | 1 entrada (conector Studio Box)                               |
+    | Talkback                           | Micrófono de órdenes integrado                                |
+    | Intercom TELCO                     | PTT (hablar/escuchar) en canales TELCO con botón CUE          |
+  </Accordion>
+  <Accordion title="Arquitectura de audio">
+    | Ítem                 | Especificación                                                                 |
+    | -------------------- | ------------------------------------------------------------------------------ |
+    | Buses                | 4 estéreo (PGM, REC, AUX, VBUS)                                                |
+    | Bus PFL              | 1 (CUE)                                                                        |
+    | Resolución / SR      | 24 bits @ 48 kHz                                                               |
+    | Procesado            | DSP en todas las entradas (fijo por entrada)                                   |
+    | Procesos             | EQ paramétrico 3 bandas, compuerta, compresor/limitador, de-esser              |
+    | Mix-minus / talkback | Envíos automáticos para TELCO                                                  |
+    | Latencia             | 1.2 ms (línea→salida analógica) / 1.4 ms (MIC→salida con EQ+Dinámica+De-Esser) |
+  </Accordion>
+  <Accordion title="Valores y mediciones (audio)">
+    #### Digital (AES3, AoIP)
+
+    | Parámetro               | Valor                   |
+    | ----------------------- | ----------------------- |
+    | Rango dinámico (RD)     | 120 dBA                 |
+    | Respuesta en frecuencia | 20 Hz – 20 kHz ± 0.1 dB |
+    | THD                     | \< 0.002 %              |
+    | AES3 (entradas)         | 44.1 / 48 kHz           |
+    | AES3 (salidas)          | 48 kHz                  |
+
+    #### USB
+
+    | Parámetro     | Valor                                         |
+    | ------------- | --------------------------------------------- |
+    | Puerto        | USB 2.0                                       |
+    | Canales       | 4 dispositivos estéreo reproducción/grabación |
+    | ASIO          | Controlador ASIO 3.0 (ASIO + WDM simultáneo)  |
+    | Multi-cliente | Sí (varias apps ASIO en paralelo)             |
+    | Windows       | 11/10 (32/64 bits)                            |
+
+    #### Entradas analógicas (línea)
+
+    | Parámetro               | Valor                                      |
+    | ----------------------- | ------------------------------------------ |
+    | Nivel de entrada        | Max +26 dBu / Min −24 dBu / Nominal +4 dBu |
+    | Rango dinámico          | 112 dBA                                    |
+    | Respuesta en frecuencia | 20 Hz – 20 kHz ± 0.25 dB                   |
+    | THD+N                   | 0.01 %                                     |
+
+    #### Entradas de micrófono
+
+    | Parámetro               | Valor                                               |
+    | ----------------------- | --------------------------------------------------- |
+    | Nivel de entrada        | Max −24 dBu / Min −75 dBu / Nominal −50 dBu @ 150 Ω |
+    | Atenuación              | −10 dB en MIC-1 a MIC-4                             |
+    | Ruido (EIN)             | −121 dBA @ −50 dBu                                  |
+    | Respuesta en frecuencia | 20 Hz – 20 kHz ± 0.5 dB                             |
+    | THD+N                   | 0.01 %                                              |
+    | Phantom                 | \+48 V individual (DIN 45596)                       |
+
+    #### Salidas analógicas
+
+    | Parámetro               | Valor                        |
+    | ----------------------- | ---------------------------- |
+    | Nivel de salida         | Nominal +4 dBu / Máx +24 dBu |
+    | Rango dinámico          | \> 110 dBA                   |
+    | Respuesta en frecuencia | 20 Hz – 20 kHz ± 0.5 dB      |
+    | THD                     | typ 0.005 % @ 1 kHz          |
+  </Accordion>
+  <Accordion title="Opción Dante/AES67 (UX18/A67)">
+    | Ítem           | Especificación                                                                       |
+    | -------------- | ------------------------------------------------------------------------------------ |
+    | Canales        | 16 × 16                                                                              |
+    | Compatibilidad | Puede trabajar con redes Dante existentes hasta 512 × 512                            |
+    | Salidas AoIP   | PGM, REC, AUX, auriculares de Control, auriculares de Estudio + 3 estéreo asignables |
+  </Accordion>
+  <Accordion title="Dimensiones y peso">
+    #### Dimensiones
+
+    | Ítem        | Valor                            |
+    | ----------- | -------------------------------- |
+    | Ancho       | 730 mm                           |
+    | Profundidad | 455 mm (550 mm con tapa trasera) |
+    | Altura      | 130 mm                           |
+
+    #### Embalaje y peso
+
+    | Ítem                               | Valor              |
+    | ---------------------------------- | ------------------ |
+    | Embalaje                           | 850 × 610 × 270 mm |
+    | Peso UX18                          | 8 kg               |
+    | Adaptadores UDX                    | 0.33 kg c/u        |
+    | Kit cables RJ45                    | 4 kg               |
+    | Total con embalaje (UX18 + cables) | 15 kg              |
+  </Accordion>
+</AccordionGroup>

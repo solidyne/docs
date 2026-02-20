@@ -1,0 +1,71 @@
+---
+title: "Software VoIP"
+description: "Uso de software de comunicaciones en la computadora"
+keywords: ["VoIP", "USB"]
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+---
+
+## Conexión a la PC
+
+La serie DX esta preparada para trabajar con cualquier software de comunicación corriendo en la computadora. Desde aplicaciones de videollamadas, como Zoom o Google Meets, hasta software de recepción de líneas SIP, como Linphone.
+
+El canal de telecomunicaciones permite enviar, vía USB-2, un **retorno diferenciado** (mix-minus) a la computadora, en el que no se suma el audio de la propia computadora (reproducción por USB-2), evitando acoples.
+
+La computadora se pude sumar en conferencia a las líneas manejadas por el canal de Telecomunicaciones.
+
+<Note>
+  Todo software de comunicación suele tener mecanismos de cancelación internos, pero estos sistemas con frecuencia se desacoplan generando ecos y artificios en el audio. Es necesario disponer de un envío mix-minus para obtener comunicaicones confiables.
+</Note>
+
+<Danger>
+  ****USB-2 no es operativo si USB-1 no está conectado a un puerto activo.****\
+  Si USB-1 y USB-2 van a **dos PCs distintas**, USB-2 **no** funciona si la PC de **USB-1** está **apagada**.\
+  (Usualmente USB-1 es la PC de Aire 24/7).
+</Danger>
+
+## Configuración básica
+
+<Steps>
+  <Step title="Micrófonos">
+    Asignar los canales de micrófono a **PGM** y **REC**.
+  </Step>
+  <Step title="Canal USB-2">
+    Asignar a **PGM** y **quitar de REC**.
+  </Step>
+  <Step title="Canal Telco">
+    Asignar selección PGM-REC a **PGM**
+  </Step>
+  <Step title="Computadora">
+    Configurar la aplicación con dispositivo de audio **USB-2** como entrada/salida (micrófono y reproducción).
+  </Step>
+  <Step title="AIRE">
+    El audio de la aplicación ingresa a la consola por el Canal USB-2 y sale al aire con retorno de los micrófonos (vía REC).
+
+    <Note>
+      La aplicación puede estar cursardo una comunicación única o un chat con múltimples participantes. Esto no afecta a la operación en la consola.
+    </Note>
+  </Step>
+</Steps>
+
+## Conferencia con líneas y celular (Vox-IP)
+
+<Steps>
+  <Step title="Micrófonos">
+    Asignar los canales de micrófono a **PGM** y **REC**.
+  </Step>
+  <Step title="Canal USB-2">
+    Asignar a **PGM** y **quitar de REC**.
+  </Step>
+  <Step title="Canal Telco">
+    Asignar selección PGM-REC a **PGM.**\
+    **Activar el botón VOX-IP.** El retorno de líneas/celular se envía a PGM-2 por **REC** (lo verás en VU de **REC**).
+  </Step>
+  <Step title="Conferencia">
+    Subir el fader de Telco para sumar teléfonos al aire; todos quedan **interconectados**.
+  </Step>
+</Steps>
+
+<Danger>
+  En el **retorno hacia la computadora (REC)** no asignar **cortinas musicales**; solo los **MICs**.\
+  Los sistemas de prioridad/AGC de las aplicaciones para comunicaciones pueden **atenuar** la voz remota si hay audio local (música de fondo).
+</Danger>

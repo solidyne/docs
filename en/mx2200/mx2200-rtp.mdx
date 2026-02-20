@@ -1,0 +1,112 @@
+---
+title: "Streaming RTP"
+description: "Enlazar a Estudios vía RTP"
+keywords: ["RTP","enlace"]
+tags: ["consolas portátiles","CODEC","MX2200"]
+
+---
+
+La conexión **RTP** ofrece máxima calidad y baja latencia, pero exige **configuración de red** en ambos extremos (transmisor y receptor).\
+Es ideal para **instalaciones fijas** o locaciones con **redes conocidas y controladas**.
+
+<Warning>
+  **Precondiciones de red**\
+  Asegúrese de tener definidos **IP/puerto** correctos y de haber resuelto **NAT / firewall / port forwarding** en el receptor. Sin esa preparación, el enlace podría no establecerse.
+</Warning>
+
+<Tabs>
+  <Tab title="Iniciar RTP desde MX2200">
+    <Steps>
+      <Step title="Abrir Connection Center">
+        Gire el **encoder** hasta **CONNECTION CENTER** y púlselo para entrar a las opciones de conexión.
+
+        <img
+          src="/images/mx2200/mx2200-connection_center.png"
+          alt="Mx2200 Connection Center Pn"
+          title="Mx2200 Connection Center Pn"
+          style={{ width:"50%" }}
+        />
+      </Step>
+      <Step title="Seleccionar RTP STREAM">
+        Elija **RTP STREAM** y pulse para abrir la pantalla del enlace RTP (habilitar/deshabilitar).
+
+        <img
+          src="/images/mx2200/mx2200-conection_center_RTP.png"
+          alt="Mx2200 Conection Center RTP Pn"
+          title="Mx2200 Conection Center RTP Pn"
+          style={{ width:"51%" }}
+        />
+      </Step>
+      <Step title="Habilitar el enlace">
+        Seleccione **YES** para iniciar el enlace RTP hacia los estudios.
+
+        <img
+          src="/images/mx2200/mx2200-connection_center_RTPenable.png"
+          alt="Mx2200 Connection Center RT Penable Pn"
+          title="Mx2200 Connection Center RT Penable Pn"
+          style={{ width:"51%" }}
+        />
+
+        Cuando queda activo, las pantallas **CONNECTION CENTER** y **HOME** muestran **RTP STREAM ENABLED**.
+      </Step>
+      <Step title="Finalizar el enlace">
+        Repita el procedimiento y seleccione **NO** para deshabilitar el RTP.
+      </Step>
+    </Steps>
+    <Info>
+      Antes de iniciar, verifique que la **configuración de red y formato** de audio en la MX2200 coincida con lo esperado en el receptor (IP destino, **puerto**, **codec** y **frecuencia de muestreo**).
+    </Info>
+  </Tab>
+  <Tab title="Retorno desde Estudios">
+    La emisión **RTP es unidireccional**. Habitualmente no se usa retorno en este modo porque la locación genera el contenido sin interacción con el estudio.
+
+    <Note>
+      Si necesita **retorno** (intercomunicación o piso), utilice **una llamada SIP** o una **comunicación telefónica** (móvil Bluetooth o línea terrestre POTS) en paralelo al RTP.
+    </Note>
+  </Tab>
+  <Tab title="Recepción en Estudios (VLC)">
+    Para recibir el streaming de una MX2200 en una **computadora**, use un software con soporte **RTP**. Se recomienda **VLC Player** (gratuito).
+
+    <Steps>
+      <Step title="Elegir formato compatible">
+        Configure en la MX2200 un formato que el receptor soporte de forma directa:
+
+        - **PCM16 @ 44.1 kHz** (lineal)
+        - **MP3** (cualquiera de los modos disponibles)
+
+        <Note>
+          **OPUS** requiere un archivo **SDP (Session Description)** para describir el contenido al reproductor.
+        </Note>
+      </Step>
+      <Step title="Abrir ubicación de red en VLC">
+        En **VLC Player** vaya a **Medio → Abrir ubicación de red**.
+      </Step>
+      <Step title="Ingresar la URL">
+        Use el formato:
+
+        ```
+        [protocolo]://[IP_fuente]:[puerto]
+        ```
+
+        Ejemplo:
+
+        ```
+        rtp://0.0.0.0:3030
+        ```
+
+        Donde:
+
+        - `rtp` es el protocolo utilizado por la MX2200.
+        - `0.0.0.0` indica “**escuchar desde cualquier IP entrante**” en la PC receptora.
+        - `3030` es el **puerto** configurado para la recepción.
+
+        <Info>
+          Algunas versiones de VLC también aceptan: `rtp://@:3030`
+        </Info>
+      </Step>
+      <Step title="Verificar firewall/puerto">
+        Asegúrese de que el **puerto UDP** configurado esté **permitido** en firewall del sistema y del router del estudio.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>

@@ -1,0 +1,130 @@
+---
+title: "Reportes: Aaudit"
+description: "Reportes de emisión y estadisticas"
+keywords: ["reportes", "aaudit", "auditoria"]
+tags: ["Software", "Audicom", "Admicom"]
+---
+
+Aaudit es la herramienta de **auditoría de emisiones** de AUDICOM. Permite consultar, reproducir y generar reportes a partir de los registros diarios de lo emitido en la terminal de Aire.
+
+Se accede desde el botón **Audit** en la Barra de Aplicaciones. Por defecto está disponible en el escritorio _Comercial_ (Usuario = comercial), aunque puede añadirse a cualquier escritorio de usuario.
+
+Los registros se muestran en forma gráfica, similar a la ventana de **CyberPlay**:
+
+- Archivos reproducidos en una tanda → fondo verde.
+- Archivos reproducidos por AutoDJ o bloques en vivo → fondo celeste con un asterisco.
+- Intervalos de detención del programa (supuestos en vivo) → fondo amarillo.
+- Horas pares → gris claro, horas impares → gris oscuro.
+
+Los registros de emisión se guardan en la terminal de Aire como archivos con extensión `.air`, uno por cada día de transmisión. La ubicación se define en `Audicom.ini` dentro de `[Directories]`.
+
+<Note>
+  Si en el explorador de Windows se hace doble clic sobre un archivo `.air`, éste se abrirá directamente en Aaudit.
+</Note>
+
+<img
+  src="/images/audicom/au-aaudit.png"
+  alt="Au Aaudit Pn"
+  title="Au Aaudit Pn"
+  className="mx-auto"
+  style={{ width:"67%" }}
+/>
+
+### Identificación de música o avisos
+
+Aaudit determina el tipo de archivo por dos criterios:
+
+1. **Bloque de reproducción:** todo lo emitido dentro de una tanda se marca como _spot comercial_.
+   - Ejemplo: si el operador inserta un tema musical dentro de una tanda, será marcado como spot.
+2. **Base de datos:** se valida el campo **Clase** en InfoMusic.
+   - `Clase = Spot` → aparece en verde.
+   - `Clase ≠ Spot` (Promo, Música) → aparece en celeste.
+   - `Clase vacío o archivo no registrado` → considerado Spot si fue emitido en una tanda.
+
+---
+
+### Registro de usuarios
+
+El módulo de Aire incluye también los cambios de usuario en los registros.\
+En Aaudit aparecen como líneas grises con texto rojo, indicando hora de ingreso/egreso y nombre del usuario.
+
+---
+
+### Reproducir un título
+
+Es posible escuchar un archivo registrado seleccionándolo y pulsando **Play**.\
+El archivo se reproduce desde su ubicación original: si fue movido o eliminado no podrá escucharse.
+
+---
+
+### Abrir archivo
+
+Con el botón **.air** se puede abrir otro registro.
+
+- Por defecto se muestran los archivos del mes actual.
+- El menú _Tipos de archivo_ permite ampliar la vista a registros anteriores.
+- En instalaciones con múltiples terminales de aire, se puede seleccionar la terminal desde la cual se desea abrir el registro.
+
+---
+
+### Guardar como TXT
+
+Permite exportar el registro en texto plano, útil para verlo o imprimirlo en cualquier editor de texto.
+
+---
+
+### Imprimir
+
+Genera un informe en papel similar a los reportes gráficos, pero enviado directamente a la impresora.
+
+---
+
+### Reportes disponibles
+
+El menú de reportes incluye distintas modalidades:
+
+- **Reporte Global:** duración del archivo seleccionado, cantidad de emisiones y tiempo total al aire.
+- **Seguimiento de un aviso:** lista detallada de emisiones de un título en un rango de fechas, con tiempos de reproducción para verificar su salida completa.
+- **Listado para Derechos de Autor:** informe con Título, Intérprete, Autor, sello discográfico y código de álbum, para presentar ante entidades como SADAIC.
+
+---
+
+### Reportes gráficos
+
+Aaudit puede generar distintos gráficos visuales:
+
+- **Gráfico de Torta:** porcentajes de música, avisos y programas en vivo. Doble clic → minutos y segundos.
+- **Composición de 24 Hs:** barras con la distribución por hora de música, avisos y programas. Doble clic en la barra → tiempos exactos.
+
+  <img
+    src="/images/audicom/au-aaudit-24hs.png"
+    alt="Au Aaudit 24hs Pn"
+    title="Au Aaudit 24hs Pn"
+    style={{ width:"49%" }}
+  />
+- **Tiempo de tandas acumulado:** evolución de la publicidad emitida a lo largo del día.
+
+  <img
+    src="/images/audicom/au-aaudit-spots-hora.png"
+    alt="Au Aaudit Spots Hora Pn"
+    title="Au Aaudit Spots Hora Pn"
+    style={{ width:"49%" }}
+  />
+- **Detalle de avisos por hora:** barras con los minutos de publicidad emitida en cada hora.
+- **Gráfico 3D:** versión tridimensional de los gráficos de torta y barras.
+- **Ranking de spots:** comparación del tiempo total al aire de cada aviso.
+
+  <img
+    src="/images/audicom/au-aaudit-spots-ranking.png"
+    alt="Au Aaudit Spots Ranking Pn"
+    title="Au Aaudit Spots Ranking Pn"
+    style={{ width:"49%" }}
+  />
+- **Estilos musicales preferidos:** gráfico de torta con el tiempo de emisión por estilos musicales registrados en la base de datos.
+
+---
+
+<Warning>
+  Los archivos `.air` suelen guardarse en la carpeta `Audicom\Air` de la terminal de Aire.\
+  Su nombre corresponde a la fecha (`AAAAMMDD.air`). Se recomienda eliminar periódicamente los registros muy antiguos para evitar ocupación innecesaria en disco.
+</Warning>

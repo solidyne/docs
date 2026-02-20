@@ -1,0 +1,57 @@
+---
+title: "Operación"
+description: "Consideraciones generales sobre la operación en D612"
+keywords: ["operación"]
+tags: ["consolas de estudio", "linea Classic", "D612"]
+---
+
+## Introducción
+
+Los controles de la consola se organizan en varios sectores según su función:
+
+- Canales de entrada.
+- Control de híbrido telefónico.
+- Monitoreo y órdenes a estudio.
+- Escucha previa (CUE).
+- Ecualizadores de micrófono.
+- Indicadores de nivel y compresión. 
+
+## Micrófonos
+
+- **MIC 1 y MIC 2:** manejan solo señal de micrófono.
+  - La alimentación phantom de **48 V** se activa globalmente (todas o ninguna).
+  - Los micrófonos dinámicos soportan los 48 VCC, por lo que pueden combinarse condensadores y dinámicos.
+- Pueden asignarse a la etapa de procesado (ecualizador de 4 bandas y compresor).
+
+## Líneas
+
+- **Líneas analógicas:** admiten entradas estéreo balanceadas (BAL) y no balanceadas (LINE) con conmutación A/B dedse el panel.
+- **Canal digital USB:** maneja una entrada digital (USB) y una entrada analógica estéreo (LINE).
+- La conexión USB además envía las salidas **PGM o REC** hacia la conputadora.
+
+## Torreta de vúmetros
+
+La torreta contiene vúmetros LED que muestran:
+
+- El nivel de programa (pico promedio).
+- La acción del compresor.
+
+## Verificación rápida
+
+Procedimientos básicos para comprobar que la consola está correctamente conectada:
+
+### Verificar ingreso de señal
+
+1. Conecte una fuente de señal (micrófono, audio USB).
+   - Seleccione la entrada correspondiente en el canal utilizado (**MIC** o **BAL-LIN**).
+   - Esta es una causa común de error en canales de línea (entrada equivocada).
+2. Pulse **CUE** en el canal al que ingresa señal.
+3. Abra el fader **CUE** en la sección de monitoreo.
+   - El audio deberá escucharse en el parlante de la consola.
+
+### Enviar señal al aire
+
+1. Asigne **PGM** en el canal para enviar la señal a la salida principal.
+2. Abra el fader del canal al nivel deseado.
+   - La señal será enviada al aire y visualizada en los vúmetros de programa.
+3. Ajuste la ganancia para que la posición normal de trabajo del fader principal sea **–15 dB** (zona gris).

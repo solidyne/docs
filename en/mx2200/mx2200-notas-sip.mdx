@@ -1,0 +1,138 @@
+---
+title: "Notas sobre SIP"
+description: "Conceptos básicos sobre las cuantas SIP"
+keywords: ["SIP","VoIP","cuentas"]
+tags: ["consolas portátiles","CODEC","MX2200"]
+---
+
+## El problema de encontrar al compañero en Internet
+
+Cuando dos equipos deben comunicarse entre sí, ambos necesitan conocer la dirección IP del otro.\
+En algunos casos se puede contratar una **IP fija** al proveedor, aunque suele implicar un costo adicional y no siempre está disponible (ejemplo: cooperativas que entregan subredes privadas).
+
+Para resolver estas limitaciones, se desarrollaron protocolos de señalización, entre ellos el más importante: **SIP (Session Initiation Protocol)**.
+
+---
+
+## ¿Qué es SIP?
+
+SIP es un protocolo de comunicación entre equipos conectados a Internet.\
+Su función principal es permitir que dos dispositivos se encuentren y establezcan una sesión sin conocer previamente sus direcciones IP.
+
+- Cada cliente SIP tiene una dirección con formato similar a un e-mail:\
+  sip:usuario@servidor.com
+- Ambos clientes deben registrarse en un **Servidor SIP**, que mantiene actualizada la lista de IPs.
+- El servidor actúa como “intermediario inicial”, pero la transferencia de datos es **punto a punto** entre clientes.
+- El sistema valida identidad mediante **usuario \+ contraseña**.
+
+### Flujo básico de llamada SIP
+
+1. Cliente **A** envía un **INVITE** al Servidor SIP.
+2. El servidor retransmite el pedido a **B**.
+3. **B** responde con **RINGING** → el servidor lo retransmite a **A**.
+4. Si **B** acepta, envía **OK** → retransmitido a **A**.
+5. Ambos clientes reciben las direcciones IP y parámetros de sesión (SDP: sample rate, canales, códec).
+6. El audio/datos fluyen directamente entre A y B.
+7. Para finalizar, se envía **BYE → OK**.
+
+<Info>
+  SIP es similar al correo electrónico, pero en tiempo real.\
+  Un cliente incluso puede suscribirse a notificaciones de presencia de sus contactos.
+</Info>
+
+En escenarios con **routers/firewalls**, interviene el **NAT**, lo que añade complejidad a la conexión.
+
+<Note>
+  Especificación completa: RFC 3261 – SIP: Session Initiation Protocol\
+  https://datatracker.ietf.org/doc/html/rfc3261
+</Note>
+
+---
+
+## ¿Cómo obtengo una cuenta SIP?
+
+Existen muchos proveedores (gratuitos y pagos).\
+Algunos ofrecen cuentas gratuitas limitadas; otros incluyen minutos hacia telefonía convencional mediante abono mensual.
+
+### Guía práctica
+
+Puede consultar la guía oficial:\
+[Guía de configuración de cuentas SIP en Linphone](https://solidynepro.com/descargas/productos/Tutorial_Linphone_Accounts.pdf)
+
+Al crear una cuenta, el proveedor entrega los siguientes datos:
+
+1. **Dirección SIP**\
+   Ejemplo:
+   - sip:usuario@proveedorSIP.com\
+     A veces se entregan los campos separados (usuario \+ servidor).\
+     También llamada _SIP identity_, _SIP URL_ o _SIP URI_.
+2. **Dominio (Domain)**\
+   Ejemplo:
+   - sip:radiovirtual.linphone.org
+   - sip:radiovirtual.onsip.com\
+     También conocido como _URL of Registrar_ o _Reg Server_.
+3. **Realm (Authentication realm)**
+   - Puede ser igual al dominio.
+   - Usualmente se configura como “\*”.
+4. **Username / Auth Username**
+   - Algunos sistemas diferencian entre usuario genérico y usuario de autenticación.
+   - Ejemplo:
+     - Username: Luis_Garcia
+     - Auth Username: lgarcia77
+   - Si el proveedor entrega un único dato → ambos son iguales.
+5. **Password**
+   - Contraseña provista para validar contra el servidor.
+
+### Ejemplo de direcciones SIP
+
+sip:estudioFM@radiovirtual.onsip.com
+sip:estudioproduccion@linphone.org
+
+<Info>
+  Al igual que con los correos electrónicos, no hay restricción:\
+  un cliente en un proveedor SIP puede llamar a otro registrado en un proveedor distinto.
+</Info>
+
+---
+
+## Otras definiciones teóricas
+
+### Dirección IP
+
+- Cada equipo conectado a Internet tiene una **IP**.
+- Formato: cuatro números separados por puntos (ej: 192.168.0.100).
+- La organización jerárquica permite el ruteo de mensajes.
+
+### IP pública vs IP privada
+
+- Dentro de una LAN, los equipos usan **IPs privadas**, no visibles externamente.
+- El router asigna una **IP pública** a toda la red y funciona como **firewall**.
+
+### NAT (Network Address Translation)
+
+- Traduce IPs privadas en la LAN a la IP pública del router.
+- Permite que múltiples dispositivos compartan una sola IP externa.
+- Existen distintos tipos de NAT, lo que puede afectar a SIP.
+
+<Note>
+  Más info: RFC 2663 – NAT Terminology\
+  https://datatracker.ietf.org/doc/html/rfc2663
+</Note>
+
+### STUN
+
+Session Traversal Utilities for NAT\
+Permite que un cliente detrás de NAT descubra su IP pública y el tipo de NAT en uso.\
+Definido en RFC 5389.
+
+### TURN
+
+Traversal Using Relays around NAT\
+Usa servidores intermedios para clientes detrás de NAT simétrico.\
+Definido en RFC 8656.
+
+### ICE
+
+Interactive Connectivity Establishment\
+Combina técnicas de NAT traversal (STUN, TURN) para lograr conexión entre dos equipos en LANs distintas.\
+Definido en RFC 8445.

@@ -8,11 +8,7 @@
     "dark": "#15803D"
   },
   "contextual": {
-    "options": [
-      "copy",
-      "chatgpt",
-      "claude"
-    ]
+    "options": ["copy", "chatgpt", "claude"]
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -25,10 +21,7 @@
             "groups": [
               {
                 "group": "Manuales",
-                "pages": [
-                  "/index",
-                  "es/otros_docs/discontinued"
-                ]
+                "pages": ["es/index", "es/otros_docs/discontinued"]
               },
               {
                 "group": "Documentación accesoria",
@@ -57,9 +50,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCIÓN",
-                    "pages": [
-                      "es/unidex/unidex-resumen"
-                    ]
+                    "pages": ["es/unidex/unidex-resumen"]
                   },
                   {
                     "group": "CABLEADO",
@@ -92,9 +83,7 @@
                   },
                   {
                     "group": "PROCESADO",
-                    "pages": [
-                      "es/unidex/op-procesado"
-                    ]
+                    "pages": ["es/unidex/op-procesado"]
                   },
                   {
                     "group": "ACCESO VIA WEB",
@@ -129,10 +118,7 @@
                   },
                   {
                     "group": "Info Técnica y Servicio",
-                    "pages": [
-                      "es/unidex/remote-firmware",
-                      "es/unidex/especificaciones"
-                    ]
+                    "pages": ["es/unidex/remote-firmware", "es/unidex/especificaciones"]
                   }
                 ]
               },
@@ -184,9 +170,7 @@
                   },
                   {
                     "group": "EXPANSIONES",
-                    "pages": [
-                      "es/extensiones/ux6"
-                    ]
+                    "pages": ["es/extensiones/ux6"]
                   }
                 ]
               }
@@ -201,9 +185,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCION",
-                    "pages": [
-                      "es/index-linea-classic"
-                    ]
+                    "pages": ["es/index-linea-classic"]
                   }
                 ]
               },
@@ -213,9 +195,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCION",
-                    "pages": [
-                      "es/DX816/816-resumen"
-                    ]
+                    "pages": ["es/DX816/816-resumen"]
                   },
                   {
                     "group": "INSTALACIÓN",
@@ -254,10 +234,7 @@
                   },
                   {
                     "group": "Info Técnica y Servicio",
-                    "pages": [
-                      "es/DX816/816-specs",
-                      "es/DX816/816-mantenimiento"
-                    ]
+                    "pages": ["es/DX816/816-specs", "es/DX816/816-mantenimiento"]
                   }
                 ]
               },
@@ -267,9 +244,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCION",
-                    "pages": [
-                      "es/612/612-resumen"
-                    ]
+                    "pages": ["es/612/612-resumen"]
                   },
                   {
                     "group": "INSTALACIÓN",
@@ -294,10 +269,7 @@
                   },
                   {
                     "group": "STREAMING",
-                    "pages": [
-                      "es/612/612-AoIP",
-                      "es/multi-discovery"
-                    ]
+                    "pages": ["es/612/612-AoIP", "es/multi-discovery"]
                   }
                 ]
               },
@@ -307,9 +279,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCION",
-                    "pages": [
-                      "es/minimixer/minimixer-resumen"
-                    ]
+                    "pages": ["es/minimixer/minimixer-resumen"]
                   },
                   {
                     "group": "INSTALACIÓN",
@@ -330,9 +300,7 @@
                   },
                   {
                     "group": "INFO TECNICA",
-                    "pages": [
-                      "es/minimixer/minimixer-specs"
-                    ]
+                    "pages": ["es/minimixer/minimixer-specs"]
                   }
                 ]
               }
@@ -347,9 +315,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCION",
-                    "pages": [
-                      "es/index-portatiles"
-                    ]
+                    "pages": ["es/index-portatiles"]
                   }
                 ]
               },
@@ -359,9 +325,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCION",
-                    "pages": [
-                      "es/mx2200/mx2200-resumen"
-                    ]
+                    "pages": ["es/mx2200/mx2200-resumen"]
                   },
                   {
                     "group": "INSTALACIÓN",
@@ -414,9 +378,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCIÓN",
-                    "pages": [
-                      "es/mx2100/mx2100-resumen"
-                    ]
+                    "pages": ["es/mx2100/mx2100-resumen"]
                   },
                   {
                     "group": "CONEXIONES",
@@ -436,9 +398,7 @@
                   },
                   {
                     "group": "Info Técnica",
-                    "pages": [
-                      "es/mx2100/mx2100-specs"
-                    ]
+                    "pages": ["es/mx2100/mx2100-specs"]
                   }
                 ]
               }
@@ -453,9 +413,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCIÓN",
-                    "pages": [
-                      "es/index-procesadores"
-                    ]
+                    "pages": ["es/index-procesadores"]
                   }
                 ]
               },
@@ -521,9 +479,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCIÓN",
-                    "pages": [
-                      "es/362/362-resumen"
-                    ]
+                    "pages": ["es/362/362-resumen"]
                   },
                   {
                     "group": "INSTALACIÓN",
@@ -536,15 +492,11 @@
                   },
                   {
                     "group": "CONFIGURACIÓN",
-                    "pages": [
-                      "es/362/362-audio-ajustes"
-                    ]
+                    "pages": ["es/362/362-audio-ajustes"]
                   },
                   {
                     "group": "INFO TECNICA",
-                    "pages": [
-                      "es/362/362-specs"
-                    ]
+                    "pages": ["es/362/362-specs"]
                   }
                 ]
               }
@@ -558,9 +510,7 @@
                 "groups": [
                   {
                     "group": "INTRODUCCIÓN",
-                    "pages": [
-                      "es/index-hibridos"
-                    ]
+                    "pages": ["es/index-hibridos"]
                   }
                 ]
               },
@@ -580,16 +530,11 @@
                   },
                   {
                     "group": "OPERACIÓN",
-                    "pages": [
-                      "es/HL240/hl240-operacion",
-                      "es/HL240/hl240-vqr"
-                    ]
+                    "pages": ["es/HL240/hl240-operacion", "es/HL240/hl240-vqr"]
                   },
                   {
                     "group": "INFO TECNICA",
-                    "pages": [
-                      "es/HL240/hl240-specs"
-                    ]
+                    "pages": ["es/HL240/hl240-specs"]
                   }
                 ]
               },
@@ -606,15 +551,11 @@
                   },
                   {
                     "group": "OPERACIÓN",
-                    "pages": [
-                      "es/blt200/blt200-operacion"
-                    ]
+                    "pages": ["es/blt200/blt200-operacion"]
                   },
                   {
                     "group": "INFO TECNICA",
-                    "pages": [
-                      "es/blt200/blt200-specs"
-                    ]
+                    "pages": ["es/blt200/blt200-specs"]
                   }
                 ]
               }
@@ -629,9 +570,7 @@
                 "groups": [
                   {
                     "group": "Introducción",
-                    "pages": [
-                      "es/audicom/au-resumen"
-                    ]
+                    "pages": ["es/audicom/au-resumen"]
                   },
                   {
                     "group": "Instalación",
@@ -695,32 +634,19 @@
                   },
                   {
                     "group": "Noticias",
-                    "pages": [
-                      "es/audicom/au-botNews",
-                      "es/audicom/au-news_suite",
-                      "es/audicom/au-hdcorder"
-                    ]
+                    "pages": ["es/audicom/au-botNews", "es/audicom/au-news_suite", "es/audicom/au-hdcorder"]
                   },
                   {
                     "group": "Manejo de Enlaces y Streaming",
-                    "pages": [
-                      "es/audicom/au-internet",
-                      "es/audicom/au-iLInk"
-                    ]
+                    "pages": ["es/audicom/au-internet", "es/audicom/au-iLInk"]
                   },
                   {
                     "group": "Herramientas para Internet",
-                    "pages": [
-                      "es/audicom/au-webtools",
-                      "es/audicom/au-audicast"
-                    ]
+                    "pages": ["es/audicom/au-webtools", "es/audicom/au-audicast"]
                   },
                   {
                     "group": "Mantenimiento",
-                    "pages": [
-                      "es/audicom/au-mantenimiento",
-                      "es/audicom/au-updates"
-                    ]
+                    "pages": ["es/audicom/au-mantenimiento", "es/audicom/au-updates"]
                   }
                 ]
               },
@@ -739,11 +665,7 @@
                   },
                   {
                     "group": "Reportes y facturación",
-                    "pages": [
-                      "es/audicom/admicom-reportes",
-                      "es/audicom/au-audit",
-                      "es/audicom/admicom-facturacion"
-                    ]
+                    "pages": ["es/audicom/admicom-reportes", "es/audicom/au-audit", "es/audicom/admicom-facturacion"]
                   }
                 ]
               }
@@ -754,9 +676,7 @@
             "groups": [
               {
                 "group": "Indice",
-                "pages": [
-                  "es/index-accesorios"
-                ]
+                "pages": ["es/index-accesorios"]
               },
               {
                 "group": "StudioBox",
@@ -781,9 +701,670 @@
         "language": "en",
         "tabs": [
           {
+            "tab": "Indexes",
+            "groups": [
+              {
+                "group": "Manuals",
+                "pages": ["en/index", "en/otros_docs/discontinued"]
+              },
+              {
+                "group": "Supplementary Documentation",
+                "pages": [
+                  "en/otros_docs/disassembling",
+                  "en/otros_docs/audiovisual",
+                  "en/otros_docs/tech-docs"
+                ]
+              },
+              {
+                "group": "Technical Support",
+                "pages": [
+                  "en/otros_docs/downloads",
+                  "en/otros_docs/schematics",
+                  "en/otros_docs/contact"
+                ]
+              }
+            ]
+          },
+          {
             "tab": "UNIDEX Consoles",
-            "pages": [
-              "en/ux24_installation"
+            "anchors": [
+              {
+                "anchor": "UNIDEX Series",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/unidex/unidex-resumen"]
+                  },
+                  {
+                    "group": "WIRING",
+                    "pages": [
+                      "en/unidex/instalacion-cableado_estructurado",
+                      "en/unidex/instalacion-cableado-kits",
+                      "en/unidex/instalacion-RJ45-pinout",
+                      "en/unidex/instalacion-cableado_monitoreo",
+                      "en/diagramas/diagrama-tierras"
+                    ]
+                  },
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "en/unidex/instalacion-entradas",
+                      "en/unidex/instalacion-salidas",
+                      "en/unidex/instalacion-usb",
+                      "en/unidex/instalacion-red",
+                      "en/unidex/instalacion-gpio",
+                      "en/unidex/resets"
+                    ]
+                  },
+                  {
+                    "group": "CONFIGURATION",
+                    "pages": [
+                      "en/unidex/config-entradas-salidas",
+                      "en/unidex/config-sistema",
+                      "en/unidex/configuracion-DANTE"
+                    ]
+                  },
+                  {
+                    "group": "SIGNAL PROCESSING",
+                    "pages": ["en/unidex/op-procesado"]
+                  },
+                  {
+                    "group": "WEB ACCESS",
+                    "pages": ["en/unidex/remote-interfaz", "en/unidex/unidex-discovery"]
+                  }
+                ]
+              },
+              {
+                "anchor": "UX24",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "CONFIGURATION",
+                    "pages": [
+                      "en/ux24/ux24-resumen",
+                      "en/ux24/ux24-instalacion-trasero",
+                      "en/ux24/ux24-config-streaming"
+                    ]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": [
+                      "en/ux24/ux24-op-zonas",
+                      "en/ux24/ux24-op-canales",
+                      "en/ux24/ux24-op-monitoreado",
+                      "en/ux24/ux24-op-escenas",
+                      "en/ux24/ux24-op-telco"
+                    ]
+                  },
+                  {
+                    "group": "Technical Info & Service",
+                    "pages": ["en/unidex/remote-firmware", "en/unidex/especificaciones"]
+                  }
+                ]
+              },
+              {
+                "anchor": "UX18",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "CONFIGURATION",
+                    "pages": [
+                      "en/ux18/ux18-resumen",
+                      "en/ux18/ux18-instalacion-trasero",
+                      "en/ux18/ux18-doble-talkback",
+                      "en/ux18/ux18-config-streaming"
+                    ]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": [
+                      "en/ux18/ux18-op-zonas",
+                      "en/ux18/ux18-op-canales",
+                      "en/ux18/ux18-op-monitoreado",
+                      "en/ux18/ux18-op-escenas",
+                      "en/ux18/ux18-op-telco"
+                    ]
+                  },
+                  {
+                    "group": "Technical Information",
+                    "pages": ["en/ux18/ux18-acualizacion-del-firmware", "en/ux18/ux18-especificaciones"]
+                  }
+                ]
+              },
+              {
+                "anchor": "Extensions",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "UDX Interfaces",
+                    "pages": [
+                      "en/extensiones/UNIDEX-adaptadores",
+                      "en/extensiones/UDX-2MIC",
+                      "en/extensiones/UDX-2TEL",
+                      "en/extensiones/udx-tel-bt",
+                      "en/extensiones/udx-usb"
+                    ]
+                  },
+                  {
+                    "group": "EXPANSIONS",
+                    "pages": ["en/extensiones/ux6"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Classic Consoles",
+            "anchors": [
+              {
+                "anchor": "Classic Series",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/index-linea-classic"]
+                  }
+                ]
+              },
+              {
+                "anchor": "DX816/822",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/DX816/816-resumen"]
+                  },
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "en/DX816/816-diagramas",
+                      "en/DX816/816-entradas",
+                      "en/DX816/816-salidas",
+                      "en/DX816/816-usb",
+                      "en/DX816/816-monitoreo",
+                      "en/DX816/816-telco",
+                      "en/DX816/816-GPIO-tally"
+                    ]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": [
+                      "en/DX816/816-op-intro",
+                      "en/DX816/816-op-mics",
+                      "en/DX816/816-op-lineas",
+                      "en/DX816/816-op-monitoreo",
+                      "en/DX816/816-op-hibrido",
+                      "en/DX816/816-op-bluetooth",
+                      "en/DX816/816-voip",
+                      "en/DX816/816-op-consejos"
+                    ]
+                  },
+                  {
+                    "group": "STREAMING",
+                    "pages": [
+                      "en/DX816/816-streaming",
+                      "en/DX816/816-stl",
+                      "en/DX816/816-decoder",
+                      "en/DX816/816-icecast",
+                      "en/DX816/816-discovery"
+                    ]
+                  },
+                  {
+                    "group": "Technical Specs & Service",
+                    "pages": ["en/DX816/816-specs", "en/DX816/816-mantenimiento"]
+                  }
+                ]
+              },
+              {
+                "anchor": "D612",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/612/612-resumen"]
+                  },
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "en/612/612-fuente",
+                      "en/612/612-entradas",
+                      "en/612/612-salidas",
+                      "en/612/612-monitoreo",
+                      "en/612/612-telco"
+                    ]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": [
+                      "en/612/612-op-intro",
+                      "en/612/612-op-microfonos",
+                      "en/612/612-op-lineas",
+                      "en/612/612-op-monitoreo",
+                      "en/612/612-op-hibrido",
+                      "en/612/612-op-grabacion"
+                    ]
+                  },
+                  {
+                    "group": "STREAMING",
+                    "pages": ["en/612/612-AoIP", "en/multi-discovery"]
+                  }
+                ]
+              },
+              {
+                "anchor": "MiniMixer",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/minimixer/minimixer-resumen"]
+                  },
+                  {
+                    "group": "INSTALLATION",
+                    "pages": ["en/minimixer/minimixer-conexiones", "en/minimixer/minimixer-bluetooth"]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": [
+                      "en/minimixer/minimixer-op-controles",
+                      "en/minimixer/minimixer-op-puesta_al_aire",
+                      "en/minimixer/minimixer-op-bluetooth",
+                      "en/minimixer/minimixer-op-linea",
+                      "en/minimixer/minimixer-op-grabacion"
+                    ]
+                  },
+                  {
+                    "group": "TECHNICAL INFORMATION",
+                    "pages": ["en/minimixer/minimixer-specs"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Portable Units",
+            "anchors": [
+              {
+                "anchor": "PORTABLE UNITS",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/index-portatiles"]
+                  }
+                ]
+              },
+              {
+                "anchor": "MX2200",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/mx2200/mx2200-resumen"]
+                  },
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "en/mx2200/mx2200-conectividad",
+                      "en/mx2200/mx2200-diagrama",
+                      "en/mx2200/mx2200-firmware-update"
+                    ]
+                  },
+                  {
+                    "group": "CONFIGURATION",
+                    "pages": ["en/mx2200/mx2200-config-acceso", "en/mx2200/mx2200-config-display"]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": [
+                      "en/mx2200/mx2200-op-descripcion",
+                      "en/mx2200/mx2200-op-lineas-intro",
+                      "en/mx2200/mx2200-op-bluetooth",
+                      "en/mx2200/mx2200-op-linea_fija",
+                      "en/mx2200/mx2200-op-grabacion"
+                    ]
+                  },
+                  {
+                    "group": "STUDIO LINK",
+                    "pages": [
+                      "en/mx2200/mx2200-enlaces-internet",
+                      "en/mx2200/mx2200-llamadaVoIP",
+                      "en/mx2200/mx2200-rtp",
+                      "en/mx2200/mx2200-streaming-server",
+                      "en/mx2200/mx2200-enlace-telefonico"
+                    ]
+                  },
+                  {
+                    "group": "Technical Specs & Service",
+                    "pages": [
+                      "en/mx2200/mx2200-notas-sip",
+                      "en/mx2200/mx2200-discovery",
+                      "en/mx2200/mx2200-specs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "MX2100",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/mx2100/mx2100-resumen"]
+                  },
+                  {
+                    "group": "CONNECTIONS",
+                    "pages": [
+                      "en/mx2100/mx2100-conexiones",
+                      "en/mx2100/mx2100-celular",
+                      "en/mx2100/mx2100-fija"
+                    ]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": [
+                      "en/mx2100/mx2100-operacion",
+                      "en/mx2100/mx2100-enlace-telefonico",
+                      "en/mx2100/mx2100-enlace-notebook"
+                    ]
+                  },
+                  {
+                    "group": "Technical Specifications",
+                    "pages": ["en/mx2100/mx2100-specs"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Audio Processors",
+            "anchors": [
+              {
+                "anchor": "Audio Processors",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/index-procesadores"]
+                  }
+                ]
+              },
+              {
+                "anchor": "542 APC",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "en/542/542-resumen",
+                      "en/542/542-guia",
+                      "en/542/542-instalacion-montaje",
+                      "en/542/542-instalacion-cableado",
+                      "en/542/542-instalacion-gpio",
+                      "en/542/542-firmware"
+                    ]
+                  },
+                  {
+                    "group": "CONFIGURATION",
+                    "pages": [
+                      "en/542/542-acceso_local",
+                      "en/542/542-instalacion-web",
+                      "en/542/542-entradas-salidas",
+                      "en/542/542-sistema",
+                      "en/542/542-alarmas"
+                    ]
+                  },
+                  {
+                    "group": "FM",
+                    "pages": [
+                      "en/542/542-FM_output",
+                      "en/542/542-sintonizador",
+                      "en/542/542-RDS",
+                      "en/542/542-mono",
+                      "en/542/542-LiteCommander"
+                    ]
+                  },
+                  {
+                    "group": "AUDIO",
+                    "pages": [
+                      "en/542/542-acceso_avanzado_web",
+                      "en/542/542-procesado-primeras_etapas",
+                      "en/542/542-procesado-AGC",
+                      "en/542/542-procesado-compresores",
+                      "en/542/542-presets"
+                    ]
+                  },
+                  {
+                    "group": "AoIP SERVICES",
+                    "pages": [
+                      "en/542/542-opcionAoIP",
+                      "en/542/542-streamer",
+                      "en/multi-discovery",
+                      "en/542/542-dante"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "Audimax 362",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/362/362-resumen"]
+                  },
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "en/362/362-instalacion",
+                      "en/362/362-instalacion-audio",
+                      "en/362/362-instalacion-MPX",
+                      "en/362/362-escenarios"
+                    ]
+                  },
+                  {
+                    "group": "CONFIGURATION",
+                    "pages": ["en/362/362-audio-ajustes"]
+                  },
+                  {
+                    "group": "TECHNICAL SPECIFICATIONS",
+                    "pages": ["en/362/362-specs"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Telephone Hybrids",
+            "anchors": [
+              {
+                "anchor": "Telephone Hybrids",
+                "groups": [
+                  {
+                    "group": "INTRODUCTION",
+                    "pages": ["en/index-hibridos"]
+                  }
+                ]
+              },
+              {
+                "anchor": "HL240",
+                "groups": [
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "en/HL240/hl240-resumen",
+                      "en/HL240/hl240-montaje",
+                      "en/HL240/hl240-conexiones",
+                      "en/HL240/hl240-lineas-bluetooth",
+                      "en/HL240/hl240-lineas-pots",
+                      "en/HL240/hl240-lineas-VoIP"
+                    ]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": ["en/HL240/hl240-operacion", "en/HL240/hl240-vqr"]
+                  },
+                  {
+                    "group": "TECHNICAL SPECIFICATIONS",
+                    "pages": ["en/HL240/hl240-specs"]
+                  }
+                ]
+              },
+              {
+                "anchor": "BLT200",
+                "groups": [
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "en/blt200/blt200-resumen",
+                      "en/blt200/blt200-conexiones",
+                      "en/blt200/blt200-bluetooth"
+                    ]
+                  },
+                  {
+                    "group": "OPERATION",
+                    "pages": ["en/blt200/blt200-operacion"]
+                  },
+                  {
+                    "group": "TECHNICAL SPECIFICATIONS",
+                    "pages": ["en/blt200/blt200-specs"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "AUDICOM",
+            "anchors": [
+              {
+                "anchor": "AUDICOM",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "Introduction",
+                    "pages": ["en/audicom/au-resumen"]
+                  },
+                  {
+                    "group": "Installation",
+                    "pages": [
+                      "en/audicom/au-setup",
+                      "en/audicom/au-setup-config",
+                      "en/audicom/au-red-configuracion",
+                      "en/audicom/au-red-usuarios",
+                      "en/audicom/au-red-operacion",
+                      "en/audicom/au-setup-gpio",
+                      "en/audicom/au-setup-rds",
+                      "en/audicom/au-setup-autostart"
+                    ]
+                  },
+                  {
+                    "group": "On-Air Studio",
+                    "pages": [
+                      "en/audicom/au-op-desktop",
+                      "en/audicom/au-op-ilogon",
+                      "en/audicom/au-cyberplay-resumen",
+                      "en/audicom/au-cyberplay-transporte",
+                      "en/audicom/au-cyberplay-herramientas",
+                      "en/audicom/au-liveassist",
+                      "en/audicom/au-playlistmanager",
+                      "en/audicom/au-mediamanager",
+                      "en/audicom/au-filemanager",
+                      "en/audicom/au-filemanager-operacion",
+                      "en/audicom/au-irec"
+                    ]
+                  },
+                  {
+                    "group": "Content Scheduling",
+                    "pages": [
+                      "en/audicom/au-cpeditor-resumen",
+                      "en/audicom/au-cpeditor-comerciales",
+                      "en/audicom/au-cpeditor-comandostanda",
+                      "en/audicom/au-cpeditor-bloques",
+                      "en/audicom/au-cpeditor-comandosbloques",
+                      "en/audicom/au-cpeditor-comandosmusica",
+                      "en/audicom/au-cpeditor-comandosremoto",
+                      "en/audicom/au-cpeditor-operacion"
+                    ]
+                  },
+                  {
+                    "group": "Music Scheduling",
+                    "pages": [
+                      "en/audicom/au-adjeditor-resumen",
+                      "en/audicom/au-adjeditor-descripcion",
+                      "en/audicom/au-adjeditor-plantillas",
+                      "en/audicom/au-adjeditor-operacion"
+                    ]
+                  },
+                  {
+                    "group": "Media Management",
+                    "pages": [
+                      "en/audicom/au-infomusic_descripcion",
+                      "en/audicom/au-infomusic-medios",
+                      "en/audicom/au-infomusic-operacion",
+                      "en/audicom/au-autoedit"
+                    ]
+                  },
+                  {
+                    "group": "News",
+                    "pages": ["en/audicom/au-botNews", "en/audicom/au-news_suite", "en/audicom/au-hdcorder"]
+                  },
+                  {
+                    "group": "Links & Streaming",
+                    "pages": ["en/audicom/au-internet", "en/audicom/au-iLInk"]
+                  },
+                  {
+                    "group": "Internet Tools",
+                    "pages": ["en/audicom/au-webtools", "en/audicom/au-audicast"]
+                  },
+                  {
+                    "group": "Maintenance",
+                    "pages": ["en/audicom/au-mantenimiento", "en/audicom/au-updates"]
+                  }
+                ]
+              },
+              {
+                "anchor": "ADMICOM",
+                "icon": "book-open",
+                "groups": [
+                  {
+                    "group": "Configuration & Operation",
+                    "pages": [
+                      "en/audicom/admicom-descripcion",
+                      "en/audicom/admicom-config-emisora",
+                      "en/audicom/admicom-config-comercial",
+                      "en/audicom/admicom-programacion-avisos"
+                    ]
+                  },
+                  {
+                    "group": "Reports & Billing",
+                    "pages": ["en/audicom/admicom-reportes", "en/audicom/au-audit", "en/audicom/admicom-facturacion"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Accessories",
+            "groups": [
+              {
+                "group": "Index",
+                "pages": ["en/index-accesorios"]
+              },
+              {
+                "group": "StudioBox",
+                "pages": [
+                  "en/extensiones/studioBox-descripcion",
+                  "en/extensiones/studioBox-conexiones",
+                  "en/extensiones/studioBox-operacion"
+                ]
+              },
+              {
+                "group": "Cables & Adapters",
+                "pages": [
+                  "en/accesorios/cables-y-adaptadores/kits-de-cables",
+                  "en/accesorios/cables-y-adaptadores/catalogo"
+                ]
+              }
             ]
           }
         ]

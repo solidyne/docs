@@ -1,0 +1,175 @@
+---
+title: "Wizard y Enhancers"
+description: "Procesado de audio: Controles Simplificados Wizard y Enhancers"
+keywords: ["wizard", "enhancers", "symmetrizer", "bass", "stereo", "EQ", "ecualizador"]
+tags: ["procesadores", "542"]
+---
+
+## Introducción
+
+Las etapas de procesado se acceden desde la pantalla **SETUP**, opción \*\*PROCESS \*\*del menú lateral.
+
+- Las distintas etapas se muestran agrupadas en **solapas (tabs)**.
+- El orden de izquierda a derecha corresponde al **orden real de interconexión**, con excepción de **WIZARD**, que no es una etapa de procesado en sí misma.
+
+Etapas disponibles:
+
+1. WIZARDS
+2. ENHANCERS
+3. ENHANCER EQ
+4. AGC
+5. MULTIBAND AGC
+6. MULTIBAND LIMITER
+7. MIX & CLIPPER – FINAL LIMITER
+
+---
+
+## WIZARD
+
+Los controles **WIZARD** trabajan sobre los presets de usuario.\
+Permiten **cambiar rápidamente el carácter del sonido** y crear nuevos presets sin necesidad de modificar cada etapa individual.
+
+- No se requieren conocimientos avanzados.
+- Relacionado: ver **Gestión de presets**.
+
+Funciones principales:
+
+1. Modificar el carácter de un preset en cuatro aspectos esenciales:
+   - **BASS**
+   - **BRIGHT**
+   - **COMPRESSION**
+   - **LOUDNESS**
+2. Conmutar y ajustar en forma básica los **ENHANCERS**:
+   - Voice Symmetrizer
+   - EQ
+   - Bass Enhancer
+   - Stereo Enhancer
+
+Cada control WIZARD modifica múltiples parámetros en distintas etapas de forma sincronizada.
+
+![542 Procesado Wizards Pn](/images/542/542-procesado-wizards.png)
+
+#### Interacción entre controles
+
+- Los cuatro controles están relacionados: un mismo parámetro puede ser afectado por más de un control.
+- Cuando se mueve un control, se recalculan las posiciones de los demás.
+- Al cargar un preset, los controles se posicionan de acuerdo al ajuste del mismo.
+
+Esto permite **visualizar de un vistazo** las características sonoras de cada preset y compararlos.
+
+#### Consejos de uso
+
+- Usar los WIZARD para **cambios moderados**.
+- Partir siempre de un preset cercano al resultado buscado.
+  - Ejemplo: si se busca máxima sonoridad, no partir de un preset suave y subir al máximo **LOUDNESS**.
+  - Se recomienda partir de un preset tipo **MaxLoudness**, ya optimizado para ese objetivo.
+
+<Note>
+  Usuarios avanzados pueden ajustar cada etapa individualmente para mayor precisión en el sonido.
+</Note>
+
+---
+
+## Enhancers
+
+![542 Procesado Enhacer Pn](/images/542/542-procesado-enhacer.png)
+
+### Voice Symmetrizer
+
+La voz humana es asimétrica debido a la naturaleza de las cuerdas vocales (pulsos triangulares asimétricos). Esta asimetría se mantiene tras el filtrado de las cavidades vocales.
+
+Como resultado, al pasar por un compresor:
+
+- Una polaridad llega al 100%, mientras que la opuesta rara vez supera el 50%.
+- La voz se percibe menos intensa que la música, que es más simétrica.
+
+Para corregir este fenómeno sin alterar la calidad sonora se emplean **simetrizadores de pico**.
+
+<Info>
+  Técnica basada en descubrimientos del Dr. Kahn y desarrollada por el Ing. Oscar Bonello.\
+  Referencia: _Journal of the AES, Vol.24, Nº5_.
+</Info>
+
+---
+
+### Expander
+
+- Su objetivo es **mejorar la relación señal/ruido (S/N)** del sonido al aire.
+- La compresión multibanda aumenta la sonoridad, pero reduce la S/N.
+- Sin expansor, en las pausas largas de voz podría escucharse el piso de ruido.
+
+**Control disponible:**
+
+- **THS (Threshold/Umbral):** ajusta en dBFS el nivel a partir del cual el expansor comienza a reducir ganancia.
+
+---
+
+### Bass Enhancer
+
+- Refuerza **medios-graves (50 – 300 Hz)**, mejorando presencia en parlantes pequeños.
+- A diferencia de un EQ, **sintetiza y agrega armónicos** a partir de las frecuencias más bajas.
+
+**Controles:**
+
+- **FREQUENCY:** frecuencia de corte del filtro pasa-bajos (define rango de armónicos).
+- **INTENSITY:** cantidad e intensidad de armónicos generados.
+- **SUB-GAIN:** nivel de graves sintetizados agregados a la señal.
+
+<Note>
+  Al usar conmutación de presets para voces, conviene que los ajustes de música y voz tengan **BASS ENHANCER** en la misma condición (activo o desactivo).
+</Note>
+
+---
+
+### Stereo Enhancer
+
+- Aporta un sonido **más envolvente**, destacando la emisora frente a transmisiones convencionales.
+- Este efecto contribuye a aumentar la sonoridad percibida por el oyente.
+- El efecto se percibe con mayor claridad en auriculares.
+- Usa un algoritmo de **expansión estéreo** para simular sonido envolvente en sistemas de dos canales.
+
+**Controles:**
+
+- **Cut Freq (Hz):** frecuencia de corte del filtro pasa-bajo que define el rango de señal desplazada en fase. La audición es más sensible a diferencias de fase por debajo de 2000 Hz → si se incrementa la diferencia de fase se amplía la imagen estéreo.
+- **Intensity:** nivel de señal expandida sumada al audio original.
+
+<Note>
+  En presets conmutados para voces, conviene que música y voz mantengan el **Stereo Enhancer** en la misma condición (habilitado/deshabilitado).
+</Note>
+
+---
+
+### Enhancer EQ
+
+<img
+  src="/images/542/542-procesado-EQparametrico.jpg"
+  alt="542 Procesado E Qparametrico Jp"
+  title="542 Procesado E Qparametrico Jp"
+  className="mx-auto"
+  style={{ width:"75%" }}
+/>
+
+Ecualizador paramétrico de **4 bandas**. Las correcciones deben aplicarse sobre rangos más pequeños que la banda de procesado global (LOW, MID1, MID2, PRES, HI). Especial cuidado en frecuencias **\< 800 Hz** (LOW y M1).
+
+**Factor Q de referencia:**
+
+- Q=3 → ancho ≈ ½ octava.
+- Q=4 → ancho ≈ ⅓ de octava.
+
+**Ejemplo:**
+
+Atenuación –3 dB centrada en 250 Hz con Q=2 → ancho de 125 Hz. Esa frecuencia cae dentro de **M1 (125 – 800 Hz)**.
+
+- La corrección afecta ≈ 50% de esa banda (125–375 Hz).
+- Con Q más alto, la corrección es más específica.
+- Con Q=0.5 → ancho de 500 Hz, afectando LOW y M1.
+
+<Info>
+  En algunos casos puede ser preferible aplicar la corrección desde el **EQ paramétrico** o desde el **EQ de densidad multibanda**, según el efecto buscado.\
+  Ambos producen resultados sutilmente distintos.
+</Info>
+
+#### Recomendaciones
+
+- Usar el EQ paramétrico para **cortes o realces muy puntuales**.
+- El perfil global de ecualización debe definirse con el **AGC multibanda** y el **EQ de densidad**.

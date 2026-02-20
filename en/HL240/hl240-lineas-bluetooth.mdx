@@ -1,0 +1,106 @@
+---
+title: "Celulares Bluetooth"
+description: "Vincular teléfonos Bluetooth al HL2400."
+keywords: ["Bluetooth", "pairing", "celular"]
+tags: ["híbridos", "HL240"]
+---
+
+## Conceptos generales
+
+Hay tres acciones que no deben confundirse al trabajar con dispositivos Bluetooth:
+
+1. **Activar/Desactivar Bluetooth en el móvil**\
+   Se refiere a encender o apagar la función Bluetooth en el teléfono.\
+   No debe confundirse con conectar o desconectar el teléfono de un dispositivo ya vinculado.
+2. **Vincular (Pairing) un móvil a un dispositivo Bluetooth**\
+   El móvil busca y registra un dispositivo Bluetooth (ejemplo: auriculares, sistema manos libres o canal del HL240-VQ). Este procedimiento se realiza una única vez.\
+   Una vez vinculado, el móvil puede conectar y desconectar el dispositivo desde la lista de conexiones reconocidas.\
+   También es posible desvincularlo, tras lo cual deberá repetirse el procedimiento de emparejamiento.
+3. **Conectar/Desconectar un dispositivo ya vinculado**\
+   Se refiere a establecer o interrumpir la conexión entre el móvil y un dispositivo que ya figura en la lista.\
+   No debe confundirse con el proceso de vinculación inicial.
+
+---
+
+## Emparejar un móvil con HL240-VQ
+
+El HL240-VQ posee dos canales Bluetooth identificados como **BLT-1** y **BLT-2**.\
+Los botones correspondientes son luminosos y cambian su destello según el estado de conexión.
+
+### Modos de iluminación de los botones BLT
+
+| Modo  | Estado                                | Descripción                                                                                                                                                                                             |
+| :---: | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | Móvil conectado                       | Encendido breve (1s) en naranja con apagado largo (2s). Indica que está conectado al celular sin cursar una llamada.                                                                                    |
+| **B** | Móvil no conectado / Llamada en curso | Encendido lento (2s) en naranja y apagado corto (1s). Indica llamada en curso. Al cortar retorna a modo “A”. También indica Bluetooth encendido sin móvil conectado. Cuando se conecta pasa a modo “A”. |
+| **C** | Modo búsqueda (_pairing_)             | Destello rápido en naranja. Permite que un teléfono encuentre y se vincule al HL240-VQ.                                                                                                                 |
+| **D** | Llamada entrante                      | Encendido permanente en azul mientras dura el ring.                                                                                                                                                     |
+
+### Procedimiento de emparejamiento
+
+<Steps>
+  <Step title="Preparar canal Bluetooth">
+    Verificar que el canal BLT (1 o 2) esté apagado.\
+    Si está encendido, mantener pulsado el botón hasta que el LED se apague.
+  </Step>
+  <Step title="Activar modo pairing en HL240-VQ">
+    Con Bluetooth apagado, mantener pulsado el botón BLT por ~8 segundos.\
+    El LED pasará primero a destello lento (modo B) y luego a destello rápido (modo C).\
+    Soltar el botón: el canal queda en modo búsqueda.
+  </Step>
+  <Step title="Buscar desde el móvil">
+    Activar Bluetooth en el teléfono y buscar nuevos dispositivos.\
+    Aparecerán como **Solidyne BLT-1** o **Solidyne BLT-2**.
+  </Step>
+  <Step title="Conectar">
+    Seleccionar el dispositivo correspondiente y confirmar la vinculación.\
+    El móvil quedará registrado en la lista de conexiones reconocidas.
+  </Step>
+</Steps>
+
+<Note>
+  El nombre del dispositivo (Solidyne BLT-1 o BLT-2) puede editarse desde la configuración Bluetooth del teléfono.\
+  Un mismo móvil puede vincularse a ambos canales, pero solo conectarse a uno a la vez.\
+  Varios móviles pueden estar vinculados a un mismo canal, pero no conectados simultáneamente.
+</Note>
+
+<Tip>
+  Mantener el móvil cerca del HL240-VQ, evitando apoyarlo directamente sobre el chasis.\
+  La distancia máxima recomendada es 3 metros.
+</Tip>
+
+---
+
+## Re-conectar un móvil ya vinculado
+
+El móvil puede desconectarse del HL240-VQ en varias situaciones:
+
+- Si se apaga Bluetooth en el teléfono (la llamada se transfiere al móvil).
+- Si durante una llamada el móvil se desconecta del canal Bluetooth. La llamada se transfiere al teléfono. Si se vuelve a conectar a Bluetooth, la llamada vuelve a HL240-VQ
+- Si se activa el modo **Altavoz** en el teléfono (la llamada pasa al móvil). Si se cancela el modo “Altavoz” la llamada vuelve al canal HL240-VQ.
+- Si se apaga Bluetooth en el HL240-VQ.
+
+En la mayoría de los casos, al volver a activar Bluetooth, la reconexión puede ser automática.\
+Si no ocurre, será necesario seleccionar nuevamente el dispositivo Solidyne en el móvil.
+
+<Warning>
+  La reconexión no será posible si el canal Bluetooth del HL240-VQ fue vinculado a otro teléfono que permanece conectado.
+</Warning>
+
+---
+
+## Ajuste del volumen
+
+<Tip>
+  En el teléfono, el volumen Bluetooth debe ajustarse siempre al máximo para garantizar buena recepción y mejor relación señal-ruido.
+</Tip>
+
+- El ajuste debe hacerse durante una llamada cursada por Bluetooth.
+- Si se ajusta sin estar en llamada, solo cambia el volumen del altavoz del móvil, no el nivel de Bluetooth.
+- El nivel queda almacenado en cada teléfono. Al vincular un nuevo dispositivo, deberá repetirse el ajuste.
+
+---
+
+## Apagar Bluetooth en HL240-VQ
+
+Para apagar un canal Bluetooth, mantener presionado el botón BLT hasta que deje de destellar.

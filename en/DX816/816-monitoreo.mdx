@@ -1,0 +1,97 @@
+---
+title: "Monitoreo"
+description: "Conexión de altavoces y auriculares en Estudio y Cabina de Control"
+keywords: ["monitoreo", "studiobox", "auriculares", "instalación", "conexiones"]
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+---
+
+## Monitoreo en Cabina de Control
+
+Las salidas \*\*CONTROL \*\*presentan conectores **TRS hembra de 1/8” (mini-jack)** para parlantes y auriculares. La salida de parlantes trabaja con nivel nominal de **0 dBu**, diseñada para conexión de monitores activos.\
+En la sección MONITOR del panel de la consola se encuentran los controles para asignación de señales y nivel, para los altavoces y los auriculares.
+
+<Note>
+  La salida **Control Speaker** se silencia automáticamente al activar **Talk-back**, evitando acoples con el micrófono de órdenes.
+</Note>
+
+---
+
+## Monitoreo en el Estudio
+
+La consola entrega señales de monitoreo hacia el Estudio mediante **STUDIO MONITOR OUT**, con conector RJ45. La conexión se realiza con cable **STP RJ45-RJ45 (pin a pin)** hacia las cajas de monitoreo opcionales **Solidyne Studiobox HD3/HD5**.
+
+<Danger>
+  Esta salida **no debe conectarse** con cables RJ45 usados para salidas de audio.\
+  No es compatible con el estándar **StudioHub**.
+</Danger>
+
+<img
+  src="/images/816/816-monitoreo-studiobox.png"
+  alt="816 Monitoreo Studiobox Pn"
+  title="816 Monitoreo Studiobox Pn"
+  className="mx-auto"
+  style={{ width:"56%" }}
+/>
+
+aracterísticas:
+
+- Los parlantes del Estudio se **silencian automáticamente** al abrir micrófonos.
+- La señal para auriculares **nunca se silencia**. Reciben siempre la señal asignada en consola y el audio del micrófono de órdenes (talk-back).
+
+Para más detalles, ver sección **Módulos de monitoreo Studiobox HD3 / HD5**.
+
+---
+
+## Monitoreo en cabina única
+
+Cuando la consola se utilice en un estudio integrado o de cabina única, conviene conectar los altavoces a la salida **STUDIO MONITOR**.
+
+<Warning>
+  La salida de parlantes CONTROL **no se silencia al encender los micrófonos**, por lo que existe riesgo de acople si los micrófonos y los parlantes están en un mismo recinto.
+</Warning>
+
+---
+
+## Conexión sin opcional Studiobox
+
+La consola se entrega con un **cable adaptador** en “Y” (RJ45 a doble jack TRS) para conexión de distribuidores de auriculares genéricos y parlantes potenciados.
+
+- La salida **STUDIO MONITOR** entrega señales a nivel fijo.
+- Si no se usa Studiobox, el nivel de los altavoces se ajusta desde los controles propios de los monitores.
+- Puede emplearse un distribuidor/amplificador de auriculares con doble entrada para controlar desde la mesa el volumen de los altavoces.
+  - Entrada A → señal para auriculares.
+  - Entrada B → señal para parlantes.
+
+<img
+  src="/images/816/816-monitores-sin_studiobox.png"
+  alt="816 Monitores Sin Studiobox Pn"
+  title="816 Monitores Sin Studiobox Pn"
+  className="mx-auto"
+  style={{ width:"46%" }}
+/>
+
+El control de volumen de los altavoces se asigna a la entrada B. De este modo, una única unidad controla auriculares y monitores del Estudio.
+
+### Studio Monitor Out
+
+<img
+  src="/images/image.png"
+  alt="image.png"
+  title="image.png"
+  style={{ width:"10%" }}
+/>
+
+| # | Señal                           |
+| :-: | ------------------------------- |
+| 1 | Auriculares Izquierdo (\+4 dBu) |
+| 2 | Auriculares Derecho             |
+| 3 | GND                             |
+| 4 | ON-AIR (\+14 V)                 |
+| 5 | Talkback a Cabina de Control    |
+| 6 | VCC \+ 14 V                     |
+| 7 | Parlantes Izquierdo (\+4 dBu)   |
+| 8 | Parlantes Derecho               |
+
+<Note>
+  Chasis = GND
+</Note>

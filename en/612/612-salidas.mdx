@@ -1,0 +1,45 @@
+---
+title: "Salidas"
+description: "Conexión de las salidas"
+keywords: ["salidas"]
+tags: ["consolas de estudio", "linea Classic", "D612"]
+---
+
+## Programa y grabación
+
+- **PGM (Programa):** salida principal balanceada, con conectores **TRS ¼”** hembra (plug hembra). 
+- **REC (Grabación):** salida auxiliar, no balanceada, con conectores RCA.
+
+### Conexión balanceada TRS a XLR macho (por canal)
+
+| TRS (Plug)         | XLR (Cannon)       |
+| ------------------ | ------------------ |
+| Tierra = cuerpo    | Pin 1 = Tierra     |
+| Señal (\+) = punta | Pin 2 = Señal (\+) |
+| Señal (-) = anillo | Pin 3 = Señal (-)  |
+
+<Warning>
+  Para desbalancear la salida PGM conecte el terminal **(\+)**, dejando sin conexión el terminal **(-)**.
+</Warning>
+
+<Warning>
+  Nunca utilice conectores **plug mono** (TS) para conectar estas salidas.
+</Warning>
+
+### Niveles de salida
+
+- Nivel nominal: **\+4 dBu** cuando el VU-metro indica “0 VU”.
+- En modo desbalanceado (tomando solo el terminal \+): **-2 dBu**.
+
+<Info>
+  Si conecta equipos de grabación no profesionales, el nivel puede ser demasiado alto y causar saturación.\
+  Use el control de nivel de entrada del dispositivo.\
+  Si no fuese suficiente, emplee un atenuador fijo (divisor resistivo) para reducir el nivel de la salida.
+</Info>
+
+## Envío PGM por USB
+
+La conexión USB entrega la señal de **PGM** o **REC** (según la posición de la llave **USB OUT** en Canal 5).
+
+- No requiere instalación adicional: la computadora reconoce automáticamente el dispositivo de grabación USB.
+- La señal puede usarse para grabación en disco duro o para streaming vía Internet (Webcasting).

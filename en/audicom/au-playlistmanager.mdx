@@ -1,0 +1,106 @@
+---
+title: "PlayList Manager"
+description: "Uso de las listas de reproducción auxiliares"
+keywords: ["PlayList Manager"]
+tags: "Software,Audicom"
+---
+
+## Listas de reproducción auxiliares
+
+Es posible trabajar con listas de títulos prearmadas (**Playlists**).\
+AUDICOM cuenta con 4 reproductores auxiliares llamados **PlayList Managers**, accesibles desde los botones **PLAYLIST 1** a **PLAYLIST 4** en la barra de herramientas.
+
+<img
+  src="/images/audicom/au-playlistmanager.jpg"
+  alt="Au Playlistmanager Jp"
+  title="Au Playlistmanager Jp"
+  className="mr-auto"
+  style={{ width:"35%" }}
+/>
+
+---
+
+## Creación y carga de listas
+
+- Se pueden arrastrar títulos desde cualquier ventana AUDICOM hacia un PlayList Manager.
+- La lista se guarda como archivo `.txt` en la carpeta `\Audicom\PGM`.
+- PlayList Manager soporta listas en formato **.m3u** y **.plt**, editables con **CyberPlay Editor** (opción: _Listas de reproducción_).
+
+### Cómo crear una lista
+
+1. Abra un módulo PlayList (o use `[Alt + P]` para PlayList 1).
+2. Arrastre títulos desde **Media Manager**, **InfoMusic**, **Live Assist** o **CyberPlay**.
+3. Ingrese un nombre y pulse **Save**.
+
+Las listas se guardan en formato `.txt` en `\Audicom\PGM`.
+
+### Cómo cargar una lista existente
+
+- Selecciónela desde el menú desplegable inferior.
+- Para agregar listas externas, cópielas directamente a la carpeta `\Audicom\PGM`.
+
+<Info>
+  Los títulos aparecen en distintos colores según la última fecha de emisión.
+
+  - Música (Clase = Música en la base de datos): fondo celeste.
+  - Cortes promocionales: fondo amarillo.
+</Info>
+
+PlayList Manager soporta comandos de programación CyberPlay:
+
+- Comentarios de texto.
+- Pausas.
+- Instrucciones Meteor.\
+  Estos se insertan desde el menú de clic derecho.
+
+---
+
+## Escucha previa
+
+- Doble clic sobre un título o botón **CUE** → reproducción en canal de monitoreo previo.
+- Botón **StopCUE** → detiene la reproducción.
+- Si se activa el modo **CUE** desde el display (doble clic a la izquierda del contador):
+  - El audio no se reporta en RDS/iRDS.
+  - Tampoco queda registrado en los archivos `.air`.
+
+<Warning>
+  Este modo no se recomienda en la práctica, pero algunos operadores lo usan para trabajar directamente con el CUE de la consola, tratando cada PlayList Manager como un reproductor independiente.
+</Warning>
+
+---
+
+## Emisión del contenido
+
+Cada PlayList Manager puede asignarse a un dispositivo de audio distinto, definido en el **Panel de Configuración**, para enrutarlo a diferentes canales de la consola de mezcla.
+
+- Para enviar un título al aire: selecciónelo y pulse **Play**.
+- Modo normal: al finalizar, la reproducción se detiene.
+- Modo continuo: reproduce todos los títulos uno tras otro.
+  - Se pueden insertar pausas desde el menú de clic derecho.
+
+### Controles de reproducción
+
+- Barra de progreso: permite moverse dentro del archivo (clic izquierdo).
+- Control deslizante: ajusta la velocidad (**Pitch**) ±5%.
+- Botón **Insert**: inserta todo el listado en CyberPlay, encima del cursor amarillo.
+  - Los títulos se distribuyen respetando los bloques comerciales.
+- Inserción individual: arrastre un título hacia la ventana CyberPlay.
+
+<Note>
+  - Si no hay ítem seleccionado en CyberPlay, el listado no se inserta.
+  - La ventana de comentarios mostrará: _Defina el punto de inserción_.
+</Note>
+
+---
+
+## Restricciones de duración
+
+<Danger>
+  Si un PlayList excede la duración del bloque de programa, **solo se insertarán los títulos que entren hasta la finalización del bloque**.\
+  No se extiende al programa siguiente.
+</Danger>
+
+Ejemplo:
+
+- Inserta un PlayList de 1 hora a las 17:30 en un bloque en vivo que finaliza a las 18:00.
+- Solo se insertarán los títulos hasta las 18:00 hs.

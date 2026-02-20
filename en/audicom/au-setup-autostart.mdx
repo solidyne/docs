@@ -1,0 +1,87 @@
+---
+title: 'Arranque automático'
+description: 'Cortes de energía y arranque automático.'
+keywords: ["auto-start", "arranque"]
+tags: ["Software", "Audicom"]
+---
+
+## Seguridad frente a cortes de energía
+
+Nunca debe permitirse que un corte de energía afecte a la computadora.  
+Windows requiere un apagado progresivo; un corte abrupto puede ocasionar pérdida de datos o incluso daños en los discos de almacenamiento.  
+
+<Warning>  
+Es altamente recomendable el uso de una **Fuente de Alimentación No Interrumpida (UPS)**.  
+</Warning>
+
+- Use siempre UPS de tipo **On-Line** o de **Doble Conversión**, que garantizan continuidad absoluta de la alimentación.  
+- Estas permiten cerrar el sistema en forma controlada ante un corte.  
+
+### Funcionamiento de AUDICOM ante un corte
+
+- Si la transmisión se interrumpe y el sistema se apaga en forma controlada:  
+  - Al volver la energía, Windows se reinicia.  
+  - AUDICOM arranca en la **Pantalla de Aire**, realizando auto-PLAY en el horario correspondiente.  
+- Los avisos que no salieron durante el corte aparecen en planillas de auditoría como **no enviados al aire**.  
+- El programa de facturación de AUDICOM cancela la facturación de los avisos omitidos.  
+
+<Note>  
+Debe crearse un acceso directo a `aire.exe` (Pantalla de Aire) en el grupo Inicio de Windows para que AUDICOM se ejecute al arrancar.  
+La opción **Autorun** debe estar habilitada en el Panel de Configuración de AUDICOM.  
+</Note>
+
+---
+
+## Protección contra rayos y centellas
+
+La mayoría de los daños por rayos ocurren al ingresar por las líneas de energía eléctrica.  
+Ni las UPS ni los estabilizadores de tensión ofrecen protección contra este evento, pues las sobretensiones superan decenas de miles de voltios.  
+
+<Warning>  
+Incluso tormentas eléctricas distantes pueden propagarse por líneas aéreas de energía y dañar equipos.  
+</Warning>
+
+**Recomendación**: usar **Descargadores de Rayos** para líneas de 220 V.  
+- Se conectan entre ambos polos de 220 V y una jabalina de 2 m enterrada.  
+- Deben instalarse en el tablero principal, **antes de la UPS**.  
+
+---
+
+## Arranque automático de AUDICOM
+
+Muchas emisoras no transmiten de madrugada y requieren que AUDICOM inicie la programación de forma automática al comenzar la jornada.  
+
+Aunque no es estrictamente parte de la instalación, este caso es muy frecuente y se incluye aquí.  
+
+### Ejemplo de configuración
+
+- La emisora corta transmisión a las **00:00 hs** y retoma a las **07:00 hs**.  
+- El personal enciende los equipos o se usa un **timer de encendido automático**.  
+- AUDICOM debe iniciar la reproducción exactamente a las 07:00 hs.  
+
+**Solución**: programar un bloque satelital de relleno (SatFill) durante el tiempo fuera del aire.  
+- La computadora queda encendida toda la noche, reproduciendo el bloque SatFill.  
+- A las 07:00 hs, el bloque finaliza y comienza el siguiente (ejemplo: bloque musical AutoDJ).  
+
+Ejemplo de instrucción en archivo PGM:
+
+```ini
+/Block /00:00-07:00 /Satfill
+/Block /07:00-09:00 /AutoDJ="Musica de la mañana"
+```
+
+<Note>  
+El último operador debe dejar la computadora en reproducción antes de retirarse.  
+</Note>
+
+### Notas adicionales
+
+- Si la emisora corta a las **23:00 hs**, el bloque SatFill se divide en dos:  
+  - De 23:00 a 00:00 hs.  
+  - De 00:00 a 07:00 hs.  
+- El bloque completo se forma al unirse el final de la pauta de un día con el inicio de la del día siguiente.  
+- Este modo de programación es independiente de la opción **Autoarranque**, explicada en el ítem anterior.  
+
+<Info>  
+Para más detalles sobre programación consulte el capítulo **CyberPlay Editor**.  
+</Info>

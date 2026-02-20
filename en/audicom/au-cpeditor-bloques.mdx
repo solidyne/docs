@@ -1,0 +1,208 @@
+---
+title: "CyberPlay Editor: Tipos de contenidos"
+description: "Programación de contenidos musicales. Tipos de bloques."
+keywords: ["CyberPlay Editor", "bloques", "programación"]
+tags: ["Software", "Audicom"]
+---
+
+AUDICOM no solo maneja tandas y bloques musicales: permite definir prácticamente **todos los eventos que ocurrirán al aire**. 
+
+A grandes rasgos, los tipos de bloque que determinan la programación son:
+
+### Programa en vivo (LIVE)
+
+AUDICOM genera **puntos de detención** entre tandas publicitarias (o, opcionalmente, **espacios vacíos** sin pausa).\
+El sistema **permanece detenido** mientras se desarrolla el contenido en vivo; el operador puede volcar música y material entre tandas.\
+Los **contadores** alertan cuando se aproxima la **próxima tanda**.
+
+### Programa musical automático (AutoDJ)
+
+La computadora reproduce **música entre tandas**.\
+La selección es **título a título**, en **tiempo real**, usando **Formatos AutoDJ** y la Base de Datos **InfoMusic**.\
+También se puede trabajar con **listados predeterminados**, propios o generados por terceros (Power Gold, Selector).
+
+### Programas satelitales
+
+La computadora inserta **avisos locales** y luego habilita el **programa satelital**.\
+La consola de audio es **controlada** por AUDICOM.\
+Existen dos modalidades:
+
+- **Conmutación por horario** (_SatFill_).
+- **Conmutación por señal de disparo** (esclavos satelitales).
+
+### Enlaces de streaming y repetidoras
+
+Análogo a los bloques satelitales, pero la fuente es un **flujo de streaming** (servidor web) o un **enlace iLink** desde una cabecera AUDICOM.
+
+### Inclusiones especiales (ExactTime) y programación directa
+
+Permiten **forzar eventos a horario exacto** (canción de la semana, micro, informativo, auspicio, promo, /Time, etc.) **dentro** de un bloque.
+
+<Info>
+  Todos estos tipos y prestaciones se detallan en **Instrucciones para bloques de programa** (mismo capítulo).
+</Info>
+
+---
+
+## Magic Programming
+
+Herramienta que **genera las instrucciones** sin tipear comandos. Inserta el código en la posición actual del cursor.
+
+**Flujo de uso:**
+
+1. **Seleccionar tipo de evento** a programar:
+   - **Programas en vivo**: AUDICOM solo genera bloques comerciales; el operador agrega música/ artística.
+   - **Programas AutoDJ**: musicalización automática con un **Formato AutoDJ** (ver **AutoDJ Editor**).
+   - **Enlace iLink**: para **repetidoras** vía Internet.
+   - **Enlace satelital**: conmutación por **horario** (SatFill) o por **comandos** (Esclavos).
+   - **ExactTime**: inclusión especial a **hora exacta** (por ejemplo, “La canción de la semana”).
+   - **Secuencia directa de temas**: crea un listado musical; ver **Listas de Reproducción**.
+2. **Nombre y horario del programa**\
+   Defina **Nombre**, **Inicio** y **Final** del bloque, y continúe.
+3. **Patrocinantes / cortes artísticos**\
+   Puede asignar archivos en **Open**, **Mid**, **Close** (arrastre desde **File Manager** o **InfoMusic**).\
+   Si el **Nombre del sponsor** está vacío, se **ignora** toda la sección.
+4. **Formato para AutoDJ**\
+   Si el bloque es AutoDJ, seleccione el **Formato** del menú.
+5. **Inclusión ExactTime**\
+   Permite **insertar a hora fija** uno o varios títulos (micro, informativo, canciones patrocinadas, /Time, temperatura, etc.).
+
+**Ejemplo de instrucciones generadas:**
+
+```txt
+/Block /20:00-22:00 /Live Consagrados
+/Sponsor TITRAIJU +Open="Auspicio de apertura" +Mid="Comienzo de bloque" +Close="Auspicio de cierre"
+```
+
+---
+
+## Secuencia directa de temas musicales
+
+Crea **listas de reproducción (PlayList)** o inserta un **listado de títulos** dentro de un bloque **en el PGM** (en el punto del cursor).\
+También puede invocarse desde **CyberPlay-Test** (clic derecho sobre el encabezado del bloque → insertar secuencia).
+
+**Métodos disponibles:**
+
+- **Ranking por TOP HIT**: en base al campo TOP HIT de la BD.
+- **Ranking por pasada semanal**: ordena por cantidad de emisiones de la **última semana** (más emitidos primero).
+- **AutoDJ subordinado**: genera un listado con el **Formato AutoDJ** indicado (igual lógica que en tiempo real, pero **prelistado**).
+- **Música al azar**: selección aleatoria sin considerar fechas de pasada.
+
+**Duración objetivo**\
+Tras elegir método, indique la **duración estimada** del PlayList y confirme.\
+Para **AutoDJ subordinado**, se solicita además el **formato musical**.
+
+<Note>
+  Un PlayList puede incluir **Comentarios** (`;`), **Pausas** (`/Pause`) y **Hora** (`/Time`).\
+  Pausas y /Time también se insertan desde **CyberPlay** (clic derecho en la posición deseada).
+</Note>
+
+---
+
+## Listas de Reproducción (PlayLists)
+
+Los **PlayLists** son archivos **.txt** con un listado de títulos a emitir. Se insertan en **CyberPlay** desde **PlayList Manager**.
+
+Sintaxis básica: nombres de **temas musicales** (uno por línea). Se admiten:
+
+- **Comentarios**: línea iniciada con `;`
+- **/Time**
+- **/Pause**
+
+### Creación de un PlayList
+
+**a) Armado manual (recomendado con InfoMusic-Producción)**
+
+1. Pulse **New PGM** para vaciar PGM; cierre **Magic Programming** si no se usa.
+2. Desde **InfoMusic-Producción** o **File Manager**, arrastre títulos a la **ventana PGM**.
+3. Pulse **TEST** para previsualizar y validar el PlayList (vista gráfica en **CyberPlay**).
+
+**b) Armado automático (asistente)**
+
+1. Pulse **New PGM** → **Magic Programming** → **Secuencia directa de temas**.
+2. Elija **Ranking TOP HIT**, **Ranking pasada semanal**, **AutoDJ subordinado** o **Música al azar**.
+3. Defina **duración** objetivo; en AutoDJ subordinado, indique el **formato**.
+4. Se genera el listado y se muestra en **TEST**.
+
+<Note>
+  Los PlayLists pueden incluir **Comentarios**, **Pausas** y **/Time**; /Pause y /Time también desde **CyberPlay** con clic derecho.
+</Note>
+
+### Previsualización y modificación
+
+En la **vista previa** (gráfica) puede:
+
+- Ver la **duración** de cada título y del **PlayList completo**.
+- Verificar **existencia de archivos**: si falta, el título figura **ROJO** (común en listados antiguos).
+- **Reordenar** títulos arrastrando con el mouse.
+- Insertar **/Pause** y **/Time** con clic derecho.
+- **Eliminar** títulos (clic derecho → eliminar).
+- **Agregar** títulos arrastrando desde **InfoMusic-Producción** o **File Manager**.
+
+**Ejemplo de PlayList (texto y vista):**
+
+```txt
+;Playlist manual
+Artista A - Tema 1
+/Time
+Artista B - Tema 2
+/Pause
+Artista C - Tema 3
+```
+
+<Warning>
+  Un archivo en **ROJO** no será reproducido (el aire lo salteará) y continuará con el siguiente.
+</Warning>
+
+### Guardar un PlayList
+
+- En **Guardar PGM**, use **Nuevo PlayList** para nombrar y guardar.
+- Se guarda como **.txt** en la carpeta **PGM**.
+- Opción **Mostrar solo PlayLists** filtra la vista de guardado.
+
+<Info>
+  También puede crear PlayLists **con un editor de texto** y guardarlos en `\Audicom\PGM`. Luego cárguelos en **TEST-CYBERPLAY** para validar existencia de archivos.
+</Info>
+
+---
+
+## Programación directa
+
+Se usa para **programar contenidos** dentro de un **bloque LIVE**.\
+Los títulos o instrucciones colocados **inmediatamente debajo** de la línea del bloque se programan **por orden de aparición**.\
+Si el tiempo entre tandas **se excede**, AUDICOM sigue programando **después de la tanda**, respetando **flexibilidades**.
+
+**Ejemplo:**
+
+```txt
+/Block /07:00-09:00 /Live
+Front Line Assembly - Gun
+Funker Vogt - Civil War
+Leaether Strip - Kill a raver
+Wumpscut - Womb
+BlutEngel - My Time
+Hocico - Coward as a slave
+Aghast View - Truthhead
+Solitary Experiment - Soldiers of Fortune
+Decoded Feedback - Passion of flesh
+Second Disease - Can't be me
+```
+
+<Info>
+  Útil para **programas pregrabados / “enlatados”** largos.\
+  Si el archivo dura 45 min, debe haber **espacio suficiente** entre tandas.\
+  La **flexibilidad** de tandas puede desplazar una tanda para alojar el bloque.
+</Info>
+
+<Tip>
+  Para compensar diferencias entre **duración de bloques** y **tandas**, considere usar **bloques AutoDJ** (rellenan con música/promos).\
+  En **LIVE**, si el bloque es más corto que el espacio, pueden aparecer **pausas**.
+</Tip>
+
+<Warning>
+  Si intenta programar un archivo de **30 min** y las tandas están cada **15 min**, el archivo **no** podrá ser programado (incluso podría caer al final del día, según la grilla).
+</Warning>
+
+<Note>
+  Si el nombre del archivo **incluye un punto** dentro del nombre (ej.: `107.5.wav`) y **no** está registrado en la Base de Datos, **debe pautarse con extensión**.
+</Note>

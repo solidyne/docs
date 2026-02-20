@@ -1,0 +1,115 @@
+---
+title: "Montaje y panel trasero"
+description: "Descripción del montaje y conectores en el panel trasero"
+keywords: ["montaje", "voltaje", "conectores", "mpx", "antena"]
+tags: ["procesadores", "542"]
+---
+
+## Recomendaciones para el montaje
+
+- El equipo está diseñado para montaje en un **rack estándar de 19”**. Requiere 1U de altura.
+- Si coloca el equipo sobre un estante u bandeja, colocar en la base los **topes de goma** suministrados de fábrica.
+- No colocar la unidad sobre una superficie o estante inestable; podría caerse, causando daños a personas y al equipo.
+- La **temperatura ambiente** debe estar entre **5ºC y 40ºC**.
+- Evite la incidencia directa de rayos solares o la proximidad de fuentes de calor.
+- El 542APC tiene **protección interna contra campos de RF**, lo que permite su montaje próximo a transmisores.
+- Evite la presencia de campos electromagnéticos fuertes (transformadores, motores, etc).
+
+<Warning>
+  Ubique el equipo en una superficie estable y en un ambiente controlado. Evite calor directo, campos electromagnéticos y vibraciones.
+</Warning>
+
+### Montaje en rack
+
+- El equipo no utiliza ventilación forzada. Se recomienda dejar una unidad de espacio libre por debajo y sobre el procesador para facilitar la disipación de calor.
+- Utilice siempre **tornillos de cabeza plana** con **arandelas flexibles** (plástico o goma).
+- Ajuste primero los tornillos **inferiores** y luego los **superiores**, para evitar que el peso de la unidad genere palanca sobre los ángulos superiores.
+- No aplique demasiada fuerza al ajustar. Una leve presión es suficiente para fijar el equipo.
+
+<Warning>
+  Excesiva presión sobre los tornillos puede deformar o incluso quebrar los ángulos del panel frontal.
+</Warning>
+
+---
+
+## Alimentación
+
+- El equipo trabaja con \*\*selección manual de tensíon \*\*entre **200/240V o 100/130V**.
+
+  <Danger>
+    Verifique la posición correcta de la **selectora de voltaje**  en el panel trasero.
+  </Danger>
+- La tensión de red debe mantenerse dentro de un margen de variación menor al **10%**.\
+  En caso contrario, use estabilizadores de acción rápida (ferroresonancia o electrónicos).
+- El encendido se realiza desde el **interruptor principal**.
+- La unidad posee un **fusible general de 1A**.
+
+<Warning>
+  No utilice adaptadores que anulen la clavija de conexión a tierra del cable Interlock. \
+  Toda la instalación debe contar con una **toma a tierra**  adecuada.
+</Warning>
+
+<Tip>
+  Se recomienda seguir las normas de conexión a tierra de la región.
+
+  - **EE.UU.:** NEC Artículo 810; ANSI/NFPA Nº 70-1984
+  - **Argentina:** IRAM 2379 y 2281-3
+</Tip>
+
+<Info>
+  El cable de alimentación no debe instalarse junto a cables de audio, especialmente si transportan audio analógico.
+</Info>
+
+---
+
+## Conectores en el Panel Trasero
+
+![542 Rear Pn](/images/542/542-rear.png)
+
+ 1. Llave de \*\*selección de tensión \*\*de red.
+ 2. Interlock de alimentación.
+ 3. Llave de **encendido**.
+ 4. Fusible general (1A)
+ 5. **Entradas analógicas** balanceadas **XLR**.
+ 6. **Entradas analógicas** balanceadas **RJ45**
+ 7. \*\*Entrada digital \*\*AES3
+ 8. \*\*Salida digital \*\*AES3
+ 9. **Salidas analógicas** balanceadas **XLR**
+10. **Salidas analógicas RJ45** (no es balanceada)
+11. Puerto Ethernet para **control vía web**.
+12. Salidas compuesta \*\*MPX \*\*para FM (niveles independientes) (BNC)
+13. \*\*Antena \*\*externa para el sintonizador (BNC)
+14. \*\*GPIO \*\*(DB9)
+15. Puerto Ethernet para enlace por **audio stream**
+16. Reservado futuro uso.
+
+## Antena receptora de FM
+
+<Info>
+  El receptor interno del 542APC permite:
+
+  Sintonizar la transmisión de cualquier emisora.
+
+  Visualizar el nivel de modulación, niveles de audio e información RDS, entre otros parámetros.
+</Info>
+
+### Conexión de antena
+
+El conector **Receiver FM ANT** es de tipo **BNC**.
+
+De fábrica se suministran dos antenas:
+
+- **Mini-antena telescópica extensible**
+  - Adecuada para la mayoría de las instalaciones.
+- **Micro-antena BNC**
+  - Recomendable cuando la intensidad de campo de RF es muy elevada.
+  - La antena telescópica podría ocasionar saturación del sintonizador (el indicador **RF LVL** del FM Monitor Analyzer se fija en _100 dBuV_).
+  - En ese caso se debe usar la micro-antena BNC de menor ganancia.
+
+### Antenas externas
+
+Dependiendo de las condiciones de instalación (ubicación del equipo, distancia a la planta transmisora, etc.), puede ser conveniente instalar una **antena de FM externa**.
+
+<Note>
+  Las antenas externas no están incluidas con el equipo.
+</Note>

@@ -1,0 +1,67 @@
+---
+title: "Tally Light y GPIO"
+description: "Conexión de luces de señalización y GPIO"
+keywords: ["tally light", "gpio", "luz de aire", "gpo"]
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+---
+
+## Luz de Aire (Tally Light)
+
+La salida **Tally Light** entrega **12 VCC / 150 mA** al habilitarse el **Botón Maestro de micrófonos**.\
+Permite conectar hasta **dos módulos de señalización Solidyne LA100**.
+
+Además, la consola incluye una **luz de aire incorporada en el gabinete**.
+
+<Danger>
+  La salida **Tally Light** se apaga automáticamente si la carga excede **150 mA**.
+</Danger>
+
+## GPIO
+
+Los minijack marcados como \*\*GPIO \*\*son salidas de propósito general (**GPO**, _General Purpose Output_), que permiten comandar dispositivos externos al habilitar ciertos canales de la consola.
+
+- En **DX816**: generan señales los canales de micrófono **MIC-1, MIC-2, MIC-3** y las líneas **USB-1** y **USB-2**.
+- En **DX822**: además de los anteriores, también disponen de GPO **MIC-4, MIC-5 y MIC-6**.
+
+<Note>
+  Las salidas de control son del tipo **colector abierto**, funcionando como un interruptor:
+
+  - En estado inactivo → alta impedancia.
+  - Al habilitar un canal → la salida se conecta a tierra.
+</Note>
+
+**Especificaciones eléctricas:**
+
+- Máximo: **\+24 V - 0,1 A**.
+
+**Conectores:**
+
+- Tipo **jack TRS de 3,5 mm**, ubicados en el panel trasero.
+- En DX816: “MIC 1&2”, “MIC-3” y “LIN USB 6&7”.
+- En DX822: se agregan “MIC 4&5” y “MIC-6”.
+
+---
+
+**GPO MIC 1&2** _(idem para MIC 4&5 en DX822)_
+
+| Conector | Señal |
+| -------- | ----- |
+| Cuerpo   | GND   |
+| Anillo   | MIC-1 |
+| Punta    | MIC-2 |
+
+**GPO MIC-3** _(idem MIC-6 en DX822)_
+
+| Conector | Señal        |
+| -------- | ------------ |
+| Cuerpo   | GND          |
+| Anillo   | MIC-3        |
+| Punta    | No conectado |
+
+**GPO USB**
+
+| Conector | Señal |
+| -------- | ----- |
+| Cuerpo   | GND   |
+| Anillo   | USB-1 |
+| Punta    | USB-2 |

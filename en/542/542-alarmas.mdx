@@ -1,0 +1,54 @@
+---
+title: "Alarmas"
+description: "Configuración de alarmas y avisos"
+keywords: ["alarmas", "avisos", "alertas"]
+tags: ["procesadores", "542"]
+---
+
+## Alarmas
+
+Se accede desde **SYSTEM → pestaña ALARMS**.
+
+<Danger>
+  Los parámetros que disparan alarmas se basan en la señal del**sintonizador FM** .
+
+  - Si RF Level \< 40 dB o multipath \> 10%, las mediciones no son válidas.
+  - En ese caso, los campos aparecen oscurecidos y no se generan alarmas.
+</Danger>
+
+El 542APC puede enviar alertas por correo electrónico en los siguientes eventos:
+
+1. **AUDIO SILENCE**
+2. **OVERMODULATION**
+3. **LOW RF POWER**
+
+### Configuración de alarmas
+
+![542 Sistema Alarmas Pn](/images/542/542-sistema-alarmas.png)
+
+- **E-mail Send To** → dirección a la cual serán enviadas las alertas.
+  - “Send Test” envía un correo de prueba.
+
+<Note>
+  Para enviar alertas a múltiples direcciones, usar la función de **reenvío automático (mail forwarding)** en la cuenta configurada.
+</Note>
+
+- **Casilleros LOG y E-MAIL** → habilitan registro en memoria interna y/o envío por correo.
+
+### Tipos de alarmas
+
+- **AUDIO SILENCE**:
+  - Se dispara cuando la señal cae por debajo del umbral definido en **Fail Backup**.
+  - El tiempo límite (segundos) se ajusta con un control deslizante.
+  - Importante: se analiza la señal del **FM Receiver post-Gain**, por lo que la ganancia afecta la detección.
+- **OVERMODULATION**:
+  - Se activa si la modulación excede el valor definido en la alarma.
+  - Este ajuste **no afecta la transmisión**, solo la detección.
+- **LOW RF POWER LEVEL**:
+  - Se activa al detectar baja potencia de transmisión.
+  - Procedimiento: pulsar **Set REF** en condiciones normales. Luego definir el % de pérdida que dispara la alarma.
+  - No afecta la transmisión.
+- **SYSTEM START**:
+  - Genera alarma al reiniciarse el equipo (ej. por corte eléctrico).
+- **SYSTEM ERRORS**:
+- Solo para uso interno. Los eventos se registran en **SYSLOG**.

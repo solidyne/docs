@@ -1,0 +1,54 @@
+---
+title: "Actualización del firmware"
+description: "Procedimiento para actualizar firmware en la consola"
+keywords: ["firmware"]
+tags: "consolas IP,UNIDEX"
+---
+
+import discovery from '/snippets/discovery.mdx';
+
+### Actualización de software
+
+Los modelos de UX24 **fabricados desde 2023**  permiten actualizar el software accediendo a la interfaz web desde una computadora con acceso a Internet.\
+Para modelos anteriores, que no incluyan esta función, escriba a: [**info@solidyne.ar**](mailto:info@solidyne.ar).
+
+**Componentes que pueden actualizarse:**
+
+- Firmware del motor de mezcla (hardware).
+- Interfaz gráfica.
+- Herramientas de streaming.
+
+#### Procedimiento de actualización
+
+1. Conecte a la red local los puertos **Ethernet Streaming Out** y **Remote Control** de la consola.
+2. Asegúrese de que la red tenga **acceso a Internet**.
+3. En la pantalla principal de la consola, verifique la dirección IP asignada a **STREAMING IP**.
+
+<img
+  src="/images/ux24/unidex_streaming_ip.jpg"
+  alt="UNIDEX Streaming IP"
+  title="UNIDEX Streaming IP"
+  style={{ width:"34%" }}
+/>
+
+<discovery />
+
+ 4. En el navegador, ingrese la dirección IP seguida de `/update`.\
+    Ejemplo: `192.168.0.88/update`
+ 5. Pulse **Enter** para abrir la pantalla de actualizaciones.
+
+    <img
+      src="/images/ux24/ux24-update-firmware.png"
+      alt="UNIDEX Firmware Update"
+      title="UNIDEX Firmware Update"
+      style={{ width:"61%" }}
+    />
+ 6. Haga clic en **CHECK FOR UPDATES**.
+ 7. Si no hay actualizaciones, el sistema informará que está al día.
+ 8. Si hay actualizaciones disponibles, se mostrará un listado con los detalles.
+ 9. Las actualizaciones **no se instalan automáticamente**.
+10. Para instalar una actualización, pulse **INSTALL**.
+
+    <Warning>
+      Dependiendo del tipo de actualización, la consola podrá reiniciarse, interrumpiendo la señal al aire por algunos segundos.
+    </Warning>

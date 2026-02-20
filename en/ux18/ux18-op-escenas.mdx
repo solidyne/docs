@@ -1,0 +1,203 @@
+---
+title: "Escenas y perfiles de usuario"
+description: "Gestión de escenas y perfiles de acceso"
+keywords: ["operación", "usuarios", "escenas", "perfiles", "channel map", "acceso", "permisos"]
+tags: ["consolas IP", "UNIDEX", "UX18"]
+---
+
+La pantalla para gestión de usuarios y escenas permite:
+
+- Cambiar el usuario activo.
+- Cambiar la escena actual.
+- Utilizar funciones avanzadas para organizar canales.
+
+Se accede pulsando la opción **SCENES**, disponible en los botones contextuales cuando la consola muestra la **pantalla principal**.
+
+<img
+  src="/images/ux24/ux24-pantallas-escenas.jpg"
+  alt="UX18 Pantalla Escenas"
+  title="UX18 Pantalla Escenas"
+  className="mx-auto"
+  style={{ width:"75%" }}
+/>
+
+## LOS USUARIOS
+
+En la zona **USER LOGIN** (1) de la pantalla se muestra el usuario actualmente activo y se permite cambiar a otro usuario tocando la opción correspondiente.\
+Hay **tres niveles de usuarios** con diferentes permisos pre-establecidos. Las restricciones aplican tanto en la operación desde la pantalla de la consola como desde la interfaz web remota.
+
+### Usuario BASIC
+
+Perfil más restringido:
+
+- No tiene protección por contraseña.
+- Sin acceso a opciones de configuración avanzadas (SETTINGS).
+- Puede cambiar de escena, pero no guardar cambios ni crear nuevas escenas.
+- Puede visualizar los ajustes y el estado de los procesadores, pero no modificarlos ni encender/apagar.
+- Puede modificar temporalmente opciones básicas del canal (**GANANCIA**, **NOMBRE**, **PANEO**, **ACCIONES DEL CANAL**), pero sin guardar los cambios en la escena.
+
+### Usuario EXPERT
+
+Perfil con restricciones intermedias:
+
+- Protegido por contraseña (predeterminada: `expert`). Solo el usuario ADMIN puede cambiarla.
+- Igual que BASIC, sin acceso a la configuración avanzada (**SETTINGS**).
+- Acceso total a los procesos de audio.
+- En la pantalla **CHANNEL** puede cambiar **ganancia**, **paneo**, **nombre**, **asignación de entrada** y **modo del canal**, pero sin acceder a SETTINGS.
+- Puede guardar la escena actual, excepto si está protegida.
+- Puede crear nuevas escenas, incluso desde una protegida.
+
+### Usuario ADMIN
+
+Perfil con acceso total:
+
+- Protegido por contraseña (predeterminada: `admin`). Puede cambiar todas las contraseñas desde la pantalla **SETTINGS**.
+- Puede crear escenas protegidas o de solo lectura, que son operativas para BASIC y EXPERT pero solo editables por ADMIN.
+
+<Note>
+  Las contraseñas se definen en la pantalla **SETTINGS - USERS**.
+</Note>
+
+#### Usuario de arranque
+
+Al encender, la consola inicia con un perfil de usuario predefinido (de fábrica: ADMIN) y nunca solicita contraseña.
+
+En **SETTINGS → USERS** se puede:
+
+- Cambiar el usuario de arranque.
+- **Cambiar las contraseñas** de ADMIN y EXPERT.
+
+## LAS ESCENAS
+
+Una **escena** almacena toda la configuración de la consola, con excepción de los ajustes de sistema (red, streaming, usuario de arranque, etc.). Incluye:
+
+- Configuración de entradas y salidas.
+- Asignación de canales y buses.
+- Ganancias.
+- Ajustes de procesadores de audio.
+
+Las escenas permiten cargar rápidamente una configuración predeterminada según los requerimientos de cada show; por ejemplo, reasignando entradas, cambiando el orden de canales o ajustando procesadores de micrófono.
+
+<Warning>
+  Se debe guardar la escena después de modificar cualquier parámetro (ganancia, ecualizador, nombre de canal, etc.) para que el cambio quede almacenado de forma definitiva.
+</Warning>
+
+### Escenas disponibles
+
+La lista (ver 2 en la imagen) muestra 12 escenas de usuario.
+
+- Se navega girando el encoder y se confirma pulsándolo.
+- La escena activa se resalta en **celeste**.
+- La escena seleccionada (pero no confirmada) se resalta en **naranja**.
+
+### Escenas protegidas (Lock)
+
+- Solo el perfil **ADMIN** puede crearlas.
+- Se identifican con un icono de candado.
+- Los usuarios BASIC y EXPERT pueden cargarlas pero no modificarlas ni borrarlas.
+
+### Scene Manager
+
+Presenta dos grupos de opciones: para la **escena seleccionada** y para la **escena activa**.
+
+**LOAD**: Carga la escena seleccionada. Puede hacerse desde pantalla táctil, botón contextual o encoder.
+
+- Requiere confirmación (se cancela a los 8 segundos si no se confirma).
+- Todos los perfiles pueden cargar cualquier escena.
+- Si hay canales al aire, estos permanecen activos aunque cambien de posición, manteniendo su asignación de buses.
+- Si el nuevo canal asignado tiene otro nivel de atenuador, se mantiene el nivel digital anterior y se indica destellando en OLED.
+- **El audio se corta si la entrada previamente al aire no está asignada** a un canal en la nueva escena.
+- No se puede cambiar de escena con una línea telefónica al aire o en espera.
+
+**RENAME**: Cambia el nombre de la escena seleccionada.
+
+- Inhabilitado para BASIC.
+
+**COPY CURRENT**: Copia la escena activa sobre la seleccionada.
+
+- Requiere confirmación.
+- Inhabilitado para BASIC.
+
+**SET TO DEFAULT**: Restaura la escena activa a la configuración de fábrica.
+
+- Inhabilitado para BASIC.
+
+**SAVE**: Guarda la configuración actual de:
+
+- Asignación de entradas a los 24 canales.
+- Asignación de señales a las salidas.
+- Configuración específica de entradas y salidas (phantom, modos MIX-MINUS, etc.).
+- Ganancias de entradas y salidas.
+- Etiquetas y acciones de canales.
+- Ajustes de procesadores de audio.
+- Estado de asignaciones, incluido VBUS.
+
+<Warning>
+  La escena **no guarda** el estado de los botones **ON-AIR** ni **CUE**.
+</Warning>
+
+### Escenas de fábrica
+
+Cualquiera de las 12 escenas se puede reestablecer a una configuración predeterminada. Además, UNIDEX viene de fábrica con escenas diseñadas con distintas configuraciones y expansiones UDX, pensadas para servir la base o ejemplo para creación de nuevas configuraciones.
+
+<Note>
+  Descargar[ infografía sobre la configuración de la escena default](https://solidynepro.com/descargas/productos/UX24_Quickguide_Default_scenes_routing.pdf) (PDF)
+</Note>
+
+### Exportar e importar escenas
+
+Las escenas se pueden exportar e importar desde la **interfaz de control WEB**. \
+Desde la opción de gestión de escenas del control web, es posible exportar cada escena como un archivo en disco. E importarlas luego en cualquiera de las 12 posiciones disponibles.
+
+## Channel Map (Mapa de Canales)
+
+La función **CHANNEL MAP** muestra la configuración de todos los canales y permite reordenarlos fácilmente.\
+Existen dos modos de operación: **SWAP 2 CH** (intercambiar dos canales) y **ORDER CH** (reorganizar canales).
+
+### SWAP 2 CH (Intercambiar dos canales)
+
+Permite intercambiar la posición de dos canales.
+
+<img
+  src="/images/ux24/ux24-chmap.png"
+  alt="UX18 Channel Map"
+  title="UX18 Channel Map"
+  style={{ width:"65%" }}
+/>
+
+**Procedimiento:**
+
+1. Pulsar **SWAP 2 CH** para habilitar la opción.
+2. Seleccionar en la lista los dos canales que se desea intercambiar.
+3. Pulsar **APPLY** para ejecutar el intercambio.
+4. Pulsar **SAVE** para guardar los cambios en la escena actual.
+
+---
+
+## ORDER CH (Reorganizar canales)
+
+Permite asignar nuevas posiciones a uno o más canales.
+
+<img
+  src="/images/ux24/ux24-OrderCH.png"
+  alt="UX18 Order CH"
+  title="UX18 Order CH"
+  style={{ width:"65%" }}
+/>
+
+**Procedimiento:**
+
+1. Pulsar **ORDER CH**.\
+   Aparecerá un menú desplegable a la derecha del número de canal, que permite asignar una nueva posición.
+2. Tocar el menú en pantalla y elegir la nueva posición para el canal.\
+   Se pueden reubicar varios canales a la vez.
+
+<Warning>
+  Si se asigna a un canal una posición ya ocupada, la información del canal destino se sobrescribirá al aplicar los cambios.
+</Warning>
+
+3. Pulsar **APPLY** para confirmar.
+   - **APPLY** aplica los cambios temporalmente (no se guardan aún).
+   - Si se abandona la escena sin guardar, los cambios se pierden.
+4. Pulsar **SAVE** para que los cambios sean definitivos en la escena.
+5. Para cancelar, desactivar **ORDER CH** tocando de nuevo la opción o pulsar el botón contextual **BACK**.

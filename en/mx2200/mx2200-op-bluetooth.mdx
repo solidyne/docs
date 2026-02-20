@@ -1,0 +1,195 @@
+---
+title: "Uso del Bluetooth"
+description: "Operación del móvil Bluetooth"
+keywords: ["operación", "Bluetooth","móvil","conexión","emparejar","llamada", "pairing"]
+tags: ["consolas portátiles","CODEC","MX2200"]
+---
+
+## Conceptos clave
+
+En operación es clave distinguir tres acciones distintas:
+
+- **Activar/desactivar Bluetooth en el móvil**\
+  Encender o apagar Bluetooth en el teléfono. No implica emparejar ni conectar con un dispositivo.
+- **Vincular/Emparejar el móvil con un dispositivo**\
+  También llamado _pairing_. El móvil **registra** un dispositivo externo (auriculares, manos libres del auto, o el canal Bluetooth de la MX2200). Se hace **una sola vez** por dispositivo. \
+  Un dispositivo se puede **desvincular**, es decir, borrarlo de la lista de dispositivos Bluetooth vinculados al móvil.  Para volver a usarlo, habrá que emparejar de nuevo.
+- **Conectar/Desconectar un dispositivo ya vinculado**\
+  El móvil **se conecta** a uno de los dispositivos previamente emparejados. Es distinto de emparejar. Con Bluetooth activado en el móvil, se conecta o desconecta desde la **lista de dispositivos vinculados**.
+
+### Estados del LED BLT
+
+El botón **BLT** se ilumina en color ámbar con diferentes patrones de destello según el estado de Bluetooth:
+
+| Modo  | Estado                                    | Indicación del LED                           | Significado                                                                                                                                                   |
+| :---: | ----------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | **Móvil conectado**                       | Encendido breve (1 s) \+ apagado largo (2 s) | El móvil está conectado a la MX2200, **sin llamada en curso**                                                                                                 |
+| **B** | **Móvil no conectado / Llamada en curso** | Encendido lento (2 s) \+ apagado corto (1 s) | - Bluetooth encendido pero **sin móvil conectado**<br />- O bien el móvil está cursando una **llamada**<br />- Al conectarse un móvil, el estado pasa a **A** |
+| **C** | **_Modo búsqueda (Pairing)_**             | Destello rápido                              | Permite que el teléfono encuentre y se vincule con **MX2200**                                                                                                 |
+| **D** | **Llamada entrante**                      | Encendido permanente                         | Señala que hay una llamada entrante                                                                                                                           |
+| —     | **Apagado**                               | Sin iluminación                              | Bluetooth apagado                                                                                                                                             |
+
+### Notas de operación
+
+- **Modo A** confirma que el móvil está enlazado correctamente, listo para usarse como fuente de audio o enlace de respaldo.
+- **Modo B** puede indicar dos situaciones: que no hay móvil conectado aún, o que hay una llamada activa.
+- **Modo C** solo debe usarse al **emparejar** un nuevo teléfono.
+- **Modo D** actúa como notificación clara de llamada entrante, con iluminación fija.
+
+<Note>
+  Nunca confundir **emparejar (modo C)** con **conectar/desconectar (modo A/B)**. El emparejamiento solo se realiza una vez por cada teléfono, mientras que la conexión/desconexión ocurre cada vez que se usa.
+</Note>
+
+La imagen muestra un ejemplo de un móvil Android con llamada. La conmutación entre Bluetooth y Speaker permite pasar la llamada a la MX2200 (Bluetooth) o hablar desde el teléfono (Speaker).
+
+<img
+  src="/images/android_bluetooth.jpg"
+  alt="Android Bluetooth Jp"
+  title="Android Bluetooth Jp"
+  style={{ width:"33%" }}
+  className="mx-auto"
+/>
+
+<Note>
+  La interfaz puede variar por sistema/versión: algunos Android muestran un botón **Headset/Altavoz**, otros un menú con **opciones**. Consulte el manual del teléfono.
+</Note>
+
+---
+
+## Emparejar el móvil con MX2200
+
+<Steps>
+  <Step title="Preparar la consola">
+    Asegúrese de que Bluetooth esté **apagado** en la MX2200.\
+    Si el botón **BLT** destella en ámbar con intermitencia **lenta** (≈1 destello cada 2 s), Bluetooth está **encendido**. Mantenga presionado **BLT** hasta que el LED se **apague** por completo.
+  </Step>
+  <Step title="Entrar en modo de emparejamiento">
+    Con Bluetooth apagado, mantenga presionado **BLT** ~**8 s**.\
+    Primero verá destellos **lentos** (modo B) y luego una intermitencia **rápida** (modo C). **Suelte** el botón cuando cambie a destello rápido: la consola queda en **pairing** y lista para ser encontrada.
+  </Step>
+  <Step title="Buscar desde el móvil">
+    En el teléfono, **active Bluetooth** y busque **nuevos dispositivos** (el procedimiento varía según marca/modelo).
+  </Step>
+  <Step title="Seleccionar el dispositivo">
+    El dispositivo aparecerá como **Solidyne BTM641**. Selecciónelo para **emparejar** y luego para **conectar** si el sistema lo solicita dos veces.
+  </Step>
+  <Step title="Confirmación y nombre">
+    Tras emparejar, **BLT** queda con destello **lento** (Bluetooth **activo**).\
+    En el móvil puede **renombrar** "Solidyne BTM641" desde la configuración del dispositivo, si lo desea.
+  </Step>
+  <Step title="Varios móviles y distancia">
+    Puede **emparejar varios** teléfonos con la MX2200, pero **solo uno** puede estar **conectado** a la vez.\
+    Alcance típico: **hasta 3 m**. Mantenga el móvil **cerca**, pero **nunca** apoyado directamente sobre la MX2200.
+  </Step>
+</Steps>
+
+---
+
+## Re-conectar un móvil ya vinculado
+
+El móvil puede **desconectarse** de la MX2200 en varias situaciones. La siguiente tabla indica qué ocurre y cómo volver a conectarlo:
+
+| Situación                                            | Qué pasa con la llamada                                                                             | Cómo volver a MX2200                                                                                             |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Se apaga Bluetooth en el móvil**                   | Normalmente la llamada **se transfiere al teléfono** (comportamiento puede variar por marca/modelo) | Vuelva a **encender Bluetooth**; la reconexión puede ser **automática** o elegir **Solidyne BTM641** en la lista |
+| **Se desconecta el móvil del dispositivo Bluetooth** | La llamada sale de Bluetooth y pasa al **teléfono**                                                 | En el móvil **reconecte al Bluetooth** Solidyne BTM641 para devolverla a la consola.                            |
+| **Se activa "Altavoz" en el móvil**                  | La llamada sale del modo "manos libres" (Bluetooth) y pasa al **teléfono**                          | Cambie a **"Headset/Bluetooth"** en el móvil para volver a la consola                                            |
+| **Se apaga el canal Bluetooth en MX2200**            | El enlace Bluetooth se corta. Normalmente la llamada pasa al teléfono.                              | **Encienda BLT** y **reconecte** desde el móvil                                                                  |
+
+<Note>
+  La reconexión **no será posible** si el **mismo canal** Bluetooth de la MX2200 fue emparejado con **otro teléfono** y ese segundo teléfono está **conectado** actualmente.
+</Note>
+
+---
+
+## Ajuste del volumen
+
+<Warning>
+  En el **móvil**, ajuste el **volumen Bluetooth al máximo** para asegurar buena recepción y la mejor **relación señal-ruido**.
+</Warning>
+
+<Info>
+  Haga el ajuste **durante una llamada Bluetooth**. Si cambia el volumen **sin** una llamada en curso, se modifica el **volumen del altavoz** interno del teléfono y **no** el de Bluetooth.
+</Info>
+
+- El nivel de Bluetooth queda **almacenado en el móvil**.
+- Si cambia de teléfono, repita el ajuste para dejar el volumen Bluetooth **al máximo**.
+
+---
+
+## Apagar Bluetooth en la consola
+
+Para **apagar** Bluetooth en la MX2200, mantenga presionado **BLT** hasta que el LED **se apague**.\
+Si opera a batería y no usará Bluetooth, manténgalo **apagado** para **ahorrar energía**.
+
+---
+
+## Puesta al aire por Bluetooth
+
+<Steps>
+  <Step title="Preparación en la consola">
+    En **CELL PHONE**, mantenga el control **LEVEL cerrado** y **CUE/PGM en CUE** (liberado).
+  </Step>
+  <Step title="Encender Bluetooth en la consola">
+    Mantenga pulsado **BLT** ~**5 s** hasta que quede **iluminado** con destello **lento** (Bluetooth activo).
+  </Step>
+  <Step title="Conectar el móvil">
+    Active Bluetooth en el **móvil**. Si ya estaba emparejado, el enlace se restablece en **pocos segundos**.
+  </Step>
+</Steps>
+
+<Warning>
+  Antes de **transferir** la llamada a la consola, verifique que **CUE/PGM esté en CUE** para evitar que la llamada salga **al aire** al momento de la transferencia.
+</Warning>
+
+<Tabs>
+  <Tab title="Llamada entrante (Bluetooth)">
+    <Steps>
+      <Step title="Atender si Bluetooth está apagado">
+        Si Bluetooth está **apagado en el móvil**, atienda la llamada desde el **teléfono** y luego **active Bluetooth** para transferirla a la consola.
+      </Step>
+      <Step title="Atender si Bluetooth está activo">
+        Si Bluetooth está **activo**, puede atender directamente desde la consola con un **toque corto en BLT**.\
+        En esta condición la conversación se realiza **solo a través de la consola**.
+      </Step>
+      <Step title="Transferencia de la llamada">
+        Una vez transferida a la consola, el **móvil recibe señal de PGM**.
+      </Step>
+      <Step title="Hablar en privado">
+        Pulse **TALK** en la zona **CELL Phone** y escuche en **CUE** por los auriculares.
+      </Step>
+      <Step title="Poner en PGM">
+        Cambie **CUE/PGM a PGM** y **ajuste el nivel** para enviar la llamada a programa.
+      </Step>
+      <Step title="Finalizar la llamada">
+        Termine con un **toque corto en BLT** o cortando desde el **móvil**.
+      </Step>
+      <Step title="Retomar desde el teléfono">
+        Para devolver la llamada al móvil, cambie el modo de **“Headset/Bluetooth”** a **“Altavoz (speaker)”** en el teléfono.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Llamar desde el móvil">
+    <Steps>
+      <Step title="Cambiar a altavoz">
+        En el **móvil**, ponga el audio en **“Altavoz”** para hablar desde el teléfono.
+      </Step>
+      <Step title="Marcar la llamada">
+        Realice el **marcado** y establezca la llamada desde el móvil.
+      </Step>
+      <Step title="Transferir a la consola">
+        Cambie el modo de audio en el móvil a **“Headset/Bluetooth”** para pasar la llamada a la consola.
+      </Step>
+      <Step title="Confirmar que no esté en PGM">
+        Antes de transferir, asegúrese de que la consola esté en **CUE**.\
+        Si estuviera en **PGM**, la llamada podría salir al aire accidentalmente.
+      </Step>
+      <Step title="Poner al aire">
+        Cambie **CUE/PGM a PGM** y **ajuste el nivel** para enviar la llamada al programa.
+      </Step>
+      <Step title="Finalizar la llamada">
+        Termine con un **toque corto en BLT** o cortando desde el **móvil**.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>

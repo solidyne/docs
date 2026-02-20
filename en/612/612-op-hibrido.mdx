@@ -1,0 +1,183 @@
+---
+title: "Canal del híbrido"
+description: "Uso de linea terrestre y celular vinculado por Bluetooth"
+keywords: ["híbrido", "POTS", "Bluetooth", "conferencia"]
+tags: ["consolas de estudio", "linea Classic", "D612"]
+---
+
+## INTRODUCCIÓN
+
+El canal de híbrido maneja dos líneas telefónicas:
+
+- Una línea terrestre (2 hilos, también conocidas como <Tooltip tip="Public Old Telephonic System">POTS</Tooltip>) .
+- Un celular vía Bluetooth.
+
+El uso del canal es simple y a prueba de errores gracias a su lógica de seguridad y a los circuitos de control automáticos.
+
+<img
+  src="/images/612/612-hibrido-upscaled.jpeg"
+  alt="612 Hibrido Upscaled Jpe"
+  title="612 Hibrido Upscaled Jpe"
+  style={{ width:"28%" }}
+  className="mx-auto"
+/>
+
+## USO CON LÍNEA TERRESTRE 
+
+Cuando ingresa una llamada, un LED azul destella con la cadencia del ring. Puede atenderse:
+
+- **Desde el teléfono asociado** (recomendado).
+- **Desde el híbrido de la consola**.
+
+### Atender desde el teléfono asociado
+
+1. Descolgar el aparato conectado al RJ11 trasero de la D612.
+2. Para pasar la llamada al aire: presionar **HOLD/AIR** y colgar el teléfono.
+
+### Atender desde la consola
+
+1. Verifique que la perilla **AIR LEVEL** esté cerrada antes de tomar la línea.
+2. Pulsar **HOLD/AIR**.
+3. La línea queda tomada y la luz piloto se apaga.
+4. El llamante recibe retorno de PGM y puede salir al aire si se abre **AIR LEVEL**.
+
+### Comunicación privada
+
+1. Pulsar **CUE**: se interrumpe PGM hacia la línea y se escucha al llamante por el parlante CUE.
+2. Para hablar: mantener presionado **TALKBACK**, usando el micrófono de órdenes de la consola.
+
+### Poner al aire la llamada
+
+1. Soltar **CUE**.
+2. Girar **AIR LEVEL** y ajustarlo hasta el nivel adecuado.
+
+   <Tip>
+     El ajuste se realiza observando vúmetro de PGM y escuchando el audio al aire, porque el audio filtrado en graves de una comunicación telefónica puede alcanzar la sonoridad de las voces del estudio aún modulando menos en los vúmetros.
+
+     En un híbrido analógico es importante **no exceder el nivel de la línea al aire** para no ensuciar las voces del piso.
+   </Tip>
+
+### Retomar en privado
+
+- Cerrar **AIR LEVEL** y usar **CUE** (escuchar) y **TALKBACK** (hablar).
+
+### Retomar en el teléfono asociado
+
+1. Bajar **AIR LEVEL** a cero.
+2. Descolgar el tubo.
+3. Soltar **HOLD/AIR** en la consola.
+
+<Note>
+  Si el teléfono está colgado al soltar HOLD/AIR, la llamada se corta.
+</Note>
+
+### Finalizar la comunicación
+
+Para finalizar la comunicación, cerrar AIR LEVEL y **soltar HOLD/AIR**.
+
+---
+
+## USO CON TELÉFONO CELULAR
+
+El celular debe estar [emparejado con la consola](/es/612/612-telco) D612 vía Bluetooth.
+
+### Conexión diaria
+
+1. Verifique que **AIR LEVEL** esté cerrado y **CUE** presionado.
+2. Active **Bluetooth en la consola**: mantenga pulsado **CELLULAR PHONE BLUETOOTH** unos 5 s hasta que el LED verde (ubicado en el panel de los vúmetros) destelle lentamente.
+3. Active Bluetooth en el celular.
+   - Si ya fue apareado, la conexión se restablece automáticamente.
+   - Los llamados entrantes se transfieren directamente a la consola.
+
+Si la consola se usa solo con celular, conviene dejarlo siempre vinculado y manejar llamadas desde el híbrido.  Para el caso en que haya un uso continuo de ambas líneas, sea en forma alternada o en simultáneo (conferencias) surgen algunas particularidades en la operación que se detallan en [Conferencias](#conferencias)_._
+
+### Llamada entrante (celular)
+
+- Al ingresar la llamada, suena en el celular y en el parlante CUE (si CUE está presionado).
+- Verifique que **AIR LEVEL** esté cerrado.
+- Atender con un toque corto en **CELLULAR PHONE BLUETOOTH** (o desde la pantalla del móvil).
+
+### Manejo de la llamada
+
+- Con **CUE** presionado se escucha la llamada en parlante CUE (sin retorno de PGM).
+- Para hablar: mantener **TALKBACK**.
+- Al soltar **CUE**, el llamante escucha PGM, pero no sale al aire hasta abrir **AIR LEVEL**.
+- Para ponerlo al aire: abrir **AIR LEVEL** y ajustar nivel en vúmetros.
+
+### Retomar en el móvil
+
+- En el celular, salir de modo _Headset/Bluetooth_ y pasar a _Speaker_.
+- Para transferir nuevamente a la consola: volver a _Headset_.
+
+<Note>
+  Según el modelo, el menú puede mostrar iconos de “Headset”, botones desplegables o combinaciones distintas. Consulte el manual del teléfono.
+</Note>
+
+### Finalizar la comunicación
+
+- Pulsar corto **CELLULAR PHONE BLUETOOTH**, o cortar desde el celular.
+
+### Llamar desde el móvil
+
+1. En el celular, pase a modo \_Headset \_para desconectarlo de la consola.
+2. Disque el número y marque **SEND**.
+3. Para transferir la llamada a la consola: vuelva a modo _Bluetooth/Headset_.
+4. \*\*En la consola: \*\*soltar **CUE** para enviar retorno de PGM al celular.
+5. Abrir **AIR LEVEL** para poner al aire.
+
+<Info>
+  También puede llamarse sin salir de modo Bluetooth, usando Talkback:
+
+  - El tono y la voz se oyen en CUE.
+  - Hablar con **Talkback**.
+  - Para espera: dejar **CUE** activo.
+  - Para aire: abrir **AIR LEVEL**.
+  - Para cortar: pulsar corto **CELLULAR PHONE BLUETOOTH** o cortar desde el celular.
+</Info>
+
+---
+
+---
+
+## CONFERENCIAS
+
+Cuando se usan línea fija y celular en simultáneo:
+
+- En el móvil: Desconecte Bluetooth de la consola al finalizar cada llamada. De este modo, si entra una llamada, suena en el teléfono.
+- Si el móvil Bluetooth queda conectado a la consola, una llamada entrante podría sonar al aire mientras la línea fija está abierta.
+
+El procedimiento para establcer una conferencia depende de cuál línea está al aire:
+
+<Tabs>
+  <Tab title="Estando al aire el teléfono móvil">
+    - Recibir o realizar llamada por el teléfono asociado a la línea terrestre.
+    - Dialogar y advertir que irá directamente al aire.
+    - Pulsar **HOLD/AIR** para enviarla al aire y colgar el teléfono.
+    - Si el teléfono lo permite, puede silenciar el micrófono anter de colgar, para evitar ruidos.
+    - La llamada entra en conferencia con el celular ya al aire.
+  </Tab>
+  <Tab title="Estando al aire la línea terrestre">
+    - En el celular: Bluetooth está encendido pero desconectado (local speaker) mientras no se usa.
+    - Realizar o recibir la llamada en el celular de forma independiente.
+    - Para transferirla: conectar Bluetooth a la consola.
+    - La llamada pasa inmediatamente al aire, en conferencia con la línea terrestre.
+    - Para cortar: finalizar desde el celular.
+    - Luego, desconecte Bluetooth en el celular si seguirá usando la línea terrestre.
+    - Para retomar en el celular: conmute a modo _Headset_ desde el menú del móvil.
+  </Tab>
+</Tabs>
+
+Si se requiere trabajar con llamadas en espera, instalar un híbrido externo. El conector EXT HIB permite sumarlo al Híbrido Interno, sin necesidad de ocupar un canal extra de la consola.
+
+---
+
+## Envío PGM a línea telefónica
+
+El híbrido incorporado en D612 no posee control de nivel de retorno a línea.
+
+- El envío es automático, con AGC y limitador.
+- La señal de envío se limita a la banda **400–2200 Hz**, optimizada para inteligibilidad.
+- Esto evita distorsiones causadas por exceso de retorno.
+- Para asegurar calidad: mantener el vúmetro en **0 VU** con picos ocasionales sobre cero.
+
+Para verificar: medir con osciloscopio en paralelo a la línea → la señal debe ser **2 V pico a pico**.

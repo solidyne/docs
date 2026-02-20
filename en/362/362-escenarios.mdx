@@ -1,0 +1,77 @@
+---
+title: "Escenarios de trabajo"
+description: "Casos de aplicación"
+keywords: ["MPX", "streaming", "acceso remoto", "retransmisión", "modo HD", "AGC", "compresión multibanda"]
+---
+
+## Procesador y codificador estéreo en FM
+
+Este es el uso normal como **procesador de audio para FM**.\
+El equipo se ubica en la **planta transmisora** y se conecta, vía **salida MPX**, al transmisor principal.
+
+- La **salida MPX secundaria** permite conectar un segundo transmisor de respaldo.
+- La señal de programa ingresa por las **entradas analógicas**.
+
+<Warning>
+  Use siempre la entrada adecuada (**balanceada o no balanceada**) según la consola de aire.
+</Warning>
+
+Cuando la planta transmisora está alejada del estudio, el procesador se instala en la planta y recibe el audio de programa (PGM) mediante un enlace punto a punto, que puede ser:
+
+- Audio por RF.
+- Audio digital vía fibra óptica o UHF.
+
+---
+
+### Envío USB para streaming externo
+
+Requiere el modelo **Audimax 362HD/USB**.\
+El uso de la conexión **USB es independiente de MPX**, lo que permite usar el mismo procesado de aire también para transmisión por Internet.
+
+- El procesador recibe la señal de programa por las entradas analógicas.
+- Envía el audio procesado a la **salida digital USB** y a las **salidas MPX**.
+- Un computador recibe el audio vía USB para realizar el streaming.
+
+De este modo:
+
+- **MPX** → transmisor FM.
+- **USB** → computadora encargada del streaming.
+
+<Note>
+  Se recomienda instalar en el computador un software de **acceso remoto**, para facilitar la supervisión del sistema de streaming.
+</Note>
+
+---
+
+## Retransmisión de streaming entrante en FM
+
+Este esquema también requiere el modelo **Audimax 362HD/USB** y un computador externo.\
+Se utiliza, por ejemplo, en **emisoras repetidoras de señal**.
+
+- Un computador externo recibe el streaming desde la estación principal (vía Internet o LAN).
+- Lo decodifica y lo envía en **PCM** al procesador a través de la conexión USB.
+- El Audimax 362 procesa el audio y lo entrega a las **salidas MPX**, que alimentan al transmisor FM.
+
+<Note>
+  Se recomienda instalar en el computador un software de **acceso remoto** para monitoreo del encoder de streaming.
+</Note>
+
+---
+
+## Usos como procesador de audio (modo HD)
+
+En **modo HD (High Definition)**, el Audimax 362HD puede utilizarse en aplicaciones que requieren control dinámico o incremento de sonoridad **sin transmisión de FM** (MPX desactivado; ver [Modo HD](/es/362/362-instalacion-audio)).
+
+### Ejemplos de aplicación:
+
+- Estaciones de radio con transmisión digital (HD Radio).
+- Transmisión de streaming en alta calidad.
+- Pre-procesado de audio en móviles de exteriores.
+- Refuerzo sonoro en pequeños shows o salas de ensayo.
+- Recintos, auditorios, conferencias y sistemas de música funcional.
+
+En este modo:
+
+- El control de picos permite aprovechar al máximo el rango digital, con un margen de seguridad mínimo (2–3 dB) para evitar recortes en los sobreimpulsos de la codificación.
+- Se acopla un **recortador suave** a las salidas de audio, que limita los picos posteriores al compresor multibanda y protege las etapas de potencia del PA.
+- La combinación del **AGC** y la **compresión multibanda** mantiene un sonido uniforme y claro, independiente de las variaciones de la señal de entrada.

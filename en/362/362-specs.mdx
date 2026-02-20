@@ -1,0 +1,84 @@
+---
+title: "Especificaciones técnicas"
+---
+
+## Especificaciones generales
+
+<Accordion title="Entradas">
+  - **Balanceada estéreo**: conectores XLR-3 y RJ45\
+    Nivel con auto-ajuste 0 dBu a \+15 dBu, Z = 600/10 kΩ
+  - **No balanceada estéreo**: conectores RCA\
+    Nivel con auto-ajuste –15 dBu a 0 dBu, Z = 10 kΩ
+  - **Digital USB (opcional)**
+</Accordion>
+
+<Accordion title="Salidas">
+  - **Balanceada estéreo**: conectores XLR, \+4 dBu, Z = 600/10 kΩ\
+    Con de-emphasis (respuesta plana).
+  - **Digital USB (opcional)**
+</Accordion>
+
+<Accordion title="Salidas MPX">
+  - Doble salida MPX con ajuste independiente de nivel (4 Vpp, ajuste de fábrica), Z = 600/10 kΩ.
+  - Salida diferencial para cancelar zumbidos por lazos entre el transmisor y la toma a tierra del estudio.
+</Accordion>
+
+<Accordion title="Especificaciones de audio">
+  - **Respuesta en frecuencia**: 20 – 16.000 Hz ±0,5 dB (medido por debajo del umbral de compresión/limitación).
+  - **Distorsión armónica**: \< 0,02 % (30 – 15.000 Hz).
+  - **Ruido**: \< –90 dBA referido a 100 % de modulación.
+  - **Separación estéreo**: \> 75 dBA.
+  - **Filtro subsónico**: Chebyshev 2º orden, 15 Hz.
+</Accordion>
+
+<Accordion title="Procesamiento">
+  - **Cancelación asimétrica**: relación 5:1, método Kahn-Bonello.
+  - **Expansor**: pendiente 10:1, ataque de 100 µs.
+  - **AGC (banda ancha)**: controlado por VCA.\
+    Rango: 30 dB (–10 dB / \+20 dB respecto al nivel nominal de entrada).
+  - **Compresión multibanda**:
+    - 3 bandas, 18 dB/octava, divisor de fase lineal.
+    - Compresores: rango 30 dB, pendiente 5:1.
+    - Ataque automático.
+    - Recuperación: controlada por perillas _Energy_.
+    - Recortador con cancelador IM (\> 30 dB de atenuación por debajo de 250 Hz).
+    - Dynamic EQ: 0 – 12 dB de refuerzo dinámico en graves, medios y agudos.
+</Accordion>
+
+<Accordion title="Alimentación">
+  115 V / 230 V (selector en panel trasero)\
+  50/60 Hz, 20 W
+</Accordion>
+
+<Accordion title="Dimensiones">
+  Módulo de montaje en rack 19" (44,4 mm).
+</Accordion>
+
+---
+
+## Stereo Coder Specifications
+
+<Accordion title="Entrada de audio">
+  2 Vpp para 100 % salida MPX (4 Vpp).
+</Accordion>
+
+<Accordion title="Especificaciones de audio">
+  - **Respuesta en frecuencia**:
+    - 15 kHz / 5º orden filtro LP elíptico, –1 dB a 15 kHz.
+    - 20 – 14.000 Hz ±0,25 dB.
+    - Atenuación a 19 kHz \> 40 dB.
+  - **Distorsión armónica**:
+    - \< 0,01 % THD (20 – 15.000 Hz).
+    - Típica: 0,003 % @ 1 kHz.
+  - **Relación S/R**: \> 90 dBA (ref. 100 % modulación).
+  - **Separación estéreo**: 65 dB @ 1 kHz.
+</Accordion>
+
+<Accordion title="Supresión de armónicos">
+  - 38 kHz: mejor que –70 dB (ref. 100 % modulación).
+  - 57, 76 y 95 kHz: mejor que –75 dB (ref. 100 % modulación).
+</Accordion>
+
+<Accordion title="Estabilidad de tono piloto">
+  ±0,002 % (±0,5 Hz).
+</Accordion>

@@ -1,0 +1,86 @@
+---
+title: "Cables y conexiones"
+description: "Descripción general del cableado de audio y redes"
+keywords: ["conexiones", "pin-out", "RJ45"]
+tags: ["procesadores", "542"]
+---
+
+## Conexiones de audio analógicas
+
+### Entradas y salidas sobre XLR
+
+El 542APC cuenta con:
+
+- **Entradas** analógicas balanceadas (conector XLR, sin transformador).
+- **Salidas estéreo** analógicas balanceadas (conector XLR).
+
+La conexión se realiza de acuerdo al estándar de audio profesional.
+
+| **Tipo de conexión**      | **Pin 1**         | **Pin 2**                | **Pin 3**                |
+| ------------------------- | ----------------- | ------------------------ | ------------------------ |
+| **Entrada balanceada**    | Masa              | Balanceado fase positiva | Balanceado fase negativa |
+| **Entrada desbalanceada** | Masa (unir 1 y 3) | Balanceado fase positiva | unido a pin 1 en entrada |
+| **Salida desbalanceada**  | Masa              | Balanceado fase positiva | sin conexión             |
+
+<Warning>
+  Mantenga la **fase correcta** en la conexión balanceada.
+</Warning>
+
+<Note>
+  Utilice cable de dos conductores bajo malla, preferentemente con **doble blindaje**.\
+  Mantenga la longitud de los cables menor a **30 metros**.\
+  En casos especiales puede extenderse hasta **100 metros**, aceptando una leve pérdida en altas frecuencias.
+</Note>
+
+### Entradas y salidas sobre RJ45
+
+Con la incorporación del **audio sobre IP (AoIP)**, diversos fabricantes utilizan conectores **RJ45** y cable multipar blindado para unificar el cableado de audio analógico.
+
+- Un conector RJ45 contiene **dos líneas balanceadas**, lo que reduce el tamaño del equipo y la cantidad de conectores.
+- El uso de **cable estructurado (STP CAT5)** para distancias largas facilita la instalación y evita soldaduras.
+- En el extremo del cable, la conexión al dispositivo puede requerir conectores de audio estándar.\
+  Para ello, **Solidyne provee adaptadores RJ45-hembra → conector balanceado**.
+
+<Info>
+  Los dispositivos Solidyne son compatibles con los accesorios **StudioHub®** ampliamente utilizados en radiodifusión. Más info: [www.studiohub.com](http://www.studiohub.com)
+</Info>
+
+<Tip>
+  [Diagramas de pines y cables adaptadores para armado de cables](/es/diagramas/RJ45-pinout).
+</Tip>
+
+---
+
+## Conexiones de audio digital
+
+### Entrada / salida AES-3
+
+- Cuando se use la entrada digital, conviene conectar también las entradas analógicas.
+- En caso de perderse la señal en alguna de las entradas, el procesador conmuta automáticamente a la que presente señal.
+
+La salida AES3 es balanceada y utiliza conector **XLR macho**.
+
+| **Pin** | **Señal** |
+| :-----: | :-------: |
+| 1       | GND       |
+| 2       | AES3 (1)  |
+| 3       | AES3 (2)  |
+
+---
+
+## Salidas MPX
+
+El **542APC** cuenta con **doble salida MPX**, con ajuste de nivel independiente.
+
+- Los conectores MPX son **BNC**.
+- Utilice cable coaxial de **75 Ohms (RG-59)**.
+- Mantenga la longitud del cable por debajo de **25 metros**.
+
+<Warning>
+  Si conecta el transmisor con señal MPX, asegúrese de **deshabilitar el pre-énfasis interno** del transmisor (respuesta plana 20 – 100 kHz). El pre-énfasis es fijado en el 542APC (50 o 75 µs).
+</Warning>
+
+<Info>
+  Es importante mantener una **distribución de tierras adecuada**.\
+  En caso de duda, consulte a Solidyne indicando el equipo y el esquema de tierras utilizado.
+</Info>

@@ -1,0 +1,188 @@
+---
+title: "Configuración inicial"
+description: "Configuración inicial. Pantalla aConfig"
+keywords: ["Configuración", "settings"]
+tags: ["Software", "Audicom"]
+---
+
+## Panel aConfig
+
+Esta herramienta **se lanza durante la instalación**. En el Panel de Configuración **aStart** se definen la asignación de salidas de audio y otras configuraciones del sistema.\
+Las opciones se agrupan por categorías.
+
+<Warning>
+  Para guardar cambios, siempre utilice **Guardar cambios** o **Guardar y salir**.\
+  La configuración debe hacerse en cada terminal.
+</Warning>
+
+El panel también**puede abrirse después de la instalación**  desde el grupo de programas creado en el menú Inicio de Windows.
+
+### Audio
+
+- Se determina el uso de cada canal.
+- Los módulos **CyberPlay**, **Live Assist 1**, **Live Assist 2** y **Playlist Manager 1 y 2** pueden asignarse a diferentes canales de salida.
+- Puede definirse un canal dedicado para monitoreo previo (CUE).
+
+  ![A Config Audio Jp](/images/audicom/aConfig_Audio.jpg)
+
+<Note>
+  Los canales asignados en modo mezcla (_mix mode_) se suman a la salida de programa principal.\
+  Al cambiar asignaciones, es necesario reiniciar todas las aplicaciones AUDICOM.
+</Note>
+
+### Carpetas
+
+#### Fuentes de audio
+
+![A Config Fuentesde Audio Jp](/images/audicom/aConfig_FuentesdeAudio.jpg)
+
+- **Servidores**: Define las unidades de disco habilitadas para cada terminal.
+  - Deben declararse en modo **UNC**, por ejemplo: `\\Server` o `\\PC-AIRE`.
+
+<Warning>
+  Incluso en instalaciones sin servidor dedicado, es indispensable definir los archivos mediante **path UNC de red**. Si se configura como disco `C`, las demás terminales no podrán acceder a los contenidos del computador de aire.
+</Warning>
+
+- **Ubicación Partners (pisadores)**: Carpeta para presentaciones pregrabadas de canciones (voces secas).
+- **Ubicación Promos de reemplazo**: Carpeta con contenidos que sustituyen promos y artísticas de programas enlazados por iLink con cabecera remota.
+
+#### Bases de datos
+
+![A Config Basede Datos Jp](/images/audicom/aConfig_BasedeDatos.jpg)
+
+- **Base de datos del MAM (Media Asset Management)**: Ubicación única de la base musical.
+  - Puede alojarse en el servidor (`\\SERVER\Audicom\db`) o en el computador de aire (`\\AIRE\Audicom\db`).
+- **Programación (PGM)**: Archivos `.pgm` que definen contenidos no comerciales.
+- **Comercial (LOG)**: Archivos `.log` que definen la pauta comercial.
+- **Log de aire**: Registros de emisión al aire.
+- **Formatos musicales**: Base de datos para AutoDJ.
+  - Generalmente alojados en la terminal de aire.
+  - En emisoras múltiples, cada estación mantiene sus propios formatos (ej.: `\\Estación-1\Audicom`, `\\Estación-2\Audicom`).
+  - Desde cualquier terminal Audicom o el **AutoDJ Editor** puede accederse a las diferentes terminales de aire.
+
+<Note>
+  **Personalización avanzada de la base de datos musical**
+
+  Es importante mencionar que algunos aspectos de la base de datos pueden modificarse **ANTES **de comenzar la carga de archivos de audio en el sistema. Editando el archivo de configuración audicom.ini es posible redefinir algunos campos de la base de datos como las definiciones de CATEGORÍA, TEMPO, MODO; entre otras. Para más detalles consultar vía e-mail a [soporteaudicom@solidyne.ar](mailto:soporteaudicom@solidyne.ar) 
+</Note>
+
+#### Fuentes de noticias
+
+![A Config Fuentede Noticias Jp](/images/audicom/aConfig_FuentedeNoticias.jpg)
+
+- **Ubicación del texto**: Carpeta especial del _File Manager_ que admite archivos de texto.
+- **Ubicación Teleprompter**: Función discontinuada. No modificar.
+
+### Preferencias
+
+![A Config Preferencias Jp](/images/audicom/aConfig_Preferencias.jpg)
+
+#### Identificación del computador
+
+- **Nombre de la terminal**: Define un alias para la terminal AUDICOM, distinto al nombre en Windows.
+  - Se recomienda no exceder los **17 caracteres**.
+
+#### Configuración de la terminal
+
+- **Tipo de terminal**: Define el contexto de uso y optimiza la configuración del sistema.
+- **Modo de inicio**:
+  - **Nunca iniciar Audicom**: Se muestra pantalla Ilogon hasta que el usuario ingrese.
+  - **Iniciar a los 3 minutos**: Tras mostrar Ilogon, el sistema inicia automáticamente bajo usuario “auto”.
+
+#### Opciones de musicalización
+
+- **Cantidad de títulos listados por adelantado**: Define la cantidad de temas que AutoDJ programa con antelación.
+- **Clase de promos a utilizar**: Diferencia promos de identidad de emisora y promos de musicalización.
+
+#### Opciones del CyberPlay
+
+![A Config Preferencias Cyber Play Jp](/images/audicom/aConfig_Preferencias-CyberPlay.jpg)
+
+- **Pausas en cada bloque en vivo**: Inserta un punto de detención antes de cada bloque.
+- **Cargar la programación de mañana a las**: Hora en la cual se cargan pautas del día siguiente.
+- **Tamaño automático de comentarios**: Ajusta altura de ventana si no hay espacio suficiente.
+- **Desactiva CUE por canal independiente**: Los títulos en CUE salen por el dispositivo asignado al módulo en lugar de la salida CUE.
+  - En este modo no se reportan al RDS.
+- **Tiempo de CUE en final de archivos**: Define la duración de escucha en modo _CUE END_.
+
+#### Botoneras de acceso rápido
+
+![A Config Live Assist Jp](/images/audicom/aConfig_LiveAssist.jpg)
+
+- **Cantidad de columnas**: Número de columnas en botonera Live Assist (predeterminado 4).
+- **Cantidad de filas**: Número de filas en función de la altura del monitor (predeterminado 12).
+- **Ocultar números de ID en botones**: Permite simplificar la interfaz si no se usan atajos desde teclado numérico.
+- **Mantener Play en botón vacío**: Un botón vacío actúa como _Stop_, deteniendo la reproducción activa.
+- **Novation Launchpad**: Configuración de controladora MIDI para disparo en Live Assist 1 y 2.
+  - Requiere configurar dos canales MIDI por cada Live Assist: uno de entrada y uno de salida.
+  - El de entrada permite disparar acciones desde la controladora.
+  - El de salida enciende los botones del dispositivo MIDI.
+
+#### Editor externo
+
+- Permite definir editores externos de audio y video.
+
+#### Explorador de librería de contenidos
+
+- Solo debe estar activo en la terminal que funcione como servidor de archivos.
+
+#### Opciones pautado comercial Admicom
+
+- **Aleatoriedad en el pautado**: Admicom siempre cumple las órdenes de publicidad.\\
+
+  <Warning>
+    Valores altos de aleatoriedad pueden reducir la eficiencia de generación.
+  </Warning>
+
+### Enlaces de audio
+
+![A Config Enlaces Audio Jp](/images/audicom/aConfig_enlaces_audio.jpg)
+
+- **Enlace IP iLink (Audicom ↔ Audicom)**:
+  - **Tiempo de espera ante un corte**: Tiempo antes de iniciar programación de emergencia si se pierde conexión con cabecera.\\
+
+    <Note>
+      El buffer de Windows Media Player debe configurarse en la mitad de este tiempo.
+    </Note>
+  - **Margen de sobrecarga**: Atenúa nivel según el margen definido por el flujo de cabecera.
+- **Enlace satelital**: Define la entrada de línea usada por modo SatFill.
+
+### Colores del audio
+
+- Los títulos pueden mostrarse con colores distintos según el tiempo desde la última emisión.
+- Los rangos y colores se definen en este panel.
+
+  ![A Config Colores Jp](/images/audicom/aConfig_colores.jpg)
+
+### HTH (Hora actual y datos del tiempo)
+
+- Permite generar anuncios de hora y datos meteorológicos a partir de archivos pregrabados definidos en “Locuciones personalizadas”.
+
+  ![A Config Hth Jp](/images/audicom/aConfig_hth.jpg)
+
+  <img
+    src="/images/audicom/aConfig_ubicacion_voces.jpg"
+    alt="AUDICOM Configuración - Voces Meteor"
+    title="AUDICOM Configuración - Voces Meteor"
+    style={{ width:"100%" }}
+  />
+
+#### Beep de hora en punto
+
+- Define archivo de pitidos reproducido 5 segundos antes de cada hora.
+- Para salir al aire debe estar activo el botón **Hora en punto (O’clock)** en la zona Meteor.
+- Se reproduce por la salida asignada a **Live Assist 2**.
+
+  ![A Config Beep Hora Jp](/images/audicom/aConfig_beep_hora.jpg)
+
+### Fonts
+
+- Define las características del texto en **CyberPlay, File Manager, Playlist Manager y Live Assist**.
+
+![A Config FONTS Jp](/images/audicom/aConfig_FONTS.jpg)
+
+### Video
+
+![A Config Video Pn](/images/audicom/aConfigVideo.png)
+
+- **FPS del monitor Multiview**: opción discontinuada.

@@ -1,0 +1,120 @@
+---
+description: "Descripción general del reproductor principal de Audicom"
+title: "CyberPlay: grilla principal de contenidos"
+keywords: ["CyberPlay"]
+tags: ["Software", "Audicom"]
+---
+
+## Conceptos generales
+
+El **CyberPlay** crea automáticamente el listado de eventos de la radio para cada día, con sus horarios exactos.
+
+<img
+  src="/images/audicom/au-screen-cyberplay.png"
+  alt="AUDICOM Pantalla Cyberplay"
+  title="AUDICOM Pantalla Cyberplay"
+  className="mx-auto"
+  style={{ width:"37%" }}
+/>
+
+- La ventana muestra la **grilla de programación completa de 00:00 a 24:00 hs**, incluyendo todos los eventos, no solo los que intervienen en la computadora.
+- Se respetan los bloques de la programación tradicional: en vivo, noticias, informativos, conexiones remotas, etc.
+
+CyberPlay puede operar en:
+
+- Modo **tandero**, gestionando solo los bloques comerciales.
+- Modo completo, basado en la **grilla de programación PGM**.
+
+Para generar la programación anual (365 días) solo se requieren **7 plantillas**, una por cada día de la semana.
+
+- Estas se crean con comandos simples desde el módulo **CyberPlay Editor**.
+- También pueden definirse plantillas para días especiales.
+
+El módulo de Tráfico de AUDICOM crea diariamente un listado de tandas comerciales con el formato:\
+`AAMMDD.LOG` (Año, Mes, Día).
+
+CyberPlay une y presenta en pantalla ambos listados (comerciales y de programación), mostrándolos como una lista única.
+
+<Note>
+  CyberPlay carga los archivos **LOG** y **PGM** a las 18:00 hs de cada día.\
+  Este horario puede modificarse desde el Panel de Configuración.
+</Note>
+
+La ventana CyberPlay muestra la programación del día actual, del anterior y del siguiente.
+
+- La lista se recorre con la barra de desplazamiento (scroll).
+
+### Identificación por colores
+
+Los distintos contenidos se diferencian en pantalla mediante colores:
+
+- **Verde**: tanda comercial
+- **Amarillo**: bloque en vivo
+- **Azul**: bloque AutoDJ
+- **Rosa**: enlace remoto (satélite o Internet)
+- **Violeta**: Exacttime
+- **Negro**: pausa (punto de detención)
+
+### Identificación de horarios
+
+- Horas pares: fondo gris claro.
+- Horas impares: fondo gris oscuro.
+- Día anterior: horas en azul.
+- Día actual: horas en negro.
+- Día siguiente: horas en rojo.
+
+### Cursor de reproducción
+
+- Línea roja indica el título en reproducción.
+- Títulos ya emitidos aparecen en gris.
+- El cursor tiene centrado automático, volviendo a pantalla si queda oculto.
+- Si se selecciona un ítem, el cursor cambia a amarillo y el centrado se suspende temporalmente por 1 minuto.
+- Una flecha sobre la barra vertical indica si el título reproducido está fuera de la vista.
+
+  Al pulsar la flecha, se fuerza el centrado del título en reproducción.
+
+---
+
+## Bloques comerciales
+
+Contienen publicidades. Cada bloque equivale a una tanda comercial.
+
+Ejemplo de bloque:
+
+<img
+  src="/images/audicom/au-screen-spots.png"
+  alt="Bloque comerciales"
+  title="Bloque comerciales"
+  className="mx-auto"
+  style={{ width:"59%" }}
+/>
+
+```
+00:00    				Horario de salida al aire
+SF5     			 	Flexibilidad de horario de la tanda
+Spot1; Spot2; Spot3  	Archivos de avisos comerciales
+Meteor: Time         	Comando especial que anuncia la hora actual
+```
+
+---
+
+## Bloques de programa
+
+Corresponden a los contenidos de la radio:
+
+- Shows en vivo
+- Programación musical automática (**AutoDJ**)
+- Enlaces remotos (satélite o Internet)
+
+Ejemplo de encabezado de bloque:
+
+```
+[Live]                  Tipo de bloque
+18:00-18:00             Inicio y fin del bloque
+<no title>              Nombre del bloque (sin título en este caso)
+Program Length: ...     Duración del programa
+```
+
+<Info>
+  Para más información sobre cómo organizar la programación, consulte el capítulo **Pauta de Programación**.
+</Info>

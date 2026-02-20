@@ -1,0 +1,58 @@
+---
+title: "Especificaciones"
+keywords: ["especificaciones"]
+tags: "hibridos,BLT200"
+---
+
+<Accordion title="Conectores de E/S">
+  - **Jack estéreo 6,32 mm**
+  - **AUDIO OUT**
+    - TIP = Audio A / Audio A+B @ +4 dBu
+    - RING = Audio B @ +4 dBu
+  - **AUDIO IN**
+    - TIP = Retorno de audio desde consola (Mix-Minus) -10 dBu ~ +10 dBu
+    - RING = Salida TELCO hacia Solidyne «EXT HYBRID»
+</Accordion>
+
+<Accordion title="Modos de operación">
+  - **MODO A «Consolas Solidyne»**
+    - Celulares A y B en conferencia con los híbridos internos de la consola.
+    - DIP-2,4,5,6 = ON
+    - Se utiliza cable estéreo 1,80 m (provisto) desde AUDIO IN (BLT200) al conector EXT HYB de la consola Solidyne.
+  - **MODO B «Todas las consolas; 1 entrada de línea»**
+    - Todas las consolas en modo conferencia. DIP-2,4,5 = ON
+    - **AUDIO IN**: cable estéreo (provisto), Tip = retorno desde consola / Ring = n/c
+    - **AUDIO OUT**: cable en Y (provisto), Tip = entrada de línea de la consola / Ring = n/c
+  - **MODO C «Todas las consolas; 2 entradas de línea»**
+    - Modo conferencia. DIP-1,4,5 = ON
+    - **AUDIO IN**: cable estéreo (provisto), Tip = retorno desde consola.
+    - **AUDIO OUT**: cable en Y (provisto), Tip = Línea A / Ring = Línea B.
+  - **MODO D «Celulares independientes»**
+    - Sin conferencia. DIP-1 = ON
+    - **AUDIO IN**: cable estéreo (provisto), Tip = retorno desde consola.
+    - **AUDIO OUT**: cable en Y (provisto), Tip = Línea A / Ring = Línea B.
+  - **MODO E «2 × BLT200» (4 celulares)**
+    - Dos unidades BLT200, cada una en modo conferencia A/B. DIP-2,4,5 = ON
+    - Conexión según cableado de MODO B: Línea 1 (Cel 1+2) y Línea 2 (Cel 3+4).
+    - Conectar en paralelo las dos entradas del bus de retorno con un adaptador en Y.
+</Accordion>
+
+<Accordion title="Códigos de iluminación de los botones CONTROL">
+  - **A – Celular en espera**: breve encendido (1 s) en amarillo con apagado largo (2 s).
+  - **B – Celular en comunicación**: encendido lento (2 s) en amarillo con apagado corto (1 s).
+    - Indica entrevista en curso o búsqueda de un dispositivo previamente vinculado.
+    - Al cortar la comunicación (pulsado breve) retorna a modo “A”.
+  - **C – Modo de búsqueda (Pairing)**: parpadeo muy rápido en amarillo.
+  - **D – Llamada entrante**: encendido permanente en azul mientras suena el celular.
+</Accordion>
+
+<Accordion title="Prestaciones de audio">
+  - Respuesta en frecuencia: 50 Hz – 8.000 Hz (rango vocal completo, Bluetooth 4.0 / 5.0)
+  - Distorsión armónica total (THD): \< 0,2 % (medida entrada → salida en circuitos electrónicos)
+  - Relación señal/ruido: \> 70 dBA (en todos los circuitos electrónicos)
+</Accordion>
+
+<Accordion title="Alimentación">
+  - Fuente conmutada externa
+  - 110/220 V AC → 12 V DC / 1 A
+</Accordion>

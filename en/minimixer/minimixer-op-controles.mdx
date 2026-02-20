@@ -1,0 +1,78 @@
+---
+title: "Operación: Controles"
+description: "Descripción de los controles y operación"
+keywords: ["operación"]
+tags: ["consolas de estudio", "línea Classic", "minimixer"]
+---
+
+## Descripción general
+
+Las distintas fuentes de audio —micrófonos, computadora y líneas telefónicas— ingresan a la consola a través de los canales de entrada.\
+El MiniMixer mezcla todas las señales para generar la señal principal llamada **Programa (PGM)**.
+
+Cada fuente de audio se controla mediante sus respectivos faders.
+
+Las funciones de la consola se agrupan en distintas zonas:
+
+<img
+  src="/images/minimixer/minimixer-secciones.png"
+  alt="Minimixer Secciones"
+  title="Minimixer Secciones"
+  className="mx-auto"
+  style={{ width:"80%" }}
+/>
+
+1. **Telecomunicaciones**: controles para gestionar la línea fija y el teléfono móvil por Bluetooth.
+2. **Intercom**: permite hablar con líneas telefónicas y auriculares mediante el micrófono interno.
+3. **Teclado DTMF**: posibilita discado directo en la línea fija desde la consola.
+4. **Faders**: controlan los niveles de micrófonos y señales de línea.
+5. **Medidores de nivel**: muestran el nivel de PGM y la acción del compresor de micrófonos.
+6. **Conexiones**: indican la ubicación de los conectores en el panel trasero.
+
+## Líneas telefónicas
+
+El MiniMixer incluye un canal híbrido para manejar tanto la línea telefónica fija como un teléfono móvil por Bluetooth.\
+Su operación es sencilla y a prueba de errores, gracias a la lógica de seguridad y los circuitos automáticos.
+
+### Controles del canal híbrido
+
+<img
+  src="/images/minimixer/minimixer-lineas_telco.png"
+  alt="Telco"
+  title="Telco"
+  className="mx-auto"
+  style={{ width:"65%" }}
+/>
+
+ 1. **PHONE/LINE IN**\
+    Conmuta entre la entrada de línea estéreo y la línea auxiliar.
+    - Cuando el híbrido no se usa, se pueden emplear simultáneamente los 4 micrófonos y las dos líneas de entrada.
+    - Si ingresa una llamada estando en LINE-IN, el botón **HOLD** parpadeará para notificar al operador. Se debe conmutar a PHONE para atender.
+ 2. **LEVEL (línea fija / auxiliar)**\
+    Controla el nivel de la línea fija y de la entrada auxiliar, tanto en CUE como en la señal al aire.
+ 3. **TALK (línea fija)**\
+    Botón momentáneo que habilita el micrófono interno para hablar fuera de aire con la línea telefónica.
+ 4. **CUE/PGM (línea fija / auxiliar)**\
+    Selecciona si la señal se envía a la preescucha en auriculares (**CUE**) o a la salida principal al aire (**PGM**).
+ 5. **HOLD**
+    - Parpadea al recibir una llamada.
+    - Al presionarlo, se responde la llamada y queda en espera con retorno de PGM.
+    - También sirve para enviar la llamada al aire.
+ 6. **LEVEL (Bluetooth)**\
+    Ajusta el nivel de audio proveniente del teléfono móvil enlazado por Bluetooth.
+ 7. **BLT (Bluetooth ON/OFF / Pairing)**
+    - Enciende o apaga el enlace Bluetooth.
+    - Manteniéndolo presionado ingresa en modo de emparejamiento.
+    - El LED indica el estado:
+      - Parpadeo lento = activo.
+      - Parpadeo rápido = en modo descubrimiento.
+ 8. **CUE/PGM (Bluetooth)**\
+    Conmuta la señal Bluetooth entre la escucha privada en auriculares (**CUE**) o la salida principal (**PGM**).
+ 9. **TALK (Bluetooth)**\
+    Permite hablar en privado con el teléfono móvil, utilizando el micrófono interno de talkback.
+10. **LEVEL general auriculares**\
+    Control maestro del nivel de auriculares.
+11. **PGM MUTE**\
+    Silencia la señal de programa en auriculares, permitiendo escuchar solo lo que está en CUE.
+12. **TALK TO HEADPHONES**\
+    Botón que habilita el micrófono interno para hablar directamente a los auriculares (intercom).

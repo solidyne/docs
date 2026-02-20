@@ -1,0 +1,57 @@
+---
+title: "Conexión por MPX"
+description: "Salida multiplexada (MPX) y ajuste de modulación."
+keywords: ["MPX", "pre-énfasis", "modulación", "AGC", "transmisor"]
+---
+
+El **Audimax 362HD** cuenta con doble salida MPX, con ajustes de nivel independientes.\
+Esto permite conectar un segundo transmisor que opere de respaldo, o bien destinarlo a un transmisor de uso nocturno.
+
+<img
+  src="/images/362/362-trasero-mpx.png"
+  alt="362 Trasero Mpx Pn"
+  title="362 Trasero Mpx Pn"
+  className="mx-auto"
+  style={{ width:"32%" }}
+/>
+
+- Los conectores de salida son del tipo **BNC**.
+- Para la conexión MPX se debe emplear cable coaxial de **75 Ohms** (estándar CCTV).
+- La longitud del cable no debe superar los **25 metros**.
+
+<Warning>
+  Es fundamental mantener una correcta distribución de tierras.
+</Warning>
+
+<Note>
+  Cuando ingrese al transmisor por la entrada MPX, asegúrese de que la red de pre-énfasis interna del transmisor esté desactivada (respuesta plana 20 – 100 kHz).
+  El pre-énfasis en el Audimax 362HD se fija en fábrica, pudiendo elegirse entre 50 µs o 75 µs.
+</Note>
+
+## Ajuste de la modulación al 100 %
+
+La modulación se ajusta variando el nivel de salida MPX del equipo.\
+Se recomienda utilizar material de programa con **voz y música fuerte** (ejemplo: pop contemporáneo).
+
+<Steps>
+  <Step title="Preparar la señal de entrada">
+    - Asegúrese de estar usando las entradas adecuadas (BAL/UNBAL) según la consola.
+    - Ajustar el nivel de audio en consola para que alcance **0 VU en los picos**.
+    - De este modo, la etapa AGC trabaja en su punto de equilibrio.
+  </Step>
+  <Step title="Configurar el procesador y transmisor">
+    - Colocar todos los controles del procesador en **posición central**.
+    - Si el transmisor posee control de nivel de modulación, llevarlo al máximo.
+  </Step>
+  <Step title="Ajustar la salida MPX">
+    - Variar el nivel de salida MPX del 362HD hasta obtener **75 kHz de desviación (100%)**, medido con un **monitor de modulación FM** o con el instrumento indicador del transmisor.
+  </Step>
+</Steps>
+
+<Note>
+  En algunos países se permiten picos de hasta **110 % de modulación** en forma no frecuente (ejemplo: normas FCC de EE.UU.).\
+  Los indicadores de modulación de tipo aguja pueden mostrar picos mayores a 100 % debido a sobreimpulsos de la balística o a lecturas promedio de señal senoidal. Esto no significa que exista sobre-modulación real en el sistema.
+</Note>
+
+Una vez ajustado el nivel de modulación, se procede a **personalizar el sonido de la emisora** ajustando los controles del Audimax 362HD.\
+Este proceso no afecta el nivel de modulación, ya que el procesador entrega nivel de pico constante.

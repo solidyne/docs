@@ -1,0 +1,57 @@
+---
+title: "Actualización de firmware"
+description: "Procedimiento para actualizar el software de UNIDEX UX18"
+keywords: ["firmware","update","actualización","UX18"]
+tags: "soporte técnico,mantenimiento"
+---
+
+import discovery from '/snippets/discovery.mdx';
+
+## Actualización de firmware
+
+El software de la consola puede actualizarse desde la interfaz WEB utilizando una computadora con acceso a Internet.
+
+Las actualizaciones pueden incluir:
+
+- Firmware del motor de mezcla (hardware).
+- Interfaz gráfica.
+- Herramientas de streaming.
+
+## Procedimiento de actualización
+
+### 1. Conexión a red
+
+1. Conectar a la red local los puertos Ethernet **“Streaming Out”** y **“Remote Control”** de la consola.
+2. Verificar que la red tenga acceso a Internet.
+3. En la pantalla principal (vúmetros), verificar la dirección IP asignada a la etapa de streaming.
+
+<discovery />
+
+### 2. Acceso a la pantalla de actualización
+
+Desde una computadora conectada a la misma red:
+
+1. Abrir un navegador web.
+2. Ingresar la dirección IP de la consola.
+3. Se abrirá la pantalla de actualizaciones.
+4. En el menú de la izquierda, elegir UPDATE.
+5. En el sector derecho se cargará la pantalla de actualizaciones.
+
+<img
+  src="/images/ux24/ux24-update-firmware.png"
+  alt="UNIDEX Firmware Update"
+  title="UNIDEX Firmware Update"
+  style={{ width:"61%" }}
+/>
+
+4. Pulsar **CHECK FOR UPDATES**.
+3. Si hay actualizaciones disponibles, se mostrará un listado con los detalles.
+4. La opción **INSTALL** inicia el proceso de actualización.
+
+<Warning>
+  El sistema **NUNCA INSTALA ACTUALIZACIONES EN FORMA AUTOMÁTICA**. Para instalar una actualización, se requeire la intervención del operador. 
+</Warning>
+
+<Info>
+  Dependiendo del tipo de actualización, el equipo podrá reiniciarse, INTERRUMPIENDO la señal al aire por algunos segundos.
+</Info>

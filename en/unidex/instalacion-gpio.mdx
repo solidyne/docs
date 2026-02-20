@@ -1,0 +1,165 @@
+---
+title: "GPIO y Tally Light"
+description: "Control de dispositivos externos vía GPIO en UNIDEX"
+keywords: ["GPIO","Tally Light","instalación"]
+tags: "consolas IP,UNIDEX"
+---
+
+## Control por GPIO
+
+El conector **GPIO** _(General Purpose Input/Output)_ ofrece entradas y salidas que permiten controlar funciones de la consola (GPI) como la activación de mic; o controlar dispositivos externos (GPO) como luces de señalización o el procesado de audio.
+
+- **GPI**  soporta señales de disparo de**5-15V/150mA**  (activo alto).
+- **GPO 1 a 7** son de tipo \_“open drain”. \_Funcionan como interruptores, conectando la salida a tierra. Soportan señales de **5–24 V / 250 mA**.
+- **PIN 8** entrega **tensión de CC** (difiere según el modelo de consola, ver a conticuación). Se puede usar para disparar dir<u>e</u>ctamente los GPI (con un interruptor). O para alimentar un dispositivo externo accionado a través de un GPO (por ejemplo una luz o un pequeño relé)
+
+## Pin-out y configuración
+
+<AccordionGroup>
+  <Accordion title="GPIO UX24">
+    ### DB15 PIN-OUT (UX24)
+
+    <img
+      src="/images/UX24-GPIO.png"
+      alt="UX24 GPIO"
+      title="UX24 GPIO"
+      className="mx-auto"
+      style={{ width:"49%" }}
+    />
+
+    <Note>
+      **GPO 8** entrega **\+12V / 250 mA** cuando está activa. 0V cuando está inactiva.
+    </Note>
+    ### CONFIGURACIÓN DE LAS ACCIONES
+
+    <img
+      src="/images/ux24/unidex-config-GPIO.png"
+      alt="Unidex Config GPIO"
+      title="Unidex Config GPIO"
+      className="mx-auto"
+      style={{ width:"64%" }}
+    />
+
+    Las acciones que disparan las GPIO se definen en la pantalla `SETTINGS→GPIO`. Cada **GP-IN** y **GP-OUT** se puede asociar a un canal y a una acción determinada.
+
+    Las acciones disponibles para las **GPI** son:
+
+    `UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A;  MASTER MIC B`
+
+    Las acciones disponibles para las **GPO** son:
+
+    `UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING;  OUTPUT +12V` (solo GPO8)
+  </Accordion>
+  <Accordion title="GPIO UX18">
+    ### DB15 PIN-OUT (UX18)
+
+    <img
+      src="/images/ux18_gpio.png"
+      alt="Ux18 Gpio"
+      title="Ux18 Gpio"
+      className="mx-auto"
+      style={{ width:"49%" }}
+    />
+
+    <Note>
+      **PIN 8** ENTREGA UNA ENSIÓN FIJA DE **\+15 VCC / 100 mA** (max).
+    </Note>
+    ### CONFIGURACIÓN DE LAS ACCIONES
+
+    Las acciones que disparan las GPIO se definen en la pantalla `SETTINGS→GPIO`. Cada **GP-IN** y **GP-OUT** se puede asociar a un canal y a una acción determinada.
+
+    Las acciones disponibles para las **GPI** son:
+
+    `UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A`
+
+    Las acciones disponibles para las **GPO** son:
+
+    `UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING`
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  **EJEMPLOS**
+
+  \
+  La siguiente configuración para GPI:  **GPI 1  |  CHANNEL ON/OFF  |  CHANNEL 1**
+
+  ...hará que el Canal 1 se encienda o apague según la señal de control presente en la entrada **GPI 1**.
+
+  La siguiente configuración para GPO: GPO 1  |   CHANNEL ON/OFF  |  CHANNEL 6
+
+  ...hará que cambie de estado la salida **GPO 1** según se enciendo o apague el Canal 6.
+</Tip>
+
+## Casos de aplicación para las GPIO
+
+### Brazo soporte con LED (GPO)
+
+Las salidas **GPO 1 a 7** pueden funcionar como **llaves electrónicas**, conmutando LEDs conectados a una fuente de alimentación externa, siempre que el consumo no supere los **250 mA**.
+
+<Danger>
+  Si el consumo excede los **250 mA**, debe utilizarse un **relay externo** para la conmutación. Se recomienda usar **GPO 8** para comandar directamente un relay de bobina 12 V con consumo de hasta 250 mA.
+</Danger>
+
+La figura muestra un ejemplo de conexión directa de un **brazo de micrófono con LED**, utilizando **GPO-1**.
+
+<img
+  src="/images/ux24/unidex_GPIO_brazo.jpg"
+  alt="UNIDEX GPIO brazo"
+  title="UNIDEX GPIO brazo"
+  style={{ width:"51%" }}
+  className="mx-auto"
+/>
+
+En la **configuración de GPIO**, las salidas GPO deben asignarse a la función de encendido/apagado del canal MIC correspondiente.
+
+Ejemplo típico:
+
+- **GPO 1 →** ON/OFF Canal MIC 1
+- **GPO 2 →** ON/OFF Canal MIC 2
+- etc.
+
+### Silenciar micrófono (uso de GPI)
+
+Las entradas **GPI** permiten ejecutar acciones automatizadas en la consola.
+
+Una de las más útiles es el silenciado temporal del canal (MUTE), ideal para implementar un **botón de tos** en el estudio. Esto permite al locutor silenciar su micrófono sin intervención del operador.
+
+El siguiente ejemplo muestra la conexión de un **pulsador momentáneo** para activar **GPI 1**.
+
+<img
+  src="/images/ux24/gpio-mute.png"
+  alt="UNIDEX GPIO Mute"
+  title="UNIDEX GPIO Mute"
+  style={{ width:"52%" }}
+  className="mx-auto"
+/>
+
+En este caso:
+
+- **GPI 1** se configura con la acción **MUTE** y se asocia al canal deseado.
+- **GPO 8** entrega una tensión fija.
+
+<Warning>
+  En UX24, configurar GPO-8 para tensión fija. En UX18 el pin-8 siempre entrega tensión fija
+</Warning>
+
+Durante el silencio activado por GPI, si el operador **mueve el fader manualmente**, la consola le devuelve el control, y el micrófono vuelve al aire automáticamente.
+
+## Lluces de señalización "EN EL AIRE" (Tally Light)
+
+En el panel trasero de la consola se encuentra  **la salida de 12 V / 250 mA** para conexión de luces de señalización **“EN EL AIRE”**. El modelo UX24 tiene dos salidas: Tally Light A y B.
+
+- Se pueden conectar hasta **dos luces de aire Solidyne LA100** por salida.
+- Para luces de otras marcas, asegúrese de que el consumo total **no supere los 250 mA**.
+
+<Warning>
+  Las salidas de luz de aire están protegidas por un componente **PTC (fusistor)** que actúa por temperatura.\
+  Si la corriente excede los **250 mA**, la salida se desconecta automáticamente para proteger la consola.
+
+  Para restablecer la salida:
+
+  1. Desconectar la carga (la luz).
+  2. Revisar el sistema para identificar la causa del sobreconsumo (ej. exceso de LEDs o cortocircuito).
+  3. Esperar a que el PTC se enfríe antes de reconectar.
+</Warning>

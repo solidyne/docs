@@ -1,0 +1,88 @@
+---
+description: "Entorno de trabajo. Acceso a los módulos."
+title: "Barra de herramientas"
+keywords: ["Escritorio"]
+tags: ["Software", "Audicom"]
+---
+
+La barra de herramientas se ubica horizontalmente en la zona superior de la pantalla.\
+Incluye:
+
+- Información de estado.
+- Contadores de hora e información meteorológica.
+- Botones para disparar los módulos principales.
+- Un menú desplegable para acceder a otros módulos del sistema.
+
+![Au Op Topbar Jp](/images/audicom/au-op-topbar.jpg)
+
+<Note>
+  Las herramientas de Aire solo están disponibles si el usuario tiene permisos de **Operador del Control de Aire**. De lo contrario, la barra se abre pero los íconos de transmisión estarán deshabilitados, dejando solo disponible el menú “+”.
+</Note>
+
+---
+
+## Personalización del escritorio
+
+La visibilidad, posición y tamaño de los módulos en el escritorio pueden configurarse de manera individual para cada usuario.
+
+### Nombre del medio o emisora
+
+- Doble clic sobre una zona libre de la barra abre una ventana para ingresar el nombre del medio o emisora.
+- El nombre aparece en la parte superior derecha de la pantalla.
+- Este dato es válido solo para esa terminal y se guarda localmente.
+- El texto entre paréntesis corresponde al nombre de Windows de la computadora en la red.
+
+### Botón “+” herramientas
+
+- Muestra las distintas herramientas de AUDICOM organizadas por área de aplicación.
+- El contenido del menú se puede editar para mostrar solo las herramientas relevantes al usuario.
+- Si el usuario no tiene permisos para los módulos de aire (CyberPlay, Live Assist, Playlist Manager, I-Rec), la barra oculta esos accesos y solo habilita el menú **\+ Herramientas**.
+
+---
+
+## Hora y datos del tiempo
+
+Este módulo permite informar automáticamente a los oyentes la hora exacta y datos meteorológicos:
+
+- Temperatura
+- Humedad
+- Presión atmosférica
+- Lluvia caída
+
+Los datos se actualizan en tiempo real vía Internet.\
+AUDICOM genera locuciones usando archivos pregrabados con voces masculina y femenina.
+
+### Display
+
+Muestra la fecha, hora y datos actuales.
+
+### Actualizar datos del tiempo
+
+- La actualización automática requiere conexión a Internet y el servicio **AUDICOM WebTools** activo.
+- WebTools es una suscripción opcional que habilita funciones adicionales y soporte remoto (ver configuración en _Audicom WebTools_).
+- Sin WebTools, los datos se pueden cargar manualmente con doble clic en la zona izquierda de la barra (Hora/Meteor).
+
+### Hora actual
+
+- Clic sobre la zona Hora/Meteor abre la ventana **METEOR**, donde se configuran los anuncios de hora y tiempo.
+- La hora mostrada corresponde a la de Windows.
+
+<Warning>
+  Si modifica la hora en Windows, asegúrese de que AUDICOM esté detenido.\
+  Cambiar la hora durante reproducción puede provocar errores en los cálculos de tiempo.
+</Warning>
+
+- **Beep hora exacta**: si se activa, se emite un beep en cada hora en punto.
+  - El canal de reproducción se define en el Panel de Configuración.
+
+### Voces
+
+Permite definir la combinación de voces que se usarán para los anuncios de hora y tiempo.
+
+### Reproducción manual de anuncios
+
+- Normalmente los anuncios están pautados en la programación.
+- También pueden lanzarse manualmente desde la ventana **METEOR**.
+- Si se lanzan varios consecutivos, se reproducen en orden.
+- El audio se envía al canal asignado al módulo **CyberPlay**.
+- Si AUDICOM está reproduciendo otro contenido, el anuncio se mezcla con el audio al aire, según el nivel definido por el botón **MIX** del CyberPlay.

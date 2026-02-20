@@ -1,0 +1,95 @@
+---
+title: "Actualización del firmware"
+description: "Procedimientos para actualizar el firmware según modelos"
+keywords: ["actualización", "firmware", "Discovery & Update"]
+tags: ["procesadores", "542"]
+---
+
+## Qué se modifica
+
+Las sucesivas actualizaciones de un mismo modelo de software pueden:
+
+- Optimizar procesos.
+- Agregar nuevas funciones.
+- Mejorar o modificar la interfaz gráfica.
+- Incorporar nuevos presets de procesado.
+
+La **versión y modelo** se muestran:
+
+- En la pantalla de inicio del **panel frontal**.
+- En la línea superior de la pantalla **Control WEB**.
+
+El equipo puede actualizarse estando en servicio.\
+Puede producir una **breve interrupción de audio** al aire (menor a 2 segundos).
+
+---
+
+## Versiones anteriores a 2.0
+
+Para equipos con versión de firmware **1.35 o anterior**, consultar el manual correspondiente en:\
+👉 [Solidyne – Manuales de Usuario (equipos discontinuados)](https://www.solidyne.ar)
+
+---
+
+## Unidades con módulo STREAMER AoIP
+
+La expansión **Streamer AoIP** permite acceder directamente al equipo a través de un enlace y agrega un método de **actualización simplificado**.
+
+<Info>
+  Ver detalles Equipos con opción STREAMER AoIP
+</Info>
+
+---
+
+## 542 APC modelo estándar
+
+Los equipos con firmware 2.0 o posterior, que no posean la expansión STREAMER AoIP, se actualizan con el siguiente procedimiento:
+
+ 1. Asegúrese de que la computadora que accede al procesador tenga **conexión a Internet** y esté en la **misma LAN** que el 542APC.
+ 2. Acceda a la página de **Control WEB** ingresando la **IP de control** en un navegador.\
+    (Ver [**Acceso y control vía red**](/es/542/542-acceso-web)).
+ 3. Ingrese al modo **SETUP** (arriba a la derecha) y en el menú lateral elija la opción **INFO**.
+ 4. El equipo verificará automáticamente si hay una actualización disponible y**generará un enlace ** directo de descarga.
+
+    <img
+      src="/images/542/542-firm20-INFO-update.png"
+      alt="542 Firm20 INFO Update Pn"
+      title="542 Firm20 INFO Update Pn"
+      className="mr-auto"
+      style={{ width:"47%" }}
+    />
+ 5. Descargue la actualización de firmware desde el enlace.
+ 6. Descargue e instale la aplicación de Windows **Solidyne Discovery & Update** (enlace en la sección SOFTWARE de pantalla INFO).
+    - El instalador creará una carpeta _Solidyne Audio Processor_ en el menú Inicio de Windows.
+ 7. Ejecute la aplicación **Discovery & Update**.
+
+    <img
+      src="/images/542/542-discovery.png"
+      alt="542 Discovery Pn"
+      title="542 Discovery Pn"
+      style={{ width:"71%" }}
+    />
+ 8. Pulse **Discover...** → se listarán los equipos Solidyne en la red.
+ 9. Seleccione el equipo **542APC** y pulse **Actualizar firmware**.
+10. En la ventana emergente, seleccione el archivo de actualización descargado en el _Paso 5 _y pulse **Aceptar**.
+11. La aplicación sobre-escribirá el firmware del 542APC.
+12. El equipo permanecerá operativo; habrá una **breve interrupción de audio (menor a 2 seg.)** al reiniciarse.
+
+<Danger>
+  **No apague ni desconecte el equipo durante la actualización.**\
+  Podría producir daños irreparables por el usuario.
+</Danger>
+
+<Warning>
+  Evite realizar actualizaciones desde computadoras conectadas vía Wi-Fi.
+</Warning>
+
+
+### Actualizaciones remotas
+
+<Warning>
+  No realice actualizaciones si accede al equipo directamente vía **Internet (port forwarding)**.\
+  Use siempre un **software de escritorio remoto** para conectarse a una PC en la LAN del procesador y desde allí acceder al **Control WEB local**.
+</Warning>
+
+---

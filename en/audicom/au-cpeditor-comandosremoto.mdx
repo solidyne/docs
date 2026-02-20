@@ -1,0 +1,82 @@
+---
+title: "Comandos para enlaces remotos"
+description: "Instrucciones para getionar streaming y enlaces."
+keywords: ["CyberPlay Editor","enlaces","repetidoras"]
+tags: "Software,Audicom"
+---
+
+## Enlace por Internet - ILink
+
+El comando `/ILink` permite a AUDICOM conectar con flujos de audio a través de Internet.\
+Se utiliza en **repetidoras** que retransmiten el streaming de audio y metadata de la estación maestra.
+
+#### Ejemplo de uso con repetidoras AUDICOM
+
+`/Block /00:00-24:00 /ILink="AutoDj Jazz" ilink://190.247.72.170:8080`
+
+En este caso, la repetidora recibe el **streaming** de la cabecera.\
+Durante las tandas comerciales, reemplaza las de la cabecera por **tandas locales**.
+
+---
+
+#### Streaming de protocolos públicos
+
+`/Block /00:00-24:00 /ILink="AutoDj Jazz" mms://190.247.72.170:8080`
+
+- **Protocolo MMS**: estándar de Windows, no requiere decodificadores adicionales.
+- Otros protocolos soportados:
+  - **HTTP Streams**: `icyx://[stream path]` (puerto 80 por defecto).
+  - **RTSP Streams**: `rtpx://[stream path]` (puerto 554 por defecto).
+  - **HTTP/RTSP Streams**: `htpx://[stream path]` (puerto 80 por defecto).
+  - **RTMP Flash Streams**: `rtmx://[stream path]` (puerto 1935 por defecto).
+
+Se debe indicar un **formato AutoDj** como respaldo:\
+Si la conexión al servidor se pierde, se activa ese formato.\
+Cuando el enlace se restablece, el AutoDj se interrumpe y se retoma el streaming.
+
+---
+
+## Bloque para Satélite de Relleno (SatFill)
+
+`/Block /HH:MM-HH:MM /Satfill /X [Título del bloque]`
+
+En este bloque, AUDICOM reproduce la señal del **satélite** (o enlace VHF).\
+A horarios específicos interrumpe la señal externa para dar paso a **programación local** (tandas, música, noticias, etc.).\
+Finalizada la tanda, el sistema retorna a **SYNCRO**, retomando la señal satelital hasta el próximo corte.
+
+#### Métodos de conmutación
+
+- **a) Control remoto de la consola**: vía puerto USB.
+- **b) Entrada de línea de placa de audio**: el sistema conmuta la señal satelital hacia la entrada de línea.
+
+El modificador `/X` define qué salida del puerto paralelo usar:\
+`1, 2, 3 o 4` → corresponden a Data 0, 1, 2 y 3 respectivamente.\
+Esto permite controlar hasta cuatro módulos de consola.
+
+---
+
+## Bloque para Satélite Maestro - Esclavo (SatSlave)
+
+`/Block /HH:MM-HH:MM /Satslave [Título del bloque]`
+
+El modo **SatSlave** automatiza la conmutación entre **señal local** y **señal satelital** usando **pulsos de control** enviados por audicom vía USB.
+
+- En estado **SYNC**, se habilita el módulo del programa satelital.
+- Cuando llega un **pulso de disparo** desde la cabecera de bajada, AUDICOM conmuta a **programación local** y ejecuta la tanda correspondiente.
+- Al finalizar, retorna al enlace.
+
+Este ciclo se repite tanda tras tanda, sincronizando la señal local con la remota.
+
+#### Consideraciones
+
+- Si el número de pulsos recibidos es **menor** al de tandas programadas, habrá atraso: las tandas restantes se dispararán al inicio del día siguiente.
+- Si los pulsos son **mayores**, las tandas se repetirán desde el comienzo hasta completar las 24 h.
+- El último bloque SatSlave no requiere pulso: si no llega, el sistema conmuta por horario para mantener la grilla.
+
+#### Ejemplo
+
+`/Block /10:00-12:30 /Satslave`
+
+Entre las 10:00 y 12:30 se transmite la señal satelital.\
+Las tandas locales, generadas por AUDICOM, reemplazan a las del satélite.\
+Al finalizar el bloque, se desactiva el control satelital y se pasa al siguiente segmento de programación.

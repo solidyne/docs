@@ -1,0 +1,58 @@
+---
+title: "Diagramas de conexiones"
+description: "Descripción del Panel Trasero y diagramas de conexión"
+keywords: ["diagramas"]
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+
+---
+
+import tierras from '/snippets/snippet-tierras.mdx';
+
+## Fuente de alimentación
+
+La DX816/822 trabaja con alimentación externa. Se incluye una fuente **conmutada 90-240 V**, que opera con cualquier red eléctrica, incluso en zonas con grandes variaciones de tensión. Entrega **28 VCC regulados**.
+
+<Warning>
+  Se recomienda usar siempre la **fuente original suministrada por Solidyne**.
+</Warning>
+
+En el panel trasero se ubica la entrada de alimentación **DC IN**, con conector tubular pin positivo de 1,8 mm.
+
+<img
+  src="/images/816/816-trasero-fuente.png"
+  alt="816 Trasero Fuente Pn"
+  title="816 Trasero Fuente Pn"
+  className="mx-auto"
+  style={{ width:"52%" }}
+/>
+
+La conexión a tierra se realiza mediante un **borne de bronce** que asegura la puesta a tierra de chasis.  Utilice cable de sección **2 mm** conectado a una **jabalina de cobre enterrada**.
+
+<tierras />
+
+---
+
+## Diagrama general de conexiones
+
+![816 Diagrama Pn](/images/816/816-diagrama.png)
+
+---
+
+## Conectores RJ45
+
+Con el advenimiento del **audio sobre IP (AoIP)**, diversos fabricantes adoptamos el uso de **conectores RJ45** y cable multipar blindado para reemplazar conectores de audio tradicionales.
+
+- Un único conector RJ45 contiene **dos líneas balanceadas**, reduciendo el tamaño del panel trasero y la cantidad de conectores.
+- El uso de **cable estructurado** facilita la instalación entre equipos distantes en cualquier parte del mundo, gracias a la amplia disponibilidad de componentes y herramientas de armado utilizadas en redes de datos.
+- Se eliminan soldaduras, simplificando y acelerando el cableado.
+
+En el extremo del cable multipar, la conexión a los dispositivos de audio (micrófonos, parlantes, interfaces) sigue realizándose con **conectores de audio estándar**.\
+Para ello, los tramos RJ45 terminan en conectores balanceados adecuados al equipo de destino.
+
+Las entradas balanceadas de la consola **Solidyne DX816/822** utilizan **conectores RJ45** y se cablean con multipar **CAT-5 blindado (STP)**.
+
+El kit de conexiones **Solidyne MNGX816** incluye todos los cables necesarios para entradas y salidas balanceadas con RJ45, garantizando confiabilidad y evitando errores de conexión.
+
+<Note>
+  Las conexiones de audio RJ45 de Solidyne son **compatibles con el estándar StudioHub** ([www.studiohub.com](http://www.studiohub.com)).
+</Note>

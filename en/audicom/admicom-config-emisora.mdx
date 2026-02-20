@@ -1,0 +1,83 @@
+---
+title: "Admicom: configurar emisora"
+description: "Configuración de la emisora y distribución de los bloques comerciles"
+keywords: ["comerciales", "tanda", "publicidad", "programación"]
+tags: ["Software", "Admicom", "audicom"]
+---
+
+---
+
+Admicom permite gestionar la pauta comercial de una o varias emisoras en la versión **AUDICOM Multicast**.\
+Cada emisora cuenta con una configuración general que define los **minutos máximos de publicidad por hora** y la **grilla de distribución de bloques comerciales**.
+
+Al abrir la aplicación, se muestra el escritorio de Admicom vacío. Desde los menús se accede a las diferentes opciones de configuración.
+
+## Estación
+
+En esta sección se ingresan y modifican los datos de cada emisora. De forma predeterminada, aparece una única estación llamada **DEMO**.
+
+<AccordionGroup>
+  <Accordion title="Datos principales">
+    - **Código**: Identificación o abreviación de hasta 10 caracteres (ejemplo: `AM1030`).
+    - **Nombre**: Nombre de la emisora (ejemplo: _Radio América_).
+    - **Tiempo máximo de tanda**: Límite de minutos de publicidad por hora. Nunca se supera este valor; los avisos excedentes son rechazados según prioridad.
+    - **Path de salida**: Carpeta donde se generan los archivos `.log` de la pauta comercial.
+    - **Path de audio**: Carpeta donde se almacenan los audios de anuncios.
+    - **Imagen**: Logotipo o símbolo que se muestra en los reportes.
+  </Accordion>
+  <Accordion title="Controles">
+    - **Buscar**: Localiza una emisora existente.
+    - **Modificar**: Cambia los datos de la emisora actual.
+    - **Nuevo**: Crea una nueva emisora.
+    - **Eliminar**: Borra la emisora seleccionada.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Para eliminar una emisora es necesario borrar primero todos los avisos y tandas asociados.\
+  Un método rápido es vaciar un día y luego usar **Copiar día** para replicar la configuración vacía al resto de la semana.
+</Note>
+
+## Tanda comercial
+
+Permite definir la **distribución de tandas comerciales** para cada emisora y cada día de la semana.
+
+- **Estación**: Selecciona la emisora.
+- **Día de la semana**: Define el día a modificar.
+- **Copiar Est.**: Copia la grilla desde otra emisora.
+- **Copiar día**: Duplica la distribución de un día hacia otros de la semana.
+
+### Definición de tandas
+
+- Crear una tanda: **Nuevo**.
+- Editar tanda existente: **Editar** o **Modificar**.
+- **Ref. hora**: Puede definirse como inicio o fin del bloque comercial.
+- **Tolerancia**: Minutos en los que el bloque puede adelantarse o retrasarse en relación al horario pautado.
+- **Permitir mezclar rubros**: Autoriza que avisos de un mismo rubro compartan tanda; de lo contrario, son reubicados.
+
+## Programas
+
+Aquí se definen los horarios de los programas de la emisora seleccionada.
+
+- **Programa**: Código y nombre (debe estar creado previamente en _Configuración -\> Programa_).
+- **Hora Comienzo / Hora Fin**: Rango horario del programa.
+- Los avisos pautados se insertan automáticamente en este bloque.
+
+## Locutores
+
+Permite registrar los nombres de locutores en la base de datos, lo que agiliza la carga en las fichas de avisos comerciales.
+
+- **Código**: Abreviación de hasta 10 caracteres.
+- **Nombre**: Nombre completo del locutor.
+
+## Programas (definición general)
+
+Aquí se registran los programas o segmentos en la base de datos de Admicom, independientemente del horario o la emisora.
+
+- **Código**: Identificación abreviada (máx. 10 caracteres).
+- **Nombre**: Nombre completo del programa.
+
+<Note>
+  Los horarios de inicio y fin se configuran desde **Configuración -\> Tanda comercial**.\
+  Si un programa cambia de día u horario, los avisos asociados se reprograman automáticamente.
+</Note>

@@ -1,0 +1,178 @@
+---
+title: "Control Automático de Ganancia"
+description: "Procesado de audio: AGC de Banda Ancha y AGC Multibanda"
+keywords: ["AGC", "WB-AGC", "MB-AGC", "multibanda", "ecualizador", "ecualización"]
+tags: ["procesadores", "542"]
+
+---
+
+## Control Automático de Ganancia de Banda Ancha (WB-AGC)
+
+El **AGC de banda ancha (WB-AGC)** actúa sobre la señal de audio completa.\
+Su función es compensar las diferencias de nivel en la entrada del procesador para que la señal llegue a las siguientes etapas con un nivel constante y estable.
+
+Los tiempos de acción del AGC son un ajuste clave y deben elegirse en función del material de audio. Un ajuste pensado para voz requerirá valores muy diferentes a uno diseñado para música.
+
+![542 Procesado WB AGC Jp](/images/542/542-procesado-WB_AGC.jpg)
+
+---
+
+### Nivel de referencia (Target Level)
+
+El nivel de referencia es el valor hacia el cual el AGC ajusta la señal.\
+Cuando la entrada es menor a ese valor, la amplifica, y cuando es mayor, la atenúa.\
+La salida del AGC tiende siempre al nivel de referencia, y esa variación puede visualizarse dinámicamente en el gráfico de tiempo **AGC OUT**.
+
+El rango de compensación de ganancia (**Gain Range**) determina la magnitud de la atenuación o amplificación posibles. Por ejemplo, si el rango es de 20 dB, el AGC podrá compensar variaciones de hasta 40 dB en la señal de entrada.
+
+<Note>
+  Si el umbral de retención cae dentro del rango de compensación, la señal se congela y no se compensa.
+</Note>
+
+<Info>
+  **Ejemplo:**
+
+  **C**on retención en –40 dB, referencia en –22 dB y un rango de 20 dB, el AGC podría compensar una señal de –44 dB. Sin embargo, si la señal cae exactamente a –44 dB, el AGC se congela y la compensación solo se reanuda cuando la señal supera el umbral de retención
+</Info>
+
+---
+
+### Retención (Hold)
+
+El WB-AGC es de tipo retenido. Esto significa que si la señal de entrada cae bruscamente, el AGC no modifica de inmediato su ganancia, sino que congela su valor actual.\
+Permanece en ese estado hasta que la señal supera el umbral de retención definido como “HOLD”.
+
+El valor no queda congelado de manera indefinida. Mientras la señal permanezca por debajo del umbral, el AGC se deslizará lentamente hacia el nivel de referencia, con una pendiente establecida por el parámetro **Return to Reference**, fijado en fábrica.
+
+Este mecanismo es fundamental. Sin él, en un silencio prolongado el AGC intentaría compensar indefinidamente y terminaría elevando el ruido de fondo al máximo.\
+Con el HOLD se evita este efecto y se conserva además el rango dinámico característico de ciertos géneros musicales.\
+Por ejemplo, si después de un pasaje fuerte entra un instrumento suave, el AGC mantendrá congelado el nivel previo, permitiendo que se escuche ese contraste en lugar de aplastarlo.
+
+---
+
+### Tiempo de ataque (Attack Time)
+
+El tiempo de ataque es el período que tarda el AGC en reducir su ganancia cuando la señal aumenta.\
+Como regla general, debe ser lo suficientemente lento para no reaccionar a incrementos transitorios de corta duración, como una carcajada o un golpe musical.
+
+Para voz suelen usarse tiempos del orden de 15 segundos, mientras que para música se recomiendan valores mayores, de 20 segundos o incluso más lentos.
+
+Es importante tener en cuenta que este tiempo solo se aplica mientras la señal se mantenga dentro de la ventana de trabajo definida.\
+Cuando la señal cae fuera de esa ventana, el AGC cambia a un modo de respuesta rápida (**Outside Window**).
+
+Durante el período de ataque, si la señal se eleva bruscamente, los compresores multibanda serán los encargados de contenerla hasta que el AGC ajuste su nivel.\
+Un tiempo de ataque demasiado lento puede ocasionar que los compresores trabajen de forma excesiva, en especial con voces, generando una compresión audible no deseada.
+
+---
+
+### Tiempo de recuperación (Release Time)
+
+El tiempo de recuperación es el que tarda el AGC en aumentar su ganancia cuando el nivel de entrada disminuye. El objetivo es que la señal llegue a las etapas siguientes con un nivel estable, independiente de los cambios en la salida de la consola.
+
+Al igual que el ataque, este tiempo solo se aplica dentro de la ventana de trabajo, mientras que fuera de ella el AGC usa los tiempos rápidos definidos en el modo Outside Window.
+
+<Note>
+  Los tiempos del WB-AGC interactúan con los del **AGC multibanda (MB-AGC)**.\
+  Cuando ambos están activos, la variación de ganancia total será más rápida que la indicada solo por los controles del WB-AGC.
+</Note>
+
+---
+
+### Outside Window (Fast Times)
+
+El WB-AGC define una ventana de niveles dentro de la cual trabaja con los tiempos normales de ataque y recuperación.\
+Si la señal cae fuera de esa ventana, el AGC pasa a usar los tiempos rápidos (ATK/REL) definidos en la configuración de **Outside Window**.
+
+La ventana de nivel está determinada por el valor **Fast Window**\_, \_que se expresa en dB referidos al Nivel Target. Es decir, la ventana de niveles será:
+
+De [Target Level] – [Fast Window] a [Target Level \+ Fast Window]
+
+<Info>
+  **Ejemplo:**\
+  Si **Fast Window = 12 dB** y **Target Level = –22 dBfs**, la ventana del WB-AGC será de –34 dBfs a –10 dBfs.\
+  Si el nivel de entrada cae a –40 dBfs y ATK/REL está configurado en **1 seg/6 dB**, el AGC tardará 1 segundo  en recuperar el nivel hasta –34 dBfs. Es decir, va de -40 a -34 a una velocidad de 6 dB/seg. \
+  A partir de allí volverá a usar los tiempos principales hasta llegar al nivel de referencia.
+</Info>
+
+---
+
+### Consejos de ajuste
+
+- Los tiempos de ataque y recuperación deben calibrarse de modo que la acción del AGC no sea perceptible.
+- Si el ataque es demasiado largo, la reducción de nivel puede hacerse evidente.
+- Si el ataque es muy corto y el release demasiado largo, el AGC reaccionará bruscamente ante gritos o carcajadas y tardará en recuperar el nivel, con un efecto similar a que “alguien bajó el volumen de la radio”.
+- En música conviene que el tiempo de recuperación sea largo; si es demasiado corto, el AGC se hará evidente y se perderá el contraste dinámico.
+
+En la práctica, cuando se trabaja con un único preset para **música y voz** es necesario adoptar valores de compromiso. Sin embargo, lo más recomendable es disponer de dos ajustes diferenciados y conmutarlos automáticamente mediante la **entrada GPI** cuando se habilitan los micrófonos.
+
+---
+
+## AGC multibanda
+
+Mientras que el **Control Automático de Ganancia de Banda Ancha (WB-AGC)** actúa sobre el nivel global de la señal de programa, el **AGC multibanda (MB-AGC)** controla de manera independiente varias bandas de frecuencia.\
+Esto permite un ajuste más preciso y aporta beneficios adicionales:
+
+- Optimiza el **nivel en cada banda** de frecuencias. El MB-AGC puede reaccionar más rápido que el WB-AGC para contener o reforzar la señal, lo que incrementa la sonoridad.
+- Imprime al sonido un **perfil de ecualización** consistente, estable y uniforme, sin importar las características de la señal de programa.
+- Evita la acción excesiva de los limitadores cuando una o más bandas presentan niveles elevados de señal.
+
+La señal de audio se divide en cinco bandas con cortes fijos:
+
+- **LOW**: 20 Hz – 125 Hz
+- **MID-1**: 125 Hz – 800 Hz
+- **MID-2**: 800 Hz – 2.500 Hz
+- **Presence**: 2.500 Hz – 8.000 Hz
+- **HIGH**: 8.000 Hz – 15.000 Hz
+
+El MB-AGC, también conocido como _leveler_, ajusta la ganancia de cada banda de forma independiente. Si una banda presenta demasiada energía, la atenúa para evitar que su compresor trabaje en exceso. Si la señal es débil, la refuerza hasta alcanzar el nivel de referencia.\
+Los indicadores del MB-AGC muestran la compensación de ganancia en cada banda, además de su evolución en una línea de tiempo.
+
+![542 Procesado MB AGC Full Pn](/images/542/542-procesado-MB_AGC-full.png)
+
+---
+
+### Dynamic EQ (niveles de referencia)
+
+Al igual que en el WB-AGC, cada banda del MB-AGC se ajusta según un nivel de referencia o _target_.\
+Cuando el nivel de una banda es mayor al de referencia, el AGC reduce su ganancia. Si es menor, la incrementa.
+
+La compensación máxima de ganancia está limitada por el control **ACTION RANGE**, que define el margen en dB. Por ejemplo, un valor de ±3 dB limita la variación de ganancia a 6 dB en total.
+
+- Los valores de referencia en **0 dB** mantienen el balance espectral promedio.
+- Un nivel de referencia superior a 0 enfatiza la banda, manteniéndola con más energía.
+- Un nivel inferior a 0 atenúa la banda.
+
+De este modo, los niveles de referencia permiten definir un **perfil de ecualización dinámico**, basado en las frecuencias de cruce de los filtros (125 Hz, 800 Hz, 2.5 kHz y 8 kHz).
+
+<Note>
+  A diferencia de un ecualizador convencional, el MB-AGC actúa de forma adaptativa:\
+  si una banda supera su nivel de referencia, la reduce; si está por debajo, la aumenta.\
+  Esto equilibra distintos materiales de programa: si un audio contiene demasiados graves, la banda LOW es atenuada; si los graves son débiles, son reforzados. Así se logra una presencia de bajos consistente en cualquier programa.
+</Note>
+
+---
+
+### Enlace entre bandas (Band Link)
+
+Para evitar que el MB-AGC genere desequilibrios espectrales por correcciones excesivas, todas las bandas están vinculadas a la acción de la banda **MID-1**.
+
+Cada banda tiene un valor de desviación máxima en dB respecto de MID-1, que no puede superarse.\
+Cuando MID-1 modifica su nivel, puede “arrastrar” a otras bandas aunque estén dentro de sus referencias.
+
+**Ejemplo:** si la corrección permitida en LOW es 3 dB y en las demás 2 dB, un cambio de 4 dB en MID-1 arrastrará 1 dB a LOW y 2 dB a las demás bandas.
+
+El usuario define la corrección máxima permitida para cada banda en la sección **Band Link**.
+
+En música con predominio vocal o en presets para voces, conviene mantener márgenes estrechos: alrededor de 2 dB, excepto en la banda de graves donde se toleran diferencias de 3 a 4 dB. Estos valores equilibran mejor las voces y materiales con variaciones en el nivel de graves.
+
+---
+
+### Ataque, recuperación y retención
+
+Cada banda tiene sus propios tiempos de **ataque (Attack)**, **recuperación (Release)** y **retención (Hold)**.\
+Estos tiempos interactúan con los del AGC de banda ancha.
+
+En términos generales, el MB-AGC debe configurarse para trabajar más rápido que el WB-AGC.\
+El WB-AGC realiza correcciones globales y lentas, mientras que el MB-AGC actúa sobre variaciones más rápidas y localizadas en cada rango de frecuencias.
+
+Los controles de tiempos se aplican sobre la banda seleccionada en el panel derecho de la interfaz.

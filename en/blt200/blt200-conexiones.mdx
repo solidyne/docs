@@ -1,0 +1,164 @@
+---
+title: "Conexionado"
+description: "Conexiones en distintos escenarios de uso"
+keywords: ["alimentación", "conexión", "mix-minus"]
+tags: ["hibridos", "BLT200"]
+---
+
+## Alimentación
+
+La unidad se alimenta con una fuente conmutada externa de **12 V / 1,25 A**, provista de fábrica.
+
+## Entradas y salidas
+
+En el panel de conexiones se presentan dos jacks TRS ¼” (6,32 mm) que entregan, según la configuración:
+
+<img
+  src="/images/blt200/blt200-conectores.jpg"
+  alt="Blt200 Conectores Jp"
+  title="Blt200 Conectores Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+- **AUDIO IN**: recibe el audio que se envía a los teléfonos móviles, es decir, lo que escucha la persona del otro lado de la línea.
+- **AUDIO OUT**: entrega la señal entrante de los móviles, es decir, la voz de quien está al otro lado de la línea.
+
+BLT200 permite configurar las señales en los conectores de entrada/salida en distintos modos de operación, para su integración con consolas de radiodifusión y de sonido en general.\
+La configuración se realiza mediante seis microinterruptores (dip-switch), cuya función se indica en la serigrafía del panel.
+
+| dip-switch | Función                                                  |
+| ---------- | -------------------------------------------------------- |
+| DSW 1      | Envía canal B por anillo en la salida (TIP: A / RING: B) |
+| DSW 2      | Suma canal B en punta de la salida (TIP: A+B / RING: NC) |
+| DSW 3      | No conectado                                             |
+| DSW 4      | Habilita conferencia de B hacia A                        |
+| DSW 5      | Habilita conferencia de A hacia B                        |
+| DSW 6      | Envía punta de AUDIO OUT al anillo de AUDIO IN           |
+
+---
+
+## Modo A – Conexión a consolas Solidyne
+
+Las consolas compactas Solidyne DX816/822, D612 y las series anteriores 2300 y 2600 presentan una conexión dedicada para **Híbrido Externo**, que evita el uso de canales de línea y mezcla auxiliar.
+
+| Configuración dip-switch                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------ |
+| DSW 2 y 6: activos <br />DSW 4 y 5: activos (conferencia) <br />DSW 1 y 3: apagados                                |
+| <img   src="/images/blt200/DSW_ExtHib_conferencia.png"   alt="DSW ExtHib Conferencia"   style={{ width:"22%" }} /> |
+
+<img
+  src="/images/blt200/blt200-diagrama-HIB_EXT.png"
+  alt="Blt200 Diagrama HIB EXT Pn"
+  title="Blt200 Diagrama HIB EXT Pn"
+  className="mr-auto"
+  style={{ width:"50%" }}
+/>
+
+**Conexión**
+
+- **Salida BLT200**: no se conecta.
+- **Entrada BLT200 (AUDIO IN)**: se convierte en entrada/salida. Se conecta con un cable TRS estándar, provisto de fábrica.
+  - Punta: recibe la señal desde la consola (ajustable con preset IN GAIN).
+  - Anillo: envía a consola la mezcla A+B.
+
+En la consola, la suma de los canales A+B de BLT200 ingresa por el canal de híbrido. En conferencia, si ambas líneas están al aire, la mezcla se ajusta desde los controles del panel de BLT200.\
+También se soporta conferencia contra el híbrido interno de la consola. El operador puede hablar en privado con las líneas del mismo modo que lo haría con el híbrido interno.
+
+---
+
+## Modo B – Conexión a un canal (todas las consolas)
+
+| Configuración dip-switch                                                                              |
+| ----------------------------------------------------------------------------------------------------- |
+| DSW 2: activo <br />DSW 4 y 5: activos (conferencia) <br />DSW 1, 3 y 6: apagados                     |
+| <img   src="/images/blt200/DSW_Mixed_conferencia.png"   alt="DSW Modo B"   style={{ width:"22%" }} /> |
+
+<img
+  src="/images/blt200/blt200-diagrama-mixed.png"
+  alt="Blt200 Diagrama Mixed Pn"
+  title="Blt200 Diagrama Mixed Pn"
+  style={{ width:"50%" }}
+/>
+
+**Conexión**
+
+- **Salida BLT200**: entrega por punta las señales A y B sumadas. El anillo queda desconectado.\
+  Se conecta mediante el cable derivación “Y” incluido (TRS a TS), usando solo el plug correspondiente a la punta; o mediante un cable TRS simple.
+- **Entrada BLT200**: recibe señal por punta, conectada a una salida de consola con el cable TRS incluido.
+
+<Danger>
+  Asegúrese de que **DSW 6 = OFF**. \
+  De lo contrario la salida de BLT200 quedará conectada a la salida de la consola.
+</Danger>
+
+**En consola**\
+Se requiere un bus de mezcla auxiliar (mix-minus) para enviar a BLT200 la señal que escuchará el interlocutor.\
+Deben enviarse los micrófonos locales, pero nunca las señales de CEL-A y CEL-B que ingresan mezcladas a la consola, para evitar realimentación.\
+En conferencia, los niveles de A y B se ajustan desde el panel del BLT200.
+
+El operador puede dialogar en privado con los teléfonos activando PFL en el canal correspondiente y utilizando un micrófono asignado a la mezcla auxiliar.
+
+---
+
+## Modo C – Conexión a dos canales (todas las consolas)
+
+| Configuración dip-switch                                                                                       |
+| -------------------------------------------------------------------------------------------------------------- |
+| DSW 1: activo <br />DSW 4 y 5: activos (conferencia) <br />DSW 2, 3 y 6: apagados                              |
+| <img   src="/images/blt200/DSW_Independientes_conferencia.png"   alt="DSW Modo C"   style={{ width:"22%" }} /> |
+
+<img
+  src="/images/blt200/blt200-diagrama-independiente.png"
+  alt="Blt200 Diagrama Independiente Pn"
+  title="Blt200 Diagrama Independiente Pn"
+  style={{ width:"46%" }}
+/>
+
+**Conexión**
+
+- **Salida BLT200**: entrega señales A y B separadas (punta = A, anillo = B).\
+  Se conecta a dos entradas de la consola con el cable “Y” provisto (TRS a 2 × TS).
+- **Entrada BLT200**: recibe la señal por punta, conectada a la salida auxiliar de la consola mediante el cable TRS provisto.
+
+<Danger>
+  Asegúrese de que **DSW 6 = OFF**. \
+  De lo contrario la salida de BLT200 quedará conectada a la salida de la consola.
+</Danger>
+
+**En consola**\
+Se requiere un bus auxiliar (mix-minus). A la mezcla se envían los micrófonos locales, pero no las señales A y B de BLT200.\
+El operador puede hablar en privado con cada móvil activando PFL en el canal correspondiente.
+
+---
+
+## Modo D – Doble BLT200 (4 móviles)
+
+<img
+  src="/images/blt200/blt200-diagrama-doble.png"
+  alt="Blt200 Diagrama Doble Pn"
+  title="Blt200 Diagrama Doble Pn"
+  style={{ width:"52%" }}
+/>
+
+Esta configuración utiliza dos unidades BLT200 conectadas a dos canales de la consola, permitiendo manejar hasta cuatro móviles.
+
+Cada BLT200 se configura en **Modo B** (A+B sumados).
+
+- **Salidas BLT200**: conectadas a dos entradas de la consola mediante cables TRS.
+- **Entradas BLT200**: conectadas a una salida auxiliar de la consola mediante un cable derivación "Y" TRS a dos TS (provisto).
+
+<Danger>
+  Asegúrese de que **DSW 6 = OFF**. \
+  De lo contrario la salida de BLT200 quedará en cortocircuito y no habrá audio.
+</Danger>
+
+---
+
+## Conferencias
+
+La conferencia activa el retorno cruzado interno, permitiendo que cuando dos líneas están al aire simultáneamente, los teléfonos se escuchen entre sí.
+
+| DSW 4 y 5 ON: conferencia habilitada. <br /><br />DSW 4 y 5 OFF: sin conferencia (los móviles pueden estar al aire en simultáneo, pero no se escucharán entre sí). |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <img   src="/images/blt200/DSW_Conference.png"   alt="DSW Conference"   style={{ width:"20%" }} />                                                                 |

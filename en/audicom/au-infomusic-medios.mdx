@@ -1,0 +1,76 @@
+---
+title: "InfoMusic: archivos de medios"
+description: "Ingresar archivos de medios en AUDICOM"
+keywords: ["base de datos", "ingesta", "infomusic"]
+tags: ["Software", "Audicom"]
+---
+
+AUDICOM trabaja con una arquitectura de carpetas del sistema, localizadas dentro de una carpeta principal **AUDICOM** en cada unidad de disco.\
+La carpeta de medios es **AUDIO** (aunque en las versiones _BLACK VIDEO_ puede contener también video).\
+Dentro de **AUDIO** se crean las carpetas que serán mostradas como **CATEGORÍAS** en **AUDICOM Media Manager** e **InfoMusic**.
+
+Ejemplo de estructura:
+
+```
+C:\Audicom\Audio (carpeta de medios AUDICOM)
+HIP-HOP
+POP 80's
+POP 90's
+ROCK ING
+ROCK ESP
+SPOTS
+ARTISTICAS
+```
+
+Las carpetas que se ubiquen fuera de la carpeta de medios **AUDICOM** son ignoradas por el sistema (no aparecen en Media Manager).\
+Además, no se permiten subcarpetas dentro de las carpetas de medios: si existen, AUDICOM las ignora.
+
+Es posible crear o mover carpetas desde el explorador de Windows, aunque se recomienda hacerlo desde **Media Manager**.
+
+**`Procedimiento para importar carpetas a la estructura Audicom\Audio:`**
+
+- Usar **AUDICOM Media Manager** para crear nuevas carpetas. Active la opción **autoDb** para que, al copiar archivos, Media Manager los agregue automáticamente a la Base de Datos.
+- Desde el explorador de Windows, abra la carpeta donde están los archivos que desea copiar y arrástrelos a una ventana de **Media Manager**.
+  - Si los archivos están en la misma unidad de disco, serán **movidos**.
+  - Para copiarlos, mantenga presionada la tecla **Ctrl** mientras arrastra.
+
+<Note>
+  El procedimiento inverso (arrastrar archivos desde Media Manager hacia carpetas de Windows) **no está soportado**.
+</Note>
+
+Para que los archivos musicales puedan ser utilizados en programación automática (**AutoDj**), deben estar registrados en la **Base de Datos InfoMusic**.
+
+---
+
+## Recomendaciones Generales
+
+### Tasas de compresión para audio
+
+Con la disponibilidad actual de grandes capacidades de almacenamiento, el uso de MP3 y otros códecs con pérdida ha quedado limitado a fines de **transmisión o consumo personal**.\
+No es necesario que una estación de radio trabaje con material comprimido, salvo algunas excepciones (programas enlatados o streaming).
+
+Se recomienda que toda la música, piezas artísticas, publicidades y demás material sonoro se almacenen en **PCM (WAV)** para mantener la máxima calidad.
+
+AUDICOM soporta también compresión **FLAC sin pérdidas**, con tasas de compresión cercanas a **2:1**, adecuadas para contenidos de larga duración que requieran resguardar calidad.
+
+<Note>
+  No utilice archivos musicales con bitrates inferiores a **128 kbps**.\
+  La velocidad recomendada es **256 kbps @ 44.1 kHz**, lo que equivale a una compresión aproximada de **6:1**.
+</Note>
+
+---
+
+### Edición de archivos comprimidos
+
+Aunque los archivos comprimidos pueden editarse, este proceso implica una **nueva recompresión**, con la consiguiente pérdida adicional de calidad.
+
+En lo posible, evite editar material comprimido.\
+Para remover los silencios de inicio y fin en archivos `.mp3`, utilice **AutoEdit**, que permite procesarlos sin recomprimirlos.
+
+---
+
+### Locuciones de presentación y “pisadores”
+
+Los archivos de presentación (**Partner**) y las locuciones **Meteor** (cuando se regraban) conviene registrarlos usando un **procesador de micrófono con compresor/limitador**, de modo de reducir el rango dinámico y asegurar la **inteligibilidad** sin necesidad de atenuar en exceso la música de fondo.
+
+También pueden emplearse compresores de rango dinámico por software, además del procesado de audio general de la emisora.

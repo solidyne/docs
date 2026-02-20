@@ -1,0 +1,244 @@
+---
+title: "iRDS - Generación de streaming"
+description: "Description of your new file."
+keywords: ["irds", "internet", "streaming"]
+tags: ["Software", "Audicom"]
+---
+
+## Introducción
+
+El **Control iRDS** centraliza las funciones de **streaming** de la emisora. Se conecta al servidor de streaming y entrega la señal digitalizada para su distribución en línea.
+
+- Permite **codificar simultáneamente en dos calidades**:
+  - **Pública**: de menor calidad, destinada a oyentes en Internet.
+  - **iLink**: de alta calidad, para enlaces entre emisoras.
+- Ambas señales incluyen **metadatos**:
+  - Stream público: envía **Intérprete + Título**, similar al sistema RDS.
+  - Señal iLink: añade **sincronismo preciso** (\< 0,1 s), garantizando que cada repetidora emita comerciales, promos y reportes meteorológicos **locales**, generando la sensación de un programa en vivo en cada ciudad.
+
+<img
+  src="/images/audicom/au-irds.png"
+  alt="Au Irds Pn"
+  title="Au Irds Pn"
+  className="mx-auto"
+  style={{ width:"76%" }}
+/>
+
+---
+
+## Audio para oyentes en Internet
+
+- iRDS genera un **stream WMA** (Windows Media Audio) y lo transmite por el **puerto 8080**.
+- Además del audio, transmite **Intérprete y Título**, visibles en el reproductor del usuario final.
+- El flujo no se distribuye directamente: requiere un **servidor de streaming** contratado, que redistribuye el audio a los oyentes.
+- La **capacidad de usuarios simultáneos** depende del plan contratado.
+
+<img
+  src="/images/audicom/au-irds-public-stream.jpg"
+  alt="Au Irds Public Stream Jp"
+  title="Au Irds Public Stream Jp"
+  className="mx-auto"
+  style={{ width:"80%" }}
+/>
+
+**Activación:**
+
+- Marcar **Public Signal** para habilitar el streaming.
+- Si no está marcado, no se transmite.
+
+**Pantalla de iRDS:**
+
+- Muestra **Intérprete + Título** en reproducción.
+- Campo **Flash msg**: envía mensajes instantáneos al reproductor del oyente.
+
+**Parámetros de configuración:**
+
+- **Public signal**: habilita transmisión hacia el servidor.
+- **Server address / Port**: URL + puerto del servidor.
+  - Si queda vacío, iRDS puede actuar como servidor (solo pruebas).
+- **Publishing point**: identificador del flujo (ej. `FM102`, `Radio_Cultura`).
+- **User address**: dirección generada automáticamente (ej. `mms://encoder.iviplanet.com:8080/AUDICOM`).
+- **Audio source**: tomar señal **procesada de aire** (desde sintonizador o procesador dedicado para Internet).
+- **Profile**: codificación en WMA.
+  - 48–64 kbps: estándar.
+  - A mayor bitrate, menor cantidad de oyentes simultáneos (limitado por el ancho de banda del servidor).
+
+---
+
+## Transmisión AAC+ sobre Icecast
+
+Para transmitir a **servidores Icecast** es necesario un **encoder externo** vinculado a la metadata:
+
+<Steps>
+  <Step title="Instalar encoder externo (EdCast)">
+    Configure el encoder para transmitir al servidor Icecast.
+  </Step>
+  <Step title="Verificar versión de AUDICOM">
+    Debe ser **8.322 o superior**.
+  </Step>
+  <Step title="Autoinicio del encoder">
+    En `Inicio > Programas > Inicio`, crear un acceso directo a **EdCast** para que se ejecute con Windows.
+  </Step>
+  <Step title="Configurar RDS">
+    Ajustar RDS para guardar en `shoutcast.txt` la información de **Tema + Intérprete**.
+  </Step>
+  <Step title="Integración con encoder">
+    Configurar EdCast para leer `shoutcast.txt` cada **2 segundos** y añadir esa metadata al stream.
+  </Step>
+</Steps>
+
+<img
+  src="/images/audicom/au-irds-config.png"
+  alt="Au Irds Config Pn"
+  title="Au Irds Config Pn"
+  className="mx-auto"
+  style={{ width:"78%" }}
+/>
+
+**Resultado:**\
+El stream reproducido en Winamp o Windows Media Player mostrará los **nombres de las canciones** o el **nombre de la emisora**, según la configuración aplicada.
+
+---
+
+## Cómo escuchar el streaming
+
+El **oyente accede al streaming** a través del **sitio web de la radio**, donde debe configurarse un **reproductor de audio** con los parámetros del servidor de streaming contratado.
+
+### Generar la página web desde iRDS
+
+Como alternativa rápida, **iRDS genera automáticamente** una página básica con un reproductor embebido. Esto permite publicar el streaming en cuestión de segundos, sin necesidad de un desarrollo web previo.\
+La función se detalla más adelante en este capítulo.
+
+---
+
+## Audio para enlaces entre emisoras (iLink)
+
+La señal **iLink** permite transmitir audio en alta calidad junto con **metadata de sincronismo**, utilizada en las repetidoras para gestionar la programación regional.
+
+- **Conexión directa**: hasta 5 terminales remotas, sin servidor web.
+- **Más de 5 terminales**: requiere un servidor de streaming con soporte WMA.
+- **Activación**: marcar **iLink Signal**.
+
+<img
+  src="/images/audicom/au-irds-ilink_stream.jpg"
+  alt="Au Irds Ilink Stream Jp"
+  title="Au Irds Ilink Stream Jp"
+  className="mx-auto"
+  style={{ width:"75%" }}
+/>
+
+**Parámetros principales:**
+
+- **Server address/Port**: normalmente en blanco. Solo necesario si se usa un servidor externo. Puerto predeterminado: **8081**.
+- **iLink address**: dirección a la que se conectan las repetidoras.
+- **Audio source**: entrada externa con la señal completa de programa.
+- **Profile**: bitrate recomendado: **≥128 kbps** para enlaces de alta calidad.
+
+**Verificación desde otra PC (ejemplo valores por defecto):**
+
+- Streaming público: `mms://nombreMaquina:8080` o `http://nombreMaquina:8080`
+- Streaming iLink: `mms://nombreMaquina:8081` o `http://nombreMaquina:8081`
+
+---
+
+### xLink — enlace sin retardo
+
+El modo **xLink** transmite **solo metadata**, permitiendo que la repetidora emita **sin retardo**.
+
+- Uso: cuando la repetidora está en el mismo edificio y recibe el audio por una **conexión física** (analógica o digital).
+- Activación: marcar **xLink Signal**.
+- Funcionamiento: la repetidora recibe audio por su entrada local y metadata vía LAN, reemplazando **avisos comerciales y artística** según corresponda.
+
+<img
+  src="/images/audicom/au-irds-xlin_stream.jpg"
+  alt="Au Irds Xlin Stream Jp"
+  title="Au Irds Xlin Stream Jp"
+  className="mx-auto"
+  style={{ width:"83%" }}
+/>
+
+### Recepción en la emisora remota
+
+En la estación regional:
+
+- La señal iLink/xLink se recibe mediante el módulo **iLink de AUDICOM Multicast**.
+- La repetidora debe contar con **material propio** (avisos y artística) para reemplazar los elementos provenientes de la cabecera.
+- La programación de recepción se detalla en la siguiente sección del capítulo.
+
+---
+
+## Página web automática
+
+iRDS puede generar una **página básica de transmisión** con reproductor integrado, útil como solución temporal o de prueba.
+
+- Usa los datos del servidor definidos en **Public Signal**.
+- La página se crea en segundos y permite escuchar el streaming sin configuraciones adicionales.
+
+<img
+  src="/images/audicom/au-irds-user_web.jpg"
+  alt="Au Irds User Web Jp"
+  title="Au Irds User Web Jp"
+  className="mx-auto"
+  style={{ width:"75%" }}
+/>
+
+### Publicar la página
+
+Para publicar se requiere un **hosting web** con usuario y clave de acceso.
+
+- Desde iRDS, pulsar **UPLOAD** y subir la página generada.
+- Acceso:
+  - `http://dominio_de_su_sitio_web/AUDICOM/player.htm`
+  - Ejemplo: `http://www.radioeter.com/AUDICOM/player.htm`
+
+---
+
+## FTP Update
+
+Función que exporta la **metadata de reproducción** (Intérprete/Título) a un archivo **XML** en un servidor **FTP**.
+
+- Uso: automatizar la información en el sitio web de la emisora.
+
+<img
+  src="/images/audicom/au-irds-ftp.jpg"
+  alt="Au Irds Ftp Jp"
+  title="Au Irds Ftp Jp"
+  className="mx-auto"
+  style={{ width:"75%" }}
+/>
+
+## TCP Metadata
+
+Permite transmitir **metadata en tiempo real** por un **puerto TCP** en la red local, para integrarse con aplicaciones de terceros.
+
+**Opciones disponibles** (entre `< >`, separadas por comas):
+
+- `<TITLE>`
+- `<ARTIST>`
+- `<BLOCK>` (tipo de bloque en CyberPlay: AutoDJ, Live, Spots)
+- `<CLASS>`
+- `<STYLE>`
+
+**Ejemplo de string configurado:**
+
+`NP=<BLOCK>,<ARTIST>,<TITLE>,<CLASS>`
+
+**Ejemplo de salida real:**
+
+- Tema musical:\
+  `NP=AutoDJ,KATY PERRY,Unconditionally,Musica`
+- Spot publicitario:\
+  `NP=Batch,,Publi Banda Ancha,`
+
+**Conexión:**\
+Suscribirse mediante **TCP al puerto 8090** del equipo que ejecuta iRDS (generalmente la PC de Aire, salvo que se use un servidor dedicado).
+
+<img
+  src="/images/audicom/au-irds-tcp.png"
+  alt="Au Irds Tcp Pn"
+  title="Au Irds Tcp Pn"
+  className="mx-auto"
+  style={{ width:"75%" }}
+/>
+
+---

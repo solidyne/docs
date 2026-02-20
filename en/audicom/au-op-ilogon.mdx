@@ -1,0 +1,121 @@
+---
+description: "Ingresar al sistema. Usuarios y contraseñas."
+title: "Ingresando al Audicom"
+keywords: ["i-logon"]
+tags: ["Software", "Audicom"]
+---
+
+## I-Logon
+
+El instalador crea un acceso directo a AUDICOM en el escritorio de Windows y un grupo de aplicaciones en el menú **Inicio**.
+
+Al ejecutar AUDICOM aparece la ventana de ingreso al sistema (**Log-on**).
+
+<img
+  src="/images/audicom/au-op-ilogon.png"
+  alt="AUDICOM I-logon"
+  title="AUDICOM I-logon"
+  className="mx-auto"
+  style={{ width:"66%" }}
+/>
+
+- Aquí se debe ingresar nombre de usuario y contraseña.
+- Se cargará el perfil correspondiente, que incluye la organización del escritorio y los niveles de seguridad predeterminados.
+- Los usuarios con permisos y restricciones son gestionados desde el **Panel de Administración** (ver _Niveles de acceso y contraseñas_).
+
+Es recomendable que cada operador, al finalizar su turno, cierre su sesión.\
+El sistema continuará funcionando bajo el usuario del sistema (**auto**).\
+El nuevo operador debe iniciar sesión accediendo a la ventana I-Logon con doble clic en la zona **RADIO/USUARIO**.
+
+- Doble clic en el icono **USER** abre la ventana de ingreso I-Logon.
+
+  <img
+    src="/images/audicom/au-op-topbar-user.png"
+    alt="AUDICOM Tool Bar"
+    title="AUDICOM Tool Bar"
+    style={{ width:"67%" }}
+  />
+
+<Note>
+  I-Logon y la Barra de Herramientas (botón Info) muestran la fecha de caducidad de la licencia de soporte y actualizaciones.
+</Note>
+
+Después de ingresar usuario y contraseña, presione **Comenzar**.
+
+- El nombre de usuario **no distingue mayúsculas/minúsculas**.
+- La contraseña **sí distingue mayúsculas/minúsculas**.
+
+Todos los cambios de usuario quedan registrados en los archivos `.air`, de modo que el personal jerárquico puede controlar quién operó el sistema en cada momento.
+
+---
+
+## Nombres de usuario y contraseñas
+
+### Usuarios predefinidos
+
+AUDICOM incluye un grupo de usuarios predeterminados, con perfiles distintos:
+
+- **user**
+- **admin**
+- **auto**
+
+Los usuarios predefinidos no tienen contraseña.\
+El usuario **auto** es parte del sistema y **no puede eliminarse**.
+
+- Se activa cuando un operador cierra sesión.
+- Mantiene la programación en modo automático.
+
+<Note>
+  El modo Auto también se usa tras un corte de energía.\
+  Si la ventana I-Logon queda abierta durante 1 minuto sin que ningún usuario se registre, AUDICOM arranca automáticamente.\
+  Un minuto después comienza la reproducción de audio.\
+  Ver: _Cortes de energía – autoarranque_.
+</Note>
+
+### Nuevos usuarios
+
+- Los nombres de usuario y contraseñas son definidos por el administrador.
+- Una vez creado, el nombre no puede modificarse.
+- La contraseña puede cambiarse desde I-Logon:
+  1. Presione **Cambiar Password**.
+  2. Ingrese la contraseña actual.
+  3. Escriba la nueva contraseña y confírmela.
+  4. Pulse **OK**.
+
+En el siguiente inicio deberá usar la nueva clave.
+
+<Tip>
+  Puede crear un usuario por operador, o bien usuarios por terminal de trabajo (ej. “Producción”, “Programación”).\
+  Así cada terminal tiene una única clave de acceso.
+</Tip>
+
+---
+
+## Cerrar la sesión
+
+Cuando un operador se retira, debe **cerrar su sesión** para evitar usos indebidos.
+
+- Si otro operador ingresa, lo hace directamente con su usuario.
+- Esto cierra automáticamente la sesión anterior.
+
+Si se desea dejar el sistema activo sin operador a cargo:
+
+- En I-Logon seleccione **Cerrar sesión**.
+- AUDICOM quedará activo bajo el usuario **auto**.
+
+En este modo:
+
+- Solo estarán habilitadas funciones básicas (**Play / Stop**).
+- No se guardan personalizaciones de escritorio.
+- No se permiten cambios en la pauta comercial.
+
+<Warning>
+  La programación debe estar preparada para que AUDICOM siga operando en automático (AutoDJ, streaming, PlayLists, etc.).
+</Warning>
+
+---
+
+## Apagar AUDICOM
+
+Para cerrar todas las aplicaciones, pulse **Apagar (Close)**.\
+Esto finalizará todos los programas relacionados con AUDICOM.

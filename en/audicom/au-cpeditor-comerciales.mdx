@@ -1,0 +1,104 @@
+---
+title: "Bloques de avisos publicitarios"
+description: "Creación manual de bloques (tandas) comerciales"
+keywords: ["CyberPlay Editor", "tandas", "comerciales", "pauta"]
+tags: ["Software", "Audicom"]
+---
+
+Existen dos formas de crear una **tanda de avisos publicitarios**:
+
+- **Automática**: mediante el módulo **Admicom** (recomendado).\
+  → Ver: _Tráfico, Administración y Estadísticas_.
+- **Manual**: directamente en **CyberPlay Editor**.
+
+Radios no comerciales o con pocos anunciantes suelen manejar las tandas manualmente, sin necesidad de gestionar una base de datos comercial.
+
+---
+
+## Creación manual de tandas
+
+1. En la ventana **Tanda**, ingrese la instrucción de tanda.\
+   Cada instrucción corresponde a una sola tanda; deberá repetirla para todas las tandas del día.
+
+   **Ejemplo:**
+
+   ```txt
+   /Tanda Tanda Nro. 1 /00:00
+   ```
+2. Debajo, escriba los nombres de los archivos de las publicidades que componen esa tanda.\
+   Puede arrastrarlos desde **File Manager** o **InfoMusic-Producción**.
+
+   **Ejemplo:**
+
+   ```txt
+   /Tanda Tanda Nro. 1 /00:00
+   Coca-Cola
+   Sancor
+   Sony
+   La Masa Records
+   ```
+
+   <Note>
+     - No se pueden programar archivos desde **carpetas extras** (ver File Manager).
+     - Archivos que contengan un **punto (.)** en el nombre y no estén registrados en la Base de Datos, **deben pautarse con extensión completa** (ej.: `107.5.wav`).
+   </Note>
+3. Para agregar otra tanda (ej.: a las 00:30), repita los pasos anteriores.
+4. Una vez finalizadas todas las tandas, guarde el archivo en el formato correspondiente (ver sección de guardado).
+
+---
+
+## Creación de tandas con Magic Programming
+
+La herramienta **Magic Programming** simplifica la generación de tandas manuales. Inserta automáticamente las instrucciones, y el operador solo debe cargar los archivos debajo de cada tanda.
+
+<img
+  src="/images/audicom/au-cpeditor-easylog-1.png"
+  alt="Au Cpeditor Easylog 1 Pn"
+  title="Au Cpeditor Easylog 1 Pn"
+  className="mx-auto"
+  style={{ width:"37%" }}
+/>
+
+Al elegir **Generar Esqueleto de Tanda**, aparece un cuadro de diálogo con estas opciones:
+
+- **Hora desde**: hora de inicio de la primera tanda.
+- **Hasta hora**: hora de la última tanda.
+- **Intervalo entre tandas**: minutos entre cada tanda.
+- **Flexibilidad**: margen en minutos para desplazar la tanda en programas AutoDJ.\
+  _(Todas las tandas creadas por Magic Programming son flexibles; para cambiar sus atributos debe editarse manualmente)._
+
+### Pautar un aviso comercial
+
+Permite programar un **spot en varias tandas** automáticamente.\
+Se define:
+
+- El **intervalo horario** (ej.: de 19:00 a 22:00).
+
+  <img
+    src="/images/audicom/au-cpeditor-easylog-3.png"
+    alt="Au Cpeditor Easylog 3 Pn"
+    title="Au Cpeditor Easylog 3 Pn"
+    className="mr-auto"
+    style={{ width:"34%" }}
+  />
+- La **separación mínima** entre apariciones (ej.: cada 15 minutos).
+
+El aviso será insertado en todas las tandas dentro del rango definido.
+
+### Eliminar la ocurrencia de un aviso
+
+Permite **eliminar todas las apariciones** de un aviso en un intervalo horario determinado.
+
+<Note>
+  Recuerde: Para que las modificaciones tengan efecto debe **guardar los archivos** y, si corresponde a la programación de **hoy o mañana**, deberá **recargar los archivos en la terminal de Aire**.
+</Note>
+
+### Imprimir
+
+Opción para imprimir:
+
+- El **registro de tandas** (`.LOG`).
+- El **registro de programas** (`.PGM`).
+- La **programación completa** (ventana CyberPlay).
+
+La impresión se realiza sobre los archivos cargados en ese momento.
