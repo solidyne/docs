@@ -1,53 +1,61 @@
 ---
-title: "Puesta al aire"
-description: "Operación de BL200"
-keywords: ["puesta al aire", "llamadas", "Bluetooth", "talkback"]
-tags: ["hibridos", "BLT200"]
+title: "On-Air Operation"
+description: "BL200 Operation"
+keywords: ["on-air", "calls", "Bluetooth", "talkback"]
+tags: ["hybrids", "BLT200"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d8a12bb14f2faa95b8ce7e23bd2c94412912d6aa4c889845f9abb1b348e405ad"
+
 ---
 
-Las siguientes pautas indican el procedimiento para obtener el audio de los teléfonos móviles en la salida de audio de BLT200.\
-La puesta al aire dependerá de la consola utilizada y del [esquema de conexión](/es/blt200/blt200-conexiones) configurado.
+The following guidelines describe the procedure to obtain audio from mobile phones through the BLT200 audio output.\
+On-air operation will depend on the console being used and the configured [connection scheme](/es/blt200/blt200-conexiones).
 
 <Steps>
-  <Step title="Encender canal Bluetooth en BLT200">
-    Pulse el botón **CONTROL A** o **CONTROL B** y mantenga presionado hasta que se ilumine (aprox. 5 segundos).\
-    El botón destellará con intermitencia lenta, indicando que Bluetooth está activo.
+  <Step title="Turn on Bluetooth channel on BLT200">
+    Press and hold the **CONTROL A** or **CONTROL B** button until it lights up (approx. 5 seconds).\
+    The button will flash slowly, indicating that Bluetooth is active.
   </Step>
-  <Step title="Activar Bluetooth en el móvil">
-    El móvil debe haber sido previamente emparejado con el canal correspondiente de BLT200.\
-    Al encender Bluetooth, el vínculo se restablece automáticamente y en pocos segundos queda conectado.
+  <Step title="Enable Bluetooth on mobile device">
+    The mobile device must have been previously paired with the corresponding BLT200 channel.\
+    When Bluetooth is enabled, the connection is automatically reestablished and connected within seconds.
   </Step>
 </Steps>
 
-## Llamadas entrantes
+## Incoming Calls
 
 <Steps>
-  <Step title="Detectar la llamada">
-    Cuando ingresa una llamada y Bluetooth está activo en el móvil, el botón **CONTROL** correspondiente se ilumina en **azul** (modo D).\
-    Puede atenderse desde el BLT200 con un toque corto sobre el botón CONTROL, o desde la pantalla del teléfono.
+  <Step title="Detect the call">
+    When a call comes in and Bluetooth is active on the mobile device, the corresponding **CONTROL** button lights up in **blue** (mode D).\
+    The call can be answered from the BLT200 with a short press of the CONTROL button, or from the phone screen.
 
     <Info>
-      Algunos móviles anteriores a 2020 no permiten atender desde la interfaz Bluetooth cuando la llamada proviene de aplicaciones (WhatsApp, Skype, Hangouts, etc.).\
-      En estos casos solo puede atenderse desde la pantalla del teléfono.
+      Some mobile phones prior to 2020 do not allow answering through the Bluetooth interface when calls come from applications (WhatsApp, Skype, Hangouts, etc.).\
+      In these cases, calls can only be answered from the phone screen.
     </Info>
   </Step>
-  <Step title="Si Bluetooth está apagado en el móvil">
-    Atienda la llamada desde el propio teléfono y luego active Bluetooth para transferirla al BLT200. Una vez transferida, el móvil recibirá y enviará audio a través del BLT200.
+  <Step title="If Bluetooth is off on mobile device">
+    Answer the call from the phone itself and then enable Bluetooth to transfer it to the BLT200. Once transferred, the mobile device will send and receive audio through the BLT200.
   </Step>
-  <Step title="Hablar en privado">
-    Use el circuito de **talk-back** de la consola para comunicación privada con la línea (según el modo de conexión configurado).
+  <Step title="Private communication">
+    Use the console's **talk-back** circuit for private communication with the line (according to the configured connection mode).
   </Step>
-  <Step title="Poner al aire">
-    Desde el canal de la consola se pondrá la llamada al aire.\
-    Ajuste los niveles de cada canal Bluetooth del BLT200 desde los controles del panel para entregar un nivel óptimo.
+  <Step title="Put on air">
+    The call will be put on air from the console channel.\
+    Adjust the levels of each BLT200 Bluetooth channel from the panel controls to deliver optimal level.
   </Step>
-  <Step title="Finalizar la comunicación">
-    La llamada puede finalizarse con un toque corto en el botón **CONTROL**, o directamente desde el teléfono.
+  <Step title="End communication">
+    The call can be ended with a short press of the **CONTROL** button, or directly from the phone.
   </Step>
-  <Step title="Retomar la llamada en el móvil">
-    Es posible devolver la llamada al teléfono pasando de modo **Bluetooth/Headset** a **Altavoz (Speaker)**.
+  <Step title="Return call to mobile device">
+    The call can be returned to the phone by switching from **Bluetooth/Headset** mode to **Speaker** mode.
 
-    Ejemplo en Android:
+    Example in Android:
 
     <img
       src="/images/android_bluetooth.jpg"
@@ -56,27 +64,27 @@ La puesta al aire dependerá de la consola utilizada y del [esquema de conexión
       style={{ width:"25%" }}
     />
 
-    - _Bluetooth_: transfiere la llamada al dispositivo Bluetooth (ej. BLT200).
-    - Al desactivar _Bluetooth_, la llamada vuelve al teléfono.
+    - _Bluetooth_: transfers the call to Bluetooth device (e.g. BLT200).
+    - When _Bluetooth_ is disabled, the call returns to the phone.
 
-    Otros modelos pueden mostrar dos botones, menús desplegables u otras combinaciones (consulte el manual del teléfono).
+    Other models may show two buttons, dropdown menus, or other combinations (check phone manual).
   </Step>
 </Steps>
 
 ---
 
-## Generar la llamada en el móvil
+## Making Calls from Mobile Device
 
 <Steps>
-  <Step title="Iniciar la llamada en el móvil">
-    En el teléfono, cambie el modo a **Altavoz (Speaker)** para hablar desde el propio dispositivo.\
-    Realice la llamada (SEND), ya sea telefónica o mediante aplicaciones (WhatsApp, Skype, Linphone, etc.).
+  <Step title="Start call on mobile device">
+    On the phone, switch to **Speaker** mode to talk from the device itself.\
+    Make the call (SEND), either by phone or through applications (WhatsApp, Skype, Linphone, etc.).
   </Step>
-  <Step title="Transferir la llamada a BLT200">
-    Una vez establecida la comunicación, vuelva a activar el modo **Bluetooth/Headset** en el móvil.\
-    El canal correspondiente en BLT200 debe estar encendido.
+  <Step title="Transfer call to BLT200">
+    Once communication is established, reactivate **Bluetooth/Headset** mode on the mobile device.\
+    The corresponding channel on BLT200 must be turned on.
   </Step>
-  <Step title="Continuar desde la consola">
-    Proceda desde el **paso 3 de la sección Llamadas entrantes**, manejando la puesta al aire desde la consola.
+  <Step title="Continue from console">
+    Proceed from **step 3 of the Incoming Calls section**, managing the on-air operation from the console.
   </Step>
 </Steps>

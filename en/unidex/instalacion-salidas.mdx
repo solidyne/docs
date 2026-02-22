@@ -1,48 +1,56 @@
 ---
-title: "Salidas"
-description: "Conexión de las salidas en UNIDEX UX24 y UX18"
-keywords: ["instalación", "salidas"]
-tags: ["consolas IP", "UNIDEX"]
+title: "Outputs"
+description: "Output connections in UNIDEX UX24 and UX18"
+keywords: ["installation", "outputs"]
+tags: ["IP consoles", "UNIDEX"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1b5316b310dbd16314bf2e6fa7776cae325fb7753bcbca9214b97171a2dd3b92"
+
 ---
 
-## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Salidas analógicas
+## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Analog Outputs
 
-Cada salida utiliza un conector **RJ45**, que transporta las señales **izquierda y derecha** en un único cable. En algunas aplicaciones, estas salidas estéreo pueden configurarse como **dos canales mono independientes**. Por ejemplo, los adaptadores **UDX para líneas telefónicas** utilizan las salidas no balanceadas mono para enviar señal a las líneas de comunicación externas.
+Each output uses an **RJ45** connector that carries **left and right** signals in a single cable. In some applications, these stereo outputs can be configured as **two independent mono channels**. For example, **UDX telephone line adapters** use unbalanced mono outputs to send signals to external communication lines.
 
 <Info>
-  Las salidas rotuladas como PGM y/o REC (balanceadas) entregan la mezcla del BUS de manera predeterminada.
+  Outputs labeled as PGM and/or REC (balanced) deliver the BUS mix by default.
 
-  Otras salidas son asignables, se pueden configurar para entregar cualquiera de los buses de mezlca o incluso redireccionar entradas (DIRECT OUT)
+  Other outputs are assignable and can be configured to deliver any of the mix buses or even redirect inputs (DIRECT OUT)
 </Info>
 
-## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Salidas digitales AES3
+## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  AES3 Digital Outputs
 
-- Se conectan mediante cable **RJ45–RJ45 CAT5** y adaptador **SOL-F3/XLRM**.
-- Utilizan el mismo **pin-out** que las salidas analógicas balanceadas estéreo, aunque **solo se transmite el canal izquierdo**.
-- Soportan también la conexión de señales **S/PDIF**.
-- Son balanceadas a transformador
+- Connected using **RJ45–RJ45 CAT5** cable and **SOL-F3/XLRM** adapter.
+- Use the same **pin-out** as balanced stereo analog outputs, although **only the left channel is transmitted**.
+- Also support **S/PDIF** signal connection.
+- Are transformer balanced
 
-### Asignación de salidas AES3 en UX24
+### AES3 Output Assignment in UX24
 
-- **AES-1** → Bus **PGM**
-- **AES-2** → Bus **REC**
-- **AES-3 y AES-4** → Asignables desde pantalla `SETTINGS → OUTPUTS`
+- **AES-1** → **PGM** Bus
+- **AES-2** → **REC** Bus
+- **AES-3 and AES-4** → Assignable from `SETTINGS → OUTPUTS` screen
 
-### Asignación de salidas AES3 en UX18
+### AES3 Output Assignment in UX18
 
-- **AES-1** → asignable
-- **AES-2** → asignable
+- **AES-1** → assignable
+- **AES-2** → assignable
 
 <Warning>
-  **MUY IMPORTANTE:** 
+  **VERY IMPORTANT:** 
 
-  Las **SALIDAS** **AES3 SOLO OPERAN A 48 kHz**.
+  **AES3 OUTPUTS ONLY OPERATE AT 48 kHz**.
 
   \
-  Es imprescindible **configurar el dispositivo** de grabación en Windows a **48.000 Hz** para evitar errores de compatibilidad. Para configurar la frecuencia de muestreo en Windows 10:
+  It is essential to **configure the recording device** in Windows to **48,000 Hz** to avoid compatibility issues. To configure the sample rate in Windows 10:
 
-  1. Abrir el menú **Configuración del sistema** y seleccionar **Sonido**.
-  2. En **Ajustes de sonido**, abrir las **propiedades del dispositivo de entrada**.
-  3. Ingresar a **Otros ajustes del dispositivo**.
-  4. En la pestaña **Avanzado**, establecer la **frecuencia de muestreo en 48.000 Hz**.
+  1. Open **System Settings** menu and select **Sound**.
+  2. In **Sound Settings**, open **input device properties**.
+  3. Enter **Additional device settings**.
+  4. In the **Advanced** tab, set the **sample rate to 48,000 Hz**.
 </Warning>

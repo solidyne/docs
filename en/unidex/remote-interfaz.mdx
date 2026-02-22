@@ -1,30 +1,38 @@
 ---
-title: "Interfaz de control HTML"
-description: "Acceso a la configuración y operación de UNIDEX vía web."
+title: "HTML Control Interface"
+description: "Access to UNIDEX configuration and operation via web."
 keywords: ["web control","remote control","html interface"]
-tags: "consolas IP,UNIDEX"
+tags: "IP consoles,UNIDEX"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "0c936f81a467255ec2907918c8684f4b7fb8fbd069533990d84c5a788ff01795"
+
 ---
 
-Todas las funciones y configuraciones de la **UX24** pueden controlarse de forma remota conectando la consola a la **LAN** y accediendo a su dirección IP desde un navegador web.
+All **UX24** functions and settings can be controlled remotely by connecting the console to the **LAN** and accessing its IP address from a web browser.
 
 <Note>
-  Las pantallas del control web ofrecen las mismas opciones que las pantallas integradas en la UX24, aunque la disposición y el diseño de algunos controles pueden variar.\
-  En esta sección se describen solo las pantallas que presentan mayores diferencias.
+  The web control screens offer the same options as the built-in UX24 screens, although the layout and design of some controls may vary.\
+  This section describes only the screens that present major differences.
 </Note>
 
-## Conección de UNIDEX a la red
+## Connecting UNIDEX to the network
 
-<Icon icon="network-wired" iconType="solid" color="#ff6600" size={22} />  [**Conexión a la LAN**](/es/unidex/instalacion-red)
+<Icon icon="network-wired" iconType="solid" color="#ff6600" size={22} />  [**LAN Connection**](/es/unidex/instalacion-red)
 
-## Acceso a la interfaz de control WEB
+## Accessing the WEB control interface
 
-Desde una computadora conectada a la misma LAN que la UX24 (por cable o Wi-Fi), abrir un navegador web —se recomienda **Google Chrome**— e ingresar la dirección **Unidex IP** para acceder a la interfaz de control de operación y configuración.
+From a computer connected to the same LAN as the UX24 (via cable or Wi-Fi), open a web browser —**Google Chrome** is recommended— and enter the **Unidex IP** address to access the operation and configuration control interface.
 
-Al acceder, se mostrará la pantalla principal, muy similar a la que aparece en la propia consola.
+Upon access, the main screen will be displayed, very similar to the one that appears on the console itself.
 
-### Perfil de usuario
+### User Profile
 
-Permite conmutar el usuario para la interfaz web, con independencia del usuario establecido en el hardware UX24. Se mostrará una caja de diálogo para ingresar el nombre de usuario, y a continuación otra para ingresar la contraseña.
+Allows switching the user for the web interface, independently of the user set on the UX24 hardware. A dialog box will appear to enter the username, followed by another one to enter the password.
 
 <img
   src="/images/ux24/ux24-WEB-USERS.png"
@@ -35,34 +43,34 @@ Permite conmutar el usuario para la interfaz web, con independencia del usuario 
 />
 
 <Note>
-  Hay tres perfiles de usuario:
+  There are three user profiles:
 
-  - ADMIN  con acceso total.
-  - EXPERT  con acceso a algunas funciones avanzadas
-  - BASIC    con acceso restringido.
+  - ADMIN  with full access.
+  - EXPERT  with access to some advanced functions
+  - BASIC    with restricted access.
 </Note>
 
-Por defecto, la contraseña es igual al nombre de usuario. La opción LOGOUT deja la interfaz web operando con las restricciones del usuario BASIC.
+By default, the password is the same as the username. The LOGOUT option leaves the web interface operating with BASIC user restrictions.
 
-### Interfaz de operación remota
+### Remote Operation Interface
 
-Al seleccionar la opción **REMOTE CONTROL** en el menú, se accede a la interfaz de operación remota.
+Selecting the **REMOTE CONTROL** option in the menu accesses the remote operation interface.
 
-Las funciones disponibles son las mismas que ofrece el hardware y la pantalla a bordo, por lo que resultan válidas las explicaciones de este manual para cada una de ellas. Sin embargo, existen algunas diferencias operativas que se describen a continuación.
+The available functions are the same as those offered by the hardware and onboard display, so the explanations in this manual are valid for each of them. However, there are some operational differences described below.
 
-La pantalla principal de la interfaz remota es similar a la pantalla **HOME** del hardware.\
-Incluye indicadores de nivel, contadores, señalización ON AIR y un menú de acceso rápido en la zona inferior.
+The main screen of the remote interface is similar to the hardware's **HOME** screen.\
+It includes level meters, counters, ON AIR signaling, and a quick access menu in the lower area.
 
-- **PROCESS:** Acceso directo a la pantalla de procesadores. También es posible llegar a esta pantalla desde la _consola de mezclas_.
-- **REMOTE:** Abre la **_consola de mezclas_**, una interfaz gráfica que emula los controles de la superficie física de la consola.
-- **SCENES:** Permite cambiar de escena. El cambio se realiza directamente en la consola, igual que si se hiciera desde la pantalla a bordo. La interfaz web no dispone de escenas propias, aunque se pueden importar escenas desde el disco.
-- **SETTINGS:** Acceso a las opciones de configuración de la UX24. Las opciones se presentan en un menú vertical, similar a la disposición de la pantalla **SETTINGS** a bordo.
+- **PROCESS:** Direct access to the processors screen. This screen can also be reached from the _mixing console_.
+- **REMOTE:** Opens the **_mixing console_**, a graphical interface that emulates the physical console surface controls.
+- **SCENES:** Allows changing scenes. The change is made directly on the console, just as if it were done from the onboard screen. The web interface doesn't have its own scenes, although scenes can be imported from disk.
+- **SETTINGS:** Access to UX24 configuration options. The options are presented in a vertical menu, similar to the onboard **SETTINGS** screen layout.
 
-### Consola de mezclas
+### Mixing Console
 
-La interfaz WEB puede controlar todos los canales de la consola. Su diseño está optimizado para trabajar en pantallas táctiles.
+The WEB interface can control all console channels. Its design is optimized for touchscreen operation.
 
-Una aplicación “tradicional” es configurarlo como controlador auxiliar a la pantalla de a bordo, corriendo sobre un monitor táctil de gran tamaño.
+A "traditional" application is to configure it as an auxiliary controller to the onboard display, running on a large touchscreen monitor.
 
 <img
   src="/images/ux24/ux24_monitor_touch.jpg"
@@ -71,7 +79,7 @@ Una aplicación “tradicional” es configurarlo como controlador auxiliar a la
   style={{ width:"84%" }}
 />
 
-En un nivel más avanzado, posibilita \*\*configurar un estudio auxiliar \*\*para operar señales sin necesidad de instalar una segunda consola. Para este caso, la interfaz de mezcla remota cuenta con un panel de monitoreo y la posibilidad de escuchar a través de la red audio enviado por la consola.
+At a more advanced level, it enables **setting up an auxiliary studio** to operate signals without installing a second console. For this case, the remote mixing interface includes a monitoring panel and the ability to listen to audio sent by the console through the network.
 
 <img
   src="/images/ux24/ux24-WEB-remotemixer.jpg"
@@ -80,7 +88,7 @@ En un nivel más avanzado, posibilita \*\*configurar un estudio auxiliar \*\*par
   style={{ width:"87%" }}
 />
 
-Los **canales visibles** en la interfaz de mezcla WEB se establecen pulsando el ícono “lápiz” . Solo el usuario ADMIN puede modificar esta configuración. Al pulsar el ícono de edición, aparece un listado con los 24 canales.
+The **visible channels** in the WEB mixing interface are set by pressing the "pencil" icon. Only the ADMIN user can modify this configuration. When pressing the edit icon, a list with all 24 channels appears.
 
 <img
   src="/images/ux24/ux24-WEB-remote_edit.png"
@@ -90,39 +98,39 @@ Los **canales visibles** en la interfaz de mezcla WEB se establecen pulsando el 
   style={{ width:"74%" }}
 />
 
-En la interfaz remota, los canales marcados como visibles se mostrarán siempre en orden ascendente.\
-Este ajuste se puede **guardar en la escena** activa.
+In the remote interface, channels marked as visible will always be shown in ascending order.\
+This setting can be **saved in the active scene**.
 
-### **Canales de micrófono y línea**
+### **Microphone and Line Channels**
 
-En cada canal se replican los mismos controles presentes en la superficie de la UX24.\
-Las operaciones realizadas desde el controlador web se reflejan inmediatamente en la consola física.
+Each channel replicates the same controls present on the UX24 surface.\
+Operations performed from the web controller are immediately reflected on the physical console.
 
-- **BOTONES DE BUSES:** Asignan el canal al bus correspondiente.
-- **CUE:** Activa el monitoreo de CUE para ese canal. El audio se escucha a través del circuito CUE en la consola.
-- **ON AIR:** Conmuta el encendido/apagado del canal.
-- **ATENUADOR:** Controla el nivel del canal.
-  - Cuando se ajusta desde el controlador web, la consola actualiza el nivel y muestra el valor en dB en la pantalla OLED, que destella para indicar que el cambio fue remoto.
-  - **El atenuador físico no es motorizado**, por lo que su posición no cambia. Si el operador mueve el atenuador físico, el nivel se ajusta suavemente al nuevo valor y la interfaz web actualiza la posición del fader.
+- **BUS BUTTONS:** Assign the channel to the corresponding bus.
+- **CUE:** Activates CUE monitoring for that channel. The audio is heard through the CUE circuit in the console.
+- **ON AIR:** Toggles the channel on/off.
+- **FADER:** Controls the channel level.
+  - When adjusted from the web controller, the console updates the level and displays the value in dB on the OLED screen, which flashes to indicate remote change.
+  - **The physical fader is not motorized**, so its position doesn't change. If the operator moves the physical fader, the level smoothly adjusts to the new value and the web interface updates the fader position.
 
-### Canales TELCO
+### TELCO Channels
 
-Los canales de telecomunicaciones incluyen, además de los controles ya vistos, un botón **RING/HOLD** que permite atender una llamada entrante; e información sobre el estado de la línea.
+Telecommunication channels include, in addition to the controls already seen, a **RING/HOLD** button that allows answering an incoming call; and information about the line status.
 
-Sin embargo, las funciones de talk-back y discado deben hacerse desde la consola, o en una configuración de Estudio remoto, utilizando un teléfono asociado.
+However, talk-back and dialing functions must be done from the console, or in a remote Studio configuration, using an associated telephone.
 
-### Procesos de audio
+### Audio Processing
 
-En la interfaz remota, los procesos de audio se acceden desde la opción **PROCESS** de la pantalla inicial REMOTE CONTROL, o desde el ícono **FX** en cada canal del mezclador web.
+In the remote interface, audio processes are accessed from the **PROCESS** option on the initial REMOTE CONTROL screen, or from the **FX** icon on each channel of the web mixer.
 
-**Procesos disponibles:**
+**Available processes:**
 
-- Ecualizador paramétrico.
+- Parametric equalizer.
 - De-esser.
-- Compresor y compuerta de ruido.
+- Compressor and noise gate.
 
 <Note>
-  Los procesos están asignados a las entradas, por lo que la disponibilidad de cada uno depende de la entrada conectada al canal.
+  Processes are assigned to inputs, so the availability of each one depends on the input connected to the channel.
 </Note>
 
 <img
@@ -133,14 +141,14 @@ En la interfaz remota, los procesos de audio se acceden desde la opción **PROCE
   style={{ width:"74%" }}
 />
 
-**Características y uso:**
+**Features and usage:**
 
-1. Los procesadores están insertos en cada entrada.
-   - Para verlos, seleccionar la entrada en el menú desplegable **INPUT (1)**.
-   - También se puede elegir un canal desde **CHANNEL**; la interfaz mostrará los procesos de la entrada asignada a ese canal.
-2. En el **EQ paramétrico**, la interfaz remota presenta algunas diferencias respecto a la pantalla a bordo:
-   - Los botones **ON/OFF** habilitan o deshabilitan cada banda.
-   - Los casilleros **B1**, **B2** y **B3** permiten seleccionar la banda a editar **(2)**.
-   - Este diseño reduce la cantidad de controles visibles y facilita su uso en pantallas táctiles.
-3. La conmutación entre procesos se realiza tocando los íconos correspondientes **(3)**.
-   - Los procesos disponibles cambian según la entrada seleccionada.
+1. Processors are inserted on each input.
+   - To view them, select the input from the **INPUT (1)** dropdown menu.
+   - You can also choose a channel from **CHANNEL**; the interface will show the processes of the input assigned to that channel.
+2. In the **parametric EQ**, the remote interface presents some differences from the onboard screen:
+   - **ON/OFF** buttons enable or disable each band.
+   - The **B1**, **B2**, and **B3** boxes allow selecting the band to edit **(2)**.
+   - This design reduces the number of visible controls and facilitates use on touch screens.
+3. Switching between processes is done by touching the corresponding icons **(3)**.
+   - Available processes change depending on the selected input.

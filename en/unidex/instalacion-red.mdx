@@ -1,79 +1,87 @@
 ---
-title: "Puertos Ethernet"
-description: "Puertos para Control Remoto y Streaming"
-keywords: ["instalación", "red", "Ethernet", "Discovery", "control remoto", "streaming"]
-tags: ["consolas IP", "UNIDEX"]
+title: "Ethernet Ports"
+description: "Remote Control and Streaming Ports"
+keywords: ["installation", "network", "Ethernet", "Discovery", "remote control", "streaming"]
+tags: ["IP consoles", "UNIDEX"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "690c6f328e1cf499dbb17c658f4c6d8966dccca3e9e7dec8d4e1b31d4d4fb8a1"
+
 ---
 
-## Conexión Ethernet para control remoto
+## Ethernet Connection for Remote Control
 
-La consola cuenta con un **puerto Ethernet** para control remoto a través de red local (LAN).  La **interfaz de control web interna** se accede con un navegador web desde cualquier computadora conectada a la misma red.
+The console features an **Ethernet port** for remote control through local area network (LAN). The **internal web control interface** can be accessed using a web browser from any computer connected to the same network.
 
-### Paso 1: Conexión física
+### Step 1: Physical Connection
 
-Conecte el puerto **ETHERNET de control** de UNIDEX a una boca del **router**, utilizando un cable de red Ethernet estándar.
+Connect the UNIDEX **CONTROL ETHERNET** port to a **router** port using a standard Ethernet network cable.
 
 <Warning>
-  No confundir el conector Ethernet para **CONTROL** con el puerto Ethernet para **STREAMING**.
+  Do not confuse the **CONTROL** Ethernet connector with the **STREAMING** Ethernet port.
 
   <img
     src="/images/ux24/trasero-control.jpg"
-    alt="Trasero RJ45 Control"
-    title="Trasero RJ45 Control"
+    alt="Rear RJ45 Control"
+    title="Rear RJ45 Control"
     className="mx-auto"
     style={{ width:"40%" }}
   />
 </Warning>
 
-- De fábrica, UNIDEX está configurada en modo **DHCP activado**.
-- El router asignará automáticamente una dirección IP disponible. Esta IP puede cambiar al reiniciar la consola, salvo que se configure una IP fija, pero normalmente esto no es necesario.
-- La dirección IP actual se muestra en la **pantalla principal** de la consola, bajo el nombre:\
+- By default, UNIDEX is configured with **DHCP enabled**.
+- The router will automatically assign an available IP address. This IP may change when restarting the console, unless a static IP is configured, but this is usually not necessary.
+- The current IP address is displayed on the console's **main screen** under:\
   **UNIDEX IP.**
 
   <img
     src="/images/ux24/unidex-ControlIP.png"
-    alt="RJ45 a RCA"
+    alt="RJ45 to RCA"
     style={{ width:"45%" }}
     title=""
     className="mx-auto"
   />
-- Si se requiere asignar una IP estática, ingresar en:`SETTINGS → SYSTEM`
+- If a static IP is required, go to:`SETTINGS → SYSTEM`
 
-### **P**aso 2: Acceso desde navegador web
+### Step 2: Web Browser Access
 
-Desde cualquier computadora conectada a la **misma red local** (por cable o Wi-Fi), abrir un navegador web (recomendado: **Google Chrome**) e ingresar la dirección IP mostrada como **UNIDEX IP**.
+From any computer connected to the **same local network** (via cable or Wi-Fi), open a web browser (recommended: **Google Chrome**) and enter the IP address shown as **UNIDEX IP**.
 
 <Note>
      **Solidyne Multi-Discovery**
 
-     Si no se tiene acceso físico a la consola, se puede [**descargar la herramienta Multi-Discovery**](/es/unidex/unidex-discovery) que detecta dispositivos Solidyne conectados a la red.
+     If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/es/unidex/unidex-discovery) that detects Solidyne devices connected to the network.
 </Note>
 
-Esto abrirá la interfaz web de operación y configuración de la consola. La interfaz es similar a la que se muestra en la **pantalla táctil a bordo**.
+This will open the web interface for console operation and configuration. The interface is similar to the one shown on the **onboard touchscreen**.
 
 ---
 
-## Conexión Ethernet para servicios de streaming
+## Ethernet Connection for Streaming Services
 
-1. Conectar el puerto **Streaming Out** al router de la LAN usando un cable Ethernet estándar.
+1. Connect the **Streaming Out** port to the LAN router using a standard Ethernet cable.
 
    <Warning>
-     NO CONFUNDIR el **conector Ethernet de streaming** con el conector Ethernet de **control remoto**.\
-     Ambos usan RJ45, pero cumplen funciones totalmente distintas.
+     DO NOT CONFUSE the **streaming Ethernet connector** with the **remote control** Ethernet connector.\
+     Both use RJ45, but serve completely different functions.
 
      <img
        src="/images/ux24/trasero-streaming.jpg"
-       alt="Trasero RJ45 Streaming"
-       title="Trasero RJ45 Streaming"
+       alt="Rear RJ45 Streaming"
+       title="Rear RJ45 Streaming"
        style={{ width:"40%" }}
        className="mx-auto"
      />
    </Warning>
-2. El router asignará una dirección IP por **DHCP**, visible en la pantalla principal como: **Stream IP**
-3. Esta IP puede cambiar al reiniciar la consola, salvo que se configure una IP fija.
-4. La configuración de los servicios de streaming puede realizarse de dos formas:
-   - Desde la **pantalla táctil** de la consola.
-   - Desde cualquier computadora en la red, accediendo a la dirección **Stream IP** desde un navegador web.
+2. The router will assign an IP address via **DHCP**, visible on the main screen as: **Stream IP**
+3. This IP may change when restarting the console, unless a static IP is configured.
+4. Streaming services can be configured in two ways:
+   - From the console's **touchscreen**.
+   - From any computer on the network by accessing the **Stream IP** address through a web browser.
 
      <img
        src="/images/ux24/unidex_streaming_ip.jpg"
@@ -83,4 +91,3 @@ Esto abrirá la interfaz web de operación y configuración de la consola. La in
      />
 
 <discovery />
-  

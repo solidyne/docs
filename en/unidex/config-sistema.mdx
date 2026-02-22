@@ -1,14 +1,21 @@
 ---
-title: "Sistema y niveles de acceso"
-description: "Configuraciones de sistema y niveles de acceso "
-keywords: ["configuración", "sistema", "hora", "inicio", "usuarios"]
-tags: ["consolas IP", "UNIDEX"]
+title: "System and access levels"
+description: "System settings and access levels"
+keywords: ["settings", "system", "time", "startup", "users"]
+tags: ["IP consoles", "UNIDEX"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "7a1d7e0fdfe230226aa639b08a5e3cd289be196715cb51f36afde3393ac7e971"
 
 ---
 
-## Configuraciones de sistema
+## System Settings
 
-La opción SYS CONFIG de la pantalla SETTINGS permite configurar distintas funciones de sistema.
+The SYS CONFIG option in the SETTINGS screen allows configuring different system functions.
 
 <img
   src="/images/ux24/unidex-config-sysconfig.jpg"
@@ -19,62 +26,62 @@ La opción SYS CONFIG de la pantalla SETTINGS permite configurar distintas funci
 
 ### **1** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Start On-Air Input
 
-Define la entrada que se pondrá automáticamente al aire si la consola se reinicia debido a una falla en el suministro eléctrico.\
-Para entradas estéreo, se puede seleccionar cualquiera de los canales del par.
+Defines which input will automatically go on-air if the console restarts due to a power failure.\
+For stereo inputs, any channel of the pair can be selected.
 
-La entrada elegida debe estar asignada a un canal físico o virtual. La consola siempre inicia con la última escena utilizada; por lo tanto, si la emisora trabaja en modo automatizado, asegúrese de que la escena seleccionada tenga asignada al menos un canal con la entrada definida para “arranque automático”.
+The chosen input must be assigned to a physical or virtual channel. The console always starts with the last used scene; therefore, if the station works in automated mode, make sure the selected scene has at least one channel assigned with the input defined for "automatic startup".
 
-La fuente de audio conectada a esa entrada también debe reanudarse de forma autónoma.
+The audio source connected to that input must also resume autonomously.
 
 **Default Bus**\
-Indica los buses que se activarán en el canal asignado a la entrada definida en `Start on-air input`.
+Indicates which buses will be activated on the channel assigned to the input defined in `Start on-air input`.
 
 **Level**\
-Nivel preconfigurado, independiente de la posición del fader físico. Si el fader se mueve, el nivel cambiará al valor correspondiente a su posición actual.
+Preset level, independent of the physical fader position. If the fader is moved, the level will change to the value corresponding to its current position.
 
-### **2** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Ajustes de red (acceso remoto)
+### **2** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Network Settings (Remote Access)
 
-Configura la conexión de red para el control remoto a través de Ethernet Control.\
-Por defecto, la consola trabaja en modo **DHCP**. La dirección IP asignada por el router se muestra en la pantalla principal (campo _UNIDEX IP_ en el sector **STATUS**).
+Configures network connection for remote control via Ethernet Control.\
+By default, the console works in **DHCP** mode. The IP address assigned by the router is shown on the main screen (field _UNIDEX IP_ in the **STATUS** section).
 
-Mediante esta IP, es posible acceder a la consola desde cualquier computadora en la misma LAN usando un navegador web.\
-UNIDEX incorpora un servidor HTML5 interno que provee la interfaz gráfica para operar y configurar todas sus funciones.
+Using this IP, the console can be accessed from any computer on the same LAN using a web browser.\
+UNIDEX includes an internal HTML5 server that provides the graphical interface to operate and configure all its functions.
 
 ### **1** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Clock Settings
 
-Abre una ventana para ajustar la hora. El ajuste se puede realizar de tres maneras:
+Opens a window to adjust the time. The adjustment can be done in three ways:
 
-1. **Sincronización automática por puerto STREAMING**\
-   Conecte el puerto Ethernet STREAMING a una LAN con acceso a Internet. La sincronización se realiza automáticamente contra un reloj patrón internacional (UTC), sin intervención del usuario.
-2. **Sincronización automática por puerto CONTROL**\
-   Conecte el puerto Ethernet CONTROL a una LAN con acceso a Internet. Esto sincroniza el reloj interno de la consola (_UX-Core_). Luego, sincronice manualmente la computadora de control (pantalla táctil) pulsando la opción **SYNC FROM UX-CORE**.
-3. **Ajuste manual**\
-   Introduzca la hora manualmente en casos donde no haya acceso a Internet.
+1. **Automatic synchronization via STREAMING port**\
+   Connect the STREAMING Ethernet port to a LAN with Internet access. Synchronization is performed automatically against an international time standard (UTC), without user intervention.
+2. **Automatic synchronization via CONTROL port**\
+   Connect the CONTROL Ethernet port to a LAN with Internet access. This synchronizes the console's internal clock (_UX-Core_). Then manually synchronize the control computer (touch screen) by pressing the **SYNC FROM UX-CORE** option.
+3. **Manual adjustment**\
+   Enter the time manually in cases where there is no Internet access.
 
-**Zona horaria**\
-Defina el huso horario correspondiente en el campo `Time Zone`.
+**Time Zone**\
+Define the corresponding time zone in the `Time Zone` field.
 
 ---
 
-## Usuarios y niveles de acceso
+## Users and Access Levels
 
-Se acceden desde la pantalla **SETTINGS**, en la opción **USERS**.\
-UNIDEX dispone de tres niveles de usuario:
+These are accessed from the **SETTINGS** screen, under the **USERS** option.\
+UNIDEX has three user levels:
 
 - **ADMIN**
 - **EXPERT**
 - **BASIC**
 
-Los perfiles **ADMIN** y **EXPERT** están protegidos por contraseña, definida desde esta pantalla.\
-Solo el usuario **ADMIN** puede modificar contraseñas.\
-Las contraseñas predeterminadas son los nombres de usuario en minúsculas: `admin` y `expert`.
+The **ADMIN** and **EXPERT** profiles are password protected, defined from this screen.\
+Only the **ADMIN** user can modify passwords.\
+Default passwords are the usernames in lowercase: `admin` and `expert`.
 
-#### Cómo iniciar con acceso restringido
+#### How to Start with Restricted Access
 
-La opción `DEFAULT USER` define el usuario que se carga al encender la consola.\
-El usuario predeterminado es **ADMIN** y, en el arranque, el sistema nunca solicita contraseña.
+The `DEFAULT USER` option defines which user is loaded when powering up the console.\
+The default user is **ADMIN** and at startup, the system never requests a password.
 
-Para **restringir el acceso** a funciones avanzadas, se recomienda cambiar el usuario predeterminado (**ADMIN**) a **BASIC** o **EXPERT**, según el nivel de restricción deseado.
+To **restrict access** to advanced functions, it is recommended to change the default user (**ADMIN**) to **BASIC** or **EXPERT**, depending on the desired restriction level.
 
-- Si la consola inicia con nivel **BASIC**, el operador deberá ingresar la contraseña de **EXPERT** o **ADMIN** para acceder a funciones restringidas.
-- Si inicia con nivel **EXPERT**, solo se bloquean las funciones que requieren nivel **ADMIN**.
+- If the console starts with **BASIC** level, the operator must enter the **EXPERT** or **ADMIN** password to access restricted functions.
+- If it starts with **EXPERT** level, only functions requiring **ADMIN** level are locked.

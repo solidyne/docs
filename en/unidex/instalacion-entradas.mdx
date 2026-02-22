@@ -1,62 +1,70 @@
 ---
-title: "Entradas"
-description: "Descripción de las entradas en UNIDEX UX24 y UX18"
-keywords: ["entradas","conexiones","instalación"]
-tags: "consolas IP,UNIDEX"
+title: "Inputs"
+description: "Description of inputs in UNIDEX UX24 and UX18"
+keywords: ["inputs","connections","installation"]
+tags: "IP consoles,UNIDEX"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "48cf08251d319d54bd64e563e6b4e973c4a5189e0aadc1cb4b72b8708ef4542e"
+
 ---
 
 <Tip>
-  Cada entrada se puede asignar a cualquiera de los canales físicos o virtuales.
+  Each input can be assigned to any physical or virtual channel.
 </Tip>
 
-## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Entradas para micrófonos
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Microphone Inputs
 
-Las entradas balanceadas para micrófonos soportan con alimentación _phantom_ **48 V.** La tensión se activa/desactiva para cada canal desde la pantalla.
+The balanced microphone inputs support **48V** _phantom_ power. The voltage can be enabled/disabled for each channel from the screen.
 
-Cada entrada dispone de un **microinterruptor que permite reducir la ganancia del preamplificador en –12 dB**. El interruptor en posición hacia abajo **activa la atenuación**.
+Each input has a **microswitch that allows reducing the preamplifier gain by -12 dB**. The switch in the down position **activates the attenuation**.
 
 <Info>
-  En UX18, la entrada MIC-5 es de nivel fijo.
+  In UX18, the MIC-5 input has fixed level.
 </Info>
 
-## <Icon icon="arrow-right-to-line" iconType="solid" color="#6f07ab" size="22" />  Entradas tipo UNIDEX
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#6f07ab" size="22" />  UNIDEX Type Inputs
 
-Las entradas tipo **UNIDEX** son entradas especiales que, además de audio, transportan **alimentación PoE** y canales de **comunicación de control** para operar los **adaptadores externos** Solidyne **UDX**.
+**UNIDEX** type inputs are special inputs that, in addition to audio, carry **PoE power** and **control communication** channels to operate Solidyne **UDX** external adapters.
 
-Normalmente se utilizan para conectar **adaptadores UDX** que permite agregar micrófonos, líneas telefónicas o teléfonos celulares.
+They are normally used to connect **UDX adapters** that allow adding microphones, telephone lines or mobile phones.
 
-Las entradas UNIDEX también **se pueden usar como entradas balanceadas** convencionales. Cada conector de entrada UNIDEX contiene la señales balanceadas izquierda y derecha.
+UNIDEX inputs can also **be used as conventional balanced inputs**. Each UNIDEX input connector contains left and right balanced signals.
 
-## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Entradas analógicas balanceadas
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Balanced Analog Inputs
 
-- Cada entrada utiliza un **único cable** STP que transporta las señales balanceadas **izquierda y derecha**.
-- En el extremo, el RJ45 se adapta al tipo de conector de audio necesario (XLR, TRS, RCA).
+- Each input uses a **single** STP cable that carries the **left and right** balanced signals.
+- At the end, the RJ45 adapts to the required audio connector type (XLR, TRS, RCA).
 
-Para conectar una fuente en **modo desbalanceado**, se debe utilizar un **cable adaptador adecuado**, conectando:
+To connect a source in **unbalanced mode**, an **appropriate adapter cable** must be used, connecting:
 
-- El terminal de señal **(–)** a la **malla** del cable.
-- El terminal de señal **(+)** como el **vivo** de la señal.
+- The **(-)** signal terminal to the cable **shield**.
+- The **(+)** signal terminal as the signal **hot**.
 
-## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Entradas digitales AES3
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  AES3 Digital Inputs
 
-- Se conectan mediante cable **RJ45–RJ45 CAT5**, utilizando el adaptador **SOL-F3/XLRF**.
-- Para facilitar la compatibilidad del cableado, emplean el **mismo pin-out** que las entradas balanceadas estéreo, aunque el cable **solo utiliza el canal izquierdo** para la señal AES3.
-- Soportan señales **S/PDIF**.
+- Connected using **RJ45-RJ45 CAT5** cable, using the **SOL-F3/XLRF** adapter.
+- To facilitate wiring compatibility, they use the **same pin-out** as stereo balanced inputs, although the cable **only uses the left channel** for the AES3 signal.
+- Support **S/PDIF** signals.
 
 <Note>
-  Cuando se habilita la función de bajada de streaming, el audio decodificado reemplaza internamente a la entrada **AES1**. El conector **AES-1** del panel trasero queda automáticamente desconectado.
+  When the streaming downlink function is enabled, the decoded audio internally replaces the **AES1** input. The rear panel **AES-1** connector is automatically disconnected.
 </Note>
 
-## Entrada para sintonizador externo
+## External Tuner Input
 
-La consola dispone de una **entrada estéreo para sintonizador externo** (ON AIR MONITOR) mediante conector \*\*TRS de 1/4” \*\*(no balanceado). Esta entrada está disponible en la asignación de monitoreo para el Estudio y el Control, permitiendo escuchar directamente la señal sintonizada.
+The console has a **stereo input for external tuner** (ON AIR MONITOR) via **1/4" TRS** connector (unbalanced). This input is available in the monitoring assignment for both Studio and Control Room, allowing direct monitoring of the tuned signal.
 
 <Tip>
-  En FM, es importante que tanto en los estudios como en la cabina de control, el monitoreo se realice con la señal **de aire procesada**, no desde el bus PGM directo. Esto permite detectar errores reales de emisión y brinda una escucha más confortable, sin saltos de volumen que pueden ocurrir en la señal directa.
+  For FM, it is important that both in the studios and control room, monitoring is done with the **processed on-air signal**, not from the direct PGM bus. This allows detecting actual broadcast errors and provides more comfortable listening, without volume jumps that may occur in the direct signal.
 </Tip>
 
 <Note>
-  En **UX18** la entrada **ON AIR MONITOR** también se puede asignar a un canal; de modo que opera como una entrada auxiliar adicional cuando no se usa para monitoreo de emisión de aire.
+  In **UX18** the **ON AIR MONITOR** input can also be assigned to a channel; thus operating as an additional auxiliary input when not used for on-air monitoring.
 
-  Cuando se asigna a un canal, sigue disponible como fuente elegible en la sección de monitoreo.
+  When assigned to a channel, it remains available as a selectable source in the monitoring section.
 </Note>

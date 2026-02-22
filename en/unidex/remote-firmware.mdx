@@ -1,28 +1,36 @@
 ---
-title: "Actualización del firmware"
-description: "Procedimiento para actualizar firmware en la consola"
+title: "Firmware Update"
+description: "Console firmware update procedure"
 keywords: ["firmware"]
-tags: "consolas IP,UNIDEX"
+tags: "IP consoles,UNIDEX"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "039cc35563601b66a1ab78f9eb5754bb04d810f03538d0ed3c434c8635e9f751"
+
 ---
 
 import discovery from '/snippets/discovery.mdx';
 
-### Actualización de software
+### Software Update
 
-Los modelos de UX24 **fabricados desde 2023**  permiten actualizar el software accediendo a la interfaz web desde una computadora con acceso a Internet.\
-Para modelos anteriores, que no incluyan esta función, escriba a: [**info@solidyne.ar**](mailto:info@solidyne.ar).
+UX24 models **manufactured since 2023** allow software updates through the web interface from a computer with Internet access.\
+For earlier models without this feature, please contact: [**info@solidyne.ar**](mailto:info@solidyne.ar).
 
-**Componentes que pueden actualizarse:**
+**Components that can be updated:**
 
-- Firmware del motor de mezcla (hardware).
-- Interfaz gráfica.
-- Herramientas de streaming.
+- Mixing engine firmware (hardware).
+- Graphical interface.
+- Streaming tools.
 
-#### Procedimiento de actualización
+#### Update Procedure
 
-1. Conecte a la red local los puertos **Ethernet Streaming Out** y **Remote Control** de la consola.
-2. Asegúrese de que la red tenga **acceso a Internet**.
-3. En la pantalla principal de la consola, verifique la dirección IP asignada a **STREAMING IP**.
+1. Connect the console's **Ethernet Streaming Out** and **Remote Control** ports to the local network.
+2. Ensure the network has **Internet access**.
+3. On the console's main screen, check the IP address assigned to **STREAMING IP**.
 
 <img
   src="/images/ux24/unidex_streaming_ip.jpg"
@@ -33,9 +41,9 @@ Para modelos anteriores, que no incluyan esta función, escriba a: [**info@solid
 
 <discovery />
 
- 4. En el navegador, ingrese la dirección IP seguida de `/update`.\
-    Ejemplo: `192.168.0.88/update`
- 5. Pulse **Enter** para abrir la pantalla de actualizaciones.
+ 4. In the browser, enter the IP address followed by `/update`.\
+    Example: `192.168.0.88/update`
+ 5. Press **Enter** to open the updates screen.
 
     <img
       src="/images/ux24/ux24-update-firmware.png"
@@ -43,12 +51,12 @@ Para modelos anteriores, que no incluyan esta función, escriba a: [**info@solid
       title="UNIDEX Firmware Update"
       style={{ width:"61%" }}
     />
- 6. Haga clic en **CHECK FOR UPDATES**.
- 7. Si no hay actualizaciones, el sistema informará que está al día.
- 8. Si hay actualizaciones disponibles, se mostrará un listado con los detalles.
- 9. Las actualizaciones **no se instalan automáticamente**.
-10. Para instalar una actualización, pulse **INSTALL**.
+ 6. Click **CHECK FOR UPDATES**.
+ 7. If no updates are available, the system will inform you that it is up to date.
+ 8. If updates are available, a list with details will be displayed.
+ 9. Updates are **not installed automatically**.
+10. To install an update, press **INSTALL**.
 
     <Warning>
-      Dependiendo del tipo de actualización, la consola podrá reiniciarse, interrumpiendo la señal al aire por algunos segundos.
+      Depending on the type of update, the console may restart, interrupting the on-air signal for a few seconds.
     </Warning>

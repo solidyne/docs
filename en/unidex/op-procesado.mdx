@@ -1,54 +1,62 @@
 ---
-title: "Procesado de audio"
-description: "Procesadores de audio integrados en UX24 y UX18"
-keywords: ["operación", "procesado", "eq", "dynamics", "deesser", "process"]
-tags: ["consolas IP", "UNIDEX"]
+title: "Audio Processing"
+description: "Audio processors integrated in UX24 and UX18"
+keywords: ["operation", "processing", "eq", "dynamics", "deesser", "process"]
+tags: ["IP consoles", "UNIDEX"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a198e2994294a0eb01001afefcc7893d7813ee329096a446647cf11d7e634f45"
+
 ---
 
-## PANTALLA PROCESS
+## PROCESS SCREEN
 
-Para acceder, pulsar **PROCESS** en la pantalla principal. Esto activa además el **modo SELECT** para elegir un canal.
+Press **PROCESS** on the main screen to access. This also activates **SELECT mode** to choose a channel.
 
 <img
   src="/images/ux24/ux24-pantalla-processs.jpg"
-  alt="UNIDEX Pantalla Processs"
-  title="UNIDEX Pantalla Processs"
+  alt="UNIDEX Process Screen"
+  title="UNIDEX Process Screen"
   style={{ width:"65%" }}
   className="mr-auto"
 />
 
-Los procesadores están **fijos en cada entrada**, no en el canal. No pueden reasignarse a otros canales, buses o salidas. Los procesos disponibles dependen del **tipo de entrada** asignada al canal.
+Processors are **fixed to each input**, not to the channel. They cannot be reassigned to other channels, buses or outputs. Available processes depend on the **input type** assigned to the channel.
 
-| **ENTRADA** | **EQ \+ Filtros** | **Comp. \+ Gate** | **De-esser** |
+| **INPUT** | **EQ \+ Filters** | **Comp. \+ Gate** | **De-esser** |
 | :---------: | :---------------: | :---------------: | :----------: |
-| MIC         | 4 bandas          | **sí**            | **sí**       |
-| UNIDEX      | 3 bandas          | **sí**            | no           |
-| USB         | 3 bandas          | no                | no           |
-| AES3        | 3 bandas          | no                | no           |
-| BALANCED    | 3 bandas          | no                | no           |
+| MIC         | 4 bands           | **yes**           | **yes**      |
+| UNIDEX      | 3 bands           | **yes**          | no           |
+| USB         | 3 bands          | no                | no           |
+| AES3        | 3 bands          | no                | no           |
+| BALANCED    | 3 bands          | no                | no           |
 
-**Funciones de la pantalla PROCESS**
+**PROCESS screen functions**
 
-- Ver qué procesadores hay en el canal y si están activos o en **BYPASS**.
-- Activar/desactivar un procesador tocando **BYPASS**.
-- Acceder a sus ajustes tocando el ícono o el botón contextual.
+- View which processors are on the channel and if they are active or in **BYPASS**.
+- Enable/disable a processor by touching **BYPASS**.
+- Access settings by touching the icon or contextual button.
 
-**Selección de canal**
+**Channel selection**
 
-- En modo SELECT, usar **CUE/SELECT** en la mesa o el **encoder** para recorrer los 24 canales (físicos en celeste, virtuales en violeta).
-- Cualquier acción en PROCESS cancela SELECT, aplicando cambios al canal activo.
-- Desde PROCESS también se puede activar SELECT y elegir otro canal.
+- In SELECT mode, use **CUE/SELECT** on the console or the **encoder** to scroll through all 24 channels (physical in cyan, virtual in purple).
+- Any action in PROCESS cancels SELECT, applying changes to the active channel.
+- SELECT can also be activated from PROCESS to choose another channel.
 
-**Ajuste de parámetros:**\
-Se realiza combinando el **encoder** y las **opciones táctiles**, según lo indicado para cada procesador.
+**Parameter adjustment:**\
+Done by combining the **encoder** and **touch options**, as indicated for each processor.
 
 <Note>
-  Los ajustes del los procesos se pueden **guardar en la escena** .
+  Process settings can be **saved in the scene**.
 </Note>
 
 ---
 
-## ECUALIZADOR PARAMÉTRICO
+## PARAMETRIC EQUALIZER
 
 <img
   src="/images/ux24/ux24-EQ.png"
@@ -57,42 +65,42 @@ Se realiza combinando el **encoder** y las **opciones táctiles**, según lo ind
   style={{ width:"71%" }}
 />
 
-**1 - NOMBRE:** Indica número y nombre del canal. Los canales virtuales muestran la zona de nombre en violeta.
+**1 - NAME:** Shows channel number and name. Virtual channels display the name area in purple.
 
-**2 - BANDAS:** Selección de banda. En pantalla se muestran los parámetros de una banda a la vez.\
-Cada banda tiene un color que la identifica en el gráfico y en la zona de parámetros.\
-Todas las entradas tienen 3 bandas paramétricas, excepto las entradas MIC-1 a MIC-4 que cuentan con cuatro bandas.
+**2 - BANDS:** Band selection. Screen shows parameters for one band at a time.\
+Each band has a color that identifies it in the graph and parameter area.\
+All inputs have 3 parametric bands, except MIC-1 to MIC-4 inputs which have four bands.
 
-**3 - CONTROLES:** Parámetros de cada banda de EQ. El color de fondo cambia con la banda seleccionada.
+**3 - CONTROLS:** Parameters for each EQ band. Background color changes with selected band.
 
-- **GAIN:** Ganancia en dB, con un rango de ± 9 dB.
-- **FREQ:** Ajusta la frecuencia de trabajo. Todas las bandas cubren de 20 Hz a 20 kHz.
-- **Q:** Ancho de la campana del EQ. Determina la precisión de la corrección aplicada.
-- **TYPE:** Modo de trabajo de la banda. Se conmuta tocando la opción TYPE en pantalla.
-  - Banda #1: peak, low-shelf o HPF.
-  - Banda #2 (y #3 en entradas de micrófono): peak o HPF/LPF.
-  - Banda #3 (#4 en entradas de mic): peak, hi-shelf o LPF.
-- **ON/OFF:** Encendido/apagado de la banda. Se conmuta tocando ON/OFF en pantalla.
+- **GAIN:** Gain in dB, with a range of ± 9 dB.
+- **FREQ:** Adjusts working frequency. All bands cover 20 Hz to 20 kHz.
+- **Q:** EQ bell width. Determines precision of applied correction.
+- **TYPE:** Band operation mode. Toggle by touching TYPE on screen.
+  - Band #1: peak, low-shelf or HPF.
+  - Band #2 (and #3 on microphone inputs): peak or HPF/LPF.
+  - Band #3 (#4 on mic inputs): peak, hi-shelf or LPF.
+- **ON/OFF:** Band enable/disable. Toggle by touching ON/OFF on screen.
 
-**4 - BY-PASS:** Deshabilita toda la etapa de ecualización. También aparece en la pantalla PROCESS.\
-Se conmuta tocando BY-PASS en pantalla.
+**4 - BY-PASS:** Disables entire equalization stage. Also appears on PROCESS screen.\
+Toggle by touching BY-PASS on screen.
 
-**5 - SELECT:** Activa el modo selección de canal.
+**5 - SELECT:** Activates channel selection mode.
 
-**6 - BACK:** Retorna a la pantalla anterior.
+**6 - BACK:** Returns to previous screen.
 
-### Filtros Pasa-Alto / Pasa-Bajo
+### High-Pass / Low-Pass Filters
 
-- Banda #1 puede funcionar como filtro pasa-alto (HPF) de 2º orden (12 dB/oct).
-- Banda #3 (Banda #4 en entradas MIC-1 a MIC-4) puede funcionar como filtro pasa-bajo (LPF) de 2º orden (12 dB/oct).
-- Banda #2 (y Banda #3 en entradas MIC-1 a MIC-4) puede trabajar como HPF o LPF.\
-  Si se configuran dos bandas como pasa-alto o pasa-bajo en la misma frecuencia, la atenuación total del corte será de **24 dB/oct**.
+- Band #1 can function as 2nd order high-pass filter (HPF) (12 dB/oct).
+- Band #3 (Band #4 on MIC-1 to MIC-4 inputs) can function as 2nd order low-pass filter (LPF) (12 dB/oct).
+- Band #2 (and Band #3 on MIC-1 to MIC-4 inputs) can work as HPF or LPF.\
+  If two bands are configured as high-pass or low-pass at the same frequency, total cutoff attenuation will be **24 dB/oct**.
 
 ---
 
 ## DYNAMICS
 
-El procesador **DYNAMIC** incluye una **compuerta de ruido** y un \*\*compresor \*\*dinámico.
+The **DYNAMIC** processor includes a **noise gate** and a **compressor**.
 
 <img
   src="/images/ux24/ux24-dynamics.jpg"
@@ -101,29 +109,29 @@ El procesador **DYNAMIC** incluye una **compuerta de ruido** y un \*\*compresor 
   style={{ width:"65%" }}
 />
 
-**1 - CURVA DE COMPRESIÓN:** Muestra gráficamente la relación entrada-salida del procesador dinámico, incluyendo la compuerta (gate) y el compresor.
+**1 - COMPRESSION CURVE:** Graphically shows input-output relationship of dynamic processor, including gate and compressor.
 
-**2 - NIVEL DE ENTRADA:** Indica el nivel de pico de la señal en la entrada del compresor (dBfs).
+**2 - INPUT LEVEL:** Shows peak signal level at compressor input (dBfs).
 
-### 3 - Compuerta de Ruido (GATE)
+### 3 - Noise Gate
 
-- **Threshold:** Umbral de acción de la compuerta (dB).
-- **Attenuation:** Atenuación aplicada a la señal cuando la compuerta está activa.
-- **Style:** Cambia el tiempo de recuperación entre valores preestablecidos.
-- **Active:** Indicador que se enciende en rojo cuando la compuerta está cerrada.
+- **Threshold:** Gate activation threshold (dB).
+- **Attenuation:** Applied signal attenuation when gate is active.
+- **Style:** Changes recovery time between preset values.
+- **Active:** Indicator lights red when gate is closed.
 
-### 4 - Compresor dinámico
+### 4 - Dynamic Compressor
 
-Controles para ajuste de:
+Controls for adjusting:
 
-- Umbral (threshold)
-- Relación (ratio)
-- Tiempo de ataque (attack)
-- Tiempo de recuperación (release)
-- Retención (hold)
-- Nivel de salida (output gain)
+- Threshold
+- Ratio
+- Attack time
+- Release time
+- Hold
+- Output gain
 
-**5 - BYPASS:** Desactiva por completo la etapa de procesado dinámico (compuerta \+ compresor).
+**5 - BYPASS:** Completely disables dynamic processing stage (gate \+ compressor).
 
 ---
 
@@ -136,13 +144,13 @@ Controles para ajuste de:
   style={{ width:"65%" }}
 />
 
-Las entradas **MIC-1** a **MIC-4** cuentan con un **de-esser** para reducción de sibilancias.\
-Este procesador funciona como un compresor multibanda, atenuando únicamente el rango de frecuencias definido cuando el nivel de la señal supera el umbral establecido.
+**MIC-1** to **MIC-4** inputs include a **de-esser** for sibilance reduction.\
+This processor works as a multiband compressor, attenuating only the defined frequency range when signal level exceeds the set threshold.
 
-**Controles:**
+**Controls:**
 
-- **1 - Type:** Ajustes preestablecidos.
-- **2 - Frequency start:** Frecuencia de corte inferior. Se ajusta según las características de la voz. Usualmente entre 4.500 y 5.500 Hz.
-- **3 - Frequency end:** Frecuencia de corte superior. Se ajusta según las características de la voz. Usualmente entre 7.000 y 10.000 Hz.
-- **4 - Threshold:** Nivel de umbral en dB. Cuando la señal en la banda de trabajo supera este valor, es atenuada con una **relación fija de 15:1**.
-- **5 - Gain reduction:** Indica la reducción de nivel aplicada, en dB.
+- **1 - Type:** Preset settings.
+- **2 - Frequency start:** Lower cutoff frequency. Adjusted according to voice characteristics. Usually between 4,500 and 5,500 Hz.
+- **3 - Frequency end:** Upper cutoff frequency. Adjusted according to voice characteristics. Usually between 7,000 and 10,000 Hz.
+- **4 - Threshold:** Threshold level in dB. When signal in working band exceeds this value, it is attenuated with a **fixed 15:1 ratio**.
+- **5 - Gain reduction:** Shows applied level reduction in dB.

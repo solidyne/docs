@@ -1,80 +1,88 @@
 ---
 title: "USB Audio"
-description: "Instalación del puerto USB"
-keywords: ["instalación", "USB"]
-tags: ["consolas IP", "UNIDEX"]
+description: "USB Port Installation"
+keywords: ["installation", "USB"]
+tags: ["IP consoles", "UNIDEX"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d9d59fdf2388eb3f30f5413f576407c2e877812500f2e12197e8abca673c6df4"
+
 ---
 
-El puerto **USB** incorporado permite el intercambio de señales estéreo entre la consola y un computador con Windows 10.
+The built-in **USB** port enables stereo signal exchange between the console and a Windows 10 computer.
 
-- <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} /> Proporciona **4 dispositivos de reproducción estéreo** (de PC hacia "entradas USB" en la consola).
-- <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} /> Proporciona **4 dispositivos de grabación estéreo** ("salidas USB" de la consola hacia la PC).
+- <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} /> Provides **4 stereo playback devices** (from PC to "USB inputs" on the console).
+- <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} /> Provides **4 stereo recording devices** ("USB outputs" from console to PC).
 
-Es decir, la computadora puede **enviar 4 señales estéreo** a la consola, y **recibir otras 4 señales estéreo** desde ella.
+This means the computer can **send 4 stereo signals** to the console and **receive 4 stereo signals** from it.
 
 <Info>
-  Aunque USB es técnicamente un puerto de datos, en este contexto lo referimos como **entradas y salidas de audio USB**.
+  Although USB is technically a data port, in this context we refer to it as **USB audio inputs and outputs**.
 
-  - Las “**salidas USB**” de la consola corresponden a **dispositivos USB de grabaciópn** en Windows.
-  - Las “**entradas USB**” de la consola corresponden a \*\*dispositivos USB de reproducción \*\*en Windows.
+  - The console's "**USB outputs**" correspond to **USB recording devices** in Windows.
+  - The console's "**USB inputs**" correspond to **USB playback devices** in Windows.
 
-    Tener esto en mente es fundamental para comprender correctamente el flujo de señales.
+    Understanding this is essential to properly comprehend the signal flow.
 </Info>
 
-La asignación de señales hacia las salidas USB (es decir, los dispositivos de grabación USB en Windows) se configura desde la consola en la pantalla `SETTINGS → OUTPUTS`
+Signal routing to USB outputs (i.e., USB recording devices in Windows) is configured from the console in the `SETTINGS → OUTPUTS` screen
 
 <Warning>
-  La siguiente descripción se refiere al **conector USB incorporado** en el Panel Trasero.\
-  Para instalar un **adaptador externo UDX-USB**, consultar la sección: **Adaptadores externos UNIDEX**
+  The following description refers to the **built-in USB connector** on the Rear Panel.\
+  To install an external **UDX-USB adapter**, refer to the section: **External UNIDEX Adapters**
 </Warning>
 
 ---
 
-## Instalación del controlador USB
+## USB Driver Installation
 
-UX24 requiere un controlador USB propio para establecer comunicación con el sistema operativo Windows.
+UX24 requires its own USB driver to establish communication with the Windows operating system.
 
-### Pasos para la instalación:
+### Installation steps:
 
-1. Conectar el puerto USB de la consola al PC utilizando el cable **USB A/B** suministrado.
+1. Connect the console's USB port to the PC using the supplied **USB A/B** cable.
 
 <Danger>
-  El uso de cables de **mala calidad o dañados** puede provocar que el computador no reconozca correctamente el dispositivo USB o lo identifique con fallos.
+  Using **poor quality or damaged** cables may cause the computer to incorrectly recognize the USB device or identify it with errors.
 </Danger>
 
-2. Descargar el controlador desde:\
+2. Download the driver from:\
    https://solidynepro.com/DW/Solidyne_UsbAudio.zip
-3. Ejecutar el instalador y seguir las instrucciones.
+3. Run the installer and follow the instructions.
 
-### Dispositivos USB en Windows
+### USB Devices in Windows
 
-Una vez instalado el driver correctamente, Windows mostrará:
+Once the driver is properly installed, Windows will show:
 
-Dispositivos de reproducción (salidas desde la PC hacia UX24):
+Playback devices (outputs from PC to UX24):
 
-- **Solidyne USB OUT 1 →** Entrada USB 1 (UX24)
-- **Solidyne USB OUT 2 →** Entrada USB 2 (UX24)
-- **Solidyne USB OUT 3 →** Entrada USB 3 (UX24)
-- **Solidyne USB OUT 4 →** Entrada USB 4 (UX24)
+- **Solidyne USB OUT 1 →** USB Input 1 (UX24)
+- **Solidyne USB OUT 2 →** USB Input 2 (UX24)
+- **Solidyne USB OUT 3 →** USB Input 3 (UX24)
+- **Solidyne USB OUT 4 →** USB Input 4 (UX24)
 
-Dispositivos de grabación (envíos desde UX24 hacia la PC):
+Recording devices (sends from UX24 to PC):
 
-- **Solidyne USB IN 1 ←** Salida USB 1 (UX24)
-- **Solidyne USB IN 2 ←** Salida USB 2 (UX24)
-- **Solidyne USB IN 3 ←** Salida USB 3 (UX24)
-- **Solidyne USB IN 4 ←** Salida USB 4 (UX24)
+- **Solidyne USB IN 1 ←** USB Output 1 (UX24)
+- **Solidyne USB IN 2 ←** USB Output 2 (UX24)
+- **Solidyne USB IN 3 ←** USB Output 3 (UX24)
+- **Solidyne USB IN 4 ←** USB Output 4 (UX24)
 
-Estas salidas se asignan desde la pantalla en: `SETTINGS → OUTPUTS`
+These outputs are assigned from the screen at: `SETTINGS → OUTPUTS`
 
 ---
 
-## Compatibilidad con ASIO 3.0
+## ASIO 3.0 Compatibility
 
-La consola **UX24 soporta ASIO 3.0**, lo que permite compartir simultáneamente el uso de los canales USB entre distintas aplicaciones.
+The **UX24 console supports ASIO 3.0**, allowing simultaneous sharing of USB channels between different applications.
 
-### Ejemplo de aplicación avanzada:
+### Advanced application example:
 
-- El software de automatización reproduce música por el canal **USB 1**.
-- Otro software de procesamiento (como un host de efectos) toma el canal **USB 2** de retorno desde la consola y aplica **efectos VST** en tiempo real a las voces de micrófono.
+- Automation software plays music through **USB 1** channel.
+- Another processing software (like an effects host) takes the **USB 2** channel returning from the console and applies real-time **VST effects** to microphone voices.
 
-<Icon icon="video" iconType="solid" color="#b30000" size={25} />  [Uso de efectos externos VST ](https://youtu.be/qKi0MMbBEuc?si=j2B0-sSk--1DxuZE)
+<Icon icon="video" iconType="solid" color="#b30000" size={25} />  [Using external VST effects](https://youtu.be/qKi0MMbBEuc?si=j2B0-sSk--1DxuZE)

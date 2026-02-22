@@ -1,14 +1,22 @@
 ---
-title: "Vincular un móvil Bluetooth"
-description: "Pairing: vincular un móvil Bluetooth."
-keywords: ["Bluetooth", "pairing", "emparejar", "vincular"]
-tags: ["hibridos", "BLT200"]
+title: "Pairing a Bluetooth mobile device"
+description: "Pairing: linking a Bluetooth mobile device."
+keywords: ["Bluetooth", "pairing", "link", "connect"]
+tags: ["hybrids", "BLT200"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "bd101bfff2913805afd4c117194ee8c01c4f6dc44dd6a470f1a2825d26dd8c39"
+
 ---
 
-## Conceptos generales
+## General concepts
 
-Cualquier teléfono móvil puede conectarse a BLT200 vía Bluetooth.\
-La interfaz dispone de dos dispositivos Bluetooth denominados **A** y **B**.
+Any mobile phone can connect to BLT200 via Bluetooth.\
+The interface has two Bluetooth devices labeled **A** and **B**.
 
 <img
   src="/images/blt200/UDX-BLT-200FRONT.jpg"
@@ -18,106 +26,106 @@ La interfaz dispone de dos dispositivos Bluetooth denominados **A** y **B**.
   style={{ width:"52%" }}
 />
 
-Cada canal tiene su propio control rotativo de nivel de salida.\
-En el teléfono, el volumen Bluetooth debe ajustarse siempre al máximo para obtener la mejor relación señal/ruido (ver más adelante).
+Each channel has its own rotary output level control.\
+On the phone, Bluetooth volume should always be set to maximum for the best signal-to-noise ratio (see below).
 
-Los botones **CONTROL A** y **CONTROL B** son luminosos y destellan con distinta cadencia según el estado del Bluetooth.
+The **CONTROL A** and **CONTROL B** buttons are illuminated and flash at different patterns depending on the Bluetooth status.
 
-### Modos de iluminación del botón CONTROL
+### CONTROL button lighting modes
 
-| Modo | Estado                                                                  | Indicación                                                                                        |
-| :--: | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| A    | Móvil conectado (sin llamada activa)                                    | Encendido breve (1s) en amarillo, apagado largo (2s).                                             |
-| B    | Llamada en curso / Móvil no conectado (Bluetooth encendido sin vínculo) | Encendido lento (2s) en amarillo, apagado corto (1s). Cuando se conecta un móvil vuelve a modo A. |
-| C    | Modo búsqueda (Pairing)                                                 | Destello rápido en amarillo.                                                                      |
-| D    | Llamada entrante                                                        | Encendido permanente en azul.                                                                     |
+| Mode | Status                                                      | Indication                                                                                    |
+| :--: | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| A    | Mobile connected (no active call)                            | Brief yellow ON (1s), long OFF (2s).                                                          |
+| B    | Call in progress / Mobile not connected (Bluetooth ON unpaired) | Slow yellow ON (2s), short OFF (1s). Returns to mode A when a mobile connects.               |
+| C    | Search mode (Pairing)                                       | Fast yellow flashing.                                                                        |
+| D    | Incoming call                                               | Solid blue.                                                                                  |
 
 <Info>
-  No confundir estas tres acciones:
+  Do not confuse these three actions:
 
-  - **Activar/desactivar Bluetooth en el móvil**: habilita o deshabilita el sistema Bluetooth del teléfono.
-  - **Vincular (Pairing)**: el móvil detecta y registra por primera vez un dispositivo externo (ej.: auriculares, manos libres, canal A o B del BLT200).
-  - **Conectar/desconectar**: el móvil se conecta a un dispositivo ya vinculado. Esta acción no requiere repetir el emparejamiento.\
-    Cuando el móvil tiene Bluetooth activado, puede conectarse o desconectarse fácilmente de los dispositivos vinculados desde la lista de dispositivos registrados.\
-    Los dispositivos no vinculados previamente no aparecerán en esa lista.
+  - **Enable/disable Bluetooth on mobile**: enables or disables the phone's Bluetooth system.
+  - **Pairing**: the mobile detects and registers an external device for the first time (e.g.: headphones, hands-free, BLT200 channel A or B).
+  - **Connect/disconnect**: the mobile connects to an already paired device. This action does not require re-pairing.\
+    When Bluetooth is enabled on the mobile, it can easily connect or disconnect from paired devices through the registered devices list.\
+    Devices not previously paired will not appear in that list.
 </Info>
 
-## Emparejar un móvil con BLT200
+## Pairing a mobile with BLT200
 
-Para vincular un canal Bluetooth con un móvil, siga estos pasos:
+To pair a Bluetooth channel with a mobile, follow these steps:
 
 <Steps>
-  <Step title="Apagar Bluetooth en BLT200">
-    Verifique que el canal que desea vincular (A o B) esté apagado.\
-    Si el botón CONTROL destella, mantenga presionado hasta que se apague.
+  <Step title="Turn off Bluetooth on BLT200">
+    Verify that the channel you want to pair (A or B) is off.\
+    If the CONTROL button is flashing, press and hold until it turns off.
   </Step>
-  <Step title="Activar modo emparejamiento">
-    Desde Bluetooth apagado, mantenga presionado el botón CONTROL unos 8 segundos.\
-    La luz pasará de parpadeo lento a parpadeo rápido en amarillo.\
-    Esto indica que el canal entró en modo **Pairing**.
+  <Step title="Activate pairing mode">
+    From Bluetooth off, press and hold the CONTROL button for about 8 seconds.\
+    The light will change from slow to fast yellow flashing.\
+    This indicates the channel has entered **Pairing** mode.
   </Step>
-  <Step title="Buscar dispositivos desde el móvil">
-    En el teléfono, active Bluetooth y busque nuevos dispositivos.\
-    Según el modelo de móvil, este procedimiento puede variar.
+  <Step title="Search for devices from mobile">
+    On the phone, enable Bluetooth and search for new devices.\
+    This procedure may vary depending on the mobile model.
   </Step>
-  <Step title="Seleccionar el dispositivo">
-    Aparecerán **Solidyne BLT-A** y **Solidyne BLT-B**.\
-    Seleccione el correspondiente según el canal a usar.
+  <Step title="Select the device">
+    **Solidyne BLT-A** and **Solidyne BLT-B** will appear.\
+    Select the corresponding one according to the channel to be used.
   </Step>
 </Steps>
 
 <Tip>
-  En el móvil es posible cambiar el nombre “Solidyne BLT-A” o “Solidyne BLT-B” para diferenciar mejor los canales o las unidades BLT200 en uso.
+  On the mobile, it's possible to change the name "Solidyne BLT-A" or "Solidyne BLT-B" to better differentiate channels or BLT200 units in use.
 </Tip>
 
-Una vez emparejado, el botón CONTROL destella lentamente en amarillo (modo conectado sin llamada).\
-El emparejamiento se mantiene mientras se use el mismo móvil en ese canal.\
-Para vincular otro móvil o el mismo en el otro canal, repita el procedimiento.
+Once paired, the CONTROL button flashes slowly in yellow (connected mode without call).\
+The pairing is maintained while using the same mobile on that channel.\
+To pair another mobile or the same one on the other channel, repeat the procedure.
 
 <Warning>
-  Un mismo móvil puede vincularse a ambos canales A y B, pero solo puede estar **conectado** a uno de ellos a la vez.\
-  Tampoco es posible conectar simultáneamente dos móviles a un mismo canal.
+  A single mobile can be paired to both A and B channels, but can only be **connected** to one of them at a time.\
+  It's also not possible to simultaneously connect two mobiles to the same channel.
 </Warning>
 
-### Distancia al móvil
+### Distance to mobile
 
-Aunque el alcance es de hasta 3 metros, se recomienda mantener el teléfono cerca de la interfaz, pero nunca apoyado directamente sobre el BLT200.
-
----
-
-## Re-conectar un móvil ya vinculado
-
-Un móvil previamente emparejado puede desconectarse de BLT200 en varias situaciones:
-
-- **Si se apaga Bluetooth en el móvil.**\
-  Normalmente esto transfiere la llamada en curso al teléfono.\
-  Al volver a encender Bluetooth, la reconexión puede ser automática o manual según el modelo.
-- **Si durante una llamada se desconecta el canal Bluetooth en el teléfono.**\
-  La llamada pasa al teléfono.\
-  Al reconectar, vuelve al BLT200.
-- **Si se activa el modo “Altavoz” en el teléfono.**\
-  Esto quita la llamada de BLT200 y la pasa al teléfono.\
-  Al reactivar Bluetooth, la llamada vuelve al BLT200.
-- **Si se apaga el canal Bluetooth en BLT200.**
-
-La reconexión no será posible si ese canal fue emparejado con otro teléfono y este último se encuentra conectado.
+Although the range is up to 3 meters, it's recommended to keep the phone close to the interface, but never placed directly on top of the BLT200.
 
 ---
 
-## Ajuste del volumen
+## Re-connecting a previously paired mobile
+
+A previously paired mobile can disconnect from BLT200 in several situations:
+
+- **If Bluetooth is turned off on the mobile.**\
+  This normally transfers the ongoing call to the phone.\
+  When turning Bluetooth back on, reconnection can be automatic or manual depending on the model.
+- **If during a call the Bluetooth channel is disconnected on the phone.**\
+  The call transfers to the phone.\
+  Upon reconnecting, it returns to BLT200.
+- **If "Speaker" mode is activated on the phone.**\
+  This removes the call from BLT200 and transfers it to the phone.\
+  When reactivating Bluetooth, the call returns to BLT200.
+- **If the Bluetooth channel is turned off on BLT200.**
+
+Reconnection will not be possible if that channel was paired with another phone and the latter is connected.
+
+---
+
+## Volume adjustment
 
 <Warning>
-  En el teléfono, el volumen Bluetooth debe ajustarse siempre al máximo para asegurar una adecuada recepción y la mejor relación señal/ruido.
+  On the phone, Bluetooth volume should always be set to maximum to ensure proper reception and the best signal-to-noise ratio.
 </Warning>
 
-El ajuste debe realizarse durante una llamada establecida por Bluetooth.\
-El volumen del altavoz del móvil es independiente del volumen Bluetooth: si se ajusta fuera de una llamada, solo se modifica el altavoz, no la transmisión Bluetooth.
+The adjustment must be made during an established Bluetooth call.\
+The phone's speaker volume is independent of Bluetooth volume: if adjusted outside a call, it only modifies the speaker, not the Bluetooth transmission.
 
-El nivel de Bluetooth queda guardado en el teléfono.\
-Si se vincula un nuevo móvil, asegúrese de volver a ajustar el volumen al máximo.
+The Bluetooth level is stored in the phone.\
+If a new mobile is paired, make sure to readjust the volume to maximum.
 
 ---
 
-## Apagar Bluetooth en BLT200
+## Turning off Bluetooth on BLT200
 
-Para apagar un canal Bluetooth, mantener pulsado el botón CONTROL correspondiente hasta que deje de destellar.
+To turn off a Bluetooth channel, press and hold the corresponding CONTROL button until it stops flashing.

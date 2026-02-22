@@ -1,52 +1,60 @@
 ---
-title: "Encendido, apagado y resets"
-description: "Arranque y apagado. Reiniciar módulos del sistema"
-keywords: ["encendido", "resets", "reinicio"]
-tags: ["consolas IP", "UNIDEX"]
+title: "Power on, power off and resets"
+description: "Startup and shutdown. System module resets"
+keywords: ["power on", "resets", "restart"]
+tags: ["IP consoles", "UNIDEX"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b58b8d0207e58f0782818512ef795486aefb3ce3df5ce35bb3360c419a65b147"
+
 ---
 
-## Secuencia de arranque
+## Startup sequence
 
-Al encender la consola, UX24 inicia su sistema operativo. Una vez completada la secuencia de arranque, se muestra la **pantalla principal** y se cargan:
+When powering on the console, UX24 starts its operating system. Once the startup sequence is complete, the **main screen** appears and loads:
 
-1. El **perfil de usuario predeterminado.**
-2. La **última escena activa** antes del apagado.
+1. The **default user profile.**
+2. The **last active scene** before shutdown.
 
-## Perfil de usuario y permisos
+## User profile and permissions
 
-El perfil de usuario determina el **nivel de acceso a funciones** dentro de la consola.\
-Desde la configuración, se puede definir qué perfil se carga automáticamente al encender la unidad.\
-De fábrica, la consola inicia con el perfil **ADMIN**, que tiene acceso completo.
+The user profile determines the **access level to functions** within the console.\
+From settings, you can define which profile loads automatically at startup.\
+By default, the console starts with the **ADMIN** profile, which has full access.
 
-### Niveles de usuario disponibles
+### Available user levels
 
-1. **BASIC** – Acceso restringido a funciones esenciales
-2. **EXPERT** – Acceso avanzado (requiere contraseña)
-3. **ADMIN** – Acceso total (requiere contraseña)
+1. **BASIC** – Restricted access to essential functions
+2. **EXPERT** – Advanced access (password required)
+3. **ADMIN** – Full access (password required)
 
 <Info>
-  Durante el arranque, **no se solicita contraseña**, incluso si el perfil predeterminado tiene protección.\
-  Para que UX24 arranque en modo restringido y exija contraseña para acceder a funciones avanzadas, se debe **cambiar el perfil predeterminado** a uno distinto de ADMIN.
+  During startup, **no password is required**, even if the default profile has protection.\
+  For UX24 to start in restricted mode and require a password for advanced functions, you must **change the default profile** to one other than ADMIN.
 </Info>
 
-Para más información sobre configuración de usuarios, ver:\
+For more information about user configuration, see:\
 **SETTINGS → USERS**
 
-## Apagado del CPU
+## CPU shutdown
 
-La consola UX24 posee un **CPU interno** que debe **apagarse de forma segura** antes de desconectar la consola completamente.
+The UX24 console has an **internal CPU** that must be **safely shut down** before completely disconnecting the console.
 
-### Procedimiento de apagado del CPU:
+### CPU shutdown procedure:
 
-1. En la **pantalla principal**, tocar el ícono **“\+”** ubicado en el sector **STATUS**.
+1. On the **main screen**, tap the **"+"** icon located in the **STATUS** section.
 
    <img
      src="/images/ux24/STATUS+.png"
-     alt="Pantalla Principal - STATUS+"
-     title="Pantalla Principal - STATUS+"
+     alt="Main Screen - STATUS+"
+     title="Main Screen - STATUS+"
      style={{ width:"24%" }}
    />
-2. En la ventana emergente, seleccionar la opción **POWER-OFF**.
+2. In the popup window, select the **POWER-OFF** option.
 
    <img
      src="/images/ux24/UX24_ODROID_STATUS+POWEROFF.png"
@@ -56,33 +64,33 @@ La consola UX24 posee un **CPU interno** que debe **apagarse de forma segura** a
    />
 
 <Warning>
-  Esta función **no apaga toda la consola**, solo apaga el CPU principal del sistema.\
-  El apagado total se realiza mediante la **llave mecánica** de encendido/apagado ubicada en el panel trasero.
+  This function **does not power off the entire console**, it only shuts down the system's main CPU.\
+  Complete power off is done using the mechanical power on/off **key switch** located on the rear panel.
 </Warning>
 
-Luego de apagar el CPU, **espere unos segundos** antes de apagar la consola por completo, para permitir el cierre correcto de procesos internos.
+After shutting down the CPU, **wait a few seconds** before completely powering off the console to allow proper closure of internal processes.
 
-## Acciones del sistema
+## System actions
 
-Las acciones del sistema están disponibles desde la pantalla principal, accediendo a la opción **STATUS → "\+"**.
+System actions are available from the main screen by accessing **STATUS → "+"**.
 
-Estas funciones permiten **reiniciar por separado distintas etapas del sistema**, y no se utilizan durante la operación normal.
+These functions allow you to **separately restart different system stages**, and are not used during normal operation.
 
 <Info>
-  Las acciones de reinicio son herramientas técnicas de mantenimiento.\
-  En condiciones normales de uso, **no es necesario ejecutarlas**.
+  Reset actions are technical maintenance tools.\
+  Under normal operating conditions, **it is not necessary to execute them**.
 </Info>
 
-### Opciones disponibles
+### Available options
 
 - **RESET USB**\
-  Reinicia únicamente la etapa USB.\
-  Fuerza al sistema operativo a reconocer nuevamente los dispositivos USB conectados.
+  Restarts only the USB stage.\
+  Forces the operating system to re-recognize connected USB devices.
 - **RESET MIXER**\
-  Reinicia el motor de mezcla interno de UX24 y la superficie de control.\
-  No afecta al CPU ni a la pantalla.
+  Restarts UX24's internal mixing engine and control surface.\
+  Does not affect the CPU or display.
 - **RESET DISPLAY**\
-  Reinicia el computador de a bordo que gestiona el **streaming** y la **interfaz gráfica**.
+  Restarts the onboard computer that manages **streaming** and the **graphical interface**.
 - **FULL RESET**\
-  Reinicia todas las etapas del sistema UX24.\
-  Equivale a un apagado completo y encendido del equipo.
+  Restarts all UX24 system stages.\
+  Equivalent to a complete power off and power on of the equipment.

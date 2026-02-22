@@ -1,87 +1,95 @@
 ---
-title: "Armado de cables RJ45"
-description: "Diagramas para el cableado estructurado"
+title: "RJ45 Cable Assembly"
+description: "Structured cabling diagrams"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "e537497a114d3957fed310f9d90c3b50f4f5595171032e9f7fcf1d79d3114135"
+
 ---
 
-Para armar los cables de conexión, se recomienda:
+For assembling connection cables, it is recommended to:
 
-- Utilizar conectores **RJ45 blindados**.
-- Usar cable **CAT-5 STP o S/FTP de primera calidad**.
-- Asegurarse de que el blindaje del conector esté correctamente unido a la malla del cable.
+- Use **shielded RJ45 connectors**.
+- Use premium quality **CAT-5 STP or S/FTP cable**.
+- Ensure the connector shield is properly bonded to the cable shield.
 
-La siguiente tabla muestra la nomenclatura estándar de colores y numeración del conector RJ45.
+The following table shows the standard color coding and pin numbering for RJ45 connectors.
 
-## Nomenclatura estándar del conector RJ45
+## RJ45 Standard Nomenclature
 
 <img
   src="/images/ux24/RJ-45_TIA-568B.png"
-  alt="RJ45 vista frontal - Pines según TIA-568B"
+  alt="RJ45 front view - Pins according to TIA-568B"
   style={{ maxWidth:"300px",height:"auto",marginBottom:"1rem" }}
   title=""
 />
 
-| **PIN** | **COLOR DE CABLE** |
-| :-----: | ------------------ |
-| 1       | Naranja / Blanco   |
-| 2       | Naranja            |
-| 3       | Verde / Blanco     |
-| 4       | Azul               |
-| 5       | Azul / Blanco      |
-| 6       | Verde              |
-| 7       | Marrón / Blanco    |
-| 8       | Marrón             |
+| **PIN** | **WIRE COLOR**    |
+| :-----: | ----------------- |
+| 1       | White / Orange    |
+| 2       | Orange            |
+| 3       | White / Green     |
+| 4       | Blue              |
+| 5       | White / Blue      |
+| 6       | Green             |
+| 7       | White / Brown     |
+| 8       | Brown             |
 
-## Configuración de pines para conexión de audio balanceado
+## Pin Configuration for Balanced Audio Connection
 
-| **PIN** | **FUNCIÓN**            | **COLOR DE CABLE** |
-| :-----: | ---------------------- | ------------------ |
-| 1       | Canal izquierdo (\+)   | Naranja / Blanco   |
-| 2       | Canal izquierdo (–)    | Naranja            |
-| 3       | Canal derecho (\+)     | Verde / Blanco     |
-| 4       | Tierra                 | Azul               |
-| 5       | Reservado              | Azul / Blanco      |
-| 6       | Canal derecho (–)      | Verde              |
-| 7       | –15 V (opcionalmente)  | Marrón / Blanco    |
-| 8       | \+15 V (opcionalmente) | Marrón             |
+| **PIN** | **FUNCTION**           | **WIRE COLOR**    |
+| :-----: | --------------------- | ----------------- |
+| 1       | Left channel (\+)     | White / Orange    |
+| 2       | Left channel (–)      | Orange            |
+| 3       | Right channel (\+)    | White / Green     |
+| 4       | Ground               | Blue              |
+| 5       | Reserved             | White / Blue      |
+| 6       | Right channel (–)     | Green             |
+| 7       | –15 V (optional)      | White / Brown     |
+| 8       | \+15 V (optional)     | Brown             |
 
-## Configuración de pines para conexión de audio NO balanceado
+## Pin Configuration for Unbalanced Audio Connection
 
-| **PIN** | **FUNCIÓN**            | **COLOR DE CABLE** |
-| :-----: | ---------------------- | ------------------ |
-| 1       | Canal izquierdo (\+)   | Naranja / Blanco   |
-| 2       | NC                     | Naranja            |
-| 3       | Canal derecho (\+)     | Verde / Blanco     |
-| 4       | Tierra                 | Azul               |
-| 5       | Reservado              | Azul / Blanco      |
-| 6       | NC                     | Verde              |
-| 7       | –15 V (opcionalmente)  | Marrón / Blanco    |
-| 8       | \+15 V (opcionalmente) | Marrón             |
+| **PIN** | **FUNCTION**           | **WIRE COLOR**    |
+| :-----: | --------------------- | ----------------- |
+| 1       | Left channel (\+)     | White / Orange    |
+| 2       | NC                    | Orange            |
+| 3       | Right channel (\+)    | White / Green     |
+| 4       | Ground               | Blue              |
+| 5       | Reserved             | White / Blue      |
+| 6       | NC                    | Green             |
+| 7       | –15 V (optional)      | White / Brown     |
+| 8       | \+15 V (optional)     | Brown             |
 
-## Patchs adapadores a conectores de audio convencionales
+## Adapter Patches to Conventional Audio Connectors
 
-### RJ45 a RCA no balanceado
+### RJ45 to Unbalanced RCA
 
 <img
   src="/images/ux24/RJ45-a-RCA.jpg"
-  alt="RJ45 a RCA"
+  alt="RJ45 to RCA"
   style={{ maxWidth:"550px",height:"auto",marginBottom:"1rem" }}
   title=""
 />
 
-### RJ45 a XLR balanceado
+### RJ45 to Balanced XLR
 
 <img
   src="/images/ux24/RJ45-a-XLR.jpg"
-  alt="RJ45 a RCA"
+  alt="RJ45 to XLR"
   style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
   title=""
 />
 
-### RJ45 a plug TRS balanceado
+### RJ45 to Balanced TRS
 
 <img
   src="/images/ux24/RJ45-a-TRS.jpg"
-  alt="RJ45 a RCA"
+  alt="RJ45 to TRS"
   style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
   title=""
 />
@@ -89,9 +97,9 @@ La siguiente tabla muestra la nomenclatura estándar de colores y numeración de
 ---
 
 <Warning>
-  Los adaptadores SOL-M12/minijack (a miniplug hembra) se pueden conectar a SALIDAS balanceadas o no balanceadas. No se recomienda para desbalancear entradas dado que dejan sin conectar el pin (-) pudiendo introducir ruido.
+  SOL-M12/minijack adapters (to female mini plug) can be connected to balanced or unbalanced OUTPUTS. Not recommended for unbalancing inputs as they leave the (-) pin unconnected, which may introduce noise.
 </Warning>
 
 <Warning>
-  Los adaptadores SOL-M12/RCAM (a RCA macho) se pueden conectar a ENTRADAS balanceadas para desbalancearlas, dado que conectan la señal (-) del balanceado a tierra. **NO DEBEN USARSE SOBRE SALIDAS BALANCEADAS**, porque las salidas deben desbalancearse dejando el pin (-) sin conexión.
+  SOL-M12/RCAM adapters (to male RCA) can be connected to balanced INPUTS to unbalance them, as they connect the balanced (-) signal to ground. **DO NOT USE ON BALANCED OUTPUTS**, as outputs must be unbalanced by leaving the (-) pin unconnected.
 </Warning>
