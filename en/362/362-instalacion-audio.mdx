@@ -1,85 +1,93 @@
 ---
-title: "Conexiones de audio"
-description: "Conexiones de audio "
-keywords: ["entradas", "salidas", "USB", "modo HD", "dip-switch"]
+title: "Audio Connections"
+description: "Audio Connections"
+keywords: ["inputs", "outputs", "USB", "HD mode", "dip-switch"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "53db2d27f035b690d23025398d6fe5c712b66dcf3ef5546bc3bcdc885f3052fa"
+
 ---
 
-## Entradas y salidas analógicas
+## Analog Inputs and Outputs
 
 <img
   src="/images/362/362-trasero-audio.png"
-  alt="362 Trasero Audio Pn"
-  title="362 Trasero Audio Pn"
+  alt="362 Rear Audio Panel"
+  title="362 Rear Audio Panel"
   className="mx-auto"
   style={{ width:"73%" }}
 />
 
-| **Identificador** | **Tipo / Conector**               | **Nivel nominal** | **Detalles**                                                                               |
-| :---------------: | --------------------------------- | :---------------: | ------------------------------------------------------------------------------------------ |
-| **1**             | Entradas balanceadas (XLR hembra) | \+4 dBu           | balanceadas electrónicamente <br />600 Ohms                                                |
-| **2**             | Entradas no balanceadas (RCA)     | –10 dBV aprox.    | Mayor ganancia, pensadas para señales más débiles. Impedancia 10 KOhms                     |
-| **3**             | Entrada balanceada estéreo (RJ45) | \+4 dBu           | [Diagramas de pines y cables adaptadores para armado de cables](/es/diagramas/RJ45-pinout) |
-| **4**             | Salidas balanceadas (XLR macho)   | \+4 dBu           | balanceadas electrónicamente <br />600 Ohms / 10 KOhms                                     |
+| **Identifier** | **Type / Connector**              | **Nominal Level** | **Details**                                                                           |
+| :------------: | --------------------------------- | :--------------: | ------------------------------------------------------------------------------------- |
+| **1**          | Balanced inputs (Female XLR)      | +4 dBu          | Electronically balanced <br />600 Ohms                                                 |
+| **2**          | Unbalanced inputs (RCA)          | -10 dBV approx. | Higher gain, designed for weaker signals. Impedance 10 KOhms                          |
+| **3**          | Balanced stereo input (RJ45)     | +4 dBu          | [Pin diagrams and adapter cables wiring](/es/diagramas/RJ45-pinout)                   |
+| **4**          | Balanced outputs (Male XLR)       | +4 dBu          | Electronically balanced <br />600 Ohms / 10 KOhms                                     |
 
 <Info>
-  La conexión para XLR es estándar: malla al **pin 1** los conductores internos a **2 (señal \+)** y **3 (señal –)**
+  XLR connection is standard: shield to **pin 1**, inner conductors to **2 (signal +)** and **3 (signal -)**
 </Info>
 
-## Entrada/salida digital por USB
+## USB Digital Input/Output
 
-El modelo **Audimax 362HD/USB** incluye un módulo opcional para enviar y recibir audio mediante conexión a una PC con un cable USB A/B estándar.
+The **Audimax 362HD/USB** model includes an optional module to send and receive audio through a PC connection using a standard USB A/B cable.
 
-- Al conectarse a un computador con **<sup>Windows©</sup>**, el sistema reconoce automáticamente al procesador e instala los controladores necesarios.\
-  No se requieren drivers adicionales.
-- El equipo es reconocido como una **placa de audio estéreo**:
-  - Dispositivo de **reproducción USB** → corresponde a la **entrada de audio hacia el procesador**.
-  - Dispositivo de **captura USB** → corresponde a la **salida de audio del procesador**.
+- When connected to a **<sup>Windows©</sup>** computer, the system automatically recognizes the processor and installs the necessary drivers.\
+  No additional drivers are required.
+- The unit is recognized as a **stereo sound card**:
+  - **USB playback device** → corresponds to the **audio input to the processor**.
+  - **USB capture device** → corresponds to the **audio output from the processor**.
 
-### Sobre la detección USB
+### About USB Detection
 
-- Antes de conectar el puerto USB, asegurarse de que la **consola y la PC estén correctamente conectadas a tierra** a través de fichas de alimentación de tres terminales.
+- Before connecting the USB port, ensure that both the **console and PC are properly grounded** through three-terminal power plugs.
 
 <Danger>
-  Verificar con un tester (escala 25 V AC) entre el chasis de la PC y el chasis de la consola.\
-  La lectura debe ser 0 V. De lo contrario, podría dañarse la entrada USB del procesador o del computador.
+  Check with a multimeter (25V AC scale) between the PC chassis and console chassis.\
+  Reading should be 0V. Otherwise, the USB input of the processor or computer could be damaged.
 </Danger>
 
-- Evitar cambiar los cables USB de puerto, ya que Windows puede reasignar el orden de los dispositivos.
+- Avoid changing USB cables between ports, as Windows may reassign device order.
 
 ---
 
-## Modo HD (High Definition)
+## HD Mode (High Definition)
 
-El **modo HD** está indicado para aplicaciones de audio en las que no se utiliza la etapa de codificación estéreo de FM (MPX).
+**HD mode** is intended for audio applications that do not use the FM stereo encoding stage (MPX).
 
-- Emisoras totalmente digitales (HD Radio y streaming).
-- Aplicaciones de refuerzo sonoro (pequeñas salas, auditorios, centros comerciales).
+- Fully digital stations (HD Radio and streaming).
+- Sound reinforcement applications (small rooms, auditoriums, shopping centers).
 
-**Al conmutar al modo HD:**
+**When switching to HD mode:**
 
-- Se desactiva la red de énfasis de FM (y por lo tanto el de-énfasis de las salidas de audio).
-- Se habilita un **limitador de acción rápida** en las salidas.
-- Se desactivan las salidas **MPX**.
+- FM pre-emphasis network is disabled (and therefore the de-emphasis on audio outputs).
+- A **fast-action limiter** is enabled on the outputs.
+- **MPX** outputs are disabled.
 
-### Habilitar modo HD
+### Enabling HD Mode
 
-Para cambiar el modo de trabajo es necesario acceder a los **micro-interruptores internos**, retirando la tapa superior del equipo.
+To change the operating mode, you need to access the internal **micro-switches** by removing the top cover of the unit.
 
 <img
   src="/images/362/362-instalacion-HD.jpg"
-  alt="362 Instalacion HD Jp"
-  title="362 Instalacion HD Jp"
+  alt="362 HD Installation Jumpers"
+  title="362 HD Installation Jumpers"
   style={{ width:"41%" }}
 />
 
-- Interruptores todos **ON** = Modo FM
-- Interruptores todos **OFF** = Modo HD
+- All switches **ON** = FM Mode
+- All switches **OFF** = HD Mode
 
-El estado se indica en el frente del equipo mediante el LED **“FM”**:
+The status is indicated on the front panel through the **"FM"** LED:
 
-- Encendido = FM
-- Apagado = HD
+- Lit = FM
+- Off = HD
 
 <Info>
-  De fábrica, la unidad viene configurada en **modo FM**.
+  From factory, the unit comes configured in **FM mode**.
 </Info>

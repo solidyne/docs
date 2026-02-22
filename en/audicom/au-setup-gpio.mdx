@@ -1,25 +1,33 @@
 ---
-description: "Manejo de señales remotas. Control de periféricos."
-title: "Señales GPIO"
+description: "Remote signal handling. Peripheral control."
+title: "GPIO Signals"
 keywords: ["GPIO"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "742b29a460842b9a111a22140b3c6f5588146e03f6c2a8625af48c8f25fdce64"
+
 ---
 
-## Control vía USB
+## USB Control
 
-La interfaz **E/S USB (GPIO USB)** es un accesorio que se comercializa en forma independiente (consulte a su distribuidor).
+The **USB I/O (GPIO USB) interface** is an accessory sold separately (consult your dealer).
 
-- Dispone de 2 entradas y 2 salidas de control.
-- Permite controlar externamente funciones de transporte de AUDICOM.
-- AUDICOM también puede enviar comandos para controlar dispositivos externos.
+- Features 2 inputs and 2 outputs for control.
+- Allows external control of AUDICOM transport functions.
+- AUDICOM can also send commands to control external devices.
 
-Ejemplo: en consolas que transmiten señales de control, estas se pueden usar para comandar la reproducción en AUDICOM.
+Example: for consoles that transmit control signals, these can be used to control playback in AUDICOM.
 
-- Al abrir el fader o habilitar el botón de aire, AUDICOM inicia la reproducción.
-- Al cerrarlo, detiene la reproducción.
+- When opening the fader or enabling the on-air button, AUDICOM starts playback.
+- When closing it, playback stops.
 
 <Note>
-  El envío y recepción de comandos debe habilitarse desde el panel de configuración de AUDICOM.
+  Command sending and receiving must be enabled from AUDICOM's configuration panel.
 </Note>
 
 <img
@@ -30,89 +38,89 @@ Ejemplo: en consolas que transmiten señales de control, estas se pueden usar pa
   style={{ width:"44%" }}
 />
 
-### Advertencia
+### Warning
 
 <Danger>
-  Los terminales de tierra de la interfaz USB comparten la tierra con el puerto USB de la PC.\
-  Al no estar aislados internamente, pueden exponer el potencial de tierra USB de la computadora.
+  The ground terminals of the USB interface share the ground with the PC's USB port.\
+  Not being internally isolated, they may expose the computer's USB ground potential.
 
-  - Verifique los circuitos antes de realizar la conexión.
-  - Una tensión inversa o un pico alto puede dañar la interfaz o la computadora.
-  - Las salidas entregan 5 V y poseen resistencia interna de 250 Ohms para limitar la corriente.
-  - Las entradas son de **contacto seco**, se conmutan conectándolas directamente a tierra.
+  - Verify circuits before making connections.
+  - Reverse voltage or high spikes can damage the interface or computer.
+  - Outputs provide 5V with 250 Ohm internal resistance to limit current.
+  - Inputs are **dry contact**, switched by direct connection to ground.
 </Danger>
 
 ---
 
-## Opciones para manejo de señales remotas
+## Remote Signal Handling Options
 
-### Enlace vía Internet
+### Internet Link
 
-Una estación “cabecera” puede controlar a una estación “repetidora”, que solo reemplaza tandas comerciales por contenidos locales.\
-Más detalles en el capítulo **Herramientas para Internet**.
+A "head" station can control a "relay" station that only replaces commercial breaks with local content.\
+More details in the **Internet Tools** chapter.
 
-### Bloques remotos
+### Remote Blocks
 
-Antes llamados “satelitales”. Automatizan la conmutación entre audio local y una fuente externa (satélite, decoder de streaming, etc.).\
-También permiten controlar estaciones repetidoras.
+Previously called "satellite". Automates switching between local audio and an external source (satellite, streaming decoder, etc.).\
+Also allows controlling relay stations.
 
-Modos disponibles:
+Available modes:
 
-- **SatFill (Relleno)**: conmutación según horarios.
-- **SatSlave (Maestro-Esclavo)**: control centralizado de terminales remotas.
+- **SatFill**: time-based switching.
+- **SatSlave (Master-Slave)**: centralized control of remote terminals.
 
-El módulo **Multicast** maneja transmisiones directas a estaciones vía Internet (ver Herramientas para Internet).
+The **Multicast** module handles direct transmissions to stations via Internet (see Internet Tools).
 
-### Bloque remoto SatFill (Relleno)
+### SatFill Remote Block
 
-- Se usa cuando es necesario conmutar programación local con fuentes externas (satélite, enlaces punto a punto, etc.).
-- En la Pantalla de Aire, estos bloques aparecen como **SYNC**.
-- Mientras el evento SYNC está activo, se reproduce la señal externa.
-- Al finalizar, AUDICOM retoma la programación local de CyberPlay.
+- Used when switching between local programming and external sources (satellite, point-to-point links, etc.) is needed.
+- These blocks appear as **SYNC** in the On-Air Screen.
+- While the SYNC event is active, the external signal plays.
+- When finished, AUDICOM resumes local CyberPlay programming.
 
-### Bloque remoto SatSlave (Maestro-Esclavo)
+### SatSlave Remote Block (Master-Slave)
 
-- Permite enlazar terminales AUDICOM en distintas localidades.
-- La terminal Maestro envía la orden mediante instrucción **/REGIONAL**, que genera un pulso vía E/S USB (ej. GPO).
-- Las terminales Esclavas conmutan entre programación de la Maestra y programación local.
-- El último bloque puede programarse como **Syncro**, garantizando conmutación a horario si no llega el pulso.
+- Allows linking AUDICOM terminals in different locations.
+- Master terminal sends command using **/REGIONAL** instruction, generating a pulse via USB I/O (e.g. GPO).
+- Slave terminals switch between Master programming and local programming.
+- Last block can be programmed as **Syncro**, ensuring time-based switching if pulse is not received.
 
-### Retransmisión de señales externas con SatFill
+### External Signal Retransmission with SatFill
 
-Ejemplo: una terminal de aire conmutando entre señal local y señal satelital.
+Example: an on-air terminal switching between local and satellite signal.
 
-Formas de conmutación:
+Switching methods:
 
-**a) Controlando módulos de consola vía puerto USB**
+**a) Controlling console modules via USB port**
 
-- La señal externa entra en un módulo de la consola.
-- AUDICOM envía comandos por la interfaz USB para activar/desactivar módulos VCA.
-- Conexiones:
-  - **Datos**: interfaz USB ↔ consola.
-  - **Audio**: señal de satélite y señal local hacia módulos de consola.
+- External signal enters a console module.
+- AUDICOM sends commands through USB interface to activate/deactivate VCA modules.
+- Connections:
+  - **Data**: USB interface ↔ console.
+  - **Audio**: satellite signal and local signal to console modules.
 
-**b) Conmutando por software la entrada de línea**
+**b) Software switching of line input**
 
-- La señal externa entra en la línea de una placa de sonido.
-- AUDICOM conmuta entre esa entrada y el audio local.
-- Solo controla una entrada; para más señales se requiere placa multicanal.
-- En consola: salida PGM-1 para audio local, entrada de línea para satélite.
+- External signal enters a soundcard line input.
+- AUDICOM switches between that input and local audio.
+- Controls only one input; multicard required for more signals.
+- On console: PGM-1 output for local audio, line input for satellite.
 
-### Retransmisión de streaming con SatFill
+### Streaming Retransmission with SatFill
 
-AUDICOM soporta bloques **iLink** para reproducir streaming de audio en forma directa.
+AUDICOM supports **iLink** blocks for direct audio streaming playback.
 
-### Control de estaciones remotas desde terminal Maestro
+### Remote Station Control from Master Terminal
 
-Configuración basada en bloques SatSlave:
+Configuration based on SatSlave blocks:
 
-- **Terminal Maestro**: envía señal de programa y pulsos de control.
-- **Terminal Esclavo**: recibe programación y órdenes de conmutación.
+- **Master Terminal**: sends program signal and control pulses.
+- **Slave Terminal**: receives programming and switching commands.
 
-El Maestro al encontrar /REGIONAL cambia una salida de puerto (USB o paralelo), transmitiendo la orden al Esclavo.\
-El Esclavo conmuta entre señal satelital y programación local.
+Master finds /REGIONAL and changes a port output (USB or parallel), transmitting the order to Slave.\
+Slave switches between satellite signal and local programming.
 
-#### Terminal central (subida al satélite)
+#### Central Terminal (satellite uplink)
 
 <img
   src="/images/audicom/au-subida-sat.jpg"
@@ -122,32 +130,32 @@ El Esclavo conmuta entre señal satelital y programación local.
   style={{ width:"57%" }}
 />
 
-- Conexiones de la interfaz USB descritas en **Señales de control por USB**.
-- La entrada /REGIONAL cambia de estado (ej. SAT-1 DataBit 2) y puede conmutar la consola de audio.
-- También puede ingresar directamente a la placa de audio sin consola.
+- USB interface connections described in **USB Control Signals**.
+- /REGIONAL input changes state (e.g. SAT-1 DataBit 2) and can switch audio console.
+- Can also input directly to audio card without console.
 
-#### Terminales remotas (bajada de satélite)
+#### Remote Terminals (satellite downlink)
 
 <img
   src="/images/audicom/au-sat-bajada.jpg"
-  alt="AUDICOM bajada-satélite"
-  title="AUDICOM bajada-satélite"
+  alt="AUDICOM satellite-downlink"
+  title="AUDICOM satellite-downlink"
   className="mx-auto"
   style={{ width:"60%" }}
 />
 
-- Conexiones de la interfaz USB descritas en **Control vía puerto paralelo**.
+- USB interface connections described in **Parallel Port Control**.
 
-#### Configuración de comandos de control
+#### Control Command Configuration
 
-- En caso de varias placas de sonido, puede definirse cuál será la entrada de línea para bloques satelitales.
-- Se configura en `Audicom.ini` bajo la sección `[Hardware]`:
+- With multiple sound cards, you can define which line input will be used for satellite blocks.
+- Configure in `Audicom.ini` under `[Hardware]` section:
 
 ```ini
 [Hardware]
 LineInID=0
 ```
 
-- El valor `0` indica la placa predeterminada de Windows.
-- El valor `1` corresponde a la segunda placa, aunque el orden puede variar según la enumeración de Windows.
-- En algunos casos será necesario determinar la entrada deseada por prueba y error.
+- Value `0` indicates Windows default card.
+- Value `1` corresponds to second card, though order may vary by Windows enumeration.
+- In some cases, trial and error may be needed to determine desired input.

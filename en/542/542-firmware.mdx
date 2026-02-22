@@ -1,55 +1,63 @@
 ---
-title: "Actualización del firmware"
-description: "Procedimientos para actualizar el firmware según modelos"
-keywords: ["actualización", "firmware", "Discovery & Update"]
-tags: ["procesadores", "542"]
----
-
-## Qué se modifica
-
-Las sucesivas actualizaciones de un mismo modelo de software pueden:
-
-- Optimizar procesos.
-- Agregar nuevas funciones.
-- Mejorar o modificar la interfaz gráfica.
-- Incorporar nuevos presets de procesado.
-
-La **versión y modelo** se muestran:
-
-- En la pantalla de inicio del **panel frontal**.
-- En la línea superior de la pantalla **Control WEB**.
-
-El equipo puede actualizarse estando en servicio.\
-Puede producir una **breve interrupción de audio** al aire (menor a 2 segundos).
+title: "Firmware update"
+description: "Firmware update procedures by model"
+keywords: ["update", "firmware", "Discovery & Update"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d505ee69eb2ed1eafcb8b9d28efab23cc605486f47704ee2e809415e9ba3b432"
 
 ---
 
-## Versiones anteriores a 2.0
+## What is modified
 
-Para equipos con versión de firmware **1.35 o anterior**, consultar el manual correspondiente en:\
-👉 [Solidyne – Manuales de Usuario (equipos discontinuados)](https://www.solidyne.ar)
+Successive software updates for the same model can:
+
+- Optimize processes.
+- Add new features.
+- Improve or modify the graphical interface.
+- Add new processing presets.
+
+The **version and model** are displayed:
+
+- On the **front panel** startup screen.
+- In the top line of the **WEB Control** screen.
+
+The unit can be updated while in service.\
+It may cause a **brief audio interruption** on-air (less than 2 seconds).
 
 ---
 
-## Unidades con módulo STREAMER AoIP
+## Versions prior to 2.0
 
-La expansión **Streamer AoIP** permite acceder directamente al equipo a través de un enlace y agrega un método de **actualización simplificado**.
+For units with firmware version **1.35 or earlier**, refer to the corresponding manual at:\
+👉 [Solidyne – User Manuals (discontinued equipment)](https://www.solidyne.ar)
+
+---
+
+## Units with STREAMER AoIP module
+
+The **Streamer AoIP** expansion allows direct access to the unit through a link and adds a **simplified update method**.
 
 <Info>
-  Ver detalles Equipos con opción STREAMER AoIP
+  See details Equipment with STREAMER AoIP option
 </Info>
 
 ---
 
-## 542 APC modelo estándar
+## 542 APC standard model
 
-Los equipos con firmware 2.0 o posterior, que no posean la expansión STREAMER AoIP, se actualizan con el siguiente procedimiento:
+Units with firmware 2.0 or later, without the STREAMER AoIP expansion, are updated using the following procedure:
 
- 1. Asegúrese de que la computadora que accede al procesador tenga **conexión a Internet** y esté en la **misma LAN** que el 542APC.
- 2. Acceda a la página de **Control WEB** ingresando la **IP de control** en un navegador.\
-    (Ver [**Acceso y control vía red**](/es/542/542-acceso-web)).
- 3. Ingrese al modo **SETUP** (arriba a la derecha) y en el menú lateral elija la opción **INFO**.
- 4. El equipo verificará automáticamente si hay una actualización disponible y**generará un enlace ** directo de descarga.
+ 1. Ensure the computer accessing the processor has an **Internet connection** and is on the **same LAN** as the 542APC.
+ 2. Access the **WEB Control** page by entering the **control IP** in a browser.\
+    (See [**Network access and control**](/es/542/542-acceso-web)).
+ 3. Enter **SETUP** mode (top right) and select **INFO** from the side menu.
+ 4. The unit will automatically check for available updates and **generate a direct download link**.
 
     <img
       src="/images/542/542-firm20-INFO-update.png"
@@ -58,10 +66,10 @@ Los equipos con firmware 2.0 o posterior, que no posean la expansión STREAMER A
       className="mr-auto"
       style={{ width:"47%" }}
     />
- 5. Descargue la actualización de firmware desde el enlace.
- 6. Descargue e instale la aplicación de Windows **Solidyne Discovery & Update** (enlace en la sección SOFTWARE de pantalla INFO).
-    - El instalador creará una carpeta _Solidyne Audio Processor_ en el menú Inicio de Windows.
- 7. Ejecute la aplicación **Discovery & Update**.
+ 5. Download the firmware update from the link.
+ 6. Download and install the **Solidyne Discovery & Update** Windows application (link in the INFO screen SOFTWARE section).
+    - The installer will create a _Solidyne Audio Processor_ folder in the Windows Start menu.
+ 7. Run the **Discovery & Update** application.
 
     <img
       src="/images/542/542-discovery.png"
@@ -69,27 +77,26 @@ Los equipos con firmware 2.0 o posterior, que no posean la expansión STREAMER A
       title="542 Discovery Pn"
       style={{ width:"71%" }}
     />
- 8. Pulse **Discover...** → se listarán los equipos Solidyne en la red.
- 9. Seleccione el equipo **542APC** y pulse **Actualizar firmware**.
-10. En la ventana emergente, seleccione el archivo de actualización descargado en el _Paso 5 _y pulse **Aceptar**.
-11. La aplicación sobre-escribirá el firmware del 542APC.
-12. El equipo permanecerá operativo; habrá una **breve interrupción de audio (menor a 2 seg.)** al reiniciarse.
+ 8. Click **Discover...** → Solidyne equipment on the network will be listed.
+ 9. Select the **542APC** unit and click **Update firmware**.
+10. In the popup window, select the update file downloaded in _Step 5_ and click **OK**.
+11. The application will overwrite the 542APC firmware.
+12. The unit will remain operational; there will be a **brief audio interruption (less than 2 sec.)** when restarting.
 
 <Danger>
-  **No apague ni desconecte el equipo durante la actualización.**\
-  Podría producir daños irreparables por el usuario.
+  **Do not power off or disconnect the unit during the update.**\
+  This could cause damage that cannot be repaired by the user.
 </Danger>
 
 <Warning>
-  Evite realizar actualizaciones desde computadoras conectadas vía Wi-Fi.
+  Avoid performing updates from computers connected via Wi-Fi.
 </Warning>
 
-
-### Actualizaciones remotas
+### Remote updates
 
 <Warning>
-  No realice actualizaciones si accede al equipo directamente vía **Internet (port forwarding)**.\
-  Use siempre un **software de escritorio remoto** para conectarse a una PC en la LAN del procesador y desde allí acceder al **Control WEB local**.
+  Do not perform updates if accessing the unit directly via **Internet (port forwarding)**.\
+  Always use **remote desktop software** to connect to a PC on the processor's LAN and access the **local WEB Control** from there.
 </Warning>
 
 ---

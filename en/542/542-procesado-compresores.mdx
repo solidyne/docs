@@ -1,63 +1,71 @@
 ---
-title: "Compresores y limitadores"
-description: "Ajuste de las etapas de Compresión y Limitación"
-keywords: ["compresores", "limitadores", "densityEQ", "clippers", "drive"]
-tags: ["procesadores", "542"]
----
-
-## Compresión dinámica
-
-La reducción de la dinámica se produce por la combinación de tres etapas: **compresión**, **limitación** y **recorte**.\
-Estas etapas trabajan de forma complementaria para disminuir la dinámica de la señal y aumentar la energía promedio. A mayor acción conjunta, más “denso” y “compacto” será el sonido. Por lo tanto, los ajustes deben hacerse en conjunto.
-
-En términos generales:
-
-- El compresor trabaja con pendientes suaves y umbrales bajos, reduciendo la dinámica en un rango amplio de niveles.
-- El limitador actúa con pendientes abruptas y umbrales más altos, aplicando gran reducción de ganancia para que la señal no supere el umbral. Su acción puede ser muy notoria.
-- Los tiempos de ataque suelen ser más lentos en el compresor y muy rápidos en el limitador. De este modo, los ataques que quedan por debajo del umbral del limitador se preservan, aportando naturalidad. Los ataques que lo superan son atenuados por el limitador, dependiendo del ajuste de DRIVE.
+title: "Compressors and limiters"
+description: "Setting up Compression and Limiting stages"
+keywords: ["compressors", "limiters", "densityEQ", "clippers", "drive"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "72f6697dba132e31e0c88d554d1724145cab8ab93761d37a017eb6298e12ef15"
 
 ---
 
-## Compresor multibanda
+## Dynamic Compression
 
-Las cinco bandas de trabajo corresponden a las definidas en el AGC multibanda. Cada compresor es independiente y cuenta con los siguientes ajustes:
+Dynamic range reduction is achieved through three stages: **compression**, **limiting**, and **clipping**.\
+These stages work together to decrease signal dynamics and increase average energy. Greater combined action results in a more "dense" and "compact" sound. Therefore, adjustments must be made holistically.
+
+In general terms:
+
+- The compressor works with gentle slopes and low thresholds, reducing dynamics across a wide range of levels.
+- The limiter acts with steep slopes and higher thresholds, applying significant gain reduction to keep the signal below threshold. Its action can be very noticeable.
+- Attack times are typically slower in the compressor and very fast in the limiter. This preserves attacks below the limiter threshold, maintaining naturalness. Attacks exceeding it are attenuated by the limiter, depending on the DRIVE setting.
+
+---
+
+## Multiband Compressor
+
+The five working bands correspond to those defined in the multiband AGC. Each compressor is independent and has the following controls:
 
 ![542 Procesado Compresor Pn](/images/542/542-procesado-compresor.png)
 
-- **Umbral (THS):** nivel a partir del cual empieza a actuar el compresor. Una vez alcanzado el umbral, entra en juego el tiempo de ataque y luego la atenuación según la relación de compresión.
-- **Ratio:** define la atenuación aplicada en un rango de 1:1 a 10:1. Los compresores utilizan transición suave (_soft knee_). Como regla general, a menor umbral, menor ratio; a mayor umbral, mayor ratio. Un umbral bajo con compresión suave afecta a más señales, lo que combinado con el limitador produce un sonido más compacto.
-- **Ataque:** tiempo que tarda en actuar el compresor luego de superar el umbral. Cuanto mayor sea, más impacto tendrá esa banda, pero también más recorte deberá realizar el limitador y el cliper. El ajuste depende del material:
-  - Rock/pop → tiempos más lentos, aportan impacto y sensación de rango dinámico.
-  - Percusión → conviene usar ataques lentos en bandas LOW y M1 para mayor “punch”.
-  - Música orquestal/jazz/piano → convienen ataques rápidos para preservar naturalidad.
-- **Recuperación (Release):** tiempo para recuperar la ganancia unitaria al caer por debajo del umbral. Es un ajuste clave para la sensación de rango dinámico:
-  - Recuperación lenta → el compresor actúa todo el tiempo, como un _leveler_. Mantiene dinámica pero no genera grandes incrementos de sonoridad.
-  - Recuperación rápida → refuerza transitorios y ataques. Ejemplos:
-    - Música electrónica → recovery corto en graves para que cada _kick_ sea afectado por el ataque.
-    - Banda de agudos → recovery rápido aumenta presencia y brillo, pero puede endurecer el sonido.
-- **Retención (Hold):** tiempo durante el cual se mantiene la compresión una vez activada, independientemente de la variación de entrada. A mayor retención, menor agresividad del proceso pero también menor sonoridad.
+- **Threshold (THS):** level at which the compressor begins to act. Once reached, the attack time engages followed by attenuation according to the compression ratio.
+- **Ratio:** defines attenuation applied from 1:1 to 10:1. Compressors use soft knee transition. As a rule, lower threshold means lower ratio; higher threshold means higher ratio. A low threshold with gentle compression affects more signals, which combined with limiting produces a more compact sound.
+- **Attack:** time taken for the compressor to act after exceeding threshold. Longer times provide more impact but require more limiting and clipping. Adjustment depends on material:
+  - Rock/pop → slower times add impact and dynamic range sensation.
+  - Percussion → slow attacks in LOW and M1 bands for more punch.
+  - Orchestral/jazz/piano → fast attacks preserve naturalness.
+- **Release:** time to recover unity gain when falling below threshold. Key for dynamic range sensation:
+  - Slow release → compressor acts continuously, like a leveler. Maintains dynamics but doesn't generate large loudness increases.
+  - Fast release → enhances transients and attacks. Examples:
+    - Electronic music → short recovery in bass so each kick is affected by attack.
+    - High band → fast recovery increases presence and brightness but can harden sound.
+- **Hold:** time compression is maintained once activated, regardless of input variation. Longer hold means less aggressive processing but also less loudness.
 
 ---
 
-## Limitador multibanda
+## Multiband Limiter
 
-Los limitadores aplican una relación fija cercana a 100:1.
+Limiters apply a fixed ratio close to 100:1.
 
 ![542 Procesado MB Limiter Pn](/images/542/542-procesado-MBLimiter.png)
 
-Cada banda dispone de cinco controles:
+Each band has five controls:
 
-- **Umbral (THS) y DRIVE:**
-  - DRIVE aplica ganancia antes de la limitación. Equivale a un control de nivel de salida en el compresor compresor. Si se aumenta DRIVE manteniendo el umbral, más picos son limitados y aumenta la energía de la banda.
-  - Si se baja el umbral, aumenta la limitación pero se reduce la energía. Para compensarlo, se puede elevar la banda en el **Density EQ**.
-- **Ataque (ATK):** durante el tiempo de ataque, el limitador deja pasar picos que serán contenidos más adelante por los recortadores. Ataques rápidos minimizan el recorte, pero el sonido se vuelve “chato” y poco natural.
-- **Hold y Release:** funcionan de modo análogo a los del compresor.
+- **Threshold (THS) and DRIVE:**
+  - DRIVE applies gain before limiting. Equivalent to output level control in compressor. Increasing DRIVE while maintaining threshold means more peaks are limited and band energy increases.
+  - Lowering threshold increases limiting but reduces energy. This can be compensated by raising the band in **Density EQ**.
+- **Attack (ATK):** during attack time, limiter allows peaks through that will be contained later by clippers. Fast attacks minimize clipping but sound becomes "flat" and unnatural.
+- **Hold and Release:** function similarly to compressor controls.
 
 ---
 
 ## Density EQ
 
-El **ecualizador de densidad** permite ajustar el balance espectral del sonido, dosificando cuánto aporta cada banda a la mezcla final.
+The **density equalizer** allows adjustment of spectral balance, controlling how much each band contributes to the final mix.
 
 <img
   src="/images/542/542-procesado-densityEQ.png"
@@ -66,55 +74,54 @@ El **ecualizador de densidad** permite ajustar el balance espectral del sonido, 
   style={{ width:"72%" }}
 />
 
-Cuanto más se eleva una banda en el Density EQ, más cerca queda de su recortador y mayor es la sonoridad, pero también se reduce la dinámica por recorte suave, lo que genera un sonido más áspero.
+The more a band is raised in Density EQ, the closer it gets to its clipper and the greater the loudness, but dynamics are reduced through soft clipping, creating a harsher sound.
 
-## Clippers (etapas de recorte)
+## Clippers
 
 ![542 Procesado Clippers Pn](/images/542/542-procesado-clippers.png)
 
 ### Band Clippers
 
-Los limitadores de banda funcionan como recortadores suaves (_soft clippers_), conteniendo los picos que atraviesan la etapa de compresión debido a los tiempos de ataque.
+Band limiters function as soft clippers, containing peaks that pass through compression due to attack times.
 
-El control principal ajusta el **umbral de recorte**. La referencia “0” equivale al 100% de modulación de audio.
+The main control adjusts **clipping threshold**. The "0" reference equals 100% audio modulation.
 
-- Umbral por debajo de cero → esa banda nunca llegará a modular al 100% por sí sola, aunque la suma de bandas sí lo haga.
-- Umbral en cero o superior → no garantiza alcanzar el 100%, pues depende del nivel en el Density EQ.
+- Threshold below zero → that band will never reach 100% modulation alone, though band sum may.
+- Threshold at zero or higher → doesn't guarantee reaching 100%, depends on Density EQ level.
 
-Los indicadores de nivel muestran la señal de cada banda y la cantidad de limitación.\
-Por encima del umbral, el indicador marca la **señal limitada** en color naranja.
+Level indicators show band signal and limiting amount.\
+Above threshold, indicator shows **limited signal** in orange.
 
-En la práctica, los band clippers se ajustan en 100% o hasta 1 dB por debajo de cero, excepto la banda de graves, que suele configurarse entre 2 y 6 dB por debajo para dejar margen en la suma final.
+In practice, band clippers are set at 100% or up to 1 dB below zero, except bass band, typically set 2-6 dB below to leave headroom in final sum.
 
 ---
 
-### Limitador de banda ancha (WB Limiter)
+### Wideband Limiter (WB Limiter)
 
-La suma de las bandas se realiza después de los limitadores individuales. Aunque estén ajustados en 100%, la suma genera picos por encima de ese valor. El **limitador de banda ancha** contiene esos picos, manteniendo la señal en 100%.
+Band summing occurs after individual limiters. Even when set at 100%, summing generates peaks above this value. The **wideband limiter** contains these peaks, maintaining signal at 100%.
 
-Este limitador “predice” la atenuación necesaria con un sistema de _look ahead_ (ataque cero), evitando distorsión armónica. El umbral es fijo en 100% de modulación.
+This limiter "predicts" necessary attenuation using look-ahead (zero attack), avoiding harmonic distortion. Threshold is fixed at 100% modulation.
 
-- El control **DRIVE** permite amplificar la mezcla, aumentando la acción del limitador y, por ende, la energía total.
-- El control **SHAPE** introduce recorte suave para trabajar con limitaciones más altas, minimizando efectos de intermodulación. Este recorte solo entra en acción con densidades elevadas de picos, quedando enmascarado al oído.
-- El 
+- **DRIVE** control amplifies mix, increasing limiter action and total energy.
+- **SHAPE** introduces soft clipping for working with higher limitations, minimizing intermodulation effects. This clipping only activates with high peak densities, remaining masked to the ear.
 
 <Info>
-  La limitación en banda ancha aumenta la sonoridad hasta reducciones de 6 dB. Más allá de ese punto, no aporta beneficios y puede generar un sonido plano y sin profundidad.
+  Wideband limiting increases loudness up to 6 dB reduction. Beyond this point, it offers no benefits and can create flat, depthless sound.
 </Info>
 
 ---
 
-## Recortador de MPX (MPX Clipper)
+## MPX Clipper
 
-Al final de la cadena, las señales **suma (L\+R)** y **resta (L–R)** son recortadas por separado con un recortador suave. El umbral se ubica en 100% de modulación.
+At chain end, **sum (L+R)** and **difference (L-R)** signals are separately soft-clipped. Threshold is at 100% modulation.
 
-El control **DRIVE** aplica ganancia antes del recorte:
+**DRIVE** control applies gain before clipping:
 
-- DRIVE = 0 → el recorte es prácticamente nulo.
-- DRIVE = 1 dB → implica 1 dB de recorte.
-- Valores de 0,5 a 1 dB son tolerables en la mayoría de los casos.
-- Valores mayores generan un sonido más áspero, que algunos identifican como **“FM style”**.
+- DRIVE = 0 → clipping is practically null.
+- DRIVE = 1 dB → means 1 dB of clipping.
+- Values from 0.5 to 1 dB are tolerable in most cases.
+- Higher values create harsher sound, sometimes identified as **"FM style"**.
 
 <Warning>
-  Usar esta técnica solo si se requiere alcanzar niveles de sonoridad muy altos en el aire.
+  Use this technique only when very high on-air loudness levels are required.
 </Warning>

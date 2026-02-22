@@ -1,18 +1,26 @@
 ---
-title: "Wizard y Enhancers"
-description: "Procesado de audio: Controles Simplificados Wizard y Enhancers"
-keywords: ["wizard", "enhancers", "symmetrizer", "bass", "stereo", "EQ", "ecualizador"]
-tags: ["procesadores", "542"]
+title: "Wizard and Enhancers"
+description: "Audio Processing: Wizard Simplified Controls and Enhancers"
+keywords: ["wizard", "enhancers", "symmetrizer", "bass", "stereo", "EQ", "equalizer"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f7e8bef7d78240e8666db3b48c687021e9abe34bc34c41ca31d3490880cf14a8"
+
 ---
 
-## Introducción
+## Introduction
 
-Las etapas de procesado se acceden desde la pantalla **SETUP**, opción \*\*PROCESS \*\*del menú lateral.
+Processing stages are accessed from the **SETUP** screen, **PROCESS** option in the side menu.
 
-- Las distintas etapas se muestran agrupadas en **solapas (tabs)**.
-- El orden de izquierda a derecha corresponde al **orden real de interconexión**, con excepción de **WIZARD**, que no es una etapa de procesado en sí misma.
+- Different stages are grouped in **tabs**.
+- The left-to-right order corresponds to the **actual signal flow**, except for **WIZARD**, which is not a processing stage itself.
 
-Etapas disponibles:
+Available stages:
 
 1. WIZARDS
 2. ENHANCERS
@@ -26,115 +34,115 @@ Etapas disponibles:
 
 ## WIZARD
 
-Los controles **WIZARD** trabajan sobre los presets de usuario.\
-Permiten **cambiar rápidamente el carácter del sonido** y crear nuevos presets sin necesidad de modificar cada etapa individual.
+The **WIZARD** controls work on user presets.\
+They allow you to **quickly change the sound character** and create new presets without modifying each individual stage.
 
-- No se requieren conocimientos avanzados.
-- Relacionado: ver **Gestión de presets**.
+- No advanced knowledge required.
+- Related: see **Preset Management**.
 
-Funciones principales:
+Main functions:
 
-1. Modificar el carácter de un preset en cuatro aspectos esenciales:
+1. Modify a preset's character in four essential aspects:
    - **BASS**
    - **BRIGHT**
    - **COMPRESSION**
    - **LOUDNESS**
-2. Conmutar y ajustar en forma básica los **ENHANCERS**:
+2. Toggle and basic adjustment of **ENHANCERS**:
    - Voice Symmetrizer
    - EQ
    - Bass Enhancer
    - Stereo Enhancer
 
-Cada control WIZARD modifica múltiples parámetros en distintas etapas de forma sincronizada.
+Each WIZARD control modifies multiple parameters across different stages in a synchronized way.
 
-![542 Procesado Wizards Pn](/images/542/542-procesado-wizards.png)
+![542 Processing Wizards Pn](/images/542/542-procesado-wizards.png)
 
-#### Interacción entre controles
+#### Control Interaction
 
-- Los cuatro controles están relacionados: un mismo parámetro puede ser afectado por más de un control.
-- Cuando se mueve un control, se recalculan las posiciones de los demás.
-- Al cargar un preset, los controles se posicionan de acuerdo al ajuste del mismo.
+- The four controls are interrelated: a single parameter can be affected by more than one control.
+- When one control is moved, the positions of others are recalculated.
+- When loading a preset, controls are positioned according to its settings.
 
-Esto permite **visualizar de un vistazo** las características sonoras de cada preset y compararlos.
+This allows you to **visualize at a glance** the sonic characteristics of each preset and compare them.
 
-#### Consejos de uso
+#### Usage Tips
 
-- Usar los WIZARD para **cambios moderados**.
-- Partir siempre de un preset cercano al resultado buscado.
-  - Ejemplo: si se busca máxima sonoridad, no partir de un preset suave y subir al máximo **LOUDNESS**.
-  - Se recomienda partir de un preset tipo **MaxLoudness**, ya optimizado para ese objetivo.
+- Use WIZARD for **moderate changes**.
+- Always start from a preset close to the desired result.
+  - Example: if seeking maximum loudness, don't start from a soft preset and maximize **LOUDNESS**.
+  - It's recommended to start from a **MaxLoudness** type preset, already optimized for that goal.
 
 <Note>
-  Usuarios avanzados pueden ajustar cada etapa individualmente para mayor precisión en el sonido.
+  Advanced users can adjust each stage individually for greater sound precision.
 </Note>
 
 ---
 
 ## Enhancers
 
-![542 Procesado Enhacer Pn](/images/542/542-procesado-enhacer.png)
+![542 Processing Enhancer Pn](/images/542/542-procesado-enhacer.png)
 
 ### Voice Symmetrizer
 
-La voz humana es asimétrica debido a la naturaleza de las cuerdas vocales (pulsos triangulares asimétricos). Esta asimetría se mantiene tras el filtrado de las cavidades vocales.
+Human voice is asymmetric due to vocal cord nature (asymmetric triangular pulses). This asymmetry remains after vocal cavity filtering.
 
-Como resultado, al pasar por un compresor:
+As a result, when passing through a compressor:
 
-- Una polaridad llega al 100%, mientras que la opuesta rara vez supera el 50%.
-- La voz se percibe menos intensa que la música, que es más simétrica.
+- One polarity reaches 100%, while the opposite rarely exceeds 50%.
+- Voice is perceived less intense than music, which is more symmetric.
 
-Para corregir este fenómeno sin alterar la calidad sonora se emplean **simetrizadores de pico**.
+To correct this phenomenon without altering sound quality, **peak symmetrizers** are used.
 
 <Info>
-  Técnica basada en descubrimientos del Dr. Kahn y desarrollada por el Ing. Oscar Bonello.\
-  Referencia: _Journal of the AES, Vol.24, Nº5_.
+  Technique based on Dr. Kahn's discoveries and developed by Eng. Oscar Bonello.\
+  Reference: _Journal of the AES, Vol.24, No.5_.
 </Info>
 
 ---
 
 ### Expander
 
-- Su objetivo es **mejorar la relación señal/ruido (S/N)** del sonido al aire.
-- La compresión multibanda aumenta la sonoridad, pero reduce la S/N.
-- Sin expansor, en las pausas largas de voz podría escucharse el piso de ruido.
+- Its purpose is to **improve the signal-to-noise ratio (S/N)** of the on-air sound.
+- Multiband compression increases loudness but reduces S/N.
+- Without an expander, noise floor might be audible during long voice pauses.
 
-**Control disponible:**
+**Available control:**
 
-- **THS (Threshold/Umbral):** ajusta en dBFS el nivel a partir del cual el expansor comienza a reducir ganancia.
+- **THS (Threshold):** adjusts in dBFS the level at which the expander starts reducing gain.
 
 ---
 
 ### Bass Enhancer
 
-- Refuerza **medios-graves (50 – 300 Hz)**, mejorando presencia en parlantes pequeños.
-- A diferencia de un EQ, **sintetiza y agrega armónicos** a partir de las frecuencias más bajas.
+- Reinforces **mid-bass (50 – 300 Hz)**, improving presence on small speakers.
+- Unlike an EQ, it **synthesizes and adds harmonics** from lower frequencies.
 
-**Controles:**
+**Controls:**
 
-- **FREQUENCY:** frecuencia de corte del filtro pasa-bajos (define rango de armónicos).
-- **INTENSITY:** cantidad e intensidad de armónicos generados.
-- **SUB-GAIN:** nivel de graves sintetizados agregados a la señal.
+- **FREQUENCY:** low-pass filter cutoff frequency (defines harmonic range).
+- **INTENSITY:** amount and intensity of generated harmonics.
+- **SUB-GAIN:** level of synthesized bass added to the signal.
 
 <Note>
-  Al usar conmutación de presets para voces, conviene que los ajustes de música y voz tengan **BASS ENHANCER** en la misma condición (activo o desactivo).
+  When using preset switching for voices, music and voice settings should have **BASS ENHANCER** in the same condition (active or inactive).
 </Note>
 
 ---
 
 ### Stereo Enhancer
 
-- Aporta un sonido **más envolvente**, destacando la emisora frente a transmisiones convencionales.
-- Este efecto contribuye a aumentar la sonoridad percibida por el oyente.
-- El efecto se percibe con mayor claridad en auriculares.
-- Usa un algoritmo de **expansión estéreo** para simular sonido envolvente en sistemas de dos canales.
+- Provides a **more immersive sound**, making the station stand out against conventional broadcasts.
+- This effect helps increase perceived loudness.
+- The effect is more noticeable on headphones.
+- Uses a **stereo expansion** algorithm to simulate surround sound in two-channel systems.
 
-**Controles:**
+**Controls:**
 
-- **Cut Freq (Hz):** frecuencia de corte del filtro pasa-bajo que define el rango de señal desplazada en fase. La audición es más sensible a diferencias de fase por debajo de 2000 Hz → si se incrementa la diferencia de fase se amplía la imagen estéreo.
-- **Intensity:** nivel de señal expandida sumada al audio original.
+- **Cut Freq (Hz):** low-pass filter cutoff frequency defining the phase-shifted signal range. Hearing is more sensitive to phase differences below 2000 Hz → increasing phase difference widens stereo image.
+- **Intensity:** level of expanded signal added to original audio.
 
 <Note>
-  En presets conmutados para voces, conviene que música y voz mantengan el **Stereo Enhancer** en la misma condición (habilitado/deshabilitado).
+  In voice-switched presets, music and voice should maintain **Stereo Enhancer** in the same condition (enabled/disabled).
 </Note>
 
 ---
@@ -143,33 +151,33 @@ Para corregir este fenómeno sin alterar la calidad sonora se emplean **simetriz
 
 <img
   src="/images/542/542-procesado-EQparametrico.jpg"
-  alt="542 Procesado E Qparametrico Jp"
-  title="542 Procesado E Qparametrico Jp"
+  alt="542 Processing E Qparametric Jp"
+  title="542 Processing E Qparametric Jp"
   className="mx-auto"
   style={{ width:"75%" }}
 />
 
-Ecualizador paramétrico de **4 bandas**. Las correcciones deben aplicarse sobre rangos más pequeños que la banda de procesado global (LOW, MID1, MID2, PRES, HI). Especial cuidado en frecuencias **\< 800 Hz** (LOW y M1).
+**4-band** parametric equalizer. Corrections should be applied over ranges smaller than the global processing band (LOW, MID1, MID2, PRES, HI). Special care needed in frequencies **< 800 Hz** (LOW and M1).
 
-**Factor Q de referencia:**
+**Reference Q factor:**
 
-- Q=3 → ancho ≈ ½ octava.
-- Q=4 → ancho ≈ ⅓ de octava.
+- Q=3 → width ≈ ½ octave.
+- Q=4 → width ≈ ⅓ octave.
 
-**Ejemplo:**
+**Example:**
 
-Atenuación –3 dB centrada en 250 Hz con Q=2 → ancho de 125 Hz. Esa frecuencia cae dentro de **M1 (125 – 800 Hz)**.
+-3 dB attenuation centered at 250 Hz with Q=2 → width of 125 Hz. This frequency falls within **M1 (125 – 800 Hz)**.
 
-- La corrección afecta ≈ 50% de esa banda (125–375 Hz).
-- Con Q más alto, la corrección es más específica.
-- Con Q=0.5 → ancho de 500 Hz, afectando LOW y M1.
+- The correction affects ≈ 50% of that band (125-375 Hz).
+- Higher Q means more specific correction.
+- With Q=0.5 → width of 500 Hz, affecting LOW and M1.
 
 <Info>
-  En algunos casos puede ser preferible aplicar la corrección desde el **EQ paramétrico** o desde el **EQ de densidad multibanda**, según el efecto buscado.\
-  Ambos producen resultados sutilmente distintos.
+  In some cases, applying correction from either the **parametric EQ** or the **multiband density EQ** may be preferred, depending on the desired effect.\
+  Both produce subtly different results.
 </Info>
 
-#### Recomendaciones
+#### Recommendations
 
-- Usar el EQ paramétrico para **cortes o realces muy puntuales**.
-- El perfil global de ecualización debe definirse con el **AGC multibanda** y el **EQ de densidad**.
+- Use parametric EQ for **very specific cuts or boosts**.
+- The global equalization profile should be defined with **multiband AGC** and **density EQ**.

@@ -3,261 +3,269 @@ title: "WebTools"
 description: "Description of your new file."
 keywords: ["webtools"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "9d4b1ba61e3e40e74b97a5b3a8020f3a41b61c5fbde919340e5827ea947f2a46"
+
 ---
 
-El **panel de servicios WebTools** permite visualizar, mediante un navegador web, información en tiempo real sobre la lista de emisión al aire.\
-Un locutor, sin más que cambiar de pestaña en su navegador, puede ver la **cuenta regresiva** del título actualmente al aire o los títulos próximos a emitirse.
+The **WebTools services panel** allows viewing real-time information about the on-air playlist through a web browser.\
+An announcer can see the **countdown** of the currently playing title or upcoming titles by simply switching browser tabs.
 
-Además de monitoreo, **WebTools** incluye:
+In addition to monitoring, **WebTools** includes:
 
-- **Transferencia de archivos**
-- **Actualización del clima**
-- **Panel de noticias vía RSS**
+- **File transfer**
+- **Weather updates** 
+- **RSS news panel**
 
-> Se accede desde cualquier dispositivo con acceso a Internet, sin necesidad de conectarse a la LAN de la emisora.
+> It can be accessed from any device with Internet access, without needing to connect to the station's LAN.
 
 <Note>
-  Los servicios WebTools requieren acceso a Internet en la terminal de Aire.
+  WebTools services require Internet access on the On-Air terminal.
 </Note>
 
 ---
 
-## WebTools Cliente
+## WebTools Client
 
-En la terminal de Aire, **WebTools Cliente** envía al servidor WebTools la información de los títulos en reproducción.\
-Se ejecuta al iniciar AUDICOM y mantiene además actualizados:
+On the On-Air terminal, **WebTools Client** sends playback information to the WebTools server.\
+It launches with AUDICOM and keeps updated:
 
-- **Datos del clima**
-- **Noticias dinámicas vía RSS** (volcadas a archivos de texto para uso de otros módulos de AUDICOM)
+- **Weather data**
+- **Dynamic RSS news** (exported to text files for use by other AUDICOM modules)
 
-El servicio aparece **minimizado** en la barra de tareas de Windows.\
-Con clic derecho se accede a la interfaz.
+The service appears **minimized** in the Windows taskbar.\
+Right-click to access the interface.
 
-### Datos del tiempo (Meteor)
+### Weather Data (Meteor)
 
-1. Pulse **Config** para abrir el panel de configuración.
-2. Ingrese las **coordenadas geográficas** de la emisora.
-   - Puede obtenerlas haciendo clic en el mapa.
-   - Para más precisión, use **Google Maps** (clic derecho sobre un punto → copiar coordenadas).
+1. Click **Config** to open the configuration panel.
+2. Enter the station's **geographical coordinates**.
+   - You can get them by clicking on the map.
+   - For more precision, use **Google Maps** (right-click on a point → copy coordinates).
 
-Con las coordenadas cargadas, los datos se actualizan automáticamente siempre que haya Internet.
+Once coordinates are loaded, data updates automatically when Internet is available.
 
 ---
 
-## Pantallas WebTools
+## WebTools Screens
 
-Se accede a través de un navegador ingresando:\
+Access through a browser by entering:\
 `http://www.audicom.us/Panel`
 
-Al instalar AUDICOM, el asistente **AStart** solicita:
+During AUDICOM installation, the **AStart** wizard requests:
 
-- Nombre de la estación
-- Usuario y contraseña
+- Station name
+- Username and password
 
-Con esos datos se crea la **cuenta WebTools** y se envía un correo de confirmación.
+This creates the **WebTools account** and sends a confirmation email.
 
-> No extravíe ese correo, contiene los datos de acceso.
+> Don't lose that email, it contains the access credentials.
 
 ---
 
-## Panel de Vivo
+## Live Panel
 
-El **Panel de Vivo** es el entorno principal de WebTools.\
-Desde un menú en el ángulo inferior izquierdo se accede a distintas herramientas. Las ventanas pueden moverse y redimensionarse.
+The **Live Panel** is WebTools' main environment.\
+Different tools can be accessed from a menu in the lower left corner. Windows can be moved and resized.
 
 ### CyberPlay
 
-Muestra en tiempo real lo que ocurre en la terminal de Aire:
+Shows real-time information from the On-Air terminal:
 
-- **Título actual**
-- **Historial** de títulos emitidos
-- **Próximos** a salir al aire
+- **Current title**
+- **History** of played titles
+- **Upcoming** titles
 
-Incluye contenidos de:
+Includes content from:
 
-- Lista principal (CyberPlay)
-- Listas auxiliares (Playlist Manager 1 y 2)
-- Botoneras de acceso rápido (Live Assist 1 y 2)
+- Main playlist (CyberPlay)
+- Auxiliary playlists (Playlist Manager 1 and 2)
+- Quick access pads (Live Assist 1 and 2)
 
-### Clima
+### Weather
 
-Muestra datos del tiempo de ciudades configuradas.
+Shows weather data for configured cities.
 
-- Para agregar una ciudad:\
-  `Panel Vivo -> Agregar clima` → Ingresar ciudad → Buscar → Guardar.
+- To add a city:\
+  `Live Panel -> Add weather` → Enter city → Search → Save.
 
-La nueva ventana aparece en el Panel.
+The new window appears in the Panel.
 
-### Contenido RSS
+### RSS Content
 
-Permite agregar fuentes de noticias dinámicas.\
-Pasos:
+Allows adding dynamic news sources.\
+Steps:
 
-1. Copiar la **URL RSS** desde el sitio (ejemplo: ícono RSS en **Telesur**).
-2. En WebTools: `Inicio -> Panel Vivo -> Agregar RSS` → pegar URL.
-3. Asignar un **nombre corto** para identificar la fuente.
+1. Copy the **RSS URL** from the site (example: RSS icon on **Telesur**).
+2. In WebTools: `Home -> Live Panel -> Add RSS` → paste URL.
+3. Assign a **short name** to identify the source.
 
-Las ventanas RSS se actualizan cada **10 minutos**, con cuenta regresiva visible.\
-El botón **“Más tiempo”** extiende el intervalo de actualización (útil para locutores mientras leen).
+RSS windows update every **10 minutes**, with visible countdown.\
+The **"More time"** button extends the update interval (useful for announcers while reading).
 
-### Avisos PNT (Publicidad No Tradicional)
+### Live Read Ads
 
-- Los avisos PNT aparecen en ventanas emergentes con el **texto a leer**.
-- El locutor cierra la ventana una vez leído → queda registrado:
-  - **Hora de lectura**
-  - **Fragmento de audio del programa**
+- Live read ads appear in popup windows with the **text to read**.
+- The announcer closes the window after reading → this records:
+  - **Reading time**
+  - **Program audio snippet**
 
-De este modo, AUDICOM realiza un **control dinámico** sobre los PNT.
+This way, AUDICOM performs **dynamic control** over live reads.
 
-### Pizarra
+### Whiteboard
 
-Funciona como un **chat interno**, visible para todos los usuarios conectados.
+Works as an **internal chat**, visible to all connected users.
 
-### Eliminar elementos
+### Removing Elements
 
-Desde `Inicio -> Configuración`, puede eliminar elementos del panel.\
-El ícono de la derecha de cada ventana permite quitarlos.
+From `Home -> Configuration`, you can remove panel elements.\
+The icon on the right of each window allows removal.
 
-### Administrador de archivos
+### File Manager
 
-Permite **transferir archivos** de audio a la emisora desde cualquier lugar con acceso a Internet (ejemplo: un reportaje grabado en un bar o aeropuerto).
+Allows **file transfer** of audio to the station from anywhere with Internet access (example: an interview recorded at a bar or airport).
 
 <Note>
-  Para habilitar el administrador de archivos web desde fuera de la emisora:
+  To enable the web file manager from outside the station:
 
-  - Redirigir los **puertos 777 a 780** hacia la IP LAN de la PC de Aire.
-  - Asignar **IP fija** a la PC de Aire (DHCP deshabilitado).
-  - La IP fija debe ser inferior al rango del servidor DHCP del router.
+  - Forward **ports 777 to 780** to the On-Air PC's LAN IP.
+  - Assign **static IP** to the On-Air PC (DHCP disabled).
+  - Static IP must be below the router's DHCP server range.
 </Note>
 
-## Mail-Link y Noticias Remotas
+## Mail-Link and Remote News
 
-Esta capacidad permite a los usuarios enviar **mails con adjuntos** (audio en MP3 o texto en TXT) directamente a las computadoras que corren AUDICOM.\
-La dirección de destino es:
+This feature allows users to send **emails with attachments** (MP3 audio or TXT text) directly to computers running AUDICOM.\
+The destination address is:
 
-`nombreDeLaEmisora@audicom.us`
+`stationName@audicom.us`
 
-De este modo, un periodista puede grabar una entrevista en su teléfono móvil y enviarla vía e-mail a la emisora.
+This way, a journalist can record an interview on their mobile phone and email it to the station.
 
-- Los archivos adjuntos se copian automáticamente a una carpeta del sistema.
-- El sistema envía un **correo de confirmación** al remitente cuando el archivo se transfiere al servidor de audio.
-- Opcionalmente:
-  - El **asunto del correo** puede indicar la carpeta de destino.
-  - El cuerpo del correo puede contener una **palabra clave de seguridad** para restringir envíos no autorizados.
+- Attached files are automatically copied to a system folder.
+- The system sends a **confirmation email** to the sender when the file transfers to the audio server.
+- Optionally:
+  - The **email subject** can indicate the destination folder.
+  - The email body can contain a **security keyword** to restrict unauthorized submissions.
 
-Estos reportes pueden ser programados en automático con **BotNews**, que agrega presentaciones y cierres, o incluso generar locuciones por IA cuando los reportes llegan en formato texto.
+These reports can be automatically scheduled with **BotNews**, which adds intros and outros, or even generate AI voiceovers when reports arrive in text format.
 
 ---
 
-## Dirección de correo Mail-Link
+## Mail-Link Email Address
 
-La dirección se forma con el **alias** de la emisora, definido en el asistente **AStart**, seguido de `@audicom.us`.
+The address is formed with the station's **alias**, defined in the **AStart** wizard, followed by `@audicom.us`.
 
-Ejemplo:\
-Alias: `demoFM` → Dirección Mail-Link: `demoFM@audicom.us`
+Example:\
+Alias: `demoFM` → Mail-Link address: `demoFM@audicom.us`
 
-Si no fue creada, ejecute **AStart** desde:\
-`Inicio -> AUDICOM -> AStart`\
-o directamente:\
+If not created, run **AStart** from:\
+`Start -> AUDICOM -> AStart`\
+or directly:\
 `C:\Audicom\Astart.exe`
 
-El envío puede hacerse desde **PC, notebook o smartphone**, sin configuración especial.
+Sending can be done from **PC, notebook or smartphone**, without special configuration.
 
 ---
 
-## Archivos y Carpetas
+## Files and Folders
 
-- El correo debe contener **un único archivo MP3**.
-- AUDICOM Web Tools recibe el correo y copia el archivo en una carpeta de audio.
+- The email must contain **a single MP3 file**.
+- AUDICOM Web Tools receives the email and copies the file to an audio folder.
 
-Si el **asunto** incluye el nombre de una carpeta existente (ej: `REPORTES`), el archivo se copia allí.\
-Si no coincide con ninguna carpeta, se almacena en la predeterminada: `eMail`.
+If the **subject** includes an existing folder name (e.g.: `REPORTS`), the file is copied there.\
+If it doesn't match any folder, it's stored in the default: `eMail`.
 
 ---
 
-## Cómo pautar los envíos
+## How to Schedule Submissions
 
-Para que AUDICOM procese los correos, **Web Tools** debe estar corriendo en la emisora.
+For AUDICOM to process emails, **Web Tools** must be running at the station.
 
-### Pautar en horarios determinados
+### Schedule at Specific Times
 
-Se utilizan **Inclusiones Especiales (ExactTime)**:
+**Special Inclusions (ExactTime)** are used:
 
 `/Block /07:00-12:00 /Live`\
 `/Exacttime /007:45`\
-`; INFORME de TRANSITO`\
-`@Transito Apertura`\
-`@transito-<dd><mm><aaaa>`\
-`@Transito CIERRE`
+`; TRAFFIC REPORT`\
+`@Traffic Opening`\
+`@traffic-<dd><mm><yyyy>`\
+`@Traffic CLOSING`
 
-Ejemplo: El reporte de tránsito `transito-14032013.mp3` se emite a las **07:45**.\
-Al día siguiente, al no existir un nuevo archivo con fecha actual, el bloque se cancela automáticamente.
+Example: The traffic report `traffic-14032013.mp3` airs at **07:45**.\
+The next day, if no new file exists with current date, the block automatically cancels.
 
-Para múltiples envíos diarios, se agrega la **hora** al nombre del archivo:
+For multiple daily submissions, add the **time** to the filename:
 
 `/Block /07:00-12:00 /Live`\
 `/Exacttime /07:30`\
-`@transito730-<dd><mm><aaaa>`\
+`@traffic730-<dd><mm><yyyy>`\
 `/Exacttime /08:30`\
-`@transito830-<dd><mm><aaaa>`\
+`@traffic830-<dd><mm><yyyy>`\
 `/Exacttime /09:30`\
-`@transito930-<dd><mm><aaaa>`\
+`@traffic930-<dd><mm><yyyy>`\
 `/Exacttime /10:30`\
-`@transito1030-<dd><mm><aaaa>`
+`@traffic1030-<dd><mm><yyyy>`
 
 ---
 
-### Salida inmediata con NEWS
+### Immediate Playback with NEWS
 
-El módulo **NEWS** monitorea una carpeta.\
-Cuando detecta un nuevo archivo:
+The **NEWS** module monitors a folder.\
+When it detects a new file:
 
-- Espera a que termine el título en curso.
-- Interrumpe la programación automática.
-- Inserta el audio recibido, con apertura/cierre opcionales.
+- Waits for the current title to end.
+- Interrupts automated programming.
+- Inserts the received audio, with optional opening/closing.
 
-Se recomienda configurar NEWS para usar la carpeta `eMail` o crear otra específica.
+It's recommended to configure NEWS to use the `eMail` folder or create a specific one.
 
 ---
 
-## Cliente FTP
+## FTP Client
 
-**WebTools** incluye un **servidor FTP** para transferir archivos.
+**WebTools** includes an **FTP server** for file transfers.
 
-Requisitos:
+Requirements:
 
-1. Usuario/contraseña creados en AUDICOM (**Niveles de Acceso**).
-2. El usuario debe tener permisos de escritura/renombrar.
+1. Username/password created in AUDICOM (**Access Levels**).
+2. User must have write/rename permissions.
 
-**Parámetros de acceso local:**\
+**Local access parameters:**\
 `FTP IP: 192.168.100.253`\
-`FTP User: usuarioAUDICOM`\
-`FTP Pass: usuarioAUDICOM`\
+`FTP User: AUDICOMuser`\
+`FTP Pass: AUDICOMuser`\
 `FTP Port: 779`
 
-**Acceso desde Internet:**\
-Redirigir los puertos `778` y `779` hacia la IP de la PC de Aire.
+**Internet access:**\
+Forward ports `778` and `779` to the On-Air PC's IP.
 
 ---
 
-## Administración de WebTools
+## WebTools Administration
 
-El **panel de administración** permite:
+The **administration panel** allows:
 
-- Crear, eliminar o modificar usuarios.
-- Definir emisoras, terminales y permisos.
-- Configurar emisoras de un mismo multimedio.
+- Creating, deleting or modifying users.
+- Defining stations, terminals and permissions.
+- Configuring stations of the same media group.
 
-Acceso: `www.audicom.us/ConfigManager`
+Access: `www.audicom.us/ConfigManager`
 
-Usuario: `[alias]-admin`\
-Contraseña: `****`
+Username: `[alias]-admin`\
+Password: `****`
 
 ---
 
-## Opciones del Panel de Administración
+## Administration Panel Options
 
-- **Configurar medio**: Modifica nombre, alias, contraseña y correo del medio.
-- **Emisoras**: Permite ver y editar datos.
-- **Terminales**: Define estudios disponibles.
-- **Usuarios**: Crea usuarios y los asigna a emisoras.
+- **Configure media**: Modifies name, alias, password and media email.
+- **Stations**: Allows viewing and editing data.
+- **Terminals**: Defines available studios.
+- **Users**: Creates users and assigns them to stations.

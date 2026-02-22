@@ -1,52 +1,60 @@
 ---
-title: "MPX y Modulación"
-description: "Configuración de las salidas MPX y ajuste de la modulación en FM"
-keywords: ["MPX", "modulación", "pre-énfasis", "RDS", "BS.412", "calibrador", "FM OUTPUT"]
-tags: ["procesadores", "542"]
+title: "MPX and Modulation"
+description: "MPX outputs configuration and FM modulation adjustment"
+keywords: ["MPX", "modulation", "pre-emphasis", "RDS", "BS.412", "calibrator", "FM OUTPUT"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "9b5444281d4863e179d2518239a36e9dea8cb20354dfac21919016e0151de3b7"
+
 ---
 
 ## FM Output – MPX
 
-En el menú **FM OUTPUT** se configuran los parámetros principales de la transmisión:
+The **FM OUTPUT** menu configures the main transmission parameters:
 
-1. **Niveles** de las salidas de señal multiplexada estéreo (MPX)
-2. Configuración básica de **RDS**
-3. Control de potencia **ITU BS.412**
+1. **Levels** for stereo multiplex (MPX) signal outputs
+2. Basic **RDS** configuration 
+3. **ITU BS.412** power control
 
 ![542 Web FM Output Pn](/images/542/542-web-FM_output.png)
 
-### Nivel de MPX
+### MPX Level
 
-- Las dos salidas MPX tienen control de nivel calibrado en **Vpp (voltios pico a pico)**.
-- El nivel se ajusta típicamente para obtener el **100% de modulación** en el transmisor.
-- Si el transmisor tiene control de ganancia MPX, ajuste el procesador a **5 Vpp** y realice la corrección fina en el transmisor.
+- Both MPX outputs have level control calibrated in **Vpp (peak-to-peak volts)**.
+- Level is typically adjusted to achieve **100% modulation** at the transmitter.
+- If the transmitter has MPX gain control, set the processor to **5 Vpp** and make fine adjustments at the transmitter.
 
-### Pre-énfasis
+### Pre-emphasis
 
-Seleccione la curva de **pre-énfasis** según la norma de su país:
+Select the **pre-emphasis** curve according to your country's standard:
 
-- 50 μs → Europa
-- 75 μs → EE.UU., Asia, Latinoamérica
+- 50 μs → Europe
+- 75 μs → USA, Asia, Latin America
 
-### Tono piloto y portadora RDS
+### Pilot Tone and RDS Carrier
 
-- **PILOT**: nivel del tono piloto → 9% (de fábrica).
-  - Puede incrementarse hasta **12%** en zonas con mucha congestión de RF.
-  - A mayor nivel de piloto/RDS, menor sonoridad de audio para un mismo nivel de modulación.
-- **MODE**: permite conmutar la transmisión entre **STEREO** y **MONO**. En MONO se suprime el piloto y la señal MPX es monoaural. La conmutación puede hacerse:
-  - Desde la \*\*configuración \*\*(queda fijado en el sistema).
-  - Forzada **por preset** → Los presets tienen una variable para conmutar a mono (ver _Preset Manager_). En este caso el control indicará _“Forced to MONO by preset”_.“
-  - \*\*Remotamente \*\*con la aplicación **542 Lite Commander** _(requiere una computadora externa y acceso remoto por IP)._
+- **PILOT**: pilot tone level → 9% (factory default).
+  - Can be increased up to **12%** in areas with high RF congestion.
+  - Higher pilot/RDS levels reduce audio loudness for a given modulation level.
+- **MODE**: switches transmission between **STEREO** and **MONO**. In MONO mode, the pilot is suppressed and MPX signal is monaural. Switching can be done:
+  - Through **configuration** (fixed in system).
+  - **Preset forced** → Presets have a variable to switch to mono (see _Preset Manager_). In this case control will show _"Forced to MONO by preset"_.
+  - **Remotely** using **542 Lite Commander** application _(requires external computer and IP remote access)._
 
     <Info>
-      Ver [**Sobre la transmisión en MONO**](/es/542/542-mono)
+      See [**About MONO transmission**](/es/542/542-mono)
     </Info>
-- **RDS**: modulación de subportadora RDS → 4% (de fábrica).
+- **RDS**: RDS subcarrier modulation → 4% (factory default).
 
-### Compensación de la salida MPX
+### MPX Output Compensation
 
-- **Pilot Phase**: ajuste fino de la fase del piloto. Permite mejorar separación estéreo.
-- **SUB(L-R) adjust**: ajusta nivel del módulo L–R para compensar desaptaciones del conjunto coaxial/antena.
+- **Pilot Phase**: fine pilot phase adjustment. Improves stereo separation.
+- **SUB(L-R) adjust**: adjusts L-R module level to compensate for coaxial/antenna system mismatches.
 
 <img
   src="/images/542/542-MPX-compensation.png"
@@ -57,22 +65,22 @@ Seleccione la curva de **pre-énfasis** según la norma de su país:
 />
 
 <Info>
-  Ver **Medición y ajuste de la separación de canales**
+  See **Channel Separation Measurement and Adjustment**
 </Info>
 
-### Control de potencia ITU BS.412
+### ITU BS.412 Power Control
 
-Etapa que regula la potencia de señal MPX según la recomendación **ITU-R BS.412**.\
-Aplicable principalmente en **Europa**.
+Stage that regulates MPX signal power according to **ITU-R BS.412** recommendation.\
+Mainly applicable in **Europe**.
 
 <Danger>
-  Si la legislación de su país no exige BS.412, no active este control.\
-  Reducirá la sonoridad en el aire innecesariamente.
+  If your country's regulations do not require BS.412, do not activate this control.\
+  It will unnecessarily reduce on-air loudness.
 </Danger>
 
-- Establece un límite a la **energía promedio MPX** (ventana 60 seg.), manteniendo la modulación máxima en 75 kHz.
-- Busca reducir interferencias entre emisoras con separación de 100 kHz.
-- Estándar de referencia: **0 dBr** con tolerancia de \+0,2 dB.
+- Sets a limit on **average MPX energy** (60 sec window), maintaining maximum modulation at 75 kHz.
+- Aims to reduce interference between stations with 100 kHz spacing.
+- Reference standard: **0 dBr** with +0.2 dB tolerance.
 
 <img
   src="/images/542/542-BS412.png"
@@ -82,78 +90,78 @@ Aplicable principalmente en **Europa**.
   style={{ width:"51%" }}
 />
 
-El control de **modulación ITU BS.412** modifica el nivel de referencia de potencia MPX. \
-El gráfico de tiempo muestra la evolución de la potencia MPX en una ventana de 120 segundos.\
-La gráfica presenta una curva de integración de 60 segundos según lo establece BS.412; y un perfil de integración de tiempo corto.
+The **ITU BS.412 modulation** control modifies the MPX power reference level.\
+The time graph shows MPX power evolution over a 120-second window.\
+The graph presents a 60-second integration curve as established by BS.412; and a short-time integration profile.
 
-**Presets de procesado y BS.412**
+**Processing Presets and BS.412**
 
-Cualquier preset de procesado puede ser usado estando activo el control de potencia MPX. \
-Entre los presets de fábrica se incluyen ajustes optimizados para trabajar con ITU BS.412.
+Any processing preset can be used with MPX power control active.\
+Factory presets include optimized adjustments for ITU BS.412 operation.
 
 <Tip>
-  Al haber un límite de potencia, no tiene sentido usar presets de alta sonoridad, pues se estará procesando el audio aumentando la sonoridad para luego disminuirla. Una ventaja de la regulación ITU BS.412 es que las radios pueden usar más rango dinámico.
+  With a power limit in place, using high-loudness presets makes no sense, as audio would be processed to increase loudness only to decrease it later. One advantage of ITU BS.412 regulation is that stations can use more dynamic range.
 </Tip>
 
-## Ajuste de la modulación en FM
+## FM Modulation Adjustment
 
-De fábrica el tono piloto viene ajustado en **9%** y la portadora RDS en **4%**. \
-Usualmente no es necesario modificar estos valores. Si requiere modificarlos, hacerlo ANTES de realizar el ajuste de modulación.
+Factory default settings are **9%** for pilot tone and **4%** for RDS carrier.\
+Usually these values don't need modification. If changes are required, make them BEFORE adjusting modulation.
 
-Pasos para ajustar:
+Adjustment steps:
 
-1. Encienda el **CALIBRADOR** en la pantalla **FM OUTPUT** → se emite un tono de 400 Hz que reemplaza a la señal de entrada.
-2. Sintonice la transmisión en el receptor interno y verifique 100% de modulación en el indicador de modulación del procesador.
-   - Ajuste fino → modificar nivel MPX (default: 5 Vpp).
+1. Turn on the **CALIBRATOR** in the **FM OUTPUT** screen → a 400 Hz tone replaces the input signal.
+2. Tune the transmission on the internal receiver and verify 100% modulation on the processor's modulation indicator.
+   - Fine adjustment → modify MPX level (default: 5 Vpp).
 
    <Note>
-     El indicador de modulación del 542 mide en **integración rápida** de 125 uS (ajustable de 0 a 1 ms).\
-     Transmisores con medidores lentos pueden mostrar valores distintos con material de programa.\
-     Debido a la integración lenta el indicador del transmisor será incapaz de mostrar picos. En este caso la medición será más parecida cuanto mayor sea la densidad de picos del material de programa.
+     The 542's modulation indicator measures with **fast integration** of 125 uS (adjustable 0 to 1 ms).\
+     Transmitters with slow meters may show different values with program material.\
+     Due to slow integration, the transmitter's indicator will be unable to show peaks. In this case, measurement will be more similar with higher program material peak density.
    </Note>
    <Warning>
-     La medición en el 542 es válida sólo con **recepción óptima** en el sintonizador.
+     Measurement on the 542 is only valid with **optimal reception** on the tuner.
    </Warning>
-3. Apague el **CALIBRADOR** → vuelve la señal de programa al nivel calibrado.
+3. Turn off the **CALIBRATOR** → program signal returns to calibrated level.
 
-### Sobre los picos de modulación
+### About Modulation Peaks
 
-- En muchos países rigen normas FCC (USA) → Recomendación 73.268.
-- Se permite superar **ligeramente el 100%** en picos no frecuentes _(_“_In no case is it to exceed 100 % on peaks of frequent recurrence”)_
-- El 542APC cumple con esta norma, habilitando esa tolerancia.
+- Many countries follow FCC (USA) standards → Recommendation 73.268.
+- **Slight overshoots** are allowed on infrequent peaks _("In no case is it to exceed 100 % on peaks of frequent recurrence")_
+- The 542APC complies with this standard, enabling this tolerance.
 
-### Medición y ajuste de la separación estéreo
+### Stereo Separation Measurement and Adjustment
 
-La separación de canales puede verse afectada por pérdidas en el sistema coaxial-antena. <sup>1</sup>\
-542APC incluye ajustes de **fase de tono piloto** y de **ganancia del módulo (L-R)** que permiten compensar en parte la alinealidad de los sistemas de transmisión, mejorando la separación de canales en la transmisión.
+Channel separation can be affected by losses in the coaxial-antenna system. <sup>1</sup>\
+542APC includes **pilot tone phase** and **(L-R) module gain** adjustments that can partially compensate for transmission system non-linearity, improving channel separation.
 
-> _(1) FM stereo separation degradation as a function of antena system VSWR_, \
-> por Peter Onnigian, Jampro Antenna Company, para la 31º convención AES.
+> _(1) FM stereo separation degradation as a function of antena system VSWR_,\
+> by Peter Onnigian, Jampro Antenna Company, for the 31st AES convention.
 
-Para realizar el ajuste se procede:
+Adjustment procedure:
 
-1. En la pantalla **FM Monitor Analyzer**, realizar la medición de separación de canales. \
-   Cuanto más alto sea el número en dB, mejor es la separación. \
-   Si la indicación es mayor a 40 dB (Excellent) no es necesario realizar ajustes.
+1. On the **FM Monitor Analyzer** screen, measure channel separation.\
+   Higher dB numbers indicate better separation.\
+   If reading is above 40 dB (Excellent), no adjustments are needed.
 
 <Danger>
-  La medición introduce **breves tonos audibles al aire**.\
-  Es indispensable que la estación esté correctamente sintonizada para que las mediciones sean válidas.
+  Measurement introduces **brief audible tones on-air**.\
+  Proper station tuning is essential for valid measurements.
 </Danger>
 
-2. En la pantalla **FM OUTPUT** abrir la opción **MPX COMPENSATION**
-3. Incrementar en 0,1 dB el valor de “**SUB(L-R) Adjust**”.
-4. Repita la medición de separación de canales y verifique si el valor mejoró respecto de la medición anterior.
-   - Si la separación aumentó → vuelva al paso 3, incrementando nuevamente en **0,1 dB** y repitiendo la medición.
-   - Continúe hasta que la separación ya no mejore.
-5. Si en lugar de mejorar la separación **disminuye**, reduzca en **0,2 dB** el valor de **SUB(L-R) Adjust**.
-6. Mida nuevamente la separación.
-   - Verifique que ahora sí haya mejorado.
-   - Repita la operación en pasos de **0,1 dB** hasta lograr el mejor valor posible.
-7. Si aún no se alcanza un valor **Excellent**, pruebe a corregir en pasos de **0,5°** el control de **Pilot Phase**, primero en un sentido y luego en el otro, para verificar si puede obtenerse una mejora adicional.
-8. Una vez logrado el mejor valor posible (con buenos transmisores y antenas debe ser **Excellent \>40 dB**), guarde el ajuste en la memoria interna pulsando **SAVE** en el menú de la izquierda.
-   - Si no se guarda, el ajuste se pierde al reiniciar el procesador.
+2. On **FM OUTPUT** screen open **MPX COMPENSATION** option
+3. Increase "**SUB(L-R) Adjust**" by 0.1 dB.
+4. Repeat channel separation measurement and verify if value improved over previous measurement.
+   - If separation increased → return to step 3, increasing again by **0.1 dB** and repeating measurement.
+   - Continue until separation no longer improves.
+5. If separation decreases instead of improving, reduce **SUB(L-R) Adjust** by **0.2 dB**.
+6. Measure separation again.
+   - Verify improvement.
+   - Repeat in **0.1 dB** steps until best possible value is achieved.
+7. If **Excellent** value is still not reached, try adjusting **Pilot Phase** control in **0.5°** steps, first one way then the other, to check for additional improvement.
+8. Once best possible value is achieved (with good transmitters and antennas should be **Excellent >40 dB**), save adjustment to internal memory by pressing **SAVE** in left menu.
+   - If not saved, adjustment is lost when processor restarts.
 
 <Note>
-  No se miden valores superiores a **40 dB**, porque a partir de ese punto está demostrado que el oído humano (incluso usando auriculares) no percibe mejoras en la sensación de espacio estéreo.
+  Values above **40 dB** are not measured, as it's proven that human hearing (even using headphones) cannot perceive improvements in stereo space sensation beyond this point.
 </Note>

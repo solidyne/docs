@@ -1,51 +1,59 @@
 ---
-title: "Enlace Estudio-Planta"
-description: "Conexión y configuración del módulo streamer como enlace STL."
-keywords: ["streamer", "stl", "enlace", "streaming"]
-tags: ["consolas de estudio", "linea Classic", "DX816/AoIP", "DX822/AoIP"]
----
-
-## Enlace Estudio–Planta
-
-- En estudios, la consola con opción **/AoIP** opera como **codificador** y genera un streaming de audio hacia la planta transmisora.
-- En planta, un **decodificador** recibe el flujo y lo envía al **procesador de audio** (poe ejemplo Solidyne **ADA102**).
-
-  Algunos procesadores de FM pueden recibir y decodificar el stream de audio (por ejemplo Solidyne 542APC /AoIP)
-
-**Requisitos de red:**
-
-- Estudio y Planta en la **misma LAN** con enlace punto a punto (físico o inalámbrico), o
-- **VPN** sobre Internet de alto rendimiento (consultar con técnico de redes).
+title: "Studio-Transmitter Link"
+description: "Connection and configuration of the streamer module as STL link."
+keywords: ["streamer", "stl", "link", "streaming"]
+tags: ["studio consoles", "Classic line", "DX816/AoIP", "DX822/AoIP"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a45b2617a29851f592f0d59720b0c456692ba14bbe2a9b9f75cea533c0cc33a1"
 
 ---
 
-## Conexión y acceso
+## Studio-Transmitter Link
 
-**Procedimiento:**
+- At the studio, the console with **/AoIP** option works as an **encoder** and generates an audio stream to the transmitter site.
+- At the transmitter site, a **decoder** receives the stream and sends it to the **audio processor** (for example Solidyne **ADA102**).
 
-1. Conectar la consola a la red mediante cable **Ethernet**.
-2. Verificar **LEDs** en el conector Ethernet: indican que los módulos AoIP están **alimentados por USB** (al menos un USB a PC encendida o fuente USB externa). Los LEDs deben destellar.
-3. La red asigna **IP por DHCP**. Con IP obtenida, el LED verde de RJ45 queda destellando.\
-   Si no hay DHCP, el módulo buscará una **IP libre** (puede demorar unos minutos).
-4. Obtener la IP con **Solidyne Multi-Discovery**.
+  Some FM processors can receive and decode the audio stream (for example Solidyne 542APC /AoIP)
+
+**Network requirements:**
+
+- Studio and Transmitter site on the **same LAN** with point-to-point link (wired or wireless), or
+- **VPN** over high-performance Internet (consult with network technician).
+
+---
+
+## Connection and access
+
+**Procedure:**
+
+1. Connect the console to the network using an **Ethernet** cable.
+2. Check **LEDs** on the Ethernet connector: they indicate that AoIP modules are **powered via USB** (at least one USB to powered PC or external USB power supply). LEDs should blink.
+3. The network assigns **IP via DHCP**. Once IP is obtained, the green RJ45 LED keeps blinking.\
+   If there's no DHCP, the module will search for a **free IP** (may take a few minutes).
+4. Get the IP using **Solidyne Multi-Discovery**.
 
   <Note>
      **Solidyne Multi-Discovery**
 
-     Si no se tiene acceso físico a la consola, se puede [**descargar la herramienta Multi-Discovery**](/es/DX816/816-discovery) que detecta dispositivos Solidyne conectados a la red.
+     If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/es/DX816/816-discovery) that detects Solidyne devices connected to the network.
 </Note>
 
-5. Abrir un navegador (Firefox/Chrome) e ingresar la **IP** encontrada. Aparecerá el **Panel de Control IP**.
+5. Open a browser (Firefox/Chrome) and enter the found **IP**. The **IP Control Panel** will appear.
 
 ---
 
-## Configuración de streaming
+## Streaming configuration
 
-### **IP destino (Basic settings)**
+### **Destination IP (Basic settings)**
 
-La pantalla inicial de estado indica la configuración del puerto IP. El módulo de fábrica viene configurado como _Codificador: Studio Encoder_ (opción “Location” → 'Studio Encoder').
+The initial status screen shows the IP port configuration. The factory module comes configured as _Encoder: Studio Encoder_ (option "Location" → 'Studio Encoder').
 
-Para verificar la configuración, acceder a la opción \*\*“Configuration” \*\*y en el menú de la izquierda elegir **“Basic settings”**.
+To verify the configuration, access the **"Configuration"** option and select **"Basic settings"** from the left menu.
 
 <img
   src="/images/816/816-stream-basic-settings.png"
@@ -55,17 +63,16 @@ Para verificar la configuración, acceder a la opción \*\*“Configuration” \
   style={{ width:"51%" }}
 />
 
-| Parámetro            | Configuración / Descripción                                |
-| -------------------- | ---------------------------------------------------------- |
-| Location (Site type) | De fábrica en **Studio Encoder** (codificador en Estudio). |
-| Stream method        | **Push (RTP)**                                             |
-| URL                  | Ingresar **IP o DNS** y **puerto destino** del streaming.  |
-| Apply                | Pulsar para confirmar valores.                             |
+| Parameter            | Configuration / Description                                |
+| ------------------- | --------------------------------------------------------- |
+| Location (Site type) | Factory set to **Studio Encoder** (encoder at Studio).    |
+| Stream method       | **Push (RTP)**                                            |
+| URL                 | Enter streaming **destination IP or DNS** and **port**.    |
+| Apply               | Press to confirm values.                                   |
 
+### Audio options
 
-### Opciones de audio
-
-Acceso: **Configuration → Audio**.
+Access: **Configuration → Audio**.
 
 <img
   src="/images/816/816-streamer-audio.png"
@@ -75,53 +82,52 @@ Acceso: **Configuration → Audio**.
   style={{ width:"66%" }}
 />
 
-| Parámetro     | Valor de fábrica / Recomendación | Notas                               |
-| ------------- | -------------------------------- | ----------------------------------- |
-| Input source  | Line Stereo                      | No modificar.                       |
-| Format        | PCM 16 bits stereo               | Predeterminado.                     |
-| Sample rate   | 44.1 kHz                         | Predeterminado. 48 kHz no soportado |
-| Bitrate (PCM) | ~1.6 Mbit/s                      | Para PCM16@48 kHz estéreo.          |
+| Parameter     | Factory value / Recommendation | Notes                              |
+| ------------- | ----------------------------- | ---------------------------------- |
+| Input source  | Line Stereo                   | Do not modify.                     |
+| Format        | PCM 16 bits stereo            | Default.                           |
+| Sample rate   | 44.1 kHz                      | Default. 48 kHz not supported      |
+| Bitrate (PCM) | ~1.6 Mbit/s                   | For PCM16@48 kHz stereo.          |
 
+### Status screen
 
-### Pantalla de estado
-
-| Campo                    | Descripción                                                                        |
-| ------------------------ | ---------------------------------------------------------------------------------- |
-| Site type                | Modo de trabajo (p. ej., **Studio Encoder** en Estudio).                           |
-| Stream mode              | Evento/método configurado para iniciar transmisión al remoto.                      |
-| Keep-alive               | Estrategia de mantenimiento de conexión activa.                                    |
-| Connection status        | Estado del enlace. **Verde** = OK con IP destino; **Rojo** = problema de conexión. |
-| Incoming Stream          | Estado de streaming entrante (inactivo en codificador unidireccional).             |
-| Outgoing Stream          | Estado de streaming saliente (activo en el codificador).                           |
-| Audio input              | Fuente de audio utilizada (analógicas).                                            |
-| Audio format             | Formato aplicado al audio transmitido (ej.: PCM16/48k).                            |
-| Input/Output audio level | Niveles reales de audio (dBFS) de entrada/salida.                                  |
-| Relay 1 .. 4             | No implementado.                                                                   |
-| Remote inputs            | No implementado.                                                                   |
-| Local inputs             | Estado de entradas locales.                                                        |
-| Local relays             | No implementado.                                                                   |
+| Field                    | Description                                                                        |
+| ----------------------- | ---------------------------------------------------------------------------------- |
+| Site type               | Working mode (e.g., **Studio Encoder** at Studio).                                 |
+| Stream mode             | Event/method configured to start remote transmission.                               |
+| Keep-alive              | Connection keep-alive strategy.                                                     |
+| Connection status       | Link status. **Green** = OK with destination IP; **Red** = connection issue.       |
+| Incoming Stream         | Incoming stream status (inactive in unidirectional encoder).                       |
+| Outgoing Stream         | Outgoing stream status (active in encoder).                                        |
+| Audio input             | Audio source used (analog).                                                        |
+| Audio format            | Format applied to transmitted audio (e.g.: PCM16/48k).                            |
+| Input/Output audio level| Actual audio levels (dBFS) input/output.                                          |
+| Relay 1 .. 4           | Not implemented.                                                                    |
+| Remote inputs           | Not implemented.                                                                    |
+| Local inputs            | Local inputs status.                                                               |
+| Local relays            | Not implemented.                                                                    |
 
 ---
 
-## Enlace digital de microondas
+## Digital microwave link
 
-Para distancias de **hasta 45 km**, puede emplearse un enlace de datos punto a punto en **5.8 GHz** (o **2.4 GHz** según país), estándar **802.11.x**:
+For distances **up to 45 km**, a point-to-point data link in **5.8 GHz** (or **2.4 GHz** depending on country), standard **802.11.x** can be used:
 
-- Banda **gratuita**, sin autorizaciones especiales.
-- Permite transportar audio **PCM 16 bits / 44.1 kHz** (sin compresión) o audio **codificado**.
-- Soporta **conexión bidireccional** para aplicaciones especiales.
+- **License-free** band, no special authorizations required.
+- Allows transport of **PCM 16 bits / 44.1 kHz** audio (uncompressed) or **encoded** audio.
+- Supports **bidirectional connection** for special applications.
 
 <Info>
-  Para más detalles: [**info@solidynepro.com**](mailto:info@solidynepro.com)
+  For more details: [**info@solidynepro.com**](mailto:info@solidynepro.com)
 </Info>
 
 ---
 
-## Alimentación de módulos AoIP
+## AoIP modules power supply
 
-- Los módulos AoIP se alimentan desde **USB**; requieren al menos **un USB** conectado a una **PC encendida**.
-- Sin PC por USB, o con la PC apagada, el servicio IP **no estará disponible**.
+- AoIP modules are powered via **USB**; they require at least **one USB** connected to a **powered PC**.
+- Without PC via USB, or with PC turned off, IP service **will not be available**.
 
 <Note>
-  Si no hay PC conectada, puede usarse una **fuente de alimentación USB estándar (5 V)** para energizar los módulos AoIP.
+  If no PC is connected, a **standard USB power supply (5V)** can be used to power the AoIP modules.
 </Note>

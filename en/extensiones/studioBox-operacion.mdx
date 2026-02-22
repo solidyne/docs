@@ -1,59 +1,67 @@
 ---
-title: "Uso de Bahías StudioBox"
-description: "Uso de las bahías para monitoreo en el Estudio"
-keywords: ["monitoreo", "auriculares"]
-tags: ["expansiones", "SutudioBox", "HD3", "HD5", "UX24", "UX18", "DX816", "D612"]
+title: "Using StudioBox Bays"
+description: "Using monitoring bays in the Studio"
+keywords: ["monitoring", "headphones"]
+tags: ["expansions", "SutudioBox", "HD3", "HD5", "UX24", "UX18", "DX816", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "6e5a8ee9e202485aae3e6c5a6a60470be6cb9d61b6972c0cecfdba544e6ee9e3"
+
 ---
 
-## Operación de las StudioBox
+## StudioBox Operation
 
-### Auriculares en el estudio
+### Studio Headphones
 
-- **StudioBox HD5**: maneja hasta **cinco auriculares** con controles de nivel independientes.
-- **StudioBox HD3**: admite **tres auriculares** y cuenta con **dos perillas de nivel** (auriculares 2 y 3 comparten control de volumen).
+- **StudioBox HD5**: handles up to **five headphones** with independent level controls.
+- **StudioBox HD3**: supports **three headphones** and features **two level knobs** (headphones 2 and 3 share volume control).
 
-<Icon icon="volume" iconType="solid" color="#ff8b00" size={20} /> El **volumen máximo** que pueden alcanzar los auriculares se establece en la pantalla MONITOR de la consola (ver _MONITOR → ADVANCED_).
+<Icon icon="volume" iconType="solid" color="#ff8b00" size={20} /> The **maximum volume** for the headphones is set in the console's MONITOR screen (see _MONITOR → ADVANCED_).
 
-Ambas cajas manejan **doble canal de monitoreo**:
+Both boxes handle **dual monitoring channels**:
 
 1. **STUDIO MONITOR**\
-   Señal recibida por _Studio Monitor Input_.\
-   En consolas UNIDEX la fuente de audio se asigna desde la pantalla de monitoreo (**PGM, REC, AUX, VBUS, CUE, ON-AIR**).\
-   Al pulsar el botón **TalkBack**, el micrófono de órdenes envía señal a los parlantes y auriculares.
+   Signal received through _Studio Monitor Input_.\
+   In UNIDEX consoles, the audio source is assigned from the monitoring screen (**PGM, REC, AUX, VBUS, CUE, ON-AIR**).\
+   When pressing the **TalkBack** button, the talkback microphone sends signal to speakers and headphones.
 
-   > Los parlantes se silencian automáticamente cuando los micrófonos están al aire.
+   > Speakers are automatically muted when microphones are on-air.
 2. **AUX IN**\
-   Entrada de línea auxiliar. Hasta tres auriculares pueden asignarse a esta entrada (HD5).\
-   En UNIDEX puede conectarse una salida que replique la asignación de estudio, pero con conmutación de órdenes propia, permitiendo hablar a un grupo específico de auriculares (**AUX**) o a todos.
+   Auxiliary line input. Up to three headphones can be assigned to this input (HD5).\
+   In UNIDEX, an output that replicates the studio assignment can be connected, but with its own talkback switching, allowing communication to a specific group of headphones (**AUX**) or to all.
 
 <Note>
-  Ver en [StudioBox conexiones](/es/unidex/ux-StudioBox-conexiones) los detalles sobre la configuración con doble canal de talkback.
+  See [StudioBox connections](/es/unidex/ux-StudioBox-conexiones) for details about dual talkback channel configuration.
 </Note>
 
 ---
 
-### Monitores en el estudio
+### Studio Monitors
 
-La salida para parlantes de estudio tiene control de nivel propio.\
-Los monitores reproducen la señal de la entrada **STUDIO**, según la asignación hecha en la consola.
+The studio speaker output has its own level control.\
+The monitors play the signal from the **STUDIO** input, according to the console assignment.
 
 <Note>
-  **Volumen en parlantes:** Ajuste los parlantes monitores activos para un nivel de escucha confortable con el control **LOUDSPEAKER LEVEL** de la StudioBox posicionado al centro.
+  **Speaker volume:** Adjust the active monitor speakers for a comfortable listening level with the StudioBox **LOUDSPEAKER LEVEL** control positioned at center.
 </Note>
 
 ---
 
 ### Reverse Intercom
 
-El **botón blanco** tiene dos funciones:
+The **white button** has two functions:
 
-1. **Micrófonos apagados**:
-   - Pulsar para hablar hacia _Control_.
-   - La caja incorpora un **micrófono de superficie**.
-   - En _Cabina de Control_, el operador escucha la señal en el canal **CUE** de la consola.
-   - Para responder, desde la Cabina de Control el operador usa el botón **TalkBack** de la consola.
-   - Ajustes:
-     - Preset **mic gain** (ubicado en la StudioBox bajo el micrófono).
+1. **Microphones off**:
+   - Press to talk to _Control_.
+   - The box includes a **surface microphone**.
+   - In the _Control Room_, the operator hears the signal on the console's **CUE** channel.
+   - To respond, from the Control Room the operator uses the console's **TalkBack** button.
+   - Adjustments:
+     - **mic gain** preset (located in the StudioBox under the microphone).
 
        <img
          src="/images/ux24/ux-studiobox-preset.jpg"
@@ -61,13 +69,13 @@ El **botón blanco** tiene dos funciones:
          title="Ux Studiobox Preset Jp"
          style={{ width:"23%" }}
        />
-     - **Intercom Input Gain** en la consola, en pantalla _MONITOR → ADVANCED_.
-2. **Micrófonos al aire**:
-   - El botón se comporta como Tally Light. se ilumina en rojo indicando **EN EL AIRE**.
+     - **Intercom Input Gain** on the console, in _MONITOR → ADVANCED_ screen.
+2. **Microphones on-air**:
+   - The button acts as Tally Light, illuminating red to indicate **ON AIR**.
 
 ---
 
-### Timer / Clock (solo en HD5)
+### Timer / Clock (HD5 only)
 
 <img
   src="/images/ux24/ux-studiobox-dispaly.jpg"
@@ -76,8 +84,8 @@ El **botón blanco** tiene dos funciones:
   style={{ width:"35%" }}
 />
 
-- **Micrófonos apagados**: muestra la hora actual.
-  - Ajuste manual con los botones **SET** (HORAS/MINUTOS) y flechas **ARRIBA/ABAJO**.
-- **Micrófonos al aire**: muestra el tiempo transcurrido al aire.
+- **Microphones off**: displays current time.
+  - Manual adjustment using **SET** buttons (HOURS/MINUTES) and **UP/DOWN** arrows.
+- **Microphones on-air**: displays elapsed on-air time.
 
-La función contador de tiempo en el aire se puede desactivar quitando un puente interno (requiere remover la tapa del módulo). Esto desactiva el modo _contador_ y el display muestra siempre la hora actual.
+The on-air time counter function can be disabled by removing an internal jumper (requires removing the module cover). This deactivates the _counter_ mode and the display always shows the current time.

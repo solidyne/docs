@@ -1,82 +1,90 @@
 ---
-title: "Comandos para enlaces remotos"
-description: "Instrucciones para getionar streaming y enlaces."
-keywords: ["CyberPlay Editor","enlaces","repetidoras"]
+title: "Remote Link Commands"
+description: "Instructions for managing streaming and links."
+keywords: ["CyberPlay Editor","links","repeaters"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "147b99a1f2daeec291d0e6df37cda58f63412602415274cbbcbb040e059d2a54"
+
 ---
 
-## Enlace por Internet - ILink
+## Internet Link - ILink
 
-El comando `/ILink` permite a AUDICOM conectar con flujos de audio a través de Internet.\
-Se utiliza en **repetidoras** que retransmiten el streaming de audio y metadata de la estación maestra.
+The `/ILink` command allows AUDICOM to connect to audio streams over the Internet.\
+It is used in **repeater stations** that rebroadcast audio streaming and metadata from the master station.
 
-#### Ejemplo de uso con repetidoras AUDICOM
+#### Usage example with AUDICOM repeaters
 
 `/Block /00:00-24:00 /ILink="AutoDj Jazz" ilink://190.247.72.170:8080`
 
-En este caso, la repetidora recibe el **streaming** de la cabecera.\
-Durante las tandas comerciales, reemplaza las de la cabecera por **tandas locales**.
+In this case, the repeater receives the **streaming** from the head-end.\
+During commercial breaks, it replaces the head-end's commercials with **local breaks**.
 
 ---
 
-#### Streaming de protocolos públicos
+#### Public Protocol Streaming
 
 `/Block /00:00-24:00 /ILink="AutoDj Jazz" mms://190.247.72.170:8080`
 
-- **Protocolo MMS**: estándar de Windows, no requiere decodificadores adicionales.
-- Otros protocolos soportados:
-  - **HTTP Streams**: `icyx://[stream path]` (puerto 80 por defecto).
-  - **RTSP Streams**: `rtpx://[stream path]` (puerto 554 por defecto).
-  - **HTTP/RTSP Streams**: `htpx://[stream path]` (puerto 80 por defecto).
-  - **RTMP Flash Streams**: `rtmx://[stream path]` (puerto 1935 por defecto).
+- **MMS Protocol**: Windows standard, requires no additional decoders.
+- Other supported protocols:
+  - **HTTP Streams**: `icyx://[stream path]` (default port 80).
+  - **RTSP Streams**: `rtpx://[stream path]` (default port 554).
+  - **HTTP/RTSP Streams**: `htpx://[stream path]` (default port 80).
+  - **RTMP Flash Streams**: `rtmx://[stream path]` (default port 1935).
 
-Se debe indicar un **formato AutoDj** como respaldo:\
-Si la conexión al servidor se pierde, se activa ese formato.\
-Cuando el enlace se restablece, el AutoDj se interrumpe y se retoma el streaming.
-
----
-
-## Bloque para Satélite de Relleno (SatFill)
-
-`/Block /HH:MM-HH:MM /Satfill /X [Título del bloque]`
-
-En este bloque, AUDICOM reproduce la señal del **satélite** (o enlace VHF).\
-A horarios específicos interrumpe la señal externa para dar paso a **programación local** (tandas, música, noticias, etc.).\
-Finalizada la tanda, el sistema retorna a **SYNCRO**, retomando la señal satelital hasta el próximo corte.
-
-#### Métodos de conmutación
-
-- **a) Control remoto de la consola**: vía puerto USB.
-- **b) Entrada de línea de placa de audio**: el sistema conmuta la señal satelital hacia la entrada de línea.
-
-El modificador `/X` define qué salida del puerto paralelo usar:\
-`1, 2, 3 o 4` → corresponden a Data 0, 1, 2 y 3 respectivamente.\
-Esto permite controlar hasta cuatro módulos de consola.
+An **AutoDj format** must be specified as backup:\
+If the server connection is lost, this format is activated.\
+When the link is restored, AutoDj stops and streaming resumes.
 
 ---
 
-## Bloque para Satélite Maestro - Esclavo (SatSlave)
+## Satellite Fill Block (SatFill)
 
-`/Block /HH:MM-HH:MM /Satslave [Título del bloque]`
+`/Block /HH:MM-HH:MM /Satfill /X [Block Title]`
 
-El modo **SatSlave** automatiza la conmutación entre **señal local** y **señal satelital** usando **pulsos de control** enviados por audicom vía USB.
+In this block, AUDICOM plays the **satellite** signal (or VHF link).\
+At specific times it interrupts the external signal to broadcast **local programming** (commercials, music, news, etc.).\
+After the break ends, the system returns to **SYNCRO**, resuming the satellite signal until the next break.
 
-- En estado **SYNC**, se habilita el módulo del programa satelital.
-- Cuando llega un **pulso de disparo** desde la cabecera de bajada, AUDICOM conmuta a **programación local** y ejecuta la tanda correspondiente.
-- Al finalizar, retorna al enlace.
+#### Switching Methods
 
-Este ciclo se repite tanda tras tanda, sincronizando la señal local con la remota.
+- **a) Console remote control**: via USB port.
+- **b) Sound card line input**: the system switches the satellite signal to the line input.
 
-#### Consideraciones
+The `/X` modifier defines which parallel port output to use:\
+`1, 2, 3 or 4` → correspond to Data 0, 1, 2 and 3 respectively.\
+This allows controlling up to four console modules.
 
-- Si el número de pulsos recibidos es **menor** al de tandas programadas, habrá atraso: las tandas restantes se dispararán al inicio del día siguiente.
-- Si los pulsos son **mayores**, las tandas se repetirán desde el comienzo hasta completar las 24 h.
-- El último bloque SatSlave no requiere pulso: si no llega, el sistema conmuta por horario para mantener la grilla.
+---
 
-#### Ejemplo
+## Master-Slave Satellite Block (SatSlave)
+
+`/Block /HH:MM-HH:MM /Satslave [Block Title]`
+
+**SatSlave** mode automates switching between **local signal** and **satellite signal** using **control pulses** sent by audicom via USB.
+
+- In **SYNC** state, the satellite program module is enabled.
+- When a **trigger pulse** arrives from the downlink head-end, AUDICOM switches to **local programming** and executes the corresponding break.
+- Upon completion, it returns to the link.
+
+This cycle repeats break after break, synchronizing the local signal with the remote one.
+
+#### Considerations
+
+- If the number of received pulses is **less** than programmed breaks, there will be delay: remaining breaks will trigger at the start of next day.
+- If pulses are **greater**, breaks will repeat from the beginning until completing 24h.
+- The last SatSlave block requires no pulse: if none arrives, the system switches by schedule to maintain the grid.
+
+#### Example
 
 `/Block /10:00-12:30 /Satslave`
 
-Entre las 10:00 y 12:30 se transmite la señal satelital.\
-Las tandas locales, generadas por AUDICOM, reemplazan a las del satélite.\
-Al finalizar el bloque, se desactiva el control satelital y se pasa al siguiente segmento de programación.
+Between 10:00 and 12:30 the satellite signal is transmitted.\
+Local breaks, generated by AUDICOM, replace the satellite ones.\
+When the block ends, satellite control is deactivated and moves to the next programming segment.

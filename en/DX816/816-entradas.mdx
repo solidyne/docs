@@ -1,60 +1,68 @@
 ---
-title: "Entradas de audio"
-description: "Descripción y conexionado de las entradas de audio"
-keywords: ["entradas","usb","microfonos","phantom"]
-tags: "consolas de estudio,linea Classic,DX816,DX822"
+title: "Audio inputs"
+description: "Description and connection of audio inputs"
+keywords: ["inputs","usb","microphones","phantom"]
+tags: "studio consoles,Classic line,DX816,DX822"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "80d5822d8461609bcac20762c26580e4662b177a28bbcc158435ab135aca9bda"
+
 ---
 
-## Entradas de línea
+## Line inputs
 
-Las consolas DX816/822 presentan diversos tipos de entradas, que se combinan en los diferentes canales de la consola:
+The DX816/822 consoles feature different types of inputs, combined across the various console channels:
 
-- **2 BAL-LINE**: entradas balanceadas.
-- **4 AUX LINE**: entradas no balanceadas.
-  - **2 RCA** en canales canales LINE, conmutables desde el panel frontal frente.
-  - **2 miniplug** en canales USB, la **conmutación es automática**: al insertar un plug TRS, el audio USB queda silenciado.
+- **2 BAL-LINE**: balanced inputs.
+- **4 AUX LINE**: unbalanced inputs.
+  - **2 RCA** on LINE channels, switchable from the front panel.
+  - **2 miniplug** on USB channels, with **automatic switching**: when inserting a TRS plug, USB audio is muted.
 
 <Info>
-  Las entradas de línea no balanceadas tienen nivel nominal **–10 dBV** sobre **10 KΩ** .
+  Unbalanced line inputs have a nominal level of **-10 dBV** over **10 KΩ**.
 
-  El ajuste de ganancia es común para ambas (principal/auxiliar). Puede ser necesario re-ajustarlo según el equipo conectado.
+  The gain adjustment is shared for both (main/auxiliary). It may need readjustment depending on the connected equipment.
 </Info>
 
-### Conexión de las entradas balanceadas
+### Balanced input connections
 
-Las entradas balanceadas utilizan conectores **RJ45** blindados y requieren cable multipar blindado categoría 5. Puede adquirirse el kit de cables prearmados **MNGDX822**, que incluye los cables necesarios para la conexión.
+Balanced inputs use shielded **RJ45** connectors and require shielded category 5 multicore cable. You can purchase the **MNGDX822** pre-assembled cable kit, which includes the necessary cables for connection.
 
 <Tip>
-  [Diagramas de pines y cables adaptadores para armado de cables](/es/diagramas/RJ45-pinout).
+  [Pin diagrams and adapter cables for cable assembly](/es/diagramas/RJ45-pinout).
 </Tip>
 
 ---
 
-## Entradas para micrófonos
+## Microphone inputs
 
-Las entradas de micrófono son balanceadas electrónicamente y utilizan conectores **XLR estándar**.
+The microphone inputs are electronically balanced and use standard **XLR connectors**.
 
 <img
   src="/images/816/816-trasero-mics.jpg"
-  alt="816 Trasero Mics Jp"
-  title="816 Trasero Mics Jp"
+  alt="816 Rear Mics Jp"
+  title="816 Rear Mics Jp"
   className="mx-auto"
   style={{ width:"56%" }}
 />
 
-- El panel trasero presenta 5 conectores XLR.
-- Las entradas **MIC-4** y **MIC-5** comparten el preamplificador con **MIC-2** y **MIC-3**, respectivamente. Canal 2 y Canal 3 pueden manejar maneja dos micrófonos cada uno:
-  - Canal 2 ⟶ Entradas MIC-2 y MIC-4
-  - Canal 3 ⟶ Entradas MIC-3 y MIC-5
+- The rear panel features 5 XLR connectors.
+- Inputs **MIC-4** and **MIC-5** share the preamplifier with **MIC-2** and **MIC-3**, respectively. Channel 2 and Channel 3 can handle two microphones each:
+  - Channel 2 ⟶ Inputs MIC-2 and MIC-4
+  - Channel 3 ⟶ Inputs MIC-3 and MIC-5
 
 <Warning>
-  Cuando se utilizan dos micrófonos sobre un mismo canal, deben ser de **igual marca y modelo** para garantizar homogeneidad en la señal.
+  When using two microphones on the same channel, they must be of the **same brand and model** to ensure signal homogeneity.
 </Warning>
 
-### Alimentación "Phantom" 48V
+### 48V Phantom Power
 
-El botón **48V** en el frente del módulo activa la alimentación phantom flotante para **todos los micrófonos**. En el modelo DX822, un segundo interruptor conmuta la alimentación sobre las entradas MIC-6 a MIC-10.
+The **48V** button on the module's front activates floating phantom power for **all microphones**. On the DX822 model, a second switch toggles power for inputs MIC-6 through MIC-10.
 
 <Info>
-  Los micrófonos dinámicos soportan alimentación phantom de 48V, por lo que es posible mezclar micrófonos dinámicos y de condensador sin riesgo.
+  Dynamic microphones can handle 48V phantom power, so it's possible to mix dynamic and condenser microphones without risk.
 </Info>

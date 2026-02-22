@@ -1,140 +1,148 @@
 ---
 title: "File Manager"
-description: "Administrador de archivos. Descripción. "
-keywords: ["File Manager","Media Manager","gestión de medios"]
+description: "File Manager. Description."
+keywords: ["File Manager","Media Manager","media management"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "8420902a66324cb54bbb2f0683ad7be228e63dd18d4df38a8150e6e7bffba34a"
+
 ---
 
-## Introducción
+## Introduction
 
 <Note>
-  El módulo **File Manager** fue discontinuado a partir de **AUDICOM 14 (Audicom Black)** y reemplazado por **Media Manager**.\
-  Aunque sigue incluido en la distribución para evitar un cambio brusco, recomendamos migrar a **Media Manager**, ya que File Manager será eliminado en futuras versiones.
+  The **File Manager** module was discontinued since **AUDICOM 14 (Audicom Black)** and replaced by **Media Manager**.\
+  Although it remains included in the distribution to avoid an abrupt change, we recommend migrating to **Media Manager**, as File Manager will be removed in future versions.
 </Note>
 
-Se accede desde el menú **“+ herramientas”** de la barra superior del escritorio principal.\
-El módulo está organizado en pestañas que muestran los archivos de audio disponibles en cada terminal (discos locales o en red).
+It can be accessed from the **"+ tools"** menu in the top bar of the main desktop.\
+The module is organized in tabs that show the available audio files on each terminal (local or network drives).
 
-**Características:**
+**Features:**
 
-- Usa una **estructura de carpetas fija** (las carpetas externas serán ignoradas).
-- Los archivos se clasifican por tipo (Música, Spots, Comerciales, Efectos, etc.).
-- Los títulos pueden:
-  - reproducirse al aire,
-  - insertarse en la pauta de programación,
-  - o cargarse en las botoneras de acceso instantáneo Live Assist.
+- Uses a **fixed folder structure** (external folders will be ignored).
+- Files are classified by type (Music, Spots, Commercials, Effects, etc.).
+- Titles can be:
+  - played on air,
+  - inserted into the program schedule,
+  - or loaded into Live Assist instant access buttons.
 
 <Note>
-  En cada terminal se visualizan solo las carpetas declaradas en esa terminal (**audioDrives**).\
-  Además, el Administrador puede restringir el acceso de cada usuario a determinadas carpetas desde **Niveles de Acceso**.
+  Each terminal only displays the folders declared on that terminal (**audioDrives**).\
+  Additionally, the Administrator can restrict each user's access to specific folders from **Access Levels**.
 </Note>
 
 ---
 
-## Descripción general
+## General Description
 
-La ventana principal muestra los archivos de la carpeta seleccionada con los siguientes campos:\
-**Intérprete – Título – Duración – Formato – Ubicación**.
+The main window shows the files in the selected folder with the following fields:\
+**Artist – Title – Duration – Format – Location**.
 
-- Para ver otras carpetas: clic en las pestañas superiores (Tabs).
-- Si existen más de 18 carpetas: use los botones de desplazamiento `<-- -->`.
-- Tamaño y posición de la ventana son configurables.
-- El orden de columnas puede cambiarse con un clic sobre el encabezado.
-- También es posible realizar **búsqueda rápida por letra**:
-  - Ejemplo: Si presiona “A”, el cursor se posiciona sobre el primer archivo que comience con “A” en la columna activa.
-
----
-
-## Colores de los títulos (última salida al aire)
-
-Los archivos musicales registrados en la base de datos aparecen en distintos colores según el tiempo desde su última emisión:
-
-- **Rojo**: \< 4 horas
-- **Naranja**: 4–12 horas
-- **Verde**: 12–24 horas
-- **Negro**: \> 24 horas
-
-Los márgenes de tiempo se configuran en el **Panel de Configuración**.
+- To view other folders: click on the upper tabs.
+- If there are more than 18 folders: use the scroll buttons `<-- -->`.
+- Window size and position are configurable.
+- Column order can be changed by clicking on the header.
+- **Quick letter search** is also possible:
+  - Example: Pressing "A" positions the cursor on the first file beginning with "A" in the active column.
 
 ---
 
-## Colores de las carpetas
+## Title Colors (last air time)
 
-Cada carpeta puede asignarse a un color para facilitar su identificación.
+Music files registered in the database appear in different colors according to time since last broadcast:
 
-- Los filtros permiten mostrar solo carpetas de un color específico.
-- Los colores son únicos y válidos para todas las terminales de la red.
-- Se definen al crear la carpeta o desde la ventana **INFO**.
+- **Red**: \< 4 hours
+- **Orange**: 4-12 hours
+- **Green**: 12-24 hours
+- **Black**: \> 24 hours
+
+Time ranges are configured in the **Configuration Panel**.
+
+---
+
+## Folder Colors
+
+Each folder can be assigned a color for easier identification.
+
+- Filters allow showing only folders of a specific color.
+- Colors are unique and valid for all network terminals.
+- They are defined when creating the folder or from the **INFO** window.
 
 <Tip>
-  Recomendamos crear una tabla de referencia visible en el estudio.\
-  Ejemplo: rojo = música, verde = avisos, amarillo = efectos.
+  We recommend creating a reference chart visible in the studio.\
+  Example: red = music, green = spots, yellow = effects.
 </Tip>
 
 ---
 
-## Botones principales
+## Main Buttons
 
-### Update (Actualizar)
+### Update
 
-`[Teclado Numérico /]`
+`[Numeric Keypad /]`
 
-- Actualiza la carpeta seleccionada para mostrar nuevos archivos.
-- Por defecto, File Manager guarda en memoria el listado al abrir una carpeta; los cambios no aparecen hasta presionar **Update**.
-- La ventana indica fecha y hora de la última actualización.
+- Updates the selected folder to show new files.
+- By default, File Manager stores the listing in memory when opening a folder; changes don't appear until pressing **Update**.
+- The window shows date and time of last update.
 
 ### Insert
 
 `[Enter]`
 
-- Inserta el título seleccionado en la ventana **CyberPlay** (encima del cursor amarillo).
-- También admite **Drag & Drop**.
-- Es posible insertar múltiples títulos seleccionados de una vez.
+- Inserts the selected title into the **CyberPlay** window (above the yellow cursor).
+- Also supports **Drag & Drop**.
+- Multiple selected titles can be inserted at once.
 
 ### Cue Start / Stop
 
 `[Delete]`
 
-- Reproduce el título seleccionado en **previo**.
-- Doble clic = reproducción en previo.
-- Segundo clic o Delete = reproducir los 5 segundos finales (Cue End).
-- Click derecho = detener previo.
+- Plays the selected title in **preview**.
+- Double click = preview playback.
+- Second click or Delete = play last 5 seconds (Cue End).
+- Right click = stop preview.
 
 <Warning>
-  Si el sistema trabaja con **una única placa de sonido**, no hay canal de monitoreo.\
-  En ese caso, el doble clic reproduce el archivo directamente **al aire**.
+  If the system works with **a single sound card**, there is no monitoring channel.\
+  In this case, double clicking plays the file directly **on air**.
 </Warning>
 
 ### Play
 
-- Reproduce el título seleccionado por la salida de **Programa** (igual a CyberPlay).
-- Si CyberPlay ya está en reproducción, el archivo se mezcla al aire.
-- Incluye vúmetros, contador de tiempo y barra de posición.
+- Plays the selected title through the **Program** output (same as CyberPlay).
+- If CyberPlay is already playing, the file mixes on air.
+- Includes VU meters, time counter and position bar.
 
-### Stop / Pausa
+### Stop / Pause
 
-- **Una vez**: detiene y queda en pausa (puede reanudar).
-- **Doble clic**: detiene completamente y pasa al siguiente archivo.
+- **Once**: stops and pauses (can resume).
+- **Double click**: stops completely and moves to next file.
 
 ### Audio Edit
 
-- Se accede desde menú contextual o ventana expandida.
-- Abre el archivo en el editor asociado según la extensión (.wav, .mp3, .txt).
-- Por defecto, los .wav se abren en **FX5**.
-- Si se instala otro editor, Windows puede asignarlo automáticamente.
+- Accessed from context menu or expanded window.
+- Opens the file in the associated editor according to extension (.wav, .mp3, .txt).
+- By default, .wav files open in **FX5**.
+- If another editor is installed, Windows may automatically assign it.
 
 ### Syncro
 
-Permite **sincronizar carpetas** entre dos ubicaciones (izquierda/derecha).
+Allows **folder synchronization** between two locations (left/right).
 
-Opciones:
+Options:
 
-- **Sincronizar izquierda**: copia desde derecha → izquierda.
-- **Sincronizar derecha**: copia desde izquierda → derecha.
-- **Ambas**: ambas carpetas terminan con idéntico contenido.
+- **Sync left**: copies from right → left.
+- **Sync right**: copies from left → right.
+- **Both**: both folders end up with identical content.
 
 ---
 
 <Info>
-  Aunque File Manager sigue siendo funcional, recomendamos migrar progresivamente al **Media Manager**, que reemplaza todas estas funciones con un diseño más moderno y escalable.
+  Although File Manager remains functional, we recommend gradually migrating to **Media Manager**, which replaces all these functions with a more modern and scalable design.
 </Info>

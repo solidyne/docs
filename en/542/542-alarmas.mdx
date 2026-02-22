@@ -1,54 +1,62 @@
 ---
-title: "Alarmas"
-description: "Configuración de alarmas y avisos"
-keywords: ["alarmas", "avisos", "alertas"]
-tags: ["procesadores", "542"]
+title: "Alarms"
+description: "Alarms and alerts configuration"
+keywords: ["alarms", "alerts", "warnings"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "8a875e03b169249f75f0bfdb85e2686727f76300d80ea0ef1890b1bda2682d4d"
+
 ---
 
-## Alarmas
+## Alarms
 
-Se accede desde **SYSTEM → pestaña ALARMS**.
+Access through **SYSTEM → ALARMS tab**.
 
 <Danger>
-  Los parámetros que disparan alarmas se basan en la señal del**sintonizador FM** .
+  The parameters that trigger alarms are based on the **FM tuner** signal.
 
-  - Si RF Level \< 40 dB o multipath \> 10%, las mediciones no son válidas.
-  - En ese caso, los campos aparecen oscurecidos y no se generan alarmas.
+  - If RF Level < 40 dB or multipath > 10%, measurements are not valid.
+  - In this case, fields appear dimmed and no alarms are generated.
 </Danger>
 
-El 542APC puede enviar alertas por correo electrónico en los siguientes eventos:
+The 542APC can send email alerts for the following events:
 
 1. **AUDIO SILENCE**
 2. **OVERMODULATION**
 3. **LOW RF POWER**
 
-### Configuración de alarmas
+### Alarms Configuration
 
-![542 Sistema Alarmas Pn](/images/542/542-sistema-alarmas.png)
+![542 Alarms System Pn](/images/542/542-sistema-alarmas.png)
 
-- **E-mail Send To** → dirección a la cual serán enviadas las alertas.
-  - “Send Test” envía un correo de prueba.
+- **E-mail Send To** → address where alerts will be sent.
+  - "Send Test" sends a test email.
 
 <Note>
-  Para enviar alertas a múltiples direcciones, usar la función de **reenvío automático (mail forwarding)** en la cuenta configurada.
+  To send alerts to multiple addresses, use the **mail forwarding** feature on the configured account.
 </Note>
 
-- **Casilleros LOG y E-MAIL** → habilitan registro en memoria interna y/o envío por correo.
+- **LOG and E-MAIL checkboxes** → enable internal memory logging and/or email sending.
 
-### Tipos de alarmas
+### Alarm Types
 
 - **AUDIO SILENCE**:
-  - Se dispara cuando la señal cae por debajo del umbral definido en **Fail Backup**.
-  - El tiempo límite (segundos) se ajusta con un control deslizante.
-  - Importante: se analiza la señal del **FM Receiver post-Gain**, por lo que la ganancia afecta la detección.
+  - Triggers when the signal falls below the threshold defined in **Fail Backup**.
+  - The time limit (seconds) is adjusted with a slider control.
+  - Important: the **FM Receiver post-Gain** signal is analyzed, so gain affects detection.
 - **OVERMODULATION**:
-  - Se activa si la modulación excede el valor definido en la alarma.
-  - Este ajuste **no afecta la transmisión**, solo la detección.
+  - Activates if modulation exceeds the value defined in the alarm.
+  - This setting **does not affect transmission**, only detection.
 - **LOW RF POWER LEVEL**:
-  - Se activa al detectar baja potencia de transmisión.
-  - Procedimiento: pulsar **Set REF** en condiciones normales. Luego definir el % de pérdida que dispara la alarma.
-  - No afecta la transmisión.
+  - Activates when low transmission power is detected.
+  - Procedure: press **Set REF** under normal conditions. Then define the % of loss that triggers the alarm.
+  - Does not affect transmission.
 - **SYSTEM START**:
-  - Genera alarma al reiniciarse el equipo (ej. por corte eléctrico).
+  - Generates alarm when equipment restarts (e.g. power outage).
 - **SYSTEM ERRORS**:
-- Solo para uso interno. Los eventos se registran en **SYSLOG**.
+  - For internal use only. Events are logged in **SYSLOG**.

@@ -1,76 +1,84 @@
 ---
-title: "Adaptador UDX USB"
-description: "Interface para conexión de computadoras a entradas y salidas AES3"
+title: "UDX USB Adapter"
+description: "Interface for connecting computers to AES3 inputs and outputs"
 keywords: ["USB"]
-tags: "expansiones,UNIDEX,UDX-USB,UX24,UX18"
+tags: "expansions,UNIDEX,UDX-USB,UX24,UX18"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a620f0e0fa652d7be2aa2e367d137f29ff1cf61bdce58ea39d42113ab1c4179b"
+
 ---
 
-Este adaptador permite conectar una computadora, vía USB, a una entrada y una salida AES3.
+This adapter allows connecting a computer via USB to one AES3 input and one AES3 output.
 
-## Conexión
+## Connection
 
-La imagen muestra un ejemplo de conexión a UX24.
+The image shows a connection example to UX24.
 
 <img
   src="/images/ux24/udx-usb-conexion-ux24.png"
-  alt="Udx Usb Conexion Ux24 Pn"
-  title="Udx Usb Conexion Ux24 Pn"
+  alt="Udx Usb Connection Ux24 Pn"
+  title="Udx Usb Connection Ux24 Pn"
   style={{ width:"52%" }}
 />
 
-- La entrada AES3-1 no está disposible si se habilita el servicio de reproducción de streaming.
-- En los modelos UX24, las salidas AES3 1 y 2 entregan las señales PGM y REC respectivamente, mientras que 3 y 4 son asignables. En UX18 hay dos salidas AES3, ambas asignables.
-- La instalación en la computadora es automática. Windows reconoce y habilita UDX USB como un dispositivo USB audio estándar para reproducción y grabación en estéreo.
+- AES3-1 input is not available if streaming playback service is enabled.
+- On UX24 models, AES3 outputs 1 and 2 deliver PGM and REC signals respectively, while 3 and 4 are assignable. UX18 has two AES3 outputs, both assignable.
+- Computer installation is automatic. Windows recognizes and enables UDX USB as a standard USB audio device for stereo playback and recording.
 
-## Configuración de la entrada AES3
+## AES3 Input Configuration
 
 <Note>
-  La distribución y forma de los controles que se muestran a continuación pueden variar. Esto no altera el procedimiento de configuración.
+  The layout and appearance of controls shown below may vary. This does not affect the configuration procedure.
 </Note>
 
-1. En la pantalla principal, ir a la opción **SETTINGS**.
-2. Girar el encoder hasta alcanzar la **entrada AES3** a la que se conectó UDX USB.
-3. Configurar \*\*MODE \*\*en **ESTÉREO**.
-4. **Asignar un canal** a la entrada. Si se elige un canal que está asignado a otra entrada, aparecerá una advertencia. Si se continua la acción, la asignación previa se sobreescribe.
+1. On the main screen, go to **SETTINGS**.
+2. Turn the encoder until reaching the **AES3 input** where UDX USB was connected.
+3. Set **MODE** to **STEREO**.
+4. **Assign a channel** to the input. If you choose a channel that is assigned to another input, a warning will appear. If you continue, the previous assignment will be overwritten.
 
 <img
   src="/images/ux24/udx-usb-entradas.png"
-  alt="Udx Usb Entradas Pn"
-  title="Udx Usb Entradas Pn"
+  alt="Udx Usb Inputs Pn"
+  title="Udx Usb Inputs Pn"
   style={{ width:"53%" }}
 />
 
-## Configuración de la salida AES
+## AES Output Configuration
 
-1. En pantalla \*\*SETTINGS \*\*seleccione la opción **OUTPUTS**.
-2. Girar el encoder hasta **seleccionar la salida** a la que se conectó UDX USB.
-3. En la opción **AUDIO MODE** configurar la salida como **ESTEREO**.
-4. Si la salida es asignable, \*\*SOURCE \*\*permite elegir la señal que entrega la salida.
-5. Pulsar BACK para volver a la pantalla principal.
+1. On **SETTINGS** screen select **OUTPUTS**.
+2. Turn the encoder to **select the output** where UDX USB was connected.
+3. In **AUDIO MODE** set the output to **STEREO**.
+4. If the output is assignable, **SOURCE** allows choosing the signal delivered by the output.
+5. Press BACK to return to main screen.
 
 <Danger>
-  Las salidas \*\*AES3 \*\*trabajan a **48 KHz**. En Windows, **configurar el dispositivo de grabación** a 48 KHz.
+  **AES3** outputs work at **48 KHz**. In Windows, **configure the recording device** to 48 KHz.
 </Danger>
 
 <img
   src="/images/ux24/udx-usb-salidas.png"
-  alt="Udx Usb Salidas Pn"
-  title="Udx Usb Salidas Pn"
+  alt="Udx Usb Outputs Pn"
+  title="Udx Usb Outputs Pn"
   style={{ width:"53%" }}
 />
 
-### Configuración del canal
+### Channel Configuration
 
-1. En pantalla principal, pulsar **CHANNEL**. Los botones CUE cambian a modo SELECT.
-2. Pulsar el botón \*\*SELECT \*\*en el canal a configurar. La consola sale de modo SELECT y el canal seleccionado. Para seleccionar canales virtuales, girar el encoder y pulsar para confirmar.
-3. Tocar el menú \*\*MODE \*\*en la pantalla y elegir la opción **LINE.**
-4. Para **editar la etiqueta**, tocar sobre el nombre. Aparecerá un teclado para editar el texto.
-5. Girar encoder o tocar el control para elegir GANANCIA. Pulsar encoder para editar el valor.
-6. Ajustar la GANANCIA para que los picos alcancen -9dBfs en el indicador de nivel.
+1. On main screen, press **CHANNEL**. CUE buttons change to SELECT mode.
+2. Press **SELECT** button on the channel to configure. The console exits SELECT mode and the channel is selected. For virtual channels, turn the encoder and press to confirm.
+3. Touch **MODE** menu on screen and choose **LINE**.
+4. To **edit the label**, touch the name. A keyboard will appear to edit the text.
+5. Turn encoder or touch control to choose GAIN. Press encoder to edit the value.
+6. Adjust GAIN so peaks reach -9dBfs on the level meter.
 
 <img
   src="/images/ux24/udx-usb-canal.jpg"
-  alt="Udx Usb Canal Jp"
-  title="Udx Usb Canal Jp"
+  alt="Udx Usb Channel Jp"
+  title="Udx Usb Channel Jp"
   style={{ width:"55%" }}
 />

@@ -1,171 +1,179 @@
 ---
-title: "Guía rápida de instalación"
-description: "Paso a paso para la puesta en marcha"
+title: "Quick Installation Guide"
+description: "Step by step setup guide"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "03792d79d4cd7f2a46a25694bccb11aa3028822dc3cc424aed31a96bd8942da5"
+
 ---
 
 <Steps>
-  <Step title="Alimentación y encendido" stepNumber={1} titleSize="h3">
-    Antes de enchufar el equipo:
+  <Step title="Power Supply and Startup" stepNumber={1} titleSize="h3">
+    Before plugging in the unit:
 
-    - Verifique en el panel trasero la posición de la **selectora de tensión de red** (200/240V o 100/130V).
-    - Utilice el **cable Interlock de tres clavijas** suministrado.
-    - Asegúrese de contar con **puesta a tierra apropiada**.
-    - El equipo posee una **llave de encendido** en el panel trasero.
+    - Check the **mains voltage selector** position on the rear panel (200/240V or 100/130V).
+    - Use the supplied **three-pin Interlock cable**.
+    - Ensure proper **ground connection**.
+    - The unit has a **power switch** on the rear panel.
 
     <Danger>
-      Nunca conecte el equipo sin verificar la posición correcta de la selectora de tensión.
+      Never connect the unit without verifying the correct position of the voltage selector.
     </Danger>
   </Step>
-  <Step title="Control del Equipo" stepNumber={2} titleSize="h3">
-    **Desde el panel frontal:**
+  <Step title="Unit Control" stepNumber={2} titleSize="h3">
+    **From the front panel:**
 
-    El frente del equipo incluye una **rueda de comando**:
+    The front panel includes a **control wheel**:
 
-    - Gire la rueda para elegir opciones y cambiar valores.
-    - Pulse la rueda para confirmar un valor o acceder a una opción.
+    - Turn the wheel to select options and change values.
+    - Press the wheel to confirm a value or access an option.
 
     <Info>
-      La pantalla muestra menús de estado, entradas activas, ajustes de ganancia y presets de audio.
+      The display shows status menus, active inputs, gain settings and audio presets.
     </Info>
-    **Control remoto vía interfaz WEB:**
+    **Remote control via WEB interface:**
 
-    - Conecte el puerto **Ethernet** del 542APC a la red local usando un cable UTP estándar.
-    - De fábrica el equipo está en **DHCP**: el router asignará automáticamente una dirección IP.
-    - La dirección IP aparece en la **pantalla inicial** del procesador.
-    - Desde una computadora en la misma red, abra un navegador web e ingrese la dirección IP del procesador.
-    - Se mostrará la **pantalla inicial del control remoto web**.
-    - Para editar opciones, ir a modo \*\*ADJUST \*\*en la esquina superior derecha de la pantalla.
+    - Connect the 542APC **Ethernet** port to the local network using a standard UTP cable.
+    - The unit comes with **DHCP** enabled: the router will automatically assign an IP address.
+    - The IP address appears on the processor's **home screen**.
+    - From a computer on the same network, open a web browser and enter the processor's IP address.
+    - The **web remote control home screen** will be displayed.
+    - To edit options, go to **ADJUST** mode in the top right corner of the screen.
   </Step>
-  <Step title="Coenxión de la entradas" stepNumber={3} titleSize="h3">
-    - Analógica balanceada (XLR) – entrada predeterminada.
-    - Analógica RJ45 – compatible con StudioHub®.
+  <Step title="Input Connections" stepNumber={3} titleSize="h3">
+    - Balanced analog (XLR) – default input.
+    - RJ45 analog – StudioHub® compatible.
     - Digital AES3
-    - Audio stream (AoIP módulo opcional).
+    - Audio stream (optional AoIP module).
   </Step>
-  <Step title="Ajuste de la entrada" stepNumber={4} titleSize="h3">
-    - Entradas analógicas calibradas a **–18 dBfs** para nivel nominal de **\+4 dBu**.
-    - Con la consola a 0 VU los picos de señal en la entrada deben estar entre **–22 y –9 dBfs**.
+  <Step title="Input Setup" stepNumber={4} titleSize="h3">
+    - Analog inputs calibrated to **-18 dBfs** for nominal level of **+4 dBu**.
+    - With console at 0 VU, input signal peaks should be between **-22 and -9 dBfs**.
 
     <Note>
-      Si es necesario, la ganancia puede ajustarse desde el panel frontal.
+      If needed, gain can be adjusted from the front panel.
     </Note>
-    **Elegir una entrada (panel frontal)**
+    **Selecting an input (front panel)**
 
-    1. Gire la rueda hasta la pantalla **INPUT (vúmetros)**.
-    2. Pulse la rueda para acceder a **entrada activa**.
-    3. Gire la rueda y seleccione la entrada deseada (ej: _2:ANALOG2_).
-    4. Pulse para confirmar.
-    5. La entrada activa queda indicada por una flecha en la pantalla INPUT.
+    1. Turn the wheel to the **INPUT (VU meters)** screen.
+    2. Press the wheel to access **active input**.
+    3. Turn the wheel and select desired input (e.g.: _2:ANALOG2_).
+    4. Press to confirm.
+    5. Active input is indicated by an arrow on the INPUT screen.
 
-    **Cambiar la ganancia de la entrada (panel frontal)**
+    **Changing input gain (front panel)**
 
-     1. Gire la rueda hasta **SETUP MENU** y pulse para ingresar.
-     2. Gire para seleccionar **IN** y pulse para ingresar a **STEUP** de entradas.
-     3. Pulse para ingresar a **INPUT SEL**.
-     4. Gire para elegir una entrada y confirme.
-     5. Seleccione **GAIN** y pulse.
-     6. Ajuste girando la rueda (sentido horario = más ganancia) verificando que los picos estén entre **–22 y –9 dBFS**.
-     7. Pulse para confirmar.
-     8. Gire para seleccionar **BACK** y confirme para salir del menú.
-     9. Gire nuevamente hasta BACK y confirme para abandonar el menú SETUP.
-    10. Los cambios quedan almacenados.
+     1. Turn the wheel to **SETUP MENU** and press to enter.
+     2. Turn to select **IN** and press to enter input **SETUP**.
+     3. Press to enter **INPUT SEL**.
+     4. Turn to choose an input and confirm.
+     5. Select **GAIN** and press.
+     6. Adjust by turning the wheel (clockwise = more gain) verifying peaks are between **-22 and -9 dBFS**.
+     7. Press to confirm.
+     8. Turn to select **BACK** and confirm to exit menu.
+     9. Turn again to BACK and confirm to exit SETUP menu.
+    10. Changes are stored.
   </Step>
-  <Step title="Salidas" stepNumber={5} titleSize="h3">
-    **Banda Base MPX**
+  <Step title="Outputs" stepNumber={5} titleSize="h3">
+    **MPX Baseband**
 
-    - Generador estéreo con **doble salida MPX** de nivel independiente.
-    - Conectar al transmisor con cable coaxial (50 o 75 Ohms).
+    - Stereo generator with **dual MPX output** with independent level.
+    - Connect to transmitter using coaxial cable (50 or 75 Ohms).
 
-    **Audio balanceado**
+    **Balanced Audio**
 
-    - Dos salidas estéreo analógicas: XLR y RJ45
-    - Pueden entregar:
-      - Audio con pre-énfasis 50/75 μS
-      - Audio de-enfatizado (para streaming o repetidoras).
+    - Two stereo analog outputs: XLR and RJ45
+    - Can deliver:
+      - Audio with 50/75 μS pre-emphasis
+      - De-emphasized audio (for streaming or repeaters).
 
     <Info>
-      La activación del énfasis se realiza desde el **Control Web**.
+      Emphasis activation is done through the **Web Control**.
     </Info>
   </Step>
-  <Step title="Sintonizador y monitor de transmisión" stepNumber={6} titleSize="h3">
-    El 542APC incluye:
+  <Step title="Tuner and Transmission Monitor" stepNumber={6} titleSize="h3">
+    The 542APC includes:
 
-    - **Sintonizador interno**
-    - **Medidor de modulación**
-    - **Generador de tonos de calibración**
+    - **Internal tuner**
+    - **Modulation meter**
+    - **Calibration tone generator**
 
-    **Antena de recepción**
+    **Reception Antenna**
 
-    - Conecte la antena telescópica (incluida) al conector **FM ANT (BNC)**.
-    - Se suministran dos antenas:
-      - Telescópica (recomendada en planta transmisora).
-      - Micro-antena fija (cuando la intensidad de campo es excesiva).
+    - Connect the telescopic antenna (included) to the **FM ANT (BNC)** connector.
+    - Two antennas are supplied:
+      - Telescopic (recommended at transmitter site).
+      - Fixed micro-antenna (when field strength is excessive).
   </Step>
-  <Step title="Nivel de modulación" stepNumber={7} titleSize="h3">
-    **Tono de calibración**
+  <Step title="Modulation Level" stepNumber={7} titleSize="h3">
+    **Calibration Tone**
 
-    1. Desde un navegador (preferentemente Chrome), ingrese la **IP del equipo**.
-    2. Pulse el botón **SETUP** (arriba a la derecha).
-    3. En el menú lateral, seleccione **FM Output (MPX)**.
-    4. Active el **Calibrador**. El audio de entrada se reemplaza por un tono sinusoidal.
-       - Piloto: 9% – RDS: 4% (valores de fábrica).
+    1. From a browser (preferably Chrome), enter the **unit's IP**.
+    2. Click the **SETUP** button (top right).
+    3. In the side menu, select **FM Output (MPX)**.
+    4. Enable the **Calibrator**. Input audio is replaced by a sine wave.
+       - Pilot: 9% – RDS: 4% (factory values).
 
-    **Ajuste de modulación**
+    **Modulation Adjustment**
 
-    1. En el Control Web, ingrese a **Receptor/Analizador FM**.
-    2. Sintonice la frecuencia de la emisora.
-    3. Verifique el nivel en el **medidor de modulación**.
-    4. El indicador **RxQTY** debe mostrar **GOOD**.
-    5. Ajuste orientación o tipo de antena si la recepción es deficiente.
-    6. Regule el nivel de **entrada MPX en el transmisor** hasta lograr la modulación deseada (100%).
-    7. Nivel de salida MPX de fábrica: **5 Vpp** (ajustable vía Control Web).
-    8. Apague el calibrador: el audio de entrada retomará la modulación normal.
+    1. In Web Control, go to **FM Receiver/Analyzer**.
+    2. Tune to the station frequency.
+    3. Check level on the **modulation meter**.
+    4. The **RxQTY** indicator should show **GOOD**.
+    5. Adjust antenna orientation or type if reception is poor.
+    6. Adjust **MPX input level at transmitter** until desired modulation is achieved (100%).
+    7. Factory MPX output level: **5 Vpp** (adjustable via Web Control).
+    8. Turn off calibrator: input audio will resume normal modulation.
   </Step>
-  <Step title="Ajustes del sonido" stepNumber={8} titleSize="h3">
-    Escuchar los diferentes PRESETS de fábrica para fijar el sonido que se ajuste a las necesidades de la emisora. Sintonizar en un buen equipo de audio. Puede escuchar usando el sintonizador interno del 542APC (use buenos auriculares).
+  <Step title="Sound Settings" stepNumber={8} titleSize="h3">
+    Listen to different factory PRESETS to set the sound that fits the station's needs. Tune in on a good audio system. You can listen using the 542APC's internal tuner (use good headphones).
 
-    El equipo incluye **presets de fábrica** y memorias de usuario:
+    The unit includes **factory presets** and user memories:
 
-    - 16 presets fijos (no modificables).
-    - 16 memorias de usuario para crear ajustes propios (desde Control Web).
+    - 16 fixed presets (non-modifiable).
+    - 16 user memories to create custom settings (from Web Control).
 
-    ### Selección de preset (panel frontal)
+    ### Preset Selection (front panel)
 
-    1. Gire la rueda hasta la pantalla **PROCESS**.
-    2. Pulse para cambiar el preset actual.
-    3. Gire y seleccione un nuevo preset.
-    4. Pulse para confirmar. El sonido en el aire cambiará gradualmente hacia el nuevo ajuste.
+    1. Turn the wheel to the **PROCESS** screen.
+    2. Press to change current preset.
+    3. Turn and select a new preset.
+    4. Press to confirm. On-air sound will gradually change to new setting.
 
-    ### Sound Wizard (contro WEB)
+    ### Sound Wizard (Web Control)
 
-    Permite modificar cualquier preset con 4 controles básicos:
+    Allows modifying any preset with 4 basic controls:
 
-    - Bright (brillo)
-    - Bass (bajos)
-    - Compression/Density (densidad)
-    - Loudness (intensidad)
+    - Bright
+    - Bass
+    - Compression/Density
+    - Loudness
 
-    Etapas adicionales (activables/desactivables):
+    Additional stages (can be enabled/disabled):
 
-    - EQ paramétrico
+    - Parametric EQ
     - Bass enhancer
     - Stereo enhancer
   </Step>
-  <Step title="Asistencia Técnica Remota (ATR)" stepNumber={9} titleSize="h3">
-    El equipo permite conexión remota para soporte de fábrica. \
-    Pasos (requiere coordinación previa con el Equipo de Soporte):
+  <Step title="Remote Technical Support (RTS)" stepNumber={9} titleSize="h3">
+    The unit allows remote connection for factory support. \
+    Steps (requires prior coordination with Support Team):
 
-    1. Conectar el procesador 542APC a la **LAN** (Ethernet de control).
-    2. Instalar la **antena de recepción**.
-    3. Verificar acceso desde una PC ingresando la **IP en navegador web**.
-    4. Descargar **TeamViewer QuickSupport** desde:\
+    1. Connect the 542APC processor to **LAN** (control Ethernet).
+    2. Install the **reception antenna**.
+    3. Verify access from a PC by entering the **IP in web browser**.
+    4. Download **TeamViewer QuickSupport** from:\
        https://get.teamviewer.com/solidynequick
-    5. Ejecutar el archivo `TeamViewerQS.exe`.
-    6. Aparecerá la ventana “Permitir control remoto” con chat directo con Soporte.
+    5. Run the `TeamViewerQS.exe` file.
+    6. The "Allow remote control" window will appear with direct chat with Support.
 
-    ### Contacto de soporte
+    ### Support Contact
 
     - 📧 [soporte@solidyne.ar](mailto:soporte@solidyne.ar)
-    - 📱 WhatsApp: \+54 9 11 3119-3254
+    - 📱 WhatsApp: +54 9 11 3119-3254
   </Step>
 </Steps>

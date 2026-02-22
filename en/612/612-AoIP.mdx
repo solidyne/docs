@@ -1,107 +1,115 @@
 ---
-title: "Modelos con opción AoIP"
-description: "D612 equipadas servicios de streaming"
+title: "Models with AoIP Option"
+description: "D612 equipped with streaming services"
 keywords: ["AoIP", "streaming", "RTP", "firmware"]
-tags: ["consolas de estudio", "linea Classic", "D612"]
+tags: ["studio consoles", "Classic line", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "06bc0a622b831f988f72153bf32ae0dbec7fa92815746dab47c6de1b31669af6"
+
 ---
 
 import icecast from '/snippets/snippet-icecast.mdx';
 
-## Introducción
+## Introduction
 
-Los modelos con opción **/AoIP** incluyen un módulo que genera streaming de la señal de programa, permitiendo:
+Models with **/AoIP** option include a module that generates program signal streaming, allowing:
 
-- Enlazar la consola con la planta transmisora mediante enlace de datos punto a punto. El audio se envía en PCM o MP3 de baja compresión, usando protocolo RTP.
-- Enviar o recibir audio desde otras consolas a través de la LAN (streaming RTP de otros equipos Solidyne con opción /AoIP).
+- Link the console to the transmitter site via point-to-point data link. Audio is sent in PCM or low-compression MP3, using RTP protocol.
+- Send or receive audio from other consoles through LAN (RTP streaming from other Solidyne equipment with /AoIP option).
 
-La consola viene de fábrica con firmware **STL** para enlace Estudio–Planta.\
-Puede actualizarse a nuevas versiones o cambiarlo por el modelo **Upstreamer**, compatible con servidores shoutcast/icecast.
+The console comes from factory with **STL** firmware for Studio-Transmitter Link.\
+It can be updated to new versions or changed to **Upstreamer** model, compatible with shoutcast/icecast servers.
 
 ---
 
-## Actualización del firmware
+## Firmware Update
 
-El firmware puede actualizarse para:
+The firmware can be updated to:
 
-- Cambiar a una nueva versión STL.
-- Migrar al modelo Upstreamer (emisión a servidores shoutcast/icecast).
+- Change to a new STL version.
+- Migrate to Upstreamer model (broadcasting to shoutcast/icecast servers).
 
 <icecast />
 
 ---
 
-## Alimentación
+## Power Supply
 
-El módulo IP **se alimenta por la conexión USB**.
+The IP module **is powered through USB connection**.
 
-- Solo está disponible si la consola está conectada a una computadora vía USB.
-- Si la PC está apagada, el servicio IP no funciona.
-- Alternativamente puede usarse una **fuente de alimentación USB 5V estándar** conectada al puerto.
+- Only available if the console is connected to a computer via USB.
+- If the PC is turned off, IP service does not work.
+- Alternatively, a **standard 5V USB power supply** can be connected to the port.
 
 ---
 
-## Enlace Estudio–Planta (STL)
+## Studio-Transmitter Link (STL)
 
-En los estudios, la D612/IP opera como **codificador**, transmitiendo streaming de audio hacia la planta transmisora.
+At the studio, D612/IP operates as an **encoder**, transmitting audio streaming to the transmitter site.
 
-En planta, el streaming puede recibirse mediante:
+At the transmitter site, streaming can be received through:
 
-- Un decodificador dedicado (ej. Solidyne ADA102).
-- Un procesador con decodificador integrado (ej. Solidyne 542 APC).
-- Un computador con software compatible, por ejemplo VLC Player (no recomendado,reservado para pruebas o casos de emergencia).
+- A dedicated decoder (e.g. Solidyne ADA102).
+- A processor with integrated decoder (e.g. Solidyne 542 APC).
+- A computer with compatible software, like VLC Player (not recommended, reserved for testing or emergency cases).
 
-La conexión entre estudio y planta puede realizarse vía:
+The connection between studio and transmitter site can be made via:
 
 - VPN.
-- Enlace físico punto a punto (ej. fibra).
-- Enlace de datos con antenas (microondas).
+- Point-to-point physical link (e.g. fiber).
+- Data link with antennas (microwave).
 
-<Accordion title="Enlace de datos por microondas" icon="signal">
-  - Banda: 5,8 GHz (o 2,4 GHz en algunos países).
-  - Estándar: **802.11.x** (uso libre en todos los países).
-  - Alcance: hasta **45 km** sin obstáculos.
-  - Permite transmitir audio PCM sin compresión (16 bits/48 kHz).
-  - Admite también audio codificado y aplicaciones bidireccionales.
+<Accordion title="Microwave data link" icon="signal">
+  - Band: 5.8 GHz (or 2.4 GHz in some countries).
+  - Standard: **802.11.x** (license-free in all countries).
+  - Range: up to **45 km** without obstacles.
+  - Allows uncompressed PCM audio transmission (16 bits/48 kHz).
+  - Also supports encoded audio and bidirectional applications.
 
-  Para más detalles: [**info@solidynepro.com**](mailto:info@solidynepro.com)
+  For more details: [**info@solidynepro.com**](mailto:info@solidynepro.com)
 </Accordion>
 
 ---
 
-## Configuración del módulo IP
+## IP Module Configuration
 
-La configuración se realiza **desde un navegador** web. El equipo viene de fábrica en modo **IP dinámica (DHCP)**.
+Configuration is done **from a web browser**. The equipment comes from factory in **dynamic IP mode (DHCP)**.
 
 <Warning>
-  Las configuraciones detalladas a continuación requieren conocimientos en administración de redes.
+  The configurations detailed below require network administration knowledge.
 </Warning>
 
-### Pasos de configuración
+### Configuration Steps
 
-1. Conecte la consola a la fuente de alimentación. Conecte el puerto USB a una computadora (encendida) o a una fuente externa USB (un \_cargador \_estándar).
-2. El módulo TCP anuncia la dirección IP asignada por audio:
-   - Coloque la llave BAL–LIN del Canal 4 en “LIN-2”.
-   - Pulse **CUE** en Canal 4 y dé nivel al parlante CUE.
-3. Conecte la consola un router de la red mediante cable Ethernet. Éste le asignará IP por DHCP.
-4. Anote la dirección IP anunciada.
-   - Si no escuchó el anuncio o no llegó a anotarlo, desconecte y vuelva a conectar el cable USB de la consola (con la PC encendida).
-5. Una vez obtenida la IP, el LED verde en el RJ45 destella indicando operación.
-   - Si no hay DHCP, la consola buscará una IP libre (puede tardar minutos).
-6. Abra un navegador e ingrese la dirección IP anunciada.
-   - Se abrirá el Panel de Control IP de la D612.
+1. Connect the console to power supply. Connect USB port to a computer (turned on) or to an external USB power supply (a standard charger).
+2. The TCP module announces the assigned IP address through audio:
+   - Set Channel 4 BAL-LIN switch to "LIN-2".
+   - Press **CUE** on Channel 4 and give level to CUE speaker.
+3. Connect the console to a network router using Ethernet cable. It will assign IP via DHCP.
+4. Write down the announced IP address.
+   - If you didn't hear the announcement or couldn't write it down, disconnect and reconnect the console's USB cable (with PC turned on).
+5. Once IP is obtained, green LED on RJ45 blinks indicating operation.
+   - If no DHCP, console will search for a free IP (may take minutes).
+6. Open a browser and enter the announced IP address.
+   - The D612 IP Control Panel will open.
 
 <Note>
      **Solidyne Multi-Discovery**
 
-     Si no se tiene acceso físico a la consola, se puede [**descargar la herramienta Multi-Discovery**](/es/612/612-discovery) que detecta dispositivos Solidyne conectados a la red.
+     If physical access to console is not available, you can [**download Multi-Discovery tool**](/es/612/612-discovery) that detects Solidyne devices connected to network.
 </Note>
 
 ---
 
-### Dirección IP destino
+### Destination IP Address
 
-- Definida en `Configuration → Basic settings`.
-- De fábrica: modo `Studio Encoder.`
+- Defined in `Configuration → Basic settings`.
+- Factory default: `Studio Encoder` mode.
 
 <img
   src="/images/612/612-streaming-basic_settings.jpg"
@@ -110,39 +118,39 @@ La configuración se realiza **desde un navegador** web. El equipo viene de fáb
   style={{ width:"60%" }}
 />
 
-**Configuración**
+**Configuration**
 
-- `Stream method`**:** Push (RTP).
-- `URL`**:** dirección IP o DNS del receptor \+ puerto destino.
-- Pulse **Apply** para confirmar.
+- `Stream method`: Push (RTP).
+- `URL`: receiver's IP address or DNS + destination port.
+- Press **Apply** to confirm.
 
-<Accordion title="Direccionamiento de puertos" icon="sparkles">
-  La dirección IP destino corresponde a la dirección externa de la red en la Planta Transmisora, donde está conectado el DECODER (generalmente una IP estática asignada por el proveedor de Internet).
+<Accordion title="Port Forwarding" icon="sparkles">
+  The destination IP address corresponds to the external network address at the Transmitter Site where the DECODER is connected (usually a static IP assigned by Internet provider).
 
-  Cuando los paquetes de datos enviados por la consola alcanzan el router o firewall en el extremo de la planta, estos deben ser redirigidos hacia la dirección IP interna del DECODER (por ejemplo, 192.168.0.30).
+  When data packets sent by the console reach the router or firewall at the transmitter end, they must be redirected to the DECODER's internal IP address (for example, 192.168.0.30).
 
-  Dado que el D612/IP transmite siempre a una dirección IP y a un puerto determinados, en la planta todos los paquetes que lleguen a ese puerto en la dirección configurada del router deben reenviarse al DECODER o, en su defecto, a una computadora que procese la señal de audio.
+  Since D612/IP always transmits to a specific IP address and port, at the transmitter site all packets arriving at that port on the configured router address must be forwarded to the DECODER or, alternatively, to a computer that processes the audio signal.
 
-  Este procedimiento se realiza mediante redireccionamiento de puertos (port forwarding), que permite identificar qué paquetes deben ser entregados al equipo encargado de convertirlos nuevamente en audio.
+  This procedure is done through port forwarding, which allows identifying which packets should be delivered to the equipment responsible for converting them back to audio.
 </Accordion>
 
 ---
 
-### Opciones de audio
+### Audio Options
 
-Se configuran en `Configuration → Audio`:
+Configured in `Configuration → Audio`:
 
-- `Input source`**:** Line Stereo (no modificar).
-- `Format`**:** MPEG Stereo.
-- `Sample rate`**:** 44,1 kHz.
-- `Quality`**:** 7 (highest).
+- `Input source`: Line Stereo (do not modify).
+- `Format`: MPEG Stereo.
+- `Sample rate`: 44.1 kHz.
+- `Quality`: 7 (highest).
 
-Esto genera un streaming de **192 kbps**.\
-Si el ancho de banda lo permite, puede usarse PCM sin compresión en enlaces punto a punto.
+This generates a **192 kbps** stream.\
+If bandwidth allows, uncompressed PCM can be used in point-to-point links.
 
 ---
 
-### Pantalla inicial
+### Main Screen
 
 <img
   src="/images/612/612-streaming-main.jpg"
@@ -151,80 +159,80 @@ Si el ancho de banda lo permite, puede usarse PCM sin compresión en enlaces pun
   style={{ width:"58%" }}
 />
 
-- `Site type`**:** modo de trabajo (ej. Studio Encoder).
-- `Stream mode`**:** evento activo configurado.
-- `Keep-alive:` estrategia de mantenimiento de conexión.
-- `Connection status`**:** verde = conexión exitosa; rojo = error.
-- `Incoming Stream`**:** estado del streaming entrante (inactivo en modo encoder).
-- `Outgoing Stream`**:** estado del streaming saliente.
-- `Audio input`**:** fuente usada.
-- `Audio Format`**:** formato de codificación.
-- `Input/Output level`**:** niveles en dBfs.
-- `Relay, Remote inputs, Local inputs`**:** no implementados.
+- `Site type`: working mode (e.g. Studio Encoder).
+- `Stream mode`: active configured event.
+- `Keep-alive`: connection maintenance strategy.
+- `Connection status`: green = successful connection; red = error.
+- `Incoming Stream`: incoming streaming status (inactive in encoder mode).
+- `Outgoing Stream`: outgoing streaming status.
+- `Audio input`: source in use.
+- `Audio Format`: encoding format.
+- `Input/Output level`: levels in dBfs.
+- `Relay, Remote inputs, Local inputs`: not implemented.
 
 ---
 
-## Recepción en planta usando un computador
+## Reception at Transmitter Site Using a Computer
 
-Para recibir streaming RTP con una PC:
+To receive RTP streaming with a PC:
 
-- Se recomienda **VLC Player** (http://www.videolan.org/vlc/).
-- Formatos soportados:
-  - MP3 44,1 kHz / Calidad 7 (default).
-  - PCM16 @ 44,1 kHz (sin compresión).
+- **VLC Player** is recommended (http://www.videolan.org/vlc/).
+- Supported formats:
+  - MP3 44.1 kHz / Quality 7 (default).
+  - PCM16 @ 44.1 kHz (uncompressed).
 
-### Configuración en VLC
+### VLC Configuration
 
-1. Menú `Medio → Abrir ubicación de red`.
-2. Ingrese:
+1. Menu `Media → Open Network Location`.
+2. Enter:
 
-   `rtp://[IP_fuente]:[puerto]`
+   `rtp://[source_IP]:[port]`
 
-   Ejemplo: `rtp://0.0.0.0:3030`
+   Example: `rtp://0.0.0.0:3030`
 
-- `0.0.0.0` = cualquier IP entrante.
-- `3030` = puerto usado.
+- `0.0.0.0` = any incoming IP.
+- `3030` = port used.
 
 <Note>
-  Algunas versiones de VLC también aceptan: `rtp://@:3030`
+  Some VLC versions also accept: `rtp://@:3030`
 </Note>
 
 ---
 
-## D612/IP como receptor de streaming
+## D612/IP as Streaming Receiver
 
-La consola puede configurarse como **DECODER** de un streaming RTP generado por otro dispositivo.
+The console can be configured as a **DECODER** for RTP streaming generated by another device.
 
-### Pasos
+### Steps
 
-1. Acceder al módulo IP desde navegador.
-2. En las opciones que aparecen en la parte superior de la ventana elegir **Location**
-3. Cambiar de _Studio Encoder_ a **_Transmitter decoder_**. Se adoptan valores predeterminados para la recepción, que normalmente no es necesario modificar, con excepción de los puertos y direcciones IP.
-4. En `configuration`**→ ** `streaming`:
-   - En `Port` ingresar el puerto usado por el codificador.
-   - En `URL` dejar `0.0.0.0`.
-   - Pulsar **Apply**.
+1. Access IP module from browser.
+2. In options appearing at window top, choose **Location**
+3. Change from _Studio Encoder_ to **_Transmitter decoder_**. Default reception values are adopted, which normally don't need modification, except for ports and IP addresses.
+4. In `configuration`**→** `streaming`:
+   - In `Port` enter port used by encoder.
+   - In `URL` leave `0.0.0.0`.
+   - Press **Apply**.
 
-**Buffer RTP**
+**RTP Buffer**
 
-En el receptor es importante controlar el tamaño del buffer de entrada (RTP delay), que actúa como memoria para almacenar el streaming recibido y así evitar interrupciones de audio (drops). Estas interrupciones suelen aparecer cuando el ancho de banda disponible es insuficiente para la calidad de audio transmitida; en tales casos, el problema puede mitigarse aumentando el tamaño del buffer.
+In the receiver, it's important to control input buffer size (RTP delay), which acts as memory to store received streaming and prevent audio drops. These interruptions usually appear when available bandwidth is insufficient for transmitted audio quality; in such cases, the problem can be mitigated by increasing buffer size.
 
-Debe tenerse en cuenta que, a mayor tamaño de buffer, mayor será también el retardo introducido en la reproducción. El valor adecuado dependerá tanto del ancho de banda de la red como del formato de audio utilizado.
+Keep in mind that larger buffer size also means greater playback delay. The appropriate value will depend on both network bandwidth and audio format used.
 
-El buffer se expresa en milisegundos. Para transmisiones en PCM, valores entre 40 y 80 ms resultan apropiados. En cambio, para formatos con compresión se requieren tiempos de buffer más altos, debido al procesamiento adicional que implica la decodificación del streaming comprimido.
+Buffer is expressed in milliseconds. For PCM transmissions, values between 40 and 80 ms are appropriate. However, compressed formats require higher buffer times due to additional processing involved in compressed streaming decoding.
 
 ---
 
-## Audio del streaming entrante
+## Incoming Streaming Audio
 
-El audio decodificado se suma internamente a la entrada auxiliar del **Canal 4 (LIN-2)**.
+Decoded audio is internally summed to auxiliary input of **Channel 4 (LIN-2)**.
 
-Para enviarlo al aire:
+To send it on air:
 
-1. Conmutar Canal 4 a **LIN-2**.
-2. Asegurarse de que no haya señal en las entradas RCA.
-3. Levantar el fader del canal.
+1. Switch Channel 4 to **LIN-2**.
+2. Ensure there's no signal on RCA inputs.
+3. Raise channel fader.
 
 <Note>
-  Cuando se usa el audio del streaming, no puede usarse simultáneamente la entrada RCA de Canal 4, ya que ambas señales se suman internamente.
+  When using streaming audio, RCA input of Channel 4 cannot be used simultaneously, as both signals are internally summed.
 </Note>

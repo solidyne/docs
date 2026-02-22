@@ -1,74 +1,82 @@
 ---
-title: "Operación de la serie DX"
-description: "Operación de las consolas DX816"
-keywords: ["operación"]
-tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
----
-
-## Introducción
-
-En la consola pueden distinguirse varias áreas principales:
-
-- Canales de entrada.
-- Canal de Telecomunicaciones.
-- Asignación de monitoreo y órdenes a estudio.
-- Escucha previa (**CUE**).
-- Indicadores de nivel.
-
-Las diferentes fuentes de audio (micrófonos, computadoras, interfaces de audio, enlaces, líneas telefónicas, etc.) ingresan a la consola a través de los **canales de entrada**, que las amplifican.
-
-La consola mezcla todas las señales para generar dos salidas principales:
-
-- **PGM**: señal enviada al procesador de audio y luego al transmisor o streaming.
-- **REC**: señal de grabación independiente o auxiliar.
-
-El operador controla el nivel de cada señal con los **atenuadores principales**.\
-Mediante los botones de asignación (**PGM / REC**), las señales se envían a las salidas correspondientes.
-
-Con los botones **CUE** se pueden escuchar estas señales antes de enviarlas al aire.
-
-- Los canales de línea se envían al aire al abrir el atenuador.
-- Los canales de micrófono requieren además pulsar el botón **MASTER MIC**.
-- Los canales de línea **BAL-1** y **BAL-2** disponen de doble entrada (balanceada y no balanceada), seleccionable desde el panel frontal.
+title: "DX Series Operation"
+description: "DX816 Console Operation"
+keywords: ["operation"]
+tags: ["studio consoles", "Classic line", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ba6629c3c6f86bfb05180e09aa6d1e3c99024e3a1af348c9d26277ff4c38ca70"
 
 ---
 
-## Entradas de micrófono
+## Introduction
 
-- **DX816**: cuenta con 3 faders de micrófono, pero las entradas MIC-2 y MIC-3 incluyen un segundo conector (MIC-2b y MIC-3b) que comparte preamplificador. De este modo, los canales 2 y 3 pueden manejar dos micrófonos a la vez, permitiendo hasta **5 micrófonos**.
-- **DX822**: lo mismo ocurre con los canales MIC-4 y MIC-5 (con entradas gemelas MIC-4b y MIC-5b). En total permite **10 micrófonos en 6 faders**.
+Several main areas can be distinguished on the console:
+
+- Input channels
+- Telecommunications channel
+- Studio monitoring and talkback assignment
+- Preview listening (**CUE**)
+- Level meters
+
+Different audio sources (microphones, computers, audio interfaces, links, telephone lines, etc.) enter the console through the **input channels**, which amplify them.
+
+The console mixes all signals to generate two main outputs:
+
+- **PGM**: signal sent to the audio processor and then to the transmitter or streaming
+- **REC**: independent or auxiliary recording signal
+
+The operator controls the level of each signal with the **main faders**.\
+Using the assignment buttons (**PGM / REC**), signals are routed to the corresponding outputs.
+
+The **CUE** buttons allow previewing these signals before putting them on air.
+
+- Line channels are sent on-air by opening the fader
+- Microphone channels also require pressing the **MASTER MIC** button
+- **BAL-1** and **BAL-2** line channels feature dual input (balanced and unbalanced), selectable from the front panel
+
+---
+
+## Microphone Inputs
+
+- **DX816**: features 3 microphone faders, but MIC-2 and MIC-3 inputs include a second connector (MIC-2b and MIC-3b) sharing the same preamp. This way, channels 2 and 3 can handle two microphones simultaneously, allowing up to **5 microphones**.
+- **DX822**: the same applies to MIC-4 and MIC-5 channels (with twin inputs MIC-4b and MIC-5b). It allows a total of **10 microphones on 6 faders**.
 
 <Warning>
-  Se recomienda que los micrófonos en entradas gemelas sean de **igual marca y modelo**, para mantener uniformidad en la señal.
+  It is recommended that microphones on twin inputs are of the **same brand and model** to maintain signal uniformity.
 </Warning>
 
-- Todas las entradas de micrófono soportan **alimentación _phantom_ de 48V** conmutable en grupo.
-- En DX816, la **ecualización **es global para todos los micrófonos.
-- En DX822, un segundo ecualizador actúa sobre MIC-4, MIC-5 y MIC-6 (y sus entradas gemelas).
+- All microphone inputs support switchable **48V phantom power** in groups
+- On DX816, **equalization** is global for all microphones
+- On DX822, a second equalizer acts on MIC-4, MIC-5 and MIC-6 (and their twin inputs)
 
-La **compresión** afecta únicamente a los canales de micrófono. Su acción depende del nivel en programa. El **indicador de reducción de ganancia** muestra el trabajo del compresor.\
-Si dos micrófonos comparten un canal, el compresor empareja sus niveles, suavizando diferencias por proximidad o intensidad de voz.
+**Compression** affects only microphone channels. Its action depends on the program level. The **gain reduction indicator** shows the compressor's work.\
+If two microphones share a channel, the compressor matches their levels, smoothing differences due to proximity or voice intensity.
 
 <Note>
-  Los micrófonos dinámicos están diseñados para soportar **48V phantom**, por lo que pueden mezclarse con micrófonos de condensador sin riesgo.
+  Dynamic microphones are designed to handle **48V phantom power**, so they can be mixed with condenser microphones without risk.
 </Note>
 
 ---
 
-## Entradas de línea y módulos digitales
+## Line Inputs and Digital Modules
 
-- Los canales **BAL-1 y BAL-2** manejan entradas balanceadas y auxiliares no balanceadas, seleccionables desde el panel frontal.
-- Los módulos **USB** gestionan dos señales estéreo vía USB.
-- La conexión USB envía a la computadora las señales **PGM (USB-1)** y **REC (USB-2)**.
-- En modelos con opción **AoIP**, se pueden instalar hasta dos módulos Ethernet para transmisión/recepción de streaming.
-  - Señales disponibles: PGM y REC.
-  - Cada módulo AoIP también recibe un streaming, que se asigna a un canal de línea.
+- **BAL-1 and BAL-2** channels handle balanced and auxiliary unbalanced inputs, selectable from the front panel
+- **USB** modules manage two stereo signals via USB
+- The USB connection sends **PGM (USB-1)** and **REC (USB-2)** signals to the computer
+- In models with **AoIP** option, up to two Ethernet modules can be installed for streaming transmission/reception
+  - Available signals: PGM and REC
+  - Each AoIP module also receives a stream, which is assigned to a line channel
 
 ---
 
-## Indicadores
+## Indicators
 
-La torreta de la consola incluye:
+The console meter bridge includes:
 
-- **Vúmetros LED** de programa y grabación (nivel pico-promedio).
-- **Indicador de compresor de micrófonos**.
+- **LED VU meters** for program and recording (peak-average level)
+- **Microphone compressor indicator**

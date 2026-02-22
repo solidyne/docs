@@ -1,13 +1,21 @@
 ---
 title: "USB audio"
-description: "Conexión y configuración de las conexiones USB"
+description: "USB connections and configuration"
 keywords: ["USB"]
-tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+tags: ["studio consoles", "Classic line", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d3bd87f24dc79be01495725c33fedd94c2c76b14ef627fc3927beb332f70a09e"
+
 ---
 
-## Conexión de los puertos USB
+## USB Ports Connection
 
-Los puertos **USB-1** y **USB-2** permiten conexión directa a la computadora, utilizando cables **USB A/B estándar**. Soportan puertos 1.1, 2.0 o 3.0.
+The **USB-1** and **USB-2** ports allow direct computer connection using standard **USB A/B cables**. They support 1.1, 2.0 or 3.0 ports.
 
 <img
   src="/images/image.png"
@@ -17,53 +25,53 @@ Los puertos **USB-1** y **USB-2** permiten conexión directa a la computadora, u
   style={{ width:"10%" }}
 />
 
-Asegúrese de utilizar **cables de buena calidad**. Cables malos pueden ocasionar la caída de la conexión USB durante la reproducción de audio o fallos intermitentes.
+Make sure to use **high-quality cables**. Poor cables can cause USB connection drops during audio playback or intermittent failures.
 
-Se recomienda colocar la computadora próxima a la consola, utilizando cables de 2 a 3 metros. Si se emplean extensiones, no superar los 4 metros.
+It is recommended to place the computer close to the console, using 2-3 meter cables. If extensions are used, do not exceed 4 meters.
 
 <Warning>
-  Antes de conectar USB a la computadora, asegúrese de que ambos equipos tengan una **puesta a tierra efectiva** mediante sus fichas de tres contactos. **Verificación rápida:**
+  Before connecting USB to the computer, ensure both devices have **effective grounding** through their three-pin plugs. **Quick check:**
 
-  - Con un tester en escala de 25 V alterna, mida entre los chasis de la PC y de la consola. El valor debe ser **cero voltios**.
-  - Recién entonces conecte la ficha USB.
-  - Si no existe puesta a tierra, puede dañarse el puerto USB.
+  - Using a multimeter set to 25V AC, measure between the PC and console chassis. Reading should be **zero volts**.
+  - Only then connect the USB plug.
+  - Without proper grounding, the USB port may be damaged.
 </Warning>
 
-- Los puertos USB son compatibles con **Windows© y Linux**.
-- Si ambos se conectan a una misma computadora, **conectar primero USB-1**.
-- Para usar un único canal, debe conectarse siempre **USB-1**.
+- USB ports are compatible with **Windows© and Linux**.
+- If both are connected to the same computer, **connect USB-1 first**.
+- To use a single channel, always connect **USB-1**.
 
   <Danger>
-    El puerto **USB-2 solo funciona si USB-1 está conectado y activo**.
+    The **USB-2 port only works if USB-1 is connected and active**.
   </Danger>
-- Si se conectan dos computadoras distintas, tenga en cuenta que USB-2 no funcionará cuando la PC conectada a USB-1 está apagada. Por esto USB-1 se asigna a la PC de emisión al aire, que permanece activa las 24 horas.
+- When connecting two different computers, note that USB-2 will not work when the PC connected to USB-1 is powered off. Therefore, USB-1 is assigned to the on-air PC, which remains active 24/7.
 
-## Instalación en Windows<sup>©</sup>
+## Windows<sup>©</sup> Installation
 
 <Steps>
   <Step>
-    En Windows la conexión es Plug&Play. El sistema reconoce e instala automáticamente los controladores. El puerto aparece como **“dispositivo de reproducción USB 1”** y **“dispositivo de grabación USB 1”**.
+    Connection in Windows is Plug&Play. The system automatically recognizes and installs the drivers. The port appears as **"USB 1 playback device"** and **"USB 1 recording device"**.
   </Step>
   <Step>
-    En la torreta de VU, el indicador **Digital IN/Out** mostrará “4” (entrada \+ salida estéreo reconocidas).
+    On the VU tower, the **Digital IN/Out** indicator will show "4" (recognized stereo input + output).
   </Step>
   <Step>
-    Al conectar el segundo canal (USB-2), el indicador cambia a “8” y la PC muestra un segundo dispositivo de reproducción y grabación.
+    When connecting the second channel (USB-2), the indicator changes to "8" and the PC shows a second playback and recording device.
   </Step>
   <Step>
-    Los puertos se pueden conectar a una misma computadora o a dos equipos distintos.
+    The ports can be connected to the same computer or to two different machines.
   </Step>
 </Steps>
 
 ---
 
-## Buses PGM y REC sobre USB
+## PGM and REC Buses over USB
 
-La conexión USB permite enviar directamente dos buses de señal hacia la computadora:
+The USB connection allows sending two signal buses directly to the computer:
 
-- **USB-1 / PGM**: aparece en Windows© como “Dispositivo de grabación USB 1”.
-- **USB-2 / REC**: aparece en Windows© como “Dispositivo de grabación USB 2”.
+- **USB-1 / PGM**: appears in Windows© as "USB 1 Recording Device".
+- **USB-2 / REC**: appears in Windows© as "USB 2 Recording Device".
 
-No requiere instalación adicional. Los dispositivos aparecen automáticamente al conectar los canales de entrada USB a la computadora (o a dos computadoras distintas).
+No additional installation required. The devices appear automatically when connecting the USB input channels to the computer (or to two different computers).
 
-Para detalles de uso en grabación, ver **Grabación de programas**.
+For recording usage details, see **Program Recording**.

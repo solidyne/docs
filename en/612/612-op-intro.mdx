@@ -1,57 +1,65 @@
 ---
-title: "Operación"
-description: "Consideraciones generales sobre la operación en D612"
-keywords: ["operación"]
-tags: ["consolas de estudio", "linea Classic", "D612"]
+title: "Operation"
+description: "General operational considerations for D612"
+keywords: ["operation"]
+tags: ["studio consoles", "Classic line", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "dfc2e24b0d6b01e87c9a6daf6ca52f0afcac091df226d406f25adcda95599abc"
+
 ---
 
-## Introducción
+## Introduction
 
-Los controles de la consola se organizan en varios sectores según su función:
+The console controls are organized into several sections according to their function:
 
-- Canales de entrada.
-- Control de híbrido telefónico.
-- Monitoreo y órdenes a estudio.
-- Escucha previa (CUE).
-- Ecualizadores de micrófono.
-- Indicadores de nivel y compresión. 
+- Input channels
+- Telephone hybrid control
+- Studio monitoring and talkback
+- Preview monitoring (CUE)
+- Microphone equalizers
+- Level and compression indicators
 
-## Micrófonos
+## Microphones
 
-- **MIC 1 y MIC 2:** manejan solo señal de micrófono.
-  - La alimentación phantom de **48 V** se activa globalmente (todas o ninguna).
-  - Los micrófonos dinámicos soportan los 48 VCC, por lo que pueden combinarse condensadores y dinámicos.
-- Pueden asignarse a la etapa de procesado (ecualizador de 4 bandas y compresor).
+- **MIC 1 and MIC 2:** handle microphone signals only
+  - **48V** phantom power is activated globally (all or none)
+  - Dynamic microphones can handle 48V DC, so condenser and dynamic mics can be mixed
+- Can be assigned to the processing stage (4-band equalizer and compressor)
 
-## Líneas
+## Lines
 
-- **Líneas analógicas:** admiten entradas estéreo balanceadas (BAL) y no balanceadas (LINE) con conmutación A/B dedse el panel.
-- **Canal digital USB:** maneja una entrada digital (USB) y una entrada analógica estéreo (LINE).
-- La conexión USB además envía las salidas **PGM o REC** hacia la conputadora.
+- **Analog lines:** accept balanced (BAL) and unbalanced (LINE) stereo inputs with A/B switching from the panel
+- **USB digital channel:** handles one digital input (USB) and one analog stereo input (LINE)
+- The USB connection also sends **PGM or REC** outputs to the computer
 
-## Torreta de vúmetros
+## VU Meter Bridge
 
-La torreta contiene vúmetros LED que muestran:
+The meter bridge contains LED VU meters that display:
 
-- El nivel de programa (pico promedio).
-- La acción del compresor.
+- Program level (peak average)
+- Compressor action
 
-## Verificación rápida
+## Quick Check
 
-Procedimientos básicos para comprobar que la consola está correctamente conectada:
+Basic procedures to verify the console is properly connected:
 
-### Verificar ingreso de señal
+### Signal Input Check
 
-1. Conecte una fuente de señal (micrófono, audio USB).
-   - Seleccione la entrada correspondiente en el canal utilizado (**MIC** o **BAL-LIN**).
-   - Esta es una causa común de error en canales de línea (entrada equivocada).
-2. Pulse **CUE** en el canal al que ingresa señal.
-3. Abra el fader **CUE** en la sección de monitoreo.
-   - El audio deberá escucharse en el parlante de la consola.
+1. Connect a signal source (microphone, USB audio)
+   - Select the corresponding input on the used channel (**MIC** or **BAL-LIN**)
+   - This is a common source of error in line channels (wrong input selection)
+2. Press **CUE** on the channel receiving the signal
+3. Raise the **CUE** fader in the monitoring section
+   - Audio should be heard through the console speaker
 
-### Enviar señal al aire
+### Sending Signal On-Air
 
-1. Asigne **PGM** en el canal para enviar la señal a la salida principal.
-2. Abra el fader del canal al nivel deseado.
-   - La señal será enviada al aire y visualizada en los vúmetros de programa.
-3. Ajuste la ganancia para que la posición normal de trabajo del fader principal sea **–15 dB** (zona gris).
+1. Assign **PGM** on the channel to send the signal to the main output
+2. Raise the channel fader to the desired level
+   - The signal will be sent on-air and displayed on the program VU meters
+3. Adjust gain so the normal working position of the main fader is at **-15 dB** (gray zone)

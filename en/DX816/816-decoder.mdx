@@ -1,71 +1,79 @@
 ---
-title: "Recibir streaming"
-description: "Configuración para decodificar un streaming entrante"
+title: "Receiving streaming"
+description: "Configuration for decoding an incoming stream"
 keywords: ["streaming","RTP","decoder"]
-tags: "consolas de estudio,linea Classic,DX816,DX822"
+tags: "studio consoles,Classic line,DX816,DX822"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a8e5f9e6f9e75f95680ea2dd248f451ee3e27315306ab9f23643ace0960b12b0"
+
 ---
 
-## Audio stream generado desde otra consola
+## Audio stream generated from another console
 
-El módulo AoIP puede configurarse para **recibir un streaming RTP** generado desde otra consola Solidyne con soporte de streaming (ej.: **D612**, serie **2600**, serie **Unidex**, coder/link **ADA102**).\
-El equipo codificador debe tener el **mismo firmware (STL)**.
+The AoIP module can be configured to **receive RTP streaming** generated from another Solidyne console with streaming support (e.g.: **D612**, **2600** series, **Unidex** series, **ADA102** coder/link).\
+The encoding device must have the **same firmware (STL)**.
 
-De fábrica, la consola viene en modo **CODER (Studio Encoder)**. Para recibir, debe configurarse como **DECODER**.
+From factory, the console comes in **CODER (Studio Encoder)** mode. To receive, it must be configured as **DECODER**.
 
-### Configuración de recepción (Decoder)
+### Reception configuration (Decoder)
 
-1. Acceder al módulo IP desde un navegador web (ver [Acceso al módulo IP](/es/DX816/816-stl).
-2. En menú superior, clic en **Location**.
-3. \*\*Cambiar \*\*el modo a **→** **Transmitter Decoder**.
-   - De fábrica: **Studio Encoder**, generar un streaming unidireccional.
-   - Como **Decoder**, se adoptan valores predeterminados (solo modificar IP y puertos).
-4. Ir a **Configuration → Streaming**.
-5. En **Port**, ingresar el puerto usado en el codificador (el equipo que transmite).
-6. En **URL**, dejar **0.0.0.0**.
-7. Pulsar **Apply** para confirmar.
+1. Access the IP module from a web browser (see [IP Module Access](/es/DX816/816-stl).
+2. In the top menu, click **Location**.
+3. **Change** the mode to **→ Transmitter Decoder**.
+   - Factory default: **Studio Encoder**, generates unidirectional streaming.
+   - As **Decoder**, default values are adopted (only modify IP and ports).
+4. Go to **Configuration → Streaming**.
+5. In **Port**, enter the port used in the encoder (the transmitting device).
+6. In **URL**, leave **0.0.0.0**.
+7. Press **Apply** to confirm.
 
-### Ajuste del buffer (RTP delay)
+### Buffer adjustment (RTP delay)
 
-El **buffer de entrada** (expresado en milisegundos) evita interrupciones de audio cuando el ancho de banda es insuficiente:
+The **input buffer** (expressed in milliseconds) prevents audio interruptions when bandwidth is insufficient:
 
-| Formato de audio     | Buffer recomendado                           |
+| Audio Format         | Recommended Buffer                             |
 | -------------------- | -------------------------------------------- |
-| PCM                  | 40–80 ms                                     |
-| Comprimido (ej. MP3) | \>80 ms (depende del códec y decodificación) |
+| PCM                  | 40-80 ms                                     |
+| Compressed (e.g. MP3) | >80 ms (depends on codec and decoding)       |
 
 <Tip>
-  A mayor buffer → menos cortes, pero mayor **retardo de audio**.\
-  El valor óptimo depende del **ancho de banda** y del **formato** usado.
+  Higher buffer → fewer cuts, but greater **audio delay**.\
+  The optimal value depends on **bandwidth** and **format** used.
 </Tip>
 
-El formato de audio lo define siempre el **equipo transmisor**.
+The audio format is always defined by the **transmitting device**.
 
-### Conexión del audio decodificado
+### Decoded audio connection
 
-- El audio recibido por Ethernet se envía a **entradas balanceadas** mediante cable externo (RJ45 a RJ45, provisto).
-- Conexión: **AoIP Output Option → BAL-1 o BAL-2**.
-- En DX822 con dos módulos AoIP: salida derivada hacia ambas entradas (BAL-1 y BAL-2) mediante cable especial “Y” (suministrado).
+- Audio received via Ethernet is sent to **balanced inputs** through external cable (RJ45 to RJ45, provided).
+- Connection: **AoIP Output Option → BAL-1 or BAL-2**.
+- In DX822 with two AoIP modules: derived output to both inputs (BAL-1 and BAL-2) using special "Y" cable (supplied).
 
 ---
 
-## Recepción usando un computador
+## Reception using a computer
 
-Es posible recibir transmisión desde una DX /AoIP en una computadora con software compatible RTP.\
-Recomendado: **VLC Player** (gratuito – [videolan.org/vlc](http://www.videolan.org/vlc/)).
+It's possible to receive transmission from a DX/AoIP on a computer with RTP-compatible software.\
+Recommended: **VLC Player** (free – [videolan.org/vlc](http://www.videolan.org/vlc/)).
 
-**Configuración de formato en VLC:**
+**Format configuration in VLC:**
 
-- **PCM16 @ 44.1 kHz**, o
-- **MP3** en alguno de sus modos.
+- **PCM16 @ 44.1 kHz**, or
+- **MP3** in any of its modes.
 
-Otros formatos pueden requerir un archivo **SDP** de carga (payload).
+Other formats may require a **SDP** payload file.
 
-**Procedimiento en VLC:**
+**VLC procedure:**
 
-- Menú: **Medio → Abrir ubicación de red**.
-- En campo URL ingresar:
+- Menu: **Media → Open Network Location**.
+- In URL field enter:
 
-  `[protocolo]://[IP_fuente]:[puerto]`
+  `[protocol]://[source_IP]:[port]`
 
 <img
   src="/images/816/816-vlc-decoding.jpg"
@@ -74,15 +82,14 @@ Otros formatos pueden requerir un archivo **SDP** de carga (payload).
   style={{ width:"54%" }}
 />
 
-Por ejemplo:
+For example:
 
 RTP://0.0.0.0:3030
 
-- `RTP` → protocolo.
-- `0.0.0.0` → cualquier IP entrante.
-- `3030` → puerto usado.
+- `RTP` → protocol.
+- `0.0.0.0` → any incoming IP.
+- `3030` → used port.
 
 <Note>
-  Algunas versiones de VLC aceptan: `RTP://@:3030`
+  Some VLC versions accept: `RTP://@:3030`
 </Note>
-

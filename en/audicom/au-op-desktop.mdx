@@ -1,88 +1,96 @@
 ---
-description: "Entorno de trabajo. Acceso a los módulos."
-title: "Barra de herramientas"
-keywords: ["Escritorio"]
+description: "Working environment. Module access."
+title: "Toolbar"
+keywords: ["Desktop"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "0d42b37f6bd5ab935e7ab9830033bed0a852b2ca96f4e18b3f5abb6f1ff56046"
+
 ---
 
-La barra de herramientas se ubica horizontalmente en la zona superior de la pantalla.\
-Incluye:
+The toolbar is located horizontally at the top of the screen.\
+It includes:
 
-- Información de estado.
-- Contadores de hora e información meteorológica.
-- Botones para disparar los módulos principales.
-- Un menú desplegable para acceder a otros módulos del sistema.
+- Status information.
+- Time counters and weather information.
+- Buttons to launch main modules.
+- A dropdown menu to access other system modules.
 
 ![Au Op Topbar Jp](/images/audicom/au-op-topbar.jpg)
 
 <Note>
-  Las herramientas de Aire solo están disponibles si el usuario tiene permisos de **Operador del Control de Aire**. De lo contrario, la barra se abre pero los íconos de transmisión estarán deshabilitados, dejando solo disponible el menú “+”.
+  On-Air tools are only available if the user has **On-Air Control Operator** permissions. Otherwise, the bar opens but broadcast icons will be disabled, leaving only the "+" menu available.
 </Note>
 
 ---
 
-## Personalización del escritorio
+## Desktop Customization
 
-La visibilidad, posición y tamaño de los módulos en el escritorio pueden configurarse de manera individual para cada usuario.
+The visibility, position and size of modules on the desktop can be configured individually for each user.
 
-### Nombre del medio o emisora
+### Station or Media Name
 
-- Doble clic sobre una zona libre de la barra abre una ventana para ingresar el nombre del medio o emisora.
-- El nombre aparece en la parte superior derecha de la pantalla.
-- Este dato es válido solo para esa terminal y se guarda localmente.
-- El texto entre paréntesis corresponde al nombre de Windows de la computadora en la red.
+- Double click on a free area of the bar opens a window to enter the station or media name.
+- The name appears in the top right of the screen.
+- This data is valid only for that terminal and is stored locally.
+- The text in parentheses corresponds to the Windows computer name on the network.
 
-### Botón “+” herramientas
+### "+" Tools Button
 
-- Muestra las distintas herramientas de AUDICOM organizadas por área de aplicación.
-- El contenido del menú se puede editar para mostrar solo las herramientas relevantes al usuario.
-- Si el usuario no tiene permisos para los módulos de aire (CyberPlay, Live Assist, Playlist Manager, I-Rec), la barra oculta esos accesos y solo habilita el menú **\+ Herramientas**.
+- Shows the different AUDICOM tools organized by application area.
+- The menu content can be edited to show only tools relevant to the user.
+- If the user does not have permissions for on-air modules (CyberPlay, Live Assist, Playlist Manager, I-Rec), the bar hides those accesses and only enables the **+ Tools** menu.
 
 ---
 
-## Hora y datos del tiempo
+## Time and Weather Data
 
-Este módulo permite informar automáticamente a los oyentes la hora exacta y datos meteorológicos:
+This module automatically informs listeners of the exact time and weather data:
 
-- Temperatura
-- Humedad
-- Presión atmosférica
-- Lluvia caída
+- Temperature
+- Humidity
+- Atmospheric pressure
+- Rainfall
 
-Los datos se actualizan en tiempo real vía Internet.\
-AUDICOM genera locuciones usando archivos pregrabados con voces masculina y femenina.
+Data is updated in real-time via Internet.\
+AUDICOM generates announcements using pre-recorded files with male and female voices.
 
 ### Display
 
-Muestra la fecha, hora y datos actuales.
+Shows current date, time and data.
 
-### Actualizar datos del tiempo
+### Weather Data Update
 
-- La actualización automática requiere conexión a Internet y el servicio **AUDICOM WebTools** activo.
-- WebTools es una suscripción opcional que habilita funciones adicionales y soporte remoto (ver configuración en _Audicom WebTools_).
-- Sin WebTools, los datos se pueden cargar manualmente con doble clic en la zona izquierda de la barra (Hora/Meteor).
+- Automatic updates require Internet connection and active **AUDICOM WebTools** service.
+- WebTools is an optional subscription that enables additional features and remote support (see configuration in _Audicom WebTools_).
+- Without WebTools, data can be manually loaded with double click on the left area of the bar (Time/Meteor).
 
-### Hora actual
+### Current Time
 
-- Clic sobre la zona Hora/Meteor abre la ventana **METEOR**, donde se configuran los anuncios de hora y tiempo.
-- La hora mostrada corresponde a la de Windows.
+- Click on the Time/Meteor area opens the **METEOR** window, where time and weather announcements are configured.
+- The displayed time corresponds to Windows time.
 
 <Warning>
-  Si modifica la hora en Windows, asegúrese de que AUDICOM esté detenido.\
-  Cambiar la hora durante reproducción puede provocar errores en los cálculos de tiempo.
+  If modifying Windows time, ensure AUDICOM is stopped.\
+  Changing time during playback may cause errors in time calculations.
 </Warning>
 
-- **Beep hora exacta**: si se activa, se emite un beep en cada hora en punto.
-  - El canal de reproducción se define en el Panel de Configuración.
+- **Top of hour beep**: if enabled, a beep sounds at the top of each hour.
+  - The playback channel is defined in the Configuration Panel.
 
-### Voces
+### Voices
 
-Permite definir la combinación de voces que se usarán para los anuncios de hora y tiempo.
+Allows defining the voice combination to be used for time and weather announcements.
 
-### Reproducción manual de anuncios
+### Manual Announcement Playback
 
-- Normalmente los anuncios están pautados en la programación.
-- También pueden lanzarse manualmente desde la ventana **METEOR**.
-- Si se lanzan varios consecutivos, se reproducen en orden.
-- El audio se envía al canal asignado al módulo **CyberPlay**.
-- Si AUDICOM está reproduciendo otro contenido, el anuncio se mezcla con el audio al aire, según el nivel definido por el botón **MIX** del CyberPlay.
+- Normally announcements are scheduled in programming.
+- They can also be triggered manually from the **METEOR** window.
+- If several are launched consecutively, they play in order.
+- Audio is sent to the channel assigned to the **CyberPlay** module.
+- If AUDICOM is playing other content, the announcement mixes with the on-air audio according to the level set by CyberPlay's **MIX** button.

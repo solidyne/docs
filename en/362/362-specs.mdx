@@ -1,84 +1,92 @@
 ---
-title: "Especificaciones técnicas"
+title: "Technical specifications"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "19374f9b5bbabd6ee119d8bec9b8a69e41d0a2fef980434b04d0a9e47545119c"
+
 ---
 
-## Especificaciones generales
+## General specifications
 
-<Accordion title="Entradas">
-  - **Balanceada estéreo**: conectores XLR-3 y RJ45\
-    Nivel con auto-ajuste 0 dBu a \+15 dBu, Z = 600/10 kΩ
-  - **No balanceada estéreo**: conectores RCA\
-    Nivel con auto-ajuste –15 dBu a 0 dBu, Z = 10 kΩ
-  - **Digital USB (opcional)**
+<Accordion title="Inputs">
+  - **Balanced stereo**: XLR-3 and RJ45 connectors\
+    Auto-adjusting level 0 dBu to +15 dBu, Z = 600/10 kΩ
+  - **Unbalanced stereo**: RCA connectors\
+    Auto-adjusting level –15 dBu to 0 dBu, Z = 10 kΩ
+  - **Digital USB (optional)**
 </Accordion>
 
-<Accordion title="Salidas">
-  - **Balanceada estéreo**: conectores XLR, \+4 dBu, Z = 600/10 kΩ\
-    Con de-emphasis (respuesta plana).
-  - **Digital USB (opcional)**
+<Accordion title="Outputs">
+  - **Balanced stereo**: XLR connectors, +4 dBu, Z = 600/10 kΩ\
+    With de-emphasis (flat response).
+  - **Digital USB (optional)**
 </Accordion>
 
-<Accordion title="Salidas MPX">
-  - Doble salida MPX con ajuste independiente de nivel (4 Vpp, ajuste de fábrica), Z = 600/10 kΩ.
-  - Salida diferencial para cancelar zumbidos por lazos entre el transmisor y la toma a tierra del estudio.
+<Accordion title="MPX Outputs">
+  - Dual MPX output with independent level adjustment (4 Vpp, factory setting), Z = 600/10 kΩ.
+  - Differential output for canceling ground loop hum between transmitter and studio ground.
 </Accordion>
 
-<Accordion title="Especificaciones de audio">
-  - **Respuesta en frecuencia**: 20 – 16.000 Hz ±0,5 dB (medido por debajo del umbral de compresión/limitación).
-  - **Distorsión armónica**: \< 0,02 % (30 – 15.000 Hz).
-  - **Ruido**: \< –90 dBA referido a 100 % de modulación.
-  - **Separación estéreo**: \> 75 dBA.
-  - **Filtro subsónico**: Chebyshev 2º orden, 15 Hz.
+<Accordion title="Audio specifications">
+  - **Frequency response**: 20 – 16,000 Hz ±0.5 dB (measured below compression/limiting threshold).
+  - **Harmonic distortion**: < 0.02% (30 – 15,000 Hz).
+  - **Noise**: < –90 dBA referenced to 100% modulation.
+  - **Stereo separation**: > 75 dBA.
+  - **Subsonic filter**: 2nd order Chebyshev, 15 Hz.
 </Accordion>
 
-<Accordion title="Procesamiento">
-  - **Cancelación asimétrica**: relación 5:1, método Kahn-Bonello.
-  - **Expansor**: pendiente 10:1, ataque de 100 µs.
-  - **AGC (banda ancha)**: controlado por VCA.\
-    Rango: 30 dB (–10 dB / \+20 dB respecto al nivel nominal de entrada).
-  - **Compresión multibanda**:
-    - 3 bandas, 18 dB/octava, divisor de fase lineal.
-    - Compresores: rango 30 dB, pendiente 5:1.
-    - Ataque automático.
-    - Recuperación: controlada por perillas _Energy_.
-    - Recortador con cancelador IM (\> 30 dB de atenuación por debajo de 250 Hz).
-    - Dynamic EQ: 0 – 12 dB de refuerzo dinámico en graves, medios y agudos.
+<Accordion title="Processing">
+  - **Asymmetrical cancellation**: 5:1 ratio, Kahn-Bonello method.
+  - **Expander**: 10:1 slope, 100 µs attack.
+  - **AGC (wideband)**: VCA controlled.\
+    Range: 30 dB (–10 dB / +20 dB relative to nominal input level).
+  - **Multiband compression**:
+    - 3 bands, 18 dB/octave, linear phase crossover.
+    - Compressors: 30 dB range, 5:1 slope.
+    - Automatic attack.
+    - Recovery: controlled by Energy knobs.
+    - Clipper with IM canceller (> 30 dB attenuation below 250 Hz).
+    - Dynamic EQ: 0 – 12 dB dynamic boost in bass, mid and treble.
 </Accordion>
 
-<Accordion title="Alimentación">
-  115 V / 230 V (selector en panel trasero)\
+<Accordion title="Power supply">
+  115 V / 230 V (selector on rear panel)\
   50/60 Hz, 20 W
 </Accordion>
 
-<Accordion title="Dimensiones">
-  Módulo de montaje en rack 19" (44,4 mm).
+<Accordion title="Dimensions">
+  19" rack mount module (44.4 mm).
 </Accordion>
 
 ---
 
 ## Stereo Coder Specifications
 
-<Accordion title="Entrada de audio">
-  2 Vpp para 100 % salida MPX (4 Vpp).
+<Accordion title="Audio input">
+  2 Vpp for 100% MPX output (4 Vpp).
 </Accordion>
 
-<Accordion title="Especificaciones de audio">
-  - **Respuesta en frecuencia**:
-    - 15 kHz / 5º orden filtro LP elíptico, –1 dB a 15 kHz.
-    - 20 – 14.000 Hz ±0,25 dB.
-    - Atenuación a 19 kHz \> 40 dB.
-  - **Distorsión armónica**:
-    - \< 0,01 % THD (20 – 15.000 Hz).
-    - Típica: 0,003 % @ 1 kHz.
-  - **Relación S/R**: \> 90 dBA (ref. 100 % modulación).
-  - **Separación estéreo**: 65 dB @ 1 kHz.
+<Accordion title="Audio specifications">
+  - **Frequency response**:
+    - 15 kHz / 5th order elliptic LP filter, –1 dB at 15 kHz.
+    - 20 – 14,000 Hz ±0.25 dB.
+    - Attenuation at 19 kHz > 40 dB.
+  - **Harmonic distortion**:
+    - < 0.01% THD (20 – 15,000 Hz).
+    - Typical: 0.003% @ 1 kHz.
+  - **S/N ratio**: > 90 dBA (ref. 100% modulation).
+  - **Stereo separation**: 65 dB @ 1 kHz.
 </Accordion>
 
-<Accordion title="Supresión de armónicos">
-  - 38 kHz: mejor que –70 dB (ref. 100 % modulación).
-  - 57, 76 y 95 kHz: mejor que –75 dB (ref. 100 % modulación).
+<Accordion title="Harmonic suppression">
+  - 38 kHz: better than –70 dB (ref. 100% modulation).
+  - 57, 76 and 95 kHz: better than –75 dB (ref. 100% modulation).
 </Accordion>
 
-<Accordion title="Estabilidad de tono piloto">
-  ±0,002 % (±0,5 Hz).
+<Accordion title="Pilot tone stability">
+  ±0.002% (±0.5 Hz).
 </Accordion>

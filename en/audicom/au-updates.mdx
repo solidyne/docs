@@ -1,52 +1,60 @@
 ---
-description: "Actualización y reinstalación"
-title: "Actualizaciones"
+description: "Update and reinstallation"
+title: "Updates"
 keywords: ["updates"]
 tags: ["Software", "Audicom"]
----
-## Actualización / Reinstalación
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "99a4dd32cd38c7e9325c7228b5c9d9aacf7e356bc6976d52f0231cb6d079d4e5"
 
-Para cambiar la computadora de aire o reinstalar AUDICOM, siga este procedimiento:
+---
+## Update / Reinstallation
+
+To change the on-air computer or reinstall AUDICOM, follow this procedure:
 
 <Steps>
-  <Step title="Instalar en la nueva computadora">
-    Instale AUDICOM con el instalador original.  
-    La nueva computadora debe tener el **mismo nombre de red** que la computadora original.
+  <Step title="Install on the new computer">
+    Install AUDICOM using the original installer.
+    The new computer must have the **same network name** as the original computer.
   </Step>
 
-  <Step title="Reemplazar carpeta AUDICOM">
-    Sustituya en la nueva computadora la carpeta `C:\AUDICOM` creada por el instalador, por la carpeta `C:\AUDICOM` de la computadora actual.
+  <Step title="Replace AUDICOM folder">
+    Replace the `C:\AUDICOM` folder created by the installer on the new computer with the `C:\AUDICOM` folder from the current computer.
   </Step>
 
-  <Step title="Reemplazar carpeta ADMICOM">
-    Sustituya en la nueva computadora la carpeta `C:\ADMICOM` creada por el instalador, por la carpeta `C:\ADMICOM` de la computadora actual.
+  <Step title="Replace ADMICOM folder">
+    Replace the `C:\ADMICOM` folder created by the installer on the new computer with the `C:\ADMICOM` folder from the current computer.
   </Step>
 
-  <Step title="Actualizar versión (opcional)">
-    Si desea actualizar la versión de AUDICOM, debe contar con un **contrato de soporte y actualizaciones vigente**.  
-    El servicio de soporte anual incluye acceso remoto de un técnico especializado para actualizar y configurar el sistema.
+  <Step title="Version update (optional)">
+    If you want to update the AUDICOM version, you must have an **active support and updates contract**.
+    The annual support service includes remote access by a specialized technician to update and configure the system.
   </Step>
 </Steps>
 
-El usuario puede instalar actualizaciones descargándolas desde [www.solidyne.ar](http://www.solidyne.ar).  
-Para instalar una actualización seleccione la opción **“Modular - Reinstall”**:  
-- Instala los mismos programas que el modo genérico, pero permite elegir módulos de manera individual desde un menú.  
-- Usualmente las actualizaciones se distribuyen en un único archivo ejecutable descargable desde la web.  
+Users can install updates by downloading them from [www.solidyne.ar](http://www.solidyne.ar).
+To install an update, select the **"Modular - Reinstall"** option:
+- Installs the same programs as the generic mode but allows choosing individual modules from a menu.
+- Updates are usually distributed as a single executable file downloadable from the web.
 
-<Danger>  
-Aunque el instalador no sobrescribe información del usuario, **siempre realice copias de respaldo actualizadas de la carpeta `C:\AUDICOM`** antes de actualizar.  
+<Danger>
+Although the installer does not overwrite user information, **always make updated backups of the `C:\AUDICOM` folder** before updating.
 </Danger>
 
-### Archivos a respaldar
+### Files to backup
 
-- `\Audicom\AUDIO`: archivos de audio.  
-- `\Audicom\DB`: base de datos musical, contiene `user.ini` (usuarios) y `data.sqlite` (Media Asset Management).  
-- `\Audicom\Log\*.log`: programación de tandas publicitarias.  
-- `\Audicom\Pgm\*.pgm`: organización de programas y bloques. Incluye playlists (`.pls`, `.m3u`, `.txt`).  
-- `\Audicom\Air\*.air`: registros de títulos emitidos al aire.  
-  <Note>Respaldar solo si la emisora desea mantener un historial completo. Cada archivo .air ocupa aprox. 80 KB.</Note>  
-- `\Admicom\`: contiene toda la base de datos de administración.  
+- `\Audicom\AUDIO`: audio files.
+- `\Audicom\DB`: music database, contains `user.ini` (users) and `data.sqlite` (Media Asset Management).
+- `\Audicom\Log\*.log`: commercial breaks programming.
+- `\Audicom\Pgm\*.pgm`: programs and blocks organization. Includes playlists (`.pls`, `.m3u`, `.txt`).
+- `\Audicom\Air\*.air`: records of titles broadcast on air.
+  <Note>Backup only if the station wants to maintain a complete history. Each .air file takes approximately 80 KB.</Note>
+- `\Admicom\`: contains the entire administration database.
 
-<Danger>  
-Nunca reinstale la **base de datos demo** ni los **archivos de programación de demostración**, ya que sobrescribiría la base de datos real de la emisora.  
+<Danger>
+Never reinstall the **demo database** or **demonstration programming files**, as this would overwrite the station's actual database.
 </Danger>

@@ -1,0 +1,19 @@
+{
+  "total": 53,
+  "translated": 2,
+  "skipped": 51,
+  "errors": 0,
+  "duration_sec": "80.48",
+  "model": "anthropic/claude-3.5-sonnet",
+  "limits": {
+    "max_tokens": 8000,
+    "max_parts": 3,
+    "context_chars": 1200
+  },
+  "mode": {
+    "force": false,
+    "only_new": false,
+    "only_changed": false,
+    "dry_run": false
+  }
+}

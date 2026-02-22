@@ -1,100 +1,108 @@
 ---
-title: "AutoDj: Plantillas de musicalización"
-description: "Creación de plantillas de criterio para musicalización automática"
-keywords: ["autodj", "programacion", "musica", "automatizacion"]
+title: "AutoDj: Music Programming Templates"
+description: "Creating criteria templates for automatic music programming"
+keywords: ["autodj", "programming", "music", "automation"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1ded516ca87ca65396daa3268f9a859f1efd40ca730e30ed75ada9f4dac8100b"
+
 ---
 
-La creación de una **plantilla de musicalización (formato)** para AutoDJ define los criterios con los que el sistema seleccionará y reproducirá música en forma automática. Un formato establece reglas como **estilos**, **intérpretes**, **autores**, **géneros**, **tempos/modos**, e incluye opciones para **promocionales** y **presentaciones**.
+Creating a **music programming template (format)** for AutoDJ defines the criteria by which the system will automatically select and play music. A format establishes rules like **styles**, **artists**, **composers**, **genres**, **tempos/modes**, and includes options for **promos** and **voice tracks**.
 
 ---
 
-## Pasos para crear un formato
+## Steps to create a format
 
 <Steps>
-  <Step title="Seleccionar la terminal de destino">
-    En redes con varias **terminales de Aire**, elija la terminal en la que se usará el formato desde el menú de terminales.\
-    Si solo existe una terminal, el formato se creará automáticamente en la ubicación correcta.
+  <Step title="Select target terminal">
+    In networks with multiple **On-Air terminals**, choose the terminal where the format will be used from the terminals menu.\
+    If there is only one terminal, the format will automatically be created in the correct location.
   </Step>
-  <Step title="Crear un nuevo formato">
-    Presione **`NEW`** para iniciar una configuración en blanco.\
-    Ingrese el **nombre del formato** en el campo **`Format`**.
+  <Step title="Create a new format">
+    Press **`NEW`** to start with a blank configuration.\
+    Enter the **format name** in the **`Format`** field.
   </Step>
-  <Step title="Definir estilos musicales">
-    En **`Styles`**, despliegue la lista de **estilos** provenientes de la **Base de Datos** y pulse **`Add`** para incorporarlos.
+  <Step title="Define musical styles">
+    In **`Styles`**, expand the list of **styles** from the **Database** and press **`Add`** to include them.
 
-    - Para incluir **todos los estilos**, marque **`All`**.
-    - Para **eliminar** un estilo, selecciónelo y pulse **`Delete`**.
+    - To include **all styles**, check **`All`**.
+    - To **remove** a style, select it and press **`Delete`**.
 
-    **Modo Inducido (Induced Mode):** define **cuántos títulos** por estilo se programarán.\
-    Cada vez que presione **`Add`**, el estilo se añade al final de la secuencia.\
-    Ejemplo: _Pop, Pop, Pop, Clásico80, Latino_ → AutoDJ programará **3 Pop**, **1 Clásico80** y **1 Latino**, y luego reiniciará el ciclo.\
-    Puede **reordenar** arrastrando con el ratón (_Drag & Drop_).
+    **Induced Mode:** defines **how many titles** per style will be scheduled.\
+    Each time you press **`Add`**, the style is added to the end of the sequence.\
+    Example: _Pop, Pop, Pop, Classic80s, Latin_ → AutoDJ will schedule **3 Pop**, **1 Classic80s** and **1 Latin**, then restart the cycle.\
+    You can **reorder** using drag & drop.
   </Step>
-  <Step title="Elegir intérpretes (opcional)">
-    Agregue intérpretes permitidos para este formato.\
-    El casillero **`Repeat every`** define la **cantidad mínima** de temas entre dos del **mismo intérprete** (valor indicativo, no estricto).
+  <Step title="Choose artists (optional)">
+    Add allowed artists for this format.\
+    The **`Repeat every`** box defines the **minimum number** of songs between two by the **same artist** (indicative value, not strict).
   </Step>
-  <Step title="Elegir autores (opcional)">
-    Agregue autores permitidos.\
-    La lógica es igual a la de **intérpretes**.
+  <Step title="Choose composers (optional)">
+    Add allowed composers.\
+    The logic is the same as for **artists**.
   </Step>
-  <Step title="Incluir Top Hits (opcional)">
-    Active **Top Hits** para programar periódicamente títulos marcados como **Top** en **InfoMusic-Producción**.\
-    Seleccione la categoría (p. ej., **Top-10**, **Top-40**) y la **frecuencia**.\
-    Ejemplo: _Top-10 cada 0,5 h_ → un tema **Top-10** aproximadamente **cada 30 minutos**.
+  <Step title="Include Top Hits (optional)">
+    Enable **Top Hits** to periodically schedule titles marked as **Top** in **InfoMusic-Production**.\
+    Select the category (e.g., **Top-10**, **Top-40**) and **frequency**.\
+    Example: _Top-10 every 0.5 h_ → a **Top-10** song approximately **every 30 minutes**.
   </Step>
-  <Step title="Definir géneros y sus repeticiones">
-    Para cada **género**, asigne un valor en **`Repeat`** que indique cuántos **títulos de géneros distintos** deben intercalarse **como mínimo** entre dos del mismo género.\
-    Ejemplo: si _Solista Masculino_ = **3**, entre dos temas de ese género habrá **al menos 3** de géneros diferentes. (No es una regla estricta.)
+  <Step title="Define genres and their repetitions">
+    For each **genre**, assign a value in **`Repeat`** indicating how many **titles of different genres** must be played **at minimum** between two of the same genre.\
+    Example: if _Male Solo_ = **3**, between two songs of that genre there will be **at least 3** of different genres. (Not a strict rule.)
   </Step>
-  <Step title="Configurar matrices de Tempo y Modo">
-    Marque las **combinaciones a restringir** en las matrices de **Tempo** (velocidad) y **Modo** (sonoridad).
+  <Step title="Configure Tempo and Mode matrices">
+    Mark the **combinations to restrict** in the **Tempo** (speed) and **Mode** (sound character) matrices.
 
-    - **Casilleros marcados** → reducen la probabilidad de que esa combinación ocurra.
-    - **Sin restricciones** → deje **todas las celdas en blanco**.
+    - **Marked boxes** → reduce the probability of that combination occurring.
+    - **No restrictions** → leave **all cells blank**.
 
-    Ejemplo: si en la **fila “Suave”** marca la **columna “Muy Fuerte”**, AutoDJ evitará que un tema **muy fuerte** suceda a uno **suave**.
+    Example: if in the **"Soft" row** you mark the **"Very Strong" column**, AutoDJ will avoid playing a **very strong** song after a **soft** one.
 
-    **Regla de predicción (primer tema del bloque):** si una **fila completa** está marcada (p. ej., _Allegro_), ese valor pierde prioridad como **primer tema** del bloque, para no dejar sin sucesores compatibles.
+    **Prediction rule (first song of block):** if a **complete row** is marked (e.g., _Allegro_), that value loses priority as **first song** of the block, to avoid leaving no compatible successors.
   </Step>
-  <Step title="Insertar promocionales (Promos)">
-    En **`Promos`**, el campo **`Every Titles`** define cada **cuántos temas** musicales se insertará un **promocional**.\
-    El campo **`Promo`** permite filtrar por **prefijo** del **título** del promo (ej.: “Verano” → solo _PromoPGM_ cuyo título comience con “Verano”).
+  <Step title="Insert promotional spots (Promos)">
+    In **`Promos`**, the **`Every Titles`** field defines after how many **musical tracks** a **promo** will be inserted.\
+    The **`Promo`** field allows filtering by **prefix** of the promo **title** (e.g.: "Summer" → only _PromoPGM_ whose title begins with "Summer").
 
-    **Categorías recomendadas en InfoMusic:**
+    **Recommended categories in InfoMusic:**
 
-    - **`PromoPGM`**: promos específicos de un programa; insertados cada _n_ temas por AutoDJ.
-    - **`Promo`**: promos generales 24/7; útiles para **ajustes de tiempo** (pre-tanda exacta).
-    - **`Separadores`**: piezas que **no** deben manejarse automáticamente.
+    - **`PromoPGM`**: program-specific promos; inserted every _n_ songs by AutoDJ.
+    - **`Promo`**: general 24/7 promos; useful for **time adjustments** (exact pre-break).
+    - **`Separators`**: pieces that should **not** be handled automatically.
 
     <Note>
-      En `Autodj.ini` puede redefinir qué categoría usa AutoDJ al insertar cada _n_ temas: `promoPgmClass=PromoPgm` (por defecto) o `Promo`.
+      In `Autodj.ini` you can redefine which category AutoDJ uses when inserting every _n_ songs: `promoPgmClass=PromoPgm` (default) or `Promo`.
     </Note>
   </Step>
-  <Step title="Habilitar presentaciones (Partners)">
-    Active **`Use Partner Files`** para reproducir **presentaciones** asociadas a cada tema (archivos _Partner_).\
-    Si está desactivado, las presentaciones no saldrán aunque existan.
+  <Step title="Enable voice tracks (Partners)">
+    Enable **`Use Partner Files`** to play **voice tracks** associated with each song (Partner files).\
+    If disabled, voice tracks won't play even if they exist.
   </Step>
-  <Step title="Verificar el formato (CHECK)">
-    Pulse **`CHECK`** para validar el formato y detectar **errores** (p. ej., estilos inexistentes en la Base de Datos). Si un estilo fue eliminado, AutoDJ podría **reemplazarlo** con **promos** para cumplir tiempos; conviene corregir el formato.
+  <Step title="Verify the format (CHECK)">
+    Press **`CHECK`** to validate the format and detect **errors** (e.g., styles not in the Database). If a style was deleted, AutoDJ might **replace** it with **promos** to meet timing; it's better to correct the format.
   </Step>
-  <Step title="Guardar el formato">
-    Pulse **`Guardar`** (icono de disco).\
-    El formato quedará disponible en el **menú de formatos**.\
-    Para modificarlo más adelante: selecciónelo, edite y **guarde** nuevamente.
+  <Step title="Save the format">
+    Press **`Save`** (disk icon).\
+    The format will be available in the **formats menu**.\
+    To modify it later: select it, edit and **save** again.
   </Step>
 </Steps>
 
 ---
 
-## Consideraciones importantes
+## Important considerations
 
-- Una **plantilla** determina principalmente los **estilos** que AutoDJ puede usar.
-- Los **estilos** provienen de la **Base de Datos** (no dependen de la estructura de carpetas).
-- Si no se asigna un formato, se usará **`Default`**, que incluye **todos** los estilos disponibles.
-- En instalaciones con varias terminales, cree/edite formatos seleccionando la **Terminal actual** (ver _AUDICOM en red_).
+- A **template** primarily determines which **styles** AutoDJ can use.
+- **Styles** come from the **Database** (not dependent on folder structure).
+- If no format is assigned, **`Default`** will be used, which includes **all** available styles.
+- In multi-terminal installations, create/edit formats by selecting the **Current Terminal** (see _AUDICOM networking_).
 
 <Note>
-  El formato **Default** actúa como respaldo cuando no se asigna un formato específico.
+  The **Default** format acts as a fallback when no specific format is assigned.
 </Note>

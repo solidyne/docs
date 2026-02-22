@@ -1,94 +1,167 @@
 ---
 title: "AutoEdit"
-description: "Remoción automática de silencios"
-keywords: ["grabación", "hdcorder", "ingesta"]
+description: "Automatic silence removal"
+keywords: ["recording", "hdcorder", "ingest"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "6c8466afd1354309f192453f043ff7de6d3af5ccb7dbadfffe27d41f51faff39"
+
 ---
 
-Evitar silencios al inicio y al final de los archivos previene **baches** inesperados al aire. **AutoEdit** elimina estos silencios de forma **automática** y, lo más importante, puede **editar MP3 sin recomprimir**, preservando íntegramente la calidad (recomprimir un MP3 vuelve a codificarlo y degrada el audio).
+Avoiding silences at the beginning and end of files prevents unexpected **dead air** during broadcast. **AutoEdit** removes these silences **automatically** and, most importantly, can **edit MP3s without recompression**, fully preserving quality (recompressing an MP3 re-encodes it and degrades the audio).
 
-**Formatos soportados:** WAV PCM (no comprimido), MP3 (MPEG Layer III), WAV-MP3 (archivos `.wav` que internamente son MP3) y cualquier otro formato cuyo **CODEC** esté instalado en el sistema.
+**Supported formats:** WAV PCM (uncompressed), MP3 (MPEG Layer III), WAV-MP3 (`.wav` files that are internally MP3) and any other format whose **CODEC** is installed on the system.
 
 ---
 
-## Uso de AutoEdit
+## Using AutoEdit
 
-### Carpeta origen
+### Source folder
 
-Indique la carpeta que contiene los archivos a procesar (por omisión, la carpeta **CD Ripper**).\
-Use **Elegir** para abrir la carpeta y seleccione un archivo; su nombre aparecerá en el campo **Archivo** (ver siguiente punto).
+Specify the folder containing the files to process (by default, the **CD Ripper** folder).\
+Use **Choose** to open the folder and select a file; its name will appear in the **File** field (see next point).
 
-### Archivo
+### File
 
-Muestra el **nombre completo** del archivo seleccionado. Puede:
+Shows the **full name** of the selected file. You can:
 
-- **Procesar solo ese archivo**, o
-- Ampliar la selección con **comodines** (`*`) para abarcar múltiples archivos.
+- **Process just that file**, or
+- Expand the selection with **wildcards** (`*`) to include multiple files.
 
-**“Nombre Genérico” (patrón de selección) — Ejemplo paso a paso:**
+**"Generic Name" (selection pattern) — Step by step example:**
 
-1. Seleccione (vía **Elegir Directorio Origen**) el archivo\
+1. Select (via **Choose Source Directory**) the file\
    `"Kraftwerk - Expo 2000 (Radio Mix).mp3"`\
-   → aparece en **Archivo** exactamente ese nombre.
-2. Pulse **Nombre Genérico** → el campo pasa a `Kraftwerk -*.mp3`\
-   → se procesarán **todos los archivos** que comiencen con `Kraftwerk -`.
-3. Pulse **Nombre Genérico** otra vez → `K*.mp3`\
-   → se procesarán **todos** los archivos que comiencen con `K`.
-4. Pulse una vez más → `*.mp3`\
-   → se procesarán **todos** los MP3 de la carpeta.
+   → that exact name appears in **File**.
+2. Press **Generic Name** → field changes to `Kraftwerk -*.mp3`\
+   → **all files** starting with `Kraftwerk -` will be processed.
+3. Press **Generic Name** again → `K*.mp3`\
+   → **all** files starting with `K` will be processed.
+4. Press once more → `*.mp3`\
+   → **all** MP3s in the folder will be processed.
 
 <Note>
-  Para archivos musicales, use siempre el patrón de nombre `Intérprete - Título.mp3`.\
-  Facilita la carga automática en la Base de Datos.
+  For music files, always use the naming pattern `Artist - Title.mp3`.\
+  This facilitates automatic loading into the Database.
 </Note>
 
-### Carpeta destino
+### Destination folder
 
-Según la configuración (ver **Ajustes**), los archivos editados pueden:
+According to settings (see **Settings**), edited files can:
 
-- Permanecer en la **carpeta origen**, o
-- Guardarse en una **carpeta destino** (predeterminada: `AutoEdit`).
+- Remain in the **source folder**, or
+- Be saved to a **destination folder** (default: `AutoEdit`).
 
-### Procesar
+### Process
 
-Inicia la edición. AutoEdit remueve los silencios de **entrada** y **salida** de forma muy rápida.
+Starts editing. AutoEdit removes **input** and **output** silences very quickly.
 
-- AutoEdit trabaja **directamente sobre el audio comprimido**, **sin conversiones** → **sin pérdida** de calidad.
-- Los **umbrales** de detección de silencio son **fijos** (testeados con diverso material musical).
-- Los resultados aparecen en la ventana **Resultados**: tiempo suprimido al inicio/fin, **duración total** y **ubicación** del archivo editado.\
-  Use el botón **Expandir** (doble flecha roja) para ver el reporte en detalle.
+- AutoEdit works **directly on compressed audio**, **without conversions** → **no quality loss**.
+- Silence detection **thresholds** are **fixed** (tested with diverse musical material).
+- Results appear in the **Results** window: time removed at start/end, **total duration** and **location** of edited file.\
+  Use the **Expand** button (red double arrow) to see detailed report.
 
-### Ajustes
+### Settings
 
-Opciones de configuración clave:
+Key configuration options:
 
-- **Utilizar directorio destino = directorio origen**:\
-  Los archivos editados se guardan **en la misma carpeta** de origen.
-- **Borra el archivo original**:\
-  Si se activa, al terminar la edición **se elimina** el original (queda solo el editado).\
-  Si los editados se mantienen en la carpeta origen, los originales se **renombran** con prefijo `BAK` y se mantiene **la extensión** (p. ej., `.mp3`).
-- **Ignora archivos anteriores a N días**:\
-  Permite procesar **solo** los archivos **recientes**. Ingrese el número de días (p. ej., `2` → procesa lo grabado en los **últimos dos días**).
+- **Use destination directory = source directory**:\
+  Edited files are saved **in the same source folder**.
+- **Delete original file**:\
+  If enabled, the original is **deleted** after editing (only edited version remains).\
+  If edited files stay in source folder, originals are **renamed** with `BAK` prefix keeping **the extension** (e.g., `.mp3`).
+- **Ignore files older than N days**:\
+  Allows processing **only** **recent** files. Enter number of days (e.g., `2` → processes files from **last two days**).
 
 ### Play
 
-Reproduce el archivo seleccionado en **Resultados**.\
-Si presiona **Play** mientras ya está en reproducción, se escuchan los **últimos 10 segundos** (útil para verificar el final).\
-No es posible reproducir mientras AutoEdit está **procesando**.
+Plays the file selected in **Results**.\
+If you press **Play** while already playing, the **last 10 seconds** are played (useful for checking the ending).\
+Playback is not possible while AutoEdit is **processing**.
 
 ---
 
-## AutoEdit y Base de Datos
+## AutoEdit and Database
 
-Si procesa archivos **ya registrados** en la Base de Datos (por ejemplo, toda la carpeta `Jazz`), active **“directorio destino = directorio origen”** para que la ruta **no cambie**.
+If processing files **already registered** in the Database (for example, the entire `Jazz` folder), enable **"destination directory = source directory"** so the path **doesn't change**.
 
-Para mayor seguridad, puede **desactivar** “Borra el archivo original”.\
-La Base de Datos se **actualiza automáticamente** con las **nuevas duraciones**; los tiempos **Intro** también se corrigen si corresponde.
+For added safety, you can **disable** "Delete original file".\
+The Database **automatically updates** with the **new durations**; **Intro** times are also corrected if applicable.
 
 <Note>
-  **Redes:** para que la Base de Datos pueda actualizarse, cargue archivos en AutoEdit usando **Entorno de Red** (referencia **UNC**).\
-  Ejemplo **correcto**: `\\Produccion\C\Audicom\Audio\CD-Ripper`\
-  Ejemplo **incorrecto**: `C:\Audicom\Audio\CD-Ripper` (en este caso, la BD **no** se actualizará).
+  **Networks:** for Database updates to work, load files in AutoEdit using **Network Environment** (**UNC** reference).\
+  **Correct** example: `\\Production\C\Audicom\Audio\CD-Ripper`\
+  **Incorrect** example: `C:\Audicom\Audio\CD-Ripper` (in this case, DB will **not** update).
 </Note>
 
 ---
+
+## Batch Processing
+
+AutoEdit can process multiple files simultaneously. The **Results** window shows:
+
+- **File name**
+- **Original duration**
+- **Final duration**
+- **Difference** (in seconds)
+- **Status** (OK/Error)
+
+Files are processed in order. You can **cancel** the process at any time - files already processed will remain modified.
+
+### Results Window
+
+The **Results** window displays:
+
+- **Green**: Successfully processed files
+- **Red**: Files with errors
+- **Yellow**: Files pending processing
+
+Double-click on a file to play it. Right-click for additional options:
+
+- **Play**: Plays selected file
+- **Delete**: Removes file from list
+- **Clear list**: Removes all files
+- **Save log**: Exports results to text file
+
+### Error Messages
+
+Common error messages:
+
+- **"File not found"**: Source file missing/inaccessible
+- **"Access denied"**: File in use/insufficient permissions
+- **"Invalid format"**: Unsupported audio format
+- **"Processing error"**: General processing failure
+
+For network files, ensure proper access permissions and stable connection.
+
+<Note>
+  If many files show errors, check:
+  - Source folder permissions
+  - Network connectivity
+  - Available disk space
+  - Audio file formats
+</Note>
+
+---
+
+## Tips and Best Practices
+
+- **Test first**: Process a few sample files before large batches
+- **Backup**: Keep originals until verifying results
+- **Network**: Use UNC paths for reliable database updates
+- **Space**: Ensure sufficient disk space for temporary files
+- **Monitoring**: Check Results window for processing status
+- **Verification**: Sample-check processed files for quality
+
+<Warning>
+  When processing large batches:
+  - Do not interrupt network connection
+  - Avoid system sleep/hibernation
+  - Keep sufficient free disk space
+  - Monitor Results window for errors
+</Warning>

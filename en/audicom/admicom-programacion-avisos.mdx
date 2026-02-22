@@ -1,212 +1,219 @@
 ---
-title: "Programación de la campaña comercial"
-description: "Cómo registrar clientes, pautar avisos y generar la pauta comercial (.log) en Admicom"
-keywords: ["comerciales", "tanda", "publicidad", "programación"]
+title: "Commercial Campaign Programming"
+description: "How to register clients, schedule ads and generate commercial logs (.log) in Admicom"
+keywords: ["commercials", "breaks", "advertising", "programming"]
 tags: ["Software", "Admicom", "audicom"]
----
-
-Esta sección permite **ingresar Fichas de Cliente**, **definir la programación** de los avisos y **generar los archivos de pauta comercial** (`.log`). Antes de comenzar, asegúrate de tener configurado:
-
-- La **grilla de tandas** en **Configuración Emisora → Tanda comercial**.
-- Las **categorías de cliente** (y sus **prioridades**) en **Configuración Comercial → Categoría de cliente**.
-- Los **rubros comerciales** en **Configuración Comercial → Rubro comercial**.
-- Los **medios de pago** en **Configuración Comercial → Medio de pago**.
-
----
-
-## Ficha del Cliente
-
-Accede a **Programación campaña → Cliente** para registrar un cliente en la base de datos de Admicom.\
-Cada cliente se asocia a una **Categoría**, y **esa categoría define la prioridad de emisión** de todos sus avisos. Esta prioridad se utiliza cuando:
-
-- Varios comerciales del **mismo rubro** compiten por una tanda que **no acepta rubros repetidos**.
-- Dos o más avisos con **misma “posición en tanda”** compiten dentro de una misma tanda.
-
-Completa la ficha y pulsa **Guardar** para confirmar.
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "08b6734f78a7d9417d09e6be5b0ecb94f49b9ac19b79ec9511eb8cd8fa739b74"
 
 ---
 
-## Comercial (pautado de la campaña)
+This section allows you to **create Client Records**, **define ad scheduling** and **generate commercial log files** (`.log`). Before starting, ensure you have configured:
 
-El núcleo de Admicom está en **Programación Campaña → Comercial**. Aquí defines **qué se emite, cuándo y cómo**.
-
-### Datos principales
-
-- **Estación**: emisora para la que se pauta el aviso (abreviado y nombre completo).
-- **Agencia**: agencia de publicidad (opcional).
-- **Cliente**: titular del aviso (debe existir en “Cliente”).
-- **Nombre**: identificador de la campaña (ej.: _Celuphone Día del Padre_).
-- **Rubro**: rubro comercial asociado.
-- **Ejecutivo**: vendedor que negoció la pauta (opcional).
-- **Nº Interno / Nº de Orden de Agencia**: referencias administrativas.
-- **Origen**: etiqueta de agrupación (ej.: _Canje_, _Pauta estatal_, _Bien público_).
-- **Medio de pago**: tomado de la configuración comercial.
-- **Comentarios**: texto libre.
-- **Bruto**: monto **fijo mensual** (si aplica). Se **suma** a lo variable por segundo.
-- **Prop. Agencia**: porcentaje de comisión de la agencia.
-- **Descuentos**: importe de descuentos aplicados.
-
-### Controles de la ventana de pautado
-
-- **Buscar campaña**: lista avisos vigentes; puedes acotar por **Emisora**, **Cliente** o **Archivo**.
-  - **Activo** (predeterminado): muestra avisos **actuales y futuros**.\
-    Si deshabilitas **Activo**, también verás **contratos vencidos** (en rojo).\
-    Tras cambiar esta opción, pulsa **Buscar** nuevamente para refrescar resultados.
-  - Para revisar/modificar un aviso, haz **doble clic** en el resultado.
-- **Nuevo**: limpia campos para ingresar un aviso desde cero.
-- **Modificar**: edita la pauta del aviso actual.
-- **Eliminar**: borra la pauta del aviso actual.
-- **Copiar**: duplica la pauta para **replicarla en otras emisoras** de la cadena.
-- **Anula y reemplaza**: clona la campaña para **modificar sin perder la historia**.\
-  La original queda como `[orden]/0`; el reemplazo pasa a `[orden]/1`, y así sucesivamente.\
-  El efecto práctico es **dividir** la campaña en pasado (hasta hoy, `/0`) y **nuevo esquema** desde mañana (`/1`).
+- The **commercial breaks grid** in **Station Settings → Commercial Breaks**.
+- **Client categories** (and their **priorities**) in **Commercial Settings → Client Category**.
+- **Business categories** in **Commercial Settings → Business Category**.
+- **Payment methods** in **Commercial Settings → Payment Method**.
 
 ---
 
-## Campaña de un aviso
+## Client Record
 
-Puedes combinar dos formas de pautado: **Programación detallada** (por día/hora específicos) y **Programación simple** (reglas generales).\
-Si un aviso está programado **en ambos modos**, **las apariciones se suman**.
+Access **Campaign Programming → Client** to register a client in the Admicom database.\
+Each client is associated with a **Category**, and **that category defines the broadcast priority** for all their ads. This priority is used when:
 
-### Programación detallada
+- Multiple commercials in the **same business category** compete for a break that **does not accept repeated categories**.
+- Two or more ads with the **same "position in break"** compete within the same break.
 
-Permite asignar apariciones **en fechas y franjas horarias específicas** de un mes.
+Complete the form and click **Save** to confirm.
 
-1. **Selecciona el mes** en el almanaque.
-2. Pulsa **Nuevo** para crear una pauta detallada.
-3. Completa los parámetros:
+---
 
-**Parámetros disponibles**
+## Commercial (Campaign Scheduling)
 
-- **Tipo de comercial**:
-  - **Convencional (Audio)**, **PNT** (mención en vivo) o **Auspicio**.
-- **Archivo y Duración**: selecciona el audio; la duración se completa de forma automática.\
-  Tienes controles para **escuchar** el archivo.
-- **Hora inicio / fin**: franja horario para esta pauta detallada.
-- **Valor Seg**: tarifa **por segundo** válida para estas apariciones.
-- **Posición en la tanda**: _Comienzo_, _Segundo aviso_, _Penúltimo_, _Cierre_ o _Indistinto_.\
-  Si hay competencia por la misma posición, se ordena por **prioridad de categoría** del cliente.
-- **Texto PNT**: si es una mención en vivo, aquí va el texto que verá el locutor en WebTools.
+The core of Admicom is in **Campaign Programming → Commercial**. Here you define **what is broadcast, when and how**.
+
+### Main Data
+
+- **Station**: station where the ad will air (abbreviation and full name).
+- **Agency**: advertising agency (optional).
+- **Client**: ad owner (must exist in "Client").
+- **Name**: campaign identifier (e.g., _Celuphone Father's Day_).
+- **Category**: associated business category.
+- **Executive**: salesperson who negotiated the schedule (optional).
+- **Internal No. / Agency Order No.**: administrative references.
+- **Origin**: grouping label (e.g., _Barter_, _Government Ad_, _Public Service_).
+- **Payment Method**: taken from commercial settings.
+- **Comments**: free text.
+- **Gross**: **fixed monthly** amount (if applicable). **Adds** to variable per-second rate.
+- **Agency Comm.**: agency commission percentage.
+- **Discounts**: amount of applied discounts.
+
+### Scheduling Window Controls
+
+- **Search Campaign**: lists active ads; can filter by **Station**, **Client** or **File**.
+  - **Active** (default): shows **current and future** ads.\
+    If you disable **Active**, you'll also see **expired contracts** (in red).\
+    After changing this option, click **Search** again to refresh results.
+  - To review/modify an ad, **double click** the result.
+- **New**: clears fields to enter a new ad from scratch.
+- **Modify**: edits current ad schedule.
+- **Delete**: removes current ad schedule.
+- **Copy**: duplicates schedule to **replicate across other stations** in the network.
+- **Cancel and Replace**: clones campaign to **modify without losing history**.\
+  Original becomes `[order]/0`; replacement becomes `[order]/1`, and so on.\
+  Effectively **splits** campaign into past (until today, `/0`) and **new scheme** from tomorrow (`/1`).
+
+---
+
+## Ad Campaign
+
+You can combine two scheduling methods: **Detailed Programming** (specific day/time) and **Simple Programming** (general rules).\
+If an ad is scheduled **in both modes**, **the spots are added together**.
+
+### Detailed Programming
+
+Allows assigning spots **on specific dates and time slots** within a month.
+
+1. **Select the month** in the calendar.
+2. Click **New** to create a detailed schedule.
+3. Complete the parameters:
+
+**Available Parameters**
+
+- **Commercial Type**:
+  - **Conventional (Audio)**, **Live Read** or **Sponsorship**.
+- **File and Duration**: select audio; duration is automatically filled.\
+  Controls available to **preview** the file.
+- **Start / End Time**: time range for this detailed schedule.
+- **Rate/Sec**: **per-second** rate valid for these spots.
+- **Position in Break**: _Start_, _Second Spot_, _Next-to-Last_, _Close_ or _Any_.\
+  If there's competition for same position, order is by client's **category priority**.
+- **Live Read Text**: for live mentions, this is the text shown to the announcer in WebTools.
 
 <Note>
-  **Auspicios**: para que se emitan deben estar **en hora exacta** y **debe existir una tanda** en ese horario. Los auspicios **no** aparecen en la pauta comercial; se reportan mediante **informes de auspicios**.
+  **Sponsorships**: to air they must be **at exact times** and **a break must exist** at that time. Sponsorships do **not** appear in commercial logs; they are reported through **sponsorship reports**.
 </Note>
 
-En la grilla del mes, cada celda representa un **día** dentro del **rango horario** elegidos: **ingresa la cantidad de apariciones** por celda.\
-Esta modalidad facilita ajustes por **picos de audiencia** o **objetivos diarios**.
+In the month grid, each cell represents a **day** within the chosen **time range**: **enter the number of spots** per cell.\
+This mode facilitates adjustments for **peak audiences** or **daily targets**.
 
 ---
 
-### Programación simple
+### Simple Programming
 
-Define reglas generales de aparición (por **vigencia**, **días**, **rango horario**, **programas** o **hora exacta**).
+Defines general airing rules (by **validity**, **days**, **time range**, **programs** or **exact time**).
 
-**Campos comunes**
+**Common Fields**
 
-- **Tipo de comercial**: Convencional, PNT o Auspicio.
-- **Archivo y Duración**: la duración se completa automáticamente al cargar el audio.
-- **Posición en la tanda**: _Comienzo_, _Segundo aviso_, _Penúltimo_, _Cierre_, _Indistinto_.\
-  En empates, se prioriza por **categoría** del cliente.
-- **Locutor**: identifica **voz masculina** o **femenina** (útil para PNT).
-- **Fecha Ini. / Fecha Fin**: vigencia de la pauta.\
-  Deja **Fecha Fin vacía** para continuidad **indefinida**.
-- **Valor Seg**: importe por segundo a facturar por cada emisión.
-- **Texto PNT**: el texto que verá el locutor en WebTools.
-- **Días de la semana**: selecciona en cuáles días se emite.
+- **Commercial Type**: Conventional, Live Read or Sponsorship.
+- **File and Duration**: duration auto-fills when loading audio.
+- **Position in Break**: _Start_, _Second Spot_, _Next-to-Last_, _Close_, _Any_.\
+  Ties are resolved by client's **category** priority.
+- **Announcer**: identifies **male** or **female** voice (useful for Live Reads).
+- **Start Date / End Date**: schedule validity.\
+  Leave **End Date empty** for **indefinite** continuity.
+- **Rate/Sec**: amount to bill per second for each airing.
+- **Live Read Text**: text shown to announcer in WebTools.
+- **Days of Week**: select which days it airs.
 
-**Modalidades de pauta**
+**Scheduling Modes**
 
-- **Por RANGO HORARIO**\
-  Define un intervalo (ej. 10:00–22:00) y la **cantidad de inclusiones** en ese rango (ej. 4).\
-  Si la cantidad **coincide** con la **cantidad de tandas** que existen en ese rango, la distribución típica será **una inclusión por tanda**.
+- **By TIME RANGE**\
+  Define an interval (e.g., 10:00-22:00) and **number of insertions** in that range (e.g., 4).\
+  If the number **matches** the **number of breaks** in that range, typical distribution will be **one spot per break**.
 
   <Note>
-    Puedes **contar las tandas** de un día consultando los archivos **LOG** en **CyberPlay Editor** (las tandas quedan numeradas en la generación).
+    You can **count breaks** in a day by checking **LOG** files in **CyberPlay Editor** (breaks are numbered during generation).
   </Note>
-- **Por PROGRAMA**\
-  Asocia el aviso a **programas/segmentos** definidos en **Configuración Emisora → Tanda comercial**.\
-  La ventaja es operativa: **si el programa cambia de día u horario**, el aviso se **reubica automáticamente** sin editar cada pauta.
-- **Por HORA EXACTA**\
-  Se **especifican las horas** en las cuales deberá programarse el aviso.\
-  **Obviamente, debe existir una tanda** definida para esa hora.\
-  **Si no hay tanda** para esa hora, el aviso será programado en **la tanda más cercana**.\
-  Para **ingresar un horario**, escríbelo en el campo y pulsa **“Agregar horario”** para añadirlo a la lista.\
-  **“Borrar horario”** elimina el horario seleccionado en la lista.
+- **By PROGRAM**\
+  Associates ad with **programs/segments** defined in **Station Settings → Commercial Breaks**.\
+  Operational advantage: **if program changes day or time**, ads **automatically relocate** without editing each schedule.
+- **By EXACT TIME**\
+  **Specific times** when the ad should be scheduled are specified.\
+  **Obviously, a break must exist** for that time.\
+  **If no break exists**, the ad will be scheduled in **the closest break**.\
+  To **enter a time**, type it in the field and click **"Add Time"** to include it in the list.\
+  **"Delete Time"** removes the selected time from the list.
 
 ---
 
-## Buenas prácticas y recordatorios
+## Best Practices and Reminders
 
-- Combina **Programación simple** (reglas globales) con **Detallada** (fino por día/hora) para afinar **cobertura** y **frecuencia**.
-- Respeta los **límites de minutos por hora** (definidos por normativa o por “Tiempo máximo de tanda” en la estación).\
-  Admicom **no excederá** ese límite; en caso de saturación, rechazará avisos según **prioridad**.
-- Usa **“Anula y reemplaza”** para **versionar campañas** sin perder registros; evita editar directamente campañas históricas.
+- Combine **Simple Programming** (global rules) with **Detailed** (fine day/time control) to tune **coverage** and **frequency**.
+- Respect **minutes per hour limits** (defined by regulations or "Maximum Break Time" in station).\
+  Admicom **won't exceed** this limit; if saturated, it will reject ads by **priority**.
+- Use **"Cancel and Replace"** to **version campaigns** without losing records; avoid directly editing historical campaigns.
 
 ---
 
-## Funciones especiales para programación de avisos
+## Special Ad Programming Functions
 
-### Avisos alternados
-Es posible ingresar manualmente en el campo archivo dos o más avisos distintos, separados por un caracter **pipe** (`|`). De esta forma, se programarán ambos avisos en forma alternada. El límite de avisos está dado por la longitud del campo título. Los nombres de los archivos deberán tipearse manualmente, sin extensión.
+### Alternating Ads
+You can manually enter two or more different ads in the file field, separated by a **pipe** character (`|`). This will schedule both ads in alternating fashion. The limit of ads depends on the title field length. File names must be typed manually, without extension.
 
-**Ejemplo:**  
+**Example:**  
 `YPF-1|YPF-2`  
-En este caso se programarán alternadamente los avisos `YPF-1` e `YPF-2`.
+This will alternate between ads `YPF-1` and `YPF-2`.
 
 ---
 
-### Avisos concatenados
-Es posible relacionar hasta dos avisos para que sean pautados uno a continuación del otro. Los nombres de los avisos se escriben seguidos y separados por el signo `>` (mayor). Tampoco es necesario escribir la extensión del archivo.
+### Concatenated Ads
+You can link up to two ads to be scheduled one after another. Ad names are written consecutively separated by the `>` (greater than) sign. File extension is not needed.
 
-**Ejemplo:**  
-`aviso1>aviso2`  
+**Example:**  
+`ad1>ad2`  
 
-Esto generará la siguiente secuencia en la tanda:  
-- `AVISO1`  
-- `AVISO2`  
+This will generate the following sequence in the break:  
+- `AD1`  
+- `AD2`  
 
-Los nombres de archivo también pueden combinarse con instrucciones AUDICOM. Esto resulta útil para anuncios de hora, temperatura, etc.
+File names can also be combined with AUDICOM commands. This is useful for time, temperature announcements, etc.
 
-**Ejemplo:**  
-`AUSPICIO_TIEMPO>/TEMP`  
+**Example:**  
+`WEATHER_SPONSOR>/TEMP`  
 
-Generará en la pauta:  
-- `AUSPICIO_TIEMPO`  
+Will generate in the log:  
+- `WEATHER_SPONSOR`  
 - `/TEMP`
 
 ---
 
-### Instrucciones AUDICOM
-Algunas instrucciones de AUDICOM pueden programarse como si fueran avisos comerciales. Para ello se ingresan manualmente en lugar del nombre de archivo. Se recomienda crear una categoría dedicada a estas instrucciones.
+### AUDICOM Commands
+Some AUDICOM commands can be scheduled as commercial ads. They are entered manually instead of a filename. It's recommended to create a dedicated category for these commands.
 
-- **Meteor:** Instrucciones como `/Time`, `/Temp`, `/Hum`, `/Pres`, `/Meteor` programan los anuncios meteorológicos con las voces pregrabadas.  
-  Se crea una campaña especial con el cliente `AUDICOM` y se pautan las instrucciones por hora de salida.  
+- **Meteor:** Commands like `/Time`, `/Temp`, `/Hum`, `/Pres`, `/Meteor` schedule weather announcements with pre-recorded voices.  
+  Create a special campaign with client `AUDICOM` and schedule commands by air time.  
 
-- **Random:** La instrucción `/RND,<Carpeta>,<Cantidad>` reproduce un archivo aleatorio de la carpeta indicada.  
-  Ejemplo: `/RND,Seguridad Vial,1`  
-  Cada vez que sea pautada, saldrá al aire un archivo elegido aleatoriamente de la carpeta `Seguridad Vial`.  
+- **Random:** The command `/RND,<Folder>,<Quantity>` plays a random file from the specified folder.  
+  Example: `/RND,Road Safety,1`  
+  Each time it's scheduled, it will air a randomly selected file from the `Road Safety` folder.  
 
-- **Pausas:** La instrucción `/Pause` inserta una pausa en la tanda comercial, deteniendo temporalmente la reproducción en el programa de Aire.
-
----
-
-## Generar Tanda
-(Programación Campaña -> Generar Tanda) Desde aquí se generan los archivos de programación comercial que utiliza la terminal de Aire AUDICOM para construir la grilla integrada en CyberPlay (tandas + música + eventos en vivo).
-
-**Pasos:**
-1. Definir en `Fecha Inicio` y `Fecha Fin` el rango de días para generar la pauta comercial. Por defecto solo se crea la pauta del día actual, pero puede generarse una semana completa.  
-2. Elegir en la lista las emisoras para las cuales se generará la pauta.  
-3. Pulsar **Generar**. Admicom producirá los archivos de pautado comercial (`.log`) para los días seleccionados.
-
-Las tandas generadas pueden visualizarse en el módulo **CyberPlay Editor**, donde se muestra la grilla integrada (tandas, música, eventos). Además, el módulo **Aaudit** permite obtener reportes de lo efectivamente emitido al aire.
+- **Pauses:** The `/Pause` command inserts a pause in the commercial break, temporarily stopping playback in the On-Air program.
 
 ---
 
-### Avisos rechazados
-Al finalizar la generación de tandas se muestra un informe con los avisos rechazados, indicando el cliente y la tanda/segmento correspondiente. Las causas pueden ser:
+## Generate Break
+(Campaign Programming -> Generate Break) Here you generate the commercial programming files used by the AUDICOM On-Air terminal to build the integrated grid in CyberPlay (breaks + music + live events).
 
-- **SEG:** Tiempo excedido. Se alcanzó el máximo de publicidad permitido por hora (definido en `Configuración Emisora -> Estación`). Todas las tandas de esa hora rechazarán nuevos avisos.  
-- **CAT:** Conflicto de categoría. Dos avisos del mismo rubro intentan entrar en una tanda que no permite repetición. Solo se emitirá el de mayor prioridad.  
-- **POS:** Conflicto de posiciones. Dos avisos con igual prioridad y misma ubicación compiten en una tanda. Revisar la prioridad de categorías o cambiar la posición en tanda.  
-- **REP:** Aviso repetido. Se intentó programar el mismo aviso dos veces en la misma tanda, lo cual no está permitido.
+**Steps:**
+1. Define in `Start Date` and `End Date` the range of days to generate commercial logs. By default only current day's log is created, but a full week can be generated.  
+2. Select from the list the stations for which logs will be generated.  
+3. Click **Generate**. Admicom will produce commercial log files (`.log`) for selected days.
 
+Generated breaks can be viewed in the **CyberPlay Editor** module, which shows the integrated grid (breaks, music, events). Additionally, the **Aaudit** module provides reports of what actually aired.
+
+---
+
+### Rejected Ads
+After break generation completes, a report shows rejected ads, indicating client and corresponding break/segment. Causes may be:
+
+- **SEC:** Time exceeded. Maximum allowed advertising per hour reached (defined in `Station Settings -> Station`). All breaks in that hour will reject new ads.  
+- **CAT:** Category conflict. Two ads in same category trying to enter a break that doesn't allow repetition. Only highest priority will air.  
+- **POS:** Position conflict. Two ads with same priority and position compete in a break. Review category priorities or change break position.  
+- **REP:** Repeated ad. Same ad attempted to schedule twice in same break, which is not allowed.

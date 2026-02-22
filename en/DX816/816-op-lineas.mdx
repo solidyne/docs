@@ -1,49 +1,56 @@
 ---
-title: "Canales de línea"
-description: "Operación de canales de línea"
-keywords: ["operación", "ganancia"]
-tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+title: "Line Channels"
+description: "Line channels operation"
+keywords: ["operation", "gain"]
+tags: ["studio consoles", "Classic line", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "332e5b0851825101e51cf75ae0491656ec4fba0654d216103ac561641584615a"
 
 ---
 
-### Descripción
+### Description
 
-La línea \*\*DX \*\*cuenta con **cuatro canales de línea estéreo**. Cada canal posee doble entrada, conmutables desde el panel frontal [2].
+The **DX** line features **four stereo line channels**. Each channel has dual inputs, switchable from the front panel [2].
 
-- **Canales LIN-1 y LIN-2**:
-  - Entrada estéreo balanceada (conector **RJ45**).
-  - Entrada estéreo no balanceada (conector **RCA**).
-- **Canales USB-1 y USB-2**:
-  - Conexión directa a computadora (equivalen a dos interfaces externas).
-  - Proveen envío de las señales **PGM** y **REC** hacia la computadora.
+- **Channels LIN-1 and LIN-2**:
+  - Balanced stereo input (**RJ45** connector).
+  - Unbalanced stereo input (**RCA** connector).
+- **Channels USB-1 and USB-2**:
+  - Direct computer connection (equivalent to two external interfaces).
+  - Provide **PGM** and **REC** signal routing to the computer.
 
 <img
   src="/images/816/816-panel-linea.png"
-  alt="816 Panel Linea Pn"
-  title="816 Panel Linea Pn"
+  alt="816 Line Panel Pn"
+  title="816 Line Panel Pn"
   className="mx-auto"
   style={{ width:"37%" }}
 />
 
-1. **Control de ganancia.** Ajusta la ganancia de la entrada. En los canales LIN-1 y LIN-2 el ajuste de ganancia es único para las entradas A/B. En los canales USB la ganancia solo afecta a la entrada analógica. \
-   Debe ajustarse para que la señal se mantenga alrededor de **0 VU** con el fader operando en la **zona –10 a –20 dB**.
+1. **Gain control.** Adjusts the input gain. For LIN-1 and LIN-2 channels, gain adjustment affects both A/B inputs. On USB channels, gain only affects the analog input. \
+   It should be adjusted to maintain the signal around **0 VU** with the fader operating in the **-10 to -20 dB zone**.
 
 <Note>
-  El nivel digital en el canal USB se ajusta desde Windows<sup>©</sup>.
+  Digital level on USB channel is adjusted from Windows<sup>©</sup>.
 </Note>
 
-2. **Conmutación A/B.** Conmuta entre la entrada principal y la entrada auxiliar.
-3. **BUS.** Asignacion a los buses de mezcla PGM (transmisión) y REC.
-4. **CUE.** Activa la escucha pre-fader.
-5. **Zona de trabajo.**  Esta zona indica la posición correcta de trabajo, para un nivel de señal nominal y ajuste correcto de la ganancia de entrada. \
-   La ganancia debe ajustarse para que el atenuador trabaje por encima de  -30 dB. La  indicación  **OVL (7)**  indica sobrecarga (overload), es decir, excesiva ganancia en la entrada.
-6. **Atenuador principal (fader):** Ajusta el nivel de la señal en la mezcla.
+2. **A/B switching.** Toggles between main and auxiliary input.
+3. **BUS.** Assignment to PGM (transmission) and REC mixing buses.
+4. **CUE.** Activates pre-fader listening.
+5. **Working zone.** This area indicates the correct working position for nominal signal level and proper input gain adjustment. \
+   Gain should be adjusted so the attenuator works above -30 dB. The **OVL (7)** indication shows overload, meaning excessive input gain.
+6. **Main attenuator (fader):** Adjusts the signal level in the mix.
 
-### Puesta al aire
+### On-air Operation
 
-Para enviar la señal al aire:
+To send the signal on-air:
 
-1. Asignar el canal a **PGM**.
-2. Levantar el atenuador.
+1. Assign the channel to **PGM**.
+2. Raise the attenuator.
 
-   El nivel correcto se logra cuando los picos alcanzan **0 VU**.
+   The correct level is achieved when peaks reach **0 VU**.

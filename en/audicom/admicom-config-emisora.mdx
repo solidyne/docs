@@ -1,83 +1,91 @@
 ---
-title: "Admicom: configurar emisora"
-description: "Configuración de la emisora y distribución de los bloques comerciles"
-keywords: ["comerciales", "tanda", "publicidad", "programación"]
+title: "Admicom: Station Setup"
+description: "Station configuration and commercial block distribution"
+keywords: ["commercials", "breaks", "advertising", "programming"]
 tags: ["Software", "Admicom", "audicom"]
----
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a3f964617e15290c49ebbb2145aa21a789158e91cd7175eca9ba7ed427f50599"
 
 ---
 
-Admicom permite gestionar la pauta comercial de una o varias emisoras en la versión **AUDICOM Multicast**.\
-Cada emisora cuenta con una configuración general que define los **minutos máximos de publicidad por hora** y la **grilla de distribución de bloques comerciales**.
+---
 
-Al abrir la aplicación, se muestra el escritorio de Admicom vacío. Desde los menús se accede a las diferentes opciones de configuración.
+Admicom allows managing commercial scheduling for one or multiple stations in the **AUDICOM Multicast** version.\
+Each station has a general configuration that defines the **maximum advertising minutes per hour** and the **commercial break distribution grid**.
 
-## Estación
+When opening the application, an empty Admicom desktop is displayed. Different configuration options are accessed through the menus.
 
-En esta sección se ingresan y modifican los datos de cada emisora. De forma predeterminada, aparece una única estación llamada **DEMO**.
+## Station
+
+This section is used to enter and modify data for each station. By default, a single station called **DEMO** appears.
 
 <AccordionGroup>
-  <Accordion title="Datos principales">
-    - **Código**: Identificación o abreviación de hasta 10 caracteres (ejemplo: `AM1030`).
-    - **Nombre**: Nombre de la emisora (ejemplo: _Radio América_).
-    - **Tiempo máximo de tanda**: Límite de minutos de publicidad por hora. Nunca se supera este valor; los avisos excedentes son rechazados según prioridad.
-    - **Path de salida**: Carpeta donde se generan los archivos `.log` de la pauta comercial.
-    - **Path de audio**: Carpeta donde se almacenan los audios de anuncios.
-    - **Imagen**: Logotipo o símbolo que se muestra en los reportes.
+  <Accordion title="Main Data">
+    - **Code**: Identification or abbreviation up to 10 characters (example: `AM1030`).
+    - **Name**: Station name (example: _Radio America_).
+    - **Maximum break duration**: Limit of advertising minutes per hour. This value is never exceeded; excess spots are rejected based on priority.
+    - **Output path**: Folder where commercial schedule `.log` files are generated.
+    - **Audio path**: Folder where advertising audio files are stored.
+    - **Image**: Logo or symbol displayed in reports.
   </Accordion>
-  <Accordion title="Controles">
-    - **Buscar**: Localiza una emisora existente.
-    - **Modificar**: Cambia los datos de la emisora actual.
-    - **Nuevo**: Crea una nueva emisora.
-    - **Eliminar**: Borra la emisora seleccionada.
+  <Accordion title="Controls">
+    - **Search**: Locates an existing station.
+    - **Modify**: Changes current station data.
+    - **New**: Creates a new station.
+    - **Delete**: Removes selected station.
   </Accordion>
 </AccordionGroup>
 
 <Note>
-  Para eliminar una emisora es necesario borrar primero todos los avisos y tandas asociados.\
-  Un método rápido es vaciar un día y luego usar **Copiar día** para replicar la configuración vacía al resto de la semana.
+  To delete a station, all associated spots and breaks must be deleted first.\
+  A quick method is to clear one day and then use **Copy day** to replicate the empty configuration to the rest of the week.
 </Note>
 
-## Tanda comercial
+## Commercial Break
 
-Permite definir la **distribución de tandas comerciales** para cada emisora y cada día de la semana.
+Allows defining the **commercial break distribution** for each station and each day of the week.
 
-- **Estación**: Selecciona la emisora.
-- **Día de la semana**: Define el día a modificar.
-- **Copiar Est.**: Copia la grilla desde otra emisora.
-- **Copiar día**: Duplica la distribución de un día hacia otros de la semana.
+- **Station**: Selects the station.
+- **Day of week**: Defines the day to modify.
+- **Copy Station**: Copies the grid from another station.
+- **Copy day**: Duplicates distribution from one day to others in the week.
 
-### Definición de tandas
+### Break Definition
 
-- Crear una tanda: **Nuevo**.
-- Editar tanda existente: **Editar** o **Modificar**.
-- **Ref. hora**: Puede definirse como inicio o fin del bloque comercial.
-- **Tolerancia**: Minutos en los que el bloque puede adelantarse o retrasarse en relación al horario pautado.
-- **Permitir mezclar rubros**: Autoriza que avisos de un mismo rubro compartan tanda; de lo contrario, son reubicados.
+- Create a break: **New**.
+- Edit existing break: **Edit** or **Modify**.
+- **Time ref.**: Can be defined as start or end of commercial block.
+- **Tolerance**: Minutes that the block can be advanced or delayed relative to scheduled time.
+- **Allow mixing categories**: Authorizes spots of the same category to share a break; otherwise, they are relocated.
 
-## Programas
+## Programs
 
-Aquí se definen los horarios de los programas de la emisora seleccionada.
+Here the schedules for the selected station's programs are defined.
 
-- **Programa**: Código y nombre (debe estar creado previamente en _Configuración -\> Programa_).
-- **Hora Comienzo / Hora Fin**: Rango horario del programa.
-- Los avisos pautados se insertan automáticamente en este bloque.
+- **Program**: Code and name (must be previously created in _Configuration -> Program_).
+- **Start Time / End Time**: Program time range.
+- Scheduled spots are automatically inserted in this block.
 
-## Locutores
+## Announcers
 
-Permite registrar los nombres de locutores en la base de datos, lo que agiliza la carga en las fichas de avisos comerciales.
+Allows registering announcer names in the database, which streamlines loading in commercial spot forms.
 
-- **Código**: Abreviación de hasta 10 caracteres.
-- **Nombre**: Nombre completo del locutor.
+- **Code**: Abbreviation up to 10 characters.
+- **Name**: Announcer's full name.
 
-## Programas (definición general)
+## Programs (General Definition)
 
-Aquí se registran los programas o segmentos en la base de datos de Admicom, independientemente del horario o la emisora.
+Here programs or segments are registered in the Admicom database, independent of schedule or station.
 
-- **Código**: Identificación abreviada (máx. 10 caracteres).
-- **Nombre**: Nombre completo del programa.
+- **Code**: Short identification (max. 10 characters).
+- **Name**: Complete program name.
 
 <Note>
-  Los horarios de inicio y fin se configuran desde **Configuración -\> Tanda comercial**.\
-  Si un programa cambia de día u horario, los avisos asociados se reprograman automáticamente.
+  Start and end times are configured from **Configuration -> Commercial break**.\
+  If a program changes day or time, associated spots are automatically rescheduled.
 </Note>

@@ -1,71 +1,79 @@
 ---
-title: "Software VoIP"
-description: "Uso de software de comunicaciones en la computadora"
+title: "VoIP Software"
+description: "Using communication software on the computer"
 keywords: ["VoIP", "USB"]
-tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+tags: ["studio consoles", "Classic line", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ee5578d8de17981ca4e8e4afe170959213eb4bd488d74bcd6e66822567113819"
+
 ---
 
-## Conexión a la PC
+## PC Connection
 
-La serie DX esta preparada para trabajar con cualquier software de comunicación corriendo en la computadora. Desde aplicaciones de videollamadas, como Zoom o Google Meets, hasta software de recepción de líneas SIP, como Linphone.
+The DX series is designed to work with any communication software running on the computer, from video calling applications like Zoom or Google Meets, to SIP line reception software like Linphone.
 
-El canal de telecomunicaciones permite enviar, vía USB-2, un **retorno diferenciado** (mix-minus) a la computadora, en el que no se suma el audio de la propia computadora (reproducción por USB-2), evitando acoples.
+The telecommunications channel allows sending a **differentiated return** (mix-minus) to the computer via USB-2, where the computer's own audio (USB-2 playback) is not mixed in, avoiding feedback loops.
 
-La computadora se pude sumar en conferencia a las líneas manejadas por el canal de Telecomunicaciones.
+The computer can be added in conference with the lines managed by the Telecommunications channel.
 
 <Note>
-  Todo software de comunicación suele tener mecanismos de cancelación internos, pero estos sistemas con frecuencia se desacoplan generando ecos y artificios en el audio. Es necesario disponer de un envío mix-minus para obtener comunicaicones confiables.
+  All communication software usually has internal cancellation mechanisms, but these systems frequently decouple causing echoes and audio artifacts. A mix-minus send is necessary to achieve reliable communications.
 </Note>
 
 <Danger>
-  ****USB-2 no es operativo si USB-1 no está conectado a un puerto activo.****\
-  Si USB-1 y USB-2 van a **dos PCs distintas**, USB-2 **no** funciona si la PC de **USB-1** está **apagada**.\
-  (Usualmente USB-1 es la PC de Aire 24/7).
+  ****USB-2 is not operational if USB-1 is not connected to an active port.****\
+  If USB-1 and USB-2 go to **two different PCs**, USB-2 will **not** work if the **USB-1** PC is **turned off**.\
+  (Usually USB-1 is the 24/7 On-Air PC).
 </Danger>
 
-## Configuración básica
+## Basic Setup
 
 <Steps>
-  <Step title="Micrófonos">
-    Asignar los canales de micrófono a **PGM** y **REC**.
+  <Step title="Microphones">
+    Assign microphone channels to **PGM** and **REC**.
   </Step>
-  <Step title="Canal USB-2">
-    Asignar a **PGM** y **quitar de REC**.
+  <Step title="USB-2 Channel">
+    Assign to **PGM** and **remove from REC**.
   </Step>
-  <Step title="Canal Telco">
-    Asignar selección PGM-REC a **PGM**
+  <Step title="Telco Channel">
+    Set PGM-REC selection to **PGM**
   </Step>
-  <Step title="Computadora">
-    Configurar la aplicación con dispositivo de audio **USB-2** como entrada/salida (micrófono y reproducción).
+  <Step title="Computer">
+    Configure the application with **USB-2** audio device as input/output (microphone and playback).
   </Step>
-  <Step title="AIRE">
-    El audio de la aplicación ingresa a la consola por el Canal USB-2 y sale al aire con retorno de los micrófonos (vía REC).
+  <Step title="ON AIR">
+    The application audio enters the console through the USB-2 Channel and goes on air with microphone return (via REC).
 
     <Note>
-      La aplicación puede estar cursardo una comunicación única o un chat con múltimples participantes. Esto no afecta a la operación en la consola.
+      The application may be handling a single communication or a multi-participant chat. This does not affect console operation.
     </Note>
   </Step>
 </Steps>
 
-## Conferencia con líneas y celular (Vox-IP)
+## Conference with Phone Lines and Mobile (Vox-IP)
 
 <Steps>
-  <Step title="Micrófonos">
-    Asignar los canales de micrófono a **PGM** y **REC**.
+  <Step title="Microphones">
+    Assign microphone channels to **PGM** and **REC**.
   </Step>
-  <Step title="Canal USB-2">
-    Asignar a **PGM** y **quitar de REC**.
+  <Step title="USB-2 Channel">
+    Assign to **PGM** and **remove from REC**.
   </Step>
-  <Step title="Canal Telco">
-    Asignar selección PGM-REC a **PGM.**\
-    **Activar el botón VOX-IP.** El retorno de líneas/celular se envía a PGM-2 por **REC** (lo verás en VU de **REC**).
+  <Step title="Telco Channel">
+    Set PGM-REC selection to **PGM.**\
+    **Activate the VOX-IP button.** The phone lines/mobile return is sent to PGM-2 via **REC** (you'll see it on the **REC** VU).
   </Step>
-  <Step title="Conferencia">
-    Subir el fader de Telco para sumar teléfonos al aire; todos quedan **interconectados**.
+  <Step title="Conference">
+    Raise the Telco fader to add phones on air; all become **interconnected**.
   </Step>
 </Steps>
 
 <Danger>
-  En el **retorno hacia la computadora (REC)** no asignar **cortinas musicales**; solo los **MICs**.\
-  Los sistemas de prioridad/AGC de las aplicaciones para comunicaciones pueden **atenuar** la voz remota si hay audio local (música de fondo).
+  In the **return to the computer (REC)** do not assign **music beds**; only **MICs**.\
+  The priority/AGC systems of communication applications may **attenuate** the remote voice if there is local audio (background music).
 </Danger>

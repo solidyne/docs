@@ -9,6 +9,9 @@ const __dirname = path.dirname(__filename);
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const MODEL = "anthropic/claude-3.5-sonnet";
+const MAX_TOKENS = 8000;        // output budget per call
+const MAX_PARTS = 3;            // 1 initial + up to 2 continuations
+const CONTEXT_CHARS = 1200;     // tail context to avoid repeats
 
 if (!OPENROUTER_API_KEY) {
   console.error("❌ Missing OPENROUTER_API_KEY");
@@ -20,7 +23,7 @@ if (!OPENROUTER_API_KEY) {
 // ==========================
 
 const args = process.argv.slice(2);
-const folderArg = args.find(a => !a.startsWith("--"));
+const folderArg = args.find((a) => !a.startsWith("--"));
 
 const DRY_RUN = args.includes("--dry-run");
 const FORCE = args.includes("--force");
@@ -29,7 +32,9 @@ const ONLY_CHANGED = args.includes("--only-changed");
 
 if (!folderArg) {
   console.log("Usage:");
-  console.log("node translate-folder.mjs DOCS/es/unidex [--dry-run] [--force] [--only-new] [--only-changed]");
+  console.log(
+    "node translate-folder.mjs DOCS/es/unidex [--dry-run] [--force] [--only-new] [--only-changed]"
+  );
   process.exit(1);
 }
 
@@ -75,95 +80,196 @@ function extractSourceHash(enContent) {
   return match ? match[1] : null;
 }
 
+/**
+ * Detects explicit truncation markers (high precision, low false positives).
+ */
 function looksTruncated(text) {
   const t = (text || "").trim();
   if (!t) return true;
+
+  // Known truncation marker observed
   if (t.includes("[Continued in next part")) return true;
-  // otros marcadores típicos
-  if (/continued/i.test(t) && /next part|part\s+\d+/i.test(t)) return true;
+
+  // Generic bracketed placeholders that must never appear in final MDX
+  // We anchor to bracketed lines to avoid false positives in normal prose.
+  const placeholderLineRegexes = [
+    /^\[\s*content continues\b.*\]$/im,
+    /^\[\s*translation continues\b.*\]$/im,
+    /^\[\s*continued\b.*\]$/im,
+    /^\[\s*to be continued\b.*\]$/im,
+    /^\[\s*remaining sections\b.*\]$/im,
+    /^\[\s*content continues\b.*following\b.*rules\b.*\]$/im,
+    /^\[\s*content continues\b.*careful\b.*translation\b.*\]$/im,
+    /^\[\s*content continues\b.*same\b.*careful\b.*translation\b.*\]$/im,
+    /^\[\s*content continues\b.*following\b.*all\b.*rules\b.*\]$/im,
+  ];
+
+  if (placeholderLineRegexes.some((re) => re.test(t))) return true;
+
   return false;
 }
 
+/**
+ * Heuristic to catch "silent" cutoff cases (no marker).
+ * Conservative: triggers only on likely-abrupt endings.
+ */
+function endsAbruptly(text) {
+  const t = (text || "").trimEnd();
+  if (!t) return true;
+
+  const lastLine = t.split("\n").pop() ?? "";
+
+  // If last line ends with an escape, comma, colon, open bracket/paren/brace, or arrow bullet starter
+  if (/[\\,:;\-–—]$/.test(lastLine.trim())) return true;
+  if (/[({[\u003c]$/.test(lastLine.trim())) return true; // includes "<" (start of a tag) as a weak signal
+
+  // Very common in truncated Markdown: unfinished emphasis/code fence or dangling backtick
+  if ((lastLine.match(/`/g) || []).length % 2 === 1) return true;
+
+  // If it ends with an unclosed MDX tag start on the last line (e.g., "<Info")
+  if (/<[A-Za-z][A-Za-z0-9-]*\s*$/.test(lastLine)) return true;
+
+  return false;
+}
+
+function stripTruncationMarkers(text) {
+  let t = (text || "");
+
+  // Remove known marker
+  t = t.replace(/\n?\[Continued in next part due to length\.\.\.\]\s*$/i, "");
+  t = t.replace(/\n?\[Continued in next part.*?\]\s*$/i, "");
+
+  // Remove common bracketed placeholder lines (end-of-output)
+  t = t.replace(/\n?\[\s*content continues[^\]]*\]\s*$/i, "");
+  t = t.replace(/\n?\[\s*translation continues[^\]]*\]\s*$/i, "");
+  t = t.replace(/\n?\[\s*remaining sections[^\]]*\]\s*$/i, "");
+  t = t.replace(/\n?\[\s*to be continued[^\]]*\]\s*$/i, "");
+  t = t.replace(/\n?\[\s*continued[^\]]*\]\s*$/i, "");
+
+  return t.trim();
+}
+
 // ==========================
-// API CALL WITH RETRY
+// API CALLS
 // ==========================
 
-async function translateContent(rules, content) {
-  // 1) primera parte
-  const response = await axios.post(
+async function callOpenRouter({ rules, userContent }) {
+  return axios.post(
     "https://openrouter.ai/api/v1/chat/completions",
     {
       model: MODEL,
       temperature: 0,
-      max_tokens: 8000, // <-- AGREGAR
+      max_tokens: MAX_TOKENS,
       messages: [
         { role: "system", content: rules },
-        {
-          role: "user",
-          content: "Translate the following MDX file strictly following the rules:\n\n" + content
-        }
-      ]
+        { role: "user", content: userContent },
+      ],
     },
     {
       headers: {
         Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+        // Optional but recommended by OpenRouter
+        "HTTP-Referer": "https://solidyne-docs.local",
+        "X-Title": "Solidyne MDX Translator",
+      },
+      timeout: 120000,
     }
   );
+}
 
-  let out = response.data.choices[0].message.content.trim();
+async function translateContentWithRetry(rules, esContent) {
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await callOpenRouter({
+        rules,
+        userContent:
+          "Translate the following MDX file strictly following the rules.\n" +
+          "Return ONLY the translated MDX. Do NOT use code fences.\n\n" +
+          esContent,
+      });
 
-  // 2) si parece truncado, pedir continuaciones
+      let out = (res.data?.choices?.[0]?.message?.content || "").trim();
+      return out;
+    } catch (err) {
+      if (attempt === 3) throw err;
+      const status = err?.response?.status;
+      console.log(`   ⚠ Translate attempt ${attempt} failed${status ? ` (HTTP ${status})` : ""}. Retrying...`);
+      await new Promise((r) => setTimeout(r, 2000 * attempt));
+    }
+  }
+  return "";
+}
+
+async function continueContentWithRetry(rules, tailContext) {
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await callOpenRouter({
+        rules,
+        userContent:
+          "Continue EXACTLY from where you stopped.\n" +
+          "Output ONLY the missing tail of the MDX.\n" +
+          "Do NOT repeat any previous lines.\n" +
+          "Do NOT add commentary.\n" +
+          "Do NOT add markers like '[Continued...]'.\n" +
+          "Start with the very next line that should appear after the last output.\n\n" +
+          "Last output tail (for context):\n" +
+          tailContext,
+      });
+
+      let more = (res.data?.choices?.[0]?.message?.content || "").trim();
+      return more;
+    } catch (err) {
+      if (attempt === 3) throw err;
+      const status = err?.response?.status;
+      console.log(`   ⚠ Continue attempt ${attempt} failed${status ? ` (HTTP ${status})` : ""}. Retrying...`);
+      await new Promise((r) => setTimeout(r, 2000 * attempt));
+    }
+  }
+  return "";
+}
+
+/**
+ * Robust translation that auto-continues if truncated.
+ */
+async function translateContent(rules, esContent) {
+  let out = await translateContentWithRetry(rules, esContent);
+  out = stripTruncationMarkers(out);
+
   let parts = 1;
-  while (looksTruncated(out) && parts < 3) { // máx 3 partes
+  while ((looksTruncated(out) || endsAbruptly(out)) && parts < MAX_PARTS) {
     parts++;
 
-    const contResp = await axios.post(
-      "https://openrouter.ai/api/v1/chat/completions",
-      {
-        model: MODEL,
-        temperature: 0,
-        max_tokens: 8000,
-        messages: [
-          { role: "system", content: rules },
-          {
-            role: "user",
-            content:
-              "Continue the translation from exactly where you left off.\n" +
-              "Return ONLY the remaining MDX content.\n" +
-              "Do NOT repeat anything already provided.\n" +
-              "Do NOT add commentary.\n\n" +
-              "Last output (for context):\n" +
-              out.slice(Math.max(0, out.length - 2000))
-          }
-        ]
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json"
-        }
-      }
-    );
+    const tailContext = out.slice(Math.max(0, out.length - CONTEXT_CHARS));
+    const more = await continueContentWithRetry(rules, tailContext);
 
-    const more = contResp.data.choices[0].message.content.trim();
+    const cleanMore = stripTruncationMarkers(more);
 
-    // si el modelo repite el marcador sin dar contenido, cortamos
-    if (!more || more === out || looksTruncated(more) && more.length < 200) {
+    // Guardrails: if continuation is empty or clearly not progressing, stop
+    if (!cleanMore || cleanMore.length < 40) {
+      console.log("   ⚠ Continuation returned too little content; stopping continuation loop.");
       break;
     }
 
-    // limpiar el marcador espurio si vino en la parte anterior
-    out = out.replace(/\n?\[Continued in next part due to length\.\.\.\]\s*$/i, "").trim();
+    // If model repeats tail context, avoid infinite growth
+    if (out.endsWith(cleanMore)) {
+      console.log("   ⚠ Continuation appears duplicated; stopping continuation loop.");
+      break;
+    }
 
-    // concatenar con una línea en blanco por seguridad
-    out = out + "\n\n" + more;
+    out = stripTruncationMarkers(out) + "\n\n" + cleanMore;
   }
 
-  // limpieza final por si quedó el marcador
-  out = out.replace(/\n?\[Continued in next part due to length\.\.\.\]\s*$/i, "").trim();
+  // Final cleanup
+  out = stripTruncationMarkers(out);
 
+  // Final safety: if still looks truncated, fail loudly (so it shows in report)
+  if (looksTruncated(out)) {
+    throw new Error("Model output appears truncated after continuations.");
+  }
+  if (looksTruncated(out)) {
+  throw new Error("Model output appears truncated or contains placeholder markers.");
+  }
   return out;
 }
 
@@ -199,7 +305,6 @@ translation:
 // ==========================
 
 async function main() {
-
   const startTime = Date.now();
 
   const sourceFolder = path.resolve(folderArg);
@@ -227,7 +332,6 @@ async function main() {
   console.log(`📂 Found ${files.length} files\n`);
 
   for (const file of files) {
-
     const relativePath = path.relative(sourceFolder, file);
     const targetPath = path.join(targetFolder, relativePath);
 
@@ -237,7 +341,6 @@ async function main() {
     let shouldTranslate = true;
 
     if (fs.existsSync(targetPath)) {
-
       const enContent = fs.readFileSync(targetPath, "utf8");
       const oldHash = extractSourceHash(enContent);
 
@@ -247,13 +350,12 @@ async function main() {
         shouldTranslate = false;
       }
 
-      if (!FORCE && !ONLY_NEW && !ONLY_CHANGED) {
-        shouldTranslate = true;
-      }
-
+      // Default mode: translate if missing hash or hash changed; skip if same
       if (!FORCE && oldHash === newHash) {
         shouldTranslate = false;
       }
+
+      if (FORCE) shouldTranslate = true;
     }
 
     if (!shouldTranslate) {
@@ -271,7 +373,6 @@ async function main() {
     }
 
     try {
-
       const translatedContent = await translateContent(rules, esContent);
       const finalContent = injectTranslationMetadata(translatedContent, newHash);
 
@@ -280,7 +381,6 @@ async function main() {
 
       translated++;
       console.log("   ✅ Done\n");
-
     } catch (err) {
       errors++;
       console.log("   ❌ Error:", err.message, "\n");
@@ -296,12 +396,17 @@ async function main() {
     errors,
     duration_sec: duration,
     model: MODEL,
+    limits: {
+      max_tokens: MAX_TOKENS,
+      max_parts: MAX_PARTS,
+      context_chars: CONTEXT_CHARS,
+    },
     mode: {
       force: FORCE,
       only_new: ONLY_NEW,
       only_changed: ONLY_CHANGED,
-      dry_run: DRY_RUN
-    }
+      dry_run: DRY_RUN,
+    },
   };
 
   ensureDirSync(path.join(__dirname, "reports"));

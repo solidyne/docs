@@ -1,98 +1,106 @@
 ---
-title: "Entradas"
-description: "Conexión de las entradas"
-keywords: ["micrófonos", "phantom", "entradas", "USB"]
-tags: ["consolas de estudio", "linea Classic", "D612"]
+title: "Inputs"
+description: "Input connections"
+keywords: ["microphones", "phantom", "inputs", "USB"]
+tags: ["studio consoles", "Classic line", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b5402ab0d381a6c1718c206e4ab9880e67ec9f774307660a470f37ef1d991c2f"
+
 ---
 
-## Canales de entrada
+## Input Channels
 
-En el panel trasero de la consola se concentran todos los conectores de entrada y salida.
+All input and output connectors are located on the rear panel of the console.
 
 <Note>
-  La calidad del conexionado de las distintas fuentes a la consola garantiza una operación segura y libre de fallas. Tómese el tiempo necesario para realizar las conexiones con cuidado, utilizando siempre materiales de primera calidad.
+  The quality of connections between different sources and the console ensures reliable and fault-free operation. Take the necessary time to make connections carefully, always using high-quality materials.
 </Note>
 
-## Entradas de micrófono
+## Microphone Inputs
 
-Los canales de micrófono son balanceados electrónicamente y usan conectores XLR estándar.
+The microphone channels are electronically balanced and use standard XLR connectors.
 
 <img
   src="/images/612/612-trasero-mics.jpg"
-  alt="612 Trasero Mics Jp"
-  title="612 Trasero Mics Jp"
+  alt="612 Rear Mics Jp"
+  title="612 Rear Mics Jp"
   className="mx-auto"
   style={{ width:"43%" }}
 />
 
-- Cada canal presenta **dos conectores XLR**, sumados internamente.
-- Al utilizar dos micrófonos en el mismo canal, conviene que sean de la misma marca y modelo, preferentemente dinámicos.
-- Las diferencias de nivel de voz son compensadas por los compresores internos de la consola.
+- Each channel features **two XLR connectors**, internally summed.
+- When using two microphones on the same channel, they should be the same brand and model, preferably dynamic.
+- Voice level differences are compensated by the console's internal compressors.
 
-La llave **48V**, ubicada en el panel frontal, activa la alimentación phantom de 48V en todas las entradas.
+The **48V** switch, located on the front panel, activates 48V phantom power on all inputs.
 
 <Note>
-  Los micrófonos dinámicos pueden recibir tensión phantom sin riesgo de daño, ya que su bobina móvil tiene conexión flotante que desacopla la tensión.
+  Dynamic microphones can receive phantom power without risk of damage, as their moving coil has a floating connection that decouples the voltage.
 </Note>
 
-## Entradas de línea
+## Line Inputs
 
-Cada canal de línea posee dos entradas estéreo, seleccionables desde el frente de la consola:
+Each line channel has two stereo inputs, selectable from the console's front panel:
 
 <img
   src="/images/612/612-trasero-lineas.jpg"
-  alt="612 Trasero Lineas Jp"
-  title="612 Trasero Lineas Jp"
+  alt="612 Rear Lines Jp"
+  title="612 Rear Lines Jp"
   className="mx-auto"
   style={{ width:"46%" }}
 />
 
-- **Canales 3 y 4:** entradas no balanceadas sobre conectores **RCA** (LIN-1 y LIN-2) y entradas balanceadas en un conector **DIN-5** (BAL-1 y BAL-2).
-- **Canal 5:** digital. Es un puerto USB para conexión directa a la computadora. Admite una entrada auxiliar no balanceada (RCA).
+- **Channels 3 and 4:** unbalanced inputs on **RCA** connectors (LIN-1 and LIN-2) and balanced inputs on a **DIN-5** connector (BAL-1 and BAL-2).
+- **Channel 5:** digital. It's a USB port for direct computer connection. Accepts an unbalanced auxiliary input (RCA).
 
 <Note>
-  En equipos con opción /AoIP, la entrada auxiliar LIN-2 queda internamente asignada al módulo de streaming y no puede usarse para otras señales.
+  In equipment with /AoIP option, the LIN-2 auxiliary input is internally assigned to the streaming module and cannot be used for other signals.
 </Note>
 
-Para conectar equipos con salida balanceada se requiere armar un cable DIN-5 a dos XLR hembra o a un conector TRS estéreo de ¼”, según corresponda.
+To connect equipment with balanced output, a DIN-5 to dual female XLR or 1/4" TRS stereo connector cable must be assembled, as appropriate.
 
-**Distribución DIN-5 a XLR**
+**DIN-5 to XLR Pin Assignment**
 
-| <img   src="/images/612/612-DIN5-male.jpg"   alt="DIN5 Male"   style={{ width:"50px" }} />            <br />DIN-5 (estéreo balanceado) | <img   src="/images/612/612-XLR3-female.jpg"   alt="XLR3 Female"   style={{ width:"50px" }} />            <br />XLR Hembra |
+| <img   src="/images/612/612-DIN5-male.jpg"   alt="DIN5 Male"   style={{ width:"50px" }} />            <br />DIN-5 (balanced stereo) | <img   src="/images/612/612-XLR3-female.jpg"   alt="XLR3 Female"   style={{ width:"50px" }} />            <br />XLR Female |
 | :------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
-| Pin 1 → Audio (-) Derecho                                                                                                              | Pin 1 → Tierra (malla)                                                                                                     |
-| Pin 2 → Audio (\+) Derecho                                                                                                             | Pin 2 → Audio (\+)                                                                                                         |
-| Pin 3 → Audio (-) Izquierdo                                                                                                            | Pin 3 → Audio (-)                                                                                                          |
-| Pin 4 → Audio (\+) Derecho                                                                                                             |                                                                                                                            |
-| Pin 5 → Audio (\+) Izquierdo                                                                                                           |                                                                                                                            |
+| Pin 1 → Audio (-) Right                                                                                                               | Pin 1 → Ground (shield)                                                                                                    |
+| Pin 2 → Audio (\+) Right                                                                                                              | Pin 2 → Audio (\+)                                                                                                         |
+| Pin 3 → Audio (-) Left                                                                                                                | Pin 3 → Audio (-)                                                                                                          |
+| Pin 4 → Audio (\+) Right                                                                                                              |                                                                                                                            |
+| Pin 5 → Audio (\+) Left                                                                                                               |                                                                                                                            |
 
-- Las entradas no balanceadas RCA aceptan equipos con salida -10 dBV sobre 10 kΩ (equipos domésticos).
-- El control de ganancia es común a ambas entradas y actúa siempre sobre la entrada seleccionada.
+- The unbalanced RCA inputs accept equipment with -10 dBV output over 10 kΩ (consumer equipment).
+- The gain control is common to both inputs and always acts on the selected input.
 
-## Entrada digital USB
+## Digital USB Input
 
-El Canal 5 conecta directamente la consola a una computadora mediante un puerto USB (cable estándar USB A/B).
+Channel 5 directly connects the console to a computer via USB port (standard USB A/B cable).
 
-- Compatible con puertos 1.1, 2.0 y 3.0.
-- Se recomienda usar cables de 2–3 m de longitud; no exceder los 4 m incluso con extensiones.
-- Compatible con Windows® 7/10, Linux y macOS.
-- Los controladores son instalados automáticamente; no se requieren drivers adicionales.
+- Compatible with 1.1, 2.0, and 3.0 ports.
+- Recommended cable length 2-3 m; do not exceed 4 m even with extensions.
+- Compatible with Windows® 7/10, Linux, and macOS.
+- Drivers are installed automatically; no additional drivers required.
 
 <Warning>
-  Antes de conectar la consola a la PC por USB, verifique que la computadora disponga de **puesta a tierra**  efectiva mediante el borne de bronce en el panel trasero.
+  Before connecting the console to the PC via USB, verify that the computer has effective **ground connection** through the brass terminal on the rear panel.
 
-  - Use un tester en escala de 25 VCA entre los chasis de PC y consola; la lectura debe ser **0 V**.
-  - Si no hay conexión a tierra, podría dañarse la entrada USB de la consola o de la PC.
+  - Use a multimeter set to 25 VAC between PC and console chassis; reading should be **0 V**.
+  - Without proper grounding, the USB input of the console or PC could be damaged.
 </Warning>
 
-Al conectar la consola encendida, Windows® detecta un “dispositivo de reproducción USB” y un “dispositivo de grabación USB”. En la consola, el indicador **Digital IN/Out** mostrará **U4**, confirmando que la entrada y salida estéreo fueron reconocidas.
+When connecting the powered console, Windows® detects a "USB playback device" and a "USB recording device". On the console, the **Digital IN/Out** indicator will show **U4**, confirming that stereo input and output were recognized.
 
-En Windows® puede verificarse en: **Panel de Control → Dispositivos de sonido y audio**, donde se definen los dispositivos de reproducción y grabación predeterminados.
+In Windows®, this can be verified in: **Control Panel → Sound and Audio Devices**, where default playback and recording devices are defined.
 
-En las aplicaciones de software seleccione el los dispositivos USB de reproducción y grabación.
+In software applications, select the USB playback and recording devices.
 
-Si la PC no tiene otra interfaz de audio, Windows® usará como predeterminados los dispositivos USB-1 (entrada Canal 5 y salida PGM/REC de la D612).
+If the PC has no other audio interface, Windows® will use USB-1 devices as default (Channel 5 input and PGM/REC output of the D612).
 
 <Info>
-  El Canal 5 también dispone de una entrada auxiliar estéreo no balanceada con conectores RCA para equipos convencionales.
+  Channel 5 also features an auxiliary stereo unbalanced input with RCA connectors for conventional equipment.
 </Info>

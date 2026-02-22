@@ -1,57 +1,65 @@
 ---
 title: "AutoDj Editor"
-description: "Plantillas de reglas para programación musical automatizada"
-keywords: ["autodj", "programacion", "musica", "automatizacion"]
+description: "Rule templates for automated music scheduling"
+keywords: ["autodj", "scheduling", "music", "automation"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1e7d6bf9cf35b74f6180b048d080ef720dbfb59a00d9ac4421bc6f9531bcfbb1"
+
 ---
 
-### Descripción general
+### Overview
 
-Crear una programación musical automática con AUDICOM es un proceso simple, basado en la definición de bloques automáticos (**AutoDj**) con un **formato** previamente establecido. Estos bloques se pautan desde **CyberPlay Editor** y son ejecutados en el aire por el motor **AutoDj**, un sistema de **selección musical avanzada** que trabaja sobre la base de datos de música y las hojas de formato de estilo.
+Creating automated music scheduling with AUDICOM is a simple process, based on defining automatic blocks (**AutoDj**) with a pre-established **format**. These blocks are scheduled from **CyberPlay Editor** and aired by the **AutoDj** engine, an **advanced music selection system** that works with the music database and format style sheets.
 
 <Tip>
-  En el capítulo [**programación manual**](/es/audicom/au-cpeditor-comandosmusica) se explica cómo pautar los bloques AutoDj. 
+  The [**manual scheduling**](/es/audicom/au-cpeditor-comandosmusica) chapter explains how to schedule AutoDj blocks.
 </Tip>
 
 ---
 
-### Para acceder al módulo **AutoDj Editor**:
+### To access the **AutoDj Editor** module:
 
-1. Abrir el menú **Inicio de Windows**.
-2. Ir al grupo **Programas → AUDICOM**.
-3. Hacer clic en **AutoDj Editor**.
+1. Open the **Windows Start** menu.
+2. Go to **Programs → AUDICOM**.
+3. Click on **AutoDj Editor**.
 
-Se abrirá la pantalla principal del módulo.
-
----
-
-### Función del módulo
-
-El **AutoDj Editor** permite **crear y editar FORMATOS** musicales que serán usados por el motor AutoDj.\
-Cada formato contiene los **parámetros de selección** que AUDICOM utiliza para elegir títulos: estilo, género, intérprete, entre otros.
-
-Cuando un bloque AutoDj está activo, el sistema:
-
-- **Genera la programación automáticamente** siguiendo el formato establecido.
-- **Revisa los títulos disponibles** en la base de datos.
-- **Asigna un puntaje** a cada título según el grado de coincidencia con los parámetros definidos.
+The module's main screen will open.
 
 ---
 
-### Lógica de selección
+### Module Function
 
-- El orden de revisión comienza por los títulos que **más tiempo llevan sin emitirse**.
-- Cada título recibe un **puntaje entre 0 y 100**.
-- Si un título supera los **90 puntos**, se inserta directamente en la programación de **CyberPlay**.
-- Este valor de 90 es la **tolerancia de AutoDj** y puede ajustarse en el archivo `AUTODJ.INI`, modificando la variable **Tolerancia**.
-- Si ningún título alcanza el puntaje mínimo requerido, se selecciona el que obtenga **la mejor calificación relativa**.
+The **AutoDj Editor** allows you to **create and edit music FORMATS** that will be used by the AutoDj engine.\
+Each format contains the **selection parameters** that AUDICOM uses to choose tracks: style, genre, artist, among others.
+
+When an AutoDj block is active, the system:
+
+- **Automatically generates the schedule** following the established format.
+- **Reviews available tracks** in the database.
+- **Assigns a score** to each track based on how well it matches the defined parameters.
 
 ---
 
-### Ejemplo de ponderación
+### Selection Logic
 
-Cada parámetro tiene un **peso diferente** en la puntuación:
+- The review order starts with tracks that have **gone the longest without being aired**.
+- Each track receives a **score between 0 and 100**.
+- If a track scores above **90 points**, it is directly inserted into the **CyberPlay** schedule.
+- This value of 90 is the **AutoDj tolerance** and can be adjusted in the `AUTODJ.INI` file by modifying the **Tolerance** variable.
+- If no track reaches the minimum required score, the one with the **best relative rating** is selected.
 
-- El **Estilo** de un título puede otorgar más puntos que el **Modo**, ya que se considera más relevante para mantener la coherencia de la programación musical.
+---
 
-De esta manera, AutoDj garantiza que la música programada siga un criterio definido por la emisora, respetando tanto la **rotación temporal** como las **características estilísticas** que se quieran destacar en la programación.
+### Scoring Example
+
+Each parameter has a **different weight** in the scoring:
+
+- A track's **Style** can award more points than its **Mode**, as it is considered more relevant for maintaining musical programming coherence.
+
+This way, AutoDj ensures that scheduled music follows criteria defined by the station, respecting both **time rotation** and **stylistic characteristics** that should be emphasized in the programming.

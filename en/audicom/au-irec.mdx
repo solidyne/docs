@@ -1,99 +1,106 @@
 ---
 title: "I-REC"
-description: "Grabadora instantána"
-keywords: ["i-rec", "grabación"]
+description: "Instant Recorder"
+keywords: ["i-rec", "recording"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "8550b6cc2295fa794be0b196388a1026f89e80c5179399d777b3f168480e077d"
+
 ---
 
-## Operación
+## Operation
 
 <Steps>
-  <Step title="Iniciar grabación">
-    Presione el botón **REC**. La grabación comienza de inmediato.\
-    El módulo **I-REC** aparece en pantalla con un vúmetro que muestra el nivel de señal entrante.\
+  <Step title="Start recording">
+    Press the **REC** button. Recording starts immediately.\
+    The **I-REC** module appears on screen with a VU meter showing the input signal level.\
     <Warning>
-      Controle que no se enciendan las últimas líneas rojas del vúmetro para evitar recortes en la señal.
+      Make sure the last red lines of the VU meter do not light up to avoid signal clipping.
     </Warning>
   </Step>
-  <Step title="Detener grabación">
-    - Haga clic sobre la imagen del módulo.
-    - O bien cierre la ventana de I-REC (presionando nuevamente el botón en la Barra de Herramientas).
+  <Step title="Stop recording">
+    - Click on the module image.
+    - Or close the I-REC window (by pressing the button in the Toolbar again).
   </Step>
-  <Step title="Mover la ventana">
-    Arrástrela desde la barra de título (Instant Recorder).\
+  <Step title="Move the window">
+    Drag it from the title bar (Instant Recorder).\
     <Note>
-      Es recomendable moverla solo cuando no se está grabando, ya que un clic en la imagen detiene la grabación.
+      It is recommended to move it only when not recording, since clicking on the image stops the recording.
     </Note>
   </Step>
 </Steps>
 
 <Info>
-  El módulo se abre siempre en la misma posición en la que fue cerrado.
+  The module always opens in the same position where it was closed.
 </Info>
 
-### Nombres de archivo
+### File Names
 
-Existen dos modos:
+There are two modes:
 
-- **Automáticos**:\
-  I-REC asigna nombres al finalizar la grabación sin intervención del operador.\
-  Formato: `AAMMDD HHMMSS` (Año, Mes, Día, Hora, Minuto, Segundo).
-- **Definidos por el operador**:\
-  Active la **N** a la izquierda del vúmetro.\
-  Aparecerá un cuadro de diálogo para ingresar el nombre antes de guardar.
+- **Automatic**:\
+  I-REC assigns names when recording ends without operator intervention.\
+  Format: `YYMMDD HHMMSS` (Year, Month, Day, Hour, Minute, Second).
+- **Operator defined**:\
+  Enable the **N** on the left of the VU meter.\
+  A dialog box will appear to enter the name before saving.
 
 ---
 
-## Configuración
+## Configuration
 
-Acceda haciendo **clic derecho** sobre el módulo.\
+Access by **right-clicking** on the module.\
 <Warning>
-  Mientras la ventana de configuración esté abierta, I-REC no grabará.
+  While the configuration window is open, I-REC will not record.
 </Warning>
 
+### Audio Input
 
-### Entrada de audio
-
-- La placa de audio se selecciona durante la instalación en el **Panel de Configuración**.
-- Para modificar: ejecute **aConfig** desde la barra de herramientas o la carpeta de instalación.
-- En el campo _Grabación Instantánea I-Rec_ seleccione el dispositivo de grabación (entrada de línea recomendada).
+- The sound card is selected during installation in the **Configuration Panel**.
+- To modify: run **aConfig** from the toolbar or installation folder.
+- In the _Instant Recording I-Rec_ field select the recording device (line input recommended).
 
 ### Sample Rate (Hz)
 
-- **44.100 / 32.000**: alta calidad.
-- **22.050**: material de archivo sin alta exigencia.
-- **11.025 o menos**: líneas telefónicas.
+- **44,100 / 32,000**: high quality.
+- **22,050**: archival material without high demands.
+- **11,025 or less**: telephone lines.
 
 <Note>
-  I-REC no comprime el audio.\
-  Un minuto estéreo a 44.100 Hz ocupa ~10 MB.
+  I-REC does not compress audio.\
+  One minute of stereo at 44,100 Hz takes ~10 MB.
 </Note>
 
-### Canales
+### Channels
 
-Defina si la grabación será **mono** o **estéreo**.
+Define whether the recording will be **mono** or **stereo**.
 
-### Directorio
+### Directory
 
-- Carpeta donde se guardarán los archivos grabados.
-- Se recomienda un **disco local**.
-- Debe formar parte de la estructura AUDICOM para aparecer en **File Manager**.
-- Configuración de fábrica: `C:\Audicom\Audio\I-REC`.
+- Folder where recorded files will be saved.
+- A **local disk** is recommended.
+- Must be part of the AUDICOM structure to appear in **File Manager**.
+- Factory setting: `C:\Audicom\Audio\I-REC`.
 
-### Loop Recorder (grabación en bucle)
+### Loop Recorder
 
-- En este modo, I-REC mantiene en memoria los últimos **N minutos** del programa.
-- Para grabar a disco: haga clic izquierdo sobre el módulo.
-- El nombre del archivo podrá ser automático o definido por el operador.
-- El modo Loop está indicado por la **L roja** a la derecha del vúmetro.
+- In this mode, I-REC keeps the last **N minutes** of the program in memory.
+- To record to disk: left click on the module.
+- The filename can be automatic or operator defined.
+- Loop mode is indicated by the **red L** on the right of the VU meter.
 
 <Info>
-  I-REC puede permanecer en modo Loop durante muchas horas, ya que no usa el disco y solo requiere memoria para los minutos configurados.
+  I-REC can remain in Loop mode for many hours, as it does not use the disk and only requires memory for the configured minutes.
 </Info>
 
 ---
 
 <Note>
-  I-REC solo funciona en el **escritorio de aire**.\
-  No está disponible en el escritorio general de AUDICOM (`Desktop.exe`).
+  I-REC only works on the **air desktop**.\
+  It is not available on AUDICOM general desktop (`Desktop.exe`).
 </Note>

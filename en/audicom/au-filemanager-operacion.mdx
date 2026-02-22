@@ -1,225 +1,68 @@
 ---
 title: "File Manager"
-description: "Operación y funciones."
-keywords: ["File Manager","Media Manager","gestión de medios"]
+description: "Operation and functions."
+keywords: ["File Manager","Media Manager","media management"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "08227fc2834f4cffca04b80527394122614fbccb5828776afb4212f39b4bee68"
+
 ---
 
-## Operación de File Manager
+## File Manager Operation
 
 <Note>
-  Esta sección corresponde al módulo **File Manager** (discontinuado en Audicom Black y reemplazado por **Media Manager**). Se mantiene por compatibilidad operativa y para usuarios en transición.
+  This section covers the **File Manager** module (discontinued in Audicom Black and replaced by **Media Manager**). It is maintained for operational compatibility and users in transition.
 </Note>
 
-## Modo expandido
+## Expanded Mode
 
-- Al presionar la **flecha roja**, aparece una **segunda ventana** a la derecha del módulo (similar a la principal).
-- Sirve para **mover o copiar** archivos entre carpetas, entre otras funciones.
-- Al hacer clic sobre un archivo, se cambia la **ventana activa**, indicada por la **flecha verde**.
-- Los botones de reproducción actúan sobre el archivo **seleccionado en la ventana activa**.
+- Clicking the **red arrow** opens a **second window** to the right of the module (similar to the main one).
+- Used to **move or copy** files between folders, among other functions.
+- Clicking on a file changes the **active window**, indicated by the **green arrow**.
+- Playback buttons act on the file **selected in the active window**.
 
 ---
 
-## Mover y copiar archivos
+## Moving and Copying Files
 
 <Steps>
-  <Step title="Abrir segunda ventana">
-    Active el **modo expandido** (flecha roja) para disponer de dos paneles.
+  <Step title="Open second window">
+    Enable **expanded mode** (red arrow) to have two panels.
   </Step>
-  <Step title="Seleccionar archivos">
-    - Selección múltiple con **Ctrl + clic** (uno a uno).
-    - Rango continuo con **Shift + clic** (del primero al último).
+  <Step title="Select files">
+    - Multiple selection with **Ctrl + click** (one by one).
+    - Continuous range with **Shift + click** (from first to last).
   </Step>
-  <Step title="Elegir destino">
-    En la ventana secundaria, abra la **carpeta destino**.
+  <Step title="Choose destination">
+    In the secondary window, open the **destination folder**.
   </Step>
-  <Step title="Mover">
-    Arrastre la selección hacia la carpeta destino.\
-    Si los archivos estaban **registrados en la Base de Datos**, su **ubicación se actualiza** automáticamente.
+  <Step title="Move">
+    Drag the selection to the destination folder.\
+    If the files were **registered in the Database**, their **location is automatically updated**.
   </Step>
-  <Step title="Copiar">
-    Arrastre **manteniendo Ctrl**: verá un **signo (+)** indicando copia.
+  <Step title="Copy">
+    Drag while **holding Ctrl**: you'll see a **(+) sign** indicating copy.
   </Step>
 </Steps>
 
 <Info>
-  **Carpetas autoDB**
+  **autoDB Folders**
 
-  - Si mueve/copía música hacia una carpeta **autoDB**:\
-    a) Si el archivo **no estaba** registrado, se **da de alta** automáticamente.\
-    b) Si **ya estaba** registrado, se mantiene toda la info **excepto “Estilo”**, que toma el **nombre de la nueva carpeta**.
-  - De una carpeta **autoDB → no autoDB**: la Base de Datos **no cambia**.
-  - La lógica **autoDB** aplica **solo en el movimiento/copia**; luego no modifica información.
+  - When moving/copying music to an **autoDB** folder:\
+    a) If the file **was not** registered, it is **automatically added**.\
+    b) If it **was already** registered, all info is kept **except "Style"**, which takes the **new folder name**.
+  - From **autoDB → non-autoDB** folder: Database **remains unchanged**.
+  - The **autoDB** logic applies **only during move/copy**; it doesn't modify information afterward.
 </Info>
 
 <Warning>
-  Evite mover/renombrar/borrar archivos registrados **con herramientas de Windows**:
+  Avoid moving/renaming/deleting registered files **using Windows tools**:
 
-  - Si se mueven, la ubicación se corregirá cuando salgan al aire (AutoDJ/InfoMusic), pero implica **búsquedas exhaustivas**.
-  - Si se borran o renombran, la Base de Datos marcará el medio como **\_missing**.
+  - If moved, location will be corrected when aired (AutoDJ/InfoMusic), but requires **exhaustive searches**.
+  - If deleted or renamed, Database will mark the media as **\_missing**.
 </Warning>
-
----
-
-## Renombrar el material
-
-- Presione **F2** para abrir la ventana de edición **Intérprete / Título**.
-- No es necesario tipear la extensión (no se modifica).
-- Se actualiza el **nombre del archivo** y el **título en la Base de Datos** (si la carpeta es **autoDB** o si el archivo ya estaba registrado desde InfoMusic).
-- Formato de archivo recomendado: **“Intérprete - Título.ext”**.
-- El botón **[Abc]** conmuta **MAYÚSCULAS/minúsculas**.
-
-**Ejemplos**
-
-- “Radio Buenos Aires.mp3” → Intérprete vacío; Título “Radio Buenos Aires”. Con **F2**: Intérprete “Promocional”; queda “Promocional - Radio Buenos Aires.mp3”.
-- “05 - Lucho Gonzalez - Centro al corazón.mp3” → Intérprete “05 - Lucho Gonzalez”; Título “Centro al corazón”. Ajustar con **F2**.
-- “JORGE FANDERMOLE” → **[Abc]** → “Jorge Fandermole”.
-
----
-
-## Borrar archivos
-
-- Clic derecho sobre el archivo → **Delete (Borrar)** → confirme.
-- Si estaba en la **Base de Datos**, también se elimina allí.
-- Admite borrado múltiple con selección previa.
-
-<Danger>
-  - Los archivos se eliminan **en forma directa** (no van a la Papelera).
-  - No borre medios registrados desde **Windows**: de hacerlo, deberá limpiarlos **manual**mente en la Base con **InfoMusic**.
-</Danger>
-
----
-
-## Buscar archivos `[F3]`
-
-- **F3** (o clic derecho → _Búsqueda_) abre el cuadro de criterios:
-
-**Criterios disponibles**
-
-- **Buscar**: cadena por **nombre de archivo** (no por título de BD).
-- **Modo exhaustivo**: si se desactiva, busca solo archivos que **comienzan** con la cadena.
-- **Excluir**: palabras a excluir.
-- **Duración mayor a [s]** / **menor a [s]**.
-- **Solo en discos locales**.
-- **Solo en el directorio actual**.
-- **Entre fechas** (según _fecha de modificado_ de Windows).
-- **Entre horas** (según _hora de modificado_ de Windows).
-
-**Resultados**
-
-- Se listan en la ventana **Resultados de la búsqueda**.
-- Desde allí puede: **reproducir**, **insertar en CyberPlay**, **enviar a Live Assist**, **borrar** (si tiene permisos).
-- **Report** genera un **.txt** con los resultados.
-
----
-
-## Agregar nuevas carpetas
-
-File Manager muestra todas las subcarpetas bajo `\Audicom\Audio` y `\Audicom\Text`.
-
-- Para crear: botón **Nueva Carpeta** y complete:
-  - **Nombre** (máx. 15 caracteres).
-  - **Disco o servidor** (local o UNC con permisos de escritura).
-  - **Tipo**:
-    - **Audio** (medios de audio).
-    - **Texto** (noticias; pueden asociar texto al audio para CyberPlay/Teleprompter).
-    - **Extras** (carpetas fuera de `\Audicom\Audio` mapeadas temporalmente en File Manager; **solo uso manual**).
-  - **autoDB** (registro automático en InfoMusic).
-  - **Clase** (clave para autoDB).
-  - **Color** (pestaña/tab compartido en toda la red).
-  - **Ordenar por** (Intérprete / Título / Duración).
-  - **Fundido** (décimas de segundo: _15_ = 1,5 s).
-
-<Info>
-  Reglas **autoDB** (resumen):
-
-  - Prioriza el **nombre de archivo**: “Intérprete - Título.ext”. Toma el **último guion** como separador.
-  - Lee **ID3v1/v2** si están disponibles.
-  - **Clase** en BD = “Clase” definida en _Nueva Carpeta_.
-  - Si **Clase = Música** → **Estilo = nombre de carpeta**; si no, Estilo vacío.
-  - **Fades** por defecto: música **1 s in/out**; no música **0 s**.
-  - Títulos duplicados → sufijos **(2), (3)…**.
-</Info>
-
-<Warning>
-  - Máximo **320 carpetas** (sumando todas las unidades locales y de red).
-  - Evite **nombres duplicados**: File Manager mostrará solo la primera encontrada según el orden declarado en `Audicom.ini`.
-  - Declare primero **discos locales** y luego **discos de red**.
-</Warning>
-
----
-
-## Propiedades de una carpeta (INFO)
-
-- Clic derecho sobre la pestaña → **INFO**.
-- **Nombre**: solo lectura.
-- **autoDB**: habilita/inhabilita registro automático.
-- **Color**: 8 colores disponibles para agrupar y filtrar.
-- **Ordenar por**: define el orden **predeterminado** al ingresar.
-- **Mostrar Intérprete**: oculta/muestra la columna (útil en carpetas no musicales).
-
----
-
-## Explorando la red
-
-- La ventana principal muestra **todas** las carpetas de la red AUDICOM (salvo restricciones por usuario).
-- En **modo expandido**, la ventana derecha puede mostrar **todas** las carpetas o **solo** las de una **terminal** seleccionada (menú superior).
-- Útil cuando existen **carpetas con el mismo nombre** en diferentes terminales: el tab local muestra **solo su carpeta local**; para ver la de otra terminal, use el panel derecho con selección de terminal.
-
----
-
-## Menú desplegable (clic derecho sobre archivo)
-
-- **Cue** / **Cue End** / **Cue Stop**
-- **Add to Play queue**: agrega el archivo a la **cola de reproducción** de File Manager (se reproduce a continuación; el contador cambia de color).
-- **Grabar como PlayList.txt**: guarda una selección (≥2 títulos) como **lista de reproducción** (queda en **PGM**).
-- **AutoEdit…**: abre en **AutoEdit** para recorte automático de silencios inicio/fin.
-- **Edita**: abre con el **editor asociado en Windows** (por defecto FX5).
-- **InfoMusic**:
-  - En Aire: muestra datos en **InfoMusic Aire**.
-  - En Producción: abre **InfoMusic-Prod**.
-- **Buscar**: abre el diálogo de búsqueda (equivalente a **F3**).
-- **Eliminar**: borra del disco y de la Base de Datos.
-- **Cambiar nombre**: edición de **Intérprete/Título** con actualización de BD (equivale a **F2**).
-- **Ordenar por título / duración** (equivalente a clic en el encabezado).
-- **Muestra…**: filtros rápidos para ver **archivos recientes**.
-
----
-
-## Información avanzada
-
-**Estructura requerida**
-
-- Todas las unidades deben tener: `\Audicom\Audio` (y `\Audicom\Text`).
-- File Manager **solo** muestra las carpetas dentro de **Audio**.
-- **No** se admiten **subcarpetas** dentro de las carpetas de **Audio** (son ignoradas).
-- Si crea una carpeta en un disco sin estructura, File Manager la **creará** automáticamente.
-
-**Declaración de unidades**
-
-- En **Panel de Configuración \> Carpetas**:
-  - **Local**: `AudioDrives=` con letras contiguas.
-  - **Red (UNC)**: rutas separadas por **punto y coma** (ej. `\\Servidor\C;\\Produccion\C`).
-  - Ver **Audicom en Red \> Configuración de Archivos**.
-
-### Importar carpetas
-
-- En modo expandido aparece el botón **Importar carpeta** (icono de CD).
-- Permite **cargar temporalmente** una carpeta **fuera** de `\Audicom\Audio` (incluso CD-ROM/red).
-- Se agrega como **tab extra** para copiar archivos sin usar el Explorador.
-- Para **remover** las importadas: **cerrar** File Manager (Alt+F4).
-- Las carpetas importadas **no se retienen** al reabrir.
-
-<Warning>
-  Archivos de **carpetas extras/importadas**:
-
-  - Se pueden **reproducir manualmente** y **arrastrar a CyberPlay**.
-  - **No** pueden incluirse en **LOG/PGM** ni almacenarse en la **Base de Datos**.
-  - Quedan **excluidos de la programación automática**.
-</Warning>
-
-### Eliminar carpetas
-
-- Solo se pueden borrar si están **vacías** (doble clic sobre el tab).
-- Para **renombrar**: cree una carpeta con el nuevo nombre, **mueva** todo con File Manager y luego borre la vacía.
-- Así se mantiene **consistente** la Base de Datos.

@@ -1,35 +1,43 @@
 ---
-description: "Servicios de streaming en la línea DX"
-title: "Introducción"
-keywords: ["streamer", "stl", "enlace", "streaming"]
-tags: ["consolas de estudio", "linea Classic", "DX816/AoIP", "DX822/AoIP"]
----
-
-## Módulo streaming AoIP
-
-Las consolas equipadas con el opcional **/AoIP** pueden incluir hasta **dos módulos para servicios de audio streaming**:
-
-- Con **1 módulo**: envían señal de **PGM**.
-- Con **2 módulos**: envían ****PGM yREC**** .
-
-**Aplicaciones de AoIP:**
-
-- **Enlace con planta transmisora** (STL) utilizando receptores dedicados (Solidyne **ADA102**,
-
-  procesadores Solidyne **542 APC /AoIP**).
-- Enlace directo con otra consola /AoIP (Solidyne **2600**, series **DX** o **UNIDEX**).
-- Envío de la señal PGM/REC a un computador remoto en la red, decodificada con software estándar de streaming (ej: **VLC Player**).
+description: "Streaming services in DX line"
+title: "Introduction"
+keywords: ["streamer", "stl", "link", "streaming"]
+tags: ["studio consoles", "Classic line", "DX816/AoIP", "DX822/AoIP"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5abf890008780906ba6830f8555696a576964c4f2f2e7b854e6d04bc3013bee7"
 
 ---
 
-### Alimentación de módulos AoIP
+## AoIP Streaming Module
 
-Los módulos AoIP se alimentan desde las conexiones **USB**. Requieren que al menos un USB esté conectado a una computadora **encendida**.
+Consoles equipped with the **/AoIP** option can include up to **two streaming audio service modules**:
+
+- With **1 module**: they send **PGM** signal.
+- With **2 modules**: they send **PGM and REC**.
+
+**AoIP Applications:**
+
+- **Transmitter plant link** (STL) using dedicated receivers (Solidyne **ADA102**,
+
+  Solidyne **542 APC /AoIP** processors).
+- Direct link with another /AoIP console (Solidyne **2600**, **DX** or **UNIDEX** series).
+- Sending PGM/REC signal to a remote computer on the network, decoded with standard streaming software (e.g.: **VLC Player**).
+
+---
+
+### AoIP Module Power Supply
+
+AoIP modules are powered through **USB** connections. They require at least one USB to be connected to a **powered on** computer.
 
 <Warning>
-  Si la consola no está conectada a un computador USB, o si este está apagado, el servicio IP **no estará disponible**.
+  If the console is not connected to a USB computer, or if it is turned off, the IP service **will not be available**.
 </Warning>
 
 <Note>
-  En ausencia de computador, es posible conectar una **fuente de alimentación USB estándar (5V)** para energizar los módulos AoIP.
+  In the absence of a computer, it is possible to connect a **standard USB power supply (5V)** to power the AoIP modules.
 </Note>

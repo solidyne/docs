@@ -1,13 +1,21 @@
 ---
-title: "Canales de micrófono"
-description: "Operación y ajustes de los canales de micrófono"
-keywords: ["micrófonos", "phantom", "compresor"]
-tags: ["consolas de estudio", "linea Classic", "D612"]
+title: "Microphone Channels"
+description: "Operation and settings of microphone channels"
+keywords: ["microphones", "phantom", "compressor"]
+tags: ["studio consoles", "Classic line", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "175194d3015d134231d30c4b5ed4b89668892f403c14f18fa08ca819533a5f7d"
+
 ---
 
-## Descripción
+## Description
 
-La consola cuenta con **dos canales de micrófono**.
+The console features **two microphone channels**.
 
 <img
   src="/images/612/612-panel-mic.png"
@@ -17,60 +25,60 @@ La consola cuenta con **dos canales de micrófono**.
   style={{ width:"52%" }}
 />
 
-1. Ajuste de **ganancia** de la entrada.
-2. **_Tensión phantom 48V_**: Se activa para todos los micrófonos.
-3. **EQ.** Controles de ganancia de las bandas de frecuencia.
-4. **EQ.** Asignación de la salida del ecualizador a los buses PGM y REC.
-5. **BUS:** Asigna el canal a la salida PGM o al ecualizador.
-6. **CUE:** Activa la escucha previa al fader principal (<Tooltip tip="Pre-Fader LEvel">PFL</Tooltip>)
-7. **OVL:** indica la zona correcta de trabajo. Si el fader está por debajo de esta indicación, indica excesiva ganancia de entrada.
-8. **Fader:** Control de nivel principal. Debe trabajar en la zona marcada entre -20  y -10 dB.
+1. Input **gain** adjustment.
+2. **_48V phantom power_**: Activated for all microphones.
+3. **EQ.** Gain controls for frequency bands.
+4. **EQ.** Assignment of equalizer output to PGM and REC buses.
+5. **BUS:** Assigns the channel to PGM output or to the equalizer.
+6. **CUE:** Activates pre-fader listening (<Tooltip tip="Pre-Fader LEvel">PFL</Tooltip>)
+7. **OVL:** indicates proper working range. If the fader is below this mark, it indicates excessive input gain.
+8. **Fader:** Main level control. Should operate in the zone marked between -20 and -10 dB.
 
-## Ajuste de la ganancia
+## Gain Adjustment
 
-En los canales de micrófono, dependiendo del locutor y distancia al micrófono, puede ser necesario ajustar la ganancia para trabajar el atenuador en la zona de operación correcta: por encima de la indicación de sobrecarga **OVL (-30 dB)**.
+On microphone channels, depending on the speaker and distance to the microphone, it may be necessary to adjust the gain to work with the attenuator in the correct operating zone: above the **OVL (-30 dB)** overload indication.
 
 <Warning>
-  En cualquier consola, un exceso de ganancia de entrada reduce el rango dinámico.\
-  Si el fader trabaja por debajo de OVL, se amplifica la señal innecesariamente y se producen **distorsiones por recorte en los picos**.
+  In any console, excessive input gain reduces dynamic range.\
+  If the fader works below OVL, the signal is unnecessarily amplified and **peak clipping distortion** occurs.
 </Warning>
 
 ---
 
-## Asignación
+## Assignment
 
-Cada canal puede:
+Each channel can be:
 
-- Enviarse directamente al aire (**PGM**).
-- Enviarse al ecualizador.
+- Sent directly to air (**PGM**).
+- Sent to the equalizer.
 
-La señal procesada puede luego enviarse a **PGM** y a **REC**. La posición OFF quita la señal del BUS (no es un bypass).\
-No se puede enviar un canal directamente a REC.
-
----
-
-## Ecualización
-
-La ecualización es común para ambos canales de micrófono.
-
-- Los extremos del espectro trabajan en modo **Shelving**, con un rango de ±15 dB.
-- Los controles están diseñados específicamente para la voz humana:
-
-| Banda         | Tipo     | Frecuencia central | Función principal                                 |
-| ------------- | -------- | ------------------ | ------------------------------------------------- |
-| Graves        | Shelving | —                  | Aporta “cuerpo” y “peso” a la voz                 |
-| Medios-graves | Peak EQ  | 160 Hz             | Controla resonancia o _popeo_ en voces masculinas |
-| Medios-altos  | Peak EQ  | 5 kHz              | Reduce problemas de **seseo** y sibilancias       |
-| Agudos        | Shelving | —                  | Agrega “presencia” y mejora inteligibilidad       |
+The processed signal can then be sent to **PGM** and **REC**. The OFF position removes the signal from the BUS (it is not a bypass).\
+A channel cannot be sent directly to REC.
 
 ---
 
-## Compresión
+## Equalization
 
-El **compresor** mantiene constantes los picos de la voz:
+The equalization is shared for both microphone channels.
 
-- Actúa siempre que la mezcla de micrófonos supera **0 VU**.
-- Por debajo de ese nivel, el rango dinámico se mantiene intacto.
-- Tiene pendiente de compresión abrupta, con tiempos de ataque y recuperación rápidos.
-- La acción se muestra en la torreta principal:
-  - El indicador **MIC COMPRESSOR** muestra en decibeles la reducción aplicada.
+- The spectrum extremes work in **Shelving** mode, with a range of ±15 dB.
+- The controls are specifically designed for human voice:
+
+| Band          | Type     | Center Frequency | Main Function                                    |
+| ------------- | -------- | ---------------- | ------------------------------------------------ |
+| Bass          | Shelving | —                | Adds "body" and "weight" to voice                |
+| Low-mids      | Peak EQ  | 160 Hz          | Controls resonance or popping in male voices     |
+| High-mids     | Peak EQ  | 5 kHz           | Reduces **sibilance** and hissing problems       |
+| Treble        | Shelving | —                | Adds "presence" and improves intelligibility     |
+
+---
+
+## Compression
+
+The **compressor** maintains constant voice peaks:
+
+- Acts whenever the microphone mix exceeds **0 VU**.
+- Below that level, the dynamic range remains intact.
+- Has steep compression slope, with fast attack and release times.
+- The action is shown on the main meter bridge:
+  - The **MIC COMPRESSOR** indicator shows the applied reduction in decibels.

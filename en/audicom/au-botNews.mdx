@@ -1,44 +1,52 @@
 ---
 title: "BotNews"
-description: "Automatización de noticias de último momento"
-keywords: ["botnews", "noticias", "ia"]
+description: "Breaking news automation"
+keywords: ["botnews", "news", "ai"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f8ea04ecc55e4bf18b0c3fd3cb93bfbce73dfde05611d67036b0f0b75c08b1a4"
+
 ---
 
-## Conceptos Generales
+## General Concepts
 
-**BotNews** es un potente gestor y generador de reportes de noticias al aire, orientado a emisoras con un alto nivel de **automatización**.
+**BotNews** is a powerful on-air news report manager and generator, designed for stations with a high level of **automation**.
 
-- Funciona de manera **autónoma**, sin intervención del operador.\
-  Interrumpe la programación para lanzar un bloque de noticias y luego retoma la emisión ajustando los tiempos.
-- Soporta la reproducción de **archivos de audio enviados remotamente**.
-- Emplea técnicas de **text-to-speech (TTS)** y voces generadas por **IA** para leer textos enviados de forma remota.
-- Genera sus propios reportes en base a **temas predefinidos** mediante **sindicación web (RSS)**, que son leídos al aire por voces virtuales.
+- Works **autonomously**, without operator intervention.\
+  Interrupts programming to broadcast a news block and then resumes transmission adjusting timing.
+- Supports playback of **remotely sent audio files**.
+- Uses **text-to-speech (TTS)** and **AI-generated** voices to read remotely sent texts.
+- Generates its own reports based on **predefined topics** through **web syndication (RSS)**, which are read on-air by virtual voices.
 
-Durante una programación automática (AutoDJ), BotNews monitorea la llegada de **noticias remotas**.\
-Cuando una noticia aparece, se agenda **inmediatamente** al aire, con apertura, separadores y cierre.
+During automated programming (AutoDJ), BotNews monitors for incoming **remote news**.\
+When a news item arrives, it is **immediately** scheduled for broadcast, with opener, separators and closer.
 
-Los archivos de noticias pueden recibirse desde carpetas **FTP sincronizadas** o adjuntos en **e-mails** mediante funciones de **AUDICOM WebTools**.
+News files can be received from **synchronized FTP folders** or email attachments through **AUDICOM WebTools** functions.
 
-Para evitar interrumpir una tanda comercial, BotNews evalúa el **tiempo restante del título actual**:
+To avoid interrupting commercial breaks, BotNews evaluates the **remaining time of the current title**:
 
-- Solo inserta la noticia si faltan **más de 25 segundos** para finalizar.
+- Only inserts the news if there are **more than 25 seconds** left to finish.
 
-Además, existe un **tiempo de confirmación** antes de validar un archivo como apto:
+Additionally, there is a **confirmation time** before validating a file as suitable:
 
-- Por defecto: **30 segundos** (configurable).
-- Esto permite que un periodista modifique o reemplace un archivo, por ejemplo, en grabaciones telefónicas o transferencias FTP.
+- Default: **30 seconds** (configurable).
+- This allows a journalist to modify or replace a file, for example, in telephone recordings or FTP transfers.
 
 <Note>
-  BotNews **no** fue diseñado para usarse mientras la **Pantalla de Aire** está en un bloque **en vivo (LIVE)**.
+  BotNews was **not** designed to be used while the **On-Air Screen** is in a **LIVE** block.
 </Note>
 
 ---
 
-## Pantalla y Configuración
+## Screen and Configuration
 
-El módulo se ejecuta manualmente desde el menú **“+”** en la barra de herramientas.\
-Al iniciarlo, se presenta la siguiente ventana:
+The module is manually launched from the **"+"** menu in the toolbar.\
+When started, the following window appears:
 
 <img
   src="/images/audicom/au-BotNews.png"
@@ -47,57 +55,57 @@ Al iniciarlo, se presenta la siguiente ventana:
   style={{ width:"65%" }}
 />
 
-- **Directorio origen de noticias**:\
-  Hasta **4 carpetas** de sistema pueden definirse como origen de noticias.
-  - Si no se necesitan, deje campos vacíos.
-  - Se recomienda mantenerlas dentro de la carpeta **AUDICOM**.
-  - Pueden ser carpetas locales o de red (`UNC`).
+- **News source directory**:\
+  Up to **4 system folders** can be defined as news sources.
+  - If not needed, leave fields empty.
+  - Recommended to keep them within the **AUDICOM** folder.
+  - Can be local or network folders (`UNC`).
 
-  Los archivos emitidos se mueven a la carpeta `\Audicom\Audio\OldNews`, renombrados como:
+  Broadcasted files are moved to the `\Audicom\Audio\OldNews` folder, renamed as:
 
-DiaDeLaSemana_Hora_Minuto.wav
+DayOfWeek_Hour_Minute.wav
 
-Esto evita que vuelvan a salir al aire.
+This prevents them from being rebroadcast.
 
 <Note>
-  Si la carpeta origen está en una unidad de red, se requiere **permiso de escritura**. De lo contrario, la noticia quedará en bucle y será programada indefinidamente.
+  If the source folder is on a network drive, **write permission** is required. Otherwise, the news will loop and be scheduled indefinitely.
 </Note>
 
-- **Apertura**: Archivo reproducido antes del reporte.\
-  Debe estar en la **carpeta origen** e incluirse con nombre completo y extensión.\
-  Si se deja vacío, no se reproducirá aunque exista.
-- **Noticia**: Permite definir un **filtro** para seleccionar archivos de noticias.\
-  Ejemplo:
+- **Opening**: File played before the report.\
+  Must be in the **source folder** and included with full name and extension.\
+  If left empty, it won't play even if it exists.
+- **News**: Allows defining a **filter** to select news files.\
+  Example:
 
-urgente\*.mp3
+urgent\*.mp3
 
-Solo se programarán archivos cuyo nombre comience con “urgente”.
+Only files whose name begins with "urgent" will be scheduled.
 
-- **Locutor**: Define la **voz del sistema** que leerá los textos.
-- El campo a la derecha ajusta la **atenuación en dB** para la música de fondo.
-- **Back music**: Loop de audio utilizado como **fondo** para las noticias leídas.
-- **Cierre**: Archivo reproducido después de la noticia (misma lógica que Apertura).
-- **Safe Time (tiempo de seguridad)**:\
-  Tiempo de espera (en minutos) antes de validar una noticia recién generada.
-- Útil cuando un periodista necesita **revisar, confirmar o regrabar** una nota.
+- **Announcer**: Defines the **system voice** that will read the texts.
+- The field on the right adjusts the **attenuation in dB** for background music.
+- **Back music**: Audio loop used as **background** for read news.
+- **Closing**: File played after the news (same logic as Opening).
+- **Safe Time**:\
+  Wait time (in minutes) before validating a newly generated news item.
+- Useful when a journalist needs to **review, confirm or re-record** a story.
 
 ---
 
-## Controles Principales
+## Main Controls
 
-- **Start**: Activa BotNews en segundo plano.
-- Cuando detecta y valida una noticia, inserta un **PAUSE** en CyberPlay a continuación del título en reproducción.
-- Al finalizar dicho título, BotNews emerge en la Pantalla de Aire y reproduce el bloque de noticias.
-- Una vez terminado, AUDICOM retoma la programación ajustando tiempos.
+- **Start**: Activates BotNews in the background.
+- When it detects and validates a news item, it inserts a **PAUSE** in CyberPlay after the currently playing title.
+- When that title ends, BotNews emerges in the On-Air Screen and plays the news block.
+- Once finished, AUDICOM resumes programming adjusting timing.
 
-Los archivos emitidos se mueven a `\Audicom\Audio\OldNews` y también quedan registrados en los **logs de emisión**.
+Broadcasted files are moved to `\Audicom\Audio\OldNews` and are also recorded in the **broadcast logs**.
 
 - **Play**:\
-  Permite durante la configuración **previsualizar** voces TTS y ajustar el nivel de la música de fondo.
-- **Detener**:\
-  Interrumpe la reproducción de audio o la lectura TTS en curso.
+  Allows during configuration to **preview** TTS voices and adjust background music level.
+- **Stop**:\
+  Interrupts current audio playback or TTS reading.
 
 <Note>
-  El módulo BotNews soporta el modo **Autorun**.\
-  Si este está habilitado en AUDICOM (Panel de Configuración General), BotNews se activará automáticamente si, tras ejecutarlo, no se realiza ninguna operación en un minuto.
+  The BotNews module supports **Autorun** mode.\
+  If this is enabled in AUDICOM (General Configuration Panel), BotNews will automatically activate if, after launching it, no operation is performed within one minute.
 </Note>

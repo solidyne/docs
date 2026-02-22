@@ -1,130 +1,138 @@
 ---
-title: "Comunicaciones"
-description: "Conexión y configuración de líneas telefónicas"
-keywords: ["telco", "bluetooth", "null", "mix-minus", "rechazo"]
-tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+title: "Communications"
+description: "Telephone line connection and configuration"
+keywords: ["telco", "bluetooth", "null", "mix-minus", "rejection"]
+tags: ["studio consoles", "Classic line", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "3482d5ba6f0754f735201e29d4ee054a0c49d6f4baadbc1061fe7b3ba8de00f4"
+
 ---
 
 import tierras from '/snippets/snippet-tierras.mdx';
 
-## Conexión de líneas telefónicas
+## Telephone Line Connection
 
-El canal de híbrido maneja **dos líneas telefónicas fijas** y **un teléfono celular** vinculado por Bluetooth.
+The hybrid channel handles **two landlines** and **one cell phone** connected via Bluetooth.
 
-En el panel posterior de la consola hay **cuatro conectores RJ11**:
+The console's rear panel has **four RJ11 connectors**:
 
 <img
   src="/images/816/816-POTS.png"
-  alt="Conectores RJ11"
+  alt="RJ11 Connectors"
   title="816816 POTS Pn"
   className="mx-auto"
   style={{ width:"40%" }}
 />
 
-- Dos líneas telefónicas (a conectar a la red pública o a una central PBX).
-- Dos teléfonos asociados (etiquetados como “SET”), generalmente usados por producción para atender llamadas.
+- Two telephone lines (to connect to public network or PBX).
+- Two associated telephone sets (labeled "SET"), typically used by production to handle calls.
 
 <Warning>
-  Las líneas están protegidas contra sobretensiones (hasta 2.000 V) mediante varistores internos.\
-  Sin embargo, es imprescindible instalar \*\*protectores externos \*\*gaseosos conectados a tierra de jabalina de 2 m para centrales públicas. **La garantía del equipo no cubre daños por rayos**.
+  Lines are protected against overvoltage (up to 2,000 V) through internal varistors.\
+  However, it is essential to install **external gas discharge protectors** connected to a 2m ground rod for public networks. **Equipment warranty does not cover lightning damage**.
 </Warning>
 
 <tierras />
 
 ---
 
-### Ajuste de rechazo (Null)
+### Null Adjustment
 
-Este ajuste aplica únicamente a las **líneas terrestres**. Se realiza una sola vez durante la instalación.\
-El rechazo evita que la señal transmitida retorne mezclada a la voz del entrevistado, mejorando la calidad del locutor local.
+This adjustment applies only to **landlines**. It is performed once during installation.\
+Null rejection prevents transmitted signal from returning mixed with the interviewee's voice, improving local speaker quality.
 
-**Procedimiento:**
+**Procedure:**
 
-1. Asigne el Canal de Telecomunicaciones a la salida **REC** (para no ajustar al aire).
-2. Establezca una llamada y pida al entrevistado que hable.
-3. Ajuste el nivel de la lamada con el fader del Canal 8, hasta que el VUmetro REC alcanze la zona blanca.
-4. Active un canal de micrófono (sobre REC) y pida a alguien que hable desde el Estudio.
-5. Escuchando la voz local en REC gire el ajuste el control **NULL** en un sentido y en otro hasta encontrar el punto óptimo, que se obtiene cuando la señal local que se suma al micrófono vía híbrido es mínima.
-6. Este ajuste depende de la línea telefónica. Si cambia la línea telefónica, repita el ajuste.
+1. Assign the Telecommunications Channel to the **REC** output (to avoid adjusting on-air).
+2. Establish a call and ask the interviewee to speak.
+3. Adjust the call level with Channel 8 fader until the REC VUmeter reaches the white zone.
+4. Activate a microphone channel (on REC) and ask someone to speak from the Studio.
+5. While listening to the local voice on REC, turn the **NULL** control in both directions to find the optimal point, achieved when the local signal mixing through the hybrid is minimal.
+6. This adjustment depends on the telephone line. If the telephone line changes, repeat the adjustment.
 
 ---
 
-## Vincular un teléfono móvil
+## Pairing a Mobile Phone
 
-Cualquier celular con **Bluetooth** puede vincularse a la DX816/822.\
-La distancia máxima es de 5 m, aunque se recomienda mantener el equipo cerca (nunca sobre la consola).
+Any cell phone with **Bluetooth** can be paired with the DX816/822.\
+Maximum distance is 5 m, though keeping the device nearby is recommended (never on top of the console).
 
-El teléfono registra una sola vez el código único de la consola (ID). Posteriormente, la conexión es automática al activar Bluetooth en ambos equipos.
+The phone registers the console's unique ID code once. Subsequently, connection is automatic when Bluetooth is activated on both devices.
 
 <Warning>
-  El módulo Bluetooth recibe alimentación desde los canales **USB-1 o USB-2**.\
-  Si ninguno está conectado a una PC, utilice una **fuente USB externa** (un cargador estándar) con el cable suministrado.
+  The Bluetooth module receives power from **USB-1 or USB-2** channels.\
+  If neither is connected to a PC, use an **external USB power supply** (standard charger) with the supplied cable.
 </Warning>
 
-### **Procedimiento de vinculación:**
+### **Pairing Procedure:**
 
 <img
   src="/images/816/816-descripción_TELCO.jpg"
-  alt="816 Descripción TELCO Jp"
-  title="816 Descripción TELCO Jp"
+  alt="816 Description TELCO Jp"
+  title="816 Description TELCO Jp"
   className="mx-auto"
   style={{ width:"77%" }}
 />
 
-1. **En la consola:** verifique que el LED del botón **CELL PHONE [3]** esté apagado.
-2. Si Bluetooth está encendido (LED destellando en azul), apáguelo manteniendo presionado el botón **Bluetooth [2]** hasta que deje de destellar.
-3. **En la consola,** activar el modo “búsqueda” (a este modo se puede acceder solo si Bluetooth se encuentra apagado). Pulsar y <u>mantener presionado</u> el botón BLUETOOTH durante unos 10 segundos. Observará mientras presiona el botón que a los pocos segundos destella lentamente en azul y más tarde el destello se torna rápido <u>alternando</u> entre azul y rojo (ver modo C en tabla), indicando que DX816/822 entró en modo “búsqueda” para su reconocimiento en el móvil.
-4. **En el celular:** Activar Bluetooth y realizar una búsqueda de dispositivos.
-5. Cuando el móvil encuentra al Bluetooth de la consola lo muestra en pantalla como **Solidyne BTM641**.
-6. Conectar el móvil al dispositivo **Solidyne BTM641**.
-7. El dispositivo Bluetooth de la consola ya está registrado en el teléfono; no siendo necesario repetir la operación (excepto que el dispositivo **Solidyne BTM641 sea desvinculado (eliminado) en el teléfono**).
-8. En la consola, el boton **CELL PHONE** queda iluminado en azul con intermitencia lenta (modo A) indicando que está conectado al móvil.
+1. **On the console:** verify the **CELL PHONE [3]** LED button is off.
+2. If Bluetooth is on (LED flashing blue), turn it off by holding the **Bluetooth [2]** button until flashing stops.
+3. **On the console,** activate "search" mode (only accessible when Bluetooth is off). Press and <u>hold</u> the BLUETOOTH button for about 10 seconds. While pressing, you'll notice slow blue flashing initially, then rapid <u>alternating</u> blue and red flashing (see mode C in table), indicating DX816/822 entered "search" mode for phone discovery.
+4. **On the phone:** Enable Bluetooth and search for devices.
+5. When the phone finds the console's Bluetooth, it displays as **Solidyne BTM641**.
+6. Connect the phone to the **Solidyne BTM641** device.
+7. The console's Bluetooth device is now registered in the phone; no need to repeat unless **Solidyne BTM641 is unpaired (deleted) from the phone**.
+8. On the console, the **CELL PHONE** button shows slow blue flashing (mode A) indicating connection to the phone.
 
-**Modos de iluminación del botón CELL PHONE [3]**
+**CELL PHONE [3] Button Lighting Modes**
 
-| Modo                                          | Estado / Descripción                                                                                                                                                                                                                                   |
-| :-------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **A – Móvil conectado**                       | Encendido breve (1s) en azul con apagado largo (2s). Indica que está conectado al celular sin cursar llamada.                                                                                                                                          |
-| **B – Móvil no conectado / Llamada en curso** | Encendido lento (2s) en azul con apagado corto (1s). Indica que se está cursando una llamada. Al cortar la comunicación retorna al modo “A”. <br />También indica Bluetooth encendido sin teléfono móvil conectado. Cuando se conecta pasa a modo “A”. |
-| **C – Modo búsqueda (Pairing)**               | Destello rápido alternando rojo-azul. Permite vincular un celular por primera vez.                                                                                                                                                                     |
-| **D – Llamada entrante**                      | Encendido permanente en color azul.                                                                                                                                                                                                                    |
-| **E – En el aire**                            | Encendido permanente en color rojo.                                                                                                                                                                                                                    |
+| Mode                                        | Status / Description                                                                                                                                                                                                                               |
+| :----------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A – Mobile Connected**                    | Brief blue on (1s) with long off (2s). Indicates connected to phone with no active call.                                                                                                                                                           |
+| **B – Mobile Disconnected / Call in Progress** | Slow blue on (2s) with short off (1s). Indicates active call. Returns to mode "A" when call ends. <br />Also indicates Bluetooth on without phone connected. Switches to mode "A" when connected. |
+| **C – Search Mode (Pairing)**              | Rapid red-blue alternating flash. Allows first-time phone pairing.                                                                                                                                                                                 |
+| **D – Incoming Call**                      | Solid blue.                                                                                                                                                                                                                                        |
+| **E – On Air**                             | Solid red.                                                                                                                                                                                                                                         |
 
 ---
 
-### Ajuste del volumen Bluetooth
+### Bluetooth Volume Adjustment
 
 <Danger>
-  El ajuste debe hacerse durante una llamada activa por Bluetooth.\
-  El volumen del celular es independiente del volumen del enlace Bluetooth.\
-  Si ajusta sin llamada activa, solo cambiará el parlante interno del teléfono.
+  Adjustment must be done during an active Bluetooth call.\
+  Phone volume is independent from Bluetooth link volume.\
+  Adjusting without an active call only changes the phone's internal speaker.
 </Danger>
 
-- El volumen Bluetooth queda almacenado en el teléfono.
-- Se recomienda fijarlo al **máximo** para lograr la mejor relación señal-ruido.
+- Bluetooth volume is stored in the phone.
+- Setting to **maximum** is recommended for best signal-to-noise ratio.
 
 ---
 
-### Apagar Bluetooth
+### Turning Off Bluetooth
 
-Para apagar, mantenga presionado el botón **BLUETOOTH** hasta que el LED **CELL PHONE** deje de destellar.
+To turn off, hold the **BLUETOOTH** button until the **CELL PHONE** LED stops flashing.
 
 ---
 
-### Re-conectar un dispositivo vinculado
+### Reconnecting a Paired Device
 
-1. **En la consola:** active Bluetooth con el botón **BLUETOOTH** hasta que el LED **CELL PHONE** quede destellando en azul (5 segs. aprox.).
-2. **En el celular:** active Bluetooth. Cuando aparezca la conexión, el celular quedará listo para operar. Al hacer o recibir una llamada, el audio se envía a la consola.
+1. **On the console:** activate Bluetooth with the **BLUETOOTH** button until the **CELL PHONE** LED flashes blue (approx. 5 secs).
+2. **On the phone:** enable Bluetooth. When connection appears, the phone is ready to operate. When making or receiving calls, audio routes to the console.
 
 <Note>
-  En algunos celulares, la re-conexión no es automática y es necesario elegir manualmente el dispositivo **Solidyne BTM641** en una lista.
+  On some phones, reconnection isn't automatic and manually selecting the **Solidyne BTM641** device from a list is required.
 </Note>
 
 ---
 
-## Híbrido externo
+## External Hybrid
 
-Las consolas DX incluyen un conector para **External Hybrid**, que maneja programa y retorno de híbrido externo mediante un jack TRS de 6,35 mm (¼”).
+DX consoles include an **External Hybrid** connector that handles program and hybrid return through a 6.35mm (¼") TRS jack.
 
 <img
   src="/images/816/816-HibExt.bmp"
@@ -134,7 +142,7 @@ Las consolas DX incluyen un conector para **External Hybrid**, que maneja progra
   style={{ width:"77%" }}
 />
 
-- **Salida (Tip)**: Retorno de micrófonos y programa hacia la línea. Esta señal es una copia de PGM menos el audio de líneas telefónicas (**MIX-MINUS**). Conectar a la \*\*entrada "retorno a líneas" \*\*del híbrido externo.
-- **Entrada (Ring)**: Señal proveniente del híbrido externo hacia la consola. Se suma al bus de PGM, pero no al MIX-MINUS. Deberá ser conectada a la salida del híbrido telefónico externo.
+- **Output (Tip)**: Microphone and program return to line. This signal is a PGM copy minus telephone line audio (**MIX-MINUS**). Connect to the external hybrid's **line return input**.
+- **Input (Ring)**: Signal from external hybrid to console. Sums to PGM bus but not to MIX-MINUS. Should connect to external telephone hybrid output.
 
-El audio de retorno pasa por el mismo circuito que el híbrido interno. El fader principal del **Canal 8** opera igual que con las líneas internas, permitiendo enviar al aire o a CUE según la posición.
+Return audio passes through the same circuit as the internal hybrid. The **Channel 8** main fader operates as with internal lines, allowing routing to air or CUE based on position.

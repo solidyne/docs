@@ -1,30 +1,38 @@
 ---
-title: "Desde el display"
-description: "Configuraciones desde el frente del equipo"
-keywords: ["control", "bloqueo", "contraseña", "display", "setup", "configuración"]
-tags: ["procesadores", "542"]
----
-
-## Control desde el panel frontal
-
-Los aspectos esenciales del 542APC se pueden definir directamente desde el frente del equipo.\
-La unidad presenta una **pantalla OLED** y una **rueda de comando con función pulsador**.
-
-1. Girando la rueda se navegan las opciones.
-2. Pulsando la rueda se accede a las opciones de una pantalla.
-3. Girando nuevamente se navegan las opciones dentro de esa pantalla.
-4. Para modificar una opción:
-   - Pulse la rueda sobre la opción.
-   - Gire para cambiar su valor o estado.
-   - Pulse nuevamente para confirmar.
-5. Para salir, seleccione **BACK** y confirme.
+title: "From the display"
+description: "Front panel configuration"
+keywords: ["control", "lock", "password", "display", "setup", "configuration"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "cb9447d6d3d7139191c62ebc0af21dfad75616cf422364320f7944624b28dbf6"
 
 ---
 
-### Pantalla inicial y presets
+## Front Panel Control
 
-- Al encender, aparece por unos segundos la **pantalla de inicio** con la versión de firmware.
-- Luego se muestra la **dirección IP**, la **MAC** y el **preset de procesado actual**.
+Essential aspects of the 542APC can be configured directly from the front panel.\
+The unit features an **OLED display** and a **push-to-select control wheel**.
+
+1. Turn the wheel to navigate options.
+2. Press the wheel to access screen options.
+3. Turn again to navigate options within that screen.
+4. To modify an option:
+   - Press the wheel on the option.
+   - Turn to change its value or state.
+   - Press again to confirm.
+5. To exit, select **BACK** and confirm.
+
+---
+
+### Home Screen and Presets
+
+- At startup, the **home screen** appears briefly showing the firmware version.
+- Then it displays the **IP address**, **MAC**, and **current processing preset**.
 
   <img
     src="/images/542/542-oled-home.png"
@@ -33,18 +41,18 @@ La unidad presenta una **pantalla OLED** y una **rueda de comando con función p
     style={{ width:"45%" }}
   />
 
-Para cambiar presets:
+To change presets:
 
-1. Pulse la rueda.
-2. Gire para navegar entre los **32 presets** (16 de fábrica \+ 16 de usuario).
-3. Pulse la rueda para confirmar.
+1. Press the wheel.
+2. Turn to navigate between **32 presets** (16 factory + 16 user).
+3. Press the wheel to confirm.
 
 ---
 
-### Pantalla de bloqueo (LOCK)
+### Lock Screen (LOCK)
 
-La pantalla **LOCK** se accede girando la rueda desde la pantalla inicial.\
-Permite activar/desactivar el acceso por contraseña.
+The **LOCK** screen is accessed by turning the wheel from the home screen.\
+It enables/disables password-protected access.
 
 <img
   src="/images/542/542-oled-lock.png"
@@ -53,21 +61,21 @@ Permite activar/desactivar el acceso por contraseña.
   style={{ width:"45%" }}
 />
 
-- Para **bloquear**, seleccione LOCK y pulse.
-- Para **desbloquear**, pulse nuevamente sobre LOCK.
-  - Si está activa la contraseña, será solicitada (predeterminada: `1234`).
+- To **lock**, select LOCK and press.
+- To **unlock**, press LOCK again.
+  - If password is active, it will be requested (default: `1234`).
 
 <Info>
-  Cuando el equipo está bloqueado, se pueden navegar pantallas pero no modificar opciones.
+  When the unit is locked, screens can be browsed but options cannot be modified.
 </Info>
 
 ---
 
-### Pantalla de entradas (INPUTS)
+### Inputs Screen (INPUTS)
 
-Muestra el nivel de señal de todas las entradas.\
-La entrada activa se indica con una pequeña **flecha** a la derecha del número de entrada.\
-Predeterminada de fábrica: **Analógica XLR**.
+Shows signal level for all inputs.\
+The active input is indicated by a small **arrow** to the right of the input number.\
+Factory default: **XLR Analog**.
 
 <img
   src="/images/542/542-oled-entradas.jpg"
@@ -76,21 +84,21 @@ Predeterminada de fábrica: **Analógica XLR**.
   style={{ width:"32%" }}
 />
 
-#### Cambiar la entrada (desde panel frontal)
+#### Changing the Input (from front panel)
 
-1. Gire la rueda hasta visualizar **INPUT**.
-2. Pulse la rueda para cambiar la entrada activa.
-3. Gire para elegir la entrada (ejemplo: `2:ANALOG2`).
-4. Pulse para confirmar.
-5. La entrada activa queda indicada con una flecha.
-6. El ajuste de ganancia se realiza desde **CONFIGURACIÓN**.
+1. Turn the wheel until **INPUT** is displayed.
+2. Press the wheel to change the active input.
+3. Turn to select the input (example: `2:ANALOG2`).
+4. Press to confirm.
+5. The active input is indicated with an arrow.
+6. Gain adjustment is done from **SETUP**.
 
 ---
 
-### Monitor de salidas
+### Outputs Monitor
 
-Muestra el nivel de señal en cada salida.\
-El ajuste de niveles se realiza desde el menú **SETUP**, con procedimiento similar al de entradas.
+Shows signal level for each output.\
+Level adjustment is done from the **SETUP** menu, following a similar procedure to inputs.
 
 <img
   src="/images/542/542-oled-salidas.png"
@@ -101,9 +109,9 @@ El ajuste de niveles se realiza desde el menú **SETUP**, con procedimiento simi
 
 ---
 
-### Monitor de procesado
+### Processing Monitor
 
-Muestra la acción de los procesadores internos.
+Shows internal processors action.
 
 <img
   src="/images/542/542-oled-procesado.png"
@@ -112,20 +120,20 @@ Muestra la acción de los procesadores internos.
   style={{ width:"45%" }}
 />
 
-- AGC de banda completa y multibanda
-- Compresores y limitadores multibanda
-- Limitador de banda ancha
-- Recortador final
+- Full-band and multiband AGC
+- Multiband compressors and limiters
+- Wideband limiter
+- Final clipper
 
 <Note>
-  Los parámetros de procesado se ajustan únicamente desde las **pantallas de control web**.
+  Processing parameters can only be adjusted from the **web control panels**.
 </Note>
 
 ---
 
-### Auriculares
+### Headphones
 
-Permite ajustar el **nivel de auriculares**.
+Allows adjustment of **headphone level**.
 
 <img
   src="/images/542/542-oled-auris.jpg"
@@ -134,31 +142,31 @@ Permite ajustar el **nivel de auriculares**.
   style={{ width:"33%" }}
 />
 
-- Gire la rueda para modificar directamente el volumen.
+- Turn the wheel to directly modify volume.
 
-Fuentes de señal disponibles:\
-a) Entradas analógicas o digitales\
-b) Sintonizador FM interno\
-c) Salida del AGC\
-d) Audio final procesado (con de-énfasis)
+Available signal sources:\
+a) Analog or digital inputs\
+b) Internal FM tuner\
+c) AGC output\
+d) Final processed audio (with de-emphasis)
 
-Para cambiar la fuente:
+To change the source:
 
-1. Pulse la rueda.
-2. Gire para seleccionar la fuente.
-3. Pulse para confirmar.
+1. Press the wheel.
+2. Turn to select the source.
+3. Press to confirm.
 
-Para \*\*salir \*\*de la pantalla HEADPHONES:
+To **exit** the HEADPHONES screen:
 
-- **Mantenga pulsada la rueda** hasta que aparezca un menú emergente con opciones.
+- **Press and hold the wheel** until a popup menu with options appears.
 
 ---
 
-### Configuración de sistema (SETUP)
+### System Setup (SETUP)
 
-Desde el panel frontal se pueden editar las principales configuraciones del equipo.
+Main unit configurations can be edited from the front panel.
 
-1. Gire la rueda hasta visualizar **SETUP MENU**.
+1. Turn the wheel until **SETUP MENU** appears.
 
    <img
      src="/images/542/542-oled-sistema.png"
@@ -166,7 +174,7 @@ Desde el panel frontal se pueden editar las principales configuraciones del equi
      title="542 Oled Sistema Pn"
      style={{ width:"45%" }}
    />
-2. Pulse para visualizar las opciones.
+2. Press to view options.
 
    <img
      src="/images/542/542-oled-sistema-setup.png"
@@ -175,12 +183,12 @@ Desde el panel frontal se pueden editar las principales configuraciones del equi
      style={{ width:"45%" }}
    />
 
-#### Configuración de entrada
+#### Input Setup
 
-- `INPUT SEL`: selecciona la entrada activa.
-- `GAIN`: ajusta la ganancia de la entrada activa en un rango de **±14 dB**.
-  - Nivel \+4 dBu equivale a –18 dBfs (AES K18), con **18 dB de headroom**.
-  - Ajuste la ganancia para que los picos a**0 VU en la consola**  estén entre\*\*–22 y –9 dBfs \*\* en el indicador del procesador.
+- `INPUT SEL`: selects active input.
+- `GAIN`: adjusts active input gain within **±14 dB** range.
+  - +4 dBu level equals –18 dBfs (AES K18), with **18 dB headroom**.
+  - Adjust gain so **0 VU peaks at console** fall between **–22 and –9 dBfs** on processor meter.
 
   <img
     src="/images/542/542-oled-setup-entradas.jpg"
@@ -189,23 +197,23 @@ Desde el panel frontal se pueden editar las principales configuraciones del equi
     style={{ width:"34%" }}
   />
 
-Para modificar la ganancia:
+To modify gain:
 
-1. Gire la rueda, seleccione `IN` y pulse.
-2. (Opcional) Para cambiar la entrada, girar la rueda, seleccionar `INPUT SEL` y pulsar. Girar hasta visualizar la entrada deseada y pulsar para confirmar.
-3. Seleccione `GAIN` y pulse.
-4. Gire para ajustar ganancia.
-5. Pulse para confirmar.
-6. Seleccione **BACK** para salir.
-7. Gire hasta **BACK** en el menú SETUP para finalizar.
-8. Los cambios se guardan automáticamente.
+1. Turn wheel, select `IN` and press.
+2. (Optional) To change input, turn wheel, select `INPUT SEL` and press. Turn until desired input appears and press to confirm.
+3. Select `GAIN` and press.
+4. Turn to adjust gain.
+5. Press to confirm.
+6. Select **BACK** to exit.
+7. Turn to **BACK** in SETUP menu to finish.
+8. Changes are saved automatically.
 
-#### Configuración de salidas
+#### Outputs Setup
 
-- `OUTPUT ADJ`: permite elegir una salida.
-- `GAIN`: ajusta el nivel de la salida seleccionada, con procedimiento similar al explicado para las entradas.
+- `OUTPUT ADJ`: allows selecting an output.
+- `GAIN`: adjusts selected output level, following similar procedure as inputs.
 
-#### Generador estéreo
+#### Stereo Generator
 
 <img
   src="/images/542/542-oled-setup-gen_estereo.jpg"
@@ -214,13 +222,13 @@ Para modificar la ganancia:
   style={{ width:"30%" }}
 />
 
-Permite ajustar:
+Allows adjustment of:
 
-- Nivel de sub-portadora piloto ST
-- Nivel de sub-portadora RDS
-- Niveles de MPX-1 y MPX-2 (volts pico a pico).
+- ST pilot subcarrier level
+- RDS subcarrier level
+- MPX-1 and MPX-2 levels (peak-to-peak volts)
 
-#### Receptor de FM
+#### FM Receiver
 
 <img
   src="/images/542/542-oled-setup-sintonizador.jpg"
@@ -229,12 +237,12 @@ Permite ajustar:
   style={{ width:"31%" }}
 />
 
-Permite ingresar:
+Allows entering:
 
-- Tipo de banda FM
-- Frecuencia a sintonizar
+- FM band type
+- Frequency to tune
 
-#### Configuración Ethernet
+#### Ethernet Setup
 
 <img
   src="/images/542/542-oled-setup-ethernet.jpg"
@@ -243,17 +251,17 @@ Permite ingresar:
   style={{ width:"32%" }}
 />
 
-Configura el puerto Ethernet de control remoto.\
-De fábrica: **DHCP activado**.\
-La IP asignada se muestra en la pantalla de inicio.
+Configures remote control Ethernet port.\
+Factory default: **DHCP enabled**.\
+Assigned IP is shown on home screen.
 
 ---
 
-### Monitor de FM
+### FM Monitor
 
-El sintonizador interno permite analizar parámetros de la transmisión.
+The internal tuner allows analyzing transmission parameters.
 
-Pantallas disponibles:
+Available screens:
 
 - **FM MONITOR**
 - **FM MODULATION MONITOR**

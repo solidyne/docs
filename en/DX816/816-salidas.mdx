@@ -1,60 +1,68 @@
 ---
-title: "Salidas de audio"
-description: "Descripción y conexionado de las salidas de audio"
-keywords: ["salidas"]
-tags: "consolas de estudio,linea Classic,DX816,DX822"
+title: "Audio outputs"
+description: "Description and connection of audio outputs"
+keywords: ["outputs"]
+tags: "studio consoles,Classic line,DX816,DX822"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "4f6af6fb9a94f99c28e2dbc4d6e93b3a40bd52d6183f4f7e8982cb634858068d"
+
 ---
 
 <img
   src="/images/816/816-trasero-fuente.png"
-  alt="816 Trasero Fuente Pn"
-  title="816 Trasero Fuente Pn"
+  alt="816 Rear Power Supply"
+  title="816 Rear Power Supply"
   className="mx-auto"
   style={{ width:"63%" }}
 />
 
-### Salida de programa
+### Program output
 
-La salida principal se denomina **PROGRAMA (PGM)**. Normalmente es la señal que se envía al aire y está disponible en varias formas:
+The main output is called **PROGRAM (PGM)**. It is typically the signal sent to air and is available in several formats:
 
-- **RJ45**: entrega señal **PGM balanceada**.\
-  Utilice siempre este conector para llevar señal analógica al procesador de audio o al enlace.
+- **RJ45**: delivers **balanced PGM signal**.\
+  Always use this connector to send analog signal to the audio processor or STL link.
 
   <Tip>
-    [Diagramas de pines y cables adaptadores para armado de cables](/es/diagramas/RJ45-pinout).
+    [Pin diagrams and adapter cables for cable assembly](/es/diagramas/RJ45-pinout).
   </Tip>
   <Info>
-    Los procesadores Solidyne **362HD** y **542APC** incluyen entradas analógicas conectorizadas con RJ45. La conexión se realiza con un cable tipo Ethernet **STP blindado RJ45-RJ45**.
+    Solidyne **362HD** and **542APC** processors include analog inputs with RJ45 connectors. Connection is made using a **shielded STP RJ45-RJ45** Ethernet cable.
   </Info>
-- **TRS hembra**: entrega señal PGM estéreo no balanceada.
-- **USB (Canal USB-1)**: la señal PGM se envía hacia la computadora conectada, utilizada habitualmente para streaming por Internet.
-- **AoIP (opcional)**: en consolas con módulo /AoIP, PGM está disponible en múltiples formatos (PCM, MP3) sobre conexión Ethernet.
+- **TRS female**: delivers unbalanced stereo PGM signal.
+- **USB (USB-1 Channel)**: PGM signal is sent to the connected computer, typically used for Internet streaming.
+- **AoIP (optional)**: on consoles with /AoIP module, PGM is available in multiple formats (PCM, MP3) over Ethernet connection.
 
 ---
 
-### Salida REC (auxiliar)
+### REC output (auxiliary)
 
-La salida de **grabación (REC)** también se ofrece en varios formatos:
+The **recording (REC)** output is also offered in several formats:
 
-- Balanceada en conector **RJ45**.
-- Estéreo no balanceada en **TRS**.
-- Digital USB a través del **Canal USB-2**.
-- Streaming sobre **Ethernet** en modelos con doble módulo /AoIP.
+- Balanced on **RJ45** connector.
+- Unbalanced stereo on **TRS**.
+- Digital USB through **USB-2 Channel**.
+- Streaming over **Ethernet** on models with dual /AoIP module.
 
-El nivel de salida nominal de la consola es **\+4 dBu @ 0VU**.\
-Cuando se utilizan salidas balanceadas en modo desbalanceado, el nivel cae 6 dB, por lo tanto **0VU = –2 dBu**.
+The nominal output level of the console is **+4 dBu @ 0VU**.\
+When using balanced outputs in unbalanced mode, the level drops 6 dB, therefore **0VU = -2 dBu**.
 
 <Danger>
-  **No utilizar plugs mono (TS)** para conectar las salidas TRS estéreo.
+  **Do not use mono (TS) plugs** to connect stereo TRS outputs.
 </Danger>
 
 <Note>
-  Si conecta un equipo con nivel de entrada **–10 dBV** a la salida de la consola, el nivel puede ser excesivo y producir saturación. En esos casos deberá emplearse un **atenuador fijo (divisor resistivo)** para reducir el nivel.
+  If you connect equipment with **-10 dBV** input level to the console output, the level may be excessive and cause saturation. In these cases, a **fixed attenuator (resistive divider)** must be used to reduce the level.
 </Note>
 
 ---
 
-### Audio del streaming decodificado
+### Decoded streaming audio
 
-La salida **Audio Out to Bal Line 1** está disponible solo en consolas con opción **/AoIP**.\
-Entrega una señal balanceada analógica con el **audio decodificado del streaming entrante** y se utiliza para re-inyectar el audio decodificado a una entrada de línea analógica.
+The **Audio Out to Bal Line 1** output is only available on consoles with **/AoIP** option.\
+It delivers a balanced analog signal with the **decoded audio from incoming streaming** and is used to re-inject the decoded audio to an analog line input.

@@ -1,120 +1,192 @@
 ---
-title: "Ejemplo de Audicom configurado en red"
-description: "Ejemplos de configuración de Audicom en red"
-keywords: ["red"]
+title: "Network Audicom configuration example"
+description: "Examples of Audicom network configuration"
+keywords: ["network"]
 tags: ["Software", "Audicom"]
----
-
-Continuaremos con el ejemplo de una red **peer-to-peer**, compuesta por cinco terminales y un servidor:
-
-1. Terminal de AM — `"AM"`
-2. Terminal de FM — `"FM"`
-3. Estudio de Producción — `"Produccion"`
-4. Producción de Noticias — `"Noticias"`
-5. Administración comercial — `"Comercial"`
-6. Servidor de Audio — `"ServerSolidyne"`
-
-Cada computadora tiene acceso a discos **locales** (propios) y **de red** (otras terminales), siempre mediante referencias **UNC**.
-
-**Terminales AM, FM, Producción, Noticias y Comercial**
-
-- **C:** no compartido; partición dedicada al SO y AUDICOM.
-- **D:** carpeta `Audicom` compartida como lectura/escritura.
-
-**Servidor**
-
-- **C:** no compartido; partición dedicada al SO.
-- **D:** carpeta `Audicom` compartida como lectura/escritura.
-- **E:** carpeta `Audicom` compartida como lectura/escritura.
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f37880707a2f2d83b8c524f33569f0874868f4153761b7d29b93987acfdd2fad"
 
 ---
 
-## Acceso a los datos entre terminales
+Let's continue with a **peer-to-peer** network example, consisting of five terminals and one server:
 
-Módulos como **CyberPlay Editor**, **AutoDj Editor** e **InfoMusic-Prod** permiten trabajar desde una terminal sobre los datos de otra, gracias al menú desplegable **Terminal actual**:
+1. AM Terminal — `"AM"`
+2. FM Terminal — `"FM"`
+3. Production Studio — `"Produccion"`
+4. News Production — `"Noticias"`
+5. Commercial Administration — `"Comercial"`
+6. Audio Server — `"ServerSolidyne"`
 
-- `"Default host"`: referencia a la terminal local, salvo que se redefina en `audicom.ini`.
-- La primera vez, el sistema explora la red para detectar terminales activas (puede demorar).
-- El resultado queda en caché, evitando demoras posteriores.
-- Para refrescar la lista use la opción **\_update hosts...**.
+Each computer has access to **local** disks (own) and **network** disks (other terminals), always through **UNC** references.
+
+**AM, FM, Production, News and Commercial Terminals**
+
+- **C:** not shared; partition dedicated to OS and AUDICOM.
+- **D:** `Audicom` folder shared with read/write access.
+
+**Server**
+
+- **C:** not shared; partition dedicated to OS.
+- **D:** `Audicom` folder shared with read/write access.
+- **E:** `Audicom` folder shared with read/write access.
 
 ---
 
-## Archivos de Audio y Base de Datos
+## Data access between terminals
 
-- **Música y presentaciones** → almacenadas en el **Servidor**.
-- **Spots, promos, Base de Datos y archivos de programación** → locales en cada terminal de Aire (para continuar operando ante fallos de red).
+Modules like **CyberPlay Editor**, **AutoDj Editor** and **InfoMusic-Prod** allow working from one terminal on another terminal's data, thanks to the **Current Terminal** dropdown menu:
 
-Se utilizan **Bases de Datos sincronizadas (SDB)**:
-
-- Cada terminal de aire tiene su propia Base de Datos.
-- Producción trabaja directamente sobre las Bases de Datos de Aire.
-- La organización de archivos se detalla en _Organización de Archivos_.
+- `"Default host"`: references the local terminal, unless redefined in `audicom.ini`.
+- The first time, the system scans the network to detect active terminals (may take time).
+- The result is cached, avoiding subsequent delays.
+- To refresh the list use the **\_update hosts...** option.
 
 ---
 
-## Registro de archivos
+## Audio Files and Database
 
-Flujo recomendado:
+- **Music and presentations** → stored on the **Server**.
+- **Spots, promos, Database and programming files** → local to each On-Air terminal (to continue operating if network fails).
 
-1. En Producción se graban y editan los títulos.
-2. Se envían a la terminal destino (música, spots, promos).
-3. Se registran en la Base de Datos correspondiente.
+**Synchronized Databases (SDB)** are used:
 
-Ejemplo:
+- Each on-air terminal has its own Database.
+- Production works directly on the On-Air Databases.
+- File organization is detailed in _File Organization_.
 
-- Se graba en Producción el archivo `Tu nos has elejido.wav`.
-- Se edita y se deja listo para emisión.
-- Desde File Manager se abre la terminal FM (`\\FM\Audicom`).
-- Se mueve el archivo a FM (drag & drop; `Ctrl` para copiar).
-- En InfoMusic-Prod, se selecciona la terminal FM.
-- Se registra el archivo como **Nuevo** (usando ruta UNC).
-- El archivo queda disponible únicamente en FM.
+---
+
+## File registration
+
+Recommended workflow:
+
+1. Titles are recorded and edited in Production.
+2. They are sent to the destination terminal (music, spots, promos).
+3. They are registered in the corresponding Database.
+
+Example:
+
+- File `Tu nos has elejido.wav` is recorded in Production.
+- It is edited and prepared for broadcast.
+- From File Manager, open the FM terminal (`\\FM\Audicom`).
+- Move the file to FM (drag & drop; `Ctrl` to copy).
+- In InfoMusic-Prod, select the FM terminal.
+- Register the file as **New** (using UNC path).
+- The file becomes available only on FM.
 
 <Note>
-  Normalmente los **avisos comerciales** no se registran en la Base de Datos, salvo que se quiera aplicar fundidos entre avisos.
+  Usually **commercial spots** are not registered in the Database, unless you want to apply crossfades between spots.
 </Note>
 
 ---
 
-## Armado de la programación
+## Programming setup
 
-Si la programación se genera desde **Comercial**:
+If programming is generated from **Commercial**:
 
-- **CyberPlay Editor, AutoDj Editor, InfoMusic-Prod, File Manager** → permiten seleccionar la **terminal actual**.
+- **CyberPlay Editor, AutoDj Editor, InfoMusic-Prod, File Manager** → allow selecting the **current terminal**.
 - **Admicom**:
-  - "Admicom AM" genera pautas comerciales (`.log`) para la terminal AM.
-  - "Admicom FM" genera pautas comerciales (`.log`) para FM.
-- Ejemplo:
-  - Para programar FM, se selecciona FM en CyberPlay Editor.
-  - Los archivos se guardan en `\\FM\Audicom\Log` y `\\FM\Audicom\Pgm`.
-- AutoDj Editor guarda los formatos en `autodj.ini` de cada terminal de Aire.
+  - "Admicom AM" generates commercial logs (`.log`) for AM terminal.
+  - "Admicom FM" generates commercial logs (`.log`) for FM.
+- Example:
+  - To program FM, select FM in CyberPlay Editor.
+  - Files are saved to `\\FM\Audicom\Log` and `\\FM\Audicom\Pgm`.
+- AutoDj Editor saves formats to `autodj.ini` of each On-Air terminal.
 
 <Note>
-  Al insertar títulos en CyberPlay Editor, File Manager o InfoMusic, debe estar seleccionada la **terminal correcta**, o se corre el riesgo de programar títulos no disponibles en esa estación.
+  When inserting titles in CyberPlay Editor, File Manager or InfoMusic, the **correct terminal** must be selected, or you risk programming titles not available at that station.
 </Note>
 
 ---
 
-## Organización de los archivos
+## File organization
 
-### Una única terminal de Aire
+### Single On-Air terminal
 
-- Todos los archivos residen en la **PC de Aire**.
-- Se generan en Producción y luego se transfieren a la Base de Datos de Aire mediante **InfoMusic-Prod**.
-- Al exportar desde Producción → se **copia** a la PC de Aire (queda duplicado).
-- Se recomienda mantener duplicados **promos y artísticas**, ya que ocupan poco espacio y son difíciles de reponer.
+- All files reside on the **On-Air PC**.
+- They are generated in Production and then transferred to the On-Air Database through **InfoMusic-Prod**.
+- When exporting from Production → files are **copied** to On-Air PC (duplicated).
+- It's recommended to keep **promos and station IDs** duplicated, as they take little space and are difficult to replace.
 
 <Note>
-  Todas las carpetas de audio deben estar dentro de `\Audicom\Audio`.\
-  Cualquier carpeta fuera de esa ruta será ignorada por AUDICOM.
+  All audio folders must be inside `\Audicom\Audio`.\
+  Any folder outside this path will be ignored by AUDICOM.
 </Note>
 
-### Múltiples terminales de Aire
+### Multiple On-Air terminals
 
-- Música → almacenada en el **Servidor** (o una terminal que actúe como servidor).
-- Comerciales, promos, fillers y artísticas → **repetidos en cada terminal de Aire**, garantizando operación local si la red falla.
-- La distribución se hace desde Producción, vía **File Manager** e **InfoMusic-Prod**.
-- Evite carpetas con el mismo nombre en diferentes terminales para prevenir conflictos.
+- Music → stored on the **Server** (or a terminal acting as server).
+- Commercials, promos, fillers and station IDs → **duplicated on each On-Air terminal**, ensuring local operation if network fails.
+- Distribution is done from Production, via **File Manager** and **InfoMusic-Prod**.
+- Avoid folders with the same name on different terminals to prevent conflicts.
 
 ---
+
+### Folders structure
+
+The audio files are organized in folders. Each folder has a **category** assigned in File Manager. The categories are:
+
+- **MUS** → Music
+- **COM** → Commercials
+- **PRO** → Promos
+- **COR** → Station IDs
+- **RX** → Fillers
+
+<Note>
+  The folder names can be customized, but the categories are fixed.
+</Note>
+
+The folder structure is:
+
+```
+\Audicom\Audio\
+    ├── MUSICA\
+    │   ├── ROCK\
+    │   ├── POP\
+    │   └── JAZZ\
+    ├── COMERCIALES\
+    │   ├── ACTIVOS\
+    │   └── VENCIDOS\
+    ├── PROMOS\
+    │   ├── CONCURSOS\
+    │   └── EVENTOS\
+    ├── CORTINAS\
+    └── RELLENOS\
+```
+
+<Note>
+  The folder names can be in any language. The above structure is just an example.
+</Note>
+
+### Folder categories
+
+The categories are assigned in **File Manager**. To assign a category:
+
+1. Right-click on a folder
+2. Select "Properties"
+3. Choose the category from the dropdown menu
+4. Click "Apply"
+
+<Warning>
+  - All folders must have a category assigned
+  - A folder can only have one category
+  - Sub-folders inherit the category from their parent folder
+</Warning>
+
+### Folder names
+
+- Use short names without spaces
+- Avoid special characters
+- Maximum length: 8 characters
+- Use uppercase letters
+
+Example: `MUSROCK`, `MUSJAZZ`, `COMPUB`, `PROMOS`
+
+<Note>
+  While longer names and spaces are supported, short names make file management easier.
+</Note>

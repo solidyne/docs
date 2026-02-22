@@ -1,52 +1,60 @@
 ---
 title: "News Suite"
-description: "Editor de textos para contenidos leídos"
+description: "Text editor for read content"
 keywords: ["news suite"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "37a98e8af480e63cfd97f146e27610055b5c6804ebb83a08e2903c987799aaba"
+
 ---
 
-## Introducción
+## Introduction
 
-AUDICOM ofrece diferentes formas de **programar noticias** para que sean emitidas de forma automática, ya sea que se generen en la radio o que lleguen remotamente por **correo electrónico** o **teléfono**. Existen dos modos principales: **noticias programadas** y **noticias instantáneas**.
+AUDICOM offers different ways to **schedule news** for automatic broadcast, whether generated at the radio station or received remotely via **email** or **telephone**. There are two main modes: **scheduled news** and **instant news**.
 
-### Noticias programadas
+### Scheduled News
 
-Las noticias programadas se dividen en dos categorías:
+Scheduled news is divided into two categories:
 
-- **De ocurrencia segura**\
-  Son aquellas cuya existencia está confirmada y se incluyen directamente en la programación.\
-  Ejemplo: comandos `/METEOR` (hora, temperatura, etc.).\
-  En este caso, se recomienda definirlas directamente en la programación de la radio (`.PGM`) o mediante una **Inclusión Especial (ExactTime)**.
-- **De ocurrencia incierta**\
-  Son noticias que deberían emitirse en un horario definido, pero cuya llegada no está asegurada.\
-  Se implementan mediante **ítems encadenados** dentro de una Inclusión Especial (ExactTime).\
-  Estos permiten definir hasta **4 archivos consecutivos** (apertura, promocional, noticia y cierre).
-  - La secuencia **solo se emite** si todos los archivos existen.
-  - Si falta uno, se cancela toda la secuencia.
-  - El archivo de la noticia usa un **metanombre**, que cambia cada día, garantizando su validez solo para esa fecha.
+- **Certain occurrence**\
+  These are items whose existence is confirmed and are directly included in the schedule.\
+  Example: `/METEOR` commands (time, temperature, etc.).\
+  In this case, it is recommended to define them directly in the radio schedule (`.PGM`) or through an **ExactTime Special Inclusion**.
+- **Uncertain occurrence**\
+  News that should be broadcast at a defined time, but whose arrival is not guaranteed.\
+  These are implemented through **chained items** within an ExactTime Special Inclusion.\
+  These allow defining up to **4 consecutive files** (opening, promo, news and closing).
+  - The sequence is **only broadcast** if all files exist.
+  - If one is missing, the entire sequence is canceled.
+  - The news file uses a **metaname** that changes each day, ensuring its validity only for that date.
 
-Para más detalles, consulte: **“Inclusión Especial” en “Pautar Contenidos → Programación Manual → Crear bloques de contenido”**.
+For more details, see: **"Special Inclusion" in "Schedule Content → Manual Programming → Create content blocks"**.
 
-Las noticias programadas pueden provenir de:
+Scheduled news can come from:
 
 - **AUDICOM WebTools** (mail-link).
-- **Software de Voice Mailing** (telefónico).
+- **Voice Mailing Software** (telephone).
 
-### Noticias instantáneas
+### Instant News
 
-Diseñadas para radios que transmiten en **programación automática** (`AutoDJ`, `i-Link`, satélite), sin necesidad de cambiar manualmente la programación.
+Designed for radio stations broadcasting in **automatic programming** (`AutoDJ`, `i-Link`, satellite), without needing to manually change the schedule.
 
-- El sistema **NEWS** es una aplicación que corre en segundo plano y verifica periódicamente la llegada de noticias.
-- Si arriba una noticia (por e-mail o teléfono, según la implementación), el sistema la envía al aire y luego retoma la programación habitual.
+- The **NEWS** system is a background application that periodically checks for incoming news.
+- If news arrives (via email or telephone, depending on implementation), the system broadcasts it and then returns to regular programming.
 
 ## News Suite
 
-El módulo **News Suite** está pensado para operación en **vivo**.
+The **News Suite** module is designed for **live** operation.
 
-- Permite trabajar con **archivos de texto** asociados a **archivos de audio**.
-- Puede insertar noticias en la **Pantalla de Aire**, ya sean **solo texto** o **texto + audio**.
-- En redes, múltiples periodistas pueden redactar sus noticias en diferentes terminales y enviarlas al jefe de noticias, quien las organiza y reenvía a la terminal del operador.
-- El operador asocia cada texto a los **archivos de audio** correspondientes para su emisión.
+- Allows working with **text files** associated with **audio files**.
+- Can insert news into the **On-Air Screen**, either as **text only** or **text + audio**.
+- In networks, multiple journalists can write their news on different terminals and send them to the news chief, who organizes and forwards them to the operator's terminal.
+- The operator associates each text with corresponding **audio files** for broadcast.
 
 <img
   src="/images/audicom/au-news_suite.png"
@@ -56,42 +64,93 @@ El módulo **News Suite** está pensado para operación en **vivo**.
   style={{ width:"59%" }}
 />
 
-Accedemos al módulo **News Suite** desde el menú **“+”** en la **barra de herramientas**.\
-Se trata de un **editor de texto** destinado a la redacción de **noticias** e **informes periodísticos**.
+We access the **News Suite** module from the **"+"** menu in the **toolbar**.\
+It is a **text editor** designed for writing **news** and **journalistic reports**.
 
-- Trabaja con archivos estándar en formato **TXT**.
-- Su operación es similar a la de otros procesadores básicos (ej.: Bloc de Notas de Windows).
-- Permite trabajar con **múltiples archivos abiertos a la vez**.
+- Works with standard **TXT** format files.
+- Its operation is similar to other basic processors (e.g.: Windows Notepad).
+- Allows working with **multiple files open simultaneously**.
 
-La **línea verde** que aparece a la derecha indica el **ancho al que será ajustado el texto** en la **ventana de comentarios** de la Pantalla de Aire y en la interfaz **WebTools**.\
-Para visualizar el texto tal como lo verá el locutor, se debe ajustar manualmente la ventana hasta la línea verde.
+The **green line** that appears on the right indicates the **width to which the text will be adjusted** in the **comments window** of the On-Air Screen and in the **WebTools** interface.\
+To view the text as the announcer will see it, manually adjust the window to the green line.
 
-**Estimación de Tiempo de Lectura**
+**Reading Time Estimation**
 
-News Suite incorpora una herramienta que permite **estimar el tiempo de lectura** de un texto.
+News Suite includes a tool that **estimates reading time** for a text.
 
-- El cálculo se basa en una variable de **velocidad de lectura** expresada en **caracteres por segundo (c.p.s.)**.
-- El valor por defecto es **15 c.p.s.** (valor promedio).
-- Puede modificarse desde el menú: **Edit \> Set Speed**.
+- The calculation is based on a **reading speed** variable expressed in **characters per second (c.p.s.)**.
+- The default value is **15 c.p.s.** (average value).
+- Can be modified from the menu: **Edit \> Set Speed**.
 
-Para conocer la duración estimada de un texto:
+To know the estimated duration of a text:
 
-- Pulse el **ícono del reloj** o la tecla **F9**.
-- Aparecerá un cuadro con:
-  - Cantidad total de palabras.
-  - Total de caracteres.
-  - Tiempo estimado de lectura (minutos y segundos).
+- Click the **clock icon** or press **F9**.
+- A box will appear showing:
+  - Total word count.
+  - Total character count.
+  - Estimated reading time (minutes and seconds).
 
+### Text Files with Associated Audio
 
-### Archivos de Texto con Audio Asociado
+Each text file can be associated with one or two **audio files**.
 
-Cada archivo de texto puede asociarse a uno o dos **archivos de audio**.
+**Procedure:**
 
-**Procedimiento:**
+1. Write and save the text file.
+2. Open the **File Manager** and expand the second window (red arrow in the lower right corner).
+3. Display **text files** in one window and **audio files** to associate in the other.
+4. Select the text file and drag the audio file to it.
 
-1. Redacte y guarde el archivo de texto.
-2. Abra el **File Manager** y expanda la segunda ventana (flecha roja en el ángulo inferior derecho).
-3. Visualice en una ventana los **archivos de texto** y en la otra los **archivos de audio** a asociar.
-4. Seleccione el archivo de texto y arrastre el archivo de audio hacia él.
+The text file will be renamed as follows:
 
-El archivo de texto pasará a renombrarse de este modo:
+**Audio File Association Rules**
+
+- If the text file is named "news.txt" and the audio file is "audio.mp3", the text file will be renamed to "news.mp3.txt".
+- If a second audio file is associated, it will be added to the name: "news.mp3.wav.txt".
+
+<Note>
+  The text file name will show the audio file extensions in the order they were associated.
+</Note>
+
+When a text file has associated audio:
+
+- A speaker icon appears next to the file name.
+- The audio file can be played from the text editor using **F7** or the **Play** button.
+- The audio file can be played from the **On-Air Screen** using **F7**.
+
+### Printing
+
+To print a text file:
+
+1. Open the file to print.
+2. Go to **File > Print** or press **Ctrl + P**.
+3. Select printing options:
+   - Font type and size
+   - Line spacing
+   - Margins
+   - Header and footer
+   - Page numbers
+
+<Note>
+  The print preview shows exactly how the text will be printed.
+</Note>
+
+### Backup
+
+News Suite automatically creates backup copies of text files:
+
+- Backups are stored in the **Backup** folder inside the News Suite directory.
+- Each time a file is saved, a backup copy is created.
+- Backup files have the extension ".bak".
+- The backup folder is automatically cleaned every 30 days.
+
+To restore a backup file:
+
+1. Go to the Backup folder.
+2. Copy the desired .bak file.
+3. Paste it in the News folder.
+4. Remove the .bak extension.
+
+<Warning>
+  It is recommended to keep additional backups of important files on external storage devices.
+</Warning>

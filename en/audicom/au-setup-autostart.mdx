@@ -1,87 +1,95 @@
 ---
-title: 'Arranque automático'
-description: 'Cortes de energía y arranque automático.'
-keywords: ["auto-start", "arranque"]
+title: 'Auto-start'
+description: 'Power outages and automatic startup.'
+keywords: ["auto-start", "startup"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "7acb298a5972053bc492720e9a3a1e95c82adfa759f01697e02d77ff36e5f938"
+
 ---
 
-## Seguridad frente a cortes de energía
+## Power Outage Protection
 
-Nunca debe permitirse que un corte de energía afecte a la computadora.  
-Windows requiere un apagado progresivo; un corte abrupto puede ocasionar pérdida de datos o incluso daños en los discos de almacenamiento.  
+Never allow power outages to affect the computer.
+Windows requires a progressive shutdown; an abrupt power cut can cause data loss or even storage disk damage.
 
-<Warning>  
-Es altamente recomendable el uso de una **Fuente de Alimentación No Interrumpida (UPS)**.  
+<Warning>
+The use of an **Uninterruptible Power Supply (UPS)** is highly recommended.
 </Warning>
 
-- Use siempre UPS de tipo **On-Line** o de **Doble Conversión**, que garantizan continuidad absoluta de la alimentación.  
-- Estas permiten cerrar el sistema en forma controlada ante un corte.  
+- Always use **Online** or **Double Conversion** UPS types, which guarantee absolute power continuity.
+- These allow controlled system shutdown during an outage.
 
-### Funcionamiento de AUDICOM ante un corte
+### AUDICOM Behavior During Power Outages
 
-- Si la transmisión se interrumpe y el sistema se apaga en forma controlada:  
-  - Al volver la energía, Windows se reinicia.  
-  - AUDICOM arranca en la **Pantalla de Aire**, realizando auto-PLAY en el horario correspondiente.  
-- Los avisos que no salieron durante el corte aparecen en planillas de auditoría como **no enviados al aire**.  
-- El programa de facturación de AUDICOM cancela la facturación de los avisos omitidos.  
+- If transmission is interrupted and the system shuts down in a controlled manner:
+  - When power returns, Windows restarts.
+  - AUDICOM launches in the **On Air Screen**, performing auto-PLAY at the corresponding time.
+- Ads that did not air during the outage appear in audit logs as **not aired**.
+- AUDICOM's billing program cancels the billing for omitted ads.
 
-<Note>  
-Debe crearse un acceso directo a `aire.exe` (Pantalla de Aire) en el grupo Inicio de Windows para que AUDICOM se ejecute al arrancar.  
-La opción **Autorun** debe estar habilitada en el Panel de Configuración de AUDICOM.  
+<Note>
+A shortcut to `aire.exe` (On Air Screen) must be created in the Windows Startup group for AUDICOM to run at startup.
+The **Autorun** option must be enabled in AUDICOM's Configuration Panel.
 </Note>
 
 ---
 
-## Protección contra rayos y centellas
+## Lightning and Surge Protection
 
-La mayoría de los daños por rayos ocurren al ingresar por las líneas de energía eléctrica.  
-Ni las UPS ni los estabilizadores de tensión ofrecen protección contra este evento, pues las sobretensiones superan decenas de miles de voltios.  
+Most lightning damage occurs through power lines.
+Neither UPS nor voltage regulators provide protection against this event, as voltage surges can exceed tens of thousands of volts.
 
-<Warning>  
-Incluso tormentas eléctricas distantes pueden propagarse por líneas aéreas de energía y dañar equipos.  
+<Warning>
+Even distant electrical storms can propagate through overhead power lines and damage equipment.
 </Warning>
 
-**Recomendación**: usar **Descargadores de Rayos** para líneas de 220 V.  
-- Se conectan entre ambos polos de 220 V y una jabalina de 2 m enterrada.  
-- Deben instalarse en el tablero principal, **antes de la UPS**.  
+**Recommendation**: use **Lightning Arrestors** for 220V lines.
+- Connect between both 220V poles and a 2m grounding rod.
+- Must be installed in the main panel, **before the UPS**.
 
 ---
 
-## Arranque automático de AUDICOM
+## AUDICOM Automatic Startup
 
-Muchas emisoras no transmiten de madrugada y requieren que AUDICOM inicie la programación de forma automática al comenzar la jornada.  
+Many stations do not broadcast overnight and require AUDICOM to start programming automatically at the beginning of the day.
 
-Aunque no es estrictamente parte de la instalación, este caso es muy frecuente y se incluye aquí.  
+Although not strictly part of the installation, this case is very common and is included here.
 
-### Ejemplo de configuración
+### Configuration Example
 
-- La emisora corta transmisión a las **00:00 hs** y retoma a las **07:00 hs**.  
-- El personal enciende los equipos o se usa un **timer de encendido automático**.  
-- AUDICOM debe iniciar la reproducción exactamente a las 07:00 hs.  
+- The station stops transmission at **00:00** and resumes at **07:00**.
+- Staff turns on equipment or an **automatic timer switch** is used.
+- AUDICOM must start playback exactly at 07:00.
 
-**Solución**: programar un bloque satelital de relleno (SatFill) durante el tiempo fuera del aire.  
-- La computadora queda encendida toda la noche, reproduciendo el bloque SatFill.  
-- A las 07:00 hs, el bloque finaliza y comienza el siguiente (ejemplo: bloque musical AutoDJ).  
+**Solution**: program a satellite fill block (SatFill) during off-air time.
+- The computer stays on all night, playing the SatFill block.
+- At 07:00, the block ends and the next one begins (example: AutoDJ music block).
 
-Ejemplo de instrucción en archivo PGM:
+Example instruction in PGM file:
 
 ```ini
 /Block /00:00-07:00 /Satfill
-/Block /07:00-09:00 /AutoDJ="Musica de la mañana"
+/Block /07:00-09:00 /AutoDJ="Morning music"
 ```
 
-<Note>  
-El último operador debe dejar la computadora en reproducción antes de retirarse.  
+<Note>
+The last operator must leave the computer playing before leaving.
 </Note>
 
-### Notas adicionales
+### Additional Notes
 
-- Si la emisora corta a las **23:00 hs**, el bloque SatFill se divide en dos:  
-  - De 23:00 a 00:00 hs.  
-  - De 00:00 a 07:00 hs.  
-- El bloque completo se forma al unirse el final de la pauta de un día con el inicio de la del día siguiente.  
-- Este modo de programación es independiente de la opción **Autoarranque**, explicada en el ítem anterior.  
+- If the station stops at **23:00**, the SatFill block is divided in two:
+  - From 23:00 to 00:00.
+  - From 00:00 to 07:00.
+- The complete block is formed by joining the end of one day's schedule with the beginning of the next day.
+- This programming mode is independent of the **Auto-start** option explained in the previous section.
 
-<Info>  
-Para más detalles sobre programación consulte el capítulo **CyberPlay Editor**.  
+<Info>
+For more programming details, see the **CyberPlay Editor** chapter.
 </Info>

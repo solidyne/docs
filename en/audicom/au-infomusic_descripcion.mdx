@@ -1,220 +1,226 @@
 ---
-title: "InfoMusic Producción"
-description: "Gestión de la base de datos musical"
-keywords: ["base de datos", "ingesta", "infomusic"]
+title: "InfoMusic Production"
+description: "Music database management"
+keywords: ["database", "ingestion", "infomusic"]
 tags: ["Software", "Audicom"]
----
-
-## Base de datos musical
-
-AUDICOM incorpora un sistema muy potente de información musical, basado en 14 parámetros clave. Estos campos alimentan al **AutoDJ** para generar programaciones automáticas con criterios artísticos difíciles de lograr en otros sistemas.
-
-La Base de Datos registra automáticamente estadísticas como **cantidad de emisiones**, **última pasada**, **semana de mayor rotación**, etc. Otros parámetros —por ejemplo **Clase** (Música, Promo, Spot, Fill), **Género**, **Intérprete**, **Autor**— pueden cargarse o editarse manualmente.
-
-Los archivos ingresan a la Base de Datos de dos maneras:
-
-- **Automática**: copiándolos en **carpetas autoDB** desde **File Manager** (quedan listos para AutoDJ según el estilo de la carpeta).
-- **Manual**: utilizando el módulo **InfoMusic-Producción** (recomendado para curaduría y catalogación fina).
-
-La interfaz de InfoMusic facilita la carga porque **recuerda** los valores que va ingresando el usuario: cada campo guarda su historial y se vuelve seleccionable desde menús desplegables. Cuanto **más completo** esté el registro de cada título, **mejor** funcionará la selección de **AutoDJ**.
-
-<Note>
-  Las **carpetas autoDB** en **File Manager** reducen muchísimo el trabajo de alta. Consulte el capítulo “File Manager” para detalles y buenas prácticas de organización.
-</Note>
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "2af8dddd2e63267db02e956f6b5ada7189c1380738920d7fce745ca7ae8e965d"
 
 ---
 
-## Campos de información del usuario (descripción)
+## Music Database
 
-Estos son los campos editables por el operador. No es obligatorio completarlos todos, **excepto** `Clase` y —para música— `Estilo`. Aun así, dejar campos vacíos reduce la calidad artística de la selección automática. Puede completarlos de forma progresiva a lo largo del tiempo.
+AUDICOM features a powerful music information system based on 14 key parameters. These fields feed the **AutoDJ** to generate automated programming with artistic criteria difficult to achieve in other systems.
 
-> Las funciones de teclado se indican entre corchetes cuando corresponde.
+The Database automatically records statistics like **play count**, **last played**, **peak rotation week**, etc. Other parameters—such as **Class** (Music, Promo, Spot, Fill), **Genre**, **Performer**, **Author**—can be manually entered or edited.
 
-### Archivo (FileName)
+Files enter the Database in two ways:
 
-Muestra **nombre y ruta** del archivo de audio. Para seleccionar, use **Nuevo (Browse)**, elija la carpeta y abra el archivo. El **nombre completo** (con ruta) se mostrará aquí y el **nombre de archivo** se copiará también al campo **Título**.
+- **Automatic**: by copying them to **autoDB folders** from **File Manager** (ready for AutoDJ according to folder style).
+- **Manual**: using the **InfoMusic-Production** module (recommended for fine curation and cataloging).
 
-- Puede ingresar **varios archivos a la vez** con **File Manager** (drag & drop) o usando **Scan**.
-- Si desea **cambiar el Título** con el que el archivo quedará registrado, hágalo **antes de guardar**: una vez dado de alta, **no** puede modificarse el campo **Título** en la base (para evitar duplicados). En caso de error, deberá **borrar el registro** e **ingresarlo nuevamente** con el título correcto.
-- Si intenta registrar un **archivo** con un **Título** que ya existe, InfoMusic avisará y ofrecerá **asociar** ese título al archivo actual (típico cuando diferentes intérpretes comparten un nombre de canción). Si acepta, **todos los datos previos** del título serán **reemplazados** por los nuevos.
-
-### Título (Title)
-
-Título con el que el archivo se registra en la Base de Datos. Es **obligatorio**. Máximo **32 caracteres** (incluye espacios). **No pueden existir dos títulos idénticos** en la Base. Al cargar desde **Nuevo**, el nombre del archivo se copia al campo **Título**.
-
-- Los **títulos** pueden **renombrarse** desde **File Manager** con **F2 (Cambiar Nombre)**: así se mantienen **sincronizados** el nombre de archivo y la Base de Datos.
-- Si intenta registrar un archivo con un **título existente**, InfoMusic lo alertará y podrá optar por **asociarlo** al archivo actual (sobrescribiendo metadatos previos).
+The InfoMusic interface facilitates data entry because it **remembers** the values entered by users: each field keeps its history and becomes selectable from dropdown menus. The **more complete** each title's record is, the **better** the **AutoDJ** selection will work.
 
 <Note>
-  Para listados **numerados** mayores a 9, **alinear con ceros** para mantener el orden: `Título 01`, `Título 02` … `Título 20`.\
-  Caracteres prohibidos en títulos: `/ * \ " | ? < > :`
+  The **autoDB folders** in **File Manager** greatly reduce ingestion work. See the "File Manager" chapter for details and organizational best practices.
 </Note>
 
-### Comentarios (Comment)
+---
 
-Texto que aparece en la **ventana de comentarios** de la Pantalla de Aire mientras suena el archivo. Útil para datos de valor para la audiencia. Máximo **254** caracteres.\
-Si el archivo proviene de **HD-Corder** e incluye comentario, o si es **MP3 con ID3 v1/v2** con comentario, se cargará automáticamente.
+## User Information Fields (description)
 
-### Estilo (Style)  [ F7 ]
+These are the operator-editable fields. Not all need to be completed, **except** `Class` and—for music—`Style`. However, leaving fields empty reduces the artistic quality of automatic selection. You can complete them progressively over time.
 
-Define el **estilo musical** del título (ej.: Clásico, Melódico, Instrumental, Jazz, Pop, Rock & Roll, etc.). Es un **campo crítico** para que **AutoDJ** elija correctamente.
+> Keyboard functions are shown in brackets where applicable.
 
-- Planifique cuidadosamente el **conjunto de estilos** a usar. Evite estilos con **muy pocos títulos** (dificultan la rotación).
-- Todos los estilos se **guardan una vez** y luego se seleccionan desde menú alfabético.
+### File (FileName)
+
+Shows **name and path** of the audio file. To select, use **New (Browse)**, choose the folder and open the file. The **full name** (with path) will display here and the **filename** will also copy to the **Title** field.
+
+- You can input **multiple files at once** with **File Manager** (drag & drop) or using **Scan**.
+- If you want to **change the Title** under which the file will be registered, do it **before saving**: once added, you **cannot** modify the **Title** field in the database (to prevent duplicates). If there's an error, you must **delete the record** and **re-enter it** with the correct title.
+- If you try to register a **file** with a **Title** that already exists, InfoMusic will notify and offer to **associate** that title with the current file (typical when different performers share a song name). If accepted, **all previous data** for that title will be **replaced** with the new data.
+
+### Title
+
+Title under which the file is registered in the Database. It is **mandatory**. Maximum **32 characters** (including spaces). **No two identical titles** can exist in the Database. When loading from **New**, the filename copies to the **Title** field.
+
+- **Titles** can be **renamed** from **File Manager** with **F2 (Change Name)**: this keeps the filename and Database **synchronized**.
+- If you try to register a file with an **existing title**, InfoMusic will alert you and you can choose to **associate** it with the current file (overwriting previous metadata).
 
 <Note>
-  El estilo **“No catalogado”** es creado por **dbReindex** cuando detecta títulos con **Estilo vacío**.
+  For **numbered** listings above 9, **pad with zeros** to maintain order: `Title 01`, `Title 02` … `Title 20`.\
+  Forbidden characters in titles: `/ * \ " | ? < > :`
 </Note>
 
-### Intérprete (Performer) [ F10 ]
+### Comments
 
-Nombre del/la intérprete. Cada nuevo valor queda **memorizado** y se reutiliza desde el menú desplegable.
+Text that appears in the **comments window** of the On-Air Screen while the file plays. Useful for audience-valuable information. Maximum **254** characters.\
+If the file comes from **HD-Corder** and includes comments, or if it's an **MP3 with ID3 v1/v2** with comments, it will load automatically.
 
-### Autor (Author) [ F9 ]
+### Style [ F7 ]
 
-Nombre del/la **compositor/a** de la obra.
+Defines the **musical style** of the title (e.g.: Classic, Melodic, Instrumental, Jazz, Pop, Rock & Roll, etc.). This is a **critical field** for proper **AutoDJ** selection.
 
-### Ubicación (Position)
+- Carefully plan the **set of styles** to use. Avoid styles with **very few titles** (they complicate rotation).
+- All styles are **saved once** and then selected from an alphabetical menu.
 
-Marcador **informativo** para señalar si un tema funciona como **Apertura** o **Cierre** (según su carácter musical). Ayuda a búsquedas rápidas para el operador. **AutoDJ no usa esta marca** para posicionar por sí mismo.
+<Note>
+  The **"Uncategorized"** style is created by **dbReindex** when it detects titles with **empty Style**.
+</Note>
+
+### Performer [ F10 ]
+
+Name of the performer. Each new value is **memorized** and reusable from the dropdown menu.
+
+### Author [ F9 ]
+
+Name of the **composer** of the work.
+
+### Position
+
+**Informative** marker to indicate if a track works as an **Opening** or **Closing** (based on its musical character). Helps quick searches for the operator. **AutoDJ doesn't use this mark** for positioning by itself.
 
 ### Tempo
 
-Velocidad de ejecución. Cuatro valores fijos: **Largo**, **Andante**, **Allegro**, **Presto**.
+Execution speed. Four fixed values: **Largo**, **Andante**, **Allegro**, **Presto**.
 
-### Modo (Mood)
+### Mood
 
-Intensidad/sonoridad. Cuatro valores fijos: **Muy Suave**, **Suave**, **Fuerte**, **Muy Fuerte**.\
-Permite adaptar la música a franjas horarias (p. ej., menos “Muy Fuerte” en altas horas de la noche, más libertad en fin de semana).
+Intensity/loudness. Four fixed values: **Very Soft**, **Soft**, **Strong**, **Very Strong**.\
+Allows adapting music to time slots (e.g., less "Very Strong" late at night, more freedom on weekends).
 
-### Género (Gender) [ F8 ]
+### Gender [ F8 ]
 
-Clasificación por **formación**: Solista, Dúo, Grupo, Orquesta, etc. Puede crear **subgéneros** (ej.: Solista Femenina/Masculina). AutoDJ puede variar la secuencia para dar **diversidad** (p. ej., alternar formación).
+Classification by **formation**: Solo, Duo, Group, Orchestra, etc. You can create **subgenders** (e.g.: Female/Male Solo). AutoDJ can vary the sequence to provide **diversity** (e.g., alternate formations).
 
-### Sello grabador (Recording Company)
+### Recording Company
 
-Nombre de la **discográfica**. Poco impacto en la lógica musical, pero **útil para reportes** (p. ej., SADAIC u organismos locales) o acuerdos con sellos.
+Name of the **record label**. Low impact on musical logic, but **useful for reports** (e.g., SADAIC or local organizations) or label agreements.
 
 ### Top Hit [ F11 ]
 
-Indica si el tema pertenece a un **ranking**: `Top-100`, `Top-40`, `Top-25`, `Top-10` o vacío.\
-AutoDJ puede programar **repeticiones periódicas** de Top Hits (configurable en el formato).
+Indicates if the track belongs to a **ranking**: `Top-100`, `Top-40`, `Top-25`, `Top-10` or empty.\
+AutoDJ can schedule **periodic repetitions** of Top Hits (configurable in the format).
 
-### Clase (Class)
+### Class
 
-Define el **tipo de contenido**: `Música`, `Spots` (Avisos), `Fills` (Relleno), `Promos` (Promocionales).
+Defines the **content type**: `Music`, `Spots` (Ads), `Fills`, `Promos` (Promotional).
 
-- **Música**: temas musicales estándar.
-- **Promos**: piezas de autopromoción; también se usan para **ajustes finos** de tiempo.
-- **Fills**: música breve **sin voz** para ajustar al segundo (ej.: entrar a una tanda o noticiero a hora exacta).
-- **Spots**: avisos comerciales.
+- **Music**: standard musical tracks.
+- **Promos**: self-promotion pieces; also used for **fine time** adjustments.
+- **Fills**: brief **voiceless** music for second-precise adjustments (e.g.: entering a commercial break or newscast at exact time).
+- **Spots**: commercial ads.
 
-### Uso de la categoría Promo
+### Using the Promo category
 
-Dos grandes etiquetas: **PROMO** y **PROMOPGM**.
+Two main labels: **PROMO** and **PROMOPGM**.
 
-- **PROMO**: habilitados para bloques AutoDJ y para **compensar horarios** en cualquier formato.
-- **PROMOPGM**: promocionales **específicos** de un programa; **no** se usan para ajustes de tiempo.
+- **PROMO**: enabled for AutoDJ blocks and for **time compensation** in any format.
+- **PROMOPGM**: **specific** program promotionals; **not** used for time adjustments.
 
-Buenas prácticas:
+Best practices:
 
-1. **Promos por programa** (intercaladas cada “n” temas en AutoDJ): `Class = PromoPgm`. Pueden filtrarse por prefijo (ej.: `Tarde-1`, `Tarde-2`…) en el formato del AutoDJ.
-2. **Promos generales 24/7**: `Class = Promo`. Útiles para **ajustes** (tener **muchas** y de **varias duraciones**).
-3. **Separadores** especiales que **no** debe manejar AutoDJ automáticamente: `Class = Separadores` (pautado manual).
+1. **Program promos** (interspersed every "n" tracks in AutoDJ): `Class = PromoPgm`. Can be filtered by prefix (e.g.: `Afternoon-1`, `Afternoon-2`…) in the AutoDJ format.
+2. **General 24/7 promos**: `Class = Promo`. Useful for **adjustments** (have **many** and of **various durations**).
+3. **Special separators** that AutoDJ should **not** handle automatically: `Class = Separators` (manual scheduling).
 
 <Note>
-  En `Autodj.ini`, puede cambiar la categoría que usa AutoDJ al intercalar promos: `promoPgmClass=PromoPgm` (por defecto).\
-  Si desea que use `Promo` en lugar de `PromoPgm`, configure `promoPgmClass=Promo`.
+  In `Autodj.ini`, you can change the category AutoDJ uses when interspersing promos: `promoPgmClass=PromoPgm` (default).\
+  If you want it to use `Promo` instead of `PromoPgm`, set `promoPgmClass=Promo`.
 </Note>
 
-### Procesado (Processing)
+### Processing
 
-Si tiene un **562dsp** con **VirtualRack**, puede asignar el **preset** de procesado por **título** (p. ej., `20:Rock&POP`). Al reproducirse el tema, AUDICOM solicita a VirtualRack cambiar al programa indicado.
+If you have a **562dsp** with **VirtualRack**, you can assign the processing **preset** by **title** (e.g., `20:Rock&POP`). When the track plays, AUDICOM requests VirtualRack to change to the indicated program.
 
-- **VirtualRack** corre aparte y debe estar **en ejecución** (modo **AUDICOM**) para que la conmutación funcione.
-- Se recomienda crear **acceso directo** para que **inicie con Windows**.
-- Puede ejecutarse en **modo demo** sin hardware para pruebas.
+- **VirtualRack** runs separately and must be **running** (**AUDICOM** mode) for switching to work.
+- Creating a **shortcut** to **start with Windows** is recommended.
+- Can run in **demo mode** without hardware for testing.
 
-### Soporte (Media)
+### Media
 
-Indica dónde está almacenado el título: **HD** (disco) u **otro soporte** (CD, MD, DAT, etc.).
+Indicates where the title is stored: **HD** (disk) or **other media** (CD, MD, DAT, etc.).
 
-- **AutoDJ** opera solo con **HD**.
-- Si el soporte **no** es HD, el **archivo** puede **no** estar asociado (campo File Name vacío).
-- Si se inserta en Aire un título con soporte externo, se **crea una pausa** para que el operador lo dispare desde el medio indicado.
+- **AutoDJ** operates only with **HD**.
+- If the media is **not** HD, the **file** may **not** be associated (empty File Name field).
+- If a title with external media is inserted On-Air, a **pause** is created for the operator to trigger it from the indicated medium.
 
-Si `Media = _missing`, el archivo **no existe** en disco, fue **movido** o **renombrado** fuera de InfoMusic/File Manager.\
-Use **dbReindex** (opción “Verifica que existan los archivos”) para **marcarlos** como `_missing`. Títulos `_missing` **no** se insertan en Aire.
+If `Media = _missing`, the file **doesn't exist** on disk, was **moved** or **renamed** outside InfoMusic/File Manager.\
+Use **dbReindex** (option "Verify files exist") to **mark** them as `_missing`. `_missing` titles are **not** inserted On-Air.
 
 ### Album ID / CD # / Track
 
-- **CD Track**: número de pista cuando el soporte es **CD** (u otro medio físico). Si es **0**, se asume **CD-ROM**; si el CD no está en la unidad, el título será **ignorado** y marcado como **error**.
-- **CD #**: número identificador del disco (solo números).
-- **ExternalID / Album ID**: ID de **musicalizador externo** (Selector, PowerGold) o **código de catálogo**. Alfanumérico, **hasta 16 caracteres**.
+- **CD Track**: track number when media is **CD** (or other physical media). If **0**, **CD-ROM** is assumed; if CD isn't in drive, title will be **ignored** and marked as **error**.
+- **CD #**: disk identifier number (numbers only).
+- **ExternalID / Album ID**: **external scheduler** ID (Selector, PowerGold) or **catalog code**. Alphanumeric, **up to 16 characters**.
 
 ### Fade In / Out
 
-Define los **tiempos de fundido** (cross-fade) por **título**: entrada (**Fade In**) y salida (**Fade Out**), en **décimas** de segundo (0 a 50 → 0 a 5 s).
+Defines **crossfade times** by **title**: entry (**Fade In**) and exit (**Fade Out**), in **tenths** of second (0 to 50 → 0 to 5 s).
 
-- Finales **suaves**: valores altos (10 a 50).
-- Finales **abruptos**: valores más cortos (5 a 10).
-- **Spots** (voz a voz): generalmente **0** para evitar solapes; si tienen cortina/efecto, usar **3 a 6**.
-- En archivos de **menos de 8 s**, se **ignoran** los cross-fades.
+- **Soft** endings: high values (10 to 50).
+- **Abrupt** endings: shorter values (5 to 10).
+- **Spots** (voice to voice): generally **0** to avoid overlaps; if they have background/effect, use **3 to 6**.
+- In files **under 8 s**, cross-fades are **ignored**.
 
 <Note>
-  Si ingresa a InfoMusic desde **HD Corder**:
+  If entering InfoMusic from **HD Recorder**:
 
-  - Archivos **\< 1 min** → cross-fade **0** y `Class = Spot`.
-  - Archivos **≥ 1 min** → cross-fade **25** (2,5 s) y `Class = Música`.
+  - Files **\< 1 min** → cross-fade **0** and `Class = Spot`.
+  - Files **≥ 1 min** → cross-fade **25** (2.5 s) and `Class = Music`.
 </Note>
 
 ---
 
-## Controles de reproducción y tiempo de INTRO
+## Playback Controls and INTRO Time
 
 <img
   src="/images/audicom/au-infomusic_produccion-reproduccion.png"
-  alt="Au Infomusic Produccion Reproduccion Pn"
-  title="Au Infomusic Produccion Reproduccion Pn"
+  alt="Au Infomusic Production Playback Pn"
+  title="Au Infomusic Production Playback Pn"
   style={{ width:"58%" }}
 />
 
-- **Play / Stop**: controlan la reproducción del **título seleccionado**.
-- **VU** (izquierda) muestra nivel y un **contador**.
-- **Duración**: duración total del archivo.
+- **Play / Stop**: control playback of the **selected title**.
+- **VU** (left) shows level and a **counter**.
+- **Duration**: total file duration.
 
-**Fijar INTRO** (punto de entrada de voz):
+**Setting INTRO** (voice entry point):
 
-1. Reproduzca el archivo y, **cuando entra la voz**, pulse **SET INTRO**: el tiempo queda registrado.
-2. Use **PLAY INTRO** para reproducir **desde** la intro y validar.
-3. El campo **Intro** es **editable**; puede afinar manualmente. También dispone de una **barra de posición** para moverse con precisión.
+1. Play the file and, **when voice enters**, press **SET INTRO**: the time is registered.
+2. Use **PLAY INTRO** to play **from** intro and validate.
+3. The **Intro** field is **editable**; you can fine-tune manually. A **position bar** is also available for precise movement.
 
-En la **Pantalla de Aire**, el **Intro** aparece como **cuenta regresiva** para el operador/locutor.\
-En **operación automática**, AutoDJ puede **superponer presentaciones** al inicio del tema ajustadas al **Intro** para que el **cantante entre** justo al finalizar la locución (efecto “en vivo” profesional).
+On the **On-Air Screen**, the **Intro** appears as a **countdown** for the operator/announcer.\
+In **automatic operation**, AutoDJ can **overlap presentations** at the track start adjusted to the **Intro** so the **singer enters** right after the announcement ends (professional "live" effect).
 
 ---
 
-## Borrado de campos
+## Clearing Fields
 
-Puede **modificar** cualquier campo en cualquier momento y **guardar**.\
-Ej.: cambiar el **Estilo** de un tema: seleccione el nuevo valor y **guarde** el registro.
+You can **modify** any field at any time and **save**.\
+E.g.: changing a track's **Style**: select the new value and **save** the record.
 
 <Note>
-  Si elimina **todos** los títulos de un Estilo/Autor/etc., ese ítem seguirá visible en el menú **hasta que cierre InfoMusic**. Al reabrir, el valor habrá desaparecido.
+  If you delete **all** titles of a Style/Author/etc., that item will remain visible in the menu **until InfoMusic is closed**. Upon reopening, the value will have disappeared.
 </Note>
 
 ---
 
-## Campos fijos (solo lectura)
+## Fixed Fields (read-only)
 
-Son **automáticos**; el usuario **no** los edita.
+These are **automatic**; the user **cannot** edit them.
 
-- **Duración (Length)**: total en mm:ss. Puede **recalcularse** con **dbReindex** (útil tras editar audio).
-- **Fs / Bitrate**: frecuencia de muestreo (WAV/PCM) o tasa de compresión (kbps en MPEG).
-- **Modo (Rec Mode)**: **2S** (estéreo discreto), **MO** (mono), **JS** (Joint Stereo).
-- **Grabado el (Recording Date)**: día/mes/año.
-- **Última pasada (Last Time on Air)**: fecha y hora de la última emisión.
-- **Última semana (Last Week Played)**: semana y cantidad de pasadas.
-- **Mejor semana (Best Week)**: semana con **mayor** cantidad de pasadas y su **conteo**.
-
----
+- **Length**: total in mm:ss. Can be **recalculated** with **dbReindex** (useful after audio editing).
+- **Fs / Bitrate**: sampling frequency (WAV/PCM) or compression rate (kbps in MPEG).
+- **Rec Mode**: **2S** (discrete stereo), **MO** (mono), **JS** (Joint Stereo).
+- **Recording Date**: day/month/year.
+- **Last Time on Air**: date and time of last broadcast.
+- **Last Week Played**: week and play count.
+- **Best Week**: week with **highest** play count and its **total**.

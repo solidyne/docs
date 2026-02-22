@@ -1,205 +1,213 @@
 ---
-title: "Controles de reproducción"
-description: "Pantalla de información y controles de transporte"
-keywords: ["transporte"]
+title: "Playback Controls"
+description: "Transport controls and information display"
+keywords: ["transport"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "0ffa36a9e9763283ac91b4022defb46ed7b73552e558387d6a3a265b527833de"
+
 ---
 
 \
-El módulo de reproducción contiene:
+The playback module includes:
 
-- Intérprete, título y estilo del archivo en reproducción.
-- Indicador de nivel (dBfs).
-- Indicador de tiempo transcurrido (horas:minutos:segundos).
-- Una barra horizontal que se completa a medida que avanza la reproducción.
-- Controles de transporte (explicados en la sección _Operación del CyberPlay_).
+- Artist, title and genre of the current playing file.
+- Level meter (dBfs).
+- Elapsed time indicator (hours:minutes:seconds).
+- A horizontal progress bar that fills as playback advances.
+- Transport controls (explained in the _CyberPlay Operation_ section).
 
   <img
     src="/images/audicom/au-cyberplay-transporte.png"
-    alt="AUDICOM - Cyberplay Transporte"
-    title="AUDICOM - Cyberplay Transporte"
+    alt="AUDICOM - Cyberplay Transport"
+    title="AUDICOM - Cyberplay Transport" 
     style={{ width:"75%" }}
   />
 
 ### Intro
 
-Contador en cuenta regresiva que indica la duración de la introducción de un tema musical, es decir, el tiempo antes de que ingrese la voz del cantante.
+Countdown timer that indicates the duration of a song's introduction, which is the time before the vocalist begins singing.
 
-- Sirve para que el locutor sepa cuánto tiempo tiene para hablar “pisando” la canción.
-- El tiempo de **Intro** se define en la ventana de **InfoMusic Producción** y puede modificarse desde **InfoMusic Aire**.
-- Si los títulos tienen archivos de presentación (**Partner**), el tiempo de Intro es clave para ajustar dichas presentaciones.
+- Helps the announcer know how long they can talk over the song intro.
+- The **Intro** time is defined in the **InfoMusic Production** window and can be modified from **InfoMusic Air**.
+- If titles have presentation files (**Partner**), the Intro time is crucial for adjusting these presentations.
 
-### Fundidos
+### Crossfades
 
-A la derecha del indicador **Intro** aparece un círculo que se completa progresivamente cada vez que AUDICOM realiza un fundido entre dos audios.
+To the right of the **Intro** indicator, a circle progressively fills each time AUDICOM performs a crossfade between two audio files.
 
-### Block (bloque)
+### Block
 
-Muestra en minutos y segundos el tiempo restante hasta la finalización de un bloque.
+Shows the remaining time until the end of a block in minutes and seconds.
 
-- Una línea sobre los números indica gráficamente el tiempo transcurrido.
-- En programas en vivo (uso manual), AUDICOM permanece detenido durante el bloque.
-- El contador muestra cuánto falta para la próxima tanda, a modo de advertencia.
-- El operador debe presionar **Play** para que la tanda salga al aire.
+- A line above the numbers graphically indicates elapsed time.
+- In live programs (manual mode), AUDICOM remains stopped during the block.
+- The counter shows time remaining until the next commercial break as a warning.
+- The operator must press **Play** to air the commercial break.
 
 ### Error
 
-Indica en minutos y segundos cuánto se ha adelantado o retrasado la programación respecto de la pauta original.
+Indicates in minutes and seconds how far ahead or behind the programming is compared to the original schedule.
 
-- En modo automático, AUDICOM corrige el error en lo posible usando tolerancias de los bloques comerciales.
-- En modo manual, puede producirse error por duración distinta de un programa o noticiero.
+- In automatic mode, AUDICOM corrects the error when possible using commercial block tolerances.
+- In manual mode, timing errors can occur due to different program or news durations.
 
-Ejemplo:
+Example:
 
-- Un error de **-05:00** indica que el próximo bloque comenzará 5 minutos antes de lo pautado.
-- Esta información permite al operador corregir con acciones como agregar o quitar música, promos o avisos.
+- An error of **-05:00** indicates the next block will start 5 minutes earlier than scheduled.
+- This information allows the operator to make corrections by adding or removing music, promos or spots.
 
-### Modo expandido
+### Expanded Mode
 
-Permite ensanchar la ventana CyberPlay, mostrando más información del display.
+Allows widening the CyberPlay window to show more display information.
 
-- **LOG**: archivo de tandas cargado para el día actual.
-  - Doble clic sobre el campo abre una ventana para cargar cualquier archivo `.log` del día.
-- **PGM**: archivo de programas cargado para el día actual.
-  - Doble clic sobre el campo abre una ventana para cargar cualquier archivo `.pgm` del día.
+- **LOG**: Commercial break file loaded for the current day.
+  - Double-click the field to open a window to load any `.log` file for the day.
+- **PGM**: Program file loaded for the current day.
+  - Double-click the field to open a window to load any `.pgm` file for the day.
 
-### Ventana de comentarios
+### Comments Window
 
-Muestra datos adicionales del título en reproducción:
+Shows additional data about the currently playing title:
 
-- Intérprete y autor.
-- Anotaciones o comentarios.
+- Artist and author.
+- Notes or comments.
 
-Todos los datos provienen de la base de datos.
+All data comes from the database.
 
-- Cuando faltan 15 segundos para finalizar el título, aparece la información del siguiente tema.
-- También informa si el título tiene asociado un archivo, como presentaciones.
+- When 15 seconds remain in the current title, information for the next track appears.
+- Also indicates if the title has associated files, like presentations.
 
-### Mensajes emergentes
+### Pop-up Messages
 
-Si un usuario intenta realizar una operación no permitida, aparece un mensaje emergente (pop-up) informando la restricción.
+If a user attempts a restricted operation, a pop-up message appears informing about the restriction.
 
-- Estos mensajes desaparecen automáticamente tras unos segundos.
-- También pueden cerrarse con un clic o presionando **ESC**.
+- These messages disappear automatically after a few seconds.
+- They can also be closed by clicking or pressing **ESC**.
 
-Ejemplo: intento de reproducción desde **File Manager** por parte de un usuario no autorizado.
+Example: attempted playback from **File Manager** by an unauthorized user.
 
 ---
 
-## Controles de reproducción
+## Playback Controls
 
-A continuación se describen los controles y operaciones de la ventana CyberPlay (Pantalla de Aire).\
-Entre corchetes se indican los atajos de teclado.
+Below are the controls and operations for the CyberPlay window (On-Air Screen).\
+Keyboard shortcuts are shown in brackets.
 
-### Play `[barra espaciadora / Home]`
+### Play `[spacebar / Home]`
 
-- Inicia la reproducción desde el título marcado como “próximo” (cursor verde).
-- Si se pulsa Play durante la reproducción, se salta al próximo título.
-  - El salto se hace siempre por corte.
-  - Para pasar al siguiente por fundido, use **Fade → Play**.
+- Starts playback from the title marked as "next" (green cursor).
+- If Play is pressed during playback, it skips to the next title.
+  - The skip is always a hard cut.
+  - To transition to the next track with a fade, use **Fade → Play**.
 
-**Modo Autoarranque (Autorun)**
+**Autorun Mode**
 
-- En caso de reinicio tras un corte eléctrico, si **Autorun** está habilitado:
-  - AUDICOM arranca como usuario **auto**.
-  - Si transcurre 1 minuto sin intervención, inicia la reproducción desde el título más cercano a la hora actual.
-- Se configura en el **Panel de Configuración \> Preferencias**.
+- In case of restart after power failure, if **Autorun** is enabled:
+  - AUDICOM starts as **auto** user.
+  - If 1 minute passes without intervention, playback starts from the title closest to current time.
+- Configured in **Configuration Panel \> Preferences**.
 
 <Warning>
-  Para que AUDICOM se ejecute al arrancar la computadora, debe crearse un acceso directo a `aire.exe` en el menú **Inicio (StartUp)** de Windows.
+  For AUDICOM to run at computer startup, create a shortcut to `aire.exe` in Windows **Startup** menu.
 </Warning>
 
 <Note>
-  Algunas emisoras generan un “autoarranque virtual” programando un bloque **Satfill** en la madrugada.\
-  Este procedimiento se explica en _Corte nocturno de la transmisión_.
+  Some stations create a "virtual autorun" by scheduling a **Satfill** block overnight.\
+  This procedure is explained in _Overnight Transmission Break_.
 </Note>
 
 ---
 
-### Pausa / Stop `[End]`
+### Pause / Stop `[End]`
 
-- Si se pulsa durante la reproducción:
-  - **Pausa**: detiene el título, pudiendo reanudarlo con Play.
-  - **Stop**: detiene por completo la reproducción.
+- When pressed during playback:
+  - **Pause**: stops the title, can resume with Play.
+  - **Stop**: completely stops playback.
 
 ---
 
 ### Fade & Stop `[Ctrl + End]`
 
-Reduce el nivel 20 dB por segundo hasta detener la reproducción.
+Reduces level by 20 dB per second until playback stops.
 
 ---
 
 ### Fade & Play `[Ctrl + Home]`
 
-- El título actual termina con fundido progresivo.
-- Se inicia el próximo título.
-- Si los títulos tienen fundidos de entrada y salida, se aplica **crossfade**.
+- Current title ends with progressive fade.
+- Next title begins playing.
+- If titles have fade-in and fade-out, **crossfade** is applied.
 
 ---
 
-### Punto de detención `[Page Up]`
+### Stop Point `[Page Up]`
 
-Inserta una pausa en la lista de CyberPlay:
+Inserts a pause in the CyberPlay list:
 
-- Cuando finaliza el título actual, la reproducción se detiene.
-- El siguiente título pasa a ser el “próximo” (cursor verde).
-- Representación: barra negra con la leyenda **PAUSE**.
+- When current title ends, playback stops.
+- Next title becomes "next" (green cursor).
+- Representation: black bar with **PAUSE** label.
 
-Operaciones:
+Operations:
 
-- Insertar pausa sobre título seleccionado (cursor amarillo).
-- Si no hay selección, se inserta debajo del cursor rojo (título en reproducción).
-- Eliminar pausa: selecciónela y presione el botón _Pausa_, o arrástrela a la izquierda.
-- También puede hacerse desde el menú emergente (clic derecho).
+- Insert pause on selected title (yellow cursor).
+- If no selection, inserts below red cursor (playing title).
+- Remove pause: select it and press _Pause_ button, or drag it to the left.
+- Can also be done from context menu (right click).
 
 ---
 
-## Acciones en la ventana de títulos
+## Title Window Actions
 
-### Seleccionar un título `[Flechas ↑ / ↓]`
+### Select a Title `[↑ / ↓ Arrows]`
 
-- Un clic sobre un título lo marca con cursor amarillo (selección).
-- Con las flechas, el cursor de selección se desplaza en la lista.
+- Click on a title marks it with yellow cursor (selection).
+- With arrows, selection cursor moves through the list.
 
-### Escucha previa (Cue) `[Supr]`
+### Preview (Cue) `[Delete]`
 
-- Doble clic sobre un título → reproducción por la salida de **Cue**.
-- Segundo doble clic → reproduce los 5 segundos finales (**CUE END**).
-- Configuración de la salida en **Panel de Configuración**.
-- Control desde **InfoMusic Aire**, con indicadores de nivel y barra de posición.
-- Detener reproducción en Cue: **Stop-cue** en InfoMusic o tecla **ESC**.
+- Double click on title → playback through **Cue** output.
+- Second double click → plays last 5 seconds (**CUE END**).
+- Output configuration in **Configuration Panel**.
+- Control from **InfoMusic Air**, with level meters and position bar.
+- Stop Cue playback: **Stop-cue** in InfoMusic or **ESC** key.
 
-**Cue desde consola**
+**Console Cue**
 
-- Active **CUE** con doble clic en la leyenda izquierda del contador.
-- El audio se reproduce desde Live Assist pero:
-  - No se reporta por RDS/iRDS.
-  - No queda registrado en archivos `.air`.
+- Activate **CUE** by double clicking counter's left label.
+- Audio plays from Live Assist but:
+  - Not reported via RDS/iRDS.
+  - Not logged in `.air` files.
 
 <Warning>
-  Este modo no se recomienda. Puede inducir errores al trabajar sin canal de monitoreo dedicado.
+  This mode is not recommended. Can lead to errors when working without dedicated monitoring channel.
 </Warning>
 
-### Eliminar un título `[Retroceso]`
+### Remove a Title `[Backspace]`
 
-- Seleccione el título y arrástrelo hacia el lateral izquierdo de CyberPlay o hacia los contadores.
-- Alternativamente: clic derecho → **Remover**.
+- Select title and drag it to left side of CyberPlay or toward counters.
+- Alternatively: right click → **Remove**.
 
-### Insertar un título `[Ins]`
+### Insert a Title `[Insert]`
 
-- Puede insertar títulos desde otros módulos (InfoMusic, MediaManager, Live Assist).
-- Arrástrelo hacia la ventana CyberPlay.
-- Aparece una línea azul indicando la posición de inserción.
-- También puede hacerse con el botón de inserción (flecha azul) o la tecla **Enter**.
+- Can insert titles from other modules (InfoMusic, MediaManager, Live Assist).
+- Drag it to CyberPlay window.
+- Blue line appears indicating insertion position.
+- Can also use insert button (blue arrow) or **Enter** key.
 
-### Cambiar la posición de un título
+### Change Title Position
 
-- Seleccione el título y arrástrelo hacia arriba/abajo.
-- Aparece una línea azul indicando la nueva posición.
+- Select title and drag up/down.
+- Blue line appears indicating new position.
 
 <Danger>
-  Muchas operaciones pueden estar restringidas por el perfil de usuario.\
-  Si intenta una acción prohibida, aparecerá un mensaje emergente indicando la restricción.\
-  Ante dudas, consulte con el administrador de red o responsable técnico.
+  Many operations may be restricted by user profile.\
+  If you attempt a prohibited action, a pop-up message will indicate the restriction.\
+  For questions, consult the network administrator or technical manager.
 </Danger>

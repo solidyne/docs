@@ -1,78 +1,88 @@
 ---
-title: "Ethernet y acceso web"
-description: "Conexión, configuración y acceso vía vía Ethernet"
-keywords: ["Ethernet", "DHCP", "IP estática", "remoto", "port forwarding"]
-tags: ["procesadores", "542"]
+title: "Ethernet and web access"
+description: "Connection, configuration and access via Ethernet"
+keywords: ["Ethernet", "DHCP", "Static IP", "remote", "port forwarding"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "4506a553b1d6afc0c398e520278e522e0636d9a26db066dc8b4da8d552bddbbb"
+
 ---
 
 import discovery from '/snippets/discovery.mdx';
 
-## Conexión a la red local
+## Local network connection
 
-Todas las opciones de configuración y ajustes avanzados del procesador **542APC** se realizan desde la **interfaz de control WEB**.
+All configuration options and advanced settings of the **542APC** processor are accessed through the **WEB control interface**.
 
-Para acceder:
+To access:
 
-1. Conecte el equipo a una boca del **router o switch** de la red local usando el **puerto Ethernet Control**.
+1. Connect the unit to a port on the local network **router or switch** using the **Ethernet Control port**.
 
    <Warning>
-     No confundir el **puerto Ethernet de Control** con el **puerto Ethernet AoIP** (modelos con opción Streamer/AoIP).
+     Do not confuse the **Control Ethernet port** with the **AoIP Ethernet port** (models with Streamer/AoIP option).
    </Warning>
-2. La **dirección IP asignada** se muestra en la pantalla OLED del frente del equipo.
+
+2. The **assigned IP address** is shown on the front panel OLED display.
 
    <discovery />
      
    <Info>
-     De forma predeterminada, el 542APC trabaja con IP dinámica (DHCP activado):
+     By default, the 542APC works with dynamic IP (DHCP enabled):
 
-     El router asigna automáticamente una dirección IP libre.
+     The router automatically assigns an available IP address.
 
-     Esta dirección puede cambiar al reiniciar el equipo.
+     This address may change when the unit restarts.
 
-     Es posible asignar una dirección\*\*IP estática \*\* desde la pantalla de sistema para evitar cambios de IP.
+     A **static IP** address can be assigned from the system screen to prevent IP changes.
    </Info>
-3. Usando una computadora conectada a la misma LAN que el procesador, ingresar la dirección IP en un **navegador web**  (recomendado Google Chrome).
+
+3. Using a computer connected to the same LAN as the processor, enter the IP address in a **web browser** (Google Chrome recommended).
 
    <Info>
-     Se recomienda que la computadora esté conectada a la LAN por **cable Ethernet**.\
-     En algunos casos, una PC conectada por Wi-Fi podría no tener permisos para acceder a dispositivos cableados de la misma red.
+     It is recommended that the computer is connected to the LAN via **Ethernet cable**.\
+     In some cases, a PC connected via Wi-Fi might not have permissions to access wired devices on the same network.
    </Info>
 
-## Acceso remoto vía Internet
+## Remote access via Internet
 
-### Unidades con módulo STREAMER AoIP
+### Units with STREAMER AoIP module
 
-En unidades equipadas con la expansión _STREAMER AoIP_ (con número \_serie AD \_y posteriores) el acceso al procesador vía Internet está simplificado a través de un servicio que genera un enlace fijo.
+In units equipped with the _STREAMER AoIP_ expansion (with _serial number AD_ and later), Internet access to the processor is simplified through a service that generates a fixed link.
 
-<Icon icon="globe" iconType="solid" color="#ff6c00" size={18} />  Ver Acceso remoto simplificado → Equipos con servicios AoIP
+<Icon icon="globe" iconType="solid" color="#ff6c00" size={18} />  See Simplified remote access → Equipment with AoIP services
 
-### Unidades sin STREAMER AoIP
+### Units without STREAMER AoIP
 
-Si el equipo no cuenta con el **servicio simplificado**, se puede acceder desde fuera de la LAN de dos maneras:
+If the unit does not have the **simplified service**, it can be accessed from outside the LAN in two ways:
 
-#### 1. Usando un software de Escritorio Remoto
+#### 1. Using Remote Desktop software
 
-Un método sencillo, que no requiere mayores configuraciones, es usar un software de **escritorio remoto** (TeamViewer, Anydesk, Parsec, etc.) para acceder a una computadora de la LAN conectada por Ethernet al procesador.
+A simple method that requires no major configuration is to use **remote desktop** software (TeamViewer, Anydesk, Parsec, etc.) to access a LAN computer connected via Ethernet to the processor.
 
-- Desde esa computadora local, abra un navegador web y acceda a la **interfaz web del 542APC**.
-- De esta forma es posible configurar remotamente el procesador e incluso instalar actualizaciones de firmware sin riesgos.
-- La comunicación entre la PC y el procesador ocurre dentro de la **red local**.
-- Internet solo interviene en el control remoto de la computadora.
+- From that local computer, open a web browser and access the **542APC web interface**.
+- This allows remote processor configuration and even firmware updates without risks.
+- Communication between the PC and processor occurs within the **local network**.
+- Internet is only involved in remote control of the computer.
 
 <Tip>
-  Este método es el más seguro y sencillo para soporte remoto, ya que no requiere modificar configuraciones de red.
+  This method is the safest and simplest for remote support, as it requires no network configuration changes.
 </Tip>
 
-#### 2. Configurar acceso externo a la IP del equipo
+#### 2. Configure external access to the unit's IP
 
-La segunda opción consiste en instalar el procesador con una **dirección IP estática** y configurar la red local para permitir acceso externo a esa dirección.
+The second option involves installing the processor with a **static IP address** and configuring the local network to allow external access to that address.
 
-Esto implica:
+This involves:
 
-- Configuración de **re-direccionamiento de puertos**.
-- Contratación de **IP públicas estáticas** y/o uso de servicios de **DNS dinámico**.
+- **Port forwarding** configuration.
+- Contracting **static public IPs** and/or using **dynamic DNS** services.
 
 <Warning>
-  Este procedimiento requiere conocimientos avanzados de redes.\
-  Se recomienda consultar a un técnico especializado en administración de redes.
+  This procedure requires advanced networking knowledge.\
+  Consulting with a network administration specialist is recommended.
 </Warning>

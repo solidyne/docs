@@ -1,64 +1,72 @@
 ---
-title: "Reportes"
-description: "Reportes de emisión y estadísticas"
-keywords: ["reportes", "comerciales", "tanda", "publicidad", "programación"]
+title: "Reports"
+description: "Broadcast reports and statistics"
+keywords: ["reports", "commercials", "breaks", "advertising", "programming"]
 tags: ["Software", "Admicom", "audicom"]
----
-
-## Reportes desde Admicom
-
-Admicom ofrece diversas opciones de generación de reportes que permiten controlar las campañas, verificar emisiones y obtener documentación exportable en distintos formatos (impresión, Excel o PDF).
-
-### Reporte de ventas
-
-Genera un informe de los avisos emitidos de un cliente específico dentro de un rango de fechas.\
-Se accede desde `Reporte -> Ventas`.
-
-En el formulario se completan:
-
-- **Emisora** (si se gestiona más de una).
-- **Cliente**.
-- **Rango de fechas**.
-
-Al pulsar **Reporte**, se despliega el detalle de los avisos correspondientes al cliente, ordenados alfabéticamente. El informe puede imprimirse, exportarse a Excel compatible o guardarse en PDF.
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "7b7afa2b133227b117b690185ed0e3cca5a11d517322e4002f3b5dd163c77589"
 
 ---
 
-### Liquidación de agencia
+## Reports from Admicom
 
-Permite obtener un listado de los avisos correspondientes a una Agencia de Publicidad.\
-El reporte incluye el detalle de los avisos emitidos en cada emisora (en instalaciones con múltiples emisoras).
+Admicom offers various reporting options that allow you to monitor campaigns, verify broadcasts, and obtain exportable documentation in different formats (print, Excel, or PDF).
 
-Las opciones de salida son: impresión, exportación a Excel o guardado en PDF.
+### Sales Report
 
----
+Generates a report of aired advertisements for a specific client within a date range.\
+Access it from `Report -> Sales`.
 
-### PNT / Auspicios
+Complete the following in the form:
 
-Genera un reporte de **Propaganda No Tradicional (PNT)** y **Auspicios** para un día específico.
+- **Station** (if managing more than one).
+- **Client**.
+- **Date range**.
 
----
-
-### Perfil de tanda
-
-Muestra de manera gráfica la densidad de tandas comerciales a lo largo del día.\
-Este reporte solo está disponible para tandas ya generadas. Si se intenta generar un perfil sobre una fecha sin tandas, se muestra el mensaje **“Tanda inexistente”**.
-
-- **Eje horizontal:** Horas del día (0 a 24 Hs).
-- **Eje vertical:** Minutos de publicidad acumulados por cada hora.
-
-La línea roja **Max** representa el límite máximo de publicidad permitido por hora, configurado en `Configuración Emisora -> Estación`.\
-Admicom nunca supera este límite en tandas generadas automáticamente, aunque podría superarse si se modifica una tanda manualmente desde otros módulos (ejemplo: CyberPlay Editor).
+When clicking **Report**, it displays the details of advertisements corresponding to the client, sorted alphabetically. The report can be printed, exported to compatible Excel format, or saved as PDF.
 
 ---
 
-### Campaña de un aviso
+### Agency Settlement
 
-Muestra en forma simplificada la pauta de un aviso comercial, indicando las apariciones programadas.
+Provides a list of advertisements corresponding to an Advertising Agency.\
+The report includes details of advertisements aired on each station (in multi-station installations).
 
-Para reportes basados en las emisiones reales al aire se utiliza el módulo **Aaudit**, que genera informes a partir de los registros de emisión.\
-El reporte puede imprimirse, exportarse a Excel compatible o guardarse en PDF.
+Output options are: printing, Excel export, or PDF saving.
+
+---
+
+### Product Placement / Sponsorships
+
+Generates a report of **Product Placement** and **Sponsorships** for a specific day.
+
+---
+
+### Break Profile
+
+Displays graphically the density of commercial breaks throughout the day.\
+This report is only available for already generated breaks. If attempting to generate a profile for a date without breaks, the message **"Break not found"** is shown.
+
+- **Horizontal axis:** Hours of the day (0 to 24 Hrs).
+- **Vertical axis:** Accumulated advertising minutes per hour.
+
+The red line **Max** represents the maximum advertising limit allowed per hour, configured in `Station Configuration -> Station`.\
+Admicom never exceeds this limit in automatically generated breaks, although it could be exceeded if a break is manually modified from other modules (example: CyberPlay Editor).
+
+---
+
+### Advertisement Campaign
+
+Shows in simplified form the schedule of a commercial advertisement, indicating programmed appearances.
+
+For reports based on actual on-air broadcasts, the **Aaudit** module is used, which generates reports from broadcast logs.\
+The report can be printed, exported to compatible Excel format, or saved as PDF.
 
 <Note>
-  IMPORTANTE: Además de los reportes de Admicom, el módulo **Aaudit** permite auditar y verificar las emisiones efectivamente realizadas en aire.
+  IMPORTANT: In addition to Admicom reports, the **Aaudit** module allows auditing and verification of actual on-air broadcasts.
 </Note>

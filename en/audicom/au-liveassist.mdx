@@ -1,14 +1,22 @@
 ---
 title: "Live Assist"
-description: "Botoneras de acceso instantáneo."
+description: "Instant playback button panels."
 keywords: ["Live Assist"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5bebef2802bf7ae4aff33ee03c05ea8d97650db530570b2d0817478e513ca09e"
+
 ---
 
-## Botoneras Live Assist
+## Live Assist Button Panels
 
-Los módulos **Live Assist 1** y **Live Assist 2** permiten lanzar títulos al aire de forma instantánea.\
-Se utilizan principalmente para reproducir **SFX, promocionales, separadores y cortinas**.
+The **Live Assist 1** and **Live Assist 2** modules enable instant playback of audio files.\
+They are mainly used for playing **SFX, promos, jingles and beds**.
 
 <img
   src="/images/audicom/au-liveassist.png"
@@ -18,174 +26,174 @@ Se utilizan principalmente para reproducir **SFX, promocionales, separadores y c
   style={{ width:"51%" }}
 />
 
-- Los títulos se organizan en grillas de botones.
-- Cada perfil cuenta con 12 páginas o pestañas (tabs).
-- La cantidad de botones por página depende de las filas y columnas definidas en el **Panel de Configuración**.
-- El panel se puede redimensionar y el tamaño de los botones se ajusta automáticamente.
+- Audio files are organized in button grids.
+- Each profile has 12 pages or tabs.
+- The number of buttons per page depends on rows and columns defined in the **Configuration Panel**.
+- The panel can be resized and button sizes adjust automatically.
 
-Live Assist soporta control desde:
+Live Assist supports control from:
 
-- Teclado (ver sección _Manejo desde el teclado_).
-- Controladores externos vía **MIDI**.
+- Keyboard (see _Keyboard Control_ section).
+- External controllers via **MIDI**.
 
-### Dispositivos de audio
+### Audio Devices
 
-- Pueden asignarse dispositivos de salida independientes o compartir el mismo que **CyberPlay**.
-- En caso de compartir, la mezcla se realiza internamente según el valor de **MIX**.
-- La asignación se realiza desde el **Panel de Configuración**.
+- Can be assigned independent output devices or share the same as **CyberPlay**.
+- When sharing, mixing is done internally according to **MIX** value.
+- Assignment is done from the **Configuration Panel**.
 
 ### Video
 
-En **Audicom Black Video**, Live Assist también soporta reproducción de video.
+In **Audicom Black Video**, Live Assist also supports video playback.
 
-- No interrumpe ni se superpone a videos que estén en reproducción por CyberPlay o PlayList Manager.
-
-
-
-## Dispositivos de salida
-
-Ambos módulos pueden reproducir por mezcla interna sobre CyberPlay o por salidas independientes.\
-La asignación se realiza desde el **Panel de Configuración**.
+- Does not interrupt or overlap with videos playing through CyberPlay or PlayList Manager.
 
 
 
-## Visualización expandida
+## Output Devices
 
-Puede alternar entre vista reducida y expandida.
-
-- El cambio se realiza con el botón **Maximizar**, ubicado en la barra de título.
-
-
-
-## Pausa, Stop y Fade-Stop
-
-- **Pausa**: detiene la reproducción y permite reanudar con Play.
-- **Stop**: detiene completamente y vuelve al inicio.
-- **Fade-Stop**: atenúa progresivamente el nivel y luego detiene.
+Both modules can play through internal mix with CyberPlay or through independent outputs.\
+Assignment is done from the **Configuration Panel**.
 
 
 
-## Escucha previa (Cue)
+## Expanded View
 
-- Clic derecho sobre un botón → reproducción en **CUE** por canal dedicado.
-- Mantener clic derecho \>1s también activa CUE.
-- Alternativamente: doble clic sobre la leyenda **CUE** en el display.
+You can toggle between compact and expanded views.
+
+- Toggle using the **Maximize** button in the title bar.
+
+
+
+## Pause, Stop and Fade-Stop
+
+- **Pause**: stops playback and allows resuming with Play.
+- **Stop**: completely stops and returns to start.
+- **Fade-Stop**: gradually fades out level then stops.
+
+
+
+## Preview (Cue)
+
+- Right click on a button → plays in **CUE** through dedicated channel.
+- Hold right click \>1s also activates CUE.
+- Alternatively: double click on **CUE** label in display.
 
 <Warning>
-  El modo CUE desde consola no es recomendado:
+  Console CUE mode is not recommended:
 
-  - No reporta en RDS/iRDS.
-  - No registra en archivos `.air`.
-  - Requiere activar/desactivar CUE en cada acción → propenso a errores.
+  - Does not report to RDS/iRDS.
+  - Does not log to `.air` files.
+  - Requires enabling/disabling CUE for each action → prone to errors.
 </Warning>
 
 
 
-## Modos de reproducción
+## Playback Modes
 
-Live Assist tiene tres modos, seleccionables presionando el botón sucesivamente:
+Live Assist has three modes, selectable by pressing the button successively:
 
 - **Normal**:
-  - Reproduce una vez.
-  - Si se dispara otro archivo, queda en cola (texto parpadeando).
+  - Plays once.
+  - If another file is triggered, it queues (flashing text).
 - **Loop**:
-  - Reproducción en bucle.
-  - Se detiene con Stop o cambiando de modo.
-- **Instantáneo**:
-  - Si se dispara otro botón, interrumpe al anterior.
+  - Continuous loop playback.
+  - Stops with Stop or changing modes.
+- **Instant**:
+  - If another button is triggered, interrupts previous playback.
 
-### Encadenar con aire
+### Chain to Air
 
-- Estando detenido el módulo de Aire:
-  - Dispare uno o varios botones en Live Assist.
-  - Luego presione el botón de encadenado al aire.
-- La ventana se cierra y al terminar la secuencia, continúa la lista de Aire.
+- With Air module stopped:
+  - Trigger one or more Live Assist buttons.
+  - Then press the chain to air button.
+- Window closes and after sequence ends, Air playlist continues.
 
 <Note>
-  Desde el teclado se logra la misma operación con la **barra espaciadora** tras disparar un archivo.
+  From keyboard, same operation using **spacebar** after triggering a file.
 </Note>
 
 
 
-## Marcadores de inicio y fin
+## Start and End Markers
 
 <Steps>
-  <Step title="Activar CUE">
-    Ponga Live Assist en modo CUE con doble clic sobre la leyenda CUE.\
-    Esto evita que el audio se reporte en RDS o se registre en archivos `.air`.
+  <Step title="Enable CUE">
+    Set Live Assist to CUE mode with double click on CUE label.\
+    This prevents audio from reporting to RDS or logging to `.air` files.
   </Step>
-  <Step title="Disparar botón">
-    Pulse el botón que desee marcar.
+  <Step title="Trigger button">
+    Press the button you want to mark.
   </Step>
-  <Step title="Definir marcas">
-    Con clic derecho, seleccione **Mark In** o **Mark Out**.\
-    Escuche el audio y marque en el momento deseado.
+  <Step title="Set markers">
+    Right click to select **Mark In** or **Mark Out**.\
+    Listen to audio and mark at desired point.
   </Step>
 </Steps>
 
 
 
-## Ventana de iconos
+## Icons Window
 
-- Muestra el nombre e icono del perfil Live Assist activo.
-- Los iconos son archivos `.ico` ubicados en `\Audicom\LA-Icons`.
-- Se pueden agregar o borrar iconos según preferencia.
+- Shows name and icon of active Live Assist profile.
+- Icons are `.ico` files located in `\Audicom\LA-Icons`.
+- Icons can be added or removed as needed.
 
-### Perfiles privados
+### Private Profiles
 
-- Los perfiles privados solo son accesibles por el usuario que los creó.
-- Aparecen identificados con el nombre del propietario.
-- Si otro usuario intenta acceder, aparece un mensaje de restricción.
-
-
-
-### Exportar / Importar página
-
-- **Exportar**: guarda la página actual como un Playlist (`.txt`).
-- **Importar**: carga un Playlist en la botonera Live Assist.
-
-Los ítems de la lista se cargan en botones según su orden.
+- Private profiles are only accessible by the user who created them.
+- They appear identified with owner's name.
+- If another user attempts access, a restriction message appears.
 
 
 
-### Crear perfiles Live Assist
+### Export / Import Page
+
+- **Export**: saves current page as a Playlist (`.txt`).
+- **Import**: loads a Playlist into Live Assist buttons.
+
+List items load into buttons in sequence order.
+
+
+
+### Creating Live Assist Profiles
 
 <Steps>
-  <Step title="Abrir menú de creación">
-    En la ventana de iconos, clic derecho → **Añadir (Add)**.\
-    Ingrese nombre e icono para el perfil.
+  <Step title="Open creation menu">
+    In icons window, right click → **Add**.\
+    Enter profile name and icon.
   </Step>
-  <Step title="Definir privacidad">
-    Active la opción **Privada** si el perfil solo debe estar disponible para ese usuario.\
-    (Requiere autorización del administrador).
+  <Step title="Set privacy">
+    Enable **Private** option if profile should only be available to that user.\
+    (Requires administrator authorization).
   </Step>
-  <Step title="Cargar títulos">
-    Arrastre títulos desde Media Manager.\
-    El botón toma el color de la categoría del título.
+  <Step title="Load titles">
+    Drag titles from Media Manager.\
+    Button takes the color of title's category.
   </Step>
-  <Step title="Editar perfil">
-    Para cambiar nombre o icono: cargue el perfil → clic derecho sobre icono → **Editar**.
+  <Step title="Edit profile">
+    To change name or icon: load profile → right click on icon → **Edit**.
   </Step>
 </Steps>
 
 
 
-## Configuración de Live Assist
+## Live Assist Configuration
 
-### Tamaño de botoneras
+### Button Panel Size
 
-- Se define en **Panel de Configuración \> Preferencias**.
-- Puede modificarse número de filas y columnas.
-- Botones más grandes con menos cantidad, más pequeños con más cantidad.
-- Configuración predeterminada: **4 columnas x 12 filas = 48 botones por página**.
-- También puede cambiarse tipo y tamaño de fuente.
+- Set in **Configuration Panel \> Preferences**.
+- Number of rows and columns can be modified.
+- Larger buttons with fewer quantity, smaller with more quantity.
+- Default configuration: **4 columns x 12 rows = 48 buttons per page**.
+- Font type and size can also be changed.
 
-### Archivos de datos
+### Data Files
 
-- La información se guarda en `Liveass.dat` y `Liveass2.dat`.
-- La ruta se define en `audicom.ini`.
+- Information is saved in `Liveass.dat` and `Liveass2.dat`.
+- Path is defined in `audicom.ini`.
 
-Ejemplo:
+Example:
 
 ```ini
 [Live Assist]
@@ -197,8 +205,8 @@ File=c:\Audicom\LIVEASS.DAT
 LastPos2=0 0 0
 ```
 
-### Iconos
+### Icons
 
-- Ubicados por defecto en `\Audicom\LA-Icons`.
-- La ubicación puede cambiarse en `audicom.ini`.
-- Se pueden agregar o eliminar libremente.
+- Default location is `\Audicom\LA-Icons`.
+- Location can be changed in `audicom.ini`.
+- Can be freely added or removed.

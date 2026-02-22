@@ -1,14 +1,22 @@
 ---
 title: "iLink"
-description: "Retransmisión en estaciones repetidoras"
-keywords: ["internet", "ilink", "repetidoras", "enlaces"]
+description: "Relay broadcasting for repeater stations"
+keywords: ["internet", "ilink", "repeaters", "links"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "3cbc2dd62d85313981d6a9265658ce3875d1c74896e9eee3939ad98dad5d6751"
+
 ---
 
-Con una apariencia muy similar a **CyberPlay**, el **iLink** recrea la **lista única y continua de aire**. iLink es un **control de visualización**: cuando AUDICOM opera en modo iLink, **toda** la programación se repite desde la **cabecera**, **excepto**:
+With an interface similar to **CyberPlay**, **iLink** recreates the **continuous on-air playlist**. iLink is a **display control**: when AUDICOM operates in iLink mode, **all** programming is relayed from the **head station**, **except**:
 
-- los **bloques de tandas comerciales** (bloques verdes), y
-- la **artística** de la emisora cabecera, que se **reemplaza automáticamente** por sus equivalentes **locales**.
+- **commercial break blocks** (green blocks), and
+- the head station's **imaging**, which is **automatically replaced** with **local** equivalents.
 
 <img
   src="/images/audicom/au-iLink.jpg"
@@ -18,38 +26,38 @@ Con una apariencia muy similar a **CyberPlay**, el **iLink** recrea la **lista �
   style={{ width:"47%" }}
 />
 
-La información mostrada por iLink corresponde a los **archivos programados en el CyberPlay de la cabecera**. Con esa data el control sabe **cuándo** pasar de **Remoto** a **Local**, reproducir el audio local y **volver** exactamente cuando continúa el programa en la cabecera.
+The information displayed by iLink corresponds to the **files scheduled in the head station's CyberPlay**. With this data, the control knows **when** to switch from **Remote** to **Local**, play local audio and **return** exactly when the program continues at the head station.
 
-Además de enlazarse por Internet a una cabecera remota, iLink permite **reemplazar tandas de duración variable con precisión**, rellenando con **temas musicales**, **promos** o **arpegios** hasta alcanzar la **duración exacta** requerida.
+Besides connecting via Internet to a remote head station, iLink allows **precise replacement of variable-length breaks**, filling with **music tracks**, **promos** or **stingers** to reach the **exact duration** required.
 
-**Artística local:** iLink reemplaza la artística de cabecera por piezas **locales** de **igual duración**, en **tiempo real**, sin que el oyente lo perciba.
+**Local imaging:** iLink replaces head station imaging with **local** elements of **equal duration**, in **real-time**, imperceptibly to listeners.
 
-**Resguardo (foldback):** si la conexión a Internet se corta, iLink dispara un **bloque de música** con un **formato musical predefinido** por horario. Las **tandas comerciales regionales** se siguen emitiendo en sus **horarios**. Al restablecer la conexión, iLink **espera** a que termine el tema en curso y **retoma** el enlace.
+**Fallback:** if Internet connection is lost, iLink triggers a **music block** with a **predefined music format** by schedule. **Regional commercial breaks** continue airing at their **scheduled times**. When connection is restored, iLink **waits** for the current song to end and **resumes** the link.
 
-**Requisitos en repetidora:**
+**Requirements at repeater:**
 
-- AUDICOM **Multicast** instalado.
-- Acceso a Internet de **banda ancha**.
-
----
-
-## Canal de reproducción iLink
-
-La reproducción del streaming iLink usa el **dispositivo de reproducción predeterminado** de Windows.\
-Para cambiarlo, ajuste el **dispositivo predeterminado** en la **configuración de sonido de Windows**.
+- AUDICOM **Multicast** installed.
+- **Broadband** Internet access.
 
 ---
 
-## Programación del evento iLink en CyberPlay Editor
+## iLink playback channel
 
-En la repetidora, programe un **evento iLink** dentro de la **programación (PGM)** con el **horario** del enlace a la cabecera. Puede crear **un único bloque iLink** para todo el día o **varios bloques** en distintos horarios.
+iLink streaming playback uses Windows' **default playback device**.\
+To change it, adjust the **default device** in **Windows sound settings**.
 
-El bloque iLink es similar a los bloques **Live**, **AutoDj** o **Satelitales**. Se crea con el asistente **Magic Programming**, opción **“Bloque iLink”**.
+---
+
+## Programming iLink events in CyberPlay Editor
+
+At the repeater, schedule an **iLink event** within the **programming (PGM)** with the **time** for linking to the head station. You can create **a single iLink block** for the whole day or **multiple blocks** at different times.
+
+The iLink block is similar to **Live**, **AutoDj** or **Satellite** blocks. Create it using the **Magic Programming** wizard, **"iLink Block"** option.
 
 ### STEPS
 
-1. **Crear bloque iLink (Asistente)**\
-   Abra **Magic Programming** y elija **“Bloque iLink”**.
+1. **Create iLink block (Wizard)**\
+   Open **Magic Programming** and choose **"iLink Block"**.
 
    <img
      src="/images/audicom/au-magicprogramming-iLink.jpg"
@@ -58,8 +66,8 @@ El bloque iLink es similar a los bloques **Live**, **AutoDj** o **Satelitales**.
      className="mr-auto"
      style={{ width:"46%" }}
    />
-2. **Nombre del programa (dirección de enlace)**\
-   Ingrese la **dirección de acceso al streaming** generada por iRDS en la cabecera (campo **iLink address**).
+2. **Program name (link address)**\
+   Enter the **streaming access address** generated by iRDS at the head station (**iLink address** field).
 
    <img
      src="/images/audicom/au-magicprogramming-iLink_2.jpg"
@@ -67,16 +75,16 @@ El bloque iLink es similar a los bloques **Live**, **AutoDj** o **Satelitales**.
      title="Au Magicprogramming I Link 2 Jp"
      style={{ width:"45%" }}
    />
-   - Ejemplo por **IP y puerto**: `iLink://190.247.72.170:8081`
-   - Ejemplo por **servidor** (si iRDS publica en un servidor): `iLink://encoder.iviplanet.com/AUDICOM`
+   - Example by **IP and port**: `iLink://190.247.72.170:8081`
+   - Example by **server** (if iRDS publishes to a server): `iLink://encoder.iviplanet.com/AUDICOM`
 
-   **Desde / Hasta:** defina el **inicio** y **fin** del bloque iLink.
-3. **Paso intermedio no utilizado**\
-   Pulse **Continuar**.
-4. **Formato musical (relleno y contingencia)**\
-   Seleccione el **formato AutoDj** que iLink usará cuando:\
-   a) La **tanda cabecera dura más** que la **tanda regional** → se ajusta con **canciones**.\
-   b) Se **pierde Internet** → iLink programa **música** y mantiene **tandas regionales** hasta reconectar.
+   **From / To:** define the **start** and **end** of the iLink block.
+3. **Unused intermediate step**\
+   Click **Continue**.
+4. **Music format (fill and contingency)**\
+   Select the **AutoDj format** that iLink will use when:\
+   a) The **head station break is longer** than the **regional break** → adjusted with **songs**.\
+   b) **Internet is lost** → iLink schedules **music** and maintains **regional breaks** until reconnection.
 
    <img
      src="/images/audicom/au-magicprogramming-iLink_4.jpg"
@@ -85,130 +93,130 @@ El bloque iLink es similar a los bloques **Live**, **AutoDj** o **Satelitales**.
      style={{ width:"47%" }}
    />
 
-   **Recomendación:** el formato debe incluir **canciones de duraciones diversas** para facilitar la **compensación de tiempos**. Evite **Modo Inducido** si restringe demasiado la selección (p. ej., una secuencia rígida **Hits-80 → Hits-90 → Hits-00** limita las coincidencias de duración).
-5. **Paso final no utilizado**\
-   Pulse **Continuar** y **guarde**.
+   **Recommendation:** the format should include **songs of diverse durations** to facilitate **time compensation**. Avoid **Induced Mode** if it overly restricts selection (e.g., a rigid sequence **Hits-80 → Hits-90 → Hits-00** limits duration matches).
+5. **Unused final step**\
+   Click **Continue** and **save**.
 
-**Ejemplo de instrucción de bloque iLink (en el PGM):**
+**Example of iLink block instruction (in PGM):**
 
 \
 `/Block /00:00-24:00 /ILink="AutoDj Jazz" iLink://190.247.72.170:8080`
 
-Puede crear **múltiples bloques iLink** con **distintos formatos de relleno** según el contenido de cada programa de cabecera.
+You can create **multiple iLink blocks** with **different fill formats** according to each head station program's content.
 
 ---
 
-## Evento iLink con protocolo xLink (sin retardo)
+## iLink event with xLink protocol (zero delay)
 
-Cuando se requiere **repetidora sin retardo**, la cabecera transmite **solo metadata** con **xLink**, y el **audio** llega a la repetidora por una **conexión física** (analógica o digital) a su **entrada de línea**. La repetidora recibe **metadata vía LAN** y reemplaza **avisos** y **artística** localmente.
+When **delay-free repeater** is required, the head station transmits **metadata only** via **xLink**, and **audio** reaches the repeater through a **physical connection** (analog or digital) to its **line input**. The repeater receives **metadata via LAN** and replaces **spots** and **imaging** locally.
 
-En el **PGM** de la repetidora, programe una instrucción iLink en modo **xLink**:
+In the repeater's **PGM**, schedule an iLink instruction in **xLink** mode:
 
-`/Block /08:00-14:00 /ILink="formato de autodj" xLink://url/placaDeAudio/entrada`
+`/Block /08:00-14:00 /ILink="autodj format" xLink://url/soundCard/input`
 
-**Parámetros:**
+**Parameters:**
 
-- **URL** → IP del servidor con iRDS/xLink activo. Ej.: `192.168.0.50` (puerto por defecto `8088`).
-- **Placa de audio** → nombre del **dispositivo de entrada**. Ej.: `Realtek High Definition Audio`.
-- **Entrada** → la **fuente** del dispositivo. Ej.: `Entrada de línea`.
+- **URL** → IP of server with iRDS/xLink active. Ex.: `192.168.0.50` (default port `8088`).
+- **Sound card** → name of **input device**. Ex.: `Realtek High Definition Audio`.
+- **Input** → device's **source**. Ex.: `Line In`.
 
 <Note>
-  También puede definir dispositivo y entrada de xLink en el archivo de configuración para no repetirlos en cada bloque.\
-  Sección `\[Hardware]` con:
+  You can also define xLink device and input in the configuration file to avoid repeating them in each block.\
+  `\[Hardware]` section with:
   \
   `xLinkDeviceIn=HD Audio device`
   `xLinkLineInName=Line In`
 </Note>
 
-**Instrucción completa — ejemplo:**\
-`/Block /08:00-14:00 /ILink="Latinos" xLink://192.168.0.50/Realtek High Definition Audio/Entrada de línea`
+**Complete instruction — example:**\
+`/Block /08:00-14:00 /ILink="Latinos" xLink://192.168.0.50/Realtek High Definition Audio/Line In`
 
-## Reemplazo de tandas comerciales (iLink)
+## Commercial break replacement (iLink)
 
-Durante un **evento iLink**, AUDICOM reproduce el **streaming** de la cabecera.\
-Cuando la cabecera entra en **tanda comercial**, iLink **interrumpe** el streaming y emite la **tanda regional**.
+During an **iLink event**, AUDICOM plays the head station's **stream**.\
+When the head station enters a **commercial break**, iLink **interrupts** the stream and airs the **regional break**.
 
-> Debe existir la **misma cantidad de tandas** en cabecera y en la emisora regional.
+> There must be the **same number of breaks** at the head station and regional station.
 
-## Cantidad de tandas: comportamientos
+## Number of breaks: behaviors
 
-- **Cabecera con más tandas que la regional:** al terminar todas las tandas regionales, se **retoma** el audio de cabecera; **no** se repiten tandas regionales ni se genera relleno adicional.
-- **Cabecera con menos tandas que la regional:** las **tandas regionales sobrantes** se **ignoran**.
+- **Head station has more breaks than regional:** when all regional breaks finish, it **returns** to head station audio; regional breaks are **not** repeated nor additional fill generated.
+- **Head station has fewer breaks than regional:** remaining **regional breaks** are **ignored**.
 
-## Duración de cada tanda: ajustes automáticos
+## Individual break duration: automatic adjustments
 
-Lo usual es preacordar la duración de cada tanda. Si no coinciden, iLink actúa así:
+Usually break durations are pre-agreed. If they don't match, iLink acts as follows:
 
-### Cabecera **más larga** que la regional → rellenar tiempo restante
+### Head station **longer** than regional → fill remaining time
 
-**Nivel 1 (Música):** intenta cubrir la diferencia con **canciones** según el **formato AutoDj** definido para el bloque iLink. Si no logra el **ajuste exacto** (muy común si la diferencia es \< ~3 min), pasa al Nivel 2.\
-**Nivel 2 (Promos):** rellena con archivos `Clase=Promo` según el tiempo faltante. Si el remanente es demasiado **corto** para un promo (suelen durar \>2–3 s), pasa al Nivel 3.\
-**Nivel 3 (Fills):** rellena con `Clase=Fill` (arpegios/efectos de **1–5 s** aprox.). Al ser efectos breves, AUDICOM puede **cortarlos finamente** si hiciera falta (raro).
+**Level 1 (Music):** attempts to cover the difference with **songs** according to the **AutoDj format** defined for the iLink block. If **exact adjustment** isn't achieved (very common if difference is \< ~3 min), moves to Level 2.\
+**Level 2 (Promos):** fills with `Class=Promo` files based on remaining time. If remainder is too **short** for a promo (usually >2-3 s), moves to Level 3.\
+**Level 3 (Fills):** fills with `Class=Fill` (stingers/effects of **1-5 s** approx.). Being brief effects, AUDICOM can **trim them finely** if needed (rare).
 
-### Cabecera **más corta** que la regional
+### Head station **shorter** than regional
 
-iLink **emite la tanda regional completa** y luego vuelve a cabecera.
+iLink **plays the complete regional break** then returns to head station.
 
 <Note>
-  Evite este escenario: el bloque de cabecera se “engancha empezado”.
+  Avoid this scenario: the head station block will "join in progress".
 </Note>
 
 ---
 
-## Programación contra streaming “clásico”
+## Programming against "classic" streaming
 
-Es posible enlazar una cabecera **sin AUDICOM** (o un programa vía Internet). El bloque se arma como iLink, con estas salvedades:
+You can link to a head station **without AUDICOM** (or an Internet program). The block is set up like iLink, with these exceptions:
 
-- Use el esquema `mms://` en lugar de `iLink://`.
-- No hay control remoto de tandas: las **tandas locales** salen por **hora exacta** según **LOG/PGM**.
+- Use `mms://` scheme instead of `iLink://`.
+- No remote break control: **local breaks** air at **exact times** per **LOG/PGM**.
 
-**Ejemplo de bloque:**\
-`/Block /22:00-23:59 /ILink="Relleno Pop" mms://encoder.su-servidor.com:8080/RadioDemo`
+**Block example:**\
+`/Block /22:00-23:59 /ILink="Pop Fill" mms://encoder.your-server.com:8080/RadioDemo`
 
 ---
 
-## Reemplazo de cortes promocionales (artística de cabecera)
+## Promotional cut replacement (head station imaging)
 
-Puede definirse el **reemplazo de promos/IDs** de la cabecera por **artística regional**.\
-Ej.: cuando en cabecera suena `BsAs_identificacion-1`, en Córdoba suena `Cba_identificacion-1`.
+You can define **replacement of promos/IDs** from head station with **regional imaging**.\
+Ex.: when `BsAs_identification-1` plays at head station, `Cba_identification-1` plays in Córdoba.
 
-**Regla por prefijo:** los archivos de cabecera a reemplazar comparten un **prefijo**, p. ej. `BsAs_`.\
-Los regionales usan otro prefijo (p. ej. `Cba_`) y deben tener **igual duración** (tolerancia **±0,5 s**). Si no hay coincidencia de duración, **no** se reemplaza.
+**Prefix rule:** head station files to replace share a **prefix**, e.g. `BsAs_`.\
+Regional files use another prefix (e.g. `Cba_`) and must have **equal duration** (tolerance **±0.5 s**). If duration doesn't match, replacement **doesn't** occur.
 
 <Note>
-  Solo se reemplazan archivos **pautados** en la programación y los **lanzados desde Live Assist por el canal principal** (no en modo MIX). Si se dispara “pisando” música, **no** se reemplaza.
+  Only files **scheduled** in programming and those **launched from Live Assist on main channel** (not in MIX mode) are replaced. If triggered "over" music, replacement **doesn't** occur.
 </Note>
 
-### Dónde ubicar los archivos regionales
+### Where to place regional files
 
-Coloque los reemplazos en:\
+Place replacements in:\
 `C:\Audicom\Audio\Replace`
 
-> Conozca la **duración** de los cortes de cabecera a reemplazar y prepare **al menos** un archivo regional **equivalente**.
+> Know the **duration** of head station cuts to replace and prepare **at least** one **equivalent** regional file.
 
 ---
 
-## Instrucción `/replace` dentro del bloque iLink
+## `/replace` instruction within iLink block
 
-Solo **un** criterio `/replace` por **cada** bloque iLink. Variantes:
+Only **one** `/replace` criterion per iLink block. Variants:
 
 - `/replace ORIGINAL=`\
-  Reemplaza el archivo **exacto** `ORIGINAL` por **cualquier** archivo en `Replace` de **igual duración**.
+  Replaces exact `ORIGINAL` file with **any** file in `Replace` of **equal duration**.
 - `/replace ORIGINAL*=`\
-  Reemplaza **todos** los que comiencen con `ORIGINAL` por **cualquiera** en `Replace` de **igual duración**.
-- `/replace ORIGINAL*=REEMPLAZO`\
-  Reemplaza todos los que comiencen con `ORIGINAL` por el archivo **específico** `REEMPLAZO` (misma duración).
-- `/replace ORIGINAL*=REEMPLAZO*`\
-  Reemplaza todos los que comiencen con `ORIGINAL` por **cualquiera** en `Replace` que **comience** con `REEMPLAZO` (misma duración).
-- `/replace ORIGINAL=REEMPLAZO`\
-  Reemplaza `ORIGINAL` por `REEMPLAZO` (misma duración).
+  Replaces **all** starting with `ORIGINAL` with **any** in `Replace` of **equal duration**.
+- `/replace ORIGINAL*=REPLACEMENT`\
+  Replaces all starting with `ORIGINAL` with **specific** `REPLACEMENT` file (same duration).
+- `/replace ORIGINAL*=REPLACEMENT*`\
+  Replaces all starting with `ORIGINAL` with **any** in `Replace` **starting** with `REPLACEMENT` (same duration).
+- `/replace ORIGINAL=REPLACEMENT`\
+  Replaces `ORIGINAL` with `REPLACEMENT` (same duration).
 
-**Coincidencia de duración:** si `REEMPLAZO` **no** coincide, se busca **cualquier** archivo en `Replace` con **igual duración** (±0,5 s). Si no hay, el reemplazo **se aborta**.
+**Duration matching:** if `REPLACEMENT` **doesn't** match, searches for **any** file in `Replace` with **equal duration** (±0.5 s). If none found, replacement **aborts**.
 
-**Ejemplo por prefijos:**\
+**Example by prefixes:**\
 `/replace BsAs_*=Cba_*`\
-Reemplaza todo lo que comience con `BsAs_` por archivos que comiencen con `Cba_` **de igual duración**.
+Replaces everything starting with `BsAs_` with files starting with `Cba_` of **equal duration**.
 
 <Note>
-  Aunque solo hay un `/replace` por bloque, puede crear **múltiples bloques iLink** en el día, **cada uno** con su propio criterio de reemplazo.
+  Though only one `/replace` per block, you can create **multiple iLink blocks** per day, **each** with its own replacement criterion.
 </Note>

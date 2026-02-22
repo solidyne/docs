@@ -1,23 +1,31 @@
 ---
-title: "Configuraciones de sistema"
-description: "Configuraciones del sistema "
+title: "System Settings"
+description: "System Settings"
 keywords: ["GPIO","security","password","network"]
-tags: "procesadores,542"
+tags: "processors,542"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a3a4f6e085a33b94a0a77b9584bbd0322eee2631d04517b44f4d5ede11bb0025"
+
 ---
 
-## Ajustes generales de sistema
+## General System Settings
 
 ![542 SYSTEM General Pn](/images/542/542-SYSTEM-General.png)
 
 ### GPIO CONFIG
 
 - **GPI VOICE CHANGE PRESET**:\
-  Cuando la GPI se activa, conmuta el preset de procesado.
-  - La señal de disparo se genera en el Estudio al habilitar los micrófonos.
-  - Puede llegar al procesador por conexión **hardware** o vía **LAN** (modelos con opción /AoIP).
-  - El campo a la derecha define el preset a aplicar (por defecto: **VOICE-LOUD**).
+  When GPI is activated, it switches the processing preset.
+  - The trigger signal is generated in the Studio when microphones are enabled.
+  - It can reach the processor via **hardware** connection or **LAN** (/AoIP option models).
+  - The field on the right defines the preset to apply (default: **VOICE-LOUD**).
 - **GPO TRIGGER**:\
-  Lista de eventos que pueden activar la salida GPO:
+  List of events that can trigger the GPO output:
   1. AUDIO SILENCE
   2. INPUT FAIL BACKUP
   3. OVERMODULATION
@@ -25,60 +33,60 @@ tags: "procesadores,542"
   5. FORCE FM MONO
 
 <Info>
-  Ver detalles de [conexión de las GPIO](/es/unidex/instalacion-gpio)
+  See [GPIO connection](/es/unidex/instalacion-gpio) details
 </Info>
 
 ---
 
 ### SECURITY
 
-Permite habilitar contraseña (password) desmarcando la opción **Disable Password Protection** (default: activado).
+Allows enabling password protection by unchecking **Disable Password Protection** (default: enabled).
 
-- Contraseña predeterminada: `1234`.
-- Para modificarla, escribir en el campo **PASSWORD** y pulsar **APPLY**.
-- Reglas: hasta**8 caracteres** , solo letras **MAY**y números.
+- Default password: `1234`
+- To modify it, type in the **PASSWORD** field and press **APPLY**
+- Rules: up to **8 characters**, only **UPPERCASE** letters and numbers
 - **FRONT PANEL CHANGES (LOCK/UNLOCK)**:\
-  Bloquea o habilita el acceso desde el panel frontal.\
-  Si está bloqueado, se requiere la contraseña para modificar desde el frente.
+  Locks or enables access from the front panel.\
+  If locked, password is required to modify from the front panel.
 
 ---
 
-### User Interface (Interfaz de usuario)
+### User Interface
 
-- **LOUDNESS EBU REFERENCE**: Nivel de referencia de sonoridad en el monitoreo general (default: 0 dBfs).
-- **AUTO-OPEN LEFT MENU**: Despliega automáticamente el menú al acercar el mouse.
-- **ENABLE TOOLTIPS**: Activa mensajes emergentes de ayuda sobre controles e indicadores.
+- **LOUDNESS EBU REFERENCE**: Loudness reference level for general monitoring (default: 0 dBfs)
+- **AUTO-OPEN LEFT MENU**: Automatically expands the menu when mouse approaches
+- **ENABLE TOOLTIPS**: Activates help popup messages over controls and indicators
 
 ---
 
 ### NETWORK
 
-- Configuración de red.
-- De fábrica: modo **DHCP**.
-- Puede asignarse una **IP estática** desactivando DHCP.
-- La dirección IP se informa en el frente del equipo o vía LAN con la herramienta **Solidyne Multi-Discovery**.
+- Network configuration
+- Factory default: **DHCP** mode
+- A **static IP** can be assigned by disabling DHCP
+- IP address is shown on the unit's front panel or via LAN using **Solidyne Multi-Discovery** tool
 
 <Info>
-  Para más detalles ver [Conexión y acceso Ethernet](/es/542/542-instalacion-web).
+  For more details see [Ethernet Connection and Access](/es/542/542-instalacion-web)
 </Info>
 
 ---
 
 ### TECHNICAL REPORT
 
-Genera un reporte con parámetros de funcionamiento y configuración del equipo.
+Generates a report with equipment operating parameters and configuration.
 
-- El reporte se guarda en la carpeta de descargas del navegador.
-- Puede enviarse al **soporte técnico** para diagnóstico.
+- The report is saved to the browser's downloads folder
+- Can be sent to **technical support** for diagnostics
 
 ---
 
-### Status y Logs
+### Status and Logs
 
 - **SYSTEM TIME**:
-  - Si el equipo tiene acceso a Internet, sincroniza hora con un servidor **NTP**.
-  - También puede sincronizarse desde la PC con **SYNC FROM PC**.
-  - Fecha y hora se usan solo en reportes y registros.
+  - If the unit has Internet access, it syncs time with an **NTP** server
+  - It can also be synchronized from PC using **SYNC FROM PC**
+  - Date and time are only used in reports and logs
 - **SYSLOG**:
-  - Registro de eventos en memoria interna.
-  - Uso reservado a **personal especializado** en diagnóstico y soporte técnico.
+  - Internal memory event log
+  - Reserved for **specialized personnel** in diagnostics and technical support

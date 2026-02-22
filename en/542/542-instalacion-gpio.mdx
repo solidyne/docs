@@ -1,13 +1,21 @@
 ---
-title: "Señales GPIO"
-description: "Conexión de las entradas y salidas de proposito general (GPIO)"
+title: "GPIO Signals"
+description: "Connection of General Purpose Inputs and Outputs (GPIO)"
 keywords: ["GPIO", "DB9", "GPI", "GPO"]
-tags: ["procesadores", "542"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "cefeb5011ce559384210df7accace98b1ea680d2080c25fb5e4cffa36dfa4a49"
+
 ---
 
-## Conector GPIO
+## GPIO Connector
 
-Solidyne 542APC posee una entrada y una salida de propósito general (GPIO) disponibles sobre un conector tipo **DB9**. Las señales en el conector son:
+Solidyne 542APC features one general purpose input and one output (GPIO) available on a **DB9** connector. The pin signals are:
 
 <img
   src="/images/542/GPIO_DB9.png"
@@ -16,34 +24,34 @@ Solidyne 542APC posee una entrada y una salida de propósito general (GPIO) disp
   style={{ width:"35%" }}
 />
 
-| **PIN** | **SEÑAL**              |
-| ------- | ---------------------- |
-| 1       | GPI - VOLTAJE          |
-| 2       | GPI - COMÚN            |
-| 3       | NO CONECTADO           |
-| 4       | GPO - COLECTOR ABIERTO |
-| 5       | 12 VCC / 100 mA MAX    |
-| 6 a 9   | CHASIS                 |
+| **PIN** | **SIGNAL**           |
+| ------- | ------------------- |
+| 1       | GPI - VOLTAGE       |
+| 2       | GPI - COMMON        |
+| 3       | NOT CONNECTED       |
+| 4       | GPO - OPEN COLLECTOR|
+| 5       | 12 VDC / 100 mA MAX |
+| 6 to 9  | CHASSIS GROUND      |
 
-## Conexión y usos de la GPI
+## GPI Connection and Uses
 
-La entrada de propósito general (GPI) permite conmutar el ajuste de procesado hacia un ajuste optimizado para voces cuando los micrófonos son activados al aire.
+The General Purpose Input (GPI) allows switching to an optimized voice processing preset when microphones go on-air.
 
-GPI se activa aplicando una **tensión entre 5 y 15** \*\*voltios \*\*sobre el **PIN-1**. No usa referencia de tierra interna. El PIN-2 se conecta como GPI-COM a la señal externa. Esto evita lazos de realimentación que pueden producir ruido.
+GPI is activated by applying a **voltage between 5 and 15** volts to **PIN-1**. It does not use internal ground reference. PIN-2 connects as GPI-COM to the external signal. This prevents feedback loops that could generate noise.
 
-GPI no tiene polaridad, la activación se produce con tensiones positivas o negativas dentro del rango de trabajo.
+GPI is non-polarized - activation occurs with either positive or negative voltages within the operating range.
 
-Cuando la tensión en GPI es cero, se retorna al preset de procesado principal. La conmutación de los presets de procesado se indica en la pantalla OLED del equipo.
+When GPI voltage is zero, processing returns to the main preset. Preset switching is indicated on the unit's OLED display.
 
-Cuando Solidyne 542APC se instala en los estudios, el disparo de la GPI se puede resolver conectando la salida de tensión de la luz de aire directamente a la GPI del 542APC.\
-Verificar que la tensión “tally light” que entrega la consola se encuentre dentro del rango soportado (5-15 VCC).
+When installing the Solidyne 542APC in studios, GPI triggering can be achieved by directly connecting the console's on-air light voltage output to the 542APC's GPI.
+Verify that the console's tally light voltage is within the supported range (5-15 VDC).
 
-Cuando Solidyne 542APC está en planta transmisora, el disparo de la GPI puede resolverse utilizando un contacto a distancia (relay) del enlace Estudio-Planta si el equipo utilizado lo provee.
+When the Solidyne 542APC is at the transmitter site, GPI triggering can be achieved using a remote contact (relay) from the Studio-Transmitter Link if the equipment provides it.
 
-## Conexión y usos de la GPO
+## GPO Connection and Uses
 
-La salida de propósito general (GPO) permite comandar un dispositivo externo ante una determinada condición del procesador.
+The General Purpose Output (GPO) allows controlling an external device based on specific processor conditions.
 
-Se conecta sobre el PIN 4 del DB9. Es un contacto tipo “Colector Abierto” normal-abierto, que se cierra (se conecta a tierra de chasis) cuando está activo. **Soporta 100 mA máximo**.
+It connects to PIN 4 of the DB9. It is a normally-open "Open Collector" contact that closes (connects to chassis ground) when active. **Maximum current rating is 100 mA**.
 
-Las condiciones que activan la GPO se establecen desde la pantalla de Control WEB, en la opción de menú **CONFIGURACIÓN**.
+The conditions that activate the GPO are set through the Web Control interface under the **CONFIGURATION** menu option.

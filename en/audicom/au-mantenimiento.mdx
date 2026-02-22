@@ -1,89 +1,97 @@
 ---
-title: "Mantenimiento y soporte técnico"
-description: "Mantenimiento y depuración de la Base de Datos de medios."
-keywords: ["mantenimiento", "dbreindex", "base de datos"]
+title: "Maintenance and Technical Support"
+description: "Media Database maintenance and troubleshooting."
+keywords: ["maintenance", "dbreindex", "database"]
 tags: ["Software", "Audicom"]
----
-
-## Base de Datos / dbReindex
-
-Aunque la Base de Datos de AUDICOM es confiable, pueden ocurrir fallas (por ejemplo, cortes de energía o errores en la PC) que dañen su integridad. Si detecta anomalías en **AutoDJ** o en **InfoMusic**, es posible que la Base de Datos esté afectada.
-
-Para repararla:
-
-1. Cierre todas las aplicaciones que usen la Base de Datos (Aire, InfoMusic, AutoDJ Editor, File Manager).
-2. Ejecute `dbReindex.exe` desde la carpeta `\Audicom`.
-
-**Opciones disponibles:**
-
-- **Reindexa la Base de Datos:** Reconstruye los índices. Requiere haber ejecutado antes la opción _Compacta_.
-- **Compacta la Base de Datos:** Elimina registros borrados (por ejemplo, títulos eliminados en InfoMusic) y optimiza la base. Se recomienda usar siempre esta opción.
-- **Verifica que existan los archivos:** Comprueba si los títulos tienen archivos asociados. Los archivos faltantes se marcan como `_missing`.
-- **Revalida archivos perdidos:** Recupera títulos marcados como `_missing` si los archivos vuelven a estar disponibles (útil para discos removibles).
-- **Borra los títulos perdidos:** Elimina definitivamente los títulos marcados como `_missing`.
-- **Emprolija el campo título:** Convierte los nombres de títulos al modo _frase_ (primera letra en mayúscula).
-- **Emprolija los campos:** Normaliza mayúsculas/minúsculas en Autor, Intérprete, Género y Estilo. Los campos vacíos se marcan como _NO CLASIFICADO_.
-- **Ajusta el mapeo de unidades:** Corrige referencias de discos cuando Windows cambia la letra asignada a una unidad.
-- **`Renombra archivos a <intérprete - título>:`** Renombra físicamente los archivos según su información en la Base de Datos. **No puede deshacerse.**
-- **Reinicializa la fecha de pasada:** Asigna fecha y hora actual a todos los títulos, alterando su orden de reproducción.
-- **Asigna códigos a cada título:** Agrega códigos únicos a los títulos, necesarios para sincronizar con sistemas externos (ej. PowerGold).
-- **Crea información del sistema para soporte:** Genera un reporte (`C:\soporte.txt`) y lo adjunta al correo predeterminado para enviar al soporte técnico.
-- **Sincroniza la info en archivos con DB:** Escribe la información de la Base de Datos en los metadatos de los archivos de audio/video.
-
-**Botones de acción:**
-
-- **Procced:** Inicia el proceso seleccionado.
-- **Quit:** Cierra la aplicación.
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5f3c2fb9845d54b458294c892f3d30c4ba52b2050cde757fd45fbecc31b8a2ef"
 
 ---
 
-### Sistema de Autodiagnóstico
+## Database / dbReindex
 
-AUDICOM incluye un mecanismo que verifica el estado de la Base de Datos al cerrarse de forma incorrecta. Si se detectan errores, intenta repararlos automáticamente.
+Although AUDICOM's Database is reliable, failures can occur (e.g., power outages or PC errors) that may affect its integrity. If you detect anomalies in **AutoDJ** or **InfoMusic**, the Database might be corrupted.
 
-Este sistema puede activarse o desactivarse modificando el archivo `Audicom.ini`:
+To repair it:
+
+1. Close all applications using the Database (Air, InfoMusic, AutoDJ Editor, File Manager).
+2. Run `dbReindex.exe` from the `\Audicom` folder.
+
+**Available Options:**
+
+- **Reindex Database:** Rebuilds indexes. Requires running the _Compact_ option first.
+- **Compact Database:** Removes deleted records (e.g., titles deleted in InfoMusic) and optimizes the database. Using this option is always recommended.
+- **Verify File Existence:** Checks if titles have associated files. Missing files are marked as `_missing`.
+- **Revalidate Lost Files:** Recovers titles marked as `_missing` if files become available again (useful for removable drives).
+- **Delete Lost Titles:** Permanently removes titles marked as `_missing`.
+- **Clean Title Field:** Converts title names to _sentence_ mode (first letter capitalized).
+- **Clean Fields:** Normalizes uppercase/lowercase in Author, Performer, Genre, and Style. Empty fields are marked as _UNCLASSIFIED_.
+- **Adjust Drive Mapping:** Fixes disk references when Windows changes drive letter assignments.
+- **`Rename files to <performer - title>:`** Physically renames files according to Database information. **Cannot be undone.**
+- **Reset Last Play Date:** Assigns current date and time to all titles, affecting their playback order.
+- **Assign Codes to Each Title:** Adds unique codes to titles, required for synchronizing with external systems (e.g., PowerGold).
+- **Create System Information for Support:** Generates a report (`C:\soporte.txt`) and attaches it to the default email for sending to technical support.
+- **Sync File Info with DB:** Writes Database information into audio/video file metadata.
+
+**Action Buttons:**
+
+- **Procced:** Starts the selected process.
+- **Quit:** Closes the application.
+
+---
+
+### Self-Diagnostic System
+
+AUDICOM includes a mechanism that checks Database status when improperly closed. If errors are detected, it attempts automatic repairs.
+
+This system can be enabled or disabled by modifying the `Audicom.ini` file:
 
 ```
 [Settings]
 Autoreindex=1
 ```
 
-`1` = Autodiagnóstico activo.
+`1` = Self-diagnostic active.
 
-`0` = Autodiagnóstico inactivo.
+`0` = Self-diagnostic inactive.
 
 ---
 
-### Respaldo de la información
+### Information Backup
 
-Para garantizar la seguridad, realice copias de respaldo periódicas de los siguientes directorios y archivos:
+To ensure security, perform periodic backups of the following directories and files:
 
-- `\Audicom\DB` → Base de Datos musical, usuarios (`user.ini`) y contenido (`data.sqlite`).
-- `\Audicom\Log\*.log` → Pautas comerciales.
-- `\Audicom\Pgm\*.pgm` → Organización de programas y bloques.
-- `\Audicom\Air\*.air` → Registros de emisión (opcional, si se desea mantener históricos).
-- `\Admicom` → Base de Datos administrativa.
+- `\Audicom\DB` → Music database, users (`user.ini`) and content (`data.sqlite`).
+- `\Audicom\Log\*.log` → Commercial logs.
+- `\Audicom\Pgm\*.pgm` → Programs and blocks organization.
+- `\Audicom\Air\*.air` → Broadcast logs (optional, if historical records are desired).
+- `\Admicom` → Administrative database.
 
 <Warning>
-  El sistema **NO realiza copias automáticas**. Es responsabilidad del administrador de red o jefe técnico realizar y mantener los respaldos.
+  The system does **NOT perform automatic backups**. It is the network administrator's or technical manager's responsibility to perform and maintain backups.
 </Warning>
 
-Los instaladores de actualización **no sobrescriben** estos archivos, por lo que pueden ejecutarse de forma segura.
+Update installers do **not overwrite** these files, so they can be executed safely.
 
 ---
 
-## Soporte Técnico
+## Technical Support
 
-- Las actualizaciones son gratuitas durante un año a partir de la compra. Incluyen todos los cambios de la misma línea de producto (**AUDICOM** y **AUDICOM BLACK**).
-- Pasado ese período, puede renovarse la licencia contactando a Solidyne o a un distribuidor autorizado. La renovación incluye un año de **servicios WebTools**.
-- La fecha de caducidad de la licencia se muestra en el módulo de inicio **I-Logon** y en la Barra de Herramientas AUDICOM.
+- Updates are free for one year from purchase. They include all changes within the same product line (**AUDICOM** and **AUDICOM BLACK**).
+- After this period, the license can be renewed by contacting Solidyne or an authorized distributor. Renewal includes one year of **WebTools services**.
+- The license expiration date is shown in the **I-Logon** startup module and the AUDICOM Toolbar.
 
-En caso de problemas:
+In case of problems:
 
-1. Verifique primero la información en la ayuda y FAQ.
-2. Si no es suficiente, contacte al soporte de Solidyne por correo o teléfono.
-3. Puede solicitar soporte remoto: los técnicos ingresan a la red AUDICOM para revisar configuraciones y detectar problemas.
+1. First check the information in the help and FAQ.
+2. If insufficient, contact Solidyne support by email or phone.
+3. You can request remote support: technicians access the AUDICOM network to review settings and detect problems.
 
 <Note>
-  Este servicio remoto tiene costo adicional, pero permite ahorrar tiempo y evitar interrupciones en la operación de la emisora.
+  This remote service has additional cost, but saves time and prevents interruptions in station operation.
 </Note>

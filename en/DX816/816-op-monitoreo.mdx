@@ -1,108 +1,116 @@
 ---
-title: "Monitoreo y auriculares"
-description: "Monitoreo en altavoces y auriculares. Comunicación Talk-Back."
-keywords: ["monitoreo", "auriculares", "talkback", "cue", "studiobox"]
-tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+title: "Monitoring and headphones"
+description: "Speaker and headphone monitoring. Talk-Back communication."
+keywords: ["monitoring", "headphones", "talkback", "cue", "studiobox"]
+tags: ["studio consoles", "Classic line", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "54200d801fd57bf0166c13c57a17063fc8dab40cb4fba63c0e67cd388427a64c"
+
 ---
 
 ## Monitor Section
 
-Esta sección contine los controles:
+This section contains the following controls:
 
-- **Studio Monitor**: determina qué señal se escuchará en los parlantes monitores y auriculares del Estudio.
-- **Control Monitor**: asigna la señal a los parlantes monitores y auriculares de la Cabina de Control.
-- Control de **volumen CUE**.
-- Botón y micrófono de **Talk-Back** hacia el Estudio.
-- Botón Maestro "**ON-AIR Mics**". Activa los canales de micrófono y las señales "En el AIRE".
+- **Studio Monitor**: determines which signal will be heard on the Studio monitor speakers and headphones.
+- **Control Monitor**: assigns the signal to the Control Room monitor speakers and headphones.
+- **CUE** volume control.
+- **Talk-Back** button and microphone for Studio communication.
+- Master "**ON-AIR Mics**" button. Activates microphone channels and "On Air" signals.
 
 <img
   src="/images/816/816-panel-monitores.png"
-  alt="816 Op Monitoreo Pn"
-  title="816 Op Monitoreo Pn"
+  alt="816 Op Monitoring Pn"
+  title="816 Op Monitoring Pn"
   className="mx-auto"
   style={{ width:"66%" }}
 />
 
- 1. Control de nivel de altavoces de la Cabina de Control.
- 2. Suma el audio de CUE a los altavoces de Cabina de Control.
- 3. Control de nivel de los auriculares del operador u operadora.
- 4. Asignación de señal a la salida de monitoreo (auricualres y altavoces) en el Estudio. 
- 5. Asignación de señal a la salida de monitoreo (auricualres y altavoces) en Cabian de Control. 
- 6. Nivel con que se suma la señal CUE a los auriculares y altavoces de la Cabina de Control. 
- 7. Micrófono de Talk-Back (diálogo con el estudio y comunicaciones).
- 8. Pulsador de Talk-Back
- 9. Sensibilidad del micrófono Talk-Back
-10. Botón Maestro de micrófonos. 
+ 1. Control Room speakers level control.
+ 2. Adds CUE audio to Control Room speakers.
+ 3. Operator headphones level control.
+ 4. Signal assignment for Studio monitoring output (headphones and speakers).
+ 5. Signal assignment for Control Room monitoring output (headphones and speakers).
+ 6. Level for CUE signal mix to Control Room headphones and speakers.
+ 7. Talk-Back microphone (studio dialogue and communications).
+ 8. Talk-Back push button
+ 9. Talk-Back microphone sensitivity
+10. Master microphone button.
 
 ### **Studio Monitor**
 
-- Ofrece cuatro fuentes de señal: CUE, PGM, REC y ON-AIR [4].
-- La consola envía señales con nivel fijo tanto a auriculares como a parlantes.
-- Para la distribución y control de nivel en el Estudio se requiere un **distribuidor de auriculares**, como los módulos opcionales Solidyne HD3 y HD5.
+- Offers four signal sources: CUE, PGM, REC and ON-AIR [4].
+- The console sends fixed-level signals to both headphones and speakers.
+- A **headphone distribution system** is required for Studio level control and distribution, such as the optional Solidyne HD3 and HD5 modules.
 
 <Info>
-  Ver conexionado en  Instalación ⟶ [Monitoreo](/es/DX816/816-monitoreo)
+  See wiring in Installation ⟶ [Monitoring](/es/DX816/816-monitoreo)
 </Info>
 
 ### **Control Monitor**
 
-- El nivel de auriculares [3] y parlantes [1] se maneja con controles independientes.
-- Mediante los botones de selección [5] se elige la señal a escuchar en Control:
-  - **PGM**: señal enviada al aire.
-  - **REC**: señal del bus auxiliar REC.
-  - **ON-AIR**: señal proveniente de un sintonizador externo, recomendado para monitoreo de aire.
+- Headphones [3] and speakers [1] levels have independent controls.
+- Control Room monitoring signal is selected through buttons [5]:
+  - **PGM**: signal sent to air.
+  - **REC**: auxiliary REC bus signal.
+  - **ON-AIR**: signal from an external tuner, recommended for air monitoring.
 
 <Note>
-  Ajustar el volumen de parlantes monitores para un nivel confortable con el control **SPEAKERS** en posición central.
+  Adjust monitor speakers volume for comfortable listening with **SPEAKERS** control at center position.
 </Note>
 
 <Info>
-  Si el enlace Estudio–Planta o el procesador de audio producen un retardo audible, se recomienda procesar la señal de monitoreo **ON-AIR** con un procesador sin retardo, conectado directamente a una salida PGM de la consola.
+  If the Studio-Transmitter link or audio processor produces audible delay, it is recommended to process the **ON-AIR** monitoring signal with a zero-latency processor connected directly to a console PGM output.
 </Info>
 
 ---
 
-## Escucha previa (CUE)
+## Preview listening (CUE)
 
-Cada canal dispone de un botón **CUE** que permite escuchar la señal previa al atenuador (fuera del aire). Si se activan varios CUE, las señales se suman.
+Each channel has a **CUE** button that allows monitoring the pre-fader signal (off-air). When multiple CUE buttons are active, signals are summed.
 
-La señal CUE se puede enviar a:
+CUE signal can be sent to:
 
-- los altavoces de monitoreo Control Room: pulsar el botón **MIX** [2].
-- los auricualres Control Room. Este envío es fijo. CUE se suma a la señal asignada por la selección de monitoreo.
-- el monitoreo del Estudio. Está disponible como una fuente de señal en STUDIO MONITOR.
+- Control Room monitor speakers: press **MIX** button [2].
+- Control Room headphones. This send is fixed. CUE is mixed with the signal assigned by monitor selection.
+- Studio monitoring. Available as a signal source in STUDIO MONITOR.
 
-El volumen CUE se controla únicamente con la perilla **CUE** [6], tanto en auriculares como en parlantes.
+CUE volume is controlled only by the **CUE** knob [6], both for headphones and speakers.
 
 <Warning>
-  Si la perilla **CUE [6]** está cerrada, la señal CUE no se oirá aunque las perillas de auriculares y parlantes estén abiertas.\
-  En cambio, si **SPEAKERS [1]** y **HEADPHONES [3]** están cerrados, CUE seguirá sonando si la perilla CUE está abierta.
+  If **CUE [6]** knob is closed, CUE signal won't be heard even if headphones and speakers knobs are open.\
+  However, if **SPEAKERS [1]** and **HEADPHONES [3]** are closed, CUE will still sound if CUE knob is open.
 </Warning>
 
-Otras características:
+Other features:
 
-- El envío CUE es **monoaural**.
-- Para escuchar CUE de forma aislada:
-  - Bajar el nivel de **SPEAKERS** o **HEADPHONES** según corresponda.
-  - Liberar botones de PGM, REC y ON-AIR.
+- CUE send is **monaural**.
+- To listen to CUE in isolation:
+  - Lower **SPEAKERS** or **HEADPHONES** level as appropriate.
+  - Release PGM, REC and ON-AIR buttons.
 
 <Tip>
-  Recomendamos monitorear la señal de aire a volumen moderado y CUE con un nivel más alto, para distinguirlas claramente.
+  We recommend monitoring air signal at moderate volume and CUE at higher level for clear distinction.
 </Tip>
 
 ---
 
-## Órdenes al Estudio (Talk-Back)
+## Studio Talk-Back
 
-El canal de órdenes permite al operador comunicarse con el locutor en el Estudio.
+The talkback channel allows the operator to communicate with talent in the Studio.
 
-- Presione el botón **TALK-BACK**.
-- El audio de programa en parlantes de Control se interrumpe para evitar acoples.
-- El operador se escucha en el **canal izquierdo** del Estudio.
-- El **canal derecho** mantiene la señal de aire, para referencia de locutores y periodistas.
-- También es posible activar **CUE** en el canal de micrófono para dialogar con el locutor.
+- Press the **TALK-BACK** button.
+- Program audio in Control Room speakers is interrupted to prevent feedback.
+- The operator is heard in the Studio's **left channel**.
+- The **right channel** maintains the air signal for reference by announcers and journalists.
+- It's also possible to activate **CUE** on the microphone channel to dialogue with the announcer.
 
 <Note>
-  El nivel del micrófono de órdenes está calibrado de fábrica.\
-  Solo debe ajustarse si es estrictamente necesario, usando el preset **LEVEL**.
+  The talkback microphone level is factory calibrated.\
+  Adjust using the **LEVEL** preset only if strictly necessary.
 </Note>

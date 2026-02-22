@@ -1,43 +1,51 @@
 ---
-title: "Instalación general"
-description: "Montaje, alimentación, puesta a tierra."
-keywords: ["puesta a tierra", "tensión", "fuente de alimentación", "encendido"]
+title: "General installation"
+description: "Mounting, power supply, grounding."
+keywords: ["grounding", "voltage", "power supply", "power on"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "123715b6a4ac4af69ef8919af7d79efc78222d2cab8403f8bb543b7a8bb2c00d"
+
 ---
 
 import tierras from '/snippets/snippet-tierras.mdx'
 
-## Montaje
+## Mounting
 
-Es conveniente tener en cuenta las siguientes recomendaciones al instalar:
+Consider the following recommendations when installing:
 
-- Los procesadores Solidyne Audimax 362HD están previstos para su instalación en un rack normalizado de 483 mm (19"), ocupando una unidad de altura.\
-  También es posible colocarlo sobre una mesa utilizando los apoyos de goma auto-adhesivos provistos.
-- La temperatura ambiente deberá mantenerse entre **5 °C y 40 °C**.\
-  Debe evitarse la incidencia directa de la luz solar sobre el procesador, así como la proximidad de fuentes de calor o fuertes campos electromagnéticos (transformadores de potencia, grandes motores, etc.).\
-  Su protección interna contra campos de RF permite el montaje próximo a transmisores de AM/FM.
+- Solidyne Audimax 362HD processors are designed for installation in a standard 483 mm (19") rack, occupying one rack unit.\
+  It can also be placed on a desk using the provided self-adhesive rubber feet.
+- Ambient temperature must be maintained between **5 °C and 40 °C**.\
+  Avoid direct sunlight exposure on the processor, as well as proximity to heat sources or strong electromagnetic fields (power transformers, large motors, etc.).\
+  Its internal RF field protection allows mounting near AM/FM transmitters.
 
 <Danger>
-  Evite la instalación en lugares muy húmedos o con atmósfera salina, ya que esto puede provocar corrosión en los circuitos impresos y componentes electrónicos.
+  Avoid installation in very humid places or salty atmospheres, as this can cause corrosion on printed circuits and electronic components.
 </Danger>
 
-## Alimentación
+## Power Supply
 
 <img
   src="/images/362/362-trasero-fuente.png"
-  alt="362 Trasero Fuente Pn"
-  title="362 Trasero Fuente Pn"
+  alt="362 Rear Power Supply"
+  title="362 Rear Power Supply"
   className="mx-auto"
   style={{ width:"33%" }}
 />
 
-- **Llave selectora de tensión 110/220 V**: verificar que se encuentre en la posición correcta según la tensión de red. \
-  Se toleran variaciones de hasta ±10 % (ejemplo: 200–240 V para la posición de 220 V).
+- **110/220V voltage selector switch**: verify it is in the correct position according to mains voltage.\
+  Variations of up to ±10% are tolerated (example: 200-240V for 220V position).
 
 <Warning>
-  Si la tensión de red excede este rango, instale estabilizadores de acción rápida para evitar daños al equipo.
+  If mains voltage exceeds this range, install fast-acting voltage regulators to prevent equipment damage.
 </Warning>
 
-- **Conector de alimentación Interlock** y **fusible general de 1 A**.
-- **Interruptor de encendido**.
+- **Interlock power connector** and **1A main fuse**.
+- **Power switch**.
 
 <tierras />

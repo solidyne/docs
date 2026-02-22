@@ -1,100 +1,108 @@
 ---
-title: "Instalación"
-description: "Instalación de Audicom en sus distintas versiones"
-keywords: ["Instalación"]
+title: "Installation"
+description: "Audicom installation in its different versions"
+keywords: ["Installation"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d86805cefa7da45953937553ae345dd99e6e2db97273f83ac24c51765f0ba45b"
+
 ---
 
-## Instalación
+## Installation
 
-### Configuración de la computadora y placas de audio
+### Computer and Sound Card Configuration
 
-#### Configuración general: Recomendaciones
+#### General Configuration: Recommendations
 
-Para un correcto funcionamiento de **AUDICOM**, verifique que las configuraciones de la computadora y Windows cumplan los siguientes requisitos:
+For proper **AUDICOM** operation, verify that computer and Windows configurations meet the following requirements:
 
- 1. **Sistema Operativo**: Windows 10/11
- 2. **Antivirus**: Configúrelo para excluir las carpetas `C:/Audicom` y `C:/Admicom` en todas las terminales de la red. Asegúrese de que las excepciones se respeten al 100 %.
- 3. Se recomienda **desactivar el APM (Administrador Avanzado de Energía)** desde el BIOS de la computadora. Al hacerlo, Windows puede solicitar la reinstalación de algunos componentes.
- 4. Si el equipo tiene placa de sonido integrada, puede usarse como canal de monitoreo (CUE).\\
+1. **Operating System**: Windows 10/11
+2. **Antivirus**: Configure it to exclude `C:/Audicom` and `C:/Admicom` folders on all network terminals. Ensure exceptions are 100% respected.
+3. It is recommended to **disable APM (Advanced Power Management)** from the computer's BIOS. After doing so, Windows may request reinstallation of some components.
+4. If the computer has integrated sound card, it can be used as monitoring channel (CUE).\\
 
     <Danger>
-      No utilice audio “on board” para la salida de programa. Estas placas no cumplen los requisitos mínimos de calidad para sistemas profesionales con AUDICOM.
+      Do not use onboard audio for program output. These cards do not meet minimum quality requirements for professional systems with AUDICOM.
     </Danger>
- 5. No se recomienda el uso de **salvapantallas**. Configure, en su lugar, el apagado automático del monitor cuando AUDICOM trabaje en modo automático.
- 6. **No active tareas programadas de mantenimiento** de Windows.
- 7. Configure el tamaño de fuente en **100 %**. Usar 125 % o 150 % puede afectar la visualización de ventanas de AUDICOM.
- 8. Desactive los **sonidos de Windows**, ya que podrían salir al aire accidentalmente.
- 9. Configure la **Barra de tareas** para ocultarse automáticamente, optimizando el uso de la pantalla para AUDICOM.
-10. Evite teclados con teclas de apagado o “sleep”. Si el operador las presiona por error, puede apagar la máquina de aire.
-    - Desactive estas funciones desde la administración avanzada de energía (APM) en el BIOS.
-    - El procedimiento varía según el modelo de computadora y sistema operativo, y en algunos casos no es posible desactivarlas.
+5. **Screensavers** are not recommended. Instead, configure automatic monitor shutdown when AUDICOM works in automatic mode.
+6. **Do not enable scheduled maintenance tasks** in Windows.
+7. Set font size to **100%**. Using 125% or 150% may affect AUDICOM window display.
+8. Disable **Windows sounds**, as they could accidentally go on air.
+9. Configure the **Taskbar** to auto-hide, optimizing screen space for AUDICOM.
+10. Avoid keyboards with power off or "sleep" keys. If operators press them by mistake, they could shut down the on-air machine.
+    - Disable these functions from Advanced Power Management (APM) in BIOS.
+    - The procedure varies by computer model and operating system, and in some cases cannot be disabled.
 
-#### Placas de sonido soportadas
+#### Supported Sound Cards
 
-- Muchas consolas de radiodifusión actuales incluyen canales con conexión **USB**, eliminando la necesidad de placas de audio adicionales.
-- AUDICOM funciona con interfaces que soporten controladores **WASAPI, DirectSound o MME**.
-- En el caso de interfaces multicanal, asegúrese de que el hardware sea compatible con **WDM o WASAPI**.
+- Many current broadcast consoles include channels with **USB** connection, eliminating the need for additional audio cards.
+- AUDICOM works with interfaces that support **WASAPI, DirectSound or MME** drivers.
+- For multichannel interfaces, ensure the hardware is compatible with **WDM or WASAPI**.
 
   <Note>
-    ASIO no es soportado por AUDICOM.
+    ASIO is not supported by AUDICOM.
   </Note>
 
-Dependiendo del fabricante, algunas interfaces multicanal solo funcionan en modo ASIO para audio multicanal, pero en modo Windows pueden operar como un único dispositivo estéreo de entrada/salida.
+Depending on manufacturer, some multichannel interfaces only work in ASIO mode for multichannel audio, but in Windows mode can operate as a single stereo input/output device.
 
-- **Placas incorporadas**: Pueden usarse como canal de reproducción para monitoreo (CUE). No se recomienda su uso para salida al aire.
-- **Sistemas AoIP**: AUDICOM soporta dispositivos virtualizados en sistemas de Audio sobre IP como **Dante** y **LiveWire**.
+- **Onboard cards**: Can be used as playback channel for monitoring (CUE). Not recommended for on-air output.
+- **AoIP Systems**: AUDICOM supports virtualized devices in Audio over IP systems like **Dante** and **LiveWire**.
 
-### Llave de licencias
+### License Key
 
-- AUDICOM requiere una **llave de licencias USB** para funcionar.
-- Por seguridad, se recomienda fijarla al chasis con un precinto o cable, o colocarla en el interior del gabinete.
-- La llave habilita los distintos módulos según la configuración del sistema.
+- AUDICOM requires a **USB license key** to operate.
+- For security, it is recommended to secure it to the chassis with a seal or cable, or place it inside the case.
+- The key enables different modules according to system configuration.
 
-## Instalación _Full_
+## Full Installation
 
-El instalador en modo **Full** instala todos los módulos y accesorios de AUDICOM.\
-Se recomienda para la primera instalación, cuando no existen instalaciones previas.
+The **Full** mode installer installs all AUDICOM modules and accessories.\
+Recommended for first installation when no previous installations exist.
 
-Incluye:
+Includes:
 
-- **Seguridad**: Controladores para la llave de licencias.
-- **AUDICOM**: todos los módulos principales (Aire, Media Manager, File Manager, InfoMusic Producción, CyberPlay Editor, AutoDJ Editor, herramientas para Internet —requiere suscripción anual—, archivos de ayuda, entre otros).
-- **Admicom**: generación automática de tandas y facturación (versiones Multicast y HD).
-- **Media**: contenidos de demostración (música, videoclips, efectos, cortes promocionales) —opcional—.
-- **Programación**: demostraciones —opcional—.
-- **AutoRec 202**: grabación 24 h en MP3. Comercializado por separado, pero habilitado en 2 canales mediante licencia AUDICOM.
-- **Reaper**: editor de audio (software de terceros desarrollado por Cocko’s).
+- **Security**: Drivers for license key.
+- **AUDICOM**: all main modules (Air, Media Manager, File Manager, InfoMusic Production, CyberPlay Editor, AutoDJ Editor, Internet tools —requires annual subscription—, help files, among others).
+- **Admicom**: automatic commercial break generation and billing (Multicast and HD versions).
+- **Media**: demo content (music, video clips, effects, promos) —optional—.
+- **Programming**: demos —optional—.
+- **AutoRec 202**: 24h MP3 recording. Sold separately but enabled for 2 channels through AUDICOM license.
+- **Reaper**: audio editor (third-party software developed by Cocko's).
 
-Una vez finalizada la instalación:
+After installation completes:
 
-- Se solicitará **reiniciar el equipo**.
-- Se creará un grupo de programas AUDICOM en el menú **Inicio** de Windows.
-- Todos los archivos se instalarán en la carpeta `C:\AUDICOM`, compartida con acceso total para el usuario actual.
+- System **restart** will be requested.
+- An AUDICOM program group will be created in Windows **Start** menu.
+- All files will be installed in `C:\AUDICOM` folder, shared with full access for current user.
 
-**Estructura de carpetas:**
+**Folder structure:**
 
-- `AIR`: registros de emisión al aire.
-- `AUDIO`: carpetas de audio utilizadas por AUDICOM.\\
+- `AIR`: on-air broadcast logs.
+- `AUDIO`: audio folders used by AUDICOM.\\
 
   <Warning>
-    Todos los archivos de audio deben estar organizados dentro de esta carpeta.
+    All audio files must be organized within this folder.
   </Warning>
-- `DB`: base de datos musical.
-- `LA-ICONS`: íconos para el módulo Live Assist.
-- `LOG`: pautas de programación comercial.
-- `PGM`: pautas de programación musical.
-- `METEOR`: archivos de hora y datos meteorológicos.
-- `TEXT`: archivos de texto del sistema.
+- `DB`: music database.
+- `LA-ICONS`: icons for Live Assist module.
+- `LOG`: commercial programming logs.
+- `PGM`: music programming logs.
+- `METEOR`: time and weather data files.
+- `TEXT`: system text files.
 
 <Note>
-  Esta estructura es fija. Su ubicación está definida en el archivo `Audicom.ini`, que debe modificarse al instalar AUDICOM en red.\
-  Ver: **Audicom en Red \> Configuración del Software**.
+  This structure is fixed. Its location is defined in the `Audicom.ini` file, which must be modified when installing AUDICOM in network.\
+  See: **Audicom Network \> Software Configuration**.
 </Note>
 
-#### AStart (Configuración de los servicios Web Tools)
+#### AStart (Web Tools Services Configuration)
 
-Durante la instalación se deben completar los datos de usuario y terminal. Es fundamental registrar esta información con cuidado y conservarla.
+During installation, user and terminal data must be completed. It is essential to carefully register this information and keep it.
 
 <img
   src="/images/audicom/au-aStart-1.jpg"
@@ -120,11 +128,11 @@ Durante la instalación se deben completar los datos de usuario y terminal. Es f
   style={{ width:"60%" }}
 />
 
-- Un **multimedio** agrupa varias emisoras, cada una con sus usuarios WebTools.
-  - Ejemplo: “Radio Nacional” puede contener “AM Nacional”, “Nacional Rock”, “Nacional Folklórica”.
-- El **nombre del multimedio** será requerido para acceder al Panel de Administración de WebTools, donde se crean usuarios para cada emisora.
-- En emisoras autónomas, el alias (con sufijo **-admin**) será el nombre predeterminado para administración.
-- Estos datos se confirman mediante un correo enviado por el servidor **AUDICOM WebTools**, validando la creación de la cuenta.
+- A **multimedia** groups several stations, each with their WebTools users.
+  - Example: "National Radio" may contain "AM National", "National Rock", "National Folk".
+- The **multimedia name** will be required to access the WebTools Administration Panel, where users are created for each station.
+- For standalone stations, the alias (with **-admin** suffix) will be the default administration name.
+- This data is confirmed via email sent by the **AUDICOM WebTools** server, validating account creation.
 
 <img
   src="/images/audicom/au-aStart-4.jpg"
@@ -141,66 +149,66 @@ Durante la instalación se deben completar los datos de usuario y terminal. Es f
   style={{ width:"60%" }}
 />
 
-## Migración desde otros sistemas
+## Migration from Other Systems
 
-### Archivos de audio soportados
+### Supported Audio Files
 
-- **PCM**: Archivos `.wav` sin compresión, 16/24 bits a 44.1/48 kHz.
-- **MP3**: 64 – 320 kbps a 44.1 kHz.
-- **FLAC**: soportado.
+- **PCM**: Uncompressed `.wav` files, 16/24 bits at 44.1/48 kHz.
+- **MP3**: 64 – 320 kbps at 44.1 kHz.
+- **FLAC**: supported.
 
-**Formatos antiguos y obsoletos:**
+**Legacy and obsolete formats:**
 
-- `.wav` codificados en MPEG Layer 3: usados en sistemas antiguos, hoy en desuso.
-- **ADPCM** (típicamente extensión `.wav`): existieron distintas variantes; algunas aún soportadas por Windows. AUDICOM soporta **MS-ADPCM** y cualquier variante compatible con **ACM** si está disponible el códec correspondiente.
-- **MP2 / WAV-MP2 (MPEG Layer 2)**: extensión `.mp2` o `.wav`. Utilizados por sistemas con placas ANTEX, Digigram u otras. Pueden usarse directamente sin reconversión si se instala un códec adecuado (no incluido con AUDICOM).
-- **Dolby AC2**: extensiones `.wav` o `.atx`.\\
+- `.wav` encoded in MPEG Layer 3: used in old systems, now obsolete.
+- **ADPCM** (typically `.wav` extension): different variants existed; some still supported by Windows. AUDICOM supports **MS-ADPCM** and any **ACM**-compatible variant if corresponding codec is available.
+- **MP2 / WAV-MP2 (MPEG Layer 2)**: `.mp2` or `.wav` extension. Used by systems with ANTEX, Digigram or other cards. Can be used directly without conversion if appropriate codec is installed (not included with AUDICOM).
+- **Dolby AC2**: `.wav` or `.atx` extensions.\\
 
   <Danger>
-    No son soportados por AUDICOM.
+    Not supported by AUDICOM.
   </Danger>
 
-### Ubicación de los archivos de audio y video
+### Audio and Video File Location
 
-AUDICOM trabaja con una estructura de carpetas rígida, para asegurar el mantenimiento y la organización de la información.
+AUDICOM works with a rigid folder structure to ensure information maintenance and organization.
 
-Todos los archivos de audio y video deben organizarse en subcarpetas del sistema:
+All audio and video files must be organized in system subfolders:
 
 ```
 \AUDICOM\AUDIO
 POP 80s
 POP 90s
 SALSA
-ROCK-NOVEDADES
+ROCK-NEWS
 SFX
 PROMOS
-CUÑAS
+SPOTS
 ```
 
-- Estas carpetas se denominan **carpetas de medios**.
+- These folders are called **media folders**.
 
 <Warning>
-  No deben contener subcarpetas; en caso de existir, AUDICOM las ignora.
+  They must not contain subfolders; if they exist, AUDICOM ignores them.
 </Warning>
 
-Si los archivos del sistema anterior son compatibles, basta con organizarlos en estas carpetas para poder utilizarlos inmediatamente al aire.
+If files from previous system are compatible, simply organizing them in these folders allows immediate on-air use.
 
-Para crear carpetas y copiar medios al sistema se deben usar los módulos **File Manager** o **Media Manager**, que garantizan la correcta estructura.\
-El usuario solo selecciona disco y nombre de carpeta.\
-Consulte los capítulos **Audicom Media Manager** y **Audicom File Manager** para más información.
+To create folders and copy media to the system, use **File Manager** or **Media Manager** modules, which ensure correct structure.\
+User only selects disk and folder name.\
+See **Audicom Media Manager** and **Audicom File Manager** chapters for more information.
 
-### Base de datos
+### Database
 
-Para la operación automatizada (AutoDJ), es obligatorio que los archivos de medios se ingresen en la **Base de Datos de medios**.
+For automated operation (AutoDJ), media files must be entered into the **Media Database**.
 
-- Esto se realiza desde **Media Manager** (recomendado) o **File Manager**.
-- El módulo **InfoMusic Producción** permite gestionar la base de datos.
+- This is done from **Media Manager** (recommended) or **File Manager**.
+- The **InfoMusic Production** module allows database management.
 
-Consulte el capítulo **InfoMusic** para más detalles.
+See **InfoMusic** chapter for more details.
 
-### Pautado de programación
+### Programming Schedule
 
-AUDICOM ofrece varias opciones para generar pautas comerciales y de contenidos:
+AUDICOM offers several options for generating commercial and content schedules:
 
-- El módulo **Admicom** administra la pauta comercial mediante su propia base de datos, independiente de la de medios.
-- La generación de la programación de contenidos se realiza desde **CyberPlay Editor** y **Admicom**.
+- The **Admicom** module manages commercial schedule through its own database, independent from media database.
+- Content programming generation is done from **CyberPlay Editor** and **Admicom**.

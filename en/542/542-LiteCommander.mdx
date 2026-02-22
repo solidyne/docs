@@ -1,57 +1,65 @@
 ---
 title: "Control Lite Commander"
-description: "Controlar el 542APC desde aplicación remota Solidyne Lite Commander"
+description: "Control the 542APC from Solidyne Lite Commander remote application"
 keywords: ["LiteCommander", "schedule", "preset", "stereo-mono"]
-tags: ["procesadores", "542"]
+tags: ["processors", "542"]
+
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a17910dfef4fc47a8b5af84fe2e0b1ea81bc74b372bebf69c95b0669b9ba21c9"
 
 ---
 
-El **542 Lite Commander** permite comandar el equipo **542APC** desde una PC en la LAN.\
-Es de fácil configuración y permite automatizar tareas como:
+The **542 Lite Commander** allows controlling the **542APC** unit from a PC on the LAN.\
+It's easy to configure and enables automation of tasks like:
 
-- Conmutar el **preset de procesado** de manera remota.
-- Cambiar el modo de transmisión entre **estéreo / mono**.
+- Switching the **processing preset** remotely.
+- Changing transmission mode between **stereo / mono**.
 
-La conmutación puede realizarse:
+Switching can be done:
 
-- **Manualmente**.
-- Programada, según una **pauta horaria**.
+- **Manually**.
+- Scheduled, according to a **time schedule**.
 
 ---
 
-## Descarga e instalación
+## Download and installation
 
-- La aplicación se descarga gratuitamente desde:\
+- The application can be downloaded for free from:\
   👉 https://www.solidynepro.com/DW/lite.rar
-- Compatible con Windows 10, 11 así como con ediciones Windows Server (32 y 64 bits).
-- El instalador permite configurar autoarranque desde el menú Inicio de Windows o crear un acceso directo en el Escritorio.
-- Alternativamente, puede copiarse el ejecutable a cualquier carpeta y ejecutarse directamente.
-- No requiere permisos de administrador.
+- Compatible with Windows 10, 11 and Windows Server editions (32 and 64 bits).
+- The installer allows configuring auto-start from Windows Start menu or creating a Desktop shortcut.
+- Alternatively, the executable can be copied to any folder and run directly.
+- No administrator permissions required.
 
-**Carpetas por defecto:**
+**Default folders:**
 
-- Aplicación: `C:\Program Files (x86)\Solidyne 542 Lite commander`
-- Datos: `<appData>\Solidyne` (ejemplo: `C:\Users\Usuario\AppData\Roaming\Solidyne`)
+- Application: `C:\Program Files (x86)\Solidyne 542 Lite commander`
+- Data: `<appData>\Solidyne` (example: `C:\Users\Usuario\AppData\Roaming\Solidyne`)
 
-**Puertos utilizados:**
+**Used ports:**
 
 - Discovery → `30303 UDP`
-- Aplicación → `80 TCP`
-- Timeout TCP por defecto → `1000 ms`
+- Application → `80 TCP`
+- Default TCP timeout → `1000 ms`
 
 <Info>
-  La aplicación está diseñada para controlar un único equipo a la vez, aunque pueden ejecutarse varias instancias para comandar más de un 542APC.
+  The application is designed to control a single unit at a time, although multiple instances can be run to control more than one 542APC.
 </Info>
 
 ---
 
-## Pantalla principal
+## Main screen
 
-La pantalla principal permite visualizar:
+The main screen displays:
 
-- **Host IP** del equipo seleccionado.
-- Preset de procesado actual.
-- Estado del modo FM (Mono / Estéreo).
+- **Host IP** of the selected unit.
+- Current processing preset.
+- FM mode status (Mono / Stereo).
 
   <img
     src="/images/542/542-LiteCommander.gif"
@@ -60,27 +68,27 @@ La pantalla principal permite visualizar:
     style={{ width:"64%" }}
   />
 
-### Controles principales
+### Main controls
 
-- **Switch Stereo–Mono**: muestra y conmuta el modo de transmisión.
-  - En **MONO** se suprime la sub-portadora de 38 kHz.
-  - Ver detalles en [Sobre la transmisión en MONO](/es/542/542-mono)
+- **Switch Stereo–Mono**: shows and toggles transmission mode.
+  - In **MONO** the 38 kHz subcarrier is suppressed.
+  - See details in [About MONO transmission](/es/542/542-mono)
   - 
-- **Switch Schedule**: activa/desactiva el programador horario.
-- **Always on top**: mantiene visible la aplicación aunque se esté usando otro software.
-- **Presets:** Permite conmutar el preset de procesado. El cambio tiene lugar de forma inmediata. \
-  Los cambios de preset o modo realizados **desde el frente del equipo** también se reflejan en esta pantalla.
-- Botones disponibles:
-  - **Discovery** → abre la pantalla de búsqueda de equipos en la LAN.
-  - **Schedule** → abre el editor de programación horaria.
+- **Switch Schedule**: enables/disables time scheduler.
+- **Always on top**: keeps application visible while using other software.
+- **Presets:** Allows switching processing preset. The change takes place immediately. \
+  Preset or mode changes made **from the unit's front panel** are also reflected on this screen.
+- Available buttons:
+  - **Discovery** → opens LAN unit search screen.
+  - **Schedule** → opens time schedule editor.
 
 ## Schedule
 
-La ventana de **Schedule** permite crear una agenda horaria:
+The **Schedule** window allows creating a time schedule:
 
-- Define qué **preset** y qué **modo de transmisión** (Estéreo/Mono) se aplicarán según día y hora.
-- A la izquierda se listan todos los presets disponibles.
-- A la derecha se configura la agenda por horas y días.
+- Defines which **preset** and **transmission mode** (Stereo/Mono) will be applied according to day and time.
+- All available presets are listed on the left.
+- Schedule is configured by hours and days on the right.
 
 <img
   src="/images/download.png"
@@ -89,24 +97,24 @@ La ventana de **Schedule** permite crear una agenda horaria:
   style={{ width:"65%" }}
 />
 
-### Funciones principales
+### Main functions
 
-- **Set preset** → programa un preset en una hora determinada.
-- **Set mode** → programa el modo de transmisión.
-- **Clean preset / Clean mode** → elimina programación.
+- **Set preset** → schedules a preset at a specific time.
+- **Set mode** → schedules transmission mode.
+- **Clean preset / Clean mode** → removes scheduling.
 
-Los archivos de agenda son:
+Schedule files are:
 
-- `Week.sch` → de lunes a viernes.
-- `Saturday.sch` → sábados.
-- `Sunday.sch` → domingos.
+- `Week.sch` → Monday through Friday.
+- `Saturday.sch` → Saturdays.
+- `Sunday.sch` → Sundays.
 
 <Info>
-  Es posible crear archivos para días específicos (ej: `Monday.sch`, `Tuesday.sch`).\
-  Debe copiarse `Week.sch` y renombrarse con el día deseado.
+  Files for specific days can be created (e.g.: `Monday.sch`, `Tuesday.sch`).\
+  Just copy `Week.sch` and rename it with the desired day.
 </Info>
 
-Los campos en blanco implican que el software no controla el preset/modo en ese intervalo.
+Blank fields mean the software won't control preset/mode in that interval.
 
 ## Discovery
 
@@ -117,20 +125,20 @@ Los campos en blanco implican que el software no controla el preset/modo en ese 
   style={{ width:"81%" }}
 />
 
-- Envía un **mensaje broadcast** en la LAN para localizar equipos 542APC.
-- Si el equipo estaba apagado, repita la búsqueda con el botón **[Discovery]**.
-- Los equipos encontrados se listan con:
-  - Dirección IP
-  - Nombre del host
-  - Dirección MAC
-  - Detalles del dispositivo
-- Si hay varias interfaces de red en la PC, se puede elegir la placa de red para la búsqueda.
-- Seleccione un equipo en el listado y pulse **[Select]** para comandarlo.
+- Sends a **broadcast message** on the LAN to locate 542APC units.
+- If the unit was powered off, repeat search with **[Discovery]** button.
+- Found units are listed with:
+  - IP address
+  - Host name
+  - MAC address
+  - Device details
+- If multiple network interfaces exist on the PC, network card can be selected for search.
+- Select a unit from the list and press **[Select]** to control it.
 
 <Warning>
-  Es recomendable que el procesador tenga **IP fija**.
+  It is recommended that the processor has a **fixed IP**.
 </Warning>
 
-- La IP seleccionada se guarda en el archivo `V-RACK.INI`, para su uso posterior en reinicios.
+- Selected IP is saved in `V-RACK.INI` file for later use on restarts.
 
 ---

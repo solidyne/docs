@@ -1,26 +1,34 @@
 ---
-title: "Sección de Monitoreo"
-description: "Operación de los altavoces y auriculares"
-keywords: ["monitoreo", "auriculares", "cue", "talkback"]
-tags: ["consolas de estudio", "linea Classic", "D612"]
+title: "Monitoring Section"
+description: "Operation of speakers and headphones"
+keywords: ["monitoring", "headphones", "cue", "talkback"]
+tags: ["studio consoles", "Classic line", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ef5a8f34be045e634ef495a0ea761ca5f1a5015b4a4325eb8df2af829f8acdc9"
+
 ---
 
-## Descripción de los controles
+## Control Description
 
 <img
   src="/images/612/612-monitoreo.png"
-  alt="612 Monitoreo Pn"
-  title="612 Monitoreo Pn"
+  alt="612 Monitoring Pn"
+  title="612 Monitoring Pn"
   className="mx-auto"
   style={{ width:"54%" }}
 />
 
-1. Nivel de monitores y auriculares para el Estudio
-2. Conmuta monitoreo de Estudio entre entrada externa ‘ON AIR’ (sintonizador externo) y PGM/REC.
-3. Asigna la mezcla de PGM o REC al monitoreo del Estudio.
-4. Nivel de monitores y auriculares para Cabina de Control.
-5. Conmuta monitoreo del Control entre ‘ON AIR’ (sintonizador externo) y PGM/REC.
-6. Asigna la mezcla de PGM o REC al monitoreo de la Cabina de Control.
+1. Studio monitors and headphones level
+2. Studio monitoring switch between external 'ON AIR' input (external tuner) and PGM/REC
+3. Assigns PGM or REC mix to Studio monitoring
+4. Control Room monitors and headphones level
+5. Control Room monitoring switch between 'ON AIR' (external tuner) and PGM/REC
+6. Assigns PGM or REC mix to Control Room monitoring
 
 <img
   src="/images/612/612-tlbk-CUE.png"
@@ -30,80 +38,80 @@ tags: ["consolas de estudio", "linea Classic", "D612"]
   style={{ width:"34%" }}
 />
 
-- **CUE:** ajusta el nivel de escucha previa de la señal CUE.
+- **CUE:** adjusts the CUE signal preview level.
 
 <Note>
-  El parlante incorporado se puede desactivar e inyectar la señal CUE en los auriculares de control.\
-  Para hacerlo, se debe modificar una conexión interna. Ver en [Instalación - Altavoces y auriculares](/es/612/612-monitoreo)
+  The built-in speaker can be disabled and the CUE signal routed to the control room headphones.\
+  This requires modifying an internal connection. See [Installation - Speakers and headphones](/es/612/612-monitoreo)
 </Note>
 
-## Ajuste de los niveles
+## Level Adjustment
 
-Un único control de nivel maneja **auriculares de estudio** y **parlantes monitores de estudio**.
+A single level control manages both **studio headphones** and **studio monitor speakers**.
 
-- Primero se ajusta el nivel de auriculares.
-- Luego, se ajusta el nivel de parlantes usando el control de los monitores activos.
+- First adjust the headphones level.
+- Then adjust the speaker level using the active monitors control.
 
-### Opciones para control individual de auriculares
+### Individual Headphone Control Options
 
-- \*\*Amplificador/distribuidor externo (recomendado): \*\* por ejemplo el **Solidyne Studio Box HD5.** que maneja 5 auriculares.
-- **Auriculares con control de volumen integrado.**
-- **Control individual propio:** montar un potenciómetro de 1 kΩ en la mesa de locución (ver en capítulo de Instalación).
-
----
-
-## Altavoces en el Estudio y el Control
-
-- La salida de **Studio Monitor** está diseñada para **parlantes activos** (nivel 0 dBu, 0,775 Vrms).
-- Al activar micrófonos, se **silencian automáticamente los parlantes de estudio** para evitar acoples.
-- La salida de **Control Monitor** también tiene un control único de nivel.
-
-### Selección de señal en monitores
-
-Con las llaves de selección se elige qué señal escuchar en Estudio y en Control
-
-- **PGM:** señal de programa.
-- **REC:** canales asignados a salida de grabación.
-- **AIR:** entrada externa (sintonizador), para escuchar transmisión al aire.
+- **External amplifier/distributor (recommended):** for example the **Solidyne Studio Box HD5** which handles 5 headphones.
+- **Headphones with built-in volume control.**
+- **Custom individual control:** mount a 1 kΩ potentiometer on the announcer's desk (see Installation chapter).
 
 ---
 
-## Operación en estudios integrados
+## Studio and Control Room Speakers
 
-En estudios modernos, consola, locutores y periodistas comparten el mismo recinto, reduciendo costos de construcción y acústica.
+- The **Studio Monitor** output is designed for **active speakers** (0 dBu level, 0.775 Vrms).
+- When microphones are activated, **studio speakers are automatically muted** to prevent feedback.
+- The **Control Monitor** output also has a single level control.
 
-- Se conecta un par de parlantes activos a la salida **Studio Monitor**.
-  - Al abrir micrófonos, estos se silencian automáticamente.
-- Los auriculares de periodistas e invitados se conectan a la salida **Studio**.
-- Los auriculares del operador se conectan a la salida **Control Monitor**.
+### Monitor Signal Selection
 
----
+The selection switches choose which signal to monitor in Studio and Control Room
 
-## Escucha previa (CUE)
-
-- La consola incluye un **parlante interno** para CUE.
-- Cada canal tiene un botón **CUE** que permite escuchar la señal sin salir al aire (fader cerrado).
-- Si se pulsan varios CUE, las señales se suman.
-
-En estudios integrados:
-
-- Es necesario modificar la configuración de CUE para enviar la señal a auriculares de Control y silenciar el parlante incorporado. Ver  [Instalación - Altavoces y auriculares](/es/612/612-monitoreo) 
-
-La perilla CUE ajusta el nivel de parlante CUE o el envío a auriculares de Cabina.
+- **PGM:** program signal.
+- **REC:** channels assigned to recording output.
+- **AIR:** external input (tuner) for monitoring on-air transmission.
 
 ---
 
-## Órdenes al estudio (Talkback)
+## Operation in Integrated Studios
 
-El canal de órdenes permite al operador dialogar con el locutor en el Estudio:
+In modern studios, console, announcers and journalists share the same room, reducing construction and acoustic costs.
 
-- Presionar **Talkback**.
-  - Se interrumpe el audio en parlantes de Control (para evitar acople).
-  - En el Estudio, se escucha al operador por el **canal izquierdo **de altavoces y auriculares.
-  - En el **canal derecho** se sigue escuchando programa, para que locutores y periodistas mantengan referencia.
-- Para escuchar la respuesta, el operador debe activar **CUE** en el canal de micrófono.
+- Connect a pair of active speakers to the **Studio Monitor** output.
+  - These are automatically muted when microphones are opened.
+- Journalists' and guests' headphones connect to the **Studio** output.
+- Operator's headphones connect to the **Control Monitor** output.
+
+---
+
+## Preview Monitoring (CUE)
+
+- The console includes an **internal speaker** for CUE.
+- Each channel has a **CUE** button to preview the signal without going on-air (fader closed).
+- If multiple CUE buttons are pressed, signals are summed.
+
+In integrated studios:
+
+- CUE configuration must be modified to send the signal to Control Room headphones and mute the built-in speaker. See [Installation - Speakers and headphones](/es/612/612-monitoreo)
+
+The CUE knob adjusts the CUE speaker level or Control Room headphones send level.
+
+---
+
+## Studio Talkback
+
+The talkback channel allows the operator to communicate with the announcer in the Studio:
+
+- Press **Talkback**.
+  - Audio is interrupted in Control Room speakers (to prevent feedback).
+  - In the Studio, the operator is heard through the **left channel** of speakers and headphones.
+  - The **right channel** continues with program audio so announcers and journalists maintain reference.
+- To hear the response, the operator must activate **CUE** on the microphone channel.
 
 <Note>
-  El nivel del micrófono de órdenes viene calibrado de fábrica.\
-  Solo si es necesario, puede ajustarse con el preset **LEVEL** en el panel de la consola, usando un perillero.
+  The talkback microphone level comes factory calibrated.\
+  Only if necessary, it can be adjusted with the **LEVEL** preset on the console panel using a trimmer tool.
 </Note>

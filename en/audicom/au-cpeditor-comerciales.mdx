@@ -1,37 +1,45 @@
 ---
-title: "Bloques de avisos publicitarios"
-description: "Creación manual de bloques (tandas) comerciales"
-keywords: ["CyberPlay Editor", "tandas", "comerciales", "pauta"]
+title: "Commercial Breaks"
+description: "Manual creation of commercial blocks (breaks)"
+keywords: ["CyberPlay Editor", "breaks", "commercials", "scheduling"]
 tags: ["Software", "Audicom"]
----
-
-Existen dos formas de crear una **tanda de avisos publicitarios**:
-
-- **Automática**: mediante el módulo **Admicom** (recomendado).\
-  → Ver: _Tráfico, Administración y Estadísticas_.
-- **Manual**: directamente en **CyberPlay Editor**.
-
-Radios no comerciales o con pocos anunciantes suelen manejar las tandas manualmente, sin necesidad de gestionar una base de datos comercial.
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "432f79935ae7f8dfdbd8ca86d47a9a17157e0f82b6e684d83f8ba97c5b1802aa"
 
 ---
 
-## Creación manual de tandas
+There are two ways to create a **commercial break**:
 
-1. En la ventana **Tanda**, ingrese la instrucción de tanda.\
-   Cada instrucción corresponde a una sola tanda; deberá repetirla para todas las tandas del día.
+- **Automatic**: using the **Admicom** module (recommended).\
+  → See: _Traffic, Administration and Statistics_.
+- **Manual**: directly in **CyberPlay Editor**.
 
-   **Ejemplo:**
+Non-commercial radio stations or those with few advertisers typically manage breaks manually, without needing to maintain a commercial database.
+
+---
+
+## Manual Creation of Breaks
+
+1. In the **Break** window, enter the break instruction.\
+   Each instruction corresponds to a single break; you must repeat it for all breaks of the day.
+
+   **Example:**
 
    ```txt
-   /Tanda Tanda Nro. 1 /00:00
+   /Tanda Break No. 1 /00:00
    ```
-2. Debajo, escriba los nombres de los archivos de las publicidades que componen esa tanda.\
-   Puede arrastrarlos desde **File Manager** o **InfoMusic-Producción**.
+2. Below, write the filenames of the advertisements that make up that break.\
+   You can drag them from **File Manager** or **InfoMusic-Production**.
 
-   **Ejemplo:**
+   **Example:**
 
    ```txt
-   /Tanda Tanda Nro. 1 /00:00
+   /Tanda Break No. 1 /00:00
    Coca-Cola
    Sancor
    Sony
@@ -39,17 +47,17 @@ Radios no comerciales o con pocos anunciantes suelen manejar las tandas manualme
    ```
 
    <Note>
-     - No se pueden programar archivos desde **carpetas extras** (ver File Manager).
-     - Archivos que contengan un **punto (.)** en el nombre y no estén registrados en la Base de Datos, **deben pautarse con extensión completa** (ej.: `107.5.wav`).
+     - Files cannot be scheduled from **extra folders** (see File Manager).
+     - Files containing a **period (.)** in the name and not registered in the Database **must be scheduled with full extension** (e.g.: `107.5.wav`).
    </Note>
-3. Para agregar otra tanda (ej.: a las 00:30), repita los pasos anteriores.
-4. Una vez finalizadas todas las tandas, guarde el archivo en el formato correspondiente (ver sección de guardado).
+3. To add another break (e.g.: at 00:30), repeat the previous steps.
+4. Once all breaks are completed, save the file in the corresponding format (see saving section).
 
 ---
 
-## Creación de tandas con Magic Programming
+## Creating Breaks with Magic Programming
 
-La herramienta **Magic Programming** simplifica la generación de tandas manuales. Inserta automáticamente las instrucciones, y el operador solo debe cargar los archivos debajo de cada tanda.
+The **Magic Programming** tool simplifies manual break generation. It automatically inserts the instructions, and the operator only needs to load the files below each break.
 
 <img
   src="/images/audicom/au-cpeditor-easylog-1.png"
@@ -59,20 +67,20 @@ La herramienta **Magic Programming** simplifica la generación de tandas manuale
   style={{ width:"37%" }}
 />
 
-Al elegir **Generar Esqueleto de Tanda**, aparece un cuadro de diálogo con estas opciones:
+When choosing **Generate Break Template**, a dialog box appears with these options:
 
-- **Hora desde**: hora de inicio de la primera tanda.
-- **Hasta hora**: hora de la última tanda.
-- **Intervalo entre tandas**: minutos entre cada tanda.
-- **Flexibilidad**: margen en minutos para desplazar la tanda en programas AutoDJ.\
-  _(Todas las tandas creadas por Magic Programming son flexibles; para cambiar sus atributos debe editarse manualmente)._
+- **Start time**: start time of the first break.
+- **End time**: time of the last break.
+- **Interval between breaks**: minutes between each break.
+- **Flexibility**: margin in minutes to shift the break in AutoDJ programs.\
+  _(All breaks created by Magic Programming are flexible; to change their attributes they must be edited manually)._
 
-### Pautar un aviso comercial
+### Schedule a Commercial
 
-Permite programar un **spot en varias tandas** automáticamente.\
-Se define:
+Allows scheduling a **spot in multiple breaks** automatically.\
+Define:
 
-- El **intervalo horario** (ej.: de 19:00 a 22:00).
+- The **time range** (e.g.: from 19:00 to 22:00).
 
   <img
     src="/images/audicom/au-cpeditor-easylog-3.png"
@@ -81,24 +89,24 @@ Se define:
     className="mr-auto"
     style={{ width:"34%" }}
   />
-- La **separación mínima** entre apariciones (ej.: cada 15 minutos).
+- The **minimum separation** between appearances (e.g.: every 15 minutes).
 
-El aviso será insertado en todas las tandas dentro del rango definido.
+The advertisement will be inserted in all breaks within the defined range.
 
-### Eliminar la ocurrencia de un aviso
+### Remove Advertisement Occurrence
 
-Permite **eliminar todas las apariciones** de un aviso en un intervalo horario determinado.
+Allows **removing all occurrences** of an advertisement within a specified time range.
 
 <Note>
-  Recuerde: Para que las modificaciones tengan efecto debe **guardar los archivos** y, si corresponde a la programación de **hoy o mañana**, deberá **recargar los archivos en la terminal de Aire**.
+  Remember: For changes to take effect, you must **save the files** and, if it corresponds to **today's or tomorrow's** programming, you must **reload the files in the On-Air terminal**.
 </Note>
 
-### Imprimir
+### Print
 
-Opción para imprimir:
+Option to print:
 
-- El **registro de tandas** (`.LOG`).
-- El **registro de programas** (`.PGM`).
-- La **programación completa** (ventana CyberPlay).
+- The **breaks log** (`.LOG`).
+- The **programs log** (`.PGM`).
+- The **complete schedule** (CyberPlay window).
 
-La impresión se realiza sobre los archivos cargados en ese momento.
+Printing is performed on the currently loaded files.

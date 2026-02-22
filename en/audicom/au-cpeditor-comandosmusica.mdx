@@ -1,92 +1,100 @@
 ---
-title: "Bloques Auto-DJ y musicalizadores externos"
-description: "Instrucciones para bloques musicales automatizados"
+title: "Auto-DJ Blocks and External Music Schedulers"
+description: "Instructions for automated music blocks"
 keywords: ["CyberPlay Editor", "Auto-DJ"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1b7b4e3981879bda01cc4e09d33e59eb13ed05cc52f37eb1c8d8470decd69b7c"
+
 ---
 
 ### Auto-DJ
 
 
-`/Block /HH:MM-HH:MM /AutoDj="Formato" [Título del bloque]`
+`/Block /HH:MM-HH:MM /AutoDj="Format" [Block Title]`
 
 
-Este comando define un bloque **AutoDj**. En este modo, AUDICOM se encarga de generar una **musicalización automática en tiempo real**, seleccionando los títulos directamente de la **Base de Datos** según el **formato indicado**.
+This command defines an **AutoDj** block. In this mode, AUDICOM handles **real-time automated music scheduling**, selecting titles directly from the **Database** according to the **specified format**.
 
-En la **Pantalla de Aire**, los bloques AutoDj aparecen representados en **color celeste** con una línea denominada _“AutoDj Controller”_. Esta línea indica que el bloque será programado por AutoDj. A diferencia de otros bloques, en la pauta de aire **no se mostrarán listados de títulos pre-programados**, ya que la selección se realiza dinámicamente al aproximarse la salida al aire del bloque.
+In the **On-Air Screen**, AutoDj blocks are shown in **light blue** with a line labeled _"AutoDj Controller"_. This line indicates that the block will be scheduled by AutoDj. Unlike other blocks, the on-air schedule **will not show pre-programmed title lists**, as selection happens dynamically as the block's airtime approaches.
 
-#### Comportamiento dinámico
+#### Dynamic Behavior
 
-- **Compensación de tiempos**: durante los bloques AutoDj la sincronización es automática y dinámica.
-- **Intervención del operador**: el operador puede **remover manualmente** un título programado por AutoDj; en ese caso, el sistema **inserta otro de inmediato** para mantener la programación.
-- También es posible **agregar títulos manualmente** dentro de un bloque AutoDj, o **cambiar el orden** de los que fueron generados automáticamente.
+- **Time compensation**: during AutoDj blocks, synchronization is automatic and dynamic.
+- **Operator intervention**: the operator can **manually remove** a title scheduled by AutoDj; in this case, the system **immediately inserts another one** to maintain programming.
+- It's also possible to **manually add titles** within an AutoDj block, or **change the order** of automatically generated ones.
 
-De este modo, se logra un equilibrio entre la automatización total y la intervención manual cuando es necesario.
+This achieves a balance between full automation and manual intervention when needed.
 
-#### Parámetros del comando
+#### Command Parameters
 
-- **/HH:MM-HH:MM** → Define el horario de inicio y finalización del bloque, expresado en horas y minutos.
-- **/AutoDj="Formato"** → Especifica el **formato AutoDj** que determinará el estilo musical y las reglas de selección. Dichos formatos se crean y gestionan desde el **módulo AutoDj Editor**.
-- **[Título del bloque]** → Texto opcional, que permite nombrar el bloque con hasta 32 caracteres (los corchetes no se escriben en el comando).
+- **/HH:MM-HH:MM** → Defines block start and end times, expressed in hours and minutes.
+- **/AutoDj="Format"** → Specifies the **AutoDj format** that determines musical style and selection rules. These formats are created and managed from the **AutoDj Editor** module.
+- **[Block Title]** → Optional text to name the block, up to 32 characters (brackets are not written in the command).
 
-#### Ejemplo
-
-
-`/Block /00:00-03:00 /AutoDj="Tangos" Estrellas y Tango`
+#### Example
 
 
-En este ejemplo, desde las **00:00 hasta las 03:00 horas**, AUDICOM seleccionará y reproducirá automáticamente títulos del formato denominado _Tangos_. El bloque aparecerá en la pauta de Aire como _Estrellas y Tango_.
+`/Block /00:00-03:00 /AutoDj="Tango" Stars and Tango`
 
-#### Importante
 
-- AutoDj **solo selecciona títulos que estén registrados en la Base de Datos**. Si un archivo de audio no figura en ella, no podrá ser utilizado.
-- Para realizar los **ajustes de tiempos** (cuando un evento debe comenzar exactamente en un horario), AUDICOM utiliza **Promocionales** y **Fills** definidos en la Base de Datos.
-- Si no existen suficientes promocionales o audios de relleno, **no será posible compensar los tiempos**, lo que podría generar **baches de silencio** en la programación.
+In this example, from **00:00 to 03:00 hours**, AUDICOM will automatically select and play titles from the format called _Tango_. The block will appear in the On-Air schedule as _Stars and Tango_.
+
+#### Important
+
+- AutoDj **only selects titles registered in the Database**. If an audio file is not listed there, it cannot be used.
+- For **time adjustments** (when an event must start exactly on schedule), AUDICOM uses **Promos** and **Fills** defined in the Database.
+- If there aren't enough promos or fill audio files, **time compensation will not be possible**, which could create **silence gaps** in programming.
 
 ### External-DJ
 
-Permite integrar en AUDICOM una **lista de canciones generada por un musicalizador externo** (por ej., **RCS Selector** o **Power Gold**) y usarla directamente en la pauta de aire. La idea es que el musicalizador produzca el “guion musical” (por títulos o por códigos) y AUDICOM lo ejecute respetando la grilla, con respaldo y control horario propios.
+Allows integration of a **song list generated by an external music scheduler** (e.g., **RCS Selector** or **Power Gold**) into AUDICOM for direct use in the on-air schedule. The concept is that the scheduler produces the "music script" (by titles or codes) and AUDICOM executes it following the grid, with its own backup and time control.
 
-#### Pasos de integración
+#### Integration Steps
 
-1. **Configurar el musicalizador externo**\
-   Exportar **24 bloques de 1 hora** (cubre 00:00–24:00).\
-   Guardar en `C:\AUDICOM\PGM` con nombre `ddmmaa.txt`.\
-   Con ese formato, **CyberPlay Editor** y **PlayList Manager** podrán visualizar y probar las listas.
-2. **Definir los bloques en AUDICOM**\
-   Pautar bloques `ExternalDJ` en el PGM. Ejemplos de uso:
+1. **Configure the external scheduler**\
+   Export **24 one-hour blocks** (covers 00:00–24:00).\
+   Save to `C:\AUDICOM\PGM` with name `ddmmyy.txt`.\
+   In this format, **CyberPlay Editor** and **PlayList Manager** can view and test the lists.
+2. **Define blocks in AUDICOM**\
+   Schedule `ExternalDJ` blocks in PGM. Usage examples:
 
-   ⬥ **Cobertura de todo el día**\
-   `/Block /00:00-24:00 /ExternalDJ="C:\AUDICOM\pgm\<dd><mm><aa>.TXT Música del día`
+   ⬥ **Full day coverage**\
+   `/Block /00:00-24:00 /ExternalDJ="C:\AUDICOM\pgm\<dd><mm><aa>.TXT Daily Music`
 
-   ⬥ **Rangos parciales (ej.: madrugada 02:00–06:00)**\
-   `/Block /02:00-06:00 /ExternalDJ="C:\AUDICOM\pgm\<dd><mm><aa>.TXT Música en la madrugada`
+   ⬥ **Partial ranges (e.g.: overnight 02:00–06:00)**\
+   `/Block /02:00-06:00 /ExternalDJ="C:\AUDICOM\pgm\<dd><mm><aa>.TXT Overnight Music`
 
 <Note>
-Los metanombres `<dd> <mm> <aa>` deben ir **dentro de líneas de código** o comillas (como arriba) para que MDX no los interprete como etiquetas. En tiempo de ejecución AUDICOM los reemplaza por la fecha correspondiente.
+The metanames `<dd> <mm> <aa>` must be **within code lines** or quotes (as above) so MDX doesn't interpret them as tags. At runtime AUDICOM replaces them with the corresponding date.
 </Note>
 ---
 
-#### Listas por **códigos** (en lugar de títulos)
+#### Lists by **codes** (instead of titles)
 
-Algunos musicalizadores exportan **códigos** (IDs) en vez de nombres de temas. Para integrarlos:
+Some schedulers export **codes** (IDs) instead of song names. To integrate them:
 
-- Cargar esos **códigos** en el campo **External-ID** de la Base de Datos (vía **InfoMusic-Producción** o **InfoMusic Aire**).
-- Configurar la exportación diaria con nombre `YYYYMMDD.cod` (sin extensión `.txt`).
+- Load these **codes** in the **External-ID** field of the Database (via **InfoMusic-Production** or **InfoMusic Air**).
+- Configure daily export with name `YYYYMMDD.cod` (without `.txt` extension).
 
-**Diferencias de interpretación por extensión:**
+**Interpretation differences by extension:**
 
-- **`.txt`** → la lista contiene **títulos** (AUDICOM usa el nombre del tema).
-- **`.cod`** → la lista contiene **códigos** (AUDICOM busca coincidencia en el campo **External-ID**).
+- **`.txt`** → list contains **titles** (AUDICOM uses song name).
+- **`.cod`** → list contains **codes** (AUDICOM looks for matches in **External-ID** field).
 
-Si además se usan **relojes horarios** en la lista por códigos, incluir líneas que delimiten la hora de cada bloque:
+If using **hour clocks** in the code list, include lines to delimit each block's hour:
 
 `/xx:00`
 
-donde `xx` va de `00` a `23`.\
-Guardar siempre las listas en `C:\Audicom\pgm` para que **CyberPlay Editor** y **PlayList Manager** puedan mostrarlas.
+where `xx` goes from `00` to `23`.\
+Always save lists in `C:\Audicom\pgm` so **CyberPlay Editor** and **PlayList Manager** can display them.
 
-**`Pautado típico con listas por códigos (.cod):`**
+**`Typical scheduling with code lists (.cod):`**
 
 `/Block /00:00-01:00 /ExternalDJ="C:\Audicom\pgm\<YYYY><MM><DD>.cod"`
 `/Block /01:00-02:00 /ExternalDJ="C:\Audicom\pgm\<YYYY><MM><DD>.cod"`
@@ -94,17 +102,17 @@ Guardar siempre las listas en `C:\Audicom\pgm` para que **CyberPlay Editor** y *
 `/Block /22:00-23:00 /ExternalDJ="C:\Audicom\pgm\<YYYY><MM><DD>.cod"`
 `/Block /23:00-24:00 /ExternalDJ="C:\Audicom\pgm\<YYYY><MM><DD>.cod"`
 
-> **Importante (sincronía horaria):** Dentro de la **extensión** de un bloque `ExternalDJ` es **necesario** pautar **un evento a cada hora exacta** (p. ej., **Tanda** o **ExactTime**) para asegurar la marcación y la continuidad al tope.
+> **Important (time sync):** Within an `ExternalDJ` block's **duration**, it's **necessary** to schedule **an event at each exact hour** (e.g., **Commercial Break** or **ExactTime**) to ensure marking and continuity at the top.
 
 ---
 
-#### Comportamiento si falta la lista del día
+#### Behavior if daily list is missing
 
-Si AUDICOM **no encuentra** la lista externa del día (sea `.txt` o `.cod`), activa automáticamente un **AutoDj** con formato **Default** como **respaldo**. Así se evita el silencio y la grilla sigue en tiempo.
+If AUDICOM **cannot find** the external list for the day (either `.txt` or `.cod`), it automatically activates a **Default** format **AutoDj** as **backup**. This prevents silence and keeps the grid on time.
 
 ---
 
-#### Archivos de puntero `.PTR`
+#### `.PTR` Pointer Files
 
-Para cada lista externa utilizada, AUDICOM mantiene un **puntero** con el **último ítem reproducido**, guardado como un archivo **`.PTR`** (de igual nombre que la lista) en `C:\AUDICOM\PGM`.\
-Esto permite **retomar** correctamente tras una recarga o reinicio, **sin repetir** ni **saltar** contenidos.
+For each external list used, AUDICOM maintains a **pointer** with the **last item played**, saved as a **`.PTR`** file (with same name as the list) in `C:\AUDICOM\PGM`.\
+This allows proper **resumption** after a reload or restart, **without repeating** or **skipping** content.

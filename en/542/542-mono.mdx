@@ -1,26 +1,33 @@
 ---
-title: "Sobre transmisión en MONO"
-description: "Uso estratégico de la conmutación mono/estéreo "
-keywords: ["mono", "estéreo"]
-tags: ["procesadores", "542"]
+title: "About MONO Broadcasting"
+description: "Strategic use of mono/stereo switching"
+keywords: ["mono", "stereo"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "3a372477760907ce537e827e01424d6fd398bde910e347b634229e012421d4ab"
 
 ---
 
-## Introducción
+## Introduction
 
-La transmisión **monoaural**, aunque no es práctica extendida, es utilizada por algunas emisoras de FM ubicadas en ciudades con **alta congestión** y con escasos controles/regulación en el espectro electromagnético.
+**Monaural** broadcasting, while not a widespread practice, is used by some FM stations located in cities with **high congestion** and limited control/regulation of the electromagnetic spectrum.
 
-Cuando el contenido emitido es principalmente **palabra hablada** (magazines, noticieros, deportes, programas periodísticos), la transmisión en estéreo no aporta ventajas significativas, pues su beneficio se limita principalmente a la música.
+When the broadcast content is primarily **spoken word** (magazines, news, sports, journalistic programs), stereo transmission offers no significant advantages, as its benefit is mainly limited to music.
 
-## Ventajas técnicas del modo mono
+## Technical advantages of mono mode
 
-- Mejora el **alcance de la emisora**.
-- Reduce significativamente las **interferencias**.
-- La energía que en estéreo se dispersa en un ancho de banda mayor, en mono se concentra en apenas **un cuarto del ancho de banda**.
-- Esto aumenta hasta **4 veces la potencia efectiva al aire** (_NAB Engineering Handbook_).
-- Mejora la **cobertura** al reducir:
-  - Interferencias de emisoras cercanas.
-  - Distorsión por trayectorias múltiples en áreas urbanas.
+- Improves station **coverage range**.
+- Significantly reduces **interference**.
+- The energy that in stereo is dispersed across a wider bandwidth is concentrated in just **one quarter of the bandwidth** in mono.
+- This increases **effective on-air power by up to 4 times** (_NAB Engineering Handbook_).
+- Improves **coverage** by reducing:
+  - Interference from nearby stations.
+  - Multipath distortion in urban areas.
 
 <img
   src="/images/542/542-Mono.jpg"
@@ -29,23 +36,23 @@ Cuando el contenido emitido es principalmente **palabra hablada** (magazines, no
   style={{ width:"55%" }}
 />
 
-## Uso estratégico del modo mono
+## Strategic use of mono mode
 
-La transmisión mono puede usarse de forma **programada** para:
+Mono transmission can be used in a **programmed** way to:
 
-- Mejorar la recepción y cobertura en horarios de **programas hablados (talk-shows)**.
-- Competir por la audiencia en horarios donde la inteligibilidad es más crítica que la musicalidad.
-- Alternar entre **mono y estéreo** según el contenido emitido o según horarios.
+- Improve reception and coverage during **talk show programs**.
+- Compete for audience in time slots where intelligibility is more critical than musicality.
+- Alternate between **mono and stereo** based on broadcast content or schedule.
 
-## Formas de conmutación a mono
+## Ways to switch to mono
 
-- **Por preset:**\
-  Cada preset puede incluir un atributo que activa el modo MONO al seleccionarlo.\
-  El procesador permanecerá en MONO hasta que un nuevo preset lo modifique.
-- **Micrófonos al aire (GPI):**\
-  Usando la entrada GPI, se conmuta a un preset de **VOCES** que tenga activo el modo MONO.\
-  (Ver sección **GPIO** para más detalles).
-- **Control manual:**\
-  Desde la aplicación de control **Lite Commander**.
-- **Conmutación automática por horarios:**\
-  Mediante programación en **Lite Commander**.
+- **By preset:**\
+  Each preset can include an attribute that activates MONO mode when selected.\
+  The processor will remain in MONO until modified by a new preset.
+- **Microphones on-air (GPI):**\
+  Using the GPI input, switch to a **VOICE** preset with MONO mode activated.\
+  (See **GPIO** section for more details).
+- **Manual control:**\
+  Through the **Lite Commander** control application.
+- **Automatic scheduling:**\
+  Through programming in **Lite Commander**.

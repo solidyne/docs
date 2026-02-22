@@ -1,109 +1,117 @@
 ---
-title: "Híbrido y Bluetooth"
-description: "Conexión de línea telefónica y celular"
-keywords: ["híbrido", "Bluetooth", "rechazo", "null"]
-tags: ["consolas de estudio", "linea Classic", "D612"]
+title: "Hybrid and Bluetooth"
+description: "Telephone line and mobile phone connection"
+keywords: ["hybrid", "Bluetooth", "rejection", "null"]
+tags: ["studio consoles", "Classic line", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a31bc7004afff6a13a17bc3f824f29f2fa9bbe010961e9f488428fbd1574925c"
+
 ---
 
-## Conexión de líneas fijas
+## Fixed Line Connection
 
-El canal de híbrido maneja dos líneas telefónicas:
+The hybrid channel handles two telephone lines:
 
-- Una línea terrestre convencional (2 hilos).
-- Un teléfono celular vinculado por Bluetooth.
+- A conventional landline (2-wire).
+- A Bluetooth-linked mobile phone.
 
-Los ajustes internos están calibrados en fábrica y no requieren intervención. Solo el preset de rechazo del híbrido (**null**) debe ajustarse al instalar la consola o al cambiar la línea telefónica.
+Internal settings are factory calibrated and require no intervention. Only the hybrid rejection preset (**null**) must be adjusted when installing the console or changing the telephone line.
 
-En el panel posterior se encuentran dos conectores RJ11:
+The rear panel features two RJ11 connectors:
 
 <img
   src="/images/612/612-trasero-rj11.jpg"
-  alt="612 Trasero Rj11 Jp"
-  title="612 Trasero Rj11 Jp"
+  alt="612 Rear Rj11 Jp"
+  title="612 Rear Rj11 Jp"
   className="mx-auto"
   style={{ width:"51%" }}
 />
 
-- Uno para la línea.
-- Otro para el teléfono asociado.
+- One for the line.
+- Another for the associated telephone.
 
-La línea puede conectarse directamente a la central pública o a la PBX de la estación.\
-Las PBX privadas pueden deteriorar el rechazo del híbrido; se recomienda usar líneas públicas siempre que sea posible.
+The line can be connected directly to the public network or to the station's PBX.\
+Private PBXs may degrade hybrid rejection; using public lines is recommended whenever possible.
 
-### Protecciones
+### Protections
 
-Las líneas están protegidas internamente contra descargas de alta tensión (rayos indirectos) mediante varistores de óxido metálico.
+Lines are internally protected against high-voltage discharges (indirect lightning) using metal oxide varistors.
 
 <Danger>
-  Es imprescindible instalar protección externa en la línea telefónica (descargadores gaseosos y fusibles).\
-  Los daños por rayos **no están cubiertos por la garantía**.
+  External protection on the telephone line (gas discharge tubes and fuses) is essential.\
+  Lightning damage is **not covered by warranty**.
 </Danger>
 
-### Ajuste de rechazo (Null)
+### Rejection Adjustment (Null)
 
-Este ajuste aplica solo a la línea terrestre. Se realiza una vez durante la instalación.\
-El rechazo evita que la señal transmitida regrese mezclada con la voz del interlocutor remoto, mejorando la calidad de la voz local.
+This adjustment applies only to landlines. It is performed once during installation.\
+Rejection prevents the transmitted signal from returning mixed with the remote speaker's voice, improving local voice quality.
 
-**Procedimiento:**
+**Procedure:**
 
-1. Establezca una llamada telefónica a través del híbrido.
-2. Haga que un locutor hable por el micrófono a la persona en línea.
-3. Ajuste el de nivel de la línea (perilla Telephone Control) hasta que el VU-metro PGM alcance la zona roja.
-4. Escuchando la voz local en PGM, gire el preset **NULL** hasta obtener una calidad idéntica a la que se percibe con _Telephone Control_ cerrado.\
-   Un método práctico: girar NULL a ambos extremos, escuchar el deterioro y ubicar el punto medio donde el sonido es óptimo (nula o muy poca coloración).
-5. Repita el ajuste si cambia de línea telefónica.
+1. Establish a phone call through the hybrid.
+2. Have an announcer speak through the microphone to the person on the line.
+3. Adjust the line level (Telephone Control knob) until the PGM VU-meter reaches the red zone.
+4. While listening to the local voice in PGM, turn the **NULL** preset until achieving identical quality to that perceived with _Telephone Control_ closed.\
+   A practical method: turn NULL to both extremes, listen to the deterioration and locate the midpoint where sound is optimal (no or very little coloration).
+5. Repeat adjustment if changing telephone lines.
 
-## Teléfonos móviles (Bluetooth)
+## Mobile Phones (Bluetooth)
 
-Cualquier teléfono con Bluetooth puede vincularse a la D612. Una vez vinculados, la conexión se realiza automáticamente cuando Bluetooth está activo en ambos equipos.
+Any Bluetooth-enabled phone can be paired with the D612. Once paired, connection occurs automatically when Bluetooth is active on both devices.
 
-**Alcance:** hasta 10 m (se recomienda mantener el celular cerca de la consola, aunque no encima).
+**Range:** up to 10 m (keeping the phone near the console is recommended, though not directly on top).
 
-### Procedimiento de vinculación
+### Pairing Procedure
 
-1. **En la consola:** verifique que el LED Bluetooth esté apagado (el LED se encuentra en el panel de vúmetros).
-   - Si está encendido (destello verde lento, 1 cada 2 s), apáguelo manteniendo presionado el botón **Bluetooth** en la sección Híbrido.
-2. Con Bluetooth apagado, mantenga presionado el botón **Cellular Phone Bluetooth** unos 10 s hasta que los LEDs destellen en forma alternada verde/rojo. La consola entra en modo _búsqueda_.
+1. **On the console:** verify the Bluetooth LED is off (LED is located on the VU-meter panel).
+   - If it's on (slow green flash, 1 every 2 s), turn it off by holding the **Bluetooth** button in the Hybrid section.
+2. With Bluetooth off, hold the **Cellular Phone Bluetooth** button for about 10 s until LEDs flash alternately green/red. The console enters _search_ mode.
 
    <Info>
-     Tener en cuenta que primero Bluetooth se enciende en modo normal, con destello lento. No soltar el botón hata que inicie el destello rápido.
+     Note that Bluetooth first turns on in normal mode with slow flashing. Don't release the button until rapid flashing begins.
    </Info>
-3. **En el celular:** busque dispositivos Bluetooth (el procedimiento depende del modelo).
-4. Seleccione el dispositivo **Solidyne BTM641** (o BTM751 en equipos muy antiguos).
-   - Si pide clave, ingrese **0000**.
-5. Los equipos quedan emparejados (pairing). El LED queda verde con destello lento (1 cada 2 s), indicando Bluetooth activo.
+3. **On the phone:** search for Bluetooth devices (procedure depends on model).
+4. Select the **Solidyne BTM641** device (or BTM751 on very old units).
+   - If prompted for a code, enter **0000**.
+5. Devices are now paired. The LED remains green with slow flash (1 every 2 s), indicating active Bluetooth.
 
-### Re-conectar un dispositivo vinculado
+### Reconnecting a Paired Device
 
-1. Encienda Bluetooth en la D612 manteniendo presionado **Cellular Phone Bluetooth** hasta que el LED verde encienda (≈5 s).\
-   El LED verde queda destellando lentamente.
-2. Active Bluetooth en el celular.\
-   Cuando aparezca el aviso de conexión, la consola está lista.
+1. Turn on Bluetooth on the D612 by holding **Cellular Phone Bluetooth** until the green LED lights (≈5 s).\
+   The green LED continues slow flashing.
+2. Activate Bluetooth on the phone.\
+   When the connection notice appears, the console is ready.
 
 <Note>
-  En algunos teléfonos, la reconexión no es automática. Será necesario seleccionar manualmente **Solidyne BTM641** de la lista de dispositivos Bluetooth.
+  On some phones, reconnection isn't automatic. You'll need to manually select **Solidyne BTM641** from the Bluetooth devices list.
 </Note>
 
-### Ajuste del volumen
+### Volume Adjustment
 
 <Warning>
-  En el celular, el volumen Bluetooth debe ajustarse al máximo durante una llamada para asegurar adecuada recepción y mejor relación señal/ruido.
+  On the phone, Bluetooth volume must be set to maximum during a call to ensure proper reception and better signal-to-noise ratio.
 </Warning>
 
-- Este ajuste es independiente del volumen del altavoz del teléfono.
-- Si ajusta volumen sin vincular Bluetooth, solo cambia el volumen del parlante del móvil.
-- El teléfono recuerda el último ajuste de nivel de Bluetooth.
-- Si cambia de celular, repita el ajuste.
+- This adjustment is independent of the phone's speaker volume.
+- Adjusting volume without Bluetooth pairing only changes the mobile's speaker volume.
+- The phone remembers the last Bluetooth level setting.
+- If changing phones, repeat the adjustment.
 
-### Apagar Bluetooth en la consola
+### Turning Off Bluetooth on the Console
 
-Mantenga presionado **Cellular Phone Bluetooth** hasta que el LED se apague en forma definitiva.
+Hold **Cellular Phone Bluetooth** until the LED turns off completely.
 
-## Híbrido externo
+## External Hybrid
 
-La D612 dispone de un conector para envío y retorno hacia un híbrido telefónico externo.
+The D612 provides a connector for send and return to an external telephone hybrid.
 
-- **Jack 6,35 mm (TRS):** combina entrada y salida.
+- **6.35 mm jack (TRS):** combines input and output.
 
 <img
   src="/images/612/612-cable-insert.bmp"
@@ -113,9 +121,9 @@ La D612 dispone de un conector para envío y retorno hacia un híbrido telefóni
   style={{ width:"65%" }}
 />
 
-**Asignación de contactos**
+**Pin Assignment**
 
-- **Tip (punta):** envío MIX-MINUS (programa, sin audio de líneas telefónicas). Esta señal se conecta a la **entrada del híbrido externo**.
-- **Ring (anillo):** retorno desde el híbrido externo (audio de la línea). Se conecta a la salida del híbrio externo. En la consola se suma a la salida PGM vía el canal de híbrido interno.
+- **Tip:** MIX-MINUS send (program, without telephone line audio). This signal connects to the **external hybrid input**.
+- **Ring:** return from external hybrid (line audio). Connects to hybrid output. In the console, it's summed to PGM output via the internal hybrid channel.
 
-El atenuador del canal Híbrido se comporta igual que con líneas directas, enviando señal al aire o al monitoreo previo (ver Operación de la consola).
+The Hybrid channel fader behaves the same as with direct lines, sending signal to air or preview monitoring (see Console Operation).

@@ -1,37 +1,45 @@
 ---
 title: "CyberPlay Editor"
-description: "Programacion de contenidos."
-keywords: ["cyberplay editor","tandas","comerciales","bloques","pauta"]
+description: "Content programming."
+keywords: ["cyberplay editor","breaks","commercials","blocks","schedule"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "875f223e662ef1881f512164949f994006c0f351a6fa5b2933c907a896a9c1cc"
+
 ---
 
-## Sobre la pauta de programación
+## About the programming schedule
 
-Las **tandas de avisos publicitarios** y los **programas** se crean por separado y se guardan en archivos distintos:
+**Commercial breaks** and **programs** are created separately and stored in different files:
 
-- `.LOG` para tandas comerciales.
-- `.PGM` para bloques de programa.
+- `.LOG` for commercial breaks.
+- `.PGM` for program blocks.
 
-Las tandas comerciales pueden crearse **manual**mente con **CyberPlay Editor** (este capítulo) o **automáticamente** con el **módulo de Tráfico de ADMICOM** (ver capítulo **ADMICOM**).\
-Los **bloques de programa** se definen en **CyberPlay Editor** en diferentes segmentos horarios: programas en vivo, **AutoDJ**, playlists prearmadas, bloques satelitales, etc.
+Commercial breaks can be created **manually** with **CyberPlay Editor** (this chapter) or **automatically** with the **ADMICOM Traffic module** (see **ADMICOM** chapter).\
+**Program blocks** are defined in **CyberPlay Editor** in different time segments: live programs, **AutoDJ**, pre-built playlists, satellite blocks, etc.
 
-Tandas y bloques se crean mediante **instrucciones propias de AUDICOM**. No es necesario memorizarlas: hay **asistentes** (p. ej., _Magic Programming_) y herramientas de edición visual que agilizan el pautado.
+Breaks and blocks are created using **AUDICOM's own instructions**. No need to memorize them: there are **wizards** (e.g., _Magic Programming_) and visual editing tools that streamline scheduling.
 
-### Descripción general
+### General description
 
-Ingrese al escritorio AUDICOM y desde el menú desplegable abra **CyberPlay Editor**.\
-Requiere permiso en su **perfil de usuario** (ver **Niveles de Acceso**).
+Access the AUDICOM desktop and open **CyberPlay Editor** from the dropdown menu.\
+Requires permission in your **user profile** (see **Access Levels**).
 
-AUDICOM compone la pauta a partir de:
+AUDICOM builds the schedule from:
 
-- **.LOG** (tandas publicitarias)
-- **.PGM** (bloques musicales, en vivo, satelitales, etc.)
+- **.LOG** (commercial breaks)
+- **.PGM** (music blocks, live, satellite, etc.)
 
-Los **comandos** de tandas y programas y los **nombres de archivos** (promocionales, temas, spots, etc.) se editan en las ventanas **LOG** y **PGM** de CyberPlay Editor.\
-Muchos comandos pueden gestionarse **gráficamente** desde **CyberPlay-Test** o con asistentes como **Magic Programming**.
+The **commands** for breaks and programs and **filenames** (promos, songs, spots, etc.) are edited in CyberPlay Editor's **LOG** and **PGM** windows.\
+Many commands can be managed **graphically** from **CyberPlay-Test** or with wizards like **Magic Programming**.
 
 <Tip>
-  Piense en la **grilla clásica** de la radio: programación por día **00:00 a 24:00**. Eso es lo que definirá en CyberPlay Editor.
+  Think of the **classic radio grid**: programming by day **00:00 to 24:00**. That's what you'll define in CyberPlay Editor.
 </Tip>
 
 <img
@@ -42,73 +50,72 @@ Muchos comandos pueden gestionarse **gráficamente** desde **CyberPlay-Test** o 
   style={{ width:"78%" }}
 />
 
-### Instrucciones para pautar contenidos
+### Content scheduling instructions
 
-A continuación se describen los **comandos** o instrucciones que generan los distintos bloques de contenidos. Las instrucciones comienzan con **/ (slash)** salvo que se indique lo contrario.\
-Cada instrucción va en **una sola línea**.
+Below are the **commands** or instructions that generate the different content blocks. Instructions begin with **/ (slash)** unless otherwise noted.\
+Each instruction goes on **a single line**.
 
-- El **primer bloque** debe **comenzar 00:00** y el **último terminar 24:00**.
-- El uso de **mayúsculas/minúsculas** es indistinto.
-- Si hay un horario **sin bloque**, CyberPlay mostrará un bloque **gris** con **EMPTY**.
+- The **first block** must **start at 00:00** and the **last end at 24:00**.
+- **Upper/lowercase** usage is indistinct.
+- If there's a time slot **without a block**, CyberPlay will show a **gray** block with **EMPTY**.
 
 <Warning>
-  Si la pauta no comienza a **00:00** o no cierra a **24:00**, el sistema **no identificará** el cambio de día y la programación resultará **errónea**.
+  If the schedule doesn't start at **00:00** or end at **24:00**, the system **won't identify** the day change and programming will be **incorrect**.
 </Warning>
 
-La **ventana de estado** reporta: errores de sintaxis, bloques vacíos, superposiciones horarias, **formatos AutoDJ** inexistentes y otros problemas.
+The **status window** reports: syntax errors, empty blocks, time overlaps, missing **AutoDJ** formats and other issues.
 
 ![Au Cpedior Pn](/images/audicom/au-cpedior.png)
 
 ---
 
-## Archivos LOG y PGM – Pauta de programación
+## LOG and PGM Files – Programming Schedule
 
-Las fechas de emisión de **tandas (.LOG)** y **programas (.PGM)** pueden definirse así:
+Air dates for **breaks (.LOG)** and **programs (.PGM)** can be defined as:
 
-- Para una **fecha específica** (ej.: 1998-12-25).
-- Para un **día de la semana de un mes** (ej.: todos los **lunes de abril**).
-- Para un **día fijo de la semana** (ej.: **todos los lunes** del año).
-- Para un **mes** (ej.: **agosto**).
-- Para **todo un año**.
+- For a **specific date** (e.g.: 1998-12-25).
+- For a **weekday of a month** (e.g.: all **Mondays in April**).
+- For a **fixed weekday** (e.g.: **every Monday** of the year).
+- For a **month** (e.g.: **August**).
+- For an **entire year**.
 
-### Orden de prioridad al cargar PGM/LOG
+### PGM/LOG Loading Priority Order
 
-Cuando en el módulo de aire **CyberPlay** arma la programación, carga **PGM** y **LOG** según este orden:
+When **CyberPlay** on-air module builds programming, it loads **PGM** and **LOG** in this order:
 
 1. `YYYYMMDD.LOG` / `YYYYMMDD.PGM`\
-   Año-Mes-Día (ej.: `20040501`) para el **1 de mayo de 2004**.
+   Year-Month-Day (e.g.: `20040501`) for **May 1st, 2004**.
 2. `WED11.LOG` / `WED11.PGM`\
-   Todos los **miércoles de noviembre**.
+   All **Wednesdays in November**.
 3. `SUN00.LOG` / `SUN00.PGM`\
-   **Cualquier domingo** del año (el `00` indica “todos”).
+   **Any Sunday** of the year (`00` means "all").
 4. `MONTH04.LOG` / `MONTH04.PGM`\
-   **Todo abril**.
+   **All April**.
 5. `MONTH00.LOG` / `MONTH00.PGM`\
-   **Todos los días del año**.
+   **Every day of the year**.
 
 <Note>
-  Abreviaturas: **SUN** Domingo, **MON** Lunes, **TUE** Martes, **WED** Miércoles, **THU** Jueves, **FRI** Viernes, **SAT** Sábado, **MONTH** Mes.
+  Abbreviations: **SUN** Sunday, **MON** Monday, **TUE** Tuesday, **WED** Wednesday, **THU** Thursday, **FRI** Friday, **SAT** Saturday, **MONTH** Month.
 </Note>
 
 ---
 
-## Programación en el gestor de Aire
+## Programming in the On-Air Manager
 
-El módulo de **Aire** carga cada día la programación del **día siguiente** usando **LOG/PGM** y el **orden de prioridad** anterior. Ej.: el **14/08/2005** puede tomar `980814.LOG` (tandas del día) y `MONTH08.PGM` (bloques del mes de agosto).
+The **On-Air** module loads each day the programming for the **next day** using **LOG/PGM** and the previous **priority order**. E.g.: on **08/14/2005** it can load `980814.LOG` (day's breaks) and `MONTH08.PGM` (August program blocks).
 
-La carga **automática** ocurre a las **18:00** (configurable en **Panel de Configuración**).
+**Automatic** loading occurs at **18:00** (configurable in **Configuration Panel**).
 
-Si se modifican:
+If modified:
 
-- **Archivos del día en curso**
-- **Archivos del día siguiente** luego de la hora de recarga automática
+- **Current day files**
+- **Next day files** after automatic reload time
 
 <Warning>
-  El responsable de programación **debe avisar** al **operador de Aire** para que ejecute la **recarga manual** de archivos (ver **Reload** en la sección de CyberPlay).
+  The programming manager **must notify** the **On-Air operator** to execute a **manual reload** of files (see **Reload** in CyberPlay section).
 </Warning>
 
 <Danger>
-  Realice **backups periódicos** de `C:\Audicom\LOG` y `C:\Audicom\PGM` (ubicaciones por defecto).\
-  Si se borran accidentalmente, se **pierde la programación**.
+  Perform **periodic backups** of `C:\Audicom\LOG` and `C:\Audicom\PGM` (default locations).\
+  If accidentally deleted, **programming is lost**.
 </Danger>
-

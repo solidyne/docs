@@ -1,25 +1,33 @@
 ---
-title: "Configuración de RDS"
-description: "Configuración de la etapa Radio Data Sistem"
+title: "RDS Configuration"
+description: "Radio Data System stage configuration"
 keywords: ["RDS"]
-tags: ["procesadores", "542"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b7f4165d380ccf2b129c5b20fe90df95b654e849758444c9af333f552c20e562"
+
 ---
 
 ## RDS
 
-El procesador **542APC** cuenta con un codificador RDS interno.\
-RDS es un sistema que permite añadir a la señal de FM información adicional mediante un canal de datos. Entre sus funciones principales:
+The **542APC** processor includes an internal RDS encoder.\
+RDS is a system that adds supplementary information to the FM signal through a data channel. Its main functions include:
 
-- Presentación en pantalla del nombre de la red de emisoras y del tipo de programa recibido (noticias, deportes, música, variedades, religioso, etc.).
-- Sintonía automática a una red de emisoras seleccionada por el usuario.\
-  Permite escuchar la misma estación durante un viaje largo sin necesidad de cambiar manualmente de frecuencia, cuando la señal de una emisora se debilita.
-- Recepción automática de información de tráfico.\
-  El receptor conmuta dentro de la misma red a la emisora que transmite información vial y luego regresa automáticamente a la emisora previamente seleccionada.
+- On-screen display of the station network name and program type (news, sports, music, variety, religious, etc.).
+- Automatic tuning to a station network selected by the user.\
+  Allows listening to the same station during a long trip without manually changing frequency when one station's signal weakens.
+- Automatic reception of traffic information.\
+  The receiver switches within the same network to the station broadcasting traffic information and then automatically returns to the previously selected station.
 
-### Configuración básica del RDS
+### Basic RDS Configuration
 
-La configuración y control del RDS se realiza vía **Ethernet (IP)** en el puerto ETHERNET del 542APC.\
-Los parámetros básicos se definen desde la **interfaz web** en la opción **FM OUTPUT**, donde se muestra un diagrama con RDS y el acceso a su configuración.
+RDS configuration and control is done via **Ethernet (IP)** through the 542APC's ETHERNET port.\
+Basic parameters are set from the **web interface** under **FM OUTPUT**, which shows a diagram with RDS and access to its configuration.
 
 <img
   src="/images/542/542-RDS_CONFIG.png"
@@ -29,79 +37,79 @@ Los parámetros básicos se definen desde la **interfaz web** en la opción **FM
   style={{ width:"73%" }}
 />
 
-#### Parámetros configurables
+#### Configurable Parameters
 
 - **TCP RDS PORT**\
-  Define el **puerto TCP** para la comunicación con un software externo RDS.\
-  Valor predeterminado: `9762`.\
-  Para modificarlo, ingrese el nuevo valor y presione **APPLY**.
+  Defines the **TCP port** for communication with external RDS software.\
+  Default value: `9762`.\
+  To modify it, enter the new value and press **APPLY**.
 
   <Note>
-    Para comandar el codificador RDS en tiempo real, por ejemplo para enviar informacion de la música emitida, se requiere una computadora externa con el software Magic RDS o Solidyne Audicom. 
+    To control the RDS encoder in real-time, for example to send current song information, an external computer running Magic RDS or Solidyne Audicom software is required.
   </Note>
 - **Default PS (Program Service)**\
-  Texto fijo, generalmente el nombre de la emisora.\
-  Longitud máxima: **8 caracteres** (según estándar RDS).
+  Static text, typically the station name.\
+  Maximum length: **8 characters** (per RDS standard).
 - **PI (Program Identification)**\
-  Identifica una red de emisoras o repetidoras de una cadena, permitiendo al receptor cambiar automáticamente según la calidad de recepción.\
-  Formato: número **hexadecimal de 4 dígitos** (0000 a FFFF).
+  Identifies a network of stations or repeaters in a chain, allowing the receiver to switch automatically based on reception quality.\
+  Format: **4-digit hexadecimal** number (0000 to FFFF).
 - **Program Type**\
-  Define el tipo de contenido emitido (ej: noticias, deportes, música).
+  Defines the type of broadcast content (e.g., news, sports, music).
 - **M/S (Music/Speech)**\
-  Indica si el contenido es música o palabra.
+  Indicates whether the content is music or speech.
 - **TA State (Traffic Announcement)**\
-  Bandera on/off que indica cuándo hay un anuncio de tráfico al aire.\
-  Se controla manualmente o vía **GPI remoto**.
+  On/off flag indicating when traffic announcements are on-air.\
+  Controlled manually or via remote **GPI**.
 - **Traffic PS**\
-  Se muestra en lugar del campo PS cuando está activo el flag de tráfico.\
-  Si no se utiliza, debe dejarse en blanco.
+  Displayed instead of PS field when traffic flag is active.\
+  Leave blank if not used.
 - **DYN PS (Dynamic Program Service)**\
-  Permite mostrar mensajes dinámicos (hasta **64 caracteres**) reemplazando secuencialmente el PS fijo. Ejemplos de uso: títulos de canciones, intérprete, noticias, comerciales.\
-  El texto se desplaza con la velocidad definida en el campo **Scroll**.
+  Allows displaying dynamic messages (up to **64 characters**) by sequentially replacing the static PS. Usage examples: song titles, artist, news, commercials.\
+  Text scrolls at the speed defined in the **Scroll** field.
 - **Loop**\
-  Tiempo entre repeticiones del texto dinámico. Durante este período se muestra el **PS estático**.
+  Time between dynamic text repetitions. During this period, the **static PS** is shown.
 - **Scroll**\
-  Velocidad de desplazamiento (alta o baja).\
-  La velocidad alta no es compatible con algunos receptores, especialmente en automóviles o en zonas de baja recepción. Esto se debe a que el desplazamiento PS **no está incluido en el estándar RDS**. Se recomienda evitar la velocidad alta.
+  Scrolling speed (high or low).\
+  High speed may not be compatible with some receivers, especially in cars or areas with poor reception. This is because PS scrolling **is not included in the RDS standard**. High speed should be avoided.
 
 <Note>
-  El uso de Dynamic PS está restringido en algunos países y no forma parte del estándar RDS.\
-  Algunos receptores pueden no mostrar correctamente el campo Dynamic/Scrolling PS.\
-  El fabricante no es responsable del uso indebido de esta función.
+  Dynamic PS usage is restricted in some countries and is not part of the RDS standard.\
+  Some receivers may not properly display Dynamic/Scrolling PS.\
+  The manufacturer is not responsible for improper use of this feature.
 </Note>
 
-### Uso avanzado con Magic RDS
+### Advanced Usage with Magic RDS
 
-Para funciones avanzadas, se requiere el software externo **Magic RDS** (Windows), conectado a la misma red del 542APC.\
-Este software permite actualizar dinámicamente los datos (ej: títulos de canciones) desde distintos sistemas de automatización de aire (playout).
+For advanced functions, external **Magic RDS** software (Windows) is required, connected to the same network as the 542APC.\
+This software allows dynamic data updates (e.g., song titles) from various playout automation systems.
 
-### Integración con Audicom
+### Audicom Integration
 
-Si la emisora utiliza **Solidyne Audicom**, no es necesario Magic RDS. La comunicación es directa entre Audicom y el procesador mediante LAN. Para más detalles, consulte la documentación de Audicom.
+If the station uses **Solidyne Audicom**, Magic RDS is not necessary. Communication is direct between Audicom and the processor via LAN. For more details, consult the Audicom documentation.
 
-#### Instalación de Magic RDS
+#### Magic RDS Installation
 
-Una versión del software puede descargarse en: `www.solidynepro.com/DW/setupRDS.rar`
+A version of the software can be downloaded at: `www.solidynepro.com/DW/setupRDS.rar`
 
-Pasos de configuración (solo válido para la versión distribuída por Solidyne):
+Configuration steps (valid only for the version distributed by Solidyne):
 
-1. Instalar y ejecutar Magic RDS.
-2. Ir a **Opciones → Preferencias**.
-3. En la ventana de preferencias, elegir la pestaña **General**.
-4. Cambiar el tipo de conexión a **Ethernet TCP/IP**.
-5. En **Puerto**, ingresar el TCP configurado en el 542APC (por defecto 9762).
-6. En **Host**, ingresar la dirección IP del 542APC (visible en la pantalla del equipo).
+1. Install and run Magic RDS.
+2. Go to **Options → Preferences**.
+3. In the preferences window, select the **General** tab.
+4. Change connection type to **Ethernet TCP/IP**.
+5. In **Port**, enter the TCP configured in the 542APC (default 9762).
+6. In **Host**, enter the 542APC's IP address (visible on the unit's display).
 
 <Tip>
-  Si se usará RDS con actualización en tiempo real vinculada a un software de automatización, configure el **542APC con IP fija**.
+  If using RDS with real-time updates linked to automation software, configure the **542APC with a static IP**.
 </Tip>
 
-### Acceso remoto
+### Remote Access
 
-El procesador puede recibir datos RDS vía **Internet** cuando está ubicado en otra red.\
-Requisitos:
+The processor can receive RDS data via **Internet** when located on another network.\
+Requirements:
 
-- El ISP debe asignar una **IP fija** en la LAN remota.
-- Configurar la LAN para redirigir (port forwarding):
-  - **Puerto 80** → IP local del 542APC
-  - **Puerto 9762** (u otro configurado para RDS) → IP local del 542APC
+- ISP must assign a **static IP** on the remote LAN.
+- Configure LAN port forwarding:
+  - **Port 80** → 542APC local IP
+  - **Port 9762** (or other configured for RDS) → 542APC local IP

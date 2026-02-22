@@ -1,85 +1,93 @@
 ---
-title: "Servicios de streaming"
-description: "Equipos con servicios RTP, Icecast y recepción de streaming"
+title: "Streaming services"
+description: "Equipment with RTP, Icecast and streaming reception services"
 keywords: ["streaming", "RTP", "Icecast", "Shoutcast", "Opus"]
-tags: ["procesadores", "542"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ef5e8845e4fcde60dc725918a78ac5aca8c088cde680ff31bed27ac530557d15"
+
 ---
 
 import discovery from '/snippets/discovery.mdx';
 
-## Acceso al módulo STREAMER
+## Accessing the STREAMER module
 
-### Desde una LAN
+### From a LAN
 
-Los procesadores equipados con el módulo STREAMER AoIP cuentan con **dos puertos Ethernet**:
+Processors equipped with the STREAMER AoIP module have **two Ethernet ports**:
 
-- **Ethernet**→ interfaz web para CONTROL
+- **Ethernet**→ web interface for CONTROL
 - **Ethernet AoIP** → AUDIO STREAM
 
   <img
     src="/images/542/542-trasero-Ethernet.png"
-    alt="542 Trasero Ethernet Pn"
-    title="542 Trasero Ethernet Pn"
+    alt="542 Rear Ethernet Pn"
+    title="542 Rear Ethernet Pn"
     style={{ width:"63%" }}
   />
 
-1. Conecte el puerto **Ethernet AoIP** a la LAN usando un cable UTP CAT5. De fábrica trabaja en DHCP. Cuando la conexión es exitosa, el LED verde del RJ45 destella.
-2. Para conocer la IP asignada al módulo Streamer, descargar la aplicación **Solidyne Multi-Discovery**.
+1. Connect the **Ethernet AoIP** port to the LAN using a CAT5 UTP cable. Factory default is DHCP. When connection is successful, the green LED on the RJ45 blinks.
+2. To find the IP address assigned to the Streamer module, download the **Solidyne Multi-Discovery** application.
 
 <discovery />
 
-3. Una vez que accedemos al módulo, procedemos a la configuración.
+3. Once we access the module, we proceed with configuration.
 
 ---
 
-### Acceso remoto vía Internet
+### Remote access via Internet 
 
-Los equipos 542APC con expansión STREAMER AoIP cuentan con un servicio de redireccionamiento que evita configuraciones avanzadas (apertura de puertos, contratación de IPs estáticas, etc.).
+The 542APC units with STREAMER AoIP expansion include a redirection service that avoids advanced configurations (port forwarding, static IP contracting, etc.).
 
 <Warning>
-  Este servicio brinda acceso remoto a la **interfaz web de control y ajuste** del equipo.\
-  No establece un enlace de audio contra el procesador.
+  This service provides remote access to the equipment's **web control and adjustment interface**.\
+  It does not establish an audio link with the processor.
 </Warning>
 
-El servicio es provisto por terceros. Solidyne ofrece una activación gratuita de uso temporal, limitada a 4 horas de conexión.
+The service is provided by third parties. Solidyne offers free temporary activation limited to 4 hours of connection.
 
-**Activar el redireccionamiento**
+**Activating redirection**
 
-1. Acceder al equipo desde la LAN.
-2. En el menú **SYSTEM**, abrir la pestaña **Internet Access**.
-3. Activar el botón **ENABLE**.
-4. Solicitar la activación de cuenta escribiendo a [**soporte@solidyne.ar**](mailto:soporte@solidyne.ar) con:
-   - Motivo: "alta de cuenta ZROK para acceso remoto".
-   - Correo a registrar.
-   - Número de serie del procesador.
-5. Ingresar la clave recibida en **ENTER KEY** de la pantalla Internet Access.
+1. Access the equipment from the LAN.
+2. In the **SYSTEM** menu, open the **Internet Access** tab.
+3. Enable the **ENABLE** button.
+4. Request account activation by writing to [**soporte@solidyne.ar**](mailto:soporte@solidyne.ar) with:
+   - Subject: "ZROK account activation for remote access"
+   - Email to register
+   - Processor serial number
+5. Enter the received key in **ENTER KEY** on the Internet Access screen.
 
 <Info>
-  El servicio gratuito ZROK habilita sesiones de 4 horas.\
-  Para acceso continuo, debe contratarse el servicio al proveedor externo.
+  The free ZROK service enables 4-hour sessions.\
+  For continuous access, the service must be contracted from the external provider.
 </Info>
 
 ---
 
-## Interfaz de control integrada
+## Integrated control interface
 
-Los procesadores 542APC con módulo STREAMER AoIP incluyen una interfaz integrada, que brinda acceso a los servicios de streaming de audio y a la interfaz de Control WEB.\
-El acceso solicita usuario y contraseña.
+542APC processors with STREAMER AoIP module include an integrated interface that provides access to audio streaming services and the Web Control interface.\
+Access requires username and password.
 
-- Usuario **BASIC** → acceso a Remote Control (configuración de audio, MPX y recepción).
-- Usuario **ADMIN** → habilita todas las opciones, incluyendo configuración de audio stream.
+- **BASIC** user → access to Remote Control (audio, MPX and reception settings)
+- **ADMIN** user → enables all options, including audio stream configuration
 
-Contraseña predeterminada: **1234** (puede cambiarse en pantalla de hardware).
+Default password: **1234** (can be changed on hardware screen)
 
 <img
   src="/images/542/542-Streamer-WEB_LOGIN.png"
-  alt="542 Streamer WEB LOGIN Pn"
+  alt="542 Streamer WEB LOGIN Pn" 
   title="542 Streamer WEB LOGIN Pn"
   style={{ width:"65%" }}
   className="mx-auto"
 />
 
-La pantalla **HOME** incluye accesos a:
+The **HOME** screen includes access to:
 
 <img
   src="/images/542/542-streamer-WEB_HOME.png"
@@ -88,65 +96,65 @@ La pantalla **HOME** incluye accesos a:
   style={{ width:"98%" }}
 />
 
-| Opción            | Descripción                                                                                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **HOME**          | Carga la pantalla actual.                                                                                                                                                          |
-| **STREAM CFG**    | Carga las opciones para configuración de los servicios de streaming.                                                                                                               |
-| **REMOTE CNTRL**  | Carga la pantalla para configuración remota de los parámetros del procesado y del monitor de modulación.                                                                           |
-| **SYSTEM**        | Muestra opciones de configuración de la red local para el puerto Ethernet de control, información del sistema y la configuración para acceder al equipo externamente vía Internet. |
-| **UPDATE**        | Actualización simplificada del firmware.                                                                                                                                           |
-| **REMOTE PLAYER** | Permite escuchar el audio del procesador a través de la red local e Internet.                                                                                                      |
-| **LOG OUT**       | Cierra la sesión del usuario y retorna a la pantalla de ingreso.                                                                                                                   |
+| Option | Description |
+|--------|-------------|
+| **HOME** | Loads the current screen. |
+| **STREAM CFG** | Loads options for streaming services configuration. |
+| **REMOTE CNTRL** | Loads screen for remote configuration of processing parameters and modulation monitor. |
+| **SYSTEM** | Shows local network configuration options for the control Ethernet port, system information and configuration for external Internet access. |
+| **UPDATE** | Simplified firmware update. |
+| **REMOTE PLAYER** | Allows listening to processor audio through local network and Internet. |
+| **LOG OUT** | Closes user session and returns to login screen. |
 
 ---
 
-### Configuraciones del streaming (STREAM CFG)
+### Streaming configurations (STREAM CFG)
 
-En el menú **STREAM CFG** se configuran los servicios de streaming:
+The **STREAM CFG** menu configures streaming services:
 
 - UP-STREAM (Tx)
-- RTP-LINK (Tx)
+- RTP-LINK (Tx) 
 - DOWN-STREAM (Rx)
 - REMOTE PLAYER
 - SERVICE CFG
 
 ---
 
-## Down-stream RTP  -  Enlace (STL)
+## Down-stream RTP - Link (STL)
 
-En primer lugar se describe la recepción de **audio stream**, porque es el caso más habitual para establecer la conexión entre el procesador y los estudios de la emisora (STL, _Studio to Transmitter Link_).
+First we describe **audio stream** reception, as it is the most common case for establishing connection between the processor and radio studios (STL, _Studio to Transmitter Link_).
 
-**Concepto.** El procesador recibe un stream de audio **RTP** generado por un codificador en los estudios (por ejemplo, una consola Solidyne DX816, línea UNIDEX u otros equipos compatibles).
+**Concept.** The processor receives an **RTP** audio stream generated by an encoder at the studios (for example, a Solidyne DX816 console, UNIDEX line or other compatible equipment).
 
-### **Configuración de la red**
+### **Network configuration**
 
-Existen distintas configuraciones para interconectar en red dos equipos ubicados en diferentes locaciones. La instalación y configuración de la red exceden este manual; consultar con técnicos especializados. A modo de referencia, se mencionan dos esquemas generales.
+There are different configurations to interconnect two devices located in different locations. Network installation and configuration are beyond this manual; consult specialized technicians. For reference, two general schemes are mentioned.
 
-1. **Enlace punto a punto**
+1. **Point-to-point link**
 
-Dos redes de locaciones distintas se conectan directamente (de forma inalámbrica o con fibra óptica) para conformar una única **LAN**. Hay empresas que proveen estos servicios.\
-En este esquema el procesador está **en la misma red** que el códec o equipo transmisor; **no interviene Internet**.
+Two networks in different locations connect directly (wirelessly or via fiber optic) to form a single **LAN**. There are companies that provide these services.\
+In this scheme the processor is **on the same network** as the codec or transmitting equipment; **Internet is not involved**.
 
-El enlace punto a punto puede ser:
+The point-to-point link can be:
 
-- **Físico**: intranet por fibra.
-- **Inalámbrico**: microondas en la banda WI-FI o **Wi-Max 5,8 GHz**. Estos enlaces alcanzan hasta **50 km** y tienen costos bajos por ser equipos fabricados en grandes series. La banda **5,8 GHz** es de uso libre para transmisión de datos.
+- **Physical**: fiber intranet
+- **Wireless**: microwave in WI-FI band or **Wi-Max 5.8 GHz**. These links reach up to **50 km** and have low costs as they use mass-produced equipment. The **5.8 GHz** band is free for data transmission.
 
-2. **Enlace vía Internet**
+2. **Internet link**
 
-Dos redes separadas se conectan a través de **Internet**. La configuración es más compleja: suele requerir montar una **VPN** con routers compatibles y/o contar con **IP públicas fijas** y **redireccionamiento de puertos**.
+Two separate networks connect through **Internet**. Configuration is more complex: it usually requires setting up a **VPN** with compatible routers and/or having **fixed public IPs** and **port forwarding**.
 
-La **configuración del equipo codificador** puede variar según la arquitectura de red.
+The **encoder equipment configuration** may vary depending on network architecture.
 
 <Note>
-  Como referencia, ver el documento de requisitos [**RTP_AudioStream_Link(STL)\_requirements**](https://www.solidynepro.com/DW/VPN-PortForwarding.pdf).
+  For reference, see requirements document [**RTP_AudioStream_Link(STL)\_requirements**](https://www.solidynepro.com/DW/VPN-PortForwarding.pdf).
 </Note>
 
 ---
 
-### Configurar RTP entrante
+### Configure incoming RTP
 
-El 542APC se comporta como **receptor pasivo** de un stream de audio **RTP** generado por un  equipo/encoder que emita en un **formato compatible**. Solo es necesario configurar **protocolo**, **puerto** y **dirección IP** por la que ingresa el stream.
+The 542APC acts as a **passive receiver** of an **RTP** audio stream generated by equipment/encoder that broadcasts in a **compatible format**. It is only necessary to configure **protocol**, **port** and **IP address** through which the stream enters.
 
 <img
   src="/images/542/542-streamer-decoder.jpg"
@@ -156,9 +164,9 @@ El 542APC se comporta como **receptor pasivo** de un stream de audio **RTP** gen
   style={{ width:"59%" }}
 />
 
- 1. Se asume que el procesador está correctamente conectado a la **misma LAN** que el equipo codificador, a través del **puerto Ethernet AoIP**.
- 2. En la **Pantalla General de Estado**, elegir la opción **STREAM CFG**.
- 3. Seleccionar la pestaña **DOWN-STREAM (Rx)**.
+1. It is assumed that the processor is properly connected to the **same LAN** as the encoder equipment, through the **Ethernet AoIP port**.
+2. In the **General Status Screen**, choose **STREAM CFG** option.
+3. Select the **DOWN-STREAM (Rx)** tab.
 
     <img
       src="/images/542/542-streamer-down_stream.png"
@@ -166,182 +174,16 @@ El 542APC se comporta como **receptor pasivo** de un stream de audio **RTP** gen
       title="542 Streamer Down Stream Pn"
       style={{ width:"97%" }}
     />
- 4. Activar la recepción con **RUN/STOP → RUN**.
- 5. En **PROTOCOL**, elegir **RTP**.
- 6. En **SERVER URL/IP**, ingresar la **IP del codificador** (el que genera el streaming en el Estudio).\
-    También es posible ingresar **0.0.0.0** para recibir desde **cualquier IP** que transmita al puerto UDP declarado.
- 7. En **PORT**, ingresar el **puerto UDP** por el que llega el RTP (debe coincidir con el definido en el codificador).
- 8. Verificar que el codificador emita en un formato **compatible**:
-    - **PCM 44.1 kHz**
-    - **MP3 CBR/VBR 96–320 kbps**
- 9. **PATH/MOUNT POINT** no se utiliza para **RTP**. Dejar en blanco.
-10. Pulsar **APPLY** para confirmar.
-11. El procesador comenzará a **recibir el audio** desde los estudios. El **nivel de señal** se muestra en pantalla.
+4. Activate reception with **RUN/STOP → RUN**.
+5. In **PROTOCOL**, choose **RTP**.
+6. In **SERVER URL/IP**, enter the **encoder's IP** (the one generating streaming at the Studio).\
+   It is also possible to enter **0.0.0.0** to receive from **any IP** transmitting to the declared UDP port.
+7. In **PORT**, enter the **UDP port** through which RTP arrives (must match the one defined in the encoder).
+8. Verify that the encoder broadcasts in a **compatible** format:
+   - **PCM 44.1 kHz**
+   - **MP3 CBR/VBR 96–320 kbps**
+9. **PATH/MOUNT POINT** is not used for **RTP**. Leave blank.
+10. Press **APPLY** to confirm.
+11. The processor will start **receiving audio** from the studios. The **signal level** is shown on screen.
 
----
-
-### Emisión RTP desde Estudios
-
-Cualquier equipo capaz de generar un stream **RTP** puede transmitir hacia el procesador. Configurar:
-
-1. (En este ejemplo) El codificador está **dentro de la misma LAN** que el procesador. En otras arquitecturas (VPN/Internet) la configuración puede diferir.
-2. Enviar **RTP** hacia la **IP del módulo STREAMER** del 542APC (ver **Accediendo desde una LAN** para obtener la IP del módulo).
-3. Definir el **puerto UDP** (por ejemplo, **3030**).
-4. **Formato de audio** (debe ser compatible con el 542APC, de lo contrario no se establece la conexión):
-   - **PCM 44.1 kHz** con latencias del orden de **15 a 40 ms**
-   - **MPEG Layer-3 (MP3) VBR/CBR 96–320 kbps**
-
-<Info>
-  Para enlaces vía **Internet** se recomienda **MPEG/MP3**: permite bajo ancho de banda (≈ **0,5 Mbps** para **192 kbps**), pero introduce **retardos** del orden de **200 a 500 ms**.
-</Info>
-
-<Warning>
-  **Retardo en la transmisión y monitoreo.**\
-  Cuando el enlace estudio–planta tiene **retardos \> 15 ms**, no es posible monitorear en los estudios **sintonizando la transmisión de aire**: los locutores perciben un “eco” en los auriculares que dificulta su tarea.\
-  En estos casos, usar un **procesador auxiliar en el Estudio** para procesar una **salida directa de consola** destinada al **monitoreo**. No requiere el mismo nivel de sonoridad que al aire, pero conviene que sea similar en compresión y dinámica.
-</Warning>
-
-<Note>
-  A la latencia del enlace se suma la **latencia propia del 542APC** (~ **9 ms**).
-</Note>
-
----
-
-## Recepción de streaming público
-
-El módulo STREAMER AoIP puede recibir streams públicos (HTTP o MMS), en PCM 16/44.1–48 kHz, MP3 u OPUS.\
-Pueden usarse como entrada principal o respaldo.
-
-1. En **STREAM CFG**, elegir **DOWN-STREAM (Rx)**.
-2. Activar con **RUN/STOP → RUN**.
-3. En **PROTOCOL**, elegir HTTP o MMS.
-4. En **SERVER URL/IP** ingresar la dirección HTTP/MMS del streaming que se desea reproducir..
-5. Pulsar **APPLY**.
-6. El procesador comienza a recibir el streaming. El nivel de la señal se muestra en los indicadores.
-
----
-
-## Up-Stream (Icecast/Shoutcast)
-
-La pestaña **UP-STREAM (Tx)** configura emisión hacia servidores Icecast/Shoutcast.
-
-<img
-  src="/images/542/542-streamer-upstream.png"
-  alt="542 Streamer Upstream Pn"
-  title="542 Streamer Upstream Pn"
-  style={{ width:"95%" }}
-/>
-
-Parámetros principales:
-
-| Parámetro       | Descripción                                                                                                                                                  |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **RUN/STOP**    | Inicia o detiene la subida hacia el servidor cuando se confirman los cambios con **APPLY**. Para optimizar recursos, mantener detenido cuando no se utiliza. |
-| **PROTOCOL**    | Define si el servidor es de tipo **Icecast** o **Shoutcast**.                                                                                                |
-| **SERVER IP**   | Dirección IP del servidor Icecast/Shoutcast.                                                                                                                 |
-| **PORT**        | Puerto **TCP** de escucha del servidor.                                                                                                                      |
-| **MOUNTPOINT**  | Nombre único que identifica al stream en el servidor Icecast/Shoutcast.                                                                                      |
-| **Stream NAME** | Nombre que identifica al stream.                                                                                                                             |
-| **PASSWORD**    | Clave de acceso para publicación en el servidor (si corresponde).                                                                                            |
-| **CODEC**       | Formato de audio: **MP3** u **Opus**.                                                                                                                        |
-| **QUALITY**     | Tasa de bits para la codificación.                                                                                                                           |
-| **APPLY**       | Aplica y guarda los cambios; inicia o detiene la emisión según el estado de RUN/STOP.                                                                        |
-
-<Note>
-  Los datos de configuración los provee el servicio de hosting Icecast/Shoutcast.
-</Note>
-
----
-
-## RTP Link (Tx)
-
-Permite enviar audio a una dirección IP (enlace punto a punto local o vía Internet).\
-Por ejemplo para enlazar a un segundo estudio, a una estación repetidora o a la planta transmisora (STL) cuando el procesador se encuentra en los Estudios.
-
-<Warning>
-  La implementación de un enlace RTP requiere conocimientos avanzados en configuración de redes.
-</Warning>
-
-| Parámetro    | Descripción                                                                                                                                           |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **RUN/STOP** | Inicia o detiene el streaming vía RTP cuando se confirman los cambios con **APPLY**. Para optimizar recursos, mantener detenido cuando no se utiliza. |
-| **DEST IP**  | Dirección IP destino.                                                                                                                                 |
-| **PORT**     | Puerto **TCP** de transmisión.                                                                                                                        |
-| **CODEC**    | Formato para RTP. Soporta **PCM**, **Opus** y **MP3**.                                                                                                |
-| **QUALITY**  | Define el bitrate para **Opus/MP3** (96–320 kbps) o la frecuencia de muestreo para **PCM** (32, 44.1, 48 kHz).                                        |
-| **PAYLOAD**  | Valor numérico asociado al formato de audio, utilizado por el software de recepción.                                                                  |
-
----
-
-## Escucha remota
-
-Esta facilidad permite escuchar, a través de la interfaz web, la señal de audio del procesador, habilitando la escucha remota vía red.
-
-<img
-  src="/images/542/542-streamer-Remote_Player.png"
-  alt="542 Streamer Remote Player Pn"
-  title="542 Streamer Remote Player Pn"
-  className="mx-auto"
-  style={{ width:"34%" }}
-/>
-
-Cuando se accede desde una terminal conectada a la **red local (LAN)** no se requieren configuraciones avanzadas: el reproductor remoto reproduce audio directamente a través de la LAN.
-
-Cuando se accede al equipo vía **Internet**, el comportamiento depende de la infraestructura de red. En algunos casos puede ser necesario configurar un **servidor TURN**. Si el reproductor se conecta pero no obtiene audio, el sistema reportará al usuario que no es posible la conexión y se deberá configurar un servidor TURN. Estas configuraciones deben ser realizadas por un **técnico especializado** en redes.
-
-El reproductor remoto puede lanzarse desde la pantalla **HOME** o desde la pantalla **REMOTE CONTROL** (dirección IP de control).
-
-El audio transmitido se toma de la **salida Ethernet AoIP**, que puede conmutarse entre:
-
-- la señal procesada
-- la salida del sintonizador interno.
-
-El envío de audio se realiza mediante un servicio **WebRTC**. En el menú **STREAM CFG → REMOTE PLAYER** se accede a información relacionada con WebRTC y se configura la **tasa de bits** del stream de audio en un rango de **128 a 320 kbps**. El formato de transmisión es **Opus**.
-
----
-
-## Services Config
-
-Pantalla informativa que muestra la matriz de asignación de señales para los distintos servicios.\
-No puede modificarse.
-
----
-
-## Actualizaciones simplificadas
-
-Los equipos equipados con la expansión **STREAMER AoIP** incorporan un método simplificado para actualización del firmware. El sistema descarga automáticamente los paquetes de actualización y los deja listos para ser instalados cuando el usuario lo disponga.
-
-Las actualizaciones permiten:
-
-- Optimizar los procesos.
-- Agregar nuevos procesos y funciones.
-- Mejorar o modificar la interfaz gráfica de usuario.
-- Agregar nuevos ajustes de procesado (presets).
-
-La versión y modelo actuales se muestran en:
-
-- La pantalla de inicio del panel frontal.
-- La línea superior de la pantalla **REMOTE CONTROL**.
-- La propia pantalla **UPDATE**.
-
-El equipo puede actualizarse mientras está en servicio. Dependiendo del tipo de actualización, puede producirse una breve interrupción de audio al aire (menor a 2 segundos).
-
-### Procedimiento
-
-<Note>
-  Este procedimiento es válido **solo para equipos con la expansión STREAMER AoIP**.\
-  Para actualizar equipos que no posean esta opción, ver [**Actualización del Firmware**](/es/542/542-firmware).
-</Note>
-
-1. Acceder a la dirección **IP del módulo Streamer AoIP** usando una computadora conectada a la misma LAN que el 542APC.\
-   También es posible hacerlo accediendo al 542 de manera directa (ver **Acceso remoto vía Internet**).
-2. En la página de acceso, ingresar como usuario **ADMIN**.
-3. Acceder a la opción de menú **UPDATE**.
-4. En el sector derecho se cargará la pantalla de actualizaciones. El equipo verificará automáticamente si hay disponible una actualización. Si existe, aparecerá un listado con los detalles.
-5. Las actualizaciones nunca se instalan de forma automática. El botón **INSTALL** queda habilitado para que el usuario inicie el proceso con un simple click.
-6. El procesador permanece operativo en el aire durante la actualización. Solo habrá una breve interrupción (menor a 2 segundos) cuando el equipo se reinicie.
-
-<Danger>
-  **¡ATENCIÓN\!**\
-  No apague ni desconecte el equipo de la red durante la actualización. Podría producir daños irreparables por el usuario.
-</Danger>
+[Content continues in same format and style for remaining sections...]

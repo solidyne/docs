@@ -1,14 +1,22 @@
 ---
 title: "PlayList Manager"
-description: "Uso de las listas de reproducción auxiliares"
+description: "Using auxiliary playlists"
 keywords: ["PlayList Manager"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "eee50b3a8518a36b34027c2622d7aa2c18619a5b06daa7a97a422eb5733bd030"
+
 ---
 
-## Listas de reproducción auxiliares
+## Auxiliary playlists
 
-Es posible trabajar con listas de títulos prearmadas (**Playlists**).\
-AUDICOM cuenta con 4 reproductores auxiliares llamados **PlayList Managers**, accesibles desde los botones **PLAYLIST 1** a **PLAYLIST 4** en la barra de herramientas.
+You can work with pre-built title lists (**Playlists**).\
+AUDICOM includes 4 auxiliary players called **PlayList Managers**, accessible from the **PLAYLIST 1** to **PLAYLIST 4** buttons in the toolbar.
 
 <img
   src="/images/audicom/au-playlistmanager.jpg"
@@ -20,87 +28,87 @@ AUDICOM cuenta con 4 reproductores auxiliares llamados **PlayList Managers**, ac
 
 ---
 
-## Creación y carga de listas
+## Creating and loading lists
 
-- Se pueden arrastrar títulos desde cualquier ventana AUDICOM hacia un PlayList Manager.
-- La lista se guarda como archivo `.txt` en la carpeta `\Audicom\PGM`.
-- PlayList Manager soporta listas en formato **.m3u** y **.plt**, editables con **CyberPlay Editor** (opción: _Listas de reproducción_).
+- Titles can be dragged from any AUDICOM window to a PlayList Manager.
+- The list is saved as a `.txt` file in the `\Audicom\PGM` folder.
+- PlayList Manager supports **.m3u** and **.plt** format lists, editable with **CyberPlay Editor** (option: _Playlists_).
 
-### Cómo crear una lista
+### How to create a list
 
-1. Abra un módulo PlayList (o use `[Alt + P]` para PlayList 1).
-2. Arrastre títulos desde **Media Manager**, **InfoMusic**, **Live Assist** o **CyberPlay**.
-3. Ingrese un nombre y pulse **Save**.
+1. Open a PlayList module (or use `[Alt + P]` for PlayList 1).
+2. Drag titles from **Media Manager**, **InfoMusic**, **Live Assist** or **CyberPlay**.
+3. Enter a name and press **Save**.
 
-Las listas se guardan en formato `.txt` en `\Audicom\PGM`.
+Lists are saved in `.txt` format in `\Audicom\PGM`.
 
-### Cómo cargar una lista existente
+### How to load an existing list
 
-- Selecciónela desde el menú desplegable inferior.
-- Para agregar listas externas, cópielas directamente a la carpeta `\Audicom\PGM`.
+- Select it from the bottom dropdown menu.
+- To add external lists, copy them directly to the `\Audicom\PGM` folder.
 
 <Info>
-  Los títulos aparecen en distintos colores según la última fecha de emisión.
+  Titles appear in different colors according to their last air date.
 
-  - Música (Clase = Música en la base de datos): fondo celeste.
-  - Cortes promocionales: fondo amarillo.
+  - Music (Class = Music in database): light blue background.
+  - Promotional cuts: yellow background.
 </Info>
 
-PlayList Manager soporta comandos de programación CyberPlay:
+PlayList Manager supports CyberPlay programming commands:
 
-- Comentarios de texto.
-- Pausas.
-- Instrucciones Meteor.\
-  Estos se insertan desde el menú de clic derecho.
+- Text comments.
+- Pauses.
+- Meteor instructions.\
+  These are inserted from the right-click menu.
 
 ---
 
-## Escucha previa
+## Preview listening
 
-- Doble clic sobre un título o botón **CUE** → reproducción en canal de monitoreo previo.
-- Botón **StopCUE** → detiene la reproducción.
-- Si se activa el modo **CUE** desde el display (doble clic a la izquierda del contador):
-  - El audio no se reporta en RDS/iRDS.
-  - Tampoco queda registrado en los archivos `.air`.
+- Double click on a title or **CUE** button → playback on preview monitoring channel.
+- **StopCUE** button → stops playback.
+- If **CUE** mode is activated from the display (double click to the left of the counter):
+  - Audio is not reported on RDS/iRDS.
+  - It is not logged in `.air` files either.
 
 <Warning>
-  Este modo no se recomienda en la práctica, pero algunos operadores lo usan para trabajar directamente con el CUE de la consola, tratando cada PlayList Manager como un reproductor independiente.
+  This mode is not recommended in practice, but some operators use it to work directly with the console's CUE, treating each PlayList Manager as an independent player.
 </Warning>
 
 ---
 
-## Emisión del contenido
+## Content broadcasting
 
-Cada PlayList Manager puede asignarse a un dispositivo de audio distinto, definido en el **Panel de Configuración**, para enrutarlo a diferentes canales de la consola de mezcla.
+Each PlayList Manager can be assigned to a different audio device, defined in the **Configuration Panel**, to route it to different channels of the mixing console.
 
-- Para enviar un título al aire: selecciónelo y pulse **Play**.
-- Modo normal: al finalizar, la reproducción se detiene.
-- Modo continuo: reproduce todos los títulos uno tras otro.
-  - Se pueden insertar pausas desde el menú de clic derecho.
+- To send a title on air: select it and press **Play**.
+- Normal mode: playback stops when finished.
+- Continuous mode: plays all titles one after another.
+  - Pauses can be inserted from the right-click menu.
 
-### Controles de reproducción
+### Playback controls
 
-- Barra de progreso: permite moverse dentro del archivo (clic izquierdo).
-- Control deslizante: ajusta la velocidad (**Pitch**) ±5%.
-- Botón **Insert**: inserta todo el listado en CyberPlay, encima del cursor amarillo.
-  - Los títulos se distribuyen respetando los bloques comerciales.
-- Inserción individual: arrastre un título hacia la ventana CyberPlay.
+- Progress bar: allows moving within the file (left click).
+- Slider control: adjusts speed (**Pitch**) ±5%.
+- **Insert** button: inserts the entire list into CyberPlay, above the yellow cursor.
+  - Titles are distributed respecting commercial blocks.
+- Individual insertion: drag a title to the CyberPlay window.
 
 <Note>
-  - Si no hay ítem seleccionado en CyberPlay, el listado no se inserta.
-  - La ventana de comentarios mostrará: _Defina el punto de inserción_.
+  - If no item is selected in CyberPlay, the list will not be inserted.
+  - The comments window will show: _Define insertion point_.
 </Note>
 
 ---
 
-## Restricciones de duración
+## Duration restrictions
 
 <Danger>
-  Si un PlayList excede la duración del bloque de programa, **solo se insertarán los títulos que entren hasta la finalización del bloque**.\
-  No se extiende al programa siguiente.
+  If a PlayList exceeds the program block duration, **only titles that fit until the block ends will be inserted**.\
+  It does not extend to the next program.
 </Danger>
 
-Ejemplo:
+Example:
 
-- Inserta un PlayList de 1 hora a las 17:30 en un bloque en vivo que finaliza a las 18:00.
-- Solo se insertarán los títulos hasta las 18:00 hs.
+- Inserting a 1-hour PlayList at 17:30 in a live block ending at 18:00.
+- Only titles up to 18:00 will be inserted.

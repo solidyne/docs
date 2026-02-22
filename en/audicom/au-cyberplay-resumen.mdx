@@ -1,120 +1,128 @@
 ---
-description: "Descripción general del reproductor principal de Audicom"
-title: "CyberPlay: grilla principal de contenidos"
+description: "Overview of Audicom's main player"
+title: "CyberPlay: Main Content Grid"
 keywords: ["CyberPlay"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f780be5a0d07446ef32ce751bd19ec5c41a6ae5f07835c2fe6c3674323ff80e3"
+
 ---
 
-## Conceptos generales
+## General Concepts
 
-El **CyberPlay** crea automáticamente el listado de eventos de la radio para cada día, con sus horarios exactos.
+**CyberPlay** automatically creates the radio's daily event schedule with exact timing.
 
 <img
   src="/images/audicom/au-screen-cyberplay.png"
-  alt="AUDICOM Pantalla Cyberplay"
-  title="AUDICOM Pantalla Cyberplay"
+  alt="AUDICOM CyberPlay Screen"
+  title="AUDICOM CyberPlay Screen"
   className="mx-auto"
   style={{ width:"37%" }}
 />
 
-- La ventana muestra la **grilla de programación completa de 00:00 a 24:00 hs**, incluyendo todos los eventos, no solo los que intervienen en la computadora.
-- Se respetan los bloques de la programación tradicional: en vivo, noticias, informativos, conexiones remotas, etc.
+- The window displays the **complete programming grid from 00:00 to 24:00**, including all events, not just computer-controlled ones.
+- Traditional programming blocks are preserved: live shows, news, reports, remote connections, etc.
 
-CyberPlay puede operar en:
+CyberPlay can operate in:
 
-- Modo **tandero**, gestionando solo los bloques comerciales.
-- Modo completo, basado en la **grilla de programación PGM**.
+- **Commercial break** mode, managing only advertising blocks.
+- Full mode, based on the **PGM programming grid**.
 
-Para generar la programación anual (365 días) solo se requieren **7 plantillas**, una por cada día de la semana.
+To generate a full year of programming (365 days), only **7 templates** are required, one for each day of the week.
 
-- Estas se crean con comandos simples desde el módulo **CyberPlay Editor**.
-- También pueden definirse plantillas para días especiales.
+- These are created using simple commands in the **CyberPlay Editor** module.
+- Special day templates can also be defined.
 
-El módulo de Tráfico de AUDICOM crea diariamente un listado de tandas comerciales con el formato:\
-`AAMMDD.LOG` (Año, Mes, Día).
+AUDICOM's Traffic module creates a daily commercial break list in the format:\
+`YYMMDD.LOG` (Year, Month, Day).
 
-CyberPlay une y presenta en pantalla ambos listados (comerciales y de programación), mostrándolos como una lista única.
+CyberPlay merges and displays both lists (commercials and programming) as a single unified list.
 
 <Note>
-  CyberPlay carga los archivos **LOG** y **PGM** a las 18:00 hs de cada día.\
-  Este horario puede modificarse desde el Panel de Configuración.
+  CyberPlay loads the **LOG** and **PGM** files at 18:00 each day.\
+  This time can be modified from the Configuration Panel.
 </Note>
 
-La ventana CyberPlay muestra la programación del día actual, del anterior y del siguiente.
+The CyberPlay window shows programming for the current day, previous day, and next day.
 
-- La lista se recorre con la barra de desplazamiento (scroll).
+- The list can be navigated using the scroll bar.
 
-### Identificación por colores
+### Color Identification
 
-Los distintos contenidos se diferencian en pantalla mediante colores:
+Different content types are distinguished on screen by colors:
 
-- **Verde**: tanda comercial
-- **Amarillo**: bloque en vivo
-- **Azul**: bloque AutoDJ
-- **Rosa**: enlace remoto (satélite o Internet)
-- **Violeta**: Exacttime
-- **Negro**: pausa (punto de detención)
+- **Green**: commercial break
+- **Yellow**: live block
+- **Blue**: AutoDJ block
+- **Pink**: remote link (satellite or Internet)
+- **Purple**: Exacttime
+- **Black**: pause (stop point)
 
-### Identificación de horarios
+### Time Identification
 
-- Horas pares: fondo gris claro.
-- Horas impares: fondo gris oscuro.
-- Día anterior: horas en azul.
-- Día actual: horas en negro.
-- Día siguiente: horas en rojo.
+- Even hours: light gray background
+- Odd hours: dark gray background
+- Previous day: hours in blue
+- Current day: hours in black
+- Next day: hours in red
 
-### Cursor de reproducción
+### Playback Cursor
 
-- Línea roja indica el título en reproducción.
-- Títulos ya emitidos aparecen en gris.
-- El cursor tiene centrado automático, volviendo a pantalla si queda oculto.
-- Si se selecciona un ítem, el cursor cambia a amarillo y el centrado se suspende temporalmente por 1 minuto.
-- Una flecha sobre la barra vertical indica si el título reproducido está fuera de la vista.
+- Red line indicates the title currently playing
+- Played titles appear in gray
+- Cursor has automatic centering, returning to screen if hidden
+- If an item is selected, cursor changes to yellow and centering is temporarily suspended for 1 minute
+- An arrow on the vertical bar indicates if the playing title is out of view
 
-  Al pulsar la flecha, se fuerza el centrado del título en reproducción.
+  Clicking the arrow forces centering on the playing title.
 
 ---
 
-## Bloques comerciales
+## Commercial Blocks
 
-Contienen publicidades. Cada bloque equivale a una tanda comercial.
+Contains advertisements. Each block equals one commercial break.
 
-Ejemplo de bloque:
+Block example:
 
 <img
   src="/images/audicom/au-screen-spots.png"
-  alt="Bloque comerciales"
-  title="Bloque comerciales"
+  alt="Commercial block"
+  title="Commercial block"
   className="mx-auto"
   style={{ width:"59%" }}
 />
 
 ```
-00:00    				Horario de salida al aire
-SF5     			 	Flexibilidad de horario de la tanda
-Spot1; Spot2; Spot3  	Archivos de avisos comerciales
-Meteor: Time         	Comando especial que anuncia la hora actual
+00:00    				Air time
+SF5     			 	Break time flexibility
+Spot1; Spot2; Spot3  	Commercial spot files
+Meteor: Time         	Special command that announces current time
 ```
 
 ---
 
-## Bloques de programa
+## Program Blocks
 
-Corresponden a los contenidos de la radio:
+Correspond to radio content:
 
-- Shows en vivo
-- Programación musical automática (**AutoDJ**)
-- Enlaces remotos (satélite o Internet)
+- Live shows
+- Automated music programming (**AutoDJ**)
+- Remote links (satellite or Internet)
 
-Ejemplo de encabezado de bloque:
+Block header example:
 
 ```
-[Live]                  Tipo de bloque
-18:00-18:00             Inicio y fin del bloque
-<no title>              Nombre del bloque (sin título en este caso)
-Program Length: ...     Duración del programa
+[Live]                  Block type
+18:00-18:00             Start and end time
+<no title>              Block name (untitled in this case)
+Program Length: ...     Program duration
 ```
 
 <Info>
-  Para más información sobre cómo organizar la programación, consulte el capítulo **Pauta de Programación**.
+  For more information about organizing programming, see the **Programming Schedule** chapter.
 </Info>

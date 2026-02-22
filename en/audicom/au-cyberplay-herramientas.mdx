@@ -1,108 +1,116 @@
 ---
-title: "CyberPlay: Barra de herramientas"
-description: "Funciones de la barra de herameintas de CyberPlay"
-keywords: ["cyberplay","herramientas"]
+title: "CyberPlay: Toolbar"
+description: "CyberPlay toolbar functions"
+keywords: ["cyberplay","tools"]
 tags: "Software,Audicom"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "7850265946f3b230d09c80835d584a9b656278c3e22c79742e722be579b52265"
+
 ---
 
 ### Load PGM ON/OFF
 
-- Con **Load PGM** activado (valor por defecto), CyberPlay arma la programación final usando las pautas creadas en **CyberPlay Editor** (`.pgm`).
-- Si **Load PGM** está desactivado, CyberPlay ignora los archivos `.pgm` y utiliza únicamente las tandas comerciales.
+- With **Load PGM** enabled (default), CyberPlay builds the final schedule using program guides created in **CyberPlay Editor** (`.pgm`).
+- If **Load PGM** is disabled, CyberPlay ignores `.pgm` files and uses only commercial breaks.
 
-  El operador puede insertar contenidos entre tandas o usar **Playlist Manager**.
-
-<Note>
-  En el Panel de Configuración puede habilitarse que AUDICOM elimine automáticamente las **pausas** al final de cada bloque comercial.
-</Note>
-
-### Reload: cambios en la pauta de programación
-
-- CyberPlay carga automáticamente los archivos de programación cada día.
-- La carga diaria de **LOG** y **PGM** se hace a las **18:00 hs** (configurable en Panel de Configuración).
-- Se puede **recargar manualmente** la programación en caso de cambios de último momento.
-
-Casos en que debe usarse Reload:
-
-- Modificación de la pauta del día en curso.
-- Modificación de la pauta del día siguiente después de la hora de recarga automática.
-
-Modo de uso:
-
-- El operador presiona **RELOAD** o usa el atajo `[Alt + R]`.
-- Durante la recarga:
-  - El título actual sigue sonando, pero desaparece de la ventana CyberPlay.
-  - Al finalizar, el cursor verde se ubica en el ítem más conveniente según la hora.
-  - El operador puede:
-
-    Forzar inicio con Play.
-
-    No intervenir: el sistema continuará con la nueva programación tras el título en curso.
+  The operator can insert content between breaks or use **Playlist Manager**.
 
 <Note>
-  - Si se modifica el **LOG**, el botón RELOAD destella indicando cambio.
-  - Si se modifica un **PGM** o un LOG del día siguiente, el sistema no avisa: se debe **notificar al operador** para que recargue.
-  - También es posible recargar un solo archivo (LOG o PGM) con doble clic en el display de CyberPlay en el campo correspondiente.
+  The Configuration Panel allows enabling automatic removal of **pauses** at the end of each commercial block.
 </Note>
 
-### Save Log y autoLog
+### Reload: Changes in Programming Schedule
 
-- Los cambios en bloques comerciales se guardan automáticamente en el archivo **LOG** (función _autoLog_).
-- AutoLog **no guarda** cambios si:
-  - El usuario no está habilitado para modificar tandas.
-  - El LOG fue modificado externamente y está activa la alarma (botón Reload destellando).
+- CyberPlay automatically loads programming files daily.
+- Daily loading of **LOG** and **PGM** occurs at **18:00** (configurable in Configuration Panel).
+- Programming can be **manually reloaded** for last-minute changes.
 
-El botón **Save LOG** permite guardar manualmente:
+Cases when Reload should be used:
 
-- Incluso si el archivo fue modificado externamente.
-- No funcionará si el usuario no tiene permisos.
-- Solicita confirmación antes de sobrescribir.
+- Modifications to current day's schedule.
+- Changes to next day's schedule after automatic reload time.
 
-### Botón Next Title `[Enter]`
+Usage:
 
-- Selecciona el título marcado con cursor amarillo como **próximo título** (cursor verde).
-- Si no hay título seleccionado, el próximo será el que está debajo del cursor rojo (en reproducción).
-- Se puede seleccionar con doble clic en la zona de horarios (columna izquierda).
-  - Doble clic en la zona de color reproduce en **CUE**.
+- Operator presses **RELOAD** or uses shortcut `[Alt + R]`.
+- During reload:
+  - Current title continues playing but disappears from CyberPlay window.
+  - When finished, green cursor positions at most appropriate item based on time.
+  - Operator can:
+
+    Force start with Play.
+
+    Take no action: system will continue with new schedule after current title.
+
+<Note>
+  - If **LOG** is modified, RELOAD button flashes indicating change.
+  - If a **PGM** or next day's LOG is modified, system doesn't notify: operator must be **informed** to reload.
+  - Individual files (LOG or PGM) can also be reloaded by double-clicking corresponding field in CyberPlay display.
+</Note>
+
+### Save Log and autoLog
+
+- Changes to commercial blocks are automatically saved to **LOG** file (_autoLog_ function).
+- AutoLog **does not save** changes if:
+  - User is not authorized to modify breaks.
+  - LOG was externally modified and alarm is active (Reload button flashing).
+
+The **Save LOG** button allows manual saving:
+
+- Even if file was externally modified.
+- Won't work if user lacks permissions.
+- Requests confirmation before overwriting.
+
+### Next Title Button `[Enter]`
+
+- Selects title marked with yellow cursor as **next title** (green cursor).
+- If no title selected, next will be the one below red cursor (currently playing).
+- Can be selected by double-clicking time area (left column).
+  - Double-clicking colored area plays in **CUE**.
 
 ### Insert AutoDJ
 
-Inserta un bloque de **AutoDJ** en la programación.
+Inserts an **AutoDJ** block into programming.
 
-- El usuario define **formato**, hora de inicio y finalización.
-- Las tandas comerciales incluidas en el rango se mantienen intactas.
+- User defines **format**, start and end time.
+- Commercial breaks within range remain intact.
 
-### Mix `[Asterisco]`
+### Mix `[Asterisk]`
 
-Controla la atenuación de CyberPlay cuando otro módulo (ej. Live Assist) reproduce sobre la misma salida.
+Controls CyberPlay attenuation when another module (e.g. Live Assist) plays on same output.
 
-- Valores disponibles: **100%, 50%, 25%, 10%** (se alternan presionando el botón).
-- En reproducción de video:
-  - La atenuación afecta solo al audio del video.
-  - Si otro módulo también reproduce video, solo el audio se mezcla.
+- Available values: **100%, 50%, 25%, 10%** (toggle by pressing button).
+- During video playback:
+  - Attenuation affects only video audio.
+  - If another module also plays video, only audio is mixed.
 
-### Opciones del menú de clic derecho
+### Right-click Menu Options
 
-Al presionar botón derecho sobre un título aparecen estas opciones:
+Right-clicking a title shows these options:
 
-- **CUE**: reproducción en previo.
-- **CUE End**: reproduce los últimos 5 segundos.
-- **Play**: comienza reproducción respetando crossfade en temas musicales.
-- **Stop**: detiene reproducción.
-- **Fade & Play**: atenúa el audio actual e inicia el siguiente.
-- **Fade & Stop**: atenúa el audio actual y lo detiene.
-- **InfoMusic**: carga el título en InfoMusic (solo si está en la base de datos).
-- **Internet…**: abre navegador para buscar información del título.
-- **Copy TANDA**: copia el contenido de una tanda.
-- **Insert TANDA**: inserta tanda vacía.
-- **Insert Meteor**: inserta instrucción Meteor.
-- **Insert Pause**: inserta pausa encima del título seleccionado.
-- **Insert Random**: selecciona aleatoriamente un audio desde una carpeta definida.
-- **Remove**: elimina el ítem de la programación.
-- **Remove all equal**: elimina todas las instancias de ese ítem.
+- **CUE**: preview playback.
+- **CUE End**: plays last 5 seconds.
+- **Play**: starts playback respecting crossfade in music tracks.
+- **Stop**: stops playback.
+- **Fade & Play**: fades current audio and starts next.
+- **Fade & Stop**: fades and stops current audio.
+- **InfoMusic**: loads title in InfoMusic (only if in database).
+- **Internet...**: opens browser to search title information.
+- **Copy TANDA**: copies commercial break content.
+- **Insert TANDA**: inserts empty break.
+- **Insert Meteor**: inserts Meteor instruction.
+- **Insert Pause**: inserts pause above selected title.
+- **Insert Random**: randomly selects audio from defined folder.
+- **Remove**: deletes item from schedule.
+- **Remove all equal**: removes all instances of that item.
 
 <Danger>
-  Algunas operaciones pueden estar restringidas según el perfil de usuario.\
-  Si intenta una acción prohibida, aparecerá un mensaje emergente indicando falta de permisos.\
-  Ante dudas, consulte al administrador de red o responsable técnico.
+  Some operations may be restricted based on user profile.\
+  If attempting a prohibited action, a popup message will indicate insufficient permissions.\
+  For questions, consult network administrator or technical support.
 </Danger>

@@ -1,163 +1,171 @@
 ---
-title: "CyberPlay Editor: uso y funcionalidades"
-description: "Uso de CyberPlay Editor"
-keywords: ["CyberPlay Editor", "operación"]
+title: "CyberPlay Editor: Usage and Features"
+description: "Using CyberPlay Editor"
+keywords: ["CyberPlay Editor", "operation"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "6e7b4306129e448874f11dd8c79726a59cb820c30aaf9b5fea21dccbd9d50506"
+
 ---
 
-## Cargar y guardar archivos
+## Loading and Saving Files
 
-### Carga individual de archivos LOG / PGM
+### Individual Loading of LOG / PGM Files
 
-Este procedimiento aplica tanto a las ventanas **LOG** como **PGM**.\
-Permite cargar archivos de forma individual, aunque también es posible cargarlos en conjunto (ver apartado siguiente).
+This procedure applies to both **LOG** and **PGM** windows.\
+It allows loading files individually, although they can also be loaded together (see next section).
 
-Al pulsar el botón de carga aparece una ventana con menús desplegables para elegir:\
-**Día – Día de la semana – Mes – Año**.\
-También es posible seleccionar un archivo directamente desde la lista a la derecha.
+When pressing the load button, a window appears with dropdown menus to select:\
+**Day – Day of the week – Month – Year**.\
+You can also select a file directly from the list on the right.
 
 <Info>
-  El nombre de los archivos corresponde siempre a la fecha para la que fueron generados, según lo explicado en la sección anterior.
+  File names always correspond to the date for which they were generated, as explained in the previous section.
 </Info>
 
 ---
 
-## Carga de la programación completa por fecha
+## Loading Complete Programming by Date
 
-Cuando se abre el **CyberPlay Editor**, automáticamente se cargan los archivos de **tandas comerciales** y **bloques de programa** correspondientes al **día corriente**.
+When **CyberPlay Editor** opens, it automatically loads the **commercial breaks** and **program blocks** files for the **current day**.
 
-El botón de **carga por fecha** permite seleccionar simultáneamente los archivos **LOG** y **PGM** para una fecha determinada.
+The **load by date** button allows simultaneous selection of **LOG** and **PGM** files for a specific date.
 
 <Steps>
-  <Step title="Cargar programación por fecha">
-    Pulse el botón correspondiente y seleccione la fecha en el almanaque.\
-    Confirme con **OK**.
+  <Step title="Load programming by date">
+    Click the corresponding button and select the date in the calendar.\
+    Confirm with **OK**.
   </Step>
-  <Step title="Resultado">
-    CyberPlay Editor cargará los archivos LOG y PGM siguiendo el orden de prioridad explicado en la sección anterior.\
-    Luego generará una **previsualización gráfica** en la ventana **Test CyberPlay**.
+  <Step title="Result">
+    CyberPlay Editor will load LOG and PGM files following the priority order explained in the previous section.\
+    It will then generate a **graphical preview** in the **Test CyberPlay** window.
   </Step>
-  <Step title="Edición posterior">
-    Una vez cargados, los archivos LOG y PGM pueden editarse y guardarse en forma independiente.
+  <Step title="Subsequent editing">
+    Once loaded, LOG and PGM files can be edited and saved independently.
   </Step>
 </Steps>
 
 ---
 
-## Guardar archivo LOG / PGM
+## Saving LOG / PGM Files
 
-Presionando este botón se guardan los cambios realizados sobre un archivo LOG o PGM.\
-La ventana de guardado es similar a la utilizada para cargar archivos.
+Pressing this button saves changes made to a LOG or PGM file.\
+The save window is similar to the one used for loading files.
 
-- Para crear un **nuevo archivo**, ingrese un nombre y pulse **OK**.
-- Si el nombre no existe, se creará un archivo nuevo para la fecha indicada.
-- Si ya existe, se mostrará un cuadro de diálogo para confirmar el reemplazo. Aceptando, se sobrescribe el archivo anterior.
+- To create a **new file**, enter a name and press **OK**.
+- If the name doesn't exist, a new file will be created for the specified date.
+- If it already exists, a dialog box will appear to confirm replacement. Accepting will overwrite the previous file.
 
 <Note>
-  El campo **Año** siempre muestra: el año anterior y los dos años posteriores al actual.\
-  AUDICOM incluye **archivos de ejemplo** (7 LOG y 7 PGM), que conviene borrar para evitar que interfieran en la programación real.
+  The **Year** field always shows: the previous year and the two years following the current year.\
+  AUDICOM includes **sample files** (7 LOG and 7 PGM), which should be deleted to avoid interference with actual programming.
 </Note>
 
 ---
 
-## PlayLists – Listados de títulos
+## PlayLists – Title Lists
 
-Dentro de la ventana **Guardar PGM** existe un botón específico para guardar **PlayLists**, es decir, listados de títulos en formato **TXT** que pueden insertarse en la pauta de programación de aire.
+Within the **Save PGM** window, there is a specific button for saving **PlayLists**, which are title lists in **TXT** format that can be inserted into the on-air programming schedule.
 
-- Al pulsar el botón, aparece un cuadro para ingresar el nombre del **PlayList**.
-- Ese nombre será el que mostrará el **PlayList Manager**, encargado de administrar estas listas en el módulo de Aire.
-- Los PlayLists se guardan siempre en la carpeta **PGM**.
+- When pressing the button, a box appears to enter the **PlayList** name.
+- This name will be displayed by the **PlayList Manager**, which manages these lists in the On-Air module.
+- PlayLists are always saved in the **PGM** folder.
 
-Al marcar el casillero **Mostrar solo PlayList**, la ventana mostrará únicamente este tipo de archivos.
+When checking the **Show PlayList only** box, the window will display only this type of files.
 
 <Info>
-  Las listas de reproducción también pueden ser creadas directamente por los operadores desde la pantalla de Aire, mediante el **PlayList Manager**.
+  Playlists can also be created directly by operators from the On-Air screen using the **PlayList Manager**.
 </Info>
 
 ---
 
-## Ingreso de títulos en las ventanas LOG y PGM
+## Entering Titles in LOG and PGM Windows
 
-Existen tres formas de ingresar títulos en las ventanas de edición **LOG** y **PGM**:
+There are three ways to enter titles in the **LOG** and **PGM** editing windows:
 
-- **Tipeo manual** (escribiendo directamente).
-- **Drag & Drop** desde **File Manager**.
-- **Drag & Drop** desde **InfoMusic**.
-
----
-
-## Test de programación (F9)
-
-La ventana de **previsualización CyberPlay** muestra gráficamente cómo queda organizada la **pauta de programación**.
-
-- Al presionar **Test**, se genera el gráfico en base a los comandos introducidos en **LOG** y **PGM**.
-- El gráfico simula lo que verá el **operador de Aire**.
-- Simultáneamente, se realiza una **validación** de la programación, y los resultados se muestran en la ventana **ESTADO (STATUS)** debajo de LOG y PGM.
+- **Manual typing** (writing directly).
+- **Drag & Drop** from **File Manager**.
+- **Drag & Drop** from **InfoMusic**.
 
 ---
 
-### Ventana Test-CyberPlay
+## Programming Test (F9)
 
-La ventana **Test-CyberPlay** permite **verificar y modificar** los comandos ingresados.
+The **CyberPlay preview** window graphically shows how the **programming schedule** is organized.
 
-Al presionar **TEST**, se verifican los siguientes aspectos:
-
-- **Archivos programados**:
-  - Si un título no corresponde a ningún archivo, aparece en **ROJO**.
-  - En el módulo de Aire, ese archivo será **ignorado**, marcado como error, y la reproducción continuará con el siguiente.
-- **Formatos AutoDJ**:
-  - Se valida la existencia de los formatos asignados.
-  - Si un formato es inexistente, aparece en **ESTADO** y debe corregirse desde PGM.
-  - Si no se corrige, el bloque se armará con el formato **Default**, que incluye todos los estilos disponibles en la Base de Datos.
-
-### Escucha de títulos en programación
-
-Desde la **Terminal de Programación** (requiere placa de sonido instalada):
-
-- Seleccione un título en la ventana **CyberPlay**.
-- Presione **PLAY** para escucharlo en previo.
+- When pressing **Test**, the graph is generated based on commands entered in **LOG** and **PGM**.
+- The graph simulates what the **On-Air operator** will see.
+- Simultaneously, a **validation** of the programming is performed, and results are shown in the **STATUS** window below LOG and PGM.
 
 ---
 
-## Cambiar la pauta desde la ventana de previsualización
+### Test-CyberPlay Window
 
-La **ventana de previsualización** permite modificar directamente varios aspectos de la **pauta de programación**.
+The **Test-CyberPlay** window allows you to **verify and modify** entered commands.
 
-- **Clic derecho sobre un ítem** abre un menú con las siguientes opciones:
-  - **PLAY / STOP** → Controles de reproducción (si el ítem es un archivo de audio).
-  - **INSERT METEOR** → Inserta una instrucción **METEOR** encima del ítem seleccionado.
-  - **INSERT PAUSE** → Inserta una **PAUSA** encima del ítem seleccionado.
-  - **REMOVE** → Elimina el ítem seleccionado.
-    - En el caso de un **aviso comercial**, se elimina **solo esa ocurrencia**.
-    - Para eliminar **todas las ocurrencias** del aviso, debe usarse **Magic Programming** (próximamente esta función estará disponible también en el menú contextual).
-    - No es posible borrar bloques completos desde este menú.
-- Cada cambio realizado en la ventana de previsualización genera automáticamente el **código correspondiente** en la ventana **LOG** o **PGM** (según corresponda).
-- **Doble clic** sobre un ítem en CyberPlay muestra la **línea de código** que lo genera en la ventana de instrucciones correspondiente.
+When pressing **TEST**, the following aspects are verified:
 
-### Cambiar posición de los archivos
+- **Scheduled files**:
+  - If a title doesn't correspond to any file, it appears in **RED**.
+  - In the On-Air module, that file will be **ignored**, marked as error, and playback will continue with the next one.
+- **AutoDJ Formats**:
+  - The existence of assigned formats is validated.
+  - If a format doesn't exist, it appears in **STATUS** and must be corrected from PGM.
+  - If not corrected, the block will be built with the **Default** format, which includes all styles available in the Database.
 
-Es posible **reordenar los archivos pautados**:
+### Listening to Scheduled Titles
 
-- Haga clic sobre un título y arrástrelo hacia arriba o hacia abajo.
-- También es posible arrastrar **pausas** o **comandos Meteor**.
-- **No se pueden mover tandas ni bloques de programa**.
+From the **Programming Terminal** (requires installed sound card):
 
-Para cambiar la **hora de inicio o fin** de un bloque:
+- Select a title in the **CyberPlay** window.
+- Press **PLAY** to preview it.
 
-- Doble clic sobre el **encabezado del bloque** → se muestra el código en LOG o PGM.
-- Edite directamente la línea de código con la hora deseada.
+---
+
+## Changing the Schedule from the Preview Window
+
+The **preview window** allows direct modification of various aspects of the **programming schedule**.
+
+- **Right-click on an item** opens a menu with the following options:
+  - **PLAY / STOP** → Playback controls (if the item is an audio file).
+  - **INSERT METEOR** → Inserts a **METEOR** instruction above the selected item.
+  - **INSERT PAUSE** → Inserts a **PAUSE** above the selected item.
+  - **REMOVE** → Removes the selected item.
+    - For a **commercial spot**, only **that occurrence** is removed.
+    - To remove **all occurrences** of the spot, use **Magic Programming** (this function will soon be available in the context menu as well).
+    - Complete blocks cannot be deleted from this menu.
+- Each change made in the preview window automatically generates the **corresponding code** in the **LOG** or **PGM** window (as appropriate).
+- **Double-click** on an item in CyberPlay shows the **code line** that generates it in the corresponding instructions window.
+
+### Changing File Positions
+
+You can **reorder scheduled files**:
+
+- Click on a title and drag it up or down.
+- You can also drag **pauses** or **Meteor commands**.
+- **Commercial breaks and program blocks cannot be moved**.
+
+To change the **start or end time** of a block:
+
+- Double-click on the **block header** → the code is shown in LOG or PGM.
+- Directly edit the code line with the desired time.
 
 <Warning>
-  Verifique siempre visualmente la programación.\
-  Errores como **superposición de horarios**, **baches**, o **títulos inexistentes** deben corregirse.\
-  De lo contrario, la programación en el **Módulo de Aire** resultará errónea.
+  Always visually verify the programming.\
+  Errors such as **time overlaps**, **gaps**, or **non-existent titles** must be corrected.\
+  Otherwise, programming in the **On-Air Module** will be incorrect.
 </Warning>
 
 ---
 
-## Múltiples terminales de Aire
+## Multiple On-Air Terminals
 
-Desde una **terminal de Producción** es posible **navegar y operar** sobre cualquiera de las terminales de la red. Esto es útil cuando hay más de una terminal de Aire activa, ya que permite gestionar la programación de una u otra.
+From a **Production terminal**, you can **navigate and operate** on any of the network terminals. This is useful when there are multiple active On-Air terminals, as it allows managing the programming of either one.
 
 <img
   src="/images/audicom/au-cpeditor-terminales.jpg"
@@ -167,13 +175,13 @@ Desde una **terminal de Producción** es posible **navegar y operar** sobre cual
   style={{ width:"58%" }}
 />
 
-- En el menú desplegable **“Terminal actual”** aparecen todas las terminales disponibles.
-- El valor **“Default host”** apunta siempre a la **terminal local**, salvo que el administrador redefina la configuración predeterminada en `audicom.ini`.
-- Si selecciona una **terminal de Aire**, se mostrarán los **archivos de programación** de esa terminal, permitiendo trabajar directamente sobre sus **LOG/PGM**.
+- The **"Current terminal"** dropdown menu shows all available terminals.
+- The **"Default host"** value always points to the **local terminal**, unless the administrator redefines the default configuration in `audicom.ini`.
+- If you select an **On-Air terminal**, its **programming files** will be displayed, allowing you to work directly with its **LOG/PGM**.
 
 <Info>
-  Al desplegar el menú por primera vez, el sistema explora la red en busca de **terminales AUDICOM activas**.\
-  Este proceso puede demorar algunos segundos, pero el resultado queda en memoria, acelerando accesos posteriores.
+  When deploying the menu for the first time, the system scans the network for **active AUDICOM terminals**.\
+  This process may take a few seconds, but the result is stored in memory, speeding up subsequent access.
 </Info>
 
-Para actualizar el listado de terminales disponibles, seleccione la opción **\_update hosts**.
+To update the list of available terminals, select the **\_update hosts** option.

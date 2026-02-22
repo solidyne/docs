@@ -1,133 +1,141 @@
 ---
-title: "Sintonizador y mediciones"
-description: "Sintonizador de FM y monitoreo de la tranmisión"
-keywords: ["sintonizador", "mediciones", "reporte", "recepción", "receptor", "modulación"]
-tags: ["procesadores", "542"]
+title: "Tuner and Measurements"
+description: "FM Tuner and Transmission Monitoring"
+keywords: ["tuner", "measurements", "report", "reception", "receiver", "modulation"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a4dfb5001a375ccb742609013eb300b60241fb3828df140ab7c0abd403118f78"
+
 ---
 
-## Sintonizador de FM
+## FM Tuner
 
-El **sintonizador de FM interno** permite realizar mediciones sobre la onda de radio recibida.\
-Se accede desde el menú lateral del modo SETUP, en la opción **FM RECEIVER – ANALYZER**.
+The **internal FM tuner** enables measurements of the received radio signal.\
+Access it from the SETUP side menu, under **FM RECEIVER – ANALYZER**.
 
-- Usualmente la emisora sintonizada es la misma en la que trabaja el procesador.
-- También puede sintonizarse cualquier otra emisora para visualizar sus valores.
+- Usually the tuned station is the same one where the processor operates.
+- Any other station can also be tuned to view its parameters.
 
-El sintonizador está asociado a un **monitor de modulación**, que muestra en tiempo real distintos aspectos de la transmisión, analizando la señal de RF recibida.
+The tuner is linked to a **modulation monitor** that displays different aspects of the transmission in real-time by analyzing the received RF signal.
 
 <Warning>
-  Las mediciones solo son válidas cuando la estación está correctamente sintonizada.
+  Measurements are only valid when the station is properly tuned.
 
-  - Si el nivel de RF es **menor a 40 dB** o el multipath supera el **10%**, las mediciones **no son válidas**.
-  - En esas condiciones, los campos de datos aparecen oscurecidos.
+  - If RF level is **below 40 dB** or multipath exceeds **10%**, measurements are **not valid**.
+  - Under these conditions, data fields appear dimmed.
 </Warning>
 
-### Controles del sintonizador
+### Tuner Controls
 
-- **ON/OFF** → enciende o apaga el sintonizador de FM.\
-  Si la recepción es muy mala, el equipo lo apaga automáticamente.
-- **FREQ** → ingresar la frecuencia de la emisora (MHz, usar punto decimal, ej. 95.9).
-  - Escribir el valor con el teclado y confirmar con **ENTER**.
-  - Si estaba apagado, el sintonizador se enciende.
+- **ON/OFF** → turns the FM tuner on or off.\
+  If reception is very poor, the unit turns off automatically.
+- **FREQ** → enter the station frequency (MHz, use decimal point, e.g. 95.9).
+  - Type the value using the keyboard and confirm with **ENTER**.
+  - If it was off, the tuner turns on.
 
-### Parámetros de recepción
+### Reception Parameters
 
-- **Reception Quality:** Indicadores de validez de la recepción:
-  - Señalan si la calidad de señal permite mediciones confiables.
-  - En caso contrario, se muestran las variables fuera de rango: _RF low level_, _Multipath_, _Noise_, _Adjacent channel interference_.
-- La calidad de recepción depende de la **antena conectada**.\
-  (Ver sección **Antena receptora de FM**).
-- **RF LEVEL** → nivel de señal RF en la antena. Debe ser \> 40 dB.
-- **Multipath** → porcentaje de distorsión por reflexiones. Debe ser \< 10%.
-- **Band Type** → tipo de banda de FM según la región.
-- **RBDS Mode** → activa el sistema RBDS (versión de RDS utilizada en EE.UU.).
+- **Reception Quality:** Reception validity indicators:
+  - Show if signal quality allows reliable measurements.
+  - Otherwise, out-of-range variables are displayed: _RF low level_, _Multipath_, _Noise_, _Adjacent channel interference_.
+- Reception quality depends on the **connected antenna**.\
+  (See **FM Receiver Antenna** section).
+- **RF LEVEL** → RF signal level at antenna. Must be \> 40 dB.
+- **Multipath** → distortion percentage due to reflections. Must be \< 10%.
+- **Band Type** → FM band type according to region.
+- **RBDS Mode** → activates RBDS system (RDS version used in USA).
 
 ---
 
 ### DIAL SCAN
 
-Herramienta que explora la banda de FM en pasos de **100 kHz** y genera un gráfico con la intensidad de señal de cada emisora detectada.
+Tool that scans the FM band in **100 kHz** steps and generates a graph showing signal strength for each detected station.
 
 ![542 DIAL SCAN Pn](/images/542/542-DIAL_SCAN.png)
 
 ---
 
-## Análisis de transmisión
+## Transmission Analysis
 
-### Mediciones de FM
+### FM Measurements
 
-Monitoreo de los parámetros medidos sobre la señal sintonizada:
+Monitoring of parameters measured on the tuned signal:
 
 ![542 FM ANALYZER Pn](/images/542/542-FM_ANALYZER.png)
 
-- **TOTAL MODULATION** → nivel de modulación de FM medido sobre la señal sintonizada.
-- **MODULATION MEASUREMENT RESPONSE** → tiempo de integración de la medición:
-  - Instantánea
-  - 125 µs (recomendado para pico)
+- **TOTAL MODULATION** → FM modulation level measured on the tuned signal.
+- **MODULATION MEASUREMENT RESPONSE** → measurement integration time:
+  - Instantaneous
+  - 125 µs (recommended for peak)
   - 250 µs
   - 500 µs
   - 1 ms
 
     <Note>
-      La integración apropiada depende de las normas de cada región.
+      Appropriate integration depends on regional standards.
     </Note>
-- **PILOT** → % de modulación del tono piloto (default: 9%).
-- **RDS** → % de modulación de subportadora RDS (default: 4%).
-- **AUDIO L/R** → nivel de audio (dBFS).
-- **CARRIER OFFSET** → desviación de la portadora (kHz).
-- **RDS BER** (bit error ratio) → calidad de datos RDS.
-  - 0% = sin errores.
-  - 100% = datos ilegibles.
-- **RDS DATA** → textos transmitidos por RDS.
+- **PILOT** → pilot tone modulation % (default: 9%).
+- **RDS** → RDS subcarrier modulation % (default: 4%).
+- **AUDIO L/R** → audio level (dBFS).
+- **CARRIER OFFSET** → carrier deviation (kHz).
+- **RDS BER** (bit error ratio) → RDS data quality.
+  - 0% = no errors.
+  - 100% = unreadable data.
+- **RDS DATA** → RDS transmitted texts.
 
 ---
 
-### Separación de canales, distorsión y SNR
+### Channel Separation, Distortion and SNR
 
-El sistema mide:
+The system measures:
 
-- Separación de canales.
-- Distorsión armónica \+ ruido (THD\+N).
-- Relación señal-ruido (SNR).
+- Channel separation.
+- Total harmonic distortion + noise (THD+N).
+- Signal-to-noise ratio (SNR).
 
 ![542 FM Measurrements Pn](/images/542/542-FM_measurrements.png)
 
-Estas mediciones contemplan el **conjunto completo**: procesador \+ codificador estéreo \+ transmisor \+ antena.
+These measurements consider the **complete chain**: processor + stereo encoder + transmitter + antenna.
 
-- Se pueden hacer **remotamente**, sin interrumpir la transmisión.
-- En el proceso:
-  - Se inyecta un tono audible muy breve (~250 ms).
-  - Para SNR, se silencia la señal de aire por 2 segundos.
+- Can be done **remotely** without interrupting transmission.
+- During the process:
+  - A very brief audible tone is injected (~250 ms).
+  - For SNR, the on-air signal is muted for 2 seconds.
 
-**Procedimiento**
+**Procedure**
 
-- Pulse la opción **RUN new measurement** que se muestra a la derecha del parámetro.
-- Esto ejecuta la medición para ese parámetre y el resultado aparece en pantalla.
+- Click the **RUN new measurement** option shown to the right of the parameter.
+- This executes the measurement for that parameter and displays the result.
 
-**Escala para separación de canales**
+**Channel Separation Scale**
 
-| Separación (dB) | Evaluación    |
-| :-------------: | :-----------: |
+| Separation (dB) | Rating       |
+| :-------------: | :---------: |
 | **\> 40 dB**    | **Excellent** |
-| 35 a 40 dB      | Very good     |
-| 30 a 35 dB      | Good          |
-| 25 a 30 dB      | Fair          |
-| \< 25 dB        | Poor          |
+| 35 to 40 dB     | Very good   |
+| 30 to 35 dB     | Good        |
+| 25 to 30 dB     | Fair        |
+| \< 25 dB        | Poor        |
 
 <Info>
-  La separación puede optimizarse desde los controles avanzados del codificador estéreo.\
-  Ver **Medición y ajuste de la separación de canales**.
+  Separation can be optimized from the stereo encoder advanced controls.\
+  See **Channel Separation Measurement and Adjustment**.
 </Info>
 
 ---
 
-### Reporte técnico de transmisión
+### Technical Transmission Report
 
-- El botón **DOWNLOAD FULL TEST** ejecuta todas las mediciones y genera un archivo de texto con los resultados, incluyendo los valores del Analizador FM.
-- El archivo se guarda en la carpeta de descargas del navegador.
-- Este reporte puede enviarse a **Soporte Técnico** para diagnóstico remoto.
-- Si el sintonizador está apagado, no es posible generar reportes. Para encenderlo: pulse **ON/OFF** y espere a que se estabilicen los valores.
+- The **DOWNLOAD FULL TEST** button runs all measurements and generates a text file with results, including FM Analyzer values.
+- The file is saved to the browser's downloads folder.
+- This report can be sent to **Technical Support** for remote diagnosis.
+- If the tuner is off, reports cannot be generated. To turn it on: press **ON/OFF** and wait for values to stabilize.
 
 <Warning>
-  El reporte introduce **breves tonos audibles al aire** durante las mediciones.
+  The report introduces **brief audible tones on-air** during measurements.
 </Warning>

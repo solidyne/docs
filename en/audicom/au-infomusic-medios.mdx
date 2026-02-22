@@ -1,76 +1,84 @@
 ---
-title: "InfoMusic: archivos de medios"
-description: "Ingresar archivos de medios en AUDICOM"
-keywords: ["base de datos", "ingesta", "infomusic"]
+title: "InfoMusic: Media Files"
+description: "Adding media files to AUDICOM"
+keywords: ["database", "ingest", "infomusic"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d2c171b9dfb67baef5bc8b1882374f98e3218a514046521a2adbed75d209cfc7"
+
 ---
 
-AUDICOM trabaja con una arquitectura de carpetas del sistema, localizadas dentro de una carpeta principal **AUDICOM** en cada unidad de disco.\
-La carpeta de medios es **AUDIO** (aunque en las versiones _BLACK VIDEO_ puede contener también video).\
-Dentro de **AUDIO** se crean las carpetas que serán mostradas como **CATEGORÍAS** en **AUDICOM Media Manager** e **InfoMusic**.
+AUDICOM works with a system folder architecture, located within a main **AUDICOM** folder on each disk drive.\
+The media folder is **AUDIO** (although in _BLACK VIDEO_ versions it can also contain video).\
+Inside **AUDIO**, folders are created that will be shown as **CATEGORIES** in **AUDICOM Media Manager** and **InfoMusic**.
 
-Ejemplo de estructura:
+Structure example:
 
 ```
-C:\Audicom\Audio (carpeta de medios AUDICOM)
+C:\Audicom\Audio (AUDICOM media folder)
 HIP-HOP
 POP 80's
 POP 90's
-ROCK ING
-ROCK ESP
+ROCK ENG
+ROCK SPA
 SPOTS
-ARTISTICAS
+JINGLES
 ```
 
-Las carpetas que se ubiquen fuera de la carpeta de medios **AUDICOM** son ignoradas por el sistema (no aparecen en Media Manager).\
-Además, no se permiten subcarpetas dentro de las carpetas de medios: si existen, AUDICOM las ignora.
+Folders located outside the **AUDICOM** media folder are ignored by the system (they don't appear in Media Manager).\
+Additionally, subfolders within media folders are not allowed: if they exist, AUDICOM ignores them.
 
-Es posible crear o mover carpetas desde el explorador de Windows, aunque se recomienda hacerlo desde **Media Manager**.
+It's possible to create or move folders from Windows Explorer, although it's recommended to do it from **Media Manager**.
 
-**`Procedimiento para importar carpetas a la estructura Audicom\Audio:`**
+**`Procedure to import folders into the Audicom\Audio structure:`**
 
-- Usar **AUDICOM Media Manager** para crear nuevas carpetas. Active la opción **autoDb** para que, al copiar archivos, Media Manager los agregue automáticamente a la Base de Datos.
-- Desde el explorador de Windows, abra la carpeta donde están los archivos que desea copiar y arrástrelos a una ventana de **Media Manager**.
-  - Si los archivos están en la misma unidad de disco, serán **movidos**.
-  - Para copiarlos, mantenga presionada la tecla **Ctrl** mientras arrastra.
-
-<Note>
-  El procedimiento inverso (arrastrar archivos desde Media Manager hacia carpetas de Windows) **no está soportado**.
-</Note>
-
-Para que los archivos musicales puedan ser utilizados en programación automática (**AutoDj**), deben estar registrados en la **Base de Datos InfoMusic**.
-
----
-
-## Recomendaciones Generales
-
-### Tasas de compresión para audio
-
-Con la disponibilidad actual de grandes capacidades de almacenamiento, el uso de MP3 y otros códecs con pérdida ha quedado limitado a fines de **transmisión o consumo personal**.\
-No es necesario que una estación de radio trabaje con material comprimido, salvo algunas excepciones (programas enlatados o streaming).
-
-Se recomienda que toda la música, piezas artísticas, publicidades y demás material sonoro se almacenen en **PCM (WAV)** para mantener la máxima calidad.
-
-AUDICOM soporta también compresión **FLAC sin pérdidas**, con tasas de compresión cercanas a **2:1**, adecuadas para contenidos de larga duración que requieran resguardar calidad.
+- Use **AUDICOM Media Manager** to create new folders. Enable the **autoDb** option so that when copying files, Media Manager automatically adds them to the Database.
+- From Windows Explorer, open the folder containing the files you want to copy and drag them to a **Media Manager** window.
+  - If the files are on the same disk drive, they will be **moved**.
+  - To copy them, hold down the **Ctrl** key while dragging.
 
 <Note>
-  No utilice archivos musicales con bitrates inferiores a **128 kbps**.\
-  La velocidad recomendada es **256 kbps @ 44.1 kHz**, lo que equivale a una compresión aproximada de **6:1**.
+  The reverse procedure (dragging files from Media Manager to Windows folders) is **not supported**.
+</Note>
+
+For music files to be used in automatic programming (**AutoDj**), they must be registered in the **InfoMusic Database**.
+
+---
+
+## General Recommendations
+
+### Audio Compression Rates
+
+With current storage capacities readily available, the use of MP3 and other lossy codecs has become limited to **transmission or personal consumption** purposes.\
+It is not necessary for a radio station to work with compressed material, except for some cases (syndicated programs or streaming).
+
+It is recommended that all music, jingles, commercials and other audio material be stored in **PCM (WAV)** to maintain maximum quality.
+
+AUDICOM also supports lossless **FLAC compression**, with compression rates close to **2:1**, suitable for long-duration content that requires quality preservation.
+
+<Note>
+  Do not use music files with bitrates lower than **128 kbps**.\
+  The recommended speed is **256 kbps @ 44.1 kHz**, which equals approximately **6:1** compression.
 </Note>
 
 ---
 
-### Edición de archivos comprimidos
+### Editing Compressed Files
 
-Aunque los archivos comprimidos pueden editarse, este proceso implica una **nueva recompresión**, con la consiguiente pérdida adicional de calidad.
+Although compressed files can be edited, this process involves **re-compression**, resulting in additional quality loss.
 
-En lo posible, evite editar material comprimido.\
-Para remover los silencios de inicio y fin en archivos `.mp3`, utilice **AutoEdit**, que permite procesarlos sin recomprimirlos.
+If possible, avoid editing compressed material.\
+To remove silence at the beginning and end of `.mp3` files, use **AutoEdit**, which allows processing without re-compression.
 
 ---
 
-### Locuciones de presentación y “pisadores”
+### Voice-overs and "Sweepers"
 
-Los archivos de presentación (**Partner**) y las locuciones **Meteor** (cuando se regraban) conviene registrarlos usando un **procesador de micrófono con compresor/limitador**, de modo de reducir el rango dinámico y asegurar la **inteligibilidad** sin necesidad de atenuar en exceso la música de fondo.
+Presentation files (**Partner**) and **Meteor** voice-overs (when re-recorded) should be recorded using a **microphone processor with compressor/limiter**, to reduce dynamic range and ensure **intelligibility** without excessively attenuating background music.
 
-También pueden emplearse compresores de rango dinámico por software, además del procesado de audio general de la emisora.
+Software dynamic range compressors can also be used, in addition to the station's general audio processing.

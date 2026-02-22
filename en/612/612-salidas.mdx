@@ -1,45 +1,53 @@
 ---
-title: "Salidas"
-description: "Conexión de las salidas"
-keywords: ["salidas"]
-tags: ["consolas de estudio", "linea Classic", "D612"]
+title: "Outputs"
+description: "Output connections"
+keywords: ["outputs"]
+tags: ["studio consoles", "Classic line", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "3a245b4475b0ba4448c5ceda848569ef573854a5f8f2870b12513d5407fa0793"
+
 ---
 
-## Programa y grabación
+## Program and Recording
 
-- **PGM (Programa):** salida principal balanceada, con conectores **TRS ¼”** hembra (plug hembra). 
-- **REC (Grabación):** salida auxiliar, no balanceada, con conectores RCA.
+- **PGM (Program):** main balanced output with female **TRS 1/4"** connectors (female plug).
+- **REC (Recording):** auxiliary unbalanced output with RCA connectors.
 
-### Conexión balanceada TRS a XLR macho (por canal)
+### Balanced TRS to XLR male connection (per channel)
 
 | TRS (Plug)         | XLR (Cannon)       |
 | ------------------ | ------------------ |
-| Tierra = cuerpo    | Pin 1 = Tierra     |
-| Señal (\+) = punta | Pin 2 = Señal (\+) |
-| Señal (-) = anillo | Pin 3 = Señal (-)  |
+| Ground = sleeve    | Pin 1 = Ground     |
+| Signal (\+) = tip  | Pin 2 = Signal (\+)|
+| Signal (-) = ring  | Pin 3 = Signal (-) |
 
 <Warning>
-  Para desbalancear la salida PGM conecte el terminal **(\+)**, dejando sin conexión el terminal **(-)**.
+  To unbalance the PGM output, connect the **(\+)** terminal, leaving the **(-)** terminal unconnected.
 </Warning>
 
 <Warning>
-  Nunca utilice conectores **plug mono** (TS) para conectar estas salidas.
+  Never use **mono plug** (TS) connectors to connect these outputs.
 </Warning>
 
-### Niveles de salida
+### Output Levels
 
-- Nivel nominal: **\+4 dBu** cuando el VU-metro indica “0 VU”.
-- En modo desbalanceado (tomando solo el terminal \+): **-2 dBu**.
+- Nominal level: **\+4 dBu** when VU-meter indicates "0 VU".
+- In unbalanced mode (using only \+ terminal): **-2 dBu**.
 
 <Info>
-  Si conecta equipos de grabación no profesionales, el nivel puede ser demasiado alto y causar saturación.\
-  Use el control de nivel de entrada del dispositivo.\
-  Si no fuese suficiente, emplee un atenuador fijo (divisor resistivo) para reducir el nivel de la salida.
+  When connecting non-professional recording equipment, the level may be too high and cause saturation.\
+  Use the device's input level control.\
+  If this is not sufficient, use a fixed attenuator (resistive divider) to reduce the output level.
 </Info>
 
-## Envío PGM por USB
+## PGM USB Send
 
-La conexión USB entrega la señal de **PGM** o **REC** (según la posición de la llave **USB OUT** en Canal 5).
+The USB connection delivers the **PGM** or **REC** signal (according to the **USB OUT** switch position on Channel 5).
 
-- No requiere instalación adicional: la computadora reconoce automáticamente el dispositivo de grabación USB.
-- La señal puede usarse para grabación en disco duro o para streaming vía Internet (Webcasting).
+- No additional installation required: the computer automatically recognizes the USB recording device.
+- The signal can be used for hard disk recording or Internet streaming (Webcasting).

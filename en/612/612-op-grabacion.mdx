@@ -1,73 +1,81 @@
 ---
-title: "Condiciones para grabación"
-description: "Configuraciones para la grabación "
-keywords: ["grabación"]
-tags: ["consolas de estudio", "linea Classic", "D612"]
+title: "Recording conditions"
+description: "Recording settings"
+keywords: ["recording"]
+tags: ["studio consoles", "Classic line", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "bb613f05f521c60f48b8b6d652a8c60e6a6071ebd866f9680b4d1caa7fd720ba"
+
 ---
 
-## Grabación de programas
+## Program Recording
 
-Las consolas D612 poseen dos canales estéreo de salida:
+D612 consoles feature two stereo output channels:
 
-- **PGM (Programa):** salida principal de envío al aire.
-- **REC (Recording):** salida destinada a grabación, independiente de PGM.
+- **PGM (Program):** main on-air output.
+- **REC (Recording):** dedicated recording output, independent from PGM.
 
-Esto permite grabar material mientras simultáneamente se transmite otro contenido al aire.
+This allows recording material while simultaneously broadcasting different content on-air.
 
 <Note>
-  El canal de híbrido es **solo de aire** y no pueden asignarse al canal REC.
+  The hybrid channel is **on-air only** and cannot be assigned to the REC channel.
 </Note>
 
 ---
 
-## Grabación en la PC
+## PC Recording
 
-Las salidas PGM y REC están disponibles también en formato digital a través de USB.\
-En Windows® aparece como:
+PGM and REC outputs are also available in digital format via USB.\
+In Windows®, it appears as:
 
-- **Dispositivo de grabación USB:** corresponde al Canal 5 y lleva señal **PGM o REC**, según la posición de la llave de selección \*\*OUT \*\*del canal.
+- **USB Recording Device:** corresponds to Channel 5 and carries **PGM or REC** signal, depending on the channel's **OUT** switch position.
 
-### Configuración
+### Configuration
 
-- **En la PC:** configure el software de grabación para usar el **Dispositivo de grabación USB**.
-- **En la consola:** en el Canal 5, mueva la llave **OUT** a posición PGM para grabar la emisión de aire, o a \*\*REC \*\*para fuentes que no están al aire.
+- **On PC:** configure the recording software to use the **USB Recording Device**.
+- **On console:** on Channel 5, set the **OUT** switch to PGM position to record the on-air broadcast, or to **REC** for sources not on-air.
 
-<Accordion title="EJEMPLO: Grabar voces con programación al aire" icon="microphone" iconType="solid">
-  1. En la sección de monitoreo:
+<Accordion title="EXAMPLE: Recording voices while broadcasting" icon="microphone" iconType="solid">
+  1. In the monitoring section:
 
-  - Asignar parlantes de control a la mezcla **REC**.
-  - Si se desea enviar señal de monitor a los locutores, asignar REC también para Estudio.
+  - Assign control speakers to **REC** mix.
+  - If monitor signal needs to be sent to announcers, also assign REC to Studio.
 
-  2. Asignar a **REC** los canales requeridos para la grabación (ej.: MIC-1).
-  3. Mantener al aire la programación musical desde el Canal-5 (USB), asignado a **PGM** y no a REC.
+  2. Assign required channels for recording to **REC** (e.g., MIC-1).
+  3. Keep musical programming on-air from Channel-5 (USB), assigned to **PGM** and not REC.
 
   <Note>
-    El Canal 5 puede usarse para reproducción de audio **independientemente** de la asignación del envío (PGM o REC).
+    Channel 5 can be used for audio playback **independently** of the output assignment (PGM or REC).
   </Note>
-  **Proceso de grabación**
+  **Recording process**
 
-  - Levantar el fader del canal de micrófono correspondiente.
-  - Verificar niveles en el software de grabación.
-  - Ajustar nivel desde los atenuadores de canal en la consola (no desde el software).
+  - Raise the corresponding microphone channel fader.
+  - Check levels in the recording software.
+  - Adjust level using the console channel faders (not from software).
 
   <Danger>
-    El dispositivo de grabación **USB-1** no posee control de nivel de entrada por software (Mezclador de Windows). El ajuste solo se realiza desde la consola.
+    The **USB-1** recording device has no software input level control (Windows Mixer). Adjustment is only done from the console.
   </Danger>
-  Los locutores monitorean la grabación con auriculares o parlantes.
+  Announcers monitor the recording through headphones or speakers.
 
-  Al finalizar, la grabación puede escucharse desde una salida analógica de la PC conectada a la consola, distinta de la salida USB (ya que en este ejemplo la salida USB se usa para transmisión al aire).
+  After finishing, the recording can be played back from an analog PC output connected to the console, different from the USB output (since in this example USB output is used for broadcasting).
 
-  Para chequear la grabación:
+  To check the recording:
 
-  - Usar la barra **REC** (pues PGM está ocupado al aire).
-  - Asignar a REC el canal conectado a la salida analógica de la PC.
+  - Use the **REC** bus (as PGM is being used on-air).
+  - Assign the channel connected to PC's analog output to REC.
 
-  Al concluir el trabajo, restaurar todos los controles a su posición original para volver al modo normal.
+  When work is complete, restore all controls to their original position to return to normal mode.
 </Accordion>
 
 ---
 
-## Grabación de líneas telefónicas
+## Recording Phone Lines
 
-El híbrido interno envía señal solo a **PGM**.\
-Por lo tanto, las comunicaciones telefónicas solo pueden grabarse mientras están al aire, usando el envío PGM en la PC.
+The internal hybrid sends signal only to **PGM**.\
+Therefore, telephone communications can only be recorded while they are on-air, using the PGM send to the PC.

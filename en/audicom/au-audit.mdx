@@ -1,25 +1,33 @@
 ---
-title: "Reportes: Aaudit"
-description: "Reportes de emisión y estadisticas"
-keywords: ["reportes", "aaudit", "auditoria"]
+title: "Reports: Aaudit"
+description: "Broadcast logs and statistics reports"
+keywords: ["reports", "aaudit", "audit"]
 tags: ["Software", "Audicom", "Admicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "2bcbfc74bd6b459f14a201bf623374befa35d14e88d201f6dab1b7c906bde6bd"
+
 ---
 
-Aaudit es la herramienta de **auditoría de emisiones** de AUDICOM. Permite consultar, reproducir y generar reportes a partir de los registros diarios de lo emitido en la terminal de Aire.
+Aaudit is AUDICOM's **broadcast audit tool**. It allows querying, playing back and generating reports from the daily logs of what was aired on the On-Air terminal.
 
-Se accede desde el botón **Audit** en la Barra de Aplicaciones. Por defecto está disponible en el escritorio _Comercial_ (Usuario = comercial), aunque puede añadirse a cualquier escritorio de usuario.
+It can be accessed via the **Audit** button in the Applications Bar. By default it's available on the _Commercial_ desktop (User = comercial), though it can be added to any user desktop.
 
-Los registros se muestran en forma gráfica, similar a la ventana de **CyberPlay**:
+The logs are displayed graphically, similar to the **CyberPlay** window:
 
-- Archivos reproducidos en una tanda → fondo verde.
-- Archivos reproducidos por AutoDJ o bloques en vivo → fondo celeste con un asterisco.
-- Intervalos de detención del programa (supuestos en vivo) → fondo amarillo.
-- Horas pares → gris claro, horas impares → gris oscuro.
+- Files played in a commercial break → green background
+- Files played by AutoDJ or live blocks → light blue background with asterisk
+- Program stop intervals (presumed live) → yellow background
+- Even hours → light gray, odd hours → dark gray
 
-Los registros de emisión se guardan en la terminal de Aire como archivos con extensión `.air`, uno por cada día de transmisión. La ubicación se define en `Audicom.ini` dentro de `[Directories]`.
+Broadcast logs are saved on the On-Air terminal as files with `.air` extension, one for each broadcast day. The location is defined in `Audicom.ini` under `[Directories]`.
 
 <Note>
-  Si en el explorador de Windows se hace doble clic sobre un archivo `.air`, éste se abrirá directamente en Aaudit.
+  Double-clicking an `.air` file in Windows Explorer will open it directly in Aaudit.
 </Note>
 
 <img
@@ -30,71 +38,71 @@ Los registros de emisión se guardan en la terminal de Aire como archivos con ex
   style={{ width:"67%" }}
 />
 
-### Identificación de música o avisos
+### Music or spots identification
 
-Aaudit determina el tipo de archivo por dos criterios:
+Aaudit determines the file type using two criteria:
 
-1. **Bloque de reproducción:** todo lo emitido dentro de una tanda se marca como _spot comercial_.
-   - Ejemplo: si el operador inserta un tema musical dentro de una tanda, será marcado como spot.
-2. **Base de datos:** se valida el campo **Clase** en InfoMusic.
-   - `Clase = Spot` → aparece en verde.
-   - `Clase ≠ Spot` (Promo, Música) → aparece en celeste.
-   - `Clase vacío o archivo no registrado` → considerado Spot si fue emitido en una tanda.
-
----
-
-### Registro de usuarios
-
-El módulo de Aire incluye también los cambios de usuario en los registros.\
-En Aaudit aparecen como líneas grises con texto rojo, indicando hora de ingreso/egreso y nombre del usuario.
+1. **Playback block:** everything aired within a commercial break is marked as _commercial spot_.
+   - Example: if the operator inserts a music track within a break, it will be marked as spot.
+2. **Database:** the **Class** field in InfoMusic is validated.
+   - `Class = Spot` → appears in green
+   - `Class ≠ Spot` (Promo, Music) → appears in light blue
+   - `Empty Class or unregistered file` → considered Spot if aired in a break
 
 ---
 
-### Reproducir un título
+### User logging
 
-Es posible escuchar un archivo registrado seleccionándolo y pulsando **Play**.\
-El archivo se reproduce desde su ubicación original: si fue movido o eliminado no podrá escucharse.
-
----
-
-### Abrir archivo
-
-Con el botón **.air** se puede abrir otro registro.
-
-- Por defecto se muestran los archivos del mes actual.
-- El menú _Tipos de archivo_ permite ampliar la vista a registros anteriores.
-- En instalaciones con múltiples terminales de aire, se puede seleccionar la terminal desde la cual se desea abrir el registro.
+The On-Air module also includes user changes in the logs.\
+In Aaudit they appear as gray lines with red text, indicating login/logout time and username.
 
 ---
 
-### Guardar como TXT
+### Playing a title
 
-Permite exportar el registro en texto plano, útil para verlo o imprimirlo en cualquier editor de texto.
-
----
-
-### Imprimir
-
-Genera un informe en papel similar a los reportes gráficos, pero enviado directamente a la impresora.
+You can listen to a logged file by selecting it and pressing **Play**.\
+The file plays from its original location: if moved or deleted it cannot be played.
 
 ---
 
-### Reportes disponibles
+### Open file
 
-El menú de reportes incluye distintas modalidades:
+The **.air** button allows opening another log.
 
-- **Reporte Global:** duración del archivo seleccionado, cantidad de emisiones y tiempo total al aire.
-- **Seguimiento de un aviso:** lista detallada de emisiones de un título en un rango de fechas, con tiempos de reproducción para verificar su salida completa.
-- **Listado para Derechos de Autor:** informe con Título, Intérprete, Autor, sello discográfico y código de álbum, para presentar ante entidades como SADAIC.
+- By default files from current month are shown
+- The _File types_ menu allows expanding view to previous logs
+- In installations with multiple on-air terminals, you can select which terminal to open logs from
 
 ---
 
-### Reportes gráficos
+### Save as TXT
 
-Aaudit puede generar distintos gráficos visuales:
+Allows exporting the log in plain text, useful for viewing or printing in any text editor.
 
-- **Gráfico de Torta:** porcentajes de música, avisos y programas en vivo. Doble clic → minutos y segundos.
-- **Composición de 24 Hs:** barras con la distribución por hora de música, avisos y programas. Doble clic en la barra → tiempos exactos.
+---
+
+### Print
+
+Generates a paper report similar to graphical reports, but sent directly to printer.
+
+---
+
+### Available reports
+
+The reports menu includes different modes:
+
+- **Global Report:** duration of selected file, number of broadcasts and total airtime
+- **Spot tracking:** detailed list of broadcasts of a title within a date range, with playback times to verify complete airing
+- **Copyright Listing:** report with Title, Artist, Author, record label and album code, for submission to entities like SADAIC
+
+---
+
+### Graphical reports
+
+Aaudit can generate different visual graphs:
+
+- **Pie Chart:** percentages of music, spots and live programs. Double click → minutes and seconds
+- **24-Hour Composition:** bars showing hourly distribution of music, spots and programs. Double click on bar → exact times
 
   <img
     src="/images/audicom/au-aaudit-24hs.png"
@@ -102,7 +110,7 @@ Aaudit puede generar distintos gráficos visuales:
     title="Au Aaudit 24hs Pn"
     style={{ width:"49%" }}
   />
-- **Tiempo de tandas acumulado:** evolución de la publicidad emitida a lo largo del día.
+- **Accumulated break time:** evolution of aired advertising throughout the day
 
   <img
     src="/images/audicom/au-aaudit-spots-hora.png"
@@ -110,9 +118,9 @@ Aaudit puede generar distintos gráficos visuales:
     title="Au Aaudit Spots Hora Pn"
     style={{ width:"49%" }}
   />
-- **Detalle de avisos por hora:** barras con los minutos de publicidad emitida en cada hora.
-- **Gráfico 3D:** versión tridimensional de los gráficos de torta y barras.
-- **Ranking de spots:** comparación del tiempo total al aire de cada aviso.
+- **Hourly spots detail:** bars showing minutes of advertising aired each hour
+- **3D Graph:** three-dimensional version of pie and bar charts
+- **Spots ranking:** comparison of total airtime for each spot
 
   <img
     src="/images/audicom/au-aaudit-spots-ranking.png"
@@ -120,11 +128,11 @@ Aaudit puede generar distintos gráficos visuales:
     title="Au Aaudit Spots Ranking Pn"
     style={{ width:"49%" }}
   />
-- **Estilos musicales preferidos:** gráfico de torta con el tiempo de emisión por estilos musicales registrados en la base de datos.
+- **Preferred music styles:** pie chart showing airtime by music styles registered in database
 
 ---
 
 <Warning>
-  Los archivos `.air` suelen guardarse en la carpeta `Audicom\Air` de la terminal de Aire.\
-  Su nombre corresponde a la fecha (`AAAAMMDD.air`). Se recomienda eliminar periódicamente los registros muy antiguos para evitar ocupación innecesaria en disco.
+  The `.air` files are usually stored in the `Audicom\Air` folder of the On-Air terminal.\
+  Their names correspond to the date (`YYYYMMDD.air`). It's recommended to periodically delete very old logs to avoid unnecessary disk usage.
 </Warning>

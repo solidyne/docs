@@ -1,86 +1,94 @@
 ---
-title: "Cables y conexiones"
-description: "Descripción general del cableado de audio y redes"
-keywords: ["conexiones", "pin-out", "RJ45"]
-tags: ["procesadores", "542"]
+title: "Cables and connections"
+description: "Overview of audio and network cabling"
+keywords: ["connections", "pin-out", "RJ45"]
+tags: ["processors", "542"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "cce06d36d5aaa1e85f27065fac1b344ca537fa69474340ff65acc4bfed8e8e4a"
+
 ---
 
-## Conexiones de audio analógicas
+## Analog Audio Connections
 
-### Entradas y salidas sobre XLR
+### XLR Inputs and Outputs
 
-El 542APC cuenta con:
+The 542APC features:
 
-- **Entradas** analógicas balanceadas (conector XLR, sin transformador).
-- **Salidas estéreo** analógicas balanceadas (conector XLR).
+- Balanced analog **inputs** (XLR connector, transformerless).
+- Balanced analog stereo **outputs** (XLR connector).
 
-La conexión se realiza de acuerdo al estándar de audio profesional.
+Connection follows professional audio standards.
 
-| **Tipo de conexión**      | **Pin 1**         | **Pin 2**                | **Pin 3**                |
-| ------------------------- | ----------------- | ------------------------ | ------------------------ |
-| **Entrada balanceada**    | Masa              | Balanceado fase positiva | Balanceado fase negativa |
-| **Entrada desbalanceada** | Masa (unir 1 y 3) | Balanceado fase positiva | unido a pin 1 en entrada |
-| **Salida desbalanceada**  | Masa              | Balanceado fase positiva | sin conexión             |
+| **Connection Type**     | **Pin 1** | **Pin 2**           | **Pin 3**           |
+| ---------------------- | --------- | ------------------- | ------------------- |
+| **Balanced Input**     | Ground    | Positive phase      | Negative phase      |
+| **Unbalanced Input**   | Ground (join 1 & 3) | Positive phase | Tied to pin 1 at input |
+| **Unbalanced Output**  | Ground    | Positive phase      | No connection       |
 
 <Warning>
-  Mantenga la **fase correcta** en la conexión balanceada.
+  Maintain correct **phase** in balanced connections.
 </Warning>
 
 <Note>
-  Utilice cable de dos conductores bajo malla, preferentemente con **doble blindaje**.\
-  Mantenga la longitud de los cables menor a **30 metros**.\
-  En casos especiales puede extenderse hasta **100 metros**, aceptando una leve pérdida en altas frecuencias.
+  Use two-conductor shielded cable, preferably with **double shielding**.\
+  Keep cable lengths under **30 meters**.\
+  In special cases, it can be extended up to **100 meters**, accepting slight high-frequency loss.
 </Note>
 
-### Entradas y salidas sobre RJ45
+### RJ45 Inputs and Outputs
 
-Con la incorporación del **audio sobre IP (AoIP)**, diversos fabricantes utilizan conectores **RJ45** y cable multipar blindado para unificar el cableado de audio analógico.
+With the adoption of **Audio over IP (AoIP)**, various manufacturers use **RJ45** connectors and shielded multipair cable to standardize analog audio wiring.
 
-- Un conector RJ45 contiene **dos líneas balanceadas**, lo que reduce el tamaño del equipo y la cantidad de conectores.
-- El uso de **cable estructurado (STP CAT5)** para distancias largas facilita la instalación y evita soldaduras.
-- En el extremo del cable, la conexión al dispositivo puede requerir conectores de audio estándar.\
-  Para ello, **Solidyne provee adaptadores RJ45-hembra → conector balanceado**.
+- One RJ45 connector carries **two balanced lines**, reducing equipment size and connector count.
+- Using **structured cable (STP CAT5)** for long distances simplifies installation and avoids soldering.
+- At the cable end, connection to devices may require standard audio connectors.\
+  For this, **Solidyne provides RJ45-female → balanced connector adapters**.
 
 <Info>
-  Los dispositivos Solidyne son compatibles con los accesorios **StudioHub®** ampliamente utilizados en radiodifusión. Más info: [www.studiohub.com](http://www.studiohub.com)
+  Solidyne devices are compatible with **StudioHub®** accessories widely used in broadcasting. More info: [www.studiohub.com](http://www.studiohub.com)
 </Info>
 
 <Tip>
-  [Diagramas de pines y cables adaptadores para armado de cables](/es/diagramas/RJ45-pinout).
+  [Pin diagrams and adapter cables for cable assembly](/es/diagramas/RJ45-pinout).
 </Tip>
 
 ---
 
-## Conexiones de audio digital
+## Digital Audio Connections
 
-### Entrada / salida AES-3
+### AES-3 Input / Output
 
-- Cuando se use la entrada digital, conviene conectar también las entradas analógicas.
-- En caso de perderse la señal en alguna de las entradas, el procesador conmuta automáticamente a la que presente señal.
+- When using digital input, it's advisable to also connect analog inputs.
+- If signal is lost on any input, the processor automatically switches to the one with signal present.
 
-La salida AES3 es balanceada y utiliza conector **XLR macho**.
+The AES3 output is balanced and uses a **male XLR** connector.
 
-| **Pin** | **Señal** |
-| :-----: | :-------: |
-| 1       | GND       |
-| 2       | AES3 (1)  |
-| 3       | AES3 (2)  |
+| **Pin** | **Signal** |
+| :-----: | :--------: |
+| 1       | GND        |
+| 2       | AES3 (1)   |
+| 3       | AES3 (2)   |
 
 ---
 
-## Salidas MPX
+## MPX Outputs
 
-El **542APC** cuenta con **doble salida MPX**, con ajuste de nivel independiente.
+The **542APC** features **dual MPX output** with independent level adjustment.
 
-- Los conectores MPX son **BNC**.
-- Utilice cable coaxial de **75 Ohms (RG-59)**.
-- Mantenga la longitud del cable por debajo de **25 metros**.
+- MPX connectors are **BNC**.
+- Use **75 Ohm coaxial cable (RG-59)**.
+- Keep cable length below **25 meters**.
 
 <Warning>
-  Si conecta el transmisor con señal MPX, asegúrese de **deshabilitar el pre-énfasis interno** del transmisor (respuesta plana 20 – 100 kHz). El pre-énfasis es fijado en el 542APC (50 o 75 µs).
+  When connecting the transmitter with MPX signal, ensure to **disable the internal pre-emphasis** of the transmitter (flat response 20 – 100 kHz). Pre-emphasis is set in the 542APC (50 or 75 µs).
 </Warning>
 
 <Info>
-  Es importante mantener una **distribución de tierras adecuada**.\
-  En caso de duda, consulte a Solidyne indicando el equipo y el esquema de tierras utilizado.
+  Maintaining proper **ground distribution** is important.\
+  If in doubt, consult Solidyne indicating the equipment and grounding scheme used.
 </Info>

@@ -1,15 +1,23 @@
 ---
-description: "Ingresar al sistema. Usuarios y contraseñas."
-title: "Ingresando al Audicom"
+description: "System login. Users and passwords."
+title: "Logging into Audicom"
 keywords: ["i-logon"]
 tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ef7c9c117683c40847ad5362e9bb687ba31ff98d8e7b200c964d00774c56e997"
+
 ---
 
 ## I-Logon
 
-El instalador crea un acceso directo a AUDICOM en el escritorio de Windows y un grupo de aplicaciones en el menú **Inicio**.
+The installer creates an AUDICOM shortcut on the Windows desktop and an applications group in the **Start** menu.
 
-Al ejecutar AUDICOM aparece la ventana de ingreso al sistema (**Log-on**).
+When running AUDICOM, the system login window (**Log-on**) appears.
 
 <img
   src="/images/audicom/au-op-ilogon.png"
@@ -19,15 +27,15 @@ Al ejecutar AUDICOM aparece la ventana de ingreso al sistema (**Log-on**).
   style={{ width:"66%" }}
 />
 
-- Aquí se debe ingresar nombre de usuario y contraseña.
-- Se cargará el perfil correspondiente, que incluye la organización del escritorio y los niveles de seguridad predeterminados.
-- Los usuarios con permisos y restricciones son gestionados desde el **Panel de Administración** (ver _Niveles de acceso y contraseñas_).
+- Here you must enter username and password.
+- The corresponding profile will load, including desktop organization and default security levels.
+- Users with permissions and restrictions are managed from the **Administration Panel** (see _Access levels and passwords_).
 
-Es recomendable que cada operador, al finalizar su turno, cierre su sesión.\
-El sistema continuará funcionando bajo el usuario del sistema (**auto**).\
-El nuevo operador debe iniciar sesión accediendo a la ventana I-Logon con doble clic en la zona **RADIO/USUARIO**.
+It is recommended that each operator logs out at the end of their shift.\
+The system will continue running under the system user (**auto**).\
+The new operator must log in by accessing the I-Logon window with a double click on the **RADIO/USER** area.
 
-- Doble clic en el icono **USER** abre la ventana de ingreso I-Logon.
+- Double clicking the **USER** icon opens the I-Logon window.
 
   <img
     src="/images/audicom/au-op-topbar-user.png"
@@ -37,85 +45,85 @@ El nuevo operador debe iniciar sesión accediendo a la ventana I-Logon con doble
   />
 
 <Note>
-  I-Logon y la Barra de Herramientas (botón Info) muestran la fecha de caducidad de la licencia de soporte y actualizaciones.
+  I-Logon and the Tool Bar (Info button) show the expiration date of the support and updates license.
 </Note>
 
-Después de ingresar usuario y contraseña, presione **Comenzar**.
+After entering username and password, press **Start**.
 
-- El nombre de usuario **no distingue mayúsculas/minúsculas**.
-- La contraseña **sí distingue mayúsculas/minúsculas**.
+- The username is **not case-sensitive**.
+- The password **is case-sensitive**.
 
-Todos los cambios de usuario quedan registrados en los archivos `.air`, de modo que el personal jerárquico puede controlar quién operó el sistema en cada momento.
+All user changes are logged in the `.air` files, so management staff can track who operated the system at any time.
 
 ---
 
-## Nombres de usuario y contraseñas
+## Usernames and passwords
 
-### Usuarios predefinidos
+### Predefined users
 
-AUDICOM incluye un grupo de usuarios predeterminados, con perfiles distintos:
+AUDICOM includes a set of default users with different profiles:
 
 - **user**
 - **admin**
 - **auto**
 
-Los usuarios predefinidos no tienen contraseña.\
-El usuario **auto** es parte del sistema y **no puede eliminarse**.
+Predefined users have no password.\
+The **auto** user is part of the system and **cannot be deleted**.
 
-- Se activa cuando un operador cierra sesión.
-- Mantiene la programación en modo automático.
+- It activates when an operator logs out.
+- Maintains programming in automatic mode.
 
 <Note>
-  El modo Auto también se usa tras un corte de energía.\
-  Si la ventana I-Logon queda abierta durante 1 minuto sin que ningún usuario se registre, AUDICOM arranca automáticamente.\
-  Un minuto después comienza la reproducción de audio.\
-  Ver: _Cortes de energía – autoarranque_.
+  Auto mode is also used after a power failure.\
+  If the I-Logon window remains open for 1 minute without any user logging in, AUDICOM starts automatically.\
+  Audio playback begins one minute later.\
+  See: _Power failures - auto-start_.
 </Note>
 
-### Nuevos usuarios
+### New users
 
-- Los nombres de usuario y contraseñas son definidos por el administrador.
-- Una vez creado, el nombre no puede modificarse.
-- La contraseña puede cambiarse desde I-Logon:
-  1. Presione **Cambiar Password**.
-  2. Ingrese la contraseña actual.
-  3. Escriba la nueva contraseña y confírmela.
-  4. Pulse **OK**.
+- Usernames and passwords are defined by the administrator.
+- Once created, the username cannot be modified.
+- The password can be changed from I-Logon:
+  1. Press **Change Password**.
+  2. Enter current password.
+  3. Type new password and confirm it.
+  4. Click **OK**.
 
-En el siguiente inicio deberá usar la nueva clave.
+The new password will be required at next login.
 
 <Tip>
-  Puede crear un usuario por operador, o bien usuarios por terminal de trabajo (ej. “Producción”, “Programación”).\
-  Así cada terminal tiene una única clave de acceso.
+  You can create a user per operator, or users per workstation (e.g. "Production", "Programming").\
+  This way each terminal has a single access key.
 </Tip>
 
 ---
 
-## Cerrar la sesión
+## Logging out
 
-Cuando un operador se retira, debe **cerrar su sesión** para evitar usos indebidos.
+When an operator leaves, they must **log out** to prevent unauthorized use.
 
-- Si otro operador ingresa, lo hace directamente con su usuario.
-- Esto cierra automáticamente la sesión anterior.
+- If another operator logs in, they do so directly with their user.
+- This automatically closes the previous session.
 
-Si se desea dejar el sistema activo sin operador a cargo:
+If you want to leave the system active without an operator in charge:
 
-- En I-Logon seleccione **Cerrar sesión**.
-- AUDICOM quedará activo bajo el usuario **auto**.
+- Select **Log out** in I-Logon.
+- AUDICOM will remain active under the **auto** user.
 
-En este modo:
+In this mode:
 
-- Solo estarán habilitadas funciones básicas (**Play / Stop**).
-- No se guardan personalizaciones de escritorio.
-- No se permiten cambios en la pauta comercial.
+- Only basic functions are enabled (**Play / Stop**).
+- Desktop customizations are not saved.
+- Changes to commercial schedule are not allowed.
 
 <Warning>
-  La programación debe estar preparada para que AUDICOM siga operando en automático (AutoDJ, streaming, PlayLists, etc.).
+  Programming must be prepared for AUDICOM to continue operating automatically (AutoDJ, streaming, PlayLists, etc.).
 </Warning>
 
 ---
 
-## Apagar AUDICOM
+## Shutting down AUDICOM
 
-Para cerrar todas las aplicaciones, pulse **Apagar (Close)**.\
-Esto finalizará todos los programas relacionados con AUDICOM.
+To close all applications, press **Close**.\
+This will terminate all AUDICOM-related programs.

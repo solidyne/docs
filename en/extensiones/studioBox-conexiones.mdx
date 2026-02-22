@@ -1,34 +1,42 @@
 ---
-title: "Conexión de Bahías StudioBox"
-description: "Conexión de las bahías para monitoreo en el Estudio"
-keywords: ["monitoreo", "auriculares"]
-tags: ["expansiones", "SutudioBox", "HD3", "HD5", "UX24", "UX18", "DX816", "D612"]
+title: "StudioBox Connection"
+description: "Studio monitoring bays connection"
+keywords: ["monitoring", "headphones"]
+tags: ["expansions", "SutudioBox", "HD3", "HD5", "UX24", "UX18", "DX816", "D612"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "54cbd1599d18b32e4ac3c4d632a21b36116a5dffe09ca4cb3e3126a35379b682"
+
 ---
 
-Los módulos para monitoreo Solidyne StudioBox HD5 y HD3, resuelven el envío de las señales de monitoreo hacia el estudio para los auriculares y altavoces.
+Solidyne StudioBox HD5 and HD3 monitoring modules handle the routing of monitoring signals to the studio for headphones and speakers.
 
-Características:
+Features:
 
-- HD5: conexión para 5 auriculares con controles de volumen independientes
-- HD3: conexión para 3 auriculares
-- Doble canal de escucha
-- Salida para altavoces potenciados con control de nivel
-- Luz testigo de AIRE
-- Reverse talk-back desde Estudio hacia Control
-- Timer/Clock (solo disponible en HD5)
+- HD5: 5 headphone outputs with independent volume controls
+- HD3: 3 headphone outputs 
+- Dual listening channel
+- Powered speakers output with level control
+- ON AIR tally light
+- Reverse talk-back from Studio to Control Room
+- Timer/Clock (HD5 only)
 
-## Conexión de las StudioBox
+## StudioBox Connection
 
-Las cajas **HD3** y **HD5** se conectan al conector **Studio Monitor** ubicado en el panel trasero de la consola, utilizando un único cable **multipar blindado CAT-5 RJ45–RJ45** (incluido con la StudioBox, 5 metros).
+**HD3** and **HD5** boxes connect to the **Studio Monitor** connector located on the console's rear panel, using a single **shielded CAT-5 RJ45-RJ45 multicore cable** (5 meters cable included with StudioBox).
 
 <Danger>
-  La salida STUDIO MONITOR de UNIDEX **no es compatible StudioHub**. No debe conectarse usando cables RJ45 diseñados para otras salidas de audio. Si no dispone del sistema Solidyne Studiobox, utilice el **cable suministrado** de fábrica para conexión de auricualres y altavoces a la salida STUDIO MONITOR.
+  The STUDIO MONITOR output on UNIDEX is **not StudioHub compatible**. Do not connect using RJ45 cables designed for other audio outputs. If you don't have the Solidyne Studiobox system, use the **factory supplied** cable to connect headphones and speakers to the STUDIO MONITOR output.
 </Danger>
 
-A través de este cable, la consola:
+Through this cable, the console:
 
-- Envía las señales de **auriculares** y **parlantes monitores**.
-- Recibe la señal de **talkback inverso** desde el estudio.
+- Sends **headphones** and **monitor speakers** signals.
+- Receives **reverse talkback** signal from the studio.
 
 <img
   src="/images/ux/ux-studiobox-diagrama.png"
@@ -46,42 +54,42 @@ A través de este cable, la consola:
   style={{ width:"50%" }}
 />
 
-### Salidas de la StudioBox
+### StudioBox Outputs
 
-- **Parlantes monitores**\
-  Conector TRS 1/8” estéreo (**minijack**).\
-  Es una salida de **nivel de línea**, por lo que requiere **parlantes potenciados** en el estudio.
-- **Auriculares**\
-  Conectores TRS 1/4” estéreo (**jack**) ubicados en frente de la caja.\
-  Compatible con auriculares de **16, 32 y 64 Ω**.
+- **Monitor speakers**\
+  TRS 1/8" stereo connector (**minijack**).\
+  This is a **line level** output, requiring **powered speakers** in the studio.
+- **Headphones**\
+  TRS 1/4" stereo connectors (**jack**) located on the front panel.\
+  Compatible with **16, 32 and 64 Ω** headphones.
 
 <Note>
-  En modelos **HD3**, las salidas de auriculares**2 y 3 son gemelas** : comparten el control de nivel y la asignación de fuente.
+  On **HD3** models, headphone outputs **2 and 3 are twins**: they share level control and source assignment.
 </Note>
 
-### Entrada auxiliar
+### Auxiliary Input
 
-Permite ingresar una **fuente de monitoreo adicional** a la señal asignada en la sección STUDIO MONITOR de la consola (**ON-AIR, PGM, AUD, SEND o CUE**).
+Allows inputting an **additional monitoring source** to the signal assigned in the console's STUDIO MONITOR section (**ON-AIR, PGM, AUD, SEND or CUE**).
 
-- Conmutación entre entradas:
-  - **Entrada A**: señal desde consola
-  - **Entrada B**: señal auxiliar
-- **Modelo HD5**: la conmutación A/B es independiente para auriculares 1, 2 y 3. Los auriculares 4 y 5 reciben siempre la señal **Studio Monitor** asignada en consola.
-- **Modelo HD3**: los auriculares 2 y 3 comparten la asignación.
+- Input switching:
+  - **Input A**: console signal
+  - **Input B**: auxiliary signal
+- **HD5 Model**: A/B switching is independent for headphones 1, 2 and 3. Headphones 4 and 5 always receive the **Studio Monitor** signal assigned at the console.
+- **HD3 Model**: headphones 2 and 3 share the assignment.
 
-La entrada auxiliar es **no balanceada** con conector RJ45.\
-Puede conectarse a cualquier salida de audio RJ45 (balanceada o no balanceada) usando un cable estándar **STP RJ45–RJ45 pin a pin**.
+The auxiliary input is **unbalanced** with RJ45 connector.\
+It can connect to any RJ45 audio output (balanced or unbalanced) using a standard **STP RJ45-RJ45 pin-to-pin** cable.
 
 ---
 
-## Conexión de múltiples StudioBox
+## Multiple StudioBox Connection
 
-Se pueden conectar varias unidades StudioBox en paralelo. La consola UNIDEX soporta hasta:
+Multiple StudioBox units can be connected in parallel. The UNIDEX console supports up to:
 
-- **3 unidades HD3**, o
-- **2 unidades HD5**
+- **3 HD3 units**, or
+- **2 HD5 units**
 
-La conexión se realiza en **paralelo** derivando la \*\*salida STUDIO MONITOR \*\*de la consola.\*\*Se pueden usar \*\* cajas de derivación RJ45 "Y” (**Y-splitter**) estandarizadas, con conexión **pin a pin**.
+Connection is made in **parallel** by splitting the console's **STUDIO MONITOR** output. Standard RJ45 **Y-splitters** with **pin-to-pin** connection can be used.
 
 <img
   src="/images/ux24/RJ45_splitter.png"
