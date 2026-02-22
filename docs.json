@@ -701,7 +701,7 @@
         "language": "en",
         "tabs": [
           {
-            "tab": "Indexes",
+            "tab": "Index",
             "groups": [
               {
                 "group": "Manuals",
@@ -726,14 +726,14 @@
             ]
           },
           {
-            "tab": "UNIDEX Consoles",
+            "tab": "IP Studio Mixers",
             "anchors": [
               {
                 "anchor": "UNIDEX Series",
                 "icon": "book-open",
                 "groups": [
                   {
-                    "group": "INTRODUCTION",
+                    "group": "OVERVIEW",
                     "pages": ["en/unidex/unidex-resumen"]
                   },
                   {
@@ -855,7 +855,7 @@
             ]
           },
           {
-            "tab": "Classic Consoles",
+            "tab": "Classic Mixers",
             "anchors": [
               {
                 "anchor": "Classic Series",
@@ -1080,7 +1080,7 @@
             "tab": "Audio Processors",
             "anchors": [
               {
-                "anchor": "Audio Processors",
+                "anchor": "FM Processors",
                 "icon": "book-open",
                 "groups": [
                   {
@@ -1175,7 +1175,7 @@
             ]
           },
           {
-            "tab": "Telephone Hybrids",
+            "tab": "Telco",
             "anchors": [
               {
                 "anchor": "Telephone Hybrids",
