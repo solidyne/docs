@@ -1,33 +1,41 @@
 ---
-title: "Conexion a consola"
-description: "Conexiones de audio de HL240"
-keywords: ["conexiones"]
-tags: ["híbridos", "HL240"]
+title: "Console Connection"
+description: "HL240 Audio Connections"
+keywords: ["connections"]
+tags: ["hybrids", "HL240"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f905a80e6d41f3845f1524bacc1f40879b391b1da02cd28978f8d46a1dbdd322"
+
 ---
 
-## Entradas y salidas
+## Inputs and Outputs
 
 **AUDIO IN (SEND TO LINES)**\
-Entrada no balanceada en jack TS ¼”. Recibe la señal que se envía a las líneas telefónicas y a los móviles Bluetooth.\
-Se conecta a una salida _mix-minus_ de la consola: una mezcla de fuentes locales (micrófonos, otras comunicaciones) que no contiene el audio del HL240-VQ.
+Unbalanced ¼" TS jack input. Receives the signal sent to telephone lines and Bluetooth mobile devices.\
+Connects to a _mix-minus_ output from the console: a mix of local sources (microphones, other communications) that does not contain the HL240-VQ audio.
 
-El nivel de envío se ajusta desde el control **INPUT LEVEL** en el panel frontal. Dependiendo de la configuración, también puede ajustarse desde la consola.
+The send level is adjusted using the **INPUT LEVEL** control on the front panel. Depending on the configuration, it can also be adjusted from the console.
 
 **AUDIO OUT (MIX)**\
-Salida balanceada en conector XLR macho. Entrega la mezcla de audio de las líneas, ajustada mediante los controles rotativos **BLUETOOTH** y **PHONE LINE**.
+Balanced male XLR output. Delivers the audio mix from the lines, adjusted using the **BLUETOOTH** and **PHONE LINE** rotary controls.
 
-**DIRECT OUT PH-1 y BLT-1**\
-Salidas no balanceadas en jack ¼”. Entregan las señales de Línea-1 y Bluetooth-1 con nivel fijo (pre-fader).\
-Cada salida se conecta a una entrada de línea de la consola, permitiendo manejarlas de forma independiente a la mezcla principal.
+**DIRECT OUT PH-1 and BLT-1**\
+Unbalanced ¼" jack outputs. Deliver Line-1 and Bluetooth-1 signals at fixed level (pre-fader).\
+Each output connects to a console line input, allowing independent handling from the main mix.
 
 **HEADPHONES**\
-Salida estéreo para auriculares. Entrega la misma señal de la salida AUDIO OUT.
+Stereo headphone output. Delivers the same signal as the AUDIO OUT.
 
 ---
 
-## Conexión a consolas con envío/retorno a híbrido externo
+## Connection to consoles with external hybrid send/return
 
-Si la consola de puesta al aire tiene un conector especial para envío y retorno de híbrido externo, la conexión se realiza con un cable derivación tipo “Y” (inserción).
+If the on-air console has a special connector for external hybrid send and return, connection is made using a "Y" split cable (insert type).
 
 <img
   src="/images/hl240/hl240-diagrama-hibridoexterno.png"
@@ -37,41 +45,75 @@ Si la consola de puesta al aire tiene un conector especial para envío y retorno
   style={{ width:"53%" }}
 />
 
-Las series **Solidyne 2300, 2600, DX816/822 y D612** proveen esta conexión a través de un jack TRS ¼”. El híbrido externo se opera desde controles dedicados en la consola, sin ocupar canales de línea.
+The **Solidyne 2300, 2600, DX816/822 and D612** series provide this connection through a ¼" TRS jack. The external hybrid is operated from dedicated controls on the console, without occupying line channels.
 
-La siguiente tabla describe la correspondencia del cable “Híbrido Externo” soportado por estas consolas Solidyne:
+The following table describes the "External Hybrid" cable pinout supported by these Solidyne consoles:
 
-**Cableado "Y" para “Híbrido Externo” ↔ HL240-VQ**
+**"Y" Cable Wiring for "External Hybrid" ↔ HL240-VQ**
 
-| Jack "Híbrido Externo" en consola | AUDIO IN (TS ¼") | AUDIO OUT (MIX) – XLR hembra |
-| --------------------------------- | ---------------- | ---------------------------- |
-| **Punta** (envío mix-minus)       | Punta            | —                            |
-| **Anillo** (retorno)              | —                | pin 2                        |
-| **Cuerpo** (masa)                 | Cuerpo           | pin 1 (pin 3 n/c)            |
+| "External Hybrid" Jack on Console | AUDIO IN (TS ¼") | AUDIO OUT (MIX) - Female XLR |
+|----------------------------------|------------------|----------------------------|
+| **Tip** (mix-minus send)         | Tip             | —                          |
+| **Ring** (return)                | —               | pin 2                      |
+| **Sleeve** (ground)              | Sleeve          | pin 1 (pin 3 n/c)          |
 
 <Note>
-  En otros modelos de consolas Solidyne o de otros fabricantes, consulte el manual para identificar las conexiones de envío/retorno a híbrido externo.
+  For other Solidyne console models or other manufacturers, check the manual to identify external hybrid send/return connections.
 </Note>
 
 ---
 
-## Conexión a consolas sin facilidades para híbridos
+## Connection to consoles without hybrid facilities
 
-En consolas para sonido directo o de grabación, que generalmente no poseen conexión de envío/retorno para híbrido externo, el HL240-VQ se conecta a un canal de línea y a una salida de bus o mezcla auxiliar.
+For live sound or recording consoles that generally lack external hybrid send/return connections, the HL240-VQ connects to a line channel and an auxiliary bus or mix output.
 
 ![Hl240 Diagrama Consola Generica Pn](/images/hl240/hl240-diagrama-consola-generica.png)
 
-- La salida **AUDIO OUT** del HL240-VQ envía la mezcla de líneas (terrestres y Bluetooth). Conectar esta salida a una entrada de línea balanceada en la consola.
-- La entrada **AUDIO IN (SEND TO LINES)** recibe audio desde la consola y lo envía a las líneas. Conectar esta entrada a una salida auxiliar (AUX, REC, FX, etc.), distinta de la salida principal (LR).
+- The HL240-VQ **AUDIO OUT** sends the mix of lines (landlines and Bluetooth). Connect this output to a balanced line input on the console.
+- The **AUDIO IN (SEND TO LINES)** receives audio from the console and sends it to the lines. Connect this input to an auxiliary output (AUX, REC, FX, etc.), different from the main output (LR).
 
-En la consola, el canal por el cual ingresa la señal del HL240-VQ **no debe asignarse a la mezcla auxiliar** que se envía al HL240, ya que se producirá un lazo de realimentación.
+On the console, the channel receiving the HL240-VQ signal **must not be assigned to the auxiliary mix** that feeds the HL240, as this would create a feedback loop.
 
 <Danger>
-  Nunca envíe la mezcla principal (salida LR) al HL240-VQ, ya que se producirá un lazo de realimentación cuando ese canal sea sumado al aire.
+  Never send the main mix (LR output) to the HL240-VQ, as this will create a feedback loop when that channel is summed to air.
 </Danger>
 
 <Note>
-  Algunas consolas (ejemplo: Solidyne serie UNIDEX) permiten configurar salidas como _mix-minus_. Esto evita usar un bus auxiliar dedicado.
+  Some consoles (example: Solidyne UNIDEX series) allow configuring outputs as _mix-minus_. This avoids using a dedicated auxiliary bus.
 </Note>
 
 ---
+
+## Hybrid operation
+
+The hybrid circuit is responsible for separating the incoming and outgoing signals from the telephone line. The hybrid rejection adjustment allows you to minimize the return of the signal sent to the line, which appears mixed with the incoming signal.
+
+### Hybrid rejection adjustment
+
+1. Connect a telephone line to the HL240-VQ.
+2. Make a call and establish communication.
+3. Send a signal to the telephone line (voice or music).
+4. While listening to the return signal from the hybrid output, adjust the **HYBRID NULL** control to minimize the return signal.
+
+<Note>
+  The hybrid rejection adjustment is independent for each line. When changing lines, readjust the rejection.
+</Note>
+
+<Warning>
+  The hybrid rejection depends on the impedance of the telephone line, which varies according to distance, installation conditions, and other factors. The rejection achieved may vary between different telephone lines.
+</Warning>
+
+### Bluetooth operation
+
+The HL240-VQ has a Bluetooth interface that allows connecting mobile phones to make calls or play music. The Bluetooth interface appears on mobile devices as "HL240-VQ".
+
+To pair a mobile device:
+
+1. Enable Bluetooth on the mobile device.
+2. Press and hold the **PAIR** button on the HL240-VQ for 3 seconds.
+3. On the mobile device, select "HL240-VQ" from the list of available devices.
+4. The connection is confirmed when the Bluetooth LED stops blinking.
+
+<Note>
+  The HL240-VQ remembers the last 3 paired devices. When turned on, it will automatically connect to the last device used if it is within range.
+</Note>

@@ -1,46 +1,54 @@
 ---
-title: "Enlace con líneas telefónicas"
-description: "Enlace al Estudio usando línea telefónica fija y celular Bluetooth "
-keywords: ["enlace","POTS","Bluetooth"]
-tags: "consolas portátiles,CODEC,MX2200"
+title: "Phone lines connection"
+description: "Studio link using landline and Bluetooth mobile phone"
+keywords: ["link","POTS","Bluetooth"]
+tags: "portable consoles,CODEC,MX2200"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f38d5eb43b3ad4e5503169562ee35bb4b8cdfc04376016af841af2aa70efac15"
+
 ---
 
-Cuando el equipo emite a través de Internet, la línea terrestre (POTS) o un teléfono móvil se pueden usar como método de transmisión de respaldo.\
-O si la transmisión se hace usando un teléfono móvil Bluetooth, una línea terrestre se puede usar en simultáneo como transmisión de respaldo del móvil.
+When the unit broadcasts through Internet, landline (POTS) or mobile phone can be used as backup transmission method.\
+Or if transmission is done using a Bluetooth mobile phone, a landline can be used simultaneously as mobile backup transmission.
 
-La configuración de las lineas para operar como enlaces es:
+The configuration of the lines to operate as links is:
 
 <Tabs>
-  <Tab title="Línea como enlace">
-    También es posible usar una línea telefónica como **canal de transmisión principal**.
+  <Tab title="Line as link">
+    It is also possible to use a phone line as **main transmission channel**.
 
-    - En la posición **PGM**, el retorno del estudio se suprime del monitoreo CUE y se suma a la mezcla  de programa.
-    - El **mic TALK** no se envía al estudio.
-    - Se recomienda usar la línea en posición **PGM**, para evitar que el micrófono de órdenes salga accidentalmente al aire.
-    - Si no es necesario escuchar el retorno del estudio: mantener la **perilla PGM cerrada**.
-    - Para escuchar retorno: abrir la perilla **PGM** → la señal de estudio se escucha en todos los auriculares que monitorean la mezcla PGM.
-    - El envío de señal hacia las líneas es en modo **mix-minus**: se elimina del envío la señal proveniente del estudio, evitando realimentaciones.
+    - In **PGM** position, studio return is removed from CUE monitoring and added to program mix.
+    - The **mic TALK** is not sent to the studio.
+    - It is recommended to use the line in **PGM** position, to prevent the talkback microphone from accidentally going on air.
+    - If studio return monitoring is not needed: keep the **PGM knob closed**.
+    - To listen to return: open the **PGM** knob → studio signal is heard in all headphones monitoring PGM mix.
+    - Signal sending to the lines is in **mix-minus** mode: signal coming from studio is removed from the send, avoiding feedback.
   </Tab>
-  <Tab title="Línea como respaldo">
-    Mientras MX2200 emite a través de **Internet**, la línea terrestre o un teléfono móvil pueden usarse como **método de respaldo**.
+  <Tab title="Line as backup">
+    While MX2200 broadcasts through **Internet**, landline or mobile phone can be used as **backup method**.
 
-    - Cuando la línea está en posición **CUE**, el retorno del estudio se envía solo al monitoreo de auriculares.
+    - When the line is in **CUE** position, studio return is sent only to headphone monitoring.
 
     <Info>
-      Una vez establecida la llamada, los estudios reciben siempre la mezcla de **PGM**, sin importar si la línea está en modo **CUE** o **PGM**.
+      Once the call is established, studios always receive the **PGM** mix, regardless of whether the line is in **CUE** or **PGM** mode.
     </Info>
-    - Si se pulsa **TALK** en esa línea, el micrófono de órdenes se envía al estudio por esa línea.
-    - Esta condición permite al operador de MX2200 dialogar con el Estudio en privado, mientras la consola transmite por Internet.
+    - If **TALK** is pressed on that line, the talkback microphone is sent to the studio through that line.
+    - This condition allows the MX2200 operator to talk privately with the Studio while the console broadcasts over Internet.
   </Tab>
 </Tabs>
 
 <Note>
-  Más detalles sobre operación de las línras en [Uso de las líneas telefónicas](/es/mx2200/mx2200-op-lineas-intro)
+  More details about line operation in [Using phone lines](/es/mx2200/mx2200-op-lineas-intro)
 </Note>
 
 ---
 
-## Recepción en estudios
+## Studio reception
 
-- Las llamadas telefónicas se reciben en el estudio mediante **híbridos telefónicos e interfaces convencionales**.
-- Todas las consolas **Solidyne** soportan líneas estándar **POTS** e interfaces **Bluetooth** para vincular teléfonos móviles.
+- Phone calls are received at the studio through **telephone hybrids and conventional interfaces**.
+- All **Solidyne** consoles support standard **POTS** lines and **Bluetooth** interfaces to link mobile phones.

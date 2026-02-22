@@ -1,106 +1,114 @@
 ---
-title: "Celulares Bluetooth"
-description: "Vincular teléfonos Bluetooth al HL2400."
-keywords: ["Bluetooth", "pairing", "celular"]
-tags: ["híbridos", "HL240"]
----
-
-## Conceptos generales
-
-Hay tres acciones que no deben confundirse al trabajar con dispositivos Bluetooth:
-
-1. **Activar/Desactivar Bluetooth en el móvil**\
-   Se refiere a encender o apagar la función Bluetooth en el teléfono.\
-   No debe confundirse con conectar o desconectar el teléfono de un dispositivo ya vinculado.
-2. **Vincular (Pairing) un móvil a un dispositivo Bluetooth**\
-   El móvil busca y registra un dispositivo Bluetooth (ejemplo: auriculares, sistema manos libres o canal del HL240-VQ). Este procedimiento se realiza una única vez.\
-   Una vez vinculado, el móvil puede conectar y desconectar el dispositivo desde la lista de conexiones reconocidas.\
-   También es posible desvincularlo, tras lo cual deberá repetirse el procedimiento de emparejamiento.
-3. **Conectar/Desconectar un dispositivo ya vinculado**\
-   Se refiere a establecer o interrumpir la conexión entre el móvil y un dispositivo que ya figura en la lista.\
-   No debe confundirse con el proceso de vinculación inicial.
+title: "Bluetooth Mobile Phones"
+description: "Pairing Bluetooth phones to HL2400."
+keywords: ["Bluetooth", "pairing", "mobile"]
+tags: ["hybrids", "HL240"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d71535534915966d4be0502c0a64f4ce2831278ea0542e233534bd38e0972c51"
 
 ---
 
-## Emparejar un móvil con HL240-VQ
+## General Concepts
 
-El HL240-VQ posee dos canales Bluetooth identificados como **BLT-1** y **BLT-2**.\
-Los botones correspondientes son luminosos y cambian su destello según el estado de conexión.
+There are three actions that should not be confused when working with Bluetooth devices:
 
-### Modos de iluminación de los botones BLT
+1. **Enable/Disable Bluetooth on mobile**\
+   Refers to turning the Bluetooth function on or off on the phone.\
+   This should not be confused with connecting or disconnecting the phone from an already paired device.
+2. **Pairing a mobile to a Bluetooth device**\
+   The mobile searches and registers a Bluetooth device (example: headphones, hands-free system or HL240-VQ channel). This procedure is performed only once.\
+   Once paired, the mobile can connect and disconnect the device from the list of recognized connections.\
+   It can also be unpaired, after which the pairing procedure must be repeated.
+3. **Connect/Disconnect an already paired device**\
+   Refers to establishing or interrupting the connection between the mobile and a device already in the list.\
+   This should not be confused with the initial pairing process.
 
-| Modo  | Estado                                | Descripción                                                                                                                                                                                             |
-| :---: | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A** | Móvil conectado                       | Encendido breve (1s) en naranja con apagado largo (2s). Indica que está conectado al celular sin cursar una llamada.                                                                                    |
-| **B** | Móvil no conectado / Llamada en curso | Encendido lento (2s) en naranja y apagado corto (1s). Indica llamada en curso. Al cortar retorna a modo “A”. También indica Bluetooth encendido sin móvil conectado. Cuando se conecta pasa a modo “A”. |
-| **C** | Modo búsqueda (_pairing_)             | Destello rápido en naranja. Permite que un teléfono encuentre y se vincule al HL240-VQ.                                                                                                                 |
-| **D** | Llamada entrante                      | Encendido permanente en azul mientras dura el ring.                                                                                                                                                     |
+---
 
-### Procedimiento de emparejamiento
+## Pairing a mobile with HL240-VQ
+
+The HL240-VQ has two Bluetooth channels identified as **BLT-1** and **BLT-2**.\
+The corresponding buttons are illuminated and change their flashing pattern according to the connection status.
+
+### BLT Button Illumination Modes
+
+| Mode  | Status                               | Description                                                                                                                                                                      |
+| :---: | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | Mobile connected                     | Brief orange light (1s) with long off period (2s). Indicates connection to mobile with no active call.                                                                           |
+| **B** | Mobile not connected / Call in progress | Slow orange light (2s) with short off period (1s). Indicates call in progress. Returns to mode "A" when call ends. Also indicates Bluetooth on with no mobile connected. Switches to mode "A" when connected. |
+| **C** | Search mode (pairing)               | Fast orange flashing. Allows a phone to find and pair with the HL240-VQ.                                                                                                         |
+| **D** | Incoming call                       | Solid blue light while ringing.                                                                                                                                                  |
+
+### Pairing Procedure
 
 <Steps>
-  <Step title="Preparar canal Bluetooth">
-    Verificar que el canal BLT (1 o 2) esté apagado.\
-    Si está encendido, mantener pulsado el botón hasta que el LED se apague.
+  <Step title="Prepare Bluetooth channel">
+    Verify that the BLT channel (1 or 2) is off.\
+    If it's on, press and hold the button until the LED turns off.
   </Step>
-  <Step title="Activar modo pairing en HL240-VQ">
-    Con Bluetooth apagado, mantener pulsado el botón BLT por ~8 segundos.\
-    El LED pasará primero a destello lento (modo B) y luego a destello rápido (modo C).\
-    Soltar el botón: el canal queda en modo búsqueda.
+  <Step title="Activate pairing mode on HL240-VQ">
+    With Bluetooth off, press and hold the BLT button for ~8 seconds.\
+    The LED will first show slow flashing (mode B) then fast flashing (mode C).\
+    Release the button: the channel enters search mode.
   </Step>
-  <Step title="Buscar desde el móvil">
-    Activar Bluetooth en el teléfono y buscar nuevos dispositivos.\
-    Aparecerán como **Solidyne BLT-1** o **Solidyne BLT-2**.
+  <Step title="Search from mobile">
+    Enable Bluetooth on the phone and search for new devices.\
+    They will appear as **Solidyne BLT-1** or **Solidyne BLT-2**.
   </Step>
-  <Step title="Conectar">
-    Seleccionar el dispositivo correspondiente y confirmar la vinculación.\
-    El móvil quedará registrado en la lista de conexiones reconocidas.
+  <Step title="Connect">
+    Select the corresponding device and confirm pairing.\
+    The mobile will be registered in the list of recognized connections.
   </Step>
 </Steps>
 
 <Note>
-  El nombre del dispositivo (Solidyne BLT-1 o BLT-2) puede editarse desde la configuración Bluetooth del teléfono.\
-  Un mismo móvil puede vincularse a ambos canales, pero solo conectarse a uno a la vez.\
-  Varios móviles pueden estar vinculados a un mismo canal, pero no conectados simultáneamente.
+  The device name (Solidyne BLT-1 or BLT-2) can be edited from the phone's Bluetooth settings.\
+  A single mobile can be paired to both channels, but can only connect to one at a time.\
+  Multiple mobiles can be paired to the same channel, but not connected simultaneously.
 </Note>
 
 <Tip>
-  Mantener el móvil cerca del HL240-VQ, evitando apoyarlo directamente sobre el chasis.\
-  La distancia máxima recomendada es 3 metros.
+  Keep the mobile close to the HL240-VQ, avoiding direct contact with the chassis.\
+  Maximum recommended distance is 3 meters.
 </Tip>
 
 ---
 
-## Re-conectar un móvil ya vinculado
+## Reconnecting a previously paired mobile
 
-El móvil puede desconectarse del HL240-VQ en varias situaciones:
+The mobile can disconnect from the HL240-VQ in several situations:
 
-- Si se apaga Bluetooth en el teléfono (la llamada se transfiere al móvil).
-- Si durante una llamada el móvil se desconecta del canal Bluetooth. La llamada se transfiere al teléfono. Si se vuelve a conectar a Bluetooth, la llamada vuelve a HL240-VQ
-- Si se activa el modo **Altavoz** en el teléfono (la llamada pasa al móvil). Si se cancela el modo “Altavoz” la llamada vuelve al canal HL240-VQ.
-- Si se apaga Bluetooth en el HL240-VQ.
+- If Bluetooth is turned off on the phone (the call transfers to mobile).
+- If during a call the mobile disconnects from the Bluetooth channel. The call transfers to the phone. If reconnected to Bluetooth, the call returns to HL240-VQ
+- If **Speaker** mode is activated on the phone (call transfers to mobile). If "Speaker" mode is cancelled, the call returns to the HL240-VQ channel.
+- If Bluetooth is turned off on the HL240-VQ.
 
-En la mayoría de los casos, al volver a activar Bluetooth, la reconexión puede ser automática.\
-Si no ocurre, será necesario seleccionar nuevamente el dispositivo Solidyne en el móvil.
+In most cases, when Bluetooth is reactivated, reconnection can be automatic.\
+If not, it will be necessary to select the Solidyne device again on the mobile.
 
 <Warning>
-  La reconexión no será posible si el canal Bluetooth del HL240-VQ fue vinculado a otro teléfono que permanece conectado.
+  Reconnection will not be possible if the HL240-VQ Bluetooth channel was paired to another phone that remains connected.
 </Warning>
 
 ---
 
-## Ajuste del volumen
+## Volume Adjustment
 
 <Tip>
-  En el teléfono, el volumen Bluetooth debe ajustarse siempre al máximo para garantizar buena recepción y mejor relación señal-ruido.
+  On the phone, Bluetooth volume should always be set to maximum to ensure good reception and better signal-to-noise ratio.
 </Tip>
 
-- El ajuste debe hacerse durante una llamada cursada por Bluetooth.
-- Si se ajusta sin estar en llamada, solo cambia el volumen del altavoz del móvil, no el nivel de Bluetooth.
-- El nivel queda almacenado en cada teléfono. Al vincular un nuevo dispositivo, deberá repetirse el ajuste.
+- Adjustment must be made during a Bluetooth call.
+- If adjusted without an active call, only the mobile's speaker volume changes, not the Bluetooth level.
+- The level is stored in each phone. When pairing a new device, adjustment must be repeated.
 
 ---
 
-## Apagar Bluetooth en HL240-VQ
+## Turning off Bluetooth on HL240-VQ
 
-Para apagar un canal Bluetooth, mantener presionado el botón BLT hasta que deje de destellar.
+To turn off a Bluetooth channel, press and hold the BLT button until it stops flashing.

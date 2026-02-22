@@ -1,82 +1,90 @@
 ---
-title: "UX24 Panel Trasero"
-description: "Instalacion de consola UX24 , Panel Trasero"
-keywords: ["instalación","conectores","entradas","salidas","alimentación","conexiones"]
-tags: "consolas IP,UNIDEX,UX24"
+title: "UX24 Rear Panel"
+description: "UX24 console installation, Rear Panel"
+keywords: ["installation","connectors","inputs","outputs","power","connections"]
+tags: "IP consoles,UNIDEX,UX24"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ffc64701a2031358dfdd319e2a9a846955a1d388c075c5007f3e315d0317320b"
+
 ---
 
-## Fuente de alimentación
+## Power Supply
 
-La unidad cuenta con una fuente de alimentación interna de tipo conmutada, **110/240V 50/60Hz.**
+The unit features an internal switching power supply, **110/240V 50/60Hz.**
 
-En el panel trasero se ubica la **llave de encendido**; el fusible general (1A) y el conector para el cable de alimentación tipo Interlock (provisto con la consola).
+The rear panel houses the **power switch**, the main fuse (1A), and the Interlock-type power cable connector (supplied with the console).
 
 <img
   src="/images/ux24/ux24_powerinput.png"
-  alt="RJ45 a RCA"
+  alt="RJ45 to RCA"
   style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
   title=""
 />
 
-## Puesta a tierra
+## Grounding
 
-UX24 se conecta a tierra a través del cable del alimentación. No utilizar adaptadores o cables que supriman la clavija de toma a tierra. Se recomienda además conectar el borne de puesta a tierra del chasis a la tierra de la instalación, usando cable de 4 mm o superior.
+UX24 connects to ground through the power cable. Do not use adapters or cables that bypass the ground pin. It is also recommended to connect the chassis ground terminal to the facility's ground using 4 mm cable or larger.
 
-La instalación eléctrica general debe contar con una puesta a tierra adecuada. Como referencia, puede consultar el [plano de conexiones a tierra para FM](/es/puesta-a-tierra).
+The general electrical installation must have proper grounding. For reference, you can check the [FM grounding diagram](/es/puesta-a-tierra).
 
 <Danger>
-  **¡ATENCIÓN!**
+  **WARNING!**
 
-  **Asegúrese que la computadora conectada a UX24 vía USB tenga una puesta a tierra adecuada.**
+  **Ensure that the computer connected to UX24 via USB has proper grounding.**
 </Danger>
 
-## Entradas, salidas y puertos
+## Inputs, outputs and ports
 
-El panel trasero concentra todas las conexiones de la consola. Se emplean conectores RJ45 para todas las conexiones de audio, con excepción de las salidas para auriculares y parlantes de la cabina de control.
+The rear panel concentrates all console connections. RJ45 connectors are used for all audio connections, except for the headphone and control room monitor outputs.
 
-También encontramos puertos **Ethernet**, puerto **USB**, conexiones para **luces de aire** (Tally Light) y control **GPIO**.
+You will also find **Ethernet** ports, **USB** port, **Tally Light** connections and **GPIO** control.
 
 <Note>
-  Ver [Infografía de entradas y salidas](http://www.solidyne.dx.com.ar/wordpress-files/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF).
+  See [Inputs and Outputs Infographic](http://www.solidyne.dx.com.ar/wordpress-files/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF).
 </Note>
 
 ![Ux24 Rearpanel Notes Pn](/images/ux24/ux24_rearpanel_notes.png)
 
-<Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} />  [ENTRADAS](/es/unidex/instalacion-entradas) (click para ampliar info)
+<Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} />  [INPUTS](/es/unidex/instalacion-entradas) (click for more info)
 
-- 4 entradas para **micrófonos**.
-  - Utilizan conectores RJ45. Se conectan mediante un cable **SOL-M25/1XLRF** (RJ45 macho a XLR hembra, 2,5 metros). También se pueden adquirir tramos más cortos para conectar a XLR cerca de la consola.
+- 4 **microphone** inputs.
+  - Use RJ45 connectors. Connected using a **SOL-M25/1XLRF** cable (RJ45 male to XLR female, 2.5 meters). Shorter lengths can also be purchased for XLR connections near the console.
 
   <Info>
-    Las entradas de **MICRÓFONO** RJ45 hembra usan el **canal IZQUIERDO** de la conexión balanceada.
+    The RJ45 female **MICROPHONE** inputs use the **LEFT channel** of the balanced connection.
   </Info>
-- **16 entradas UNIDEX** mono agrupables en pares estéreo.
-- **4 balanceadas** estéreo.
-- **4 digitales** AES3
-- **4 USB** audio estéreo.
-- **1 streaming** de audio (reemplaza AES3-1)
-- OPCIÓN: \*\*DANTE \*\*x16
+- **16 UNIDEX** mono inputs groupable in stereo pairs.
+- **4 balanced** stereo.
+- **4 digital** AES3
+- **4 USB** stereo audio.
+- **1 audio** streaming (replaces AES3-1)
+- OPTION: **DANTE** x16
 
 <Note>
-  **MODELOS CON OPCIÓN DANTE** (UX24-A67)
+  **MODELS WITH DANTE OPTION** (UX24-A67)
 
-  Cuando UX24 incluye la opción DANTE/AES67 sustituye las entradas:
+  When UX24 includes the DANTE/AES67 option it replaces the inputs:
 
-  **UNIDEX 5, 6, 7 y 8**   Son reemplazadas por AoIP 1, 2, 3 y 4.\
-  **BAL 9, 10, 11 y 12**.   Son reemplazadas por AoIP 5, 6, 7 y 8.
+  **UNIDEX 5, 6, 7 and 8**   Are replaced by AoIP 1, 2, 3 and 4.\
+  **BAL 9, 10, 11 and 12**   Are replaced by AoIP 5, 6, 7 and 8.
 </Note>
 
-<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [**SALIDAS**](/es/unidex/instalacion-salidas)
+<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [**OUTPUTS**](/es/unidex/instalacion-salidas)
 
-- 2 PGM balanceadas
-- 4 estero balanceadas
-- 4 estéreo no balanceadas
-- 4 digitales AES3
-- 4 USB audio estéreo
+- 2 balanced PGM
+- 4 balanced stereo
+- 4 unbalanced stereo
+- 4 digital AES3
+- 4 USB stereo audio
 - 2 audio streams
-- OPCIÓN: DANTE x16
+- OPTION: DANTE x16
 
-<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [SALIDA STUDIO](/es/unidex/instalacion-cableado_monitoreo)
+<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [STUDIO OUTPUT](/es/unidex/instalacion-cableado_monitoreo)
 
 <Icon icon="usb-drive" iconType="solid" color="#008dff" size={24} />  [USB](/es/unidex/instalacion-usb)
 

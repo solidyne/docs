@@ -1,77 +1,85 @@
 ---
-title: "Enlace telefónico"
-description: "Comuniación con el Estudio vía teléfono móvil o línea fija."
-keywords: ["línea terrestre", "bluetooth"]
-tags: ["consolas portátiles", "MX2100"]
+title: "Phone Link"
+description: "Communication with Studio via mobile phone or landline."
+keywords: ["landline", "bluetooth"]
+tags: ["portable consoles", "MX2100"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5e675bb7d19297fb0b2863e858faafcd85127989045efc9c44353cbcb9effb7c"
+
 ---
 
-La comunicación se realiza desde el teléfono conectado a la consola, ya sea línea terrestre o celular .\
-A continuación se describe la operación para ambos casos.
+Communication is established from the phone connected to the console, either landline or mobile.\
+The operation for both cases is described below.
 
 
-### Teléfono celular
+### Mobile Phone
 
-- **Vía Bluetooth:**
-  1. Desde el celular, llamar a la radio.
-  2. Una vez establecida la comunicación, usar los micrófonos y auriculares conectados a la MX2100 para dialogar con Estudios.
-  3. Si la radio llama al periodista, se escucha el **ring** en auriculares y la señal de llamada en el móvil.
-  4. La llamada puede aceptarse desde el propio celular o pulsando brevemente **# 9** en la consola.
-- **Vía cable manos libres (en deshuso):**
-  1. Realizar la llamada desde el celular.
-  2. Una vez establecida, pulsar el botón **PHONE** en la consola.
-  3. Conectar el cable “manos libres” (ya conectado a la entrada **Cellular & Phone** de la MX2100) al conector del móvil.
-  4. A partir de este momento, el diálogo se hace usando los micrófonos y auriculares de la consola.
+- **Via Bluetooth:**
+  1. From the mobile phone, call the radio station.
+  2. Once communication is established, use the microphones and headphones connected to the MX2100 to talk with Studios.
+  3. If the radio station calls the journalist, the **ring** is heard in headphones and the call signal on the mobile.
+  4. The call can be answered from the mobile phone itself or by briefly pressing **# 9** on the console.
+- **Via hands-free cable (deprecated):**
+  1. Make the call from the mobile phone.
+  2. Once established, press the **PHONE** button on the console.
+  3. Connect the "hands-free" cable (already connected to the **Cellular & Phone** input of the MX2100) to the mobile connector.
+  4. From this point on, dialogue is conducted using the console's microphones and headphones.
 
 <Note>
-  Para finalizar la comunicación desde un teléfono celular, cortar y desconectar empleando el teclado del móvil (consultar manual del teléfono).
+  To end communication from a mobile phone, hang up and disconnect using the mobile keypad (refer to phone manual).
 </Note>
 
 ---
 
-### Línea terrestre
+### Landline
 
-1. Presionar el botón **PHONE** para tomar la línea.
-2. Discar el número de la radio usando el teclado DTMF de la consola.
-3. Una vez establecida la comunicación:
-   - Hablar desde los micrófonos conectados a la MX2100.
-   - Escuchar a Estudios en los auriculares.
-   - La señal de programa (salida de la consola) se envía a la radio a través de la línea.
-4. Para finalizar la comunicación: presionar nuevamente el botón **PHONE**, que quedará en posición hacia afuera, cortando la llamada.
-5. En llamadas entrantes desde la radio:
-   - El **RING** de llamada se escucha en auriculares.
-   - La llamada se atiende directamente desde la consola.
-
----
-
-### Si la comunicación se interrumpe...
-
-- **Teléfono celular:**
-  - El propio celular da por finalizada la llamada.
-  - El operador de MX2100 puede esperar que la radio vuelva a llamar y atender desde el móvil, o presionar **# 9** en la consola para contestar.
-  - El enlace con la radio queda restablecido.
-- **Línea terrestre:**
-  - Si la llamada se corta, soltar el botón **ON-AIR** para iniciar o recibir la nueva comunicación.
-  - En caso de llamada entrante desde la radio:
-    - Se escucha el **RING** en auriculares.
-    - Atender directamente desde la consola pulsando **ON-AIR**.
+1. Press the **PHONE** button to take the line.
+2. Dial the radio station number using the console's DTMF keypad.
+3. Once communication is established:
+   - Speak through the microphones connected to the MX2100.
+   - Listen to Studios through the headphones.
+   - The program signal (console output) is sent to the radio through the line.
+4. To end communication: press the **PHONE** button again, which will remain in the out position, ending the call.
+5. For incoming calls from the radio station:
+   - The call **RING** is heard in headphones.
+   - The call is answered directly from the console.
 
 ---
 
-## Diagrama: transmisión vía celular Bluetooth
+### If communication is interrupted...
+
+- **Mobile Phone:**
+  - The mobile phone itself terminates the call.
+  - The MX2100 operator can wait for the radio station to call back and answer from the mobile, or press **# 9** on the console to answer.
+  - The link with the radio station is reestablished.
+- **Landline:**
+  - If the call drops, release the **ON-AIR** button to initiate or receive new communication.
+  - For incoming calls from the radio station:
+    - The **RING** is heard in headphones.
+    - Answer directly from the console by pressing **ON-AIR**.
+
+---
+
+## Diagram: transmission via Bluetooth mobile
 
 <img
   src="/images/mx2100/mx2100-diagrama.png"
-  alt="Mx2100 Diagrama Pn"
-  title="Mx2100 Diagrama Pn"
+  alt="Mx2100 Diagram Pn"
+  title="Mx2100 Diagram Pn"
   className="mx-auto"
   style={{ width:"65%" }}
 />
 
-- La consola transmite hacia Estudios usando un **celular vinculado por Bluetooth**.
-- Como respaldo de la transmisión puede conectarse una **línea terrestre**.
-- El retorno de Estudios ingresa, por Bluetooth, directamente a la **mezcla de auriculares**.
-- Se envía al aire la mezcla de hasta **tres micrófonos** y **una entrada de línea** (que permite conectar, por ejemplo, un grabador portátil).
+- The console transmits to Studios using a **Bluetooth-paired mobile phone**.
+- A **landline** can be connected as transmission backup.
+- The Studios return feed enters via Bluetooth directly into the **headphone mix**.
+- The mix of up to **three microphones** and **one line input** (which allows connecting, for example, a portable recorder) is sent on air.
 
 <Warning>
-  La conexión de la entrada de línea **anula el micrófono interno (MIC-4)**.
+  Connecting the line input **disables the internal microphone (MIC-4)**.
 </Warning>

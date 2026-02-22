@@ -1,111 +1,119 @@
 ---
-title: "Enlace con laptop + Internet"
-description: "Descripción de la operación cuando se transmite usando un computador externo"
-keywords: ["USB", "enlace", "streaming"]
-tags: ["consolas portátiles", "MX2100"]
+title: "Laptop + Internet Link"
+description: "Operation description when broadcasting using an external computer"
+keywords: ["USB", "link", "streaming"]
+tags: ["portable consoles", "MX2100"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "efe46f0bd751b93950ff396e52dda2b5d05bab4a839689572e95e9cf58f6b416"
+
 ---
 
-## Caso 1: Móvil remoto en tiempo real
+## Case 1: Real-time Remote Broadcasting
 
 <img
   src="/images/mx2100/mx2100-enlace-bluetooth.png"
-  alt="Mx2100 Enlace Bluetooth Pn"
-  title="Mx2100 Enlace Bluetooth Pn"
+  alt="Mx2100 Bluetooth Link Pn"
+  title="Mx2100 Bluetooth Link Pn"
   className="mx-auto"
   style={{ width:"96%" }}
 />
 
-### Sobre la transmisión
+### About Broadcasting
 
-- La comunicación con la radio se establece desde una **laptop conectada por USB** a la MX2100.
-- Alternativamente, puede usarse una **tablet o smartphone conectado por Bluetooth**.
-- El dispositivo móvil utiliza una aplicación de comunicaciones, por ejemplo **Skype®** para comunicarse con los Estudios.
-- Las conexiones a celular por Bluetooth o línea terrestre pueden utilizarse como **respaldo** del enlace vía Internet.
+- Communication with the radio station is established from a **laptop connected via USB** to the MX2100.
+- Alternatively, a **tablet or smartphone connected via Bluetooth** can be used.
+- The mobile device uses a communications application, such as **Skype®** to communicate with the Studio.
+- Cellular connections via Bluetooth or landline can be used as **backup** for the Internet link.
 
 <Warning>
-  En Estudios, conviene que el operador **NO envíe múisica de fondo en el retorno**. \
-  Solo deben enviarse las voces.\
-  En aplicaciones como Skype® la comunicación es _half-duplex_, y la cortina podría provocar interrupciones en el audio del móvil.
+  At the Studio, the operator should **NOT send background music in the return feed**. \
+  Only voices should be sent.\
+  In applications like Skype®, communication is _half-duplex_, and background music could cause interruptions in the remote audio.
 </Warning>
 
 <Note>
-  Si se usara Bluetooth para comunicarse con la radio en una situación de emergencia, el control **MIC-4/LIN/Bluetooth** debe permanecer cerrado para evitar un lazo.\
-  El retorno Bluetooth ingresa directamente a la mezcla de auriculares.
+  If Bluetooth is used to communicate with the radio station in an emergency, the **MIC-4/LIN/Bluetooth** control must remain closed to avoid a feedback loop.\
+  The Bluetooth return feeds directly into the headphone mix.
 </Note>
 
-### Sobre el retorno de Estudios
+### About Studio Return Feed
 
-- La mezcla generada en la consola se envía por USB a la laptop, que la transmite a los Estudios.
-- Desde la laptop, el retorno de Estudios ingresa por USB a la consola, directamente a la **mezcla de auriculares**.
-- La conexión de un micrófono en la entrada **MIC-3** produce la **conmutación del retorno USB** a la mezcla de auriculares.
-- En auriculares, el operador escucha tanto el retorno de Estudios como la mezcla de programa (**MIC-1, MIC-2, MIC-3**).
+- The mix generated in the console is sent via USB to the laptop, which transmits it to the Studio.
+- From the laptop, the Studio return enters the console via USB, directly to the **headphone mix**.
+- Connecting a microphone to the **MIC-3** input triggers the **USB return switching** to the headphone mix.
+- In headphones, the operator hears both the Studio return and the program mix (**MIC-1, MIC-2, MIC-3**).
 
 <Danger>
-  En una comunicación bidireccional con Estudios vía Internet, un micrófono debe conectarse **SIEMPRE a la entrada MIC-3**. Esto asegura que el retorno USB se derive a los auriculares.\
-  Si no se conecta un micrófono a MIC-3:
+  In a two-way communication with Studio via Internet, a microphone must **ALWAYS be connected to the MIC-3 input**. This ensures the USB return is routed to the headphones.\
+  If no microphone is connected to MIC-3:
 
-  - No se escuchará el retorno de Estudios.
-  - La señal USB en el control _MIC-3/USB_ no puede usarse, porque enviaría al aire el retorno de Estudios.
+  - The Studio return will not be heard.
+  - The USB signal on the _MIC-3/USB_ control cannot be used, as it would send the Studio return to air.
 </Danger>
 
 ---
 
-## Caso 2: Comunicación unidireccional de alta calidad
+## Case 2: High-Quality One-Way Communication
 
-El diagrama muestra un escenario donde la consola portátil opera como **estudio remoto**, transmitiendo hacia Estudios mediante un **streaming de audio de alta calidad**.
+The diagram shows a scenario where the portable console operates as a **remote studio**, broadcasting to the main Studio through **high-quality audio streaming**.
 
 <img
   src="/images/mx2100/mx2100-enlace-laptop.jpg"
-  alt="Mx2100 Enlace Laptop Jp"
-  title="Mx2100 Enlace Laptop Jp"
+  alt="Mx2100 Laptop Link Jp"
+  title="Mx2100 Laptop Link Jp"
   className="mx-auto"
   style={{ width:"94%" }}
 />
 
-### Sobre la transmisión
+### About Broadcasting
 
-- La consola se conecta por **USB a una laptop con acceso a Internet**.
-- La comunicación con el Estudio se establece desde la Netbook:
-  - Usando **Solidyne Audicom®** para generar el streaming.
-  - O cualquier otro software de codificación compatible.
+- The console connects via **USB to a laptop with Internet access**.
+- Communication with the Studio is established from the laptop:
+  - Using **Solidyne Audicom®** to generate the stream.
+  - Or any other compatible encoding software.
 
   <Note>
-    Skype® u otras apps de VoIP no aplican en este caso, dado que solo sirve para voz, mientras que aquí se requiere transmitir \*\*audio estéreo \*\*de alta calidad.
+    Skype® or other VoIP apps do not apply in this case, as they are voice-only, while here **stereo audio** high quality transmission is required.
   </Note>
-- Como \*\*respaldo \*\*pueden usarse:
-  - Un celular cableado.
-  - O una línea fija conectada al RJ-11 de la consola.
+- As **backup** options you can use:
+  - A wired cell phone.
+  - Or a landline connected to the console's RJ-11.
 
-### Sobre el retorno de Estudios
+### About Studio Return Feed
 
-- El flujo de datos unidireccional permite enviar audio en **alta calidad**, pero no es posible dialogar con Estudios debido a los retardos del streaming.
-- En esta condición, **toda la señal es generada desde la MX2100**.
-- Si fuera obligatorio tener retorno desde Estudios, se recomienda hacerlo mediante:
-  - Teléfono celular (cableado o vía Bluetooth).
-- El retorno se escucha en auriculares, sin retardo.
+- The one-way data flow allows sending **high-quality** audio, but dialogue with the Studio is not possible due to streaming delays.
+- In this condition, **all signal is generated from the MX2100**.
+- If Studio return feed is mandatory, it is recommended to do it through:
+  - Cell phone (wired or via Bluetooth).
+- The return is heard in headphones, without delay.
 
-### Sobre las señales que pueden manejarse
+### About Available Signals
 
-**Micrófonos y líneas**
+**Microphones and Lines**
 
-- Disponibles: MIC-1 y MIC-2.
-- **MIC-3 queda** **sin conexión**, para habilitar el envío al aire de la entrada USB (audio proveniente de la computadora).
+- Available: MIC-1 and MIC-2.
+- **MIC-3 remains unconnected**, to enable sending the USB input to air (audio from computer).
 
 <Note>
-  La conexión de un micrófono en MIC-3 **produce la conmutación del retorno USB a la mezcla de auriculares**, lo cual corresponde solo al caso de una comunicación bidireccional con Estudios.
+  Connecting a microphone to MIC-3 **triggers the USB return switching to the headphone mix**, which only applies to two-way communication with Studio.
 </Note>
 
-**Teléfono celular**
+**Cell Phone**
 
-- Un celular vinculado vía **Bluetooth** permite sacar al aire un entrevistado o periodista remoto (control _MIC-4/LIN/Bluetooth_).
-- También puede enlazarse una segunda MX2100 vía celular.
+- A cell phone linked via **Bluetooth** allows broadcasting a remote interviewer or journalist (using _MIC-4/LIN/Bluetooth_ control).
+- A second MX2100 can also be linked via cell phone.
 
 <Note>
-  Cuando la consola está conectada por USB (a computadora o cargador), el micrófono interno **MIC-4 se desactiva**, y en su lugar aparece el retorno de Bluetooth.\
-  Esto permite enviar al aire una comunicación telefónica cuando Bluetooth no se usa para enlazar la MX2100 con Estudios (se asume que el enlace principal lo hace la computadora).
+  When the console is connected via USB (to computer or charger), the internal **MIC-4 is disabled**, and the Bluetooth return appears instead.\
+  This allows broadcasting a phone call when Bluetooth is not being used to link the MX2100 with Studio (assuming the main link is done through the computer).
 </Note>
 
 <Warning>
-  La señal Bluetooth está siempre presente en la mezcla de auriculares, con nivel fijo.\
-  Cuando se envía Bluetooth al aire mediante el control _MIC-4/LIN/Bluetooth_, se debe ajustar observando el vúmetro de la consola.
+  The Bluetooth signal is always present in the headphone mix at a fixed level.\
+  When sending Bluetooth to air through the _MIC-4/LIN/Bluetooth_ control, adjust by monitoring the console's VU meter.
 </Warning>

@@ -1,41 +1,49 @@
 ---
-title: "Actualización de firmware"
-description: "Procedimiento para actualizar el software de UNIDEX UX18"
-keywords: ["firmware","update","actualización","UX18"]
-tags: "soporte técnico,mantenimiento"
+title: "Firmware Update"
+description: "Procedure for updating UNIDEX UX18 software"
+keywords: ["firmware","update","UX18"]
+tags: "technical support,maintenance"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "79cd84629412252f0a1d61217a541f42b0344349122ad0befaf2de4368c2e04d"
+
 ---
 
 import discovery from '/snippets/discovery.mdx';
 
-## Actualización de firmware
+## Firmware Update
 
-El software de la consola puede actualizarse desde la interfaz WEB utilizando una computadora con acceso a Internet.
+The console software can be updated from the WEB interface using a computer with Internet access.
 
-Las actualizaciones pueden incluir:
+Updates may include:
 
-- Firmware del motor de mezcla (hardware).
-- Interfaz gráfica.
-- Herramientas de streaming.
+- Mixing engine firmware (hardware).
+- Graphical interface.
+- Streaming tools.
 
-## Procedimiento de actualización
+## Update Procedure
 
-### 1. Conexión a red
+### 1. Network Connection
 
-1. Conectar a la red local los puertos Ethernet **“Streaming Out”** y **“Remote Control”** de la consola.
-2. Verificar que la red tenga acceso a Internet.
-3. En la pantalla principal (vúmetros), verificar la dirección IP asignada a la etapa de streaming.
+1. Connect the console's **"Streaming Out"** and **"Remote Control"** Ethernet ports to the local network.
+2. Verify that the network has Internet access.
+3. On the main screen (VU meters), check the IP address assigned to the streaming stage.
 
 <discovery />
 
-### 2. Acceso a la pantalla de actualización
+### 2. Accessing the Update Screen
 
-Desde una computadora conectada a la misma red:
+From a computer connected to the same network:
 
-1. Abrir un navegador web.
-2. Ingresar la dirección IP de la consola.
-3. Se abrirá la pantalla de actualizaciones.
-4. En el menú de la izquierda, elegir UPDATE.
-5. En el sector derecho se cargará la pantalla de actualizaciones.
+1. Open a web browser.
+2. Enter the console's IP address.
+3. The updates screen will open.
+4. Select UPDATE from the left menu.
+5. The updates screen will load in the right section.
 
 <img
   src="/images/ux24/ux24-update-firmware.png"
@@ -44,14 +52,14 @@ Desde una computadora conectada a la misma red:
   style={{ width:"61%" }}
 />
 
-4. Pulsar **CHECK FOR UPDATES**.
-3. Si hay actualizaciones disponibles, se mostrará un listado con los detalles.
-4. La opción **INSTALL** inicia el proceso de actualización.
+4. Press **CHECK FOR UPDATES**.
+3. If updates are available, a list with details will be displayed.
+4. The **INSTALL** option starts the update process.
 
 <Warning>
-  El sistema **NUNCA INSTALA ACTUALIZACIONES EN FORMA AUTOMÁTICA**. Para instalar una actualización, se requeire la intervención del operador. 
+  The system **NEVER INSTALLS UPDATES AUTOMATICALLY**. Operator intervention is required to install an update.
 </Warning>
 
 <Info>
-  Dependiendo del tipo de actualización, el equipo podrá reiniciarse, INTERRUMPIENDO la señal al aire por algunos segundos.
+  Depending on the type of update, the equipment may restart, INTERRUPTING the on-air signal for a few seconds.
 </Info>

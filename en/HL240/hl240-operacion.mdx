@@ -1,83 +1,91 @@
 ---
-title: "Operación"
-description: "Operación y puesta al aire"
-keywords: ["operación"]
-tags: ["híbridos", "HL240"]
+title: "Operation"
+description: "Operation and on-air procedures"
+keywords: ["operation"]
+tags: ["hybrids", "HL240"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "bbc86fb232573e76026df1a013d55f7fc8715c84a46f316421047581ab9f31c9"
+
 ---
 
-## Líneas terrestres
+## Landlines
 
-Las líneas telefónicas se manejan con un **botón** y una **perilla de nivel**:
+Telephone lines are controlled with a **button** and a **level knob**:
 
 <img
   src="/images/hl240/hl204-frente-lineas.png"
-  alt="Hl204 Frente Lineas Pn"
-  title="Hl204 Frente Lineas Pn"
+  alt="Hl204 Front Lines Pn"
+  title="Hl204 Front Lines Pn"
   className="mx-auto"
   style={{ width:"57%" }}
 />
 
-- **ON**: toma la línea telefónica.
-- **Rotativo-HOLD**: En esta posicoón (todo a hacia la izquierda) retiene la llamada con audio de aire.
-- **Rotativo-AIRE**: Hacia la derecha, ajusta el nivel en la mezcla de salida.
-- **OFF**: libera la línea y la devuelve al teléfono asociado.
+- **ON**: Picks up the phone line.
+- **Rotary-HOLD**: In this position (fully left) holds the call with program audio.
+- **Rotary-AIR**: Towards the right, adjusts the level in the output mix.
+- **OFF**: Releases the line back to the associated telephone.
 
-Cuando ingresa una llamada, el botón de la línea se ilumina con la cadencia del timbre.\
-La llamada también sonará en el teléfono asociado.
+When a call comes in, the line button flashes in sync with the ring pattern.\
+The call will also ring on the associated telephone.
 
-- Para **atender desde el HL240-VQ**, pulsar el botón de la línea.
-- Para **llamar desde el estudio**, discar en el teléfono y luego transferir al HL240-VQ pulsando el botón de línea y colgando el auricular.
+- To **answer from the HL240-VQ**, press the line button.
+- To **call from the studio**, dial on the telephone and then transfer to the HL240-VQ by pressing the line button and hanging up.
 
 <Tip>
-  **Para conferencia:** si hay una llamada al aire, colocar la segunda en **HOLD** antes de tomarla, evitando que se sume directamente al aire.\
-  Mientras está en HOLD, la persona escucha el programa que está al aire.
+  **For conference calls:** if there's a call on-air, put the second call on **HOLD** before picking up, to prevent it from going directly on-air.\
+  While on HOLD, the caller hears the program that's on-air.
 </Tip>
 
 ---
 
-## Móviles vía Bluetooth
+## Mobile phones via Bluetooth
 
-HL240-VQ maneja hasta **dos teléfonos móviles vinculados por Bluetooth**.
+HL240-VQ handles up to **two mobile phones connected via Bluetooth**.
 
 <img
   src="/images/hl240/hl240-frente-BLT.png"
-  alt="Hl240 Frente BLT Pn"
-  title="Hl240 Frente BLT Pn"
+  alt="Hl240 Front BLT Pn"
+  title="Hl240 Front BLT Pn"
   className="mx-auto"
   style={{ width:"42%" }}
 />
 
-La operación es similar a trabajar con líneas terrestres:
+Operation is similar to working with landlines:
 
-- Pulsar y mantener el botón **BLT** para encender el canal (LED destellando).
-- Encender Bluetooth en el móvil ya vinculado.
-- Conectar el móvil al dispositivo Solidyne BLT-1 o BLT-2.
-- Las llamadas entrantes o salientes del móvil cursan a través del canal Bluetooth.
+- Press and hold the **BLT** button to turn on the channel (LED flashing).
+- Enable Bluetooth on the previously paired mobile phone.
+- Connect the mobile to the Solidyne BLT-1 or BLT-2 device.
+- Incoming or outgoing mobile calls route through the Bluetooth channel.
 
 <Note>
-  Para evitar interferencias, mantener la distancia entre el móvil y el HL240-VQ lo más corta posible.
+  To avoid interference, keep the distance between the mobile phone and the HL240-VQ as short as possible.
 </Note>
 
 ---
 
-## Recibir una llamada
+## Receiving a call
 
-Las llamadas entrantes (línea terrestre o móvil) pueden atenderse desde el teléfono asociado o desde el HL240-VQ.\
-Los botones **LINE** y **BLT** destellan con la cadencia del timbre.
+Incoming calls (landline or mobile) can be answered from either the associated telephone or the HL240-VQ.\
+The **LINE** and **BLT** buttons flash in sync with the ring pattern.
 
-- **Bluetooth**: un toque en el botón BLT atiende la llamada en el móvil. Si se desea atender y dialogar desde el teléfono, primero debe desconectarse de Bluetooth y luego reconectar para transferir al híbrido.
-- **Líneas terrestres**: pulsar **ON/OFF** para que el híbrido tome la línea. También se puede atender desde el teléfono asociado y transferir al HL240-VQ pulsando ON/OFF antes de colgar.
+- **Bluetooth**: a single press of the BLT button answers the call on the mobile. To answer and talk from the phone, first disconnect from Bluetooth then reconnect to transfer to the hybrid.
+- **Landlines**: press **ON/OFF** for the hybrid to pick up the line. You can also answer from the associated telephone and transfer to the HL240-VQ by pressing ON/OFF before hanging up.
 
 ---
 
-## Llamada en espera y talk-back
+## Call hold and talk-back
 
-El equipo siempre envía retorno de audio al teléfono remoto, independientemente de la perilla de nivel.
+The unit always sends return audio to the remote telephone, regardless of the level knob position.
 
-- Con la perilla en posición **HOLD** y una llamada activa, el audio de la línea no se suma a la salida, pero el otro extremo escucha el programa en curso (señal de **AUDIO IN**).
-- En esta condición, se puede hablar a las líneas usando el micrófono **Talkback** integrado.
+- With the knob in **HOLD** position and an active call, the line audio is not mixed to the output, but the other end hears the current program (**AUDIO IN** signal).
+- In this state, you can talk to the lines using the built-in **Talkback** microphone.
 
-  Al pulsar **Talkback** se interrumpe temporalmente la señal de AUDIO IN y envía la voz del operador **a todas las líneas**.
+  Pressing **Talkback** temporarily interrupts the AUDIO IN signal and sends the operator's voice **to all lines**.
 
   <img
     src="/images/hl240/hl240-talkback.png"
@@ -88,72 +96,72 @@ El equipo siempre envía retorno de audio al teléfono remoto, independientement
   />
 
 <Warning>
-  Talkback **no debe usarse cuando hay una llamada al aire**, ya que interrumpe el audio de programa hacia el interlocutor.
+  Talkback **should not be used when a call is on-air**, as it interrupts the program audio to the caller.
 </Warning>
 
-Las líneas se pueden escuchar monitoreando el canal HL240-VQ en la consola de mezcla. También se pueden usar auriculares conectados “HEADPHONES” en el panel trasero de la unidad.
+Lines can be monitored through the HL240-VQ channel on the mixing console. Headphones connected to "HEADPHONES" on the rear panel can also be used.
 
 ---
 
-## Puesta al aire
+## Going on-air
 
-El HL240-VQ incluye un mezclador interno para conferencias.\
-La mezcla se ajusta con las perillas del panel frontal y se envía a la consola mediante **AUDIO OUT**.
+The HL240-VQ includes an internal conference mixer.\
+The mix is adjusted with the front panel knobs and sent to the console through **AUDIO OUT**.
 
 <Steps>
-  <Step title="Enviar a la mezcla de salida">
-    Colocar la perilla de nivel en el centro. Si hablamos en privado con la línea fuera del aire, aprovechar este momento para ajustar el nivel.
+  <Step title="Send to output mix">
+    Set the level knob to center position. If talking privately with the line off-air, use this moment to adjust the level.
   </Step>
-  <Step title="Habilitar en consola">
-    Abrir en la consola el canal asignado al HL240-VQ.
+  <Step title="Enable on console">
+    Open the console channel assigned to the HL240-VQ.
   </Step>
-  <Step title="Ajustar nivel al aire">
-    Si no hubo charla previa (o fue desde el teléfono), realizar el ajuste final de nivel en vivo desde el HL240-VQ. Los picos en el indicador **OUTPUT LEVEL** a +4 dBu.
+  <Step title="Adjust on-air level">
+    If there was no previous chat (or it was from the telephone), make the final level adjustment live from the HL240-VQ. Peaks on the **OUTPUT LEVEL** indicator at +4 dBu.
   </Step>
 </Steps>
 
 ---
 
-## Finalizar la llamada
+## Ending the call
 
-- **En líneas telefónicas**:
-  - OFF desconecta la línea del híbrido y la devuelve al teléfono asociado.
-  - Si se presiona OFF con el teléfono colgado durante una llamada, la comunicación se corta.
-  - Para transferir al teléfono, primero sacar la llamada del aire, descolgar y luego presionar OFF.
-- **En canales Bluetooth**:
-  - Pulsar brevemente el botón BLT o cortar desde el móvil.
-  - Antes de cortar, retirar la llamada del aire.
-  - Si se corta directamente desde HL240-VQ, se emitirá un _beep_ de finalización que podría salir al aire.
+- **On telephone lines**:
+  - OFF disconnects the line from the hybrid and returns it to the associated telephone.
+  - If OFF is pressed with the telephone on-hook during a call, the communication ends.
+  - To transfer to the telephone, first take the call off-air, pick up the handset and then press OFF.
+- **On Bluetooth channels**:
+  - Briefly press the BLT button or end from the mobile phone.
+  - Before ending, take the call off-air.
+  - If ended directly from HL240-VQ, an end _beep_ will sound that could go on-air.
 
 ---
 
-## Nivel de envío a las líneas
+## Send level to lines
 
-El audio que se envía a las líneas entra por **AUDIO IN**.\
-El control **INPUT LEVEL (Send to Lines)** ajusta este nivel.
+Audio sent to the lines enters through **AUDIO IN**.\
+The **INPUT LEVEL (Send to Lines)** control adjusts this level.
 
-El nivel de envío debe mantenerse con picos entre **–2 y +4 dBu**.
+The send level should maintain peaks between **–2 and +4 dBu**.
 
 <Warning>
-  Un envío excesivo deteriora el rechazo, generando realimentación de señal por la línea y ensuciando la voz directa.
+  Excessive send level deteriorates rejection, generating signal feedback through the line and contaminating direct voice.
 </Warning>
 
 ---
 
-## Nivel de salida
+## Output level
 
-La salida balanceada entrega la mezcla de líneas y canales Bluetooth.\
-Ajustar las perillas de nivel para que el indicador **OUTPUT LEVEL** muestre picos en **\+4 dBu**.
+The balanced output delivers the mix of lines and Bluetooth channels.\
+Adjust the level knobs so the **OUTPUT LEVEL** indicator shows peaks at **+4 dBu**.
 
-Esto asegura una correcta excitación del procesado **VQR**.
+This ensures proper drive to the **VQR** processing.
 
 <Note>
-  Al operar con Bluetooth, verificar que el volumen del móvil esté al máximo.
+  When operating with Bluetooth, verify the mobile phone volume is at maximum.
 </Note>
 
-### Salidas directas
+### Direct outputs
 
-Las salidas **PH-1** y **BLT-1** entregan señal **pre-fader** con nivel fijo.\
-Permiten monitorear Línea-1 y Bluetooth-1 en la consola, incluso si otras líneas están al aire.
+The **PH-1** and **BLT-1** outputs deliver **pre-fader** signal at fixed level.\
+They allow monitoring Line-1 and Bluetooth-1 on the console, even if other lines are on-air.
 
-Aunque se usen las salidas directas, las señales siguen disponibles en la mezcla principal del HL240-VQ.
+Even when using direct outputs, the signals remain available in the main HL240-VQ mix.

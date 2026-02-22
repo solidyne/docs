@@ -1,106 +1,114 @@
 ---
-title: "Grabación"
-description: "Grabación de la mezcla de micrófonos"
-keywords: ["grabación"]
-tags: ["consolas de estudio", "línea Classic", "minimixer"]
+title: "Recording"
+description: "Recording microphone mix"
+keywords: ["recording"]
+tags: ["studio consoles", "Classic line", "minimixer"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d020736ed82664208b2ffb3377eec4b628cc0edbd35cb22d671a6f608807254f"
+
 ---
 
-El **MiniMixer** permite grabar la mezcla de micrófonos en la computadora al mismo tiempo que se transmiten contenidos desde la misma PC.
+The **MiniMixer** allows recording the microphone mix to the computer while simultaneously broadcasting content from the same PC.
 
-La salida **MIC REC** entrega la mezcla de micrófonos (post compresor), disponible incluso cuando los canales de micrófono están apagados.
+The **MIC REC** output delivers the microphone mix (post-compressor), available even when microphone channels are turned off.
 
 ---
 
-## Diagrama de conexión
+## Connection Diagram
 
 <Frame  className="bg-white p-4 rounded-xl">
   <img
     src="/images/minimixer/minimixer-grabacion.png"
-    alt="Minimixer Grabacion Pn"
-    title="Minimixer Grabacion Pn"
+    alt="Minimixer Recording Pn"
+    title="Minimixer Recording Pn"
     className="mx-auto"
     style={{ width:"80%" }}
   />
 </Frame>
 
-### Conexión básica
+### Basic Connection
 
-- La computadora debe contar con una entrada de línea analógica (habitual en equipos de escritorio tipo tower o mini-tower).
-- El cable divisor en “Y” conecta en paralelo los tres TRS.
-  - Puede adquirirse junto con el kit de cables **Solidyne MNG-Mini** (ver sección Cables y Accesorios).
-  - También puede usarse cualquier divisor estándar tipo “Y” TRS 1/8” → 2 × TRS 1/8” hembra, con cables TRS-TRS hacia la entrada LINE IN de la consola y de la computadora.
-- El software de grabación debe configurarse para trabajar con la entrada y salida de línea internas de la PC (u otra interfaz de audio que se haya conectado para la grabación de micrófonos).
-- En el diagrama de referencia, los altavoces aparecen conectados directamente a la salida de la computadora.
+- The computer must have an analog line input (common in desktop or mini-tower PCs).
+- The "Y" splitter cable connects the three TRS in parallel.
+  - Can be purchased with the **Solidyne MNG-Mini** cable kit (see Cables and Accessories section).
+  - Any standard "Y" splitter TRS 1/8" → 2 × TRS 1/8" female can be used, with TRS-TRS cables to the LINE IN input of the console and computer.
+- The recording software must be configured to work with the PC's internal line input and output (or other audio interface connected for microphone recording).
+- In the reference diagram, speakers appear connected directly to the computer output.
 
 ---
 
-### Conexión alternativa con interfaz ASIO
+### Alternative Connection with ASIO Interface
 
-Si se dispone de una interfaz de audio con soporte **ASIO**:
+If you have an audio interface with **ASIO** support:
 
-- La salida de la interfaz ASIO puede conectarse directamente a la entrada **LINE IN** del MiniMixer.
-- Se debe utilizar un software con soporte ASIO (ej.: **Reaper**, **Vegas**, **Audition**).
-- Durante la grabación, el monitoreo interno de entrada se activa en el canal del software, mientras que los micrófonos se escuchan en MiniMixer a través de **LINE IN**.
-- Durante la reproducción, el material grabado se reproduce directamente hacia la consola.
+- The ASIO interface output can connect directly to MiniMixer's **LINE IN**.
+- Software with ASIO support must be used (e.g.: **Reaper**, **Vegas**, **Audition**).
+- During recording, internal input monitoring is activated on the software channel, while microphones are heard through MiniMixer's **LINE IN**.
+- During playback, recorded material plays directly to the console.
 
 <Warning>
-  Las placas de audio integradas en las PC suelen presentar latencias de ~0,5 segundos, lo que hace imposible monitorear la propia voz en tiempo real.\
-  En estos casos, la conexión debe resolverse mediante el esquema básico explicado anteriormente.
+  Built-in PC sound cards usually have latencies of ~0.5 seconds, making it impossible to monitor your own voice in real-time.\
+  In these cases, connection must be done using the basic scheme explained above.
 </Warning>
 
 ---
 
-### Procedimiento de grabación
+### Recording Procedure
 
 <Steps>
-  <Step title="Reproducir programación desde la computadora">
-    La PC reproduce la programación de **Audicom-MX** (u otro software) que ingresa por USB al MiniMixer (fader #4).\
-    El VUmetro de la consola debe marcar picos en **0 VU** para mantener el nivel correcto de streaming.
+  <Step title="Play programming from computer">
+    The PC plays **Audicom-MX** programming (or other software) entering via USB to MiniMixer (fader #4).\
+    The console's VU meter should show peaks at **0 VU** to maintain correct streaming level.
   </Step>
-  <Step title="Configurar el estado de micrófonos">
-    El botón **MASTER MIC** debe estar **apagado**, ya que los micrófonos no deben salir al aire.\
-    La luz de aire permanece apagada.
+  <Step title="Configure microphone status">
+    The **MASTER MIC** button must be **off**, as microphones should not go on air.\
+    The on-air light remains off.
   </Step>
-  <Step title="Monitorear transmisión o grabación">
-    - Para monitorear en auriculares la transmisión de streaming: presionar el botón **PGM** en la zona **CUE MONITOR**.
-    - Para grabar: mantener este botón liberado, de modo de no escuchar la transmisión.
+  <Step title="Monitor transmission or recording">
+    - To monitor streaming transmission in headphones: press **PGM** button in **CUE MONITOR** zone.
+    - For recording: keep this button released to avoid hearing the transmission.
   </Step>
-  <Step title="Enviar micrófonos a la salida de grabación">
-    Levantar los faders de **MIC-1**, **MIC-2** y **MIC 3+4**.\
-    Ajustar niveles observando el indicador **MIC COMP**, que debe mostrar dos LEDs encendidos.
+  <Step title="Send microphones to recording output">
+    Raise the **MIC-1**, **MIC-2** and **MIC 3+4** faders.\
+    Adjust levels watching the **MIC COMP** indicator, which should show two LEDs lit.
   </Step>
-  <Step title="Monitorear durante la grabación">
-    Utilizar auriculares conectados a la consola.
+  <Step title="Monitor during recording">
+    Use headphones connected to the console.
 
-    - Si hay altavoces en **Headphone-1**, deben silenciarse para evitar acoples, ya que al no encenderse la luz de aire no actúa el silenciado automático.
+    - If there are speakers in **Headphone-1**, they must be muted to prevent feedback, since automatic muting doesn't activate when the on-air light is off.
   </Step>
-  <Step title="Escuchar mezcla de micrófonos en auriculares">
-    En la zona **PHONE**:
+  <Step title="Listen to microphone mix in headphones">
+    In the **PHONE** zone:
 
-    - Colocar **PHONE/LINE IN** en posición **LINE IN**.
-    - Poner **CUE/PGM** en posición **CUE**.
-    - Llevar el control de nivel al máximo.\
-      El ajuste final del volumen se realiza con el control de **CUE MONITOR**.
+    - Set **PHONE/LINE IN** to **LINE IN** position.
+    - Set **CUE/PGM** to **CUE** position.
+    - Set level control to maximum.\
+      Final volume adjustment is done with the **CUE MONITOR** control.
   </Step>
-  <Step title="Reproducir la grabación">
-    Ejecutar el archivo desde la computadora y escucharlo mediante altavoces o auriculares conectados a la misma.
+  <Step title="Play the recording">
+    Play the file from the computer and listen through speakers or headphones connected to it.
   </Step>
 </Steps>
 
 <Tip>
-  **Monitoreo en reproducción**
+  **Playback monitoring**
 
-  Si la computadora monitorea mediante altavoces:
+  If the computer monitors through speakers:
 
-  - Conviene cerrar totalmente el nivel en la zona **PHONE**, o bajar los faders de micrófonos, para evitar que los auriculares reciban filtraciones de audio de los parlantes.
+  - It's advisable to fully close the level in the **PHONE** zone, or lower the microphone faders, to prevent audio leakage from speakers into the headphones.
 </Tip>
 
 ---
 
-### Software de grabación
+### Recording Software
 
-- **Audacity** (instalado junto con Audicom-MX): editor multipista de código libre ([www.audacityteam.org](http://www.audacityteam.org)).
-  - Permite grabar la voz en una pista y luego sumar música y efectos en pistas adicionales.
-- **HDCorder**: editor incluido en Audicom-MX para grabaciones y ediciones simples.
+- **Audacity** (installed with Audicom-MX): open-source multitrack editor ([www.audacityteam.org](http://www.audacityteam.org)).
+  - Allows recording voice on one track and then adding music and effects on additional tracks.
+- **HDCorder**: editor included in Audicom-MX for simple recordings and edits.
 
-Consultar la documentación de **Audicom** para mayor detalle.
+Refer to **Audicom** documentation for more details.

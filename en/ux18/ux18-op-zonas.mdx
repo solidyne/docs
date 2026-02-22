@@ -1,96 +1,104 @@
 ---
-title: "Operación de UX18"
-description: "Operación de UX18 - Areas en la superficie de la consola"
-keywords: ["operación","panel","pantalla principal","grupos","monitoreo"]
-tags: ["consolas IP", "UNIDEX,UX18"]
+title: "UX18 Operation"
+description: "UX18 Operation - Console surface areas"
+keywords: ["operation","panel","main screen","groups","monitoring"]
+tags: ["IP consoles", "UNIDEX,UX18"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "90589cf4f67448b6c0f81e2f86feac95a1156f04ac1524467d6572ce89ccd211"
+
 ---
 
-## Zonas y controles del panel principal UX18
+## UX18 Main Panel Zones and Controls
 
 <img
   src="/images/ux24/UX18-cenital_zonas.png"
-  alt="UX18 Superficie"
-  title="UX18 Superficie"
+  alt="UX18 Surface"
+  title="UX18 Surface"
   className="mx-auto"
   style={{ width:"65%" }}
 />
 
-**A — Controles de canal**\
-Controles tradicionales con faders, botones de asignación, puesta al aire y escucha previa (PFL).\
-Se operan de forma convencional y permiten manejar directamente comunicaciones de línea, VoIP y celulares vía Bluetooth (mediante adaptadores UDX TELCO).
+**A — Channel Controls**\
+Traditional controls with faders, assignment buttons, on-air and pre-fader listen (PFL).\
+They operate conventionally and allow direct control of line communications, VoIP and cellular via Bluetooth (through UDX TELCO adapters).
 
-**B — Grupos**\
-4 GRUPOS manejan \*\*sub-mezclas \*\*de canales. Se pueden asignar a los grupos los canales 7 al 18. Las sub-mezclas de cada grupo se controlan desde un mixer en pantalla que aparece pulsando el acceso directo GROUPS.
+**B — Groups**\
+4 GROUPS handle channel **submixes**. Channels 7 through 18 can be assigned to groups. Each group's submixes are controlled from an on-screen mixer that appears by pressing the GROUPS shortcut.
 
-**C — Pantalla táctil**\
-Pantalla de 7" utilizada para operar múltiples funciones de la consola. Incluye 4 botones contextuales de acceso rápido y un encoder rotativo con pulsador.
+**C — Touch Screen**\
+7" screen used to operate multiple console functions. Includes 4 contextual shortcut buttons and a rotary encoder with push button.
 
-**D — Monitoreo y órdenes**\
-Área destinada al control de monitoreo y al circuito de talkback.
+**D — Monitoring and Talkback**\
+Area dedicated to monitoring control and talkback circuit.
 
-## Pantalla principal
+## Main Screen
 
-### Indicadores de nivel
+### Level Meters
 
-Los indicadores **PGM**, **REC**, **AUX** y **VBUS** muestran:
+The **PGM**, **REC**, **AUX** and **VBUS** meters display:
 
-- Nivel promedio en **VU** (barra azul de movimiento lento).
-- Nivel de pico en **dBfs** (segmento amarillo flotante).
+- Average level in **VU** (slow-moving blue bar).
+- Peak level in **dBfs** (floating yellow segment).
 
-La escala está tabulada en dBfs, donde **–20 dBfs corresponde a 0 VU**.\
-El valor numérico a la derecha indica el máximo actual (en VU o dBfs) y se conmuta tocando sobre el número.\
-El indicador principal permanece visible en todas las pantallas y se puede cambiar de bus tocando el nombre del bus sobre la izquierda.
+The scale is calibrated in dBfs, where **-20 dBfs equals 0 VU**.\
+The numerical value on the right shows the current maximum (in VU or dBfs) and toggles by touching the number.\
+The main meter remains visible on all screens and can be switched between buses by touching the bus name on the left.
 
 <Tip>
-  **Nota sobre niveles:**\
-  Los indicadores muestran el nivel del **bus**.
+  **Note about levels:**\
+  The meters show the **bus** level.
 
-  - En salidas digitales, el nivel coincide con el de salida si la ganancia está en 0.
-  - En salidas analógicas, 0 VU = –20 dBfs, con niveles nominales de **\+4 dBu** (balanceadas) y **0 dBu** (no balanceadas).\
-    Si se fija un nivel de ganancia superior al nominal, se reduce el margen de sobrecarga y puede haber recorte antes de que el indicador lo muestre.
+  - On digital outputs, the level matches the output level if gain is at 0.
+  - On analog outputs, 0 VU = -20 dBfs, with nominal levels of **+4 dBu** (balanced) and **0 dBu** (unbalanced).\
+    If a gain level higher than nominal is set, headroom is reduced and clipping may occur before the meter shows it.
 </Tip>
 
 ### CUE Level
 
-Indica el nivel del bus **CUE**, después de la perilla física de nivel.
+Shows the **CUE** bus level, after the physical level knob.
 
 ### Status
 
-- **Unidex IP:** Dirección IP para control remoto. Ingresar en un navegador web (recomendado: Google Chrome) para acceder a la interfaz de control. Requiere conexión del puerto _Ethernet Remote Control_ a la LAN.
-- **Stream IP:** Dirección IP del módulo de streaming. Ingresar en un navegador para configurar servicios de streaming. Requiere conexión del puerto _Ethernet Streaming_ a la LAN.
-- **SCENE:** Nombre de la escena actualmente activa.
-- **USER:** Perfil de usuario activo (ADMIN, EXPERT o BASIC).
-- **MSG:** Mensajes del sistema.
-- **“+” Avanzado:** Abre opciones de mantenimiento (incluye apagado del CPU interno antes de cortar energía).
+- **Unidex IP:** IP address for remote control. Enter in a web browser (recommended: Google Chrome) to access the control interface. Requires connecting the _Ethernet Remote Control_ port to the LAN.
+- **Stream IP:** Streaming module IP address. Enter in a browser to configure streaming services. Requires connecting the _Ethernet Streaming_ port to the LAN.
+- **SCENE:** Currently active scene name.
+- **USER:** Active user profile (ADMIN, EXPERT or BASIC).
+- **MSG:** System messages.
+- **"+" Advanced:** Opens maintenance options (includes internal CPU shutdown before powering off).
 
-### Reloj central
+### Central Clock
 
-Muestra la hora actual.\
-Se sincroniza automáticamente si la consola está conectada a Internet, o de forma manual (ver pantalla SETTINGS -\> SYS CONFIG).
+Shows current time.\
+Synchronizes automatically if the console is connected to the Internet, or manually (see SETTINGS -> SYS CONFIG screen).
 
-### Contador EN EL AIRE
+### ON AIR Counter
 
-Inicia una cuenta ascendente (**hh:mm:ss**) al activar micrófonos. Al apagarlos, el valor permanece en pantalla.
+Starts an ascending count (**hh:mm:ss**) when microphones are activated. When turned off, the value remains on screen.
 
-### Botones de acceso rápido
+### Quick Access Buttons
 
-4 botones ubicados a la derecha de la pantalla ofrecen acceso rápido a funciones principales.
+4 buttons located to the right of the screen provide quick access to main functions.
 
-1. \*\*HOME \*\*Llama a la pantalla principal.
-2. \*\*GROUPS \*\*Muestra los controles de asignación y sub-mezclas de grupos.
-3. \*\*TELCO \*\*Interfaz para manejo de los canales asignados a líneas telefónicas y teléfonos Bluetooth.
-4. \*\*MONITOR \*\*Muestra la asignación de fuentes de audio para el Estudio y la Cabina de Control. Contiene funciones avanzadas relacionadas al monitoreo en parlantes y auriculares.
+1. **HOME** Calls up the main screen.
+2. **GROUPS** Shows group assignment and submix controls.
+3. **TELCO** Interface for managing channels assigned to telephone lines and Bluetooth phones.
+4. **MONITOR** Shows audio source assignment for Studio and Control Room. Contains advanced functions related to speaker and headphone monitoring.
 
-### MENÚ en la pantalla principal
+### MENU on Main Screen
 
-Accesos directos en la pantalla principal:
+Direct access on main screen:
 
-- **SETTINGS:** Configuración avanzada y del sistema (solo ADMIN).
-- **SCENE:** Gestión de escenas y perfiles de usuario. También el asistente CHANNEL MAP.
-- **PROCESS:** Acceso a ecualización, compresión, de-esser y compuerta de ruido.
-- **VIRTUAL:** Accede la pantalla de control de los canales virtuales. Cuando un canal virtual está está activado, VIRTUAL destella en rojo.
-- **CHANNEL:** Información y control del canal seleccionado, incluyendo ganancia, paneo, procesadores y reasignación de fuente.
+- **SETTINGS:** Advanced and system configuration (ADMIN only).
+- **SCENE:** Scene and user profile management. Also the CHANNEL MAP wizard.
+- **PROCESS:** Access to equalization, compression, de-esser and noise gate.
+- **VIRTUAL:** Accesses virtual channel control screen. When a virtual channel is active, VIRTUAL flashes red.
+- **CHANNEL:** Selected channel information and control, including gain, panning, processors and source reassignment.
 
 <Note>
-  **Modo ahorro de energía** Las pantallas se apagan tras 15 minutos de inactividad. Se reactivan moviendo un fader o pulsando un botón Intercom.
+  **Power saving mode** Screens turn off after 15 minutes of inactivity. They reactivate by moving a fader or pressing an Intercom button.
 </Note>

@@ -1,112 +1,120 @@
 ---
-title: "Canales: Configuración y uso"
-description: "Operación de UX24 - Canales"
-keywords: ["operación","canales","faders","virtual","select","oled"]
-tags: "consolas IP,UNIDEX,UX24,UX6"
+title: "Channels: Configuration and Use"
+description: "UX24 Operation - Channels"
+keywords: ["operation","channels","faders","virtual","select","oled"]
+tags: "IP consoles,UNIDEX,UX24,UX6"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "8259f906a9fc27071443ca97b273b83da542a429f8b55a7b7eed7d5412d9540a"
+
 ---
 
-## Canales físicos
+## Physical Channels
 
-La consola **UNIDEX UX24** dispone de 24 canales. El gabinete principal presenta 12 canales físicos con atenuadores soft-touch de 100 mm.
+The **UNIDEX UX24** console features 24 channels. The main unit has 12 physical channels with 100mm soft-touch faders.
 
-Otros 12 canales pueden operarse desde la **pantalla táctil** o de forma remota vía web. Opcionalmente, se pueden agregar hasta dos módulos de **expansión UX6** (6 atenuadores cada uno) para alcanzar 18 o 24 canales físicos.
+An additional 12 channels can be operated from the **touchscreen** or remotely via web. Optionally, up to two **UX6 expansion** modules (6 faders each) can be added to reach 18 or 24 physical channels.
 
 <img
   src="/images/ux24/ux24-operacion-canales.jpg"
-  alt="Canal fisico"
-  title="Canal fisico"
+  alt="Physical channel"
+  title="Physical channel"
   style={{ width:"20%" }}
   className="mx-auto"
 />
 
 **1   BUSES**
 
-La señal en cada canal se puede asignar a 4 buses de mezcla: **PGM**, **REC**, **AUX** y **VBUS**.
+The signal in each channel can be assigned to 4 mix buses: **PGM**, **REC**, **AUX** and **VBUS**.
 
-- En canales físicos, la asignación a PGM, REC y AUX se realiza mediante tres botones de acceso rápido. Cuando el canal está asignado, el botón se ilumina en naranja.
-- Para todos los canales, la asignación a VBUS se hace desde la pantalla CHANNEL en el menú principal o desde el control web.
-
-<br />
-
-**2   BOTÓN CUE/SELECT**
-
-Cumple tres funciones:
-
-- **CUE:** Escucha previa (_pre-fader_). Permite escuchar la señal presente en el canal previo al atenuador y al botón ON-AIR.
-- **SELECT:** Selección del canal para ajustes y configuración.
-- **TALKBACK:** El modo TALK-BACK se utiliza en comunicaciones (canalales TELCO y USB asignados a software de llamadas). Manteniendo pulsado CUE se activa el micrófono de talk-back para hablar.
+- On physical channels, assignment to PGM, REC and AUX is done through three quick access buttons. When the channel is assigned, the button lights up orange.
+- For all channels, VBUS assignment is done from the CHANNEL screen in the main menu or from web control.
 
 <br />
 
-**3   BOTÓN ON-AIR**
+**2   CUE/SELECT BUTTON**
 
-Activa el canal.\
-Cuando está encendido, la señal se envía a los buses asignados según el nivel del atenuador.
+Serves three functions:
+
+- **CUE:** Pre-fader listening. Allows monitoring the signal present in the channel before the fader and ON-AIR button.
+- **SELECT:** Channel selection for settings and configuration.
+- **TALKBACK:** TALK-BACK mode is used in communications (TELCO and USB channels assigned to call software). Holding CUE activates the talk-back microphone.
 
 <br />
 
-**4   DISPLAY OLED**
+**3   ON-AIR BUTTON**
 
-Muestra:
+Activates the channel.\
+When on, the signal is sent to the assigned buses according to the fader level.
 
-- Nivel de señal previo al atenuador. La indicación **CLIP** indica que la señal de entrada alcanza 0 dBfs y requiere reducir la ganancia.
-- Nombre o etiqueta del canal.
-- Estado en modos especiales como SELECT o TELCO.
+<br />
+
+**4   OLED DISPLAY**
+
+Shows:
+
+- Pre-fader signal level. The **CLIP** indication shows that the input signal reaches 0 dBfs and requires gain reduction.
+- Channel name or label.
+- Status in special modes like SELECT or TELCO.
 
   <Note>
-    **Sobre brillo de los OLED**\
-    El brillo se reduce tras 5 minutos de inactividad y se apaga a los 15 minutos.\
-    Cualquier acción sobre los controles reactiva la pantalla.
+    **About OLED brightness**\
+    Brightness reduces after 5 minutes of inactivity and turns off after 15 minutes.\
+    Any control action reactivates the display.
   </Note>
 
 <br />
 
-**5   ATENUADOR (FADER) PRINCIPAL**
+**5   MAIN FADER**
 
-Controla el nivel de la señal en los buses de mezcla.\
-Si el nivel se modifica desde la pantalla CHANNEL o remotamente vía web, el valor de atenuación real puede no coincidir con la posición física del fader (no motorizado). En ese caso, la pantalla OLED destella mostrando el valor actual.\
-Moviendo el atenuador, el valor se sincroniza progresivamente.
+Controls signal level in the mix buses.\
+If the level is modified from the CHANNEL screen or remotely via web, the actual attenuation value may not match the physical fader position (non-motorized). In this case, the OLED display flashes showing the current value.\
+Moving the fader progressively synchronizes the value.
 
-## La función SELECT
+## The SELECT Function
 
-El modo **SELECT** convierte temporalmente los botones **CUE** en botones de selección de canal.\
-Cuando está activo, los botones CUE se iluminan en azul y las pantallas OLED de los canales muestran el texto SELECT.
+**SELECT** mode temporarily converts the **CUE** buttons into channel selection buttons.\
+When active, CUE buttons light up blue and channel OLED displays show SELECT text.
 
-Esta función se utiliza para elegir un canal y visualizarlo o realizar ajustes sobre él.\
-La pantalla muestra la información de un único canal a la vez.\
-Por ejemplo, para ajustar un ecualizador, el operador debe seleccionar primero el canal correspondiente para visualizar sus controles.
+This function is used to choose a channel and view or adjust its settings.\
+The screen shows information for only one channel at a time.\
+For example, to adjust an equalizer, the operator must first select the corresponding channel to view its controls.
 
-### Activación del modo SELECT
+### Activating SELECT Mode
 
-El modo SELECT se activa en cualquiera de las siguientes situaciones:
+SELECT mode activates in any of these situations:
 
-- Al pulsar **CHANNEL** en la pantalla principal.
-- Al pulsar **PROCESS** en la pantalla principal.
-- Al pulsar **SELECT** en la pantalla CHANNEL o en una pantalla de procesos (EQ, compresor, etc.).
+- Pressing **CHANNEL** on the main screen.
+- Pressing **PROCESS** on the main screen.
+- Pressing **SELECT** on the CHANNEL screen or a process screen (EQ, compressor, etc.).
 
-Estando activo el modo SELECT, es posible elegir un canal de dos formas:
+While SELECT mode is active, you can choose a channel in two ways:
 
-1. **MODO A**\
-   Pulsando un botón CUE/SELECT el canal se muestra en pantalla. El modo SELECT permanece activo, pudiéndose seleccionar otros canales (esto permite comparar/revisar canales fácilmente). El botón CUE/SELECT del canal actualmente seleccionado permanece destellando.
-2. **MODO B**\
-   Girando el encoder para recorrer los canales. El encoder recorre los 24 canales, sean físicos o virtuales.
+1. **MODE A**\
+   Pressing a CUE/SELECT button displays the channel on screen. SELECT mode remains active, allowing selection of other channels (this enables easy channel comparison/review). The CUE/SELECT button of the currently selected channel keeps flashing.
+2. **MODE B**\
+   Turning the encoder to scroll through channels. The encoder scrolls through all 24 channels, whether physical or virtual.
 
-Para confirmar la selección de un canal, pulsar el botón SELECT en la pantalla o pulsar el encoder. También se confirma si se toca un control del canal en la pantalla. Al confirmar, modo SELECT se desactiva y los botones CUE/SELECT vuelven a su modo de trabajo normal (CUE).
+To confirm channel selection, press the SELECT button on screen or press the encoder. It also confirms if you touch a channel control on screen. Upon confirmation, SELECT mode deactivates and CUE/SELECT buttons return to their normal operation mode (CUE).
 
-## Canales "virtuales"
+## "Virtual" Channels
 
-UNIDEX UX24 maneja 12 canales **desde la pantalla a bordo**, en su modelo estándar, o **6 canales virtuales** cuando está equipada con una extensión de atenuadores **UDX6**.\
-La pantalla **VIRTUAL MIXER** permite controlar todas las funciones de estos canales.
+UNIDEX UX24 handles 12 channels **from the onboard screen** in its standard model, or **6 virtual channels** when equipped with a **UDX6** fader extension.\
+The **VIRTUAL MIXER** screen allows control of all functions for these channels.
 
 <Tip>
-  **Pulsando el encoder** en la pantalla principal se accede al mezclador de canales, que se presenta en grupos de 6 canales cada una.
+  **Pressing the encoder** on the main screen accesses the channel mixer, displayed in groups of 6 channels each.
 </Tip>
 
-Cuando uno o más canales virtuales están al aire, el control **VIRTUAL** (encoder) en la pantalla principal **destella en rojo** para indicar esta condición.
+When one or more virtual channels are on air, the **VIRTUAL** control (encoder) on the main screen **flashes red** to indicate this condition.
 
-Para facilitar la operación táctil, los controles de cada canal virtual están divididos en dos pantallas.
+To facilitate touch operation, virtual channel controls are divided into two screens.
 
-La pantalla **LEVEL** muestra los atenuadores y los botones de activación ON AIR.
+The **LEVEL** screen shows faders and ON AIR activation buttons.
 
 <img
   src="/images/ux24/unidex-virtual-level.png"
@@ -116,7 +124,7 @@ La pantalla **LEVEL** muestra los atenuadores y los botones de activación ON AI
   className="mx-auto"
 />
 
-La pantalla **BUSES** muestra los botones de asignación PGM, REC, AUX, VBUS y el CUE.
+The **BUSES** screen shows PGM, REC, AUX, VBUS assignment buttons and CUE.
 
 <img
   src="/images/ux24/unidex-virtual-buses.png"
@@ -126,142 +134,142 @@ La pantalla **BUSES** muestra los botones de asignación PGM, REC, AUX, VBUS y e
   style={{ width:"60%" }}
 />
 
-## Pantalla de canal (CHANNEL)
+## Channel Screen (CHANNEL)
 
-La **pantalla de canal** muestra todos los valores y configuraciones asociados a un canal.\
-Incluye funciones básicas, como el ajuste de ganancia de la entrada, y opciones avanzadas que requieren permisos especiales.
+The **channel screen** shows all values and settings associated with a channel.\
+It includes basic functions, like input gain adjustment, and advanced options requiring special permissions.
 
-### Acceso a la pantalla de canal
+### Accessing the Channel Screen
 
-1. **Desde la pantalla principal**, pulsar el botón **CHANNEL**.
+1. **From the main screen**, press the **CHANNEL** button.
 
    <img
      src="/images/ux24/ux24-boton-channel.png"
-     alt="Ux24 Boton Channel Pn"
-     title="Ux24 Boton Channel Pn"
+     alt="Ux24 Channel Button Pn"
+     title="Ux24 Channel Button Pn"
      style={{ width:"20%" }}
    />
 
-   Esto abrirá la pantalla en el último canal seleccionado y activará el **modo SELECT**.\
-   En el menú, la opción CHANNEL cambiará a SELECT para permitir activarlo o desactivarlo.
-2. **Seleccionar un canal**:\
-   Con **SELECT** activo, los botones **CUE/SELECT** permiten elegir un canal. Mientras el modo de selección esté activo, se pueden ir alternando distintos canales para comparar sus ajustes.
-   - Los **canales virtuales** se seleccionan girando el **encoder**, que recorre los 24 canales.
-   - En pantalla, la zona del nombre de canal se muestra en **celeste** para los canales físicos y en **violeta** para los canales virtuales.
-3. **Salir del modo SELECT**:\
-   Para confirmar y salir, pulsar el botón **SELECT** en la pantalla o presionar el **encoder**.\
-   El modo selección también se cancela automáticamente cuando se modifica algún parámetro en el canal seleccionado.
+   This opens the screen on the last selected channel and activates **SELECT mode**.\
+   In the menu, the CHANNEL option changes to SELECT to allow enabling/disabling it.
+2. **Select a channel**:\
+   With **SELECT** active, **CUE/SELECT** buttons allow choosing a channel. While selection mode is active, you can switch between different channels to compare their settings.
+   - **Virtual channels** are selected by turning the **encoder**, which scrolls through all 24 channels.
+   - On screen, the channel name area shows in **light blue** for physical channels and **purple** for virtual channels.
+3. **Exit SELECT mode**:\
+   To confirm and exit, press the **SELECT** button on screen or press the **encoder**.\
+   Selection mode also cancels automatically when modifying any parameter on the selected channel.
 
 <img
   src="/images/ux24/ux24-channel-pantalla.png"
-  alt="Ux24 Channel Pantalla Pn"
-  title="Ux24 Channel Pantalla Pn"
+  alt="Ux24 Channel Screen Pn"
+  title="Ux24 Channel Screen Pn"
   className="mx-auto"
   style={{ width:"68%" }}
 />
 
 ---
 
-### Elementos de la pantalla CHANNEL
+### CHANNEL Screen Elements
 
-**1   VÚMETRO**
+**1   VU METER**
 
-Indicador de nivel visible en todas las pantallas.\
-Muestra el nivel de un bus de mezcla, habitualmente **PROGRAMA**, en escala VU con pico retenido.
+Level indicator visible on all screens.\
+Shows the level of a mix bus, usually **PROGRAM**, in VU scale with peak hold.
 
-- Tocando la leyenda PGM, se puede cambiar para mostrar AUX, REC o VBUS.
-- El número a la derecha indica el valor máximo, en VU o dBfs. Tocando el número se conmuta entre ambas unidades. El cambio de unidad VU/dBfs se aplica a todas las pantallas.
+- Touching the PGM label allows switching to show AUX, REC or VBUS.
+- The number on the right indicates the maximum value, in VU or dBfs. Touching the number toggles between units. The VU/dBfs unit change applies to all screens.
 
 <br />
 
 **2  BALANCE**
 
-En entradas estéreo ajusta la relación entre canales izquierdo y derecho.\
-En entradas mono actúa como _pan-pot_.\
-Para cambiar el valor, toque el control y gire el encoder. Pulse el encoder para confirmar.
+Adjusts left/right channel relationship for stereo inputs.\
+Acts as pan-pot for mono inputs.\
+To change the value, touch the control and turn the encoder. Press encoder to confirm.
 
 <br />
 
-**3  NIVEL DEL CANAL**
+**3  CHANNEL LEVEL**
 
-Representa al atenuador físico y modifica el nivel de señal en los buses.\
-En canales con atenuadores mecánicos, el valor en pantalla refleja la posición física. Si se modifica el nivel desde la pantalla, el valor real cambia pero el atenuador físico no se mueve (no es motorizado). En este caso, en la pantalla OLED del canal destella el valor actual para indicar que difiere de la posición física del fader.
+Represents the physical fader and modifies signal level in buses.\
+For channels with mechanical faders, the on-screen value reflects physical position. If level is modified from screen, actual value changes but physical fader doesn't move (non-motorized). In this case, channel's OLED display flashes current value to indicate it differs from physical fader position.
 
 <Note>
-  El nivel en las salidas puede diferir del mostrado en los medidores debido a compensaciones de ganancia de salida. La coincidencia se da solo cuando la salida está ajustada a su nivel nominal (4 dBu para salidas analógicas).
+  Output levels may differ from meter readings due to output gain compensation. Match occurs only when output is set to nominal level (4 dBu for analog outputs).
 </Note>
 
 <br />
 
 **4  BUSES**
 
-Muestran las asignaciones del canal a buses de mezcla.
+Show channel assignments to mix buses.
 
-- En canales físicos reflejan los botones PGM, REC y AUX.
-- En canales virtuales permiten asignar a cualquier bus.
-- En ambos permite asignar el canal al bus **VBUS**, que no tiene botón de asignación de hardware.
+- On physical channels reflect PGM, REC and AUX buttons.
+- On virtual channels allow assignment to any bus.
+- Both allow assigning channel to **VBUS**, which has no hardware assignment button.
 
-La activación/desactivación se hace desde la pantalla táctil y, en canales físicos, se refleja también en los botones mecánicos.
+Activation/deactivation is done from touchscreen and, on physical channels, also reflects on mechanical buttons.
 
 <br />
 
-**5  NOMBRE**
+**5  NAME**
 
-Permite asignar un nombre de hasta 10 caracteres. En canales físicos se muestra en la pantalla OLED del canal. \
-Tocando el nombre se despliega una ventana para edición del texto.
+Allows assigning up to 10 characters. On physical channels displays on channel's OLED screen.\
+Touching the name opens a text editing window.
 
 <br />
 
 **6  INPUT CONFIG**
 
-Incluye el control de ganancia y la información de la entrada asignada.
+Includes gain control and assigned input information.
 
-- Perfil ADMIN: acceso a configuración completa tocando SETTINGS o reasignación desde menú desplegable.
-- **Ganancia**: ajuste en decibelios mediante pantalla táctil y encoder.
+- ADMIN profile: full configuration access by touching SETTINGS or reassignment from dropdown menu.
+- **Gain**: adjustment in decibels via touchscreen and encoder.
 
 <br />
 
-**7  MODO**
+**7  MODE**
 
-Define el comportamiento del canal según el tipo de señal:
+Defines channel behavior according to signal type:
 
-- **LINE**: para cualquier fuente distinta de micrófonos y comunicaciones.
-- **MIC**: para señales de micrófono, sean entradas a bordo, adaptadores UDX externos o preamplificadores de terceros conectados a entradas de línea.
-- **TELCO**: para comunicaciones (líneas terrestres, VoIP, celulares Bluetooth), controlando desde pantalla TELCO adaptadores UNIDEX compatibles.
+- **LINE**: for any source other than microphones and communications.
+- **MIC**: for microphone signals, whether onboard inputs, external UDX adapters or third-party preamps connected to line inputs.
+- **TELCO**: for communications (landlines, VoIP, Bluetooth cellphones), controlling compatible UNIDEX adapters from TELCO screen.
 
 <br />
 
 **8  CHANNEL ACTIONS**
 
-Funciones específicas según el \*\*MODO \*\*del canal.
+Specific functions according to channel **MODE**.
 
-- **CUE SOLO**: al activar CUE en el canal, apaga CUE en otros canales con esta opción activa.\
-  Los canales que no tengan activo CUE SOLO no son afectados, pudiendo estar CUE encendido en más de un canal a la vez. \
-  Si todos los canales trabajan en modo CUE SOLO, habrá un único CUE encendido. Una configuración habitual es usar el modo CUE SOLO en las líneas (computadoras y reproductores de audio) y en modo normal micrófonos y canales TELCO.
-- **CUE AUTO OFF**: apaga CUE automáticamente al poner el canal al aire.
+- **CUE SOLO**: when activating CUE on channel, turns off CUE on other channels with this option active.\
+  Channels without CUE SOLO active are unaffected, allowing CUE to be on in multiple channels simultaneously.\
+  If all channels work in CUE SOLO mode, only one CUE will be on. A common configuration is using CUE SOLO mode on lines (computers and audio players) and normal mode on microphones and TELCO channels.
+- **CUE AUTO OFF**: automatically turns off CUE when channel goes on air.
 
-**Acciones para canales en modo MIC:**
+**Actions for MIC mode channels:**
 
-- **MASTER MIC A/B**: asigna el canal a uno o ambos botones maestros.
-- **STUDIO A/B**: asocia el canal a la señalización "En el Aire" (Tally Light) de Estudio A ; Estudio B o a ninguno.
-- **CTRL ROOM MIC**: Si se activa, al poner el canal al aire se silencia la salida de altavoces del Control (no la del Estudio).
+- **MASTER MIC A/B**: assigns channel to one or both master buttons.
+- **STUDIO A/B**: associates channel with "On Air" signaling (Tally Light) for Studio A, Studio B or none.
+- **CTRL ROOM MIC**: If activated, putting channel on air mutes Control room speaker output (not Studio output).
 
 <br />
 
 **9  PROCESS**
 
-Muestra los procesadores disponibles en la entrada asignada y su estado (activo/inactivo).
+Shows available processors on assigned input and their status (active/inactive).
 
-- Encendido/apagado tocando el nombre (excepto perfil BASIC).
-- Edición de ajustes desde EDIT (solo perfil ADMIN).
+- On/off by touching name (except BASIC profile).
+- Settings editing from EDIT (ADMIN profile only).
 
   <Note>
-    Los procesos disponibles no son propios de cada canal, sino que dependen de la entradas que tienen asignadas.
+    Available processes aren't channel-specific but depend on assigned inputs.
   </Note>
 
 <br />
 
 **10  OUTPUT ROUTING**
 
-Indica si el canal está asociado a una salida directa (ej. adaptadores UNIDEX para líneas TELCO).\
-La configuración de ruteo es accesible en perfil ADMIN desde SETTINGS.
+Indicates if channel is associated with a direct output (e.g. UNIDEX adapters for TELCO lines).\
+Routing configuration is accessible in ADMIN profile from SETTINGS.

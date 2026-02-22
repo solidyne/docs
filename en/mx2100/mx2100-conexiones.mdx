@@ -1,112 +1,118 @@
 ---
-title: "Conexiones"
-description: "Descripción de las conexiones en MX2100"
-keywords: ["conectividad", "conectores"]
-tags: ["consolas portátiles", "MX2100"]
+title: "Connections"
+description: "Description of MX2100 connections"
+keywords: ["connectivity", "connectors"]
+tags: ["portable consoles", "MX2100"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d670034cefd8509c93dc9562bb7fe2da36fc187275f55ae05c1acb4fabdefa62"
+
 ---
 
-## Entradas de micrófono
+## Microphone Inputs
 
-La MX2100 tiene 3 entradas de micrófono (MIC-1, MIC-2 y MIC-3) con conectores tipo **TRS 1/4” (6,25 mm)**.
+The MX2100 has 3 microphone inputs (MIC-1, MIC-2 and MIC-3) with **TRS 1/4" (6.25 mm)** connectors.
 
-Los preamplificadores utilizan la técnica _local feedback_, que evita la saturación ante altos niveles de presión sonora (por ejemplo, un cronista gritando un gol).
+The preamplifiers use _local feedback_ technique, which prevents saturation at high sound pressure levels (for example, a reporter shouting a goal).
 
-### Micrófono incorporado
+### Built-in Microphone
 
-- Micrófono electret incorporado en el frente del equipo (MIC-4).
-- Permite salir al aire incluso sin micrófonos externos.
-- Comparte el control de nivel con la entrada de línea y el retorno Bluetooth.
+- Built-in electret microphone on the front panel (MIC-4).
+- Allows broadcasting even without external microphones.
+- Shares level control with line input and Bluetooth return.
 
 <Warning>
-  MIC-4 se desactiva si se utiliza la conexión USB (a computadora o cargador) o se conecta la entrada de línea.\
-  El control **MIC-4/LIN/Bluetooth** presenta distintas señales según el escenario de trabajo (ver _Operación de la consola_).
+  MIC-4 is disabled when using USB connection (to computer or charger) or when line input is connected.\
+  The **MIC-4/LIN/Bluetooth** control presents different signals depending on the working scenario (see _Console Operation_).
 </Warning>
 
 ---
 
-## Entrada de línea
+## Line Input
 
-- **LIN-4:** entrada de línea mono.
-- Acepta conexión directa desde salidas de auriculares de grabadores portátiles, teléfonos móviles, notebooks, tabletas, etc.
-- Puede usarse un cable miniplug estéreo 1/8”, aunque en la consola el anillo (canal derecho) queda sin conexión.
-- Comparte control de nivel con el micrófono incorporado (MIC-4) y el retorno Bluetooth.
+- **LIN-4:** mono line input.
+- Accepts direct connection from headphone outputs of portable recorders, mobile phones, laptops, tablets, etc.
+- A 1/8" stereo miniplug cable can be used, although the ring (right channel) remains unconnected in the console.
+- Shares level control with built-in microphone (MIC-4) and Bluetooth return.
 
 <Warning>
-  Si se conecta un equipo estéreo, la entrada usará solo un canal. El anillo del plug (canal derecho) queda sin conexión en la consola.
+  If connecting stereo equipment, the input will use only one channel. The plug's ring (right channel) remains unconnected in the console.
 </Warning>
 
 ---
 
----
+## Program Output (Bal Out)
 
-## Salida de programa (Bal Out)
+- Balanced, monaural output with **TRS 1/8"** connector.
+- Signal mix: MIC-1, MIC-2, MIC-3/USB and MIC-4/LINE/Bluetooth.
 
-- Salida balanceada, monoaural, con conector **TRS 1/8”**.
-- Mezcla de señales: MIC-1, MIC-2, MIC-3/USB y MIC-4/LINE/Bluetooth.
+### Dynamic Processing
 
-### Procesamiento dinámico
+The PGM signal goes through a dynamic range compressor designed for human voice:
 
-La señal PGM atraviesa un compresor de rango dinámico diseñado para voz humana:
+- Controls peaks and prevents level differences.
+- Free from distortion and without background noise increase.
+- Compression indication through two front LEDs.
 
-- Controla picos y evita diferencias de niveles.
-- Libre de distorsión y sin aumento de ruido de fondo.
-- Indicación de compresión mediante dos LEDs frontales.
+This system allows conducting interviews with consistent levels, without requiring an audio operator.
 
-Este sistema permite realizar entrevistas con niveles consistentes, sin necesidad de operador de audio.
+The PGM output can be used to:
 
-La salida PGM puede usarse para:
-
-- Conectar a grabadores digitales portátiles y obtener grabaciones de calidad.
-- Enviar señal a Estudios mediante enlace de radio VHF/UHF en alta calidad (30–15.000 Hz).
+- Connect to portable digital recorders to obtain quality recordings.
+- Send signal to Studios via VHF/UHF radio link in high quality (30-15,000 Hz).
 
 ---
 
-## Salidas de auriculares
+## Headphone Outputs
 
-- Distribuidor interno de señal para auriculares.
-- 3 salidas con conectores minijack 3,5 mm.
-- La mezcla enviada a los auriculares depende del modo de conexión y escenario de trabajo (ver _Operación de la consola_).
+- Internal signal distributor for headphones.
+- 3 outputs with 3.5mm minijack connectors.
+- The mix sent to headphones depends on connection mode and working scenario (see _Console Operation_).
 
 ---
 
-## Audio USB
+## USB Audio
 
-La consola **MX2100** fue diseñada para simplificar la conexión con computadoras portátiles, permitiendo transmisiones de streaming vía Internet.
+The **MX2100** console was designed to simplify connection with laptops, enabling Internet streaming broadcasts.
 
-- La conexión **USB** resuelve tanto los **envíos** como los **retornos** de señal con Estudios.
-- Se utiliza un cable estándar **mini-USB a USB-A macho**.
+- The **USB** connection handles both **sends** and **returns** of signal with Studios.
+- Uses a standard **mini-USB to USB-A male** cable.
 
-### Detección automática del sistema operativo
+### Automatic Operating System Detection
 
-Al conectar la MX2100 a una computadora con **Windows 7/8/10**, **Linux** u **OS-X**:
+When connecting the MX2100 to a computer with **Windows 7/8/10**, **Linux** or **OS-X**:
 
-- El sistema operativo detecta la consola e instala automáticamente los controladores necesarios.
-- No se requieren drivers adicionales.
+- The operating system detects the console and automatically installs the necessary drivers.
+- No additional drivers required.
 
 <Info>
-  En Windows, el dispositivo USB se configura automáticamente como **dispositivo predeterminado**.
+  In Windows, the USB device is automatically configured as the **default device**.
 </Info>
 
-### Dispositivos detectados
+### Detected Devices
 
-La consola se identifica como:
+The console identifies as:
 
-- **Dispositivo de reproducción USB (stereo out):** la computadora envía audio hacia la MX2100.
-- **Dispositivo de grabación USB (stereo in):** la computadora recibe audio proveniente de la MX2100.
+- **USB playback device (stereo out):** computer sends audio to MX2100.
+- **USB recording device (stereo in):** computer receives audio from MX2100.
 
 ---
 
-## Alimentación USB
+## USB Power
 
-- Batería interna recargable Ni-Cd.
-- Autonomía: 16 horas en uso continuo gracias a tecnología CMOS.
-- Cargador USB externo multivoltaje automático (100–240 VCA) incluido.
-- Conexión mediante cable USB-A a mini-USB.
+- Internal rechargeable Ni-Cd battery.
+- Runtime: 16 hours of continuous use thanks to CMOS technology.
+- Included automatic multi-voltage USB external charger (100-240 VAC).
+- Connection via USB-A to mini-USB cable.
 
-### Tiempo y forma de carga
+### Charging Time and Method
 
-- Tiempo para carga completa: ~12 horas.
-- Por encima de ese valor, la corriente de carga disminuye y puede dejarse conectado sin riesgo.
-- LED rojo (CHG) indica carga en curso.
-- El LED permanece encendido mientras la unidad esté conectada al cargador, incluso apagada.
-- También se recarga conectándola vía USB a una computadora.
+- Time for full charge: ~12 hours.
+- Above that value, charging current decreases and it can remain connected without risk.
+- Red LED (CHG) indicates charging in progress.
+- LED remains on while unit is connected to charger, even when turned off.
+- Also charges when connected via USB to a computer.

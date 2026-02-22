@@ -1,36 +1,44 @@
 ---
-title: "Monitoreo con doble canal de talkback"
-description: "Conexión y uso de Studiobox con doble canal de talkback en UX18"
-keywords: ["instalación", "talkback", "studiobox"]
-tags: ["consolas IP", "UNIDEX", "UX18"]
+title: "Monitoring with dual talkback channel"
+description: "Connection and use of Studiobox with dual talkback channel on UX18"
+keywords: ["installation", "talkback", "studiobox"]
+tags: ["IP consoles", "UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "c16aa0dc26f3b64b6c2cc83cf3a0a3509bf38d7935e7657cbc34d6bef14f1f79"
+
 ---
 
-UX18 permite configurar sus salidas para utilizar la entrada **AUX** de las StudioBox con circuitos de órdenes diferenciados. De este modo, el operador puede hablar a un grupo de auriculares en privado, o a todos los participantes.
+UX18 allows configuring its outputs to use the **AUX** input of StudioBox units with separate talkback circuits. This way, the operator can talk privately to a group of headphones, or to all participants.
 
-![Studiobox Doble Talkback Pn](/images/ux24/studiobox-doble-talkback.png)
+![Studiobox Double Talkback Pn](/images/ux24/studiobox-doble-talkback.png)
 
-El diagrama muestra la conexión y configuración de **StudioBox HD5** con doble canal de talk-back sobre una UNIDEX UX-18.\
-Para el caso de **StudioBox HD3**, la conexión es la misma.
+The diagram shows the connection and configuration of **StudioBox HD5** with dual talkback channel on a UNIDEX UX-18.\
+For **StudioBox HD3**, the connection is the same.
 
-### Conexión
+### Connection
 
-- La entrada **STUDIO MONITOR** de la StudioBox se conecta a la salida **STUDIO MONITOR** en la consola, utilizando un tramo STP RJ45 a RJ45 pin a pin (cables SOL P25 o P50).
-- La entrada **AUX-IN** de StudioBox se conecta a una **salida asignable** de la consola (OUT1 a OUT4) utilizando un tramo STP RJ45 a RJ45 pin a pin (cables SOL P25 o P50).
+- The **STUDIO MONITOR** input of the StudioBox connects to the **STUDIO MONITOR** output on the console, using a pin-to-pin STP RJ45 to RJ45 cable (SOL P25 or P50 cables).
+- The **AUX-IN** input of StudioBox connects to an **assignable output** on the console (OUT1 to OUT4) using a pin-to-pin STP RJ45 to RJ45 cable (SOL P25 or P50 cables).
 
-### Configuración
+### Configuration
 
-- En StudioBox, asignar uno o más auriculares a la entrada **AUX**.
-- En UX18, la salida conectada a AUX IN se configura del siguiente modo (ver SETTINGS → OUTPUTS):
-  - **Source:** `STUDIO`. La señal que entrega la salida sigue a la asignación hecha en la pantalla _MONITOR_.
-  - **Talk-Back Ch:** Seleccionar un canal (o grupo) para vincularlo a la salida.\
-    Al activar Talk-Back en ese canal, la señal se enviará, a través de esta salida, a los auriculares asignados a **AUX IN**.\
-    Por ejemplo: si se quiere hablar en privado con los auriculares de _MIC-1_, se asignará “Talk-Back Ch” al canal MIC-1.
-  - **Studio Talk-Back link:** `Habilitado`.
+- On StudioBox, assign one or more headphones to the **AUX** input.
+- On UX18, the output connected to AUX IN is configured as follows (see SETTINGS → OUTPUTS):
+  - **Source:** `STUDIO`. The output signal follows the assignment made in the _MONITOR_ screen.
+  - **Talk-Back Ch:** Select a channel (or group) to link it to the output.\
+    When activating Talk-Back on that channel, the signal will be sent through this output to the headphones assigned to **AUX IN**.\
+    For example: to talk privately to _MIC-1_ headphones, "Talk-Back Ch" will be assigned to the MIC-1 channel.
+  - **Studio Talk-Back link:** `Enabled`.
 
-### Operación
+### Operation
 
-- Con la configuración anterior, todos los auriculares escuchan la señal asignada en la consola para monitoreo en el Estudio (pantalla MONITOR).
-- El **botón Talk-Back principal** permite hablar hacia todos los auriculares, a través del micrófono de órdenes.
-- El **botón CUE/SELECT** del canal o grupo vinculado permite hablar **solo** hacia los auriculares asignados a AUX.\
-  Para hacerlo, pulsar y mantener presionado **CUE/SELECT** en el canal.\
-  El display del canal indicará `TLBK`.
+- With the above configuration, all headphones hear the signal assigned on the console for Studio monitoring (MONITOR screen).
+- The **main Talk-Back button** allows talking to all headphones through the talkback microphone.
+- The **CUE/SELECT button** of the linked channel or group allows talking **only** to the headphones assigned to AUX.\
+  To do this, press and hold **CUE/SELECT** on the channel.\
+  The channel display will show `TLBK`.

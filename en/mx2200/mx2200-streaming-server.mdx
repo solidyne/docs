@@ -1,27 +1,35 @@
 ---
-title: "Streaming hacia un servidor web"
-description: "Emisión hacia servidores Icecast/Shoutcast"
+title: "Streaming to a web server"
+description: "Broadcasting to Icecast/Shoutcast servers"
 keywords: ["streaming", "Icecast","Shoutcast"]
-tags: ["consolas portátiles","CODEC","MX2200"]
+tags: ["portable consoles","CODEC","MX2200"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "efec7cb51d69842df8aefe159d22e803678c10b24700bb37f22b58f7f2d10afe"
+
 ---
 
-Un **servidor web multimedia** es un servicio de terceros que recibe la emisión de audio de la **MX2200** y la reenvía mediante un enlace público accesible en cualquier parte del mundo, y en simultáneo por múltiples dispositivos.
+A **multimedia web server** is a third-party service that receives the audio stream from the **MX2200** and forwards it through a public link accessible worldwide and simultaneously by multiple devices.
 
-- La contratación suele hacerse según la **cantidad de usuarios simultáneos** admitidos.
-- Una vez configurado el acceso en la consola, el uso es muy simple: basta con que la MX2200 esté conectada a Internet e iniciar la emisión.
-- Es un método ideal cuando se requiere **distribución masiva de la señal**.
+- Service plans are usually based on the **number of simultaneous users** allowed.
+- Once access is configured on the console, usage is very simple: just ensure the MX2200 is connected to the Internet and start broadcasting.
+- It is an ideal method when **mass signal distribution** is required.
 
 <Warning>
-  El **retardo** en este tipo de transmisión puede variar entre **5 y 30 segundos**, dependiendo de la plataforma y la conexión.  Por este motivo, se recomienda solo cuando la señal se genera desde la locación remota **sin interacción en tiempo real** con los estudios.
+  The **delay** in this type of transmission can vary between **5 and 30 seconds**, depending on the platform and connection. For this reason, it is recommended only when the signal is generated from the remote location **without real-time interaction** with the studios.
 </Warning>
 
 ---
 
 <Tabs>
-  <Tab title="Iniciar HTTP STREAM">
+  <Tab title="Start HTTP STREAM">
     <Steps>
-      <Step title="Abrir Connection Center">
-        Gire el **encoder** hasta la pantalla **CONNECTION CENTER** y púlselo para ingresar.
+      <Step title="Open Connection Center">
+        Turn the **encoder** until the **CONNECTION CENTER** screen appears and press it to enter.
 
         <img
           src="/images/mx2200/mx2200-connection_center.png"
@@ -30,8 +38,8 @@ Un **servidor web multimedia** es un servicio de terceros que recibe la emisión
           style={{ width:"49%" }}
         />
       </Step>
-      <Step title="Seleccionar HTTP STREAM">
-        Navegue con el encoder, seleccione **HTTP STREAM** y pulse para abrir la opción.
+      <Step title="Select HTTP STREAM">
+        Navigate with the encoder, select **HTTP STREAM** and press to open the option.
 
         <img
           src="/images/mx2200/mx2200_connection_center_HTTPstream.png"
@@ -40,24 +48,24 @@ Un **servidor web multimedia** es un servicio de terceros que recibe la emisión
           style={{ width:"49%" }}
         />
       </Step>
-      <Step title="Habilitar el enlace">
-        En la pantalla de control, seleccione **YES** para iniciar el enlace con el servidor web.\
-        Cuando la conexión se establece, las pantallas **CONNECTION CENTER** y **HOME** mostrarán **HTTP STREAM ENABLED**.
+      <Step title="Enable the link">
+        On the control screen, select **YES** to start the link with the web server.\
+        When the connection is established, both **CONNECTION CENTER** and **HOME** screens will show **HTTP STREAM ENABLED**.
       </Step>
-      <Step title="Finalizar el enlace">
-        Repita el procedimiento y seleccione **NO** para deshabilitar la transmisión.
+      <Step title="End the link">
+        Repeat the procedure and select **NO** to disable the transmission.
       </Step>
     </Steps>
   </Tab>
-  <Tab title="Recepción en los estudios">
-    La recepción de una transmisión vía servidor web es la más sencilla:
+  <Tab title="Reception at the studios">
+    Receiving a web server transmission is the simplest method:
 
-    - El proveedor del servicio brinda un **enlace http**.
-    - El enlace se abre desde **cualquier navegador web** en PC, tablet o smartphone.
-    - No se requieren configuraciones adicionales en los estudios.
+    - The service provider supplies an **http link**.
+    - The link can be opened from **any web browser** on PC, tablet or smartphone.
+    - No additional configurations are required at the studios.
   </Tab>
 </Tabs>
 
 <Info>
-  Este método es ideal para **streaming público** de una emisora o evento, permitiendo acceso global sin necesidad de software especializado en los oyentes.
+  This method is ideal for **public streaming** of a radio station or event, allowing global access without requiring specialized software for listeners.
 </Info>

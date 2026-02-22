@@ -1,162 +1,170 @@
 ---
-title: "Escenas y perfiles de usuario"
-description: "Gestión de escenas y perfiles de acceso"
-keywords: ["operación", "escenas", "usuarios", "perfiles", "channel map", "permisos"]
-tags: ["consolas IP", "UNIDEX", "UX24"]
+title: "Scenes and User Profiles"
+description: "Scene and access profile management"
+keywords: ["operation", "scenes", "users", "profiles", "channel map", "permissions"]
+tags: ["IP consoles", "UNIDEX", "UX24"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "facd1c6b21f38ae8d1262723be02189377648c83d52dc781af5d375b792b053f"
+
 ---
 
-La pantalla para gestión de usuarios y escenas permite:
+The user and scene management screen allows:
 
-- Cambiar el usuario activo.
-- Cambiar la escena actual.
-- Utilizar funciones avanzadas para organizar canales.
+- Changing the active user
+- Changing the current scene
+- Using advanced channel organization functions
 
-Se accede pulsando la opción **SCENES**, disponible en los botones contextuales cuando la consola muestra la **pantalla principal**.
+Access by pressing the **SCENES** option, available in the contextual buttons when the console shows the **main screen**.
 
 <img
   src="/images/ux24/ux24-pantallas-escenas.jpg"
-  alt="UX24 Escenas"
-  title="UX24 Escenas"
+  alt="UX24 Scenes"
+  title="UX24 Scenes"
   className="mx-auto"
   style={{ width:"75%" }}
 />
 
-## LOS USUARIOS
+## USERS
 
-En la zona **USER LOGIN** (1) de la pantalla se muestra el usuario actualmente activo y se permite cambiar a otro usuario tocando la opción correspondiente.\
-Hay **tres niveles de usuarios** con diferentes permisos pre-establecidos. Las restricciones aplican tanto en la operación desde la pantalla de la consola como desde la interfaz web remota.
+The **USER LOGIN** area (1) shows the currently active user and allows switching to another user by touching the corresponding option.\
+There are **three user levels** with different preset permissions. Restrictions apply both to console screen operation and remote web interface.
 
-### Usuario BASIC
+### BASIC User
 
-Perfil más restringido:
+Most restricted profile:
 
-- No tiene protección por contraseña.
-- Sin acceso a opciones de configuración avanzadas (SETTINGS).
-- Puede cambiar de escena, pero no guardar cambios ni crear nuevas escenas.
-- Puede visualizar los ajustes y el estado de los procesadores, pero no modificarlos ni encender/apagar.
-- Puede modificar temporalmente opciones básicas del canal (**GANANCIA**, **NOMBRE**, **PANEO**, **ACCIONES DEL CANAL**), pero sin guardar los cambios en la escena.
+- No password protection
+- No access to advanced configuration options (SETTINGS)
+- Can change scenes but cannot save changes or create new scenes
+- Can view processor settings and status but cannot modify or turn them on/off
+- Can temporarily modify basic channel options (**GAIN**, **NAME**, **PAN**, **CHANNEL ACTIONS**) but cannot save changes to the scene
 
-### Usuario EXPERT
+### EXPERT User
 
-Perfil con restricciones intermedias:
+Profile with intermediate restrictions:
 
-- Protegido por contraseña (predeterminada: `expert`). Solo el usuario ADMIN puede cambiarla.
-- Igual que BASIC, sin acceso a la configuración avanzada (**SETTINGS**).
-- Acceso total a los procesos de audio.
-- En la pantalla **CHANNEL** puede cambiar **ganancia**, **paneo**, **nombre**, **asignación de entrada** y **modo del canal**, pero sin acceder a SETTINGS.
-- Puede guardar la escena actual, excepto si está protegida.
-- Puede crear nuevas escenas, incluso desde una protegida.
+- Password protected (default: `expert`). Only ADMIN user can change it
+- Like BASIC, no access to advanced configuration (SETTINGS)
+- Full access to audio processing
+- In **CHANNEL** screen can change **gain**, **pan**, **name**, **input assignment** and **channel mode**, but without accessing SETTINGS
+- Can save current scene, except if protected
+- Can create new scenes, even from a protected one
 
-### Usuario ADMIN
+### ADMIN User
 
-Perfil con acceso total:
+Profile with full access:
 
-- Protegido por contraseña (predeterminada: `admin`). Puede cambiar todas las contraseñas desde la pantalla **SETTINGS**.
-- Puede crear escenas protegidas o de solo lectura, que son operativas para BASIC y EXPERT pero solo editables por ADMIN.
+- Password protected (default: `admin`). Can change all passwords from **SETTINGS** screen
+- Can create protected or read-only scenes that are operational for BASIC and EXPERT but only editable by ADMIN
 
 <Note>
-  Las contraseñas se definen en la pantalla **SETTINGS - USERS**.
+  Passwords are defined in the **SETTINGS - USERS** screen.
 </Note>
 
-#### Usuario de arranque
+#### Startup User
 
-Al encender, la consola inicia con un perfil de usuario predefinido (de fábrica: ADMIN) y nunca solicita contraseña.
+On power up, the console starts with a predefined user profile (factory default: ADMIN) and never requests password.
 
-En **SETTINGS → USERS** se puede:
+In **SETTINGS → USERS** you can:
 
-- Cambiar el usuario de arranque.
-- **Cambiar las contraseñas** de ADMIN y EXPERT.
+- Change the startup user
+- **Change passwords** for ADMIN and EXPERT
 
-## LAS ESCENAS
+## SCENES
 
-Una **escena** almacena toda la configuración de la consola, con excepción de los ajustes de sistema (red, streaming, usuario de arranque, etc.). Incluye:
+A **scene** stores all console configuration, except system settings (network, streaming, startup user, etc.). It includes:
 
-- Configuración de entradas y salidas.
-- Asignación de canales y buses.
-- Ganancias.
-- Ajustes de procesadores de audio.
+- Input and output configuration
+- Channel and bus assignments
+- Gains
+- Audio processor settings
 
-Las escenas permiten cargar rápidamente una configuración predeterminada según los requerimientos de cada show; por ejemplo, reasignando entradas, cambiando el orden de canales o ajustando procesadores de micrófono.
+Scenes allow quickly loading a preset configuration according to each show's requirements; for example, reassigning inputs, changing channel order or adjusting microphone processors.
 
 <Warning>
-  Se debe guardar la escena después de modificar cualquier parámetro (ganancia, ecualizador, nombre de canal, etc.) para que el cambio quede almacenado de forma definitiva.
+  The scene must be saved after modifying any parameter (gain, equalizer, channel name, etc.) for the change to be permanently stored.
 </Warning>
 
-### Escenas disponibles
+### Available Scenes
 
-La lista (ver 2 en la imagen) muestra 12 escenas de usuario.
+The list (see 2 in image) shows 12 user scenes.
 
-- Se navega girando el encoder y se confirma pulsándolo.
-- La escena activa se resalta en **celeste**.
-- La escena seleccionada (pero no confirmada) se resalta en **naranja**.
+- Navigate by turning the encoder and confirm by pressing it
+- Active scene is highlighted in **light blue**
+- Selected scene (but not confirmed) is highlighted in **orange**
 
-### Escenas protegidas (Lock)
+### Protected Scenes (Lock)
 
-- Solo el perfil **ADMIN** puede crearlas.
-- Se identifican con un icono de candado.
-- Los usuarios BASIC y EXPERT pueden cargarlas pero no modificarlas ni borrarlas.
+- Only **ADMIN** profile can create them
+- Identified with a padlock icon
+- BASIC and EXPERT users can load them but cannot modify or delete them
 
 ### Scene Manager
 
-Presenta dos grupos de opciones: para la **escena seleccionada** y para la **escena activa**.
+Presents two option groups: for the **selected scene** and for the **active scene**.
 
-**LOAD**: Carga la escena seleccionada. Puede hacerse desde pantalla táctil, botón contextual o encoder.
+**LOAD**: Loads the selected scene. Can be done from touchscreen, contextual button or encoder.
 
-- Requiere confirmación (se cancela a los 8 segundos si no se confirma).
-- Todos los perfiles pueden cargar cualquier escena.
-- Si hay canales al aire, estos permanecen activos aunque cambien de posición, manteniendo su asignación de buses.
-- Si el nuevo canal asignado tiene otro nivel de atenuador, se mantiene el nivel digital anterior y se indica destellando en OLED.
-- **El audio se corta si la entrada previamente al aire no está asignada** a un canal en la nueva escena.
-- No se puede cambiar de escena con una línea telefónica al aire o en espera.
+- Requires confirmation (cancels after 8 seconds if not confirmed)
+- All profiles can load any scene
+- If channels are on-air, they remain active even if position changes, maintaining bus assignments
+- If the new assigned channel has a different fader level, previous digital level is maintained and indicated by flashing OLED
+- **Audio cuts if previously on-air input is not assigned** to a channel in new scene
+- Cannot change scenes with telephone line on-air or on hold
 
-**RENAME**: Cambia el nombre de la escena seleccionada.
+**RENAME**: Changes selected scene name.
 
-- Inhabilitado para BASIC.
+- Disabled for BASIC
 
-**COPY CURRENT**: Copia la escena activa sobre la seleccionada.
+**COPY CURRENT**: Copies active scene over selected scene.
 
-- Requiere confirmación.
-- Inhabilitado para BASIC.
+- Requires confirmation
+- Disabled for BASIC
 
-**SET TO DEFAULT**: Restaura la escena activa a la configuración de fábrica.
+**SET TO DEFAULT**: Restores active scene to factory configuration.
 
-- Inhabilitado para BASIC.
+- Disabled for BASIC
 
-**SAVE**: Guarda la configuración actual de:
+**SAVE**: Saves current configuration of:
 
-- Asignación de entradas a los 24 canales.
-- Asignación de señales a las salidas.
-- Configuración específica de entradas y salidas (phantom, modos MIX-MINUS, etc.).
-- Ganancias de entradas y salidas.
-- Etiquetas y acciones de canales.
-- Ajustes de procesadores de audio.
-- Estado de asignaciones, incluido VBUS.
+- Input assignment to 24 channels
+- Signal assignment to outputs
+- Specific input/output configuration (phantom, MIX-MINUS modes, etc.)
+- Input and output gains
+- Channel labels and actions
+- Audio processor settings
+- Assignment status, including VBUS
 
 <Warning>
-  La escena **no guarda** el estado de los botones **ON-AIR** ni **CUE**.
+  Scene does **not save** status of **ON-AIR** or **CUE** buttons.
 </Warning>
 
-### Escenas de fábrica
+### Factory Scenes
 
-Cualquiera de las 12 escenas se puede reestablecer a una configuración predeterminada. Además, UNIDEX viene de fábrica con escenas diseñadas con distintas configuraciones y expansiones UDX, pensadas para servir la base o ejemplo para creación de nuevas configuraciones.
+Any of the 12 scenes can be reset to a default configuration. Additionally, UNIDEX comes from factory with scenes designed with different configurations and UDX expansions, intended as base or example for creating new configurations.
 
 <Note>
-  Descargar[ infografía sobre la configuración de la escena default](http://www.solidyne.dx.com.ar/wordpress-files/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF)
+  Download [default scene configuration infographic](http://www.solidyne.dx.com.ar/wordpress-files/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF)
 </Note>
 
-### Exportar e importar escenas
+### Export and Import Scenes
 
-Las escenas se pueden exportar e importar desde la **interfaz de control WEB**. \
-Desde la opción de gestión de escenas del control web, es posible exportar cada escena como un archivo en disco. E importarlas luego en cualquiera de las 12 posiciones disponibles.
+Scenes can be exported and imported from the **WEB control interface**.\
+From the scene management option in web control, each scene can be exported as a disk file. And later imported into any of the 12 available positions.
 
-## Channel Map (Mapa de Canales)
+## Channel Map
 
-La función **CHANNEL MAP** muestra la configuración de todos los canales y permite reordenarlos fácilmente.\
-Existen dos modos de operación: **SWAP 2 CH** (intercambiar dos canales) y **ORDER CH** (reorganizar canales).
+The **CHANNEL MAP** function shows configuration of all channels and allows easy reordering.\
+There are two operation modes: **SWAP 2 CH** (swap two channels) and **ORDER CH** (reorganize channels).
 
-### SWAP 2 CH (Intercambiar dos canales)
+### SWAP 2 CH
 
-Permite intercambiar la posición de dos canales.
+Allows swapping position of two channels.
 
 <img
   src="/images/ux24/ux24-chmap.png"
@@ -165,18 +173,18 @@ Permite intercambiar la posición de dos canales.
   style={{ width:"65%" }}
 />
 
-**Procedimiento:**
+**Procedure:**
 
-1. Pulsar **SWAP 2 CH** para habilitar la opción.
-2. Seleccionar en la lista los dos canales que se desea intercambiar.
-3. Pulsar **APPLY** para ejecutar el intercambio.
-4. Pulsar **SAVE** para guardar los cambios en la escena actual.
+1. Press **SWAP 2 CH** to enable option
+2. Select from list the two channels to swap
+3. Press **APPLY** to execute swap
+4. Press **SAVE** to store changes in current scene
 
 ---
 
-## ORDER CH (Reorganizar canales)
+## ORDER CH
 
-Permite asignar nuevas posiciones a uno o más canales.
+Allows assigning new positions to one or more channels.
 
 <img
   src="/images/ux24/ux24-OrderCH.png"
@@ -185,19 +193,19 @@ Permite asignar nuevas posiciones a uno o más canales.
   style={{ width:"65%" }}
 />
 
-**Procedimiento:**
+**Procedure:**
 
-1. Pulsar **ORDER CH**.\
-   Aparecerá un menú desplegable a la derecha del número de canal, que permite asignar una nueva posición.
-2. Tocar el menú en pantalla y elegir la nueva posición para el canal.\
-   Se pueden reubicar varios canales a la vez.
+1. Press **ORDER CH**.\
+   A dropdown menu appears right of channel number, allowing new position assignment
+2. Touch screen menu and choose new position for channel.\
+   Multiple channels can be relocated at once
 
 <Warning>
-  Si se asigna a un canal una posición ya ocupada, la información del canal destino se sobrescribirá al aplicar los cambios.
+  If assigning a channel to an occupied position, destination channel information will be overwritten when applying changes.
 </Warning>
 
-3. Pulsar **APPLY** para confirmar.
-   - **APPLY** aplica los cambios temporalmente (no se guardan aún).
-   - Si se abandona la escena sin guardar, los cambios se pierden.
-4. Pulsar **SAVE** para que los cambios sean definitivos en la escena.
-5. Para cancelar, desactivar **ORDER CH** tocando de nuevo la opción o pulsar el botón contextual **BACK**.
+3. Press **APPLY** to confirm
+   - **APPLY** applies changes temporarily (not yet saved)
+   - Changes are lost if scene is abandoned without saving
+4. Press **SAVE** for changes to be permanent in scene
+5. To cancel, deactivate **ORDER CH** by touching option again or press **BACK** contextual button

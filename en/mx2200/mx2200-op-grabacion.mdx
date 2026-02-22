@@ -1,15 +1,23 @@
 ---
-title: "Grabación"
-description: "Grabación interna."
-keywords: ["grabación","MP3","backup"]
-tags: ["consolas portátiles","CODEC","MX2200"]
+title: "Recording"
+description: "Internal recording."
+keywords: ["recording","MP3","backup"]
+tags: ["portable consoles","CODEC","MX2200"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "9547c447909630a46c72980aea88ddcbbbad23506fcbee510d6a5766814f3b34"
+
 ---
 
-## Pantalla de grabación
+## Recording Screen
 
-La consola **MX2200** permite realizar una **grabación de seguridad del evento** en formato estéreo **MP3 (16 bits / 48 kHz)**, ampliamente soportado por reproductores y editores de audio.
+The **MX2200** console allows you to make a **backup recording of the event** in stereo **MP3 format (16 bits / 48 kHz)**, widely supported by audio players and editors.
 
-Se accede a la pantalla RECORDING girando el encoder en pantalla HOME. Permite **iniciar/detener** la grabación y configurar sus parámetros.
+The RECORDING screen is accessed by rotating the encoder from the HOME screen. It allows you to **start/stop** recording and configure its parameters.
 
 <img
   src="/images/mx2200/mx2200_display_recording.bmp"
@@ -19,53 +27,53 @@ Se accede a la pantalla RECORDING girando el encoder en pantalla HOME. Permite *
   style={{ width:"49%" }}
 />
 
-La navegación es similar a otras pantallas: pulsando la perilla se accede a la navegación interna y, dentro de cada opción, un click permite cambiar su valor o estado.
+Navigation is similar to other screens: pressing the knob accesses internal navigation and, within each option, a click allows changing its value or state.
 
 - **STATUS**\
-  Permite **habilitar o detener** la grabación.\
-  Al detenerla, se genera automáticamente el archivo con el contenido grabado hasta ese momento.
+  Allows you to **enable or stop** recording.\
+  When stopped, the file is automatically generated with the content recorded up to that moment.
 - **MAX TIME**\
-  Define el tiempo máximo de grabación.
-  - Evita que el operador deba detenerla manualmente.
-  - La grabación se corta de forma automática al alcanzar el tiempo definido.
-  - Edición: se ingresa el valor con el teclado numérico de la consola (máximo **240 minutos / 4 horas**).
-  - Es posible **aumentar el tiempo límite mientras la grabación está en curso**, sin interrumpirla.
+  Defines the maximum recording time.
+  - Prevents the operator from having to stop it manually.
+  - Recording stops automatically when reaching the defined time.
+  - Editing: value is entered using the console's numeric keypad (maximum **240 minutes / 4 hours**).
+  - It's possible to **increase the time limit while recording is in progress**, without interrupting it.
 - **BIT RATE**\
-  Define la calidad del audio.
-  - Rango: **64 a 320 kbps**.
-  - Cuanto mayor el valor, mejor calidad y mayor tamaño de archivo.
-  - A **192 kbps** se almacenan aproximadamente **100 horas** dentro de la consola.
+  Defines audio quality.
+  - Range: **64 to 320 kbps**.
+  - The higher the value, the better quality and larger file size.
+  - At **192 kbps** approximately **100 hours** can be stored inside the console.
 
 <Info>
-  Cuando la grabación está habilitada, la pantalla principal indica el estado de grabación y muestra el **tiempo restante disponible**.
+  When recording is enabled, the main screen indicates the recording status and shows the **remaining available time**.
 </Info>
 
 ---
 
-## Gestión de las grabaciones
+## Managing Recordings
 
-La gestión (monitoreo, reproducción, renombrado, descarga y limpieza) se realiza **remotamente** desde una computadora conectada en red.
+Management (monitoring, playback, renaming, downloading and cleanup) is done **remotely** from a networked computer.
 
-Para acceder: ingresar en un navegador (Firefox, Chrome, Safari, Edge, etc.) la dirección IP del equipo seguida de **/recording**.
+To access: enter the equipment's IP address followed by **/recording** in a browser (Firefox, Chrome, Safari, Edge, etc.).
 
-Ejemplo: `192.168.0.118/recording`
+Example: `192.168.0.118/recording`
 
 <Steps>
-  <Step title="Conectar la consola">
-    Conecte la consola a la red local usando el puerto **Ethernet** (recomendado) o la antena **Wi-Fi**.
+  <Step title="Connect the console">
+    Connect the console to the local network using the **Ethernet** port (recommended) or **Wi-Fi** antenna.
   </Step>
-  <Step title="Abrir el navegador">
-    En una computadora de la misma red, abra un navegador e ingrese la **dirección IP** de la MX2200 con el subpath `/recording`.
+  <Step title="Open browser">
+    On a computer on the same network, open a browser and enter the MX2200's **IP address** with the `/recording` subpath.
   </Step>
-  <Step title="Obtener dirección IP">
-    Para conocer la IP asignada, gire la perilla **CONTROL (encoder)** y acceda a la pantalla **SETUP**.\
-    Los tres primeros ítems muestran el estado de conexión y la dirección IP de **Ethernet**, **Wi-Fi** y **Módem 4G**.
+  <Step title="Get IP address">
+    To find the assigned IP, rotate the **CONTROL (encoder)** knob and access the **SETUP** screen.\
+    The first three items show the connection status and IP address for **Ethernet**, **Wi-Fi** and **4G Modem**.
   </Step>
 </Steps>
 
 ---
 
-### Interfaz Web
+### Web Interface
 
 <img
   src="/images/mx2200/mx2200-web-recording.png"
@@ -75,11 +83,11 @@ Ejemplo: `192.168.0.118/recording`
   className="mx-auto"
 />
 
-- Cada \_grabación \_se guarda con el nombre: `[Nombre del equipo] + [Fecha y hora]`
-- La interfaz **HTML5** incluye reproductor para **avanzar, retroceder y pausar**.
-- El listado puede ordenarse por **nombre, fecha o tamaño**.
+- Each recording is saved with the name: `[Equipment name] + [Date and time]`
+- The **HTML5** interface includes a player to **forward, rewind and pause**.
+- The list can be sorted by **name, date or size**.
 
   <Note>
-    La fecha mostrada corresponde a la **hora local de la computadora cliente**, no a la consola.
+    The displayed date corresponds to the **local time of the client computer**, not the console.
   </Note>
-- El audio puede **descargarse** y se guardará en la carpeta de descargas predeterminada del navegador.
+- Audio can be **downloaded** and will be saved to the browser's default downloads folder.

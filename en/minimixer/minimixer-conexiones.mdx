@@ -1,63 +1,71 @@
 ---
-title: "Conexiones"
-description: "Panel Trasero y conexiones"
-keywords: ["conexiones"]
-tags: ["consolas de estudio", "línea Classic", "minimixer"]
+title: "Connections"
+description: "Rear Panel and connections"
+keywords: ["connections"]
+tags: ["studio consoles", "Classic line", "minimixer"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b94ed82f35843249e233da5aac1398010155ae4f0dc5e97999f6e7e60658e3e5"
+
 ---
 
-A continuación se describen los conectores y funciones del panel trasero del MiniMixer:
+Below are the connectors and functions of the MiniMixer rear panel:
 
-![Minimixer Panel Trasero Pn](/images/minimixer/minimixer-panel_trasero.png)
+![Minimixer Rear Panel Pn](/images/minimixer/minimixer-panel_trasero.png)
 
- 1. **ALIMENTACIÓN (POWER SUPPLY)**
-    - Conector tubular (pin+ / 2 mm).
-    - Fuente externa switching 90/240V – 50/60 Hz – 12V/1A.
-    - **Usar únicamente la fuente original provista por Solidyne.**
-    - El MiniMixer no tiene interruptor de encendido: permanece activo mientras la fuente esté conectada.
- 2. **TALLY LIGHT (Luz de aire)**
-    - Conector tubular (pin + / 2,5 mm).
-    - Entrega 12 VDC con carga máxima de 200 mA.
-    - Al conectar la luz de aire, la salida de auriculares #1 se silencia automáticamente cada vez que los micrófonos entran al aire.
- 3. **USB AUDIO **
-    - Puerto USB A/B para entrada/salida de audio digital estéreo hacia la computadora.
-    - El sistema operativo (Windows 7/10 o superior) detecta dos dispositivos:
-      - **USB Playback Device** (entrada estéreo a la consola).
-      - **USB Recording Device** (salida estéreo desde la consola con señal PGM).
-    - Se recomienda no superar 4 metros de cable.
-    - Asegurar siempre una buena puesta a tierra de la computadora para evitar daños.
- 4. **MICRÓFONOS**
-    - Cuatro entradas balanceadas XLR para micrófonos dinámicos.
-    - Las entradas **MIC-3** y **MIC-4** comparten el mismo fader.
-    - Se recomienda utilizar micrófonos del mismo modelo en estas dos entradas para obtener mejor compensación de niveles.
- 5. **AURICULARES **
-    - Cuatro salidas en conector TRS 1/8” (minijack).
-    - Un único control ajusta el nivel general de auriculares (sección CUE MONITOR).
-    - La salida **Headphone #1** puede usarse para monitores autoamplificados.
-    - Cuando está conectada la luz de aire, esta salida se silencia automáticamente al abrir micrófonos.
- 6. **LÍNEA TELEFÓNICA FIJA (POTS)**
-    - Conector RJ11 para línea de 2 hilos.
-    - Incluye preset de ajuste **NULL** para calibrar el rechazo del híbrido (ver procedimiento de ajuste).
-    - La línea puede conectarse directo a la central pública o a una PBX (en este último caso la calidad del rechazo puede disminuir).
-    - Protección interna contra sobretensiones mediante varistores.
-    - Se recomienda instalar protección externa adicional con descargadores gaseosos y fusibles.
+ 1. **POWER SUPPLY**
+    - Barrel connector (pin+ / 2 mm).
+    - External switching power supply 90/240V – 50/60 Hz – 12V/1A.
+    - **Use only the original power supply provided by Solidyne.**
+    - The MiniMixer has no power switch: it remains active while the power supply is connected.
+ 2. **TALLY LIGHT (On-air light)**
+    - Barrel connector (pin + / 2.5 mm).
+    - Provides 12 VDC with maximum load of 200 mA.
+    - When connecting the on-air light, headphone output #1 is automatically muted whenever microphones go on-air.
+ 3. **USB AUDIO**
+    - USB A/B port for digital stereo input/output to computer.
+    - The operating system (Windows 7/10 or higher) detects two devices:
+      - **USB Playback Device** (stereo input to console).
+      - **USB Recording Device** (stereo output from console with PGM signal).
+    - Cable length should not exceed 4 meters.
+    - Always ensure proper computer grounding to prevent damage.
+ 4. **MICROPHONES**
+    - Four balanced XLR inputs for dynamic microphones.
+    - **MIC-3** and **MIC-4** inputs share the same fader.
+    - Using microphones of the same model on these two inputs is recommended for better level matching.
+ 5. **HEADPHONES**
+    - Four outputs on 1/8" TRS connector (minijack).
+    - A single control adjusts the overall headphone level (CUE MONITOR section).
+    - **Headphone #1** output can be used for powered monitors.
+    - When tally light is connected, this output automatically mutes when microphones open.
+ 6. **LANDLINE TELEPHONE (POTS)**
+    - RJ11 connector for 2-wire line.
+    - Includes **NULL** adjustment preset for hybrid rejection calibration (see adjustment procedure).
+    - The line can connect directly to public network or PBX (in the latter case rejection quality may decrease).
+    - Internal surge protection via varistors.
+    - Additional external protection with gas discharge tubes and fuses is recommended.
 
     <Warning>
-      El daño por descargas atmosféricas no está cubierto por la garantía. Se recomienda protección contra picos de tensión en zonas de tormenta.
+      Damage from atmospheric discharges is not covered by warranty. Surge protection is recommended in storm-prone areas.
     </Warning>
- 7. **LÍNEA ESTÉREO**
-    - Entrada no balanceada TRS 1/4” estéreo.
- 8. **INSERCIÓN DE PROGRAMA**
-    - Entrada/salida estéreo TRS 1/4”.
-    - Permite insertar un procesador externo en la señal PGM enviada a USB.
-    - Útil para aplicar procesamiento multibanda o efectos antes del streaming.
- 9. **SALIDA DE PROGRAMA**
-    - Salida estéreo TRS 1/4”.
-    - Contiene la mezcla de micrófonos, USB, línea auxiliar y líneas telefónicas.
-10. **SALIDA MEZLA DE MICRÓFONOS (REC OUT)**
-    - Salida estéreo en minijack 1/8”.
-    - Entrega exclusivamente la mezcla de micrófonos (post compresor).
-    - Permite grabar voces aun cuando la consola transmite otros contenidos.
-11. **SMART-CAM (opcional)**
-    - Conector miniUSB.
-    - Envía el estado de los micrófonos a la PC para automatizar el cambio de cámaras.
-    - Se utiliza junto con **Audicom Video** y el servicio de streaming.
+ 7. **STEREO LINE**
+    - Unbalanced 1/4" TRS stereo input.
+ 8. **PROGRAM INSERT**
+    - 1/4" TRS stereo input/output.
+    - Allows inserting an external processor in the PGM signal sent to USB.
+    - Useful for applying multiband processing or effects before streaming.
+ 9. **PROGRAM OUTPUT**
+    - 1/4" TRS stereo output.
+    - Contains the mix of microphones, USB, auxiliary line and telephone lines.
+10. **MICROPHONE MIX OUTPUT (REC OUT)**
+    - 1/8" stereo minijack output.
+    - Delivers exclusively the microphone mix (post compressor).
+    - Allows voice recording even when console is broadcasting other content.
+11. **SMART-CAM (optional)**
+    - Mini USB connector.
+    - Sends microphone status to PC for automated camera switching.
+    - Used with **Audicom Video** and streaming service.

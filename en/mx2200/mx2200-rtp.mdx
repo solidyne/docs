@@ -1,24 +1,32 @@
 ---
-title: "Streaming RTP"
-description: "Enlazar a Estudios vía RTP"
-keywords: ["RTP","enlace"]
-tags: ["consolas portátiles","CODEC","MX2200"]
+title: "RTP Streaming"
+description: "Studio Linking via RTP"
+keywords: ["RTP","link"]
+tags: ["portable consoles","CODEC","MX2200"]
+
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "c133203391bbf4252c9a40dc1f5bc3b5da6bd2eb85fd28058463342dd1d04f8a"
 
 ---
 
-La conexión **RTP** ofrece máxima calidad y baja latencia, pero exige **configuración de red** en ambos extremos (transmisor y receptor).\
-Es ideal para **instalaciones fijas** o locaciones con **redes conocidas y controladas**.
+**RTP** connection offers maximum quality and low latency, but requires **network configuration** at both ends (transmitter and receiver).\
+It is ideal for **fixed installations** or locations with **known and controlled networks**.
 
 <Warning>
-  **Precondiciones de red**\
-  Asegúrese de tener definidos **IP/puerto** correctos y de haber resuelto **NAT / firewall / port forwarding** en el receptor. Sin esa preparación, el enlace podría no establecerse.
+  **Network Prerequisites**\
+  Make sure you have the correct **IP/port** defined and have resolved **NAT / firewall / port forwarding** at the receiver. Without this preparation, the link may not establish.
 </Warning>
 
 <Tabs>
-  <Tab title="Iniciar RTP desde MX2200">
+  <Tab title="Start RTP from MX2200">
     <Steps>
-      <Step title="Abrir Connection Center">
-        Gire el **encoder** hasta **CONNECTION CENTER** y púlselo para entrar a las opciones de conexión.
+      <Step title="Open Connection Center">
+        Turn the **encoder** to **CONNECTION CENTER** and press it to enter connection options.
 
         <img
           src="/images/mx2200/mx2200-connection_center.png"
@@ -27,8 +35,8 @@ Es ideal para **instalaciones fijas** o locaciones con **redes conocidas y contr
           style={{ width:"50%" }}
         />
       </Step>
-      <Step title="Seleccionar RTP STREAM">
-        Elija **RTP STREAM** y pulse para abrir la pantalla del enlace RTP (habilitar/deshabilitar).
+      <Step title="Select RTP STREAM">
+        Choose **RTP STREAM** and press to open the RTP link screen (enable/disable).
 
         <img
           src="/images/mx2200/mx2200-conection_center_RTP.png"
@@ -37,8 +45,8 @@ Es ideal para **instalaciones fijas** o locaciones con **redes conocidas y contr
           style={{ width:"51%" }}
         />
       </Step>
-      <Step title="Habilitar el enlace">
-        Seleccione **YES** para iniciar el enlace RTP hacia los estudios.
+      <Step title="Enable the link">
+        Select **YES** to start the RTP link to the studios.
 
         <img
           src="/images/mx2200/mx2200-connection_center_RTPenable.png"
@@ -47,65 +55,65 @@ Es ideal para **instalaciones fijas** o locaciones con **redes conocidas y contr
           style={{ width:"51%" }}
         />
 
-        Cuando queda activo, las pantallas **CONNECTION CENTER** y **HOME** muestran **RTP STREAM ENABLED**.
+        When active, both **CONNECTION CENTER** and **HOME** screens show **RTP STREAM ENABLED**.
       </Step>
-      <Step title="Finalizar el enlace">
-        Repita el procedimiento y seleccione **NO** para deshabilitar el RTP.
+      <Step title="End the link">
+        Repeat the procedure and select **NO** to disable RTP.
       </Step>
     </Steps>
     <Info>
-      Antes de iniciar, verifique que la **configuración de red y formato** de audio en la MX2200 coincida con lo esperado en el receptor (IP destino, **puerto**, **codec** y **frecuencia de muestreo**).
+      Before starting, verify that the **network and audio format** configuration in the MX2200 matches what is expected at the receiver (destination IP, **port**, **codec** and **sampling rate**).
     </Info>
   </Tab>
-  <Tab title="Retorno desde Estudios">
-    La emisión **RTP es unidireccional**. Habitualmente no se usa retorno en este modo porque la locación genera el contenido sin interacción con el estudio.
+  <Tab title="Return from Studios">
+    **RTP transmission is unidirectional**. Return is not typically used in this mode because the location generates content without studio interaction.
 
     <Note>
-      Si necesita **retorno** (intercomunicación o piso), utilice **una llamada SIP** o una **comunicación telefónica** (móvil Bluetooth o línea terrestre POTS) en paralelo al RTP.
+      If you need **return audio** (intercom or floor), use a **SIP call** or **telephone communication** (Bluetooth mobile or POTS landline) in parallel to RTP.
     </Note>
   </Tab>
-  <Tab title="Recepción en Estudios (VLC)">
-    Para recibir el streaming de una MX2200 en una **computadora**, use un software con soporte **RTP**. Se recomienda **VLC Player** (gratuito).
+  <Tab title="Studio Reception (VLC)">
+    To receive streaming from an MX2200 on a **computer**, use software with **RTP** support. **VLC Player** (free) is recommended.
 
     <Steps>
-      <Step title="Elegir formato compatible">
-        Configure en la MX2200 un formato que el receptor soporte de forma directa:
+      <Step title="Choose compatible format">
+        Configure the MX2200 with a format that the receiver supports directly:
 
-        - **PCM16 @ 44.1 kHz** (lineal)
-        - **MP3** (cualquiera de los modos disponibles)
+        - **PCM16 @ 44.1 kHz** (linear)
+        - **MP3** (any available mode)
 
         <Note>
-          **OPUS** requiere un archivo **SDP (Session Description)** para describir el contenido al reproductor.
+          **OPUS** requires an **SDP (Session Description)** file to describe the content to the player.
         </Note>
       </Step>
-      <Step title="Abrir ubicación de red en VLC">
-        En **VLC Player** vaya a **Medio → Abrir ubicación de red**.
+      <Step title="Open network location in VLC">
+        In **VLC Player** go to **Media → Open Network Location**.
       </Step>
-      <Step title="Ingresar la URL">
-        Use el formato:
+      <Step title="Enter the URL">
+        Use the format:
 
         ```
-        [protocolo]://[IP_fuente]:[puerto]
+        [protocol]://[source_IP]:[port]
         ```
 
-        Ejemplo:
+        Example:
 
         ```
         rtp://0.0.0.0:3030
         ```
 
-        Donde:
+        Where:
 
-        - `rtp` es el protocolo utilizado por la MX2200.
-        - `0.0.0.0` indica “**escuchar desde cualquier IP entrante**” en la PC receptora.
-        - `3030` es el **puerto** configurado para la recepción.
+        - `rtp` is the protocol used by MX2200.
+        - `0.0.0.0` means "**listen from any incoming IP**" on the receiving PC.
+        - `3030` is the configured **port** for reception.
 
         <Info>
-          Algunas versiones de VLC también aceptan: `rtp://@:3030`
+          Some VLC versions also accept: `rtp://@:3030`
         </Info>
       </Step>
-      <Step title="Verificar firewall/puerto">
-        Asegúrese de que el **puerto UDP** configurado esté **permitido** en firewall del sistema y del router del estudio.
+      <Step title="Verify firewall/port">
+        Ensure the configured **UDP port** is **allowed** in both system firewall and studio router.
       </Step>
     </Steps>
   </Tab>

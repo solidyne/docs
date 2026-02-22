@@ -1,70 +1,78 @@
 ---
-title: "Puesta al aire"
-description: "Canales de micrófono, líneas y monitoreo"
-keywords: ["operación"]
-tags: ["consolas de estudio", "línea Classic", "minimixer"]
----
-
-## Micrófonos
-
-El MiniMixer permite conectar hasta **4 micrófonos dinámicos**.\
-Las entradas **MIC 3** y **MIC 4** comparten el mismo fader.
-
-- El botón **MASTER MIC** habilita todos los micrófonos al aire y activa la salida de la **Luz de Aire (Tally Light)**.
-- La suma de micrófonos es comprimida internamente.
-  - El compresor actúa cuando la señal alcanza **0 VU**.
-  - Es importante que el canal **MIC 3+4** llegue a 0 VU para que el compresor pueda compensar diferencias de nivel entre distintas voces.
-- La acción del compresor se visualiza en el indicador **MIC COMP**.
+title: "On Air Operation"
+description: "Microphone channels, lines and monitoring"
+keywords: ["operation"]
+tags: ["studio consoles", "Classic line", "minimixer"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d2a180968baa67c80259d8139bf364d9f58ba3868b29f4d3293269bbf093f022"
 
 ---
 
-## Líneas
+## Microphones
 
-- El fader **USB/LINE IN** controla la entrada digital **USB** cuando la computadora está conectada.
-- Si USB no está conectado, este fader controla la señal de **LINE IN**.
-- Cuando USB está en uso, la entrada LINE IN también puede aprovecharse como entrada alternativa desde los controles de la zona **PHONE**, que permiten conmutar entre **PHONE** y **LINE IN**.
-  - Esto permite sumar al aire: 4 micrófonos + 2 líneas estéreo + Bluetooth.
+The MiniMixer allows connecting up to **4 dynamic microphones**.\
+**MIC 3** and **MIC 4** inputs share the same fader.
 
-Para enviar **USB/LINE IN** al aire:
+- The **MASTER MIC** button enables all microphones on air and activates the **Tally Light** output.
+- The microphone mix is internally compressed.
+  - The compressor acts when the signal reaches **0 VU**.
+  - It is important that the **MIC 3+4** channel reaches 0 VU so the compressor can compensate for level differences between voices.
+- The compressor action is displayed on the **MIC COMP** indicator.
 
-- Levantar directamente el fader.
-- El nivel correcto de trabajo se logra cuando los picos alcanzan **0 VU**.
+---
 
-La señal **USB/LINE IN** también puede preescucharse en CUE con el fader cerrado, presionando el botón **CUE** ubicado encima del mismo.
+## Lines
+
+- The **USB/LINE IN** fader controls the **USB** digital input when the computer is connected.
+- If USB is not connected, this fader controls the **LINE IN** signal.
+- When USB is in use, the LINE IN input can also be used as an alternative input from the **PHONE** zone controls, which allow switching between **PHONE** and **LINE IN**.
+  - This allows mixing on air: 4 microphones + 2 stereo lines + Bluetooth.
+
+To send **USB/LINE IN** on air:
+
+- Raise the fader directly.
+- The correct working level is achieved when peaks reach **0 VU**.
+
+The **USB/LINE IN** signal can also be previewed in CUE with the fader closed by pressing the **CUE** button located above it.
 
 <Info>
-  El puerto **USB** genera un envío de la señal de programa hacia la computadora.\
-  Este flujo de audio es utilizado para realizar el **streaming por Internet**.
+  The **USB** port generates a program signal feed to the computer.\
+  This audio stream is used for **Internet streaming**.
 </Info>
 
-## Monitoreo
+## Monitoring
 
-El control de auriculares en la zona **CUE MONITOR** establece el nivel para las cuatro salidas de auriculares.
+The headphone control in the **CUE MONITOR** zone sets the level for all four headphone outputs.
 
 <img
   src="/images/minimixer/minimixer-monitoreo.png"
-  alt="Minimixer Monitoreo Pn"
-  title="Minimixer Monitoreo Pn"
+  alt="Minimixer Monitoring Pn"
+  title="Minimixer Monitoring Pn"
   className="mx-auto"
   style={{ width:"38%" }}
 />
 
-- Para contar con control de volumen individual en cada auricular, se deben usar auriculares con control propio de nivel, o bien conectar un distribuidor de auriculares externo a cualquiera de las salidas.
-- Cuando una señal se envía a **CUE**, esta se distribuye a todas las salidas de auriculares.
-- El botón **PGM** en la zona **CUE MONITOR** permite silenciar la señal de programa en auriculares y escuchar únicamente las señales en **CUE**.
+- For individual volume control on each headphone, use headphones with built-in level control or connect an external headphone distributor to any of the outputs.
+- When a signal is sent to **CUE**, it is distributed to all headphone outputs.
+- The **PGM** button in the **CUE MONITOR** zone allows muting the program signal in headphones to hear only the signals in **CUE**.
 
 ---
 
-### Salida para parlantes monitores
+### Monitor speakers output
 
-- La salida de **Auriculares #1** puede funcionar como salida para parlantes monitores, con silenciado automático cuando está conectada la salida de **Luz de Aire**.
-- Al habilitar los micrófonos, la activación de la Luz de Aire silencia automáticamente la salida de auriculares #1, evitando acoples entre parlantes y micrófonos.
-- El audio se mantiene disponible en las demás salidas de auriculares.
+- Headphone output #1 can function as a monitor speakers output, with automatic muting when the Tally Light output is connected.
+- When microphones are enabled, the Tally Light activation automatically mutes headphone output #1, preventing feedback between speakers and microphones.
+- Audio remains available on the other headphone outputs.
 
 ---
 
 ### Talk
 
-- El botón **TALK** interrumpe momentáneamente la señal en auriculares y envía la voz del micrófono interno incorporado en la consola.
-- Esto permite que el operador se comunique directamente con todos los auriculares, incluso si los miembros del equipo están alejados.
-- De esta forma se evitan señas visuales o la necesidad de quitarse los auriculares (que están recibiendo señal de programa) para poder dialogar.
+- The **TALK** button momentarily interrupts the headphone signal and sends the voice from the built-in internal microphone in the console.
+- This allows the operator to communicate directly with all headphones, even if team members are far away.
+- This avoids visual signals or the need to remove headphones (which are receiving program signal) to be able to talk.

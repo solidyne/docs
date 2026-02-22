@@ -1,57 +1,65 @@
 ---
-title: "Líneas telefónicas"
-description: "Líneas telefónicas fija y celular (Bluetooth). Descripción y controles."
-keywords: ["operación", "líneas", "Bluetooth"]
-tags: ["consolas portátiles","CODEC","MX2200"]
----
-
-## Descripción general
-
-La **MX2200** maneja:
-
-- Una línea telefónica terrestre convencional (POTS).
-- Un teléfono móvil vinculado por **Bluetooth**.
-
-La función principal de ambas líneas es servir como **enlace de respaldo** a la conexión de Internet.\
-También pueden utilizarse:
-
-- Como canal de emisión principal cuando no se dispone de Internet.
-- Como fuente de audio para sumar una llamada a la transmisión.
+title: "Telephone Lines"
+description: "Fixed and cellular (Bluetooth) telephone lines. Description and controls."
+keywords: ["operation", "lines", "Bluetooth"]
+tags: ["portable consoles","CODEC","MX2200"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "956474edadff3c4296227925839de859b05c90ac5cb5684905df4156a44d36ba"
 
 ---
 
-## Uso de líneas “al aire”
+## General Description
 
-- Se pueden sumar participantes (reporteros o entrevistados) a la transmisión.
-- Esto puede hacerse con línea fija o con móvil Bluetooth, aun mientras la consola transmite vía Internet.
-- La línea puede interactuar en privado con el operador de la consola, y también con los estudios cuando se la envía a programa (PGM).
-- La señal de retorno del estudio (SIP) se inyecta en el monitoreo (CUE) y en el envío a líneas fija y Bluetooth.
-- El nivel de retorno del enlace SIP se ajusta desde la pantalla, en **SETUP → RX VOLUME**.
+The **MX2200** handles:
+
+- One conventional landline telephone (POTS).
+- One mobile phone connected via **Bluetooth**.
+
+The main function of both lines is to serve as a **backup link** for the Internet connection.\
+They can also be used:
+
+- As the main broadcast channel when Internet is not available.
+- As an audio source to add a call to the broadcast.
+
+---
+
+## Using Lines "On Air"
+
+- Participants (reporters or interviewees) can be added to the broadcast.
+- This can be done with landline or Bluetooth mobile, even while the console is broadcasting via Internet.
+- The line can interact privately with the console operator, and also with the studios when sent to program (PGM).
+- The studio return signal (SIP) is injected into monitoring (CUE) and sent to both landline and Bluetooth.
+- The SIP link return level is adjusted from the screen, in **SETUP → RX VOLUME**.
 
 <Warning>
-  **¡Atención\!**\
-  La conferencia entre línea fija y móvil Bluetooth **no está soportada**.\
-  Es posible poner al aire ambas líneas, pero no se escucharán entre sí ni podrán dialogar.
+  **Warning!**\
+  Conference between landline and Bluetooth mobile is **not supported**.\
+  It is possible to put both lines on air, but they will not hear each other or be able to dialogue.
 </Warning>
 
 ---
 
-## Línea como enlace al estudio
+## Line as Studio Link
 
-- Una vez establecida la llamada, los estudios reciben siempre la **mezcla PGM** a través de la línea telefónica.
-- En **posición CUE**, la señal de retorno que envía el Estudio se escucha solo en monitoreo. Si se pulsa el botón TALK de esa línea, el micrófono de órdenes se envía a los estudios.
-- En **posición PGM**, el retorno desde el Estudio se suprime de CUE y se suma a PGM.
-- El envío a la línea es **mix-minus**: el retorno desde el Estudio no se suma al PGM que se envía de vuelta, evitando realimentación.
-- En posición PGM, el micrófono de órdenes no se envía al estudio.
-- Por lo tanto, al usar la línea como enlace, debe configurarse siempre en **PGM**, evitando que el mic TALK salga al aire accidentalmente.
-- El retorno del estudio (audio del otro extremo) puede escucharse en auriculares mezclando PGM con la línea telefónica (verificar que el monitoreo de PGM esté habilitado en CUE).
-- Si no se necesita escuchar el retorno, mantener cerrada la perilla PGM.
+- Once the call is established, the studios always receive the **PGM mix** through the telephone line.
+- In **CUE position**, the return signal sent by the Studio is heard only in monitoring. If the TALK button for that line is pressed, the talkback microphone is sent to the studios.
+- In **PGM position**, the Studio return is removed from CUE and added to PGM.
+- The line send is **mix-minus**: the Studio return is not added to the PGM being sent back, avoiding feedback.
+- In PGM position, the talkback microphone is not sent to the studio.
+- Therefore, when using the line as a link, it should always be set to **PGM**, preventing the TALK mic from accidentally going on air.
+- The studio return (audio from the other end) can be heard in headphones by mixing PGM with the telephone line (verify that PGM monitoring is enabled in CUE).
+- If return monitoring is not needed, keep the PGM knob closed.
 
 ---
 
-## Controles (línea fija y Bluetooth)
+## Controls (Landline and Bluetooth)
 
-Los siguientes controles aplican tanto para sumar llamadas a la transmisión local como para usar las líneas como enlace al estudio:
+The following controls apply both for adding calls to local broadcast and for using lines as studio link:
 
 <img
   src="/images/mx2200/mx2200-telco.png"
@@ -61,37 +69,34 @@ Los siguientes controles aplican tanto para sumar llamadas a la transmisión loc
   style={{ width:"66%" }}
 />
 
- 1. **PHONE/LINE IN**
-    - Conmuta entre línea telefónica y entrada de línea estéreo.
-    - Con enlace por Internet es posible operar con 4 micrófonos y 2 fuentes de audio (LINE IN y USB).
-    - Si entra una llamada en línea terrestre, el botón **HOLD** destella. El operador puede pasar de LINE IN a PHONE y atender la llamada.
+1. **PHONE/LINE IN**
+    - Switches between telephone line and stereo line input.
+    - With Internet link it's possible to operate with 4 microphones and 2 audio sources (LINE IN and USB).
+    - If a call comes in on landline, the **HOLD** button flashes. The operator can switch from LINE IN to PHONE and answer the call.
 
     <Warning>
-      Cuando no hay Internet y el enlace se hace por Bluetooth, no es posible sumar desde PHONE LINE ni la línea terrestre ni LINE IN, ya que **PHONE LINE no se suma a la mezcla enviada a Bluetooth**.\
-      LINE IN podrá usarse solo desde su propio fader si no hay audio USB.
+      When there is no Internet and the link is made via Bluetooth, it is not possible to add either PHONE LINE or LINE IN, since **PHONE LINE is not added to the mix sent to Bluetooth**.\
+      LINE IN can only be used from its own fader if there is no USB audio.
     </Warning>
- 2. **Perilla de nivel de la línea telefónica / LINE IN**
-    - Ajusta nivel tanto en CUE como en PGM.
- 3. **Pulsador TALK (línea fija)**
-    - Permite hablar en previo con la línea fija usando el micrófono TALK incorporado.
- 4. **HOLD**
-    - Indica llamada entrante (destella con el ring).
-    - Permite atender y dejar la línea en espera o enviarla a PGM.
- 5. **CUE/PGM**
-    - Conmuta la señal (telefónica o LINE IN) entre escucha en previo (CUE) y salida de programa (PGM).
- 6. **Control de nivel de audio del móvil Bluetooth**
- 7. **Encendido/apagado Bluetooth**
-    - Activa también el modo “emparejar” para vincular un teléfono móvil.
- 8. **CUE/PGM Bluetooth**
-    - Conmuta señal Bluetooth entre escucha en CUE y salida en PGM.
- 9. **Pulsador TALK (Bluetooth)**
-    - Permite hablar en previo con la línea Bluetooth usando el mic TALK incorporado.
-10. **Control general de auriculares**
+2. **Telephone line / LINE IN level knob**
+    - Adjusts level in both CUE and PGM.
+3. **TALK button (landline)**
+    - Allows talking privately with the landline using the built-in TALK microphone.
+4. **HOLD**
+    - Indicates incoming call (flashes with ring).
+    - Allows answering and putting the line on hold or sending it to PGM.
+5. **CUE/PGM**
+    - Switches the signal (telephone or LINE IN) between preview monitoring (CUE) and program output (PGM).
+6. **Bluetooth mobile audio level control**
+7. **Bluetooth on/off**
+    - Also activates pairing mode to link a mobile phone.
+8. **CUE/PGM Bluetooth**
+    - Switches Bluetooth signal between CUE monitoring and PGM output.
+9. **TALK button (Bluetooth)**
+    - Allows talking privately with the Bluetooth line using the built-in TALK mic.
+10. **Master headphones control**
 11. **PGM to Headphones**
-
-- Quita la señal PGM de los auriculares, dejando solo lo presente en CUE.
-- Útil para dialogar con una línea telefónica o escuchar solo retorno de estudio en llamada SIP.
-
-12. **Pulsador TALK a auriculares**
-
-- Envía la voz del micrófono de órdenes incorporado a los auriculares.
+    - Removes PGM signal from headphones, leaving only what's present in CUE.
+    - Useful for dialoguing with a telephone line or listening only to studio return on SIP call.
+12. **TALK to headphones button**
+    - Sends the built-in talkback microphone voice to headphones.

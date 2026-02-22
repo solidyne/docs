@@ -1,35 +1,43 @@
 ---
-title: "Llamada por VoIP (SIP)"
-description: "Conectar con los Estudios vía llamada SIP"
-keywords: ["VoIP","SIP","llamada","retorno","Internet"]
-tags: "consolas portátiles,CODEC,MX2200"
+title: "VoIP Call (SIP)"
+description: "Connect to Studios via SIP call"
+keywords: ["VoIP","SIP","call","return","Internet"]
+tags: "portable consoles,CODEC,MX2200"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "66549d96523e24d9c2f5d604bddfd78825a1a12740d8009510648c00a5177419"
+
 ---
 
-La opción **SIP CALL** permite establecer una **comunicación o enlace bidireccional** a través de Internet, con **mínimo retardo**.\
-Es equivalente a una llamada VoIP convencional (similar a Skype o WhatsApp).
+The **SIP CALL** option enables **bidirectional communication or link** through Internet, with **minimal delay**.\
+It is equivalent to a conventional VoIP call (similar to Skype or WhatsApp).
 
-Se utiliza cuando se requiere:
+It is used when:
 
-- Interacción inmediata con los estudios.
-- Simplicidad de conexión en redes sobre las que no se tiene control (Internet público, Wi-Fi de locaciones diversas).
+- Immediate interaction with studios is required.
+- Simple connection is needed on networks beyond your control (public Internet, Wi-Fi at various locations).
 
-La comunicación se establece sin configuraciones complejas en los extremos, incluso en condiciones de **ancho de banda limitado**.
+Communication is established without complex configurations at either end, even under **limited bandwidth** conditions.
 
-- Configurada a baja tasa de bit, asegura continuidad aun con Internet restringido.
-- Configurada a máxima calidad, el audio es equivalente al sonido directo en los estudios.
+- When configured at low bitrate, it ensures continuity even with restricted Internet.
+- When configured at maximum quality, audio is equivalent to direct studio sound.
 
-El uso es simple: una agenda pre-cargada muestra los contactos disponibles. El usuario selecciona uno y realiza la llamada. En el estudio, el operador recibe la comunicación en una computadora o equipo compatible. También es posible **recibir llamadas entrantes desde los estudios**.
+Operation is simple: a pre-loaded directory shows available contacts. The user selects one and makes the call. At the studio, the operator receives the communication on a compatible computer or equipment. It's also possible to **receive incoming calls from the studios**.
 
-### Procedimiento para operar con SIP
+### SIP Operation Procedure
 
 ---
 
 <Tabs>
-  <Tab title="Realizar llamada SIP">
+  <Tab title="Making a SIP call">
     <Steps>
-      <Step title="Acceder al Connection Center">
-        Gire el **encoder** hasta la pantalla **CONNECTION CENTER** y púlselo para ingresar a las opciones.\
-        También puede acceder desde la pantalla principal pulsando el encoder.
+      <Step title="Access Connection Center">
+        Turn the **encoder** until the **CONNECTION CENTER** screen appears and press it to enter options.\
+        You can also access it from the main screen by pressing the encoder.
 
         <img
           src="/images/mx2200/mx2200_display_connection_center.png"
@@ -38,8 +46,8 @@ El uso es simple: una agenda pre-cargada muestra los contactos disponibles. El u
           style={{ width:"51%" }}
         />
       </Step>
-      <Step title="Seleccionar SIP CALL">
-        En las opciones, seleccione **SIP CALL** y púlselo. Se abrirá la agenda de contactos SIP.
+      <Step title="Select SIP CALL">
+        In the options, select **SIP CALL** and press. The SIP contacts directory will open.
 
         <img
           src="/images/mx2200/mx2200-connection_center_agenda.png"
@@ -48,9 +56,9 @@ El uso es simple: una agenda pre-cargada muestra los contactos disponibles. El u
           style={{ width:"51%" }}
         />
       </Step>
-      <Step title="Elegir contacto">
-        Gire el encoder para seleccionar el contacto deseado.\
-        Pulse para iniciar la llamada.
+      <Step title="Choose contact">
+        Turn the encoder to select the desired contact.\
+        Press to initiate the call.
 
         <img
           src="/images/mx2200/mx2200-connection_center_SIPcalling.png"
@@ -59,11 +67,11 @@ El uso es simple: una agenda pre-cargada muestra los contactos disponibles. El u
           style={{ width:"52%" }}
         />
       </Step>
-      <Step title="Conexión establecida">
-        Cuando el operador en estudios atienda, la pantalla mostrará **SIP CALL ENABLED**.
+      <Step title="Connection established">
+        When the studio operator answers, the display will show **SIP CALL ENABLED**.
       </Step>
-      <Step title="Finalizar la llamada">
-        Regrese al **CONNECTION CENTER** y pulse nuevamente en **SIP CALL**.
+      <Step title="End the call">
+        Return to **CONNECTION CENTER** and press **SIP CALL** again.
 
         <img
           src="/images/mx2200/mx2200-connection_center_cortar.png"
@@ -74,8 +82,8 @@ El uso es simple: una agenda pre-cargada muestra los contactos disponibles. El u
       </Step>
     </Steps>
   </Tab>
-  <Tab title="Recibir llamada SIP">
-    Cuando el operador en los estudios llama a la MX2200:
+  <Tab title="Receiving a SIP call">
+    When the studio operator calls the MX2200:
 
     <img
       src="/images/mx2200/mx2200-display-atender.png"
@@ -85,34 +93,34 @@ El uso es simple: una agenda pre-cargada muestra los contactos disponibles. El u
       style={{ width:"47%" }}
     />
 
-    - La pantalla de MX2200 muestra un cuadro de diálogo para **Aceptar/Rechazar** la llamada.
-    - Se reproduce un **ring en CUE**.
+    - The MX2200 display shows a dialog box to **Accept/Reject** the call.
+    - A **ring tone plays in CUE**.
 
     <Warning>
-      Para poder recibir llamadas entrantes en MX2200, es necesario **desactivar el cifrado de llamadas** en el software de comunicaciones utilizado.
+      To receive incoming calls on MX2200, it's necessary to **disable call encryption** in the communications software used.
 
-      En Linphone: _Preferencias → Llamadas y Chat → Cifrado = Ninguno_.\
-      Si el cifrado está activo, la consola no podrá tomar la llamada.
+      In Linphone: _Preferences → Calls and Chat → Encryption = None_.\
+      If encryption is active, the console won't be able to take the call.
     </Warning>
   </Tab>
-  <Tab title="Retorno desde Estudio">
-    - La MX2200 envía al Estudio la señal de **Programa (PGM)**.
-    - El Estudio devuelve **retorno (mix-minus)**: señal del piso sin la propia señal de la consola.
-    - La consola mezcla en CUE la señal de programa más el retorno del estudio.
-    - El usuario puede quitar de auriculares la señal de PGM para escuchar únicamente el **retorno de Estudios** (ver sección _Monitoreo_).
+  <Tab title="Studio Return">
+    - The MX2200 sends the **Program (PGM)** signal to the Studio.
+    - The Studio returns **mix-minus**: floor signal without the console's own signal.
+    - The console mixes program signal plus studio return in CUE.
+    - The user can remove the PGM signal from headphones to hear only the **Studio return** (see _Monitoring_ section).
   </Tab>
 </Tabs>
 
-## Recepción de MX2200 en los Estudios
+## Receiving MX2200 at the Studios
 
-La llamada SIP puede recibirse con cualquier sistema compatible:
+The SIP call can be received with any compatible system:
 
-- **DECODERs hardware**.
-- **Software VoIP** en PC.
+- Hardware **DECODERs**.
+- **VoIP Software** on PC.
 
-El usuario puede elegir libremente el servicio SIP:
+The user can freely choose the SIP service:
 
-- Los servicios pagos son recomendados por estabilidad.
-- También existen opciones gratuitas, destacando [Linphone](https://www.linphone.org).
+- Paid services are recommended for stability.
+- Free options are also available, notably [Linphone](https://www.linphone.org).
 
-En el decodificador se configura la **cuenta/contacto SIP** asignada al estudio (el contacto al que llama la consola).
+The **SIP account/contact** assigned to the studio (the contact the console calls) is configured in the decoder.

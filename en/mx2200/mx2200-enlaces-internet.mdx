@@ -1,35 +1,43 @@
 ---
-title: "Enlace con el Estudio"
-description: "Conexión a Internet y métodos de transmisión."
+title: "Studio Link"
+description: "Internet connection and transmission methods."
 keywords: ["Internet","Wi-Fi","Ethernet","4G"]
-tags: ["consolas portátiles","CODEC","MX2200"]
----
-
-## Introducción
-
-La emisión hacia los estudios puede establecerse de distintas formas:
-
-1. **Audio digital vía Internet**
-   - Llamada SIP (full-duplex con mínimo retardo).
-   - Streaming RTP (solo transmisión).
-   - Servidor Shoutcast/Icecast.
-2. **Llamada telefónica móvil** (Bluetooth).
-3. **Llamada telefónica terrestre** (POTS).
-
-En la práctica, una vez configuradas las opciones de emisión por Internet, el usuario solo debe **conectar la MX2200 a Internet** e iniciar la transmisión deseada, sin necesidad de configuraciones adicionales.
-
-Las formas de emisión pueden combinarse, ya sea para disponer de un **respaldo** (ej. SIP \+ celular) o como **complemento** (streaming RTP \+ comunicación telefónica privada con el estudio).
+tags: ["portable consoles","CODEC","MX2200"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "dd6256f073832f062901a19ae4c6af8e9bdef207fe2477178a04f60eee25c786"
 
 ---
 
-## Conexión a Internet
+## Introduction
 
-El CODEC-MIXER MX2200 puede conectarse a Internet de tres maneras. Solo **una conexión** puede estar activa a la vez, aunque es posible configurar más de una para que, si una falla, la consola restablezca la conexión automáticamente por otra vía.
+Broadcasting to the studio can be established in different ways:
+
+1. **Digital audio via Internet**
+   - SIP call (full-duplex with minimal delay).
+   - RTP streaming (transmission only).
+   - Shoutcast/Icecast server.
+2. **Mobile phone call** (Bluetooth).
+3. **Landline phone call** (POTS).
+
+In practice, once the Internet broadcasting options are configured, the user only needs to **connect the MX2200 to the Internet** and start the desired transmission, without additional configuration.
+
+Broadcasting methods can be combined, either to have a **backup** (e.g. SIP + mobile) or as a **complement** (RTP streaming + private telephone communication with the studio).
+
+---
+
+## Internet Connection
+
+The MX2200 CODEC-MIXER can connect to the Internet in three ways. Only **one connection** can be active at a time, although it's possible to configure more than one so that if one fails, the console automatically reestablishes the connection through another route.
 
 <Tabs>
-  <Tab title="Conexión Wi-Fi">
+  <Tab title="Wi-Fi Connection">
     <Steps>
-      <Step title="Conectar antena">
+      <Step title="Connect antenna">
         <img
           src="/images/mx2200/mx2200-antena.png"
           alt="Mx2200 Antena Pn"
@@ -37,18 +45,18 @@ El CODEC-MIXER MX2200 puede conectarse a Internet de tres maneras. Solo **una co
           style={{ width:"15%" }}
         />
 
-        Conecte la antena Wi-Fi (provista) a un puerto USB trasero etiquetado como **Wi-Fi**.
+        Connect the Wi-Fi antenna (provided) to a rear USB port labeled **Wi-Fi**.
 
         <Tip>
-          Si ya reconoce una red utilizada previamente y las credenciales siguen siendo válidas, la conexión será automática., no siendo necesarios los pasos siguientes.
+          If it already recognizes a previously used network and the credentials are still valid, the connection will be automatic, making the following steps unnecessary.
         </Tip>
       </Step>
-      <Step title="Verificar conexión">
-        En la parte superior de la pantalla HOME aparecerá el ícono Wi-Fi. Inicialmente se mostrará en gris (sin señal).
+      <Step title="Verify connection">
+        The Wi-Fi icon will appear at the top of the HOME screen. Initially, it will be shown in gray (no signal).
       </Step>
-      <Step title="Acceder a redes disponibles">
-        Gire el encoder hasta **SETUP**, pulse para acceder, y luego seleccione **Wi-Fi**.\
-        Se mostrará una lista de redes disponibles.
+      <Step title="Access available networks">
+        Turn the encoder to **SETUP**, press to access, then select **Wi-Fi**.\
+        A list of available networks will be displayed.
 
         <img
           src="/images/mx2200/mx2200-setup_WiFi.bmp"
@@ -57,8 +65,8 @@ El CODEC-MIXER MX2200 puede conectarse a Internet de tres maneras. Solo **una co
           style={{ width:"47%" }}
         />
       </Step>
-      <Step title="Seleccionar y conectar">
-        Elija la red deseada e ingrese la contraseña con el teclado **DATA ENTRY**.
+      <Step title="Select and connect">
+        Choose the desired network and enter the password using the **DATA ENTRY** keypad.
 
         <img
           src="/images/mx2200/mx2200-display-wifi.pass.png"
@@ -67,44 +75,44 @@ El CODEC-MIXER MX2200 puede conectarse a Internet de tres maneras. Solo **una co
           style={{ width:"48%" }}
         />
 
-        - Si la contraseña es válida, la red asigna una dirección IP (visible en **SETUP/Wi-Fi**). Esto puede demorar unos segundos.
-        - Si es incorrecta, la IP permanecerá en **0.0.0.0** y deberá repetir el procedimiento.
+        - If the password is valid, the network assigns an IP address (visible in **SETUP/Wi-Fi**). This may take a few seconds.
+        - If incorrect, the IP will remain at **0.0.0.0** and you must repeat the procedure.
       </Step>
-      <Step title="Confirmar conexión">
-        Una vez conectada, el ícono Wi-Fi en la pantalla principal mostrará la **intensidad de señal**.\
-        El equipo está listo para llamadas SIP, streaming RTP o conexión a servidor web.
+      <Step title="Confirm connection">
+        Once connected, the Wi-Fi icon on the main screen will show the **signal strength**.\
+        The equipment is ready for SIP calls, RTP streaming, or web server connection.
       </Step>
     </Steps>
     <Note>
-      Puede comprobar el acceso a Internet conectando un móvil o notebook a la misma red Wi-Fi y navegando en la web.\
-      También es posible usar un **teléfono móvil en modo Hotspot**, creando un nodo Wi-Fi al que se conectará la MX2200.
+      You can verify Internet access by connecting a mobile phone or laptop to the same Wi-Fi network and browsing the web.\
+      It's also possible to use a **mobile phone in Hotspot mode**, creating a Wi-Fi node to which the MX2200 will connect.
     </Note>
     <Warning>
-      **Redes públicas abiertas**\
-      Verifique siempre la red utilizada. En redes abiertas con login web, la MX2200 puede indicar “conexión OK” aunque no haya acceso real a Internet.
+      **Public open networks**\
+      Always verify the network being used. On open networks with web login, the MX2200 may indicate "connection OK" even when there is no actual Internet access.
     </Warning>
   </Tab>
-  <Tab title="Conexión Ethernet">
+  <Tab title="Ethernet Connection">
     <Steps>
-      <Step title="Conectar cable">
-        Con un cable UTP estándar, conecte el puerto **Ethernet** de la MX2200 a la red local.
+      <Step title="Connect cable">
+        Using a standard UTP cable, connect the MX2200's **Ethernet** port to the local network.
       </Step>
-      <Step title="Asignación de IP">
-        De fábrica la consola tiene **DHCP habilitado**, por lo que el router/switch asignará automáticamente una dirección IP.
+      <Step title="IP assignment">
+        By default, the console has **DHCP enabled**, so the router/switch will automatically assign an IP address.
       </Step>
-      <Step title="Verificar IP">
-        En la pantalla **SETUP** confirme que se asignó una dirección válida (distinta de **0.0.0.0**).
+      <Step title="Verify IP">
+        On the **SETUP** screen, confirm that a valid address has been assigned (different from **0.0.0.0**).
       </Step>
     </Steps>
     <Note>
-      Para comprobar el acceso a Internet, conecte una notebook a la misma red y abra un navegador web.
+      To verify Internet access, connect a laptop to the same network and open a web browser.
     </Note>
   </Tab>
-  <Tab title="Conexión 4G/5G">
+  <Tab title="4G/5G Connection">
     <Steps>
-      <Step title="Conectar módem USB">
-        Conecte un **módem USB 4G/5G** (no provisto) a los puertos traseros indicados.\
-        Use un cable extensor USB de al menos **30 cm**.
+      <Step title="Connect USB modem">
+        Connect a **4G/5G USB modem** (not provided) to the indicated rear ports.\
+        Use a USB extension cable of at least **30 cm**.
 
         <img
           src="/images/mx2200/mx2200-MODEM.png"
@@ -113,16 +121,16 @@ El CODEC-MIXER MX2200 puede conectarse a Internet de tres maneras. Solo **una co
           style={{ width:"49%" }}
         />
       </Step>
-      <Step title="Verificar icono">
-        Una vez detectado, el ícono **4G** se mostrará en la pantalla principal.
+      <Step title="Verify icon">
+        Once detected, the **4G** icon will appear on the main screen.
       </Step>
-      <Step title="Confirmar operación">
-        El equipo queda listo para iniciar llamadas SIP, streaming RTP o conexión a servidor web.
+      <Step title="Confirm operation">
+        The equipment is ready to initiate SIP calls, RTP streaming, or web server connection.
       </Step>
     </Steps>
     <Warning>
-      No conecte el módem **directamente** a la consola: puede causar **interferencias en el audio**.\
-      Use siempre el cable extensor USB.
+      Do not connect the modem **directly** to the console: it can cause **audio interference**.\
+      Always use the USB extension cable.
     </Warning>
   </Tab>
 </Tabs>

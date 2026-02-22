@@ -1,88 +1,96 @@
 ---
-title: "Especificaciones"
-keywords: ["especificaciones"]
-tags: "consolas de estudio,línea Classic,minimixer"
+title: "Specifications"
+keywords: ["specifications"]
+tags: "studio consoles,Classic line,minimixer"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1e83740b29e2add4299df223dd52181f8073025ae62a7356de92130f93b4bf96"
+
 ---
 
-<Accordion title="Tecnología">
-  - Entrada de línea estéreo digital al mixer mediante USB.
-  - Salida digital de programa por USB hacia la PC para streaming.
-  - Entradas de micrófono analógicas con amplificadores operacionales de alto rendimiento, protegidos contra EMI, y salida estéreo analógica PGM.
-  - Preamplificadores con control de realimentación: evitan saturación de la señal en cualquier posición de los faders.
+<Accordion title="Technology">
+  - Digital stereo line input to mixer via USB.
+  - Digital program output via USB to PC for streaming.
+  - Analog microphone inputs with high-performance operational amplifiers, EMI protected, and analog stereo PGM output.
+  - Preamplifiers with feedback control: prevent signal saturation at any fader position.
 </Accordion>
 
-<Accordion title="Entradas">
-  - **Micrófonos**: 4 × entradas para mic dinámicos.
-    - El fader #3 incluye preamplificador dual para **MIC 3 + MIC 4**.
-    - Nivel: –75 a –25 dBu.
-  - **USB**: entrada digital desde la PC (fader #4).
-    - Si USB no está en uso, conmuta automáticamente a línea estéreo.
-  - **Teléfono**: línea fija al híbrido.
-    - Compatible con líneas SIP mediante adaptador FXS externo (no incluido).
-  - **Celular**: entrada vía **Bluetooth 4.0** (30 Hz – 8 kHz, calidad de voz de rango completo).
-  - **Línea estéreo**: conmutada entre teléfono/línea o fader #4.
-    - Nivel: –10 a +20 dBu.
-  - **Insert**: entrada/salida para procesador de audio o dispositivos externos.
-    - Nivel: +4 dBu.
+<Accordion title="Inputs">
+  - **Microphones**: 4 × dynamic mic inputs.
+    - Fader #3 includes dual preamp for **MIC 3 + MIC 4**.
+    - Level: –75 to –25 dBu.
+  - **USB**: digital input from PC (fader #4).
+    - If USB is not in use, automatically switches to stereo line.
+  - **Telephone**: landline to hybrid.
+    - Compatible with SIP lines via external FXS adapter (not included).
+  - **Mobile**: input via **Bluetooth 4.0** (30 Hz – 8 kHz, full-range voice quality).
+  - **Stereo line**: switched between telephone/line or fader #4.
+    - Level: –10 to +20 dBu.
+  - **Insert**: input/output for audio processor or external devices.
+    - Level: +4 dBu.
 </Accordion>
 
-<Accordion title="Salidas">
-  - **Programa estéreo (PGM)**: analógica, no balanceada.
-    - Nivel nominal: +4 dBu.
-    - Nivel máximo: +14 dBu.
-    - Impedancia: \> 5 kΩ.
-  - **USB**: salida digital estéreo de programa hacia la PC.
-  - **Mic REC**: salida de mezcla de micrófonos para grabación en PC.
-    - Nivel: –10 dBu / 10 kΩ.
-  - **Auriculares**: 4 × salidas (16–32–600 Ω).
-    - Nivel: +5 dBu / 50 Ω.
-  - **Altavoces muteados**: reemplaza a la salida de **Headphone #1** (auto-mute con luz de aire).
+<Accordion title="Outputs">
+  - **Stereo program (PGM)**: analog, unbalanced.
+    - Nominal level: +4 dBu.
+    - Maximum level: +14 dBu.
+    - Impedance: \> 5 kΩ.
+  - **USB**: digital stereo program output to PC.
+  - **Mic REC**: microphone mix output for PC recording.
+    - Level: –10 dBu / 10 kΩ.
+  - **Headphones**: 4 × outputs (16–32–600 Ω).
+    - Level: +5 dBu / 50 Ω.
+  - **Muted speakers**: replaces **Headphone #1** output (auto-mute with on-air light).
   - **Tally Light**: 12 V / 120 mA (LED).
-  - **SmartCam (opcional)**: salida USB para control de cámaras en Audicom & Close RadioTV.
+  - **SmartCam (optional)**: USB output for camera control in Audicom & Close RadioTV.
 </Accordion>
 
 <Accordion title="Intercom">
-  - Micrófono interno en MiniMixer.
-  - Comunicación privada con estudio, auriculares, línea telefónica o celular.
-  - Teclado telefónico para realizar llamadas sin necesidad de un teléfono externo.
+  - Internal microphone in MiniMixer.
+  - Private communication with studio, headphones, telephone line or mobile.
+  - Telephone keypad for making calls without requiring an external phone.
 </Accordion>
 
-<Accordion title="Rendimiento de audio">
-  - **Respuesta en frecuencia (MIC → PGM OUT)**: 20 Hz – 20 kHz ±1 dB.
-    - Incluye filtro anti-pop: –3 dB @ 30 Hz.
-  - **Respuesta en frecuencia (USB → PGM OUT)**: 20 Hz – 20 kHz ±1 dB.
-  - **Ruido**:
+<Accordion title="Audio Performance">
+  - **Frequency response (MIC → PGM OUT)**: 20 Hz – 20 kHz ±1 dB.
+    - Includes anti-pop filter: –3 dB @ 30 Hz.
+  - **Frequency response (USB → PGM OUT)**: 20 Hz – 20 kHz ±1 dB.
+  - **Noise**:
     - MIC EIN = –120 dBA.
-    - Relación señal/ruido de entrada de línea: 90 dBA.
-  - **Compresor de micrófono**:
-    - Rango: 0 – 20 dB.
-    - Ataque = 5 ms.
+    - Line input signal-to-noise ratio: 90 dBA.
+  - **Microphone compressor**:
+    - Range: 0 – 20 dB.
+    - Attack = 5 ms.
     - Release = 200 ms.
-  - **Distorsión**:
-    - USB Line IN → USB PGM OUT: \< 0,02 % THD a 1 kHz.
-    - Micrófono (–50 dBu) → PGM OUT analógico: \< 0,1 % THD.
+  - **Distortion**:
+    - USB Line IN → USB PGM OUT: \< 0.02 % THD at 1 kHz.
+    - Microphone (–50 dBu) → Analog PGM OUT: \< 0.1 % THD.
 </Accordion>
 
-<Accordion title="Híbrido telefónico">
-  - Respuesta en frecuencia: 300 – 3.400 Hz ±1 dB.
-  - Rechazo: \> 40 dB a 1 kHz (ajustando NULL en panel trasero).
-  - Relación señal/ruido: \> 60 dBA.
+<Accordion title="Telephone Hybrid">
+  - Frequency response: 300 – 3,400 Hz ±1 dB.
+  - Rejection: \> 40 dB at 1 kHz (adjusting NULL on rear panel).
+  - Signal-to-noise ratio: \> 60 dBA.
 </Accordion>
 
-<Accordion title="Alimentación">
-  - Fuente externa conmutada: 90–240 V / 50–60 Hz.
-  - Salida: 12 V / 1 A.
+<Accordion title="Power Supply">
+  - External switching power supply: 90–240 V / 50–60 Hz.
+  - Output: 12 V / 1 A.
 </Accordion>
 
-<Accordion title="Inserción de dispositivos externos">
-  - Conector trasero en salida PGM para inserción de procesadores o dispositivos externos (nivel +4 dBu).
-  - Permite conectar una placa de audio USB con soporte **ASIO** para usar en PC plug-ins VST de efectos o procesamiento multibanda.
+<Accordion title="External Device Insertion">
+  - Rear connector on PGM output for inserting processors or external devices (level +4 dBu).
+  - Allows connecting a USB audio interface with **ASIO** support to use VST plug-ins for effects or multiband processing on PC.
 </Accordion>
 
-<Accordion title="Dimensiones y peso">
-  - Ancho: 274 mm
-  - Profundidad: 270 mm
-  - Altura frontal: 25 mm
-  - Altura trasera: 71 mm
-  - Peso: 1,6 kg
+<Accordion title="Dimensions and Weight">
+  - Width: 274 mm
+  - Depth: 270 mm
+  - Front height: 25 mm
+  - Rear height: 71 mm
+  - Weight: 1.6 kg
 </Accordion>

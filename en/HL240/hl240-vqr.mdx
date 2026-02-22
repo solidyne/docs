@@ -1,35 +1,43 @@
 ---
-title: "Procesado VQR"
-description: "Restauración del audio con procesado VQR."
+title: "VQR Processing"
+description: "Audio restoration with VQR processing."
 keywords: ["VQR"]
-tags: ["híbridos", "HL240"]
+tags: ["hybrids", "HL240"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f5359c5742ce903d10800d4aec4dcc18b2c7e283407d9bb07c4d6abebcefecbd"
+
 ---
 
-## Fundamentos
+## Fundamentals
 
-El procesado **VQR (Voice Quality Restoration)** fue desarrollado por Solidyne para su línea de híbridos analógicos con líneas terrestres.\
-Su objetivo es **mejorar la calidad de audio de una llamada**, reconstruyendo el espectro perdido durante la transmisión telefónica.
+**VQR (Voice Quality Restoration)** processing was developed by Solidyne for its line of analog hybrids with landlines.\
+Its purpose is to **improve the audio quality of a phone call** by reconstructing the spectrum lost during telephone transmission.
 
-Las líneas convencionales (POTS) limitan el ancho de banda a un rango aproximado de **300 Hz – 3.000 Hz**, suficiente para la inteligibilidad, pero que elimina frecuencias bajas y altas que aportan sensación de naturalidad.
+Conventional lines (POTS) limit the bandwidth to approximately **300 Hz – 3,000 Hz**, sufficient for intelligibility but eliminating low and high frequencies that contribute to a natural sound.
 
-- El sistema VQR puede **reconstruir graves hasta 50 Hz**.
-- También es capaz de generar componentes de alta frecuencia, devolviendo brillo y claridad a la voz.
-- Aunque se desarrolló para líneas terrestres, el VQR también mejora llamadas realizadas a través de **telefonía móvil**.
+- The VQR system can **reconstruct bass frequencies down to 50 Hz**.
+- It can also generate high-frequency components, restoring brightness and clarity to the voice.
+- Although developed for landlines, VQR also improves calls made through **mobile telephony**.
 
 <Tip>
-  Los mejores resultados se obtienen al usar consolas de exteriores y micrófonos dinámicos de buena calidad.
+  Best results are achieved when using field consoles and good quality dynamic microphones.
 </Tip>
 
 <Info>
-  Para una explicación técnica detallada, consultar el documento: [Teoría del sistema VQR](https://www.solidynepro.com/descargas/manual_antiguos/TeoriadelsistemaVQR.pdf)
+  For a detailed technical explanation, refer to the document: [VQR System Theory](https://www.solidynepro.com/descargas/manual_antiguos/TeoriadelsistemaVQR.pdf)
 </Info>
 
 ---
 
-## Uso del procesado VQR
+## Using VQR Processing
 
-El VQR se activa pulsando su botón a la posición **ON**.\
-El usuario controla la reconstrucción mediante tres perillas:
+VQR is activated by pressing its button to the **ON** position.\
+The user controls the reconstruction using three knobs:
 
 <img
   src="/images/hl240/hl240-VQR.png"
@@ -39,61 +47,61 @@ El usuario controla la reconstrucción mediante tres perillas:
   style={{ width:"47%" }}
 />
 
-- **LOW BAND** (graves)
-- **HI BAND** (agudos)
-- **NOISE** (reductor de ruido)
+- **LOW BAND** (bass)
+- **HI BAND** (treble)
+- **NOISE** (noise reducer)
 
-### Control LOW BAND
+### LOW BAND Control
 
-Regula la cantidad de graves añadidos a la señal.
+Adjusts the amount of bass added to the signal.
 
-- Hacia la izquierda (OFF): sin reconstrucción en bajas frecuencias.
-- Girando en sentido horario: se refuerzan las frecuencias graves.
+- To the left (OFF): no low-frequency reconstruction.
+- Turning clockwise: low frequencies are enhanced.
 
 <Note>
-  La efectividad depende de la calidad del audio original (teléfono usado, nivel de envío desde la consola, interferencias, etc.).\
-  Cuanto peor sea la calidad de la llamada, menor será la mejora aportada por el VQR.
+  Effectiveness depends on the original audio quality (phone used, send level from console, interference, etc.).\
+  The worse the call quality, the less improvement VQR can provide.
 </Note>
 
 <Warning>
-  Monitorear siempre el resultado en **monitores principales**.\
-  El uso de auriculares o altavoces de baja calidad puede dar una falsa sensación de exceso de graves.
+  Always monitor the result on **main monitors**.\
+  Using headphones or low-quality speakers may give a false impression of excessive bass.
 </Warning>
 
-### Control HI BAND
+### HI BAND Control
 
-Regula la cantidad de agudos añadidos a la señal.
+Adjusts the amount of treble added to the signal.
 
-- Hacia la izquierda: procesado desactivado en agudos.
-- En sentido horario: refuerzo progresivo de las altas frecuencias.
+- To the left: high-frequency processing disabled.
+- Clockwise: progressive enhancement of high frequencies.
 
 <Warning>
-  El ajuste de agudos es más crítico que el de graves:\
-  un exceso puede producir un sonido artificial, con agudos crujientes molestos para el oyente.
+  Treble adjustment is more critical than bass:\
+  excess can produce an artificial sound with harsh highs unpleasant for the listener.
 </Warning>
 
 <Tip>
-  En emisoras AM suele requerirse mayor énfasis en alta frecuencia, por lo que el control HI BAND ofrece un rango muy amplio.
+  AM stations usually require more high-frequency emphasis, which is why the HI BAND control offers a very wide range.
 </Tip>
 
 <Note>
-  Es importante que la señal alcance la etapa VQR con los picos de audio alcanzando la zona roja de vúmetro. Si el nivel es demasiado bajo o alto, la reconstrucción será defectuosa.
+  It's important that the signal reaches the VQR stage with audio peaks hitting the red zone of the VU meter. If the level is too low or too high, reconstruction will be defective.
 </Note>
 
-### Control NOISE (reductor de ruido)
+### NOISE Control (noise reducer)
 
-Este control activa una **compuerta de ruido** (Expander-Gate).\
-Su función es atenuar el ruido de fondo durante las pausas en la conversación.
+This control activates a **noise gate** (Expander-Gate).\
+Its function is to attenuate background noise during conversation pauses.
 
-- Perilla a la izquierda (OFF): compuerta desactivada.
-- Girando a la derecha: aumenta el umbral, es decir, el nivel por debajo del cual la compuerta atenúa el ruido.
+- Knob to the left (OFF): gate disabled.
+- Turning right: increases the threshold, i.e., the level below which the gate attenuates noise.
 
-**Consideraciones:**
+**Considerations:**
 
-- Si el piso de ruido es demasiado alto, siempre estará por encima del umbral y la compuerta no actuará correctamente.
-- Si el ruido es muy variable (ejemplo: ambiente callejero), conviene no usar la compuerta para evitar un fondo entrecortado.
-- Si el ruido es constante (zumbido o soplido), puede ser preferible dejarlo presente, ya que el oído tiende a enmascararlo.
+- If the noise floor is too high, it will always be above the threshold and the gate won't work properly.
+- If the noise is highly variable (example: street environment), it's better not to use the gate to avoid a choppy background.
+- If the noise is constant (hum or hiss), it may be preferable to leave it present, as the ear tends to mask it.
 
 <Note>
-  El criterio del operador determinará cuándo es beneficioso activar la compuerta y cuándo es mejor mantener el ruido ambiente.
+  The operator's judgment will determine when activating the gate is beneficial and when it's better to maintain the ambient noise.
 </Note>

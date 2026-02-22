@@ -1,90 +1,143 @@
 ---
-title: "Vincular un móvil Bluetooth"
-description: "Procedimiento para emparejar un teléfono celular"
+title: "Pairing a Bluetooth mobile device"
+description: "Procedure for pairing a mobile phone"
 keywords: ["bluetooth"]
-tags: ["consolas de estudio", "línea Classic", "minimixer"]
+tags: ["studio consoles", "Classic line", "minimixer"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d0f34e947f23cbc3506fa9cd2890083aaab9e2494431b713d8345653cdc6fcda"
+
 ---
 
-## Emparejamiento Bluetooth
+## Bluetooth Pairing
 
-Cualquier teléfono con Bluetooth puede vincularse al **MiniMixer**.\
-El celular puede ubicarse hasta a 3 metros de distancia, aunque se recomienda mantenerlo cerca, evitando apoyarlo directamente sobre la consola.
+Any Bluetooth-enabled phone can be paired with the **MiniMixer**.\
+The mobile device can be placed up to 3 meters away, although keeping it nearby is recommended, avoiding direct contact with the console.
 
-Al emparejar (pair) un teléfono con el MiniMixer se crea un enlace entre ambos dispositivos.\
-El móvil registra el código de identificación (ID) de la consola, y esta operación solo es necesaria una vez por cada teléfono.\
-Una vez que la consola y el móvil están vinculados, basta con activar Bluetooth en ambos equipos y elegir el dispositivo correspondiente en el celular.
+When pairing a phone with the MiniMixer, a link is created between both devices.\
+The mobile device stores the console's identification code (ID), and this operation is only required once per phone.\
+Once the console and mobile device are paired, simply enable Bluetooth on both devices and select the corresponding device on the phone.
 
-El procedimiento es similar al de otros dispositivos Bluetooth, como altavoces o kits manos libres.
+The procedure is similar to other Bluetooth devices, like speakers or hands-free kits.
 
-### Procedimiento de emparejamiento
+### Pairing Procedure
 
 <Steps>
-  <Step title="Verificar estado de Bluetooth en la consola">
-    Asegurarse de que el botón **BLT** esté apagado.
+  <Step title="Check Bluetooth status on the console">
+    Make sure the **BLT** button is off.
 
-    - Cuando Bluetooth está encendido, el LED parpadea lentamente (un destello cada 2 segundos).
-    - Si está activado, mantener pulsado el botón **BLT** hasta que el LED se apague por completo.
+    - When Bluetooth is on, the LED blinks slowly (one flash every 2 seconds).
+    - If it's on, press and hold the **BLT** button until the LED turns off completely.
   </Step>
-  <Step title="Activar modo emparejamiento en la consola">
-    Con Bluetooth apagado, mantener presionado el botón **BLT** por ~10 segundos.\
-    El LED comenzará a parpadear rápidamente, indicando que el modo emparejamiento está activo y la consola lista para ser detectada por el móvil.
+  <Step title="Activate pairing mode on the console">
+    With Bluetooth off, press and hold the **BLT** button for ~10 seconds.\
+    The LED will start blinking rapidly, indicating that pairing mode is active and the console is ready to be detected by the mobile device.
   </Step>
-  <Step title="Buscar dispositivos en el teléfono">
-    En el celular, activar Bluetooth y realizar una búsqueda de dispositivos nuevos.\
-    Este procedimiento varía según marca y modelo, consulte el manual del teléfono si es necesario.
+  <Step title="Search for devices on the phone">
+    On the mobile device, enable Bluetooth and search for new devices.\
+    This procedure varies by brand and model, consult the phone's manual if necessary.
   </Step>
-  <Step title="Seleccionar Solidyne BTM641">
-    El MiniMixer aparecerá identificado como **Solidyne BTM641**.
+  <Step title="Select Solidyne BTM641">
+    The MiniMixer will appear as **Solidyne BTM641**.
 
-    - Si el celular solicita clave, ingresar `0000`.
+    - If the phone requests a passcode, enter `0000`.
   </Step>
-  <Step title="Confirmar emparejamiento">
-    Una vez aceptado, el código de identificación de la consola queda almacenado en el teléfono.\
-    El LED del botón **BLT** cambiará a parpadeo lento (cada 2 segundos), indicando que Bluetooth está activo.
+  <Step title="Confirm pairing">
+    Once accepted, the console's identification code is stored in the phone.\
+    The **BLT** button LED will change to slow blinking (every 2 seconds), indicating that Bluetooth is active.
   </Step>
 </Steps>
 
 <Note>
-  - No es necesario repetir esta operación mientras se use el mismo teléfono.
-  - Para vincular un nuevo móvil, repetir el procedimiento desde el inicio.
-  - No es posible vincular dos teléfonos al mismo tiempo.
+  - This operation is not necessary while using the same phone.
+  - To pair a new mobile device, repeat the procedure from the beginning.
+  - It is not possible to pair two phones simultaneously.
 </Note>
 
 ---
 
-### Nombre del dispositivo
+### Device Name
 
-El nombre predeterminado **Solidyne BTM641** puede cambiarse desde el menú de configuración Bluetooth del celular.
+The default name **Solidyne BTM641** can be changed from the phone's Bluetooth settings menu.
 
 ---
 
-## Reconectar un móvil ya vinculado
+## Reconnecting a Previously Paired Device
 
-1. Activar Bluetooth en la consola presionando **BLT** hasta que el LED encienda (aprox. 5 segundos). El LED quedará en parpadeo lento.
-2. Activar Bluetooth en el teléfono. Cuando se confirme la conexión, las llamadas entrantes y salientes se enrutarán automáticamente a la consola.
+1. Enable Bluetooth on the console by pressing **BLT** until the LED turns on (approximately 5 seconds). The LED will remain slowly blinking.
+2. Enable Bluetooth on the phone. When the connection is confirmed, incoming and outgoing calls will automatically route through the console.
 
 <Info>
-  En algunos teléfonos la reconexión no es automática. En esos casos se debe seleccionar manualmente el dispositivo **Solidyne BTM641** desde la lista de dispositivos Bluetooth del móvil.
+  On some phones, reconnection is not automatic. In these cases, manually select the **Solidyne BTM641** device from the phone's Bluetooth device list.
 </Info>
 
 ---
 
-## Ajuste de volumen
+## Volume Adjustment
 
 <Warning>
-  Es fundamental ajustar el volumen de Bluetooth en el celular al **máximo**, para garantizar buena recepción y la mejor relación señal/ruido.
+  It is essential to set the phone's Bluetooth volume to **maximum** to ensure good reception and the best signal-to-noise ratio.
 </Warning>
 
-- El ajuste debe realizarse durante una llamada real usando Bluetooth.
-- El volumen del altavoz del celular es independiente del volumen Bluetooth.
-- Si se cambia el nivel con Bluetooth desconectado, solo se modifica el volumen del altavoz, no el del enlace inalámbrico.
-- El nivel de Bluetooth queda almacenado en la memoria del móvil.
-- Si se usa otro teléfono, repetir el procedimiento para fijar el volumen al máximo.
+- Adjustment should be made during an actual Bluetooth call.
+- The phone's speaker volume is independent of the Bluetooth volume.
+- If the level is changed with Bluetooth disconnected, only the speaker volume is modified, not the wireless link volume.
+- The Bluetooth level is stored in the phone's memory.
+- If using another phone, repeat the procedure to set the volume to maximum.
 
 ---
 
-## Apagar Bluetooth
+## Turning Off Bluetooth
 
-Para desactivar Bluetooth en la consola, mantener presionado el botón **BLT** hasta que el LED deje de parpadear.
+To disable Bluetooth on the console, press and hold the **BLT** button until the LED stops blinking.
 
 ---
+
+## Troubleshooting
+
+### The Phone Does Not Connect
+
+1. Verify that Bluetooth is enabled on both devices.
+2. Check if the phone is already paired with another Bluetooth device.
+3. If the phone was previously paired but does not connect:
+   - Delete the pairing from the phone's Bluetooth settings
+   - Turn off Bluetooth on the console
+   - Repeat the pairing procedure
+
+### Poor Audio Quality
+
+1. Ensure the phone's Bluetooth volume is set to maximum.
+2. Check that the phone is within range (maximum 10 meters with clear line of sight).
+3. Verify there are no sources of interference nearby:
+   - WiFi routers
+   - Other Bluetooth devices
+   - Microwave ovens
+   - Metal obstacles
+
+### Connection Drops
+
+1. Check the distance between phone and console.
+2. Verify battery level on the phone.
+3. Ensure there are no physical obstructions.
+4. Move away from potential interference sources.
+
+<Note>
+  If problems persist after trying these solutions, contact Solidyne technical support.
+</Note>
+
+---
+
+## Technical Specifications
+
+| Parameter | Value |
+|-----------|--------|
+| Bluetooth Version | 4.0 |
+| Range | Up to 10m (line of sight) |
+| Frequency | 2.4 GHz |
+| Profiles | HFP, HSP |
+| Pairing Memory | Up to 8 devices |
+| Audio Quality | 16 bit / 8 kHz |

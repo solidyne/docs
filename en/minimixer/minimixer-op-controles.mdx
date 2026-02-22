@@ -1,40 +1,48 @@
 ---
-title: "Operación: Controles"
-description: "Descripción de los controles y operación"
-keywords: ["operación"]
-tags: ["consolas de estudio", "línea Classic", "minimixer"]
+title: "Operation: Controls"
+description: "Description of controls and operation"
+keywords: ["operation"]
+tags: ["studio consoles", "Classic line", "minimixer"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "dafe9271c450d3b458ea06d21a76ff1ba6b00f18bc5ebf6d58846319b7842499"
+
 ---
 
-## Descripción general
+## General Description
 
-Las distintas fuentes de audio —micrófonos, computadora y líneas telefónicas— ingresan a la consola a través de los canales de entrada.\
-El MiniMixer mezcla todas las señales para generar la señal principal llamada **Programa (PGM)**.
+Different audio sources —microphones, computer and telephone lines— enter the console through the input channels.\
+The MiniMixer combines all signals to generate the main signal called **Program (PGM)**.
 
-Cada fuente de audio se controla mediante sus respectivos faders.
+Each audio source is controlled by its respective faders.
 
-Las funciones de la consola se agrupan en distintas zonas:
+The console functions are grouped into different zones:
 
 <img
   src="/images/minimixer/minimixer-secciones.png"
-  alt="Minimixer Secciones"
-  title="Minimixer Secciones"
+  alt="Minimixer Sections"
+  title="Minimixer Sections"
   className="mx-auto"
   style={{ width:"80%" }}
 />
 
-1. **Telecomunicaciones**: controles para gestionar la línea fija y el teléfono móvil por Bluetooth.
-2. **Intercom**: permite hablar con líneas telefónicas y auriculares mediante el micrófono interno.
-3. **Teclado DTMF**: posibilita discado directo en la línea fija desde la consola.
-4. **Faders**: controlan los niveles de micrófonos y señales de línea.
-5. **Medidores de nivel**: muestran el nivel de PGM y la acción del compresor de micrófonos.
-6. **Conexiones**: indican la ubicación de los conectores en el panel trasero.
+1. **Telecommunications**: controls for managing landline and Bluetooth mobile phone.
+2. **Intercom**: enables communication with telephone lines and headphones using the internal microphone.
+3. **DTMF Keypad**: enables direct dialing on landline from the console.
+4. **Faders**: control microphone and line signal levels.
+5. **Level Meters**: display PGM level and microphone compressor action.
+6. **Connections**: indicate connector locations on the rear panel.
 
-## Líneas telefónicas
+## Telephone Lines
 
-El MiniMixer incluye un canal híbrido para manejar tanto la línea telefónica fija como un teléfono móvil por Bluetooth.\
-Su operación es sencilla y a prueba de errores, gracias a la lógica de seguridad y los circuitos automáticos.
+The MiniMixer includes a hybrid channel to handle both landline and Bluetooth mobile phone.\
+Its operation is simple and error-proof, thanks to safety logic and automatic circuits.
 
-### Controles del canal híbrido
+### Hybrid Channel Controls
 
 <img
   src="/images/minimixer/minimixer-lineas_telco.png"
@@ -45,34 +53,34 @@ Su operación es sencilla y a prueba de errores, gracias a la lógica de segurid
 />
 
  1. **PHONE/LINE IN**\
-    Conmuta entre la entrada de línea estéreo y la línea auxiliar.
-    - Cuando el híbrido no se usa, se pueden emplear simultáneamente los 4 micrófonos y las dos líneas de entrada.
-    - Si ingresa una llamada estando en LINE-IN, el botón **HOLD** parpadeará para notificar al operador. Se debe conmutar a PHONE para atender.
- 2. **LEVEL (línea fija / auxiliar)**\
-    Controla el nivel de la línea fija y de la entrada auxiliar, tanto en CUE como en la señal al aire.
- 3. **TALK (línea fija)**\
-    Botón momentáneo que habilita el micrófono interno para hablar fuera de aire con la línea telefónica.
- 4. **CUE/PGM (línea fija / auxiliar)**\
-    Selecciona si la señal se envía a la preescucha en auriculares (**CUE**) o a la salida principal al aire (**PGM**).
+    Switches between stereo line input and auxiliary line.
+    - When the hybrid is not in use, all 4 microphones and both input lines can be used simultaneously.
+    - If a call comes in while in LINE-IN mode, the **HOLD** button will flash to notify the operator. Switch to PHONE to answer.
+ 2. **LEVEL (landline / auxiliary)**\
+    Controls the level of landline and auxiliary input, both in CUE and on-air signal.
+ 3. **TALK (landline)**\
+    Momentary button that enables the internal microphone to talk off-air with the telephone line.
+ 4. **CUE/PGM (landline / auxiliary)**\
+    Selects whether the signal is sent to headphone preview (**CUE**) or main on-air output (**PGM**).
  5. **HOLD**
-    - Parpadea al recibir una llamada.
-    - Al presionarlo, se responde la llamada y queda en espera con retorno de PGM.
-    - También sirve para enviar la llamada al aire.
+    - Flashes when receiving a call.
+    - When pressed, answers the call and puts it on hold with PGM return.
+    - Also used to put the call on-air.
  6. **LEVEL (Bluetooth)**\
-    Ajusta el nivel de audio proveniente del teléfono móvil enlazado por Bluetooth.
+    Adjusts the audio level from the Bluetooth-linked mobile phone.
  7. **BLT (Bluetooth ON/OFF / Pairing)**
-    - Enciende o apaga el enlace Bluetooth.
-    - Manteniéndolo presionado ingresa en modo de emparejamiento.
-    - El LED indica el estado:
-      - Parpadeo lento = activo.
-      - Parpadeo rápido = en modo descubrimiento.
+    - Turns Bluetooth connection on or off.
+    - Hold to enter pairing mode.
+    - LED indicates status:
+      - Slow flash = active.
+      - Fast flash = discovery mode.
  8. **CUE/PGM (Bluetooth)**\
-    Conmuta la señal Bluetooth entre la escucha privada en auriculares (**CUE**) o la salida principal (**PGM**).
+    Switches Bluetooth signal between private headphone monitoring (**CUE**) or main output (**PGM**).
  9. **TALK (Bluetooth)**\
-    Permite hablar en privado con el teléfono móvil, utilizando el micrófono interno de talkback.
-10. **LEVEL general auriculares**\
-    Control maestro del nivel de auriculares.
+    Enables private communication with mobile phone using the internal talkback microphone.
+10. **LEVEL master headphones**\
+    Master headphone level control.
 11. **PGM MUTE**\
-    Silencia la señal de programa en auriculares, permitiendo escuchar solo lo que está en CUE.
+    Mutes program signal in headphones, allowing monitoring of CUE only.
 12. **TALK TO HEADPHONES**\
-    Botón que habilita el micrófono interno para hablar directamente a los auriculares (intercom).
+    Button that enables the internal microphone to talk directly to headphones (intercom).

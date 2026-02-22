@@ -1,88 +1,96 @@
 ---
-title: "Líneas telefónicas (POTS)"
-description: "Conexión y ajuste de líneas telefónicas tradicionales"
-keywords: ["conexiones", "POTS", "línea telefónica", "rechazo", "null"]
-tags: ["híbridos", "HL240"]
+title: "Telephone Lines (POTS)"
+description: "Connection and adjustment of traditional telephone lines"
+keywords: ["connections", "POTS", "telephone line", "rejection", "null"]
+tags: ["hybrids", "HL240"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f2dadccb17d7e7ba3b5887110050a8ecc76eeb49a2776ff4b887e6d153fb6b2e"
+
 ---
 
-## Conexionado
+## Connections
 
-En el panel posterior hay dos pares de conectores RJ11: **PHONE SET/LINE 1** y **PHONE SET/LINE 2**.\
-Allí se conectan los pares telefónicos (líneas POTS) y sus teléfonos asociados.
+On the rear panel there are two pairs of RJ11 connectors: **PHONE SET/LINE 1** and **PHONE SET/LINE 2**.\
+These are used to connect the telephone pairs (POTS lines) and their associated telephones.
 
-Los teléfonos operan normalmente mientras las líneas no están tomadas por el HL240-VQ (modo OFF). Cuando una línea es tomada (modo ON) se desconecta del teléfono.
+The telephones operate normally while the lines are not engaged by the HL240-VQ (OFF mode). When a line is engaged (ON mode) it disconnects from the telephone.
 
-Las líneas pueden provenir de una central pública o de una central privada (PBX).\
-El uso de PBX deteriora el rechazo del híbrido, por lo que se recomienda conectar el HL240-VQ directamente a líneas de centrales públicas.
+The lines can come from a public exchange or a private branch exchange (PBX).\
+Using a PBX degrades the hybrid's rejection, so it is recommended to connect the HL240-VQ directly to public exchange lines.
 
-El híbrido telefónico cuenta con filtros internos de rechazo de RF en bandas de **AM, VHF y UHF**.\
-Si utiliza líneas ADSL (con señal de Internet), asegúrese de contar con el filtro de RF correspondiente.
+The telephone hybrid includes internal RF rejection filters for **AM, VHF and UHF** bands.\
+If using ADSL lines (with Internet signal), make sure you have the corresponding RF filter.
 
-Las conexiones telefónicas están protegidas contra descargas de alta tensión (centellas o rayos no directos) mediante varistores de óxido metálico, soportando sobretensiones de hasta 2 kV.
+The telephone connections are protected against high voltage discharges (sparks or indirect lightning) using metal oxide varistors, withstanding overvoltages up to 2 kV.
 
 <Warning>
-  Es imprescindible instalar protectores gaseosos externos en las líneas provenientes de centrales públicas, conectados a una buena puesta a tierra (jabalina).\
-  En caso de descargas directas por rayo, la garantía del equipo no cubre daños.
+  It is essential to install external gas discharge tubes on lines coming from public exchanges, connected to a good ground connection (ground rod).\
+  In case of direct lightning strikes, equipment damage is not covered by warranty.
 </Warning>
 
 <Info>
-  Como referencia, puede consultar el [**Diagrama general de puesta a tierra**](/es/diagrama-tierras)** en estaciones de radio**.
+  For reference, you can check the [**General Grounding Diagram**](/es/diagrama-tierras)** for radio stations**.
 </Info>
 
 ---
 
-## Ajuste del factor de rechazo
+## Rejection Factor Adjustment
 
-El ajuste de rechazo del híbrido se aplica solo a líneas terrestres analógicas.\
-Su función es minimizar el retorno de señal local que vuelve por la línea.
+The hybrid rejection adjustment applies only to analog landlines.\
+Its function is to minimize the local signal return coming back through the line.
 
 <Note>
-  En una línea analógica, las fuentes locales (micrófonos del estudio) y el audio del otro extremo se mezclan en el mismo par de hilos.\
-  El híbrido telefónico separa ambas señales, pero la separación nunca es completa: una pequeña parte del audio enviado a la línea retorna a la consola.
+  On an analog line, local sources (studio microphones) and audio from the other end mix on the same pair of wires.\
+  The telephone hybrid separates both signals, but separation is never complete: a small portion of the audio sent to the line returns to the console.
 </Note>
 
-Si el híbrido está desajustado, el retorno de señal local será elevado y deteriorará la calidad de la voz directa.\
-El rechazo se ajusta en fábrica con impedancias normalizadas, pero es necesario reajustarlo en cada instalación.
+If the hybrid is misadjusted, local signal return will be high and will degrade direct voice quality.\
+Rejection is factory-adjusted with standardized impedances, but needs readjustment at each installation.
 
-Los controles **NULL-1** y **NULL-2** (panel trasero) permiten calibrar el rechazo de cada línea.
+The **NULL-1** and **NULL-2** controls (rear panel) allow calibrating the rejection for each line.
 
-**Procedimiento:**
+**Procedure:**
 
 <Steps>
-  <Step title="Establecer llamada">
-    Usar el teléfono asociado y realizar una llamada (a otra línea terrestre o a un móvil).
+  <Step title="Establish call">
+    Use the associated telephone to make a call (to another landline or mobile).
   </Step>
-  <Step title="Inyectar tono de referencia">
-    Pulsar el botón **AUDIO TONE**. Se inyectará un tono en la línea.\
-    Este tono no interrumpe la señal enviada desde la consola, por lo que debe silenciarse el envío.
+  <Step title="Inject reference tone">
+    Press the **AUDIO TONE** button. A tone will be injected into the line.\
+    This tone does not interrupt the signal sent from the console, so sending should be muted.
   </Step>
-  <Step title="Ajustar rechazo">
-    Girar el control **NULL** (multivueltas) en ambos sentidos, observando el indicador **OUTPUT LEVEL**.\
-    Buscar la posición con el menor nivel de señal.
+  <Step title="Adjust rejection">
+    Turn the **NULL** control (multi-turn) in both directions, observing the **OUTPUT LEVEL** indicator.\
+    Find the position with the lowest signal level.
   </Step>
-  <Step title="Monitoreo opcional">
-    Escuchar la variación del tono residual usando auriculares conectados a la salida **HEADPHONES** o monitorear desde la consola.
+  <Step title="Optional monitoring">
+    Listen to the residual tone variation using headphones connected to the **HEADPHONES** output or monitor from the console.
   </Step>
-  <Step title="Repetir en la otra línea">
-    Realizar el mismo ajuste para la segunda línea.
+  <Step title="Repeat for other line">
+    Perform the same adjustment for the second line.
   </Step>
 </Steps>
 
 ---
 
-## Sistema de prioridad
+## Priority System
 
-El sistema de prioridad se aplica únicamente a las líneas terrestres.\
-Cuando se detecta señal local (micrófonos del estudio), el audio proveniente de la línea se atenúa en **10 dB**.
+The priority system applies only to landlines.\
+When local signal is detected (studio microphones), the incoming audio from the line is attenuated by **10 dB**.
 
-Este sistema tiene dos objetivos:
+This system has two purposes:
 
-- Dar prioridad al locutor en un debate: si ambos hablan a la vez, prevalece la voz del estudio.
-- Mejorar la calidad de la voz local, reduciendo la señal residual que el híbrido no logra rechazar.
+- Give priority to the host in a debate: if both speak simultaneously, studio voice prevails.
+- Improve local voice quality by reducing the residual signal that the hybrid cannot reject.
 
-**Consejos prácticos:**
+**Practical tips:**
 
-- Evite usar música de fondo (_cortinas_), o manténgala a muy bajo nivel, ya que podría disparar el sistema de prioridad y atenuar el audio entrante.
-- En entrevistas y diálogos, la acción del sistema de prioridad es natural y no percibida por el oyente.
-- En aplicaciones especiales (ej.: concursos donde el oyente debe identificar una canción), la atenuación puede resultar indeseada.\
-  En estos casos, se recomienda utilizar teléfonos Bluetooth.
+- Avoid using background music (_beds_), or keep it at very low level, as it could trigger the priority system and attenuate incoming audio.
+- In interviews and dialogues, the priority system action is natural and not perceived by the listener.
+- In special applications (e.g.: contests where listeners must identify a song), the attenuation may be undesired.\
+  In these cases, using Bluetooth phones is recommended.

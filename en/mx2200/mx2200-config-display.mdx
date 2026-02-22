@@ -1,31 +1,39 @@
 ---
-title: "Configuración desde el equipo"
-description: "Configurarción del sistema desde el frente del equipo."
-keywords: ["configuración","SETUP", "encoder", "oled", "display"]
-tags: ["consolas portátiles","CODEC","MX2200"]
+title: "Device Configuration"
+description: "System configuration from the device front panel."
+keywords: ["configuration","SETUP", "encoder", "oled", "display"]
+tags: ["portable consoles","CODEC","MX2200"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "06a579ca640db221f43dbe994ef9b13834c3571cd0fb0cca5d83dcfd542a7072"
+
 ---
 
-## La pantalla SETUP
+## The SETUP Screen
 
-La pantalla **SETUP** es una de las cuatro pantallas principales.\
-Se accede girando el **encoder** y permite configurar todas las opciones de red y emisión.
+The **SETUP** screen is one of the four main screens.\
+It is accessed by rotating the **encoder** and allows configuring all network and streaming options.
 
-- En la vista inicial muestra el estado de **Wi-Fi, Ethernet y Módem**.
-- Para cada conexión indica si hay una **IP asignada** o si está **inactiva**.
-- En Wi-Fi además se muestra el **nombre de la red** conectada.
+- The initial view shows the status of **Wi-Fi, Ethernet and Modem**.
+- For each connection it indicates if there is an **assigned IP** or if it is **inactive**.
+- For Wi-Fi, it also shows the **network name** of the connected network.
 
-Pulsando el encoder se despliegan todas las opciones de configuración.
+Pressing the encoder displays all configuration options.
 
 ---
 
 ### SETUP → Wi-Fi
 
-- Lista las redes inalámbricas **2.4G y 5.8G** disponibles, ordenadas por intensidad de señal.
-- El nivel de señal se expresa en **dB milivoltios** (valores más cercanos a 0 = señal más fuerte).
-- En la esquina superior derecha aparece la **MAC de la interfaz Wi-Fi**.
+- Lists available **2.4G and 5.8G** wireless networks, sorted by signal strength.
+- Signal level is expressed in **dB millivolts** (values closer to 0 = stronger signal).
+- The **Wi-Fi interface MAC** appears in the upper right corner.
 
 <Note>
-  Algunos proveedores requieren informar la **MAC** de la interfaz para autorizar la conexión.
+  Some providers require reporting the interface **MAC** to authorize the connection.
 </Note>
 
 ---
@@ -39,22 +47,22 @@ Pulsando el encoder se despliegan todas las opciones de configuración.
   style={{ width:"45%" }}
 />
 
-- Configura parámetros de la red cableada.
-- De fábrica viene en **DHCP activado**, por lo que recibe una IP automáticamente.
-- Para usar **IP fija**, se debe desactivar DHCP y asignar manualmente:
-  - Dirección IP
-  - Máscara de subred
+- Configures wired network parameters.
+- Factory default is **DHCP enabled**, so it receives an IP automatically.
+- For **static IP**, DHCP must be disabled and manually assign:
+  - IP Address
+  - Subnet Mask
   - Gateway
-  - Servidores DNS
-- Muestra la dirección **MAC** como dato informativo (no editable).
+  - DNS Servers
+- Shows the **MAC** address for reference (not editable).
 
 <Warning>
-  La configuración manual debe realizarla **personal técnico especializado**.
+  Manual configuration should be performed by **specialized technical personnel**.
 </Warning>
 
 ---
 
-### SETUP → Módem
+### SETUP → Modem
 
 <img
   src="/images/mx2200/mx2200-display-setup-modem.png"
@@ -63,14 +71,14 @@ Pulsando el encoder se despliegan todas las opciones de configuración.
   style={{ width:"45%" }}
 />
 
-- Compatible con **dongles 4G** (plug & play).
-- Los dongles modernos actúan como adaptadores Ethernet y no requieren configuración.
-- Los antiguos dongles 3G necesitan parámetros de **APN, usuario y clave** (provistos por el ISP).
-- Si la conexión está activa, muestra una **IP distinta de 0.0.0.0**.
+- Compatible with **4G dongles** (plug & play).
+- Modern dongles act as Ethernet adapters and require no configuration.
+- Older 3G dongles need **APN, username and password** parameters (provided by ISP).
+- If connection is active, it shows an **IP different from 0.0.0.0**.
 
 <Warning>
-  Conectar siempre el módem con un **cable USB de extensión**.\
-  La conexión directa al puerto USB puede causar **interferencias audibles**.
+  Always connect the modem using a **USB extension cable**.\
+  Direct connection to the USB port may cause **audible interference**.
 </Warning>
 
 ---
@@ -84,13 +92,13 @@ Pulsando el encoder se despliegan todas las opciones de configuración.
   style={{ width:"45%" }}
 />
 
-- Configuración de transmisión RTP:
-  - Dirección IP destino
-  - Puerto
-  - Códec (MP3, Opus, PCM)
+- RTP transmission configuration:
+  - Destination IP address
+  - Port
+  - Codec (MP3, Opus, PCM)
 
 <Warning>
-  Estos ajustes avanzados deben realizarse por **personal técnico especializado**.
+  These advanced settings should be configured by **specialized technical personnel**.
 </Warning>
 
 ---
@@ -104,8 +112,8 @@ Pulsando el encoder se despliegan todas las opciones de configuración.
   style={{ width:"45%" }}
 />
 
-- Configuración de transmisión hacia servidores web tipo **Icecast/Shoutcast**.
-- Se ingresan las credenciales y parámetros del servidor contratado.
+- Configuration for streaming to **Icecast/Shoutcast** web servers.
+- Credentials and parameters from the contracted server are entered.
 
 ---
 
@@ -118,19 +126,19 @@ Pulsando el encoder se despliegan todas las opciones de configuración.
   style={{ width:"45%" }}
 />
 
-- Ingreso de datos de la **cuenta SIP** (provistos por el servicio).
-- Se requieren al menos **dos cuentas**:
-  - Una dirección SIP para la consola. Ej: `mx2200@sip.linphone.org`.
-  - Una dirección SIP para los estudios, que se configurará en el software VoIP usado para recibir (o generar) las llamadas. Ej: `estudio@sip.linphone.org`.
+- Entry of **SIP account** data (provided by the service).
+- At least **two accounts** are required:
+  - A SIP address for the console. Ex: `mx2200@sip.linphone.org`.
+  - A SIP address for the studio, to be configured in the VoIP software used to receive (or make) calls. Ex: `studio@sip.linphone.org`.
 
 <Info>
-  Los servicios SIP pueden ser gratuitos (ej: [Linphone](https://www.linphone.org)) o pagos, según la complejidad de la implementación.
+  SIP services can be free (e.g.: [Linphone](https://www.linphone.org)) or paid, depending on implementation complexity.
 </Info>
 
-### Calidad de audio SIP
+### SIP Audio Quality
 
-SIP account QUALITY permite fijar la calidad de audio preferida para las llamadas SIP.\
-Opciones disponibles:
+SIP account QUALITY allows setting the preferred audio quality for SIP calls.\
+Available options:
 
 - Mono VoIP 16 kbps
 - Mono Wideband 32 kbps
@@ -140,8 +148,8 @@ Opciones disponibles:
 - Stereo HiStudio 256 kbps
 
 <Note>
-  MX2200 prioriza el códec **Opus** en la calidad seleccionada.\
-  Si el receptor no lo soporta, se negociará automáticamente otro códec disponible.
+  MX2200 prioritizes the **Opus** codec at the selected quality.\
+  If the receiver doesn't support it, another available codec will be automatically negotiated.
 </Note>
 
 ---
@@ -155,12 +163,12 @@ Opciones disponibles:
   style={{ width:"45%" }}
 />
 
-- Muestra la agenda de contactos SIP.
-- Navegación básica desde la consola; edición completa **solo desde la interfaz web**.
+- Shows the SIP contacts directory.
+- Basic navigation from console; full editing **only from web interface**.
 
-<Accordion title="Agregar un contacto (interfaz web)" icon="pencil" iconType="solid">
-  1. [Acceder a la interfaz web](/es/mx2200/mx2200-config-acceso).
-  2. Seleccionar la solapa **CONTACTS**.
+<Accordion title="Add a contact (web interface)" icon="pencil" iconType="solid">
+  1. [Access the web interface](/es/mx2200/mx2200-config-acceso).
+  2. Select the **CONTACTS** tab.
 
      <img
        src="/images/mx2200/mx2200-web_SIP_contacts.jpg"
@@ -168,19 +176,19 @@ Opciones disponibles:
        title="Mx2200 Web SIP Contacts Jp"
        style={{ width:"54%" }}
      />
-  3. Ingresar **SIP Address** y **Friendly Name**.
-  4. Pulsar **ADD** y luego **APPLY** para enviar cambios al hardware.
+  3. Enter **SIP Address** and **Friendly Name**.
+  4. Press **ADD** and then **APPLY** to send changes to hardware.
 
-  #### Editar contacto
+  #### Edit contact
 
-  1. Seleccionar el contacto en la lista.
-  2. Modificar los campos.
-  3. Pulsar **UPDATE** y luego **APPLY**.
+  1. Select the contact from the list.
+  2. Modify the fields.
+  3. Press **UPDATE** and then **APPLY**.
 
-  #### Borrar contacto
+  #### Delete contact
 
-  1. Seleccionar el contacto.
-  2. Pulsar **DELETE** y luego **APPLY**.
+  1. Select the contact.
+  2. Press **DELETE** and then **APPLY**.
 </Accordion>
 
 ---
@@ -194,28 +202,28 @@ Opciones disponibles:
   style={{ width:"45%" }}
 />
 
-- Muestra el estado de alimentación y batería.
-- Indica si el equipo está usando la batería interna o fuente externa.
-- Ejemplo: `Battery 7,0 V` → consola alimentada por batería.
-- El campo `Bat level` indica el nivel restante (%).
-- Una carga al 100% ofrece normalmente más de 3 horas de transmisión.
-- El equipo se apaga automáticamente al llegar a **6,2 V**.
-- Puede usarse un **power bank de 12 V** como fuente externa.
+- Shows power and battery status.
+- Indicates if the unit is using internal battery or external power.
+- Example: `Battery 7.0 V` → console running on battery.
+- The `Bat level` field shows remaining level (%).
+- A 100% charge typically provides over 3 hours of transmission.
+- The unit automatically shuts down at **6.2 V**.
+- A **12V power bank** can be used as external power source.
 
 ---
 
 ### SETUP → Time Zone
 
-- Ajusta la zona horaria para asignar correctamente la fecha/hora a las grabaciones.
-- Normalmente se configura una sola vez.
-- La sincronización se realiza mediante **servidores NTP públicos**.
+- Adjusts the time zone to correctly timestamp recordings.
+- Usually configured once.
+- Synchronization is done through **public NTP servers**.
 
 ---
 
 ### SETUP → RX Volume
 
-- Ajusta el nivel de retorno enviado desde la emisora cuando la conexión es vía **SIP**.
-- Este retorno se suma a:
-  - Circuito de monitoreo CUE (auriculares).
-  - Envío a líneas **POTS**.
-  - Envío a línea **Bluetooth**.
+- Adjusts the return level sent from the station when connection is via **SIP**.
+- This return is added to:
+  - CUE monitoring circuit (headphones).
+  - Send to **POTS** lines.
+  - Send to **Bluetooth** line.

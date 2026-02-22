@@ -1,173 +1,180 @@
 ---
-title: "Conexiones y puesta en marcha"
-description: "Descripción de las opciones de conexión y configuración inicial."
-keywords: ["conectividad", "conectores"]
-tags: ["consolas portátiles", "CODECS", "MX2200"]
+title: "Connections and startup"
+description: "Description of connection options and initial setup."
+keywords: ["connectivity", "connectors"]
+tags: ["portable consoles", "CODECS", "MX2200"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "c4c95bd3a9fb719faafcffc9e46ae3520b65fe2688a1041e155e69d75a387cd0"
 
 ---
 
-## Conectores en el panel trasero
+## Rear Panel Connectors
 
 <img
   src="/images/mx2200/mx2200-trasero.png"
-  alt="Mx2200 Trasero Pn"
-  title="Mx2200 Trasero Pn"
+  alt="Mx2200 Rear Panel"
+  title="Mx2200 Rear Panel"
   className="mx-auto"
   style={{ width:"92%" }}
 />
 
-### Alimentación (1)
+### Power Supply (1)
 
-1. **Entrada para fuente externa**: Conector tubular 2 mm (pin \+).
-   - Fuente conmutada 90/240 V → salida **12 V / 1.5 A**.
-   - También admite batería externa de 12 V (respetar la polaridad).
-2. **Batería interna**: autonomía aprox. **4 horas** (llamada SIP por Ethernet, sin Wi-Fi ni Bluetooth).
-3. **Recarga**: se realiza con el equipo **encendido y conectado** a la fuente externa.
-   - Tiempo de carga completa (batería totalmente descargada): **10 horas**.
+1. **External power input**: 2 mm barrel connector (pin \+).
+   - Switching power supply 90/240 V → output **12 V / 1.5 A**.
+   - Also accepts 12 V external battery (observe polarity).
+2. **Internal battery**: approx. **4 hours** autonomy (SIP call via Ethernet, without Wi-Fi or Bluetooth).
+3. **Charging**: occurs with unit **powered on and connected** to external supply.
+   - Full charging time (completely discharged battery): **10 hours**.
 
 <Warning>
-  El uso de **fuentes externas no provistas de fábrica** ocasionará la **pérdida de la garantía**.
+  Using **power supplies not provided by factory** will void the **warranty**.
 </Warning>
 
 ---
 
-### Luz de aire (2)
+### On-Air Light (2)
 
-- Conector tubular 2,5 mm (pin \+).
-- Entrega **12 VDC**, soporta hasta **200 mA**.
-- Cuando se conecta una luz de aire:
-  - La salida de **auriculares #1** pasa a comportarse como salida para **monitores**.
-  - Se silencia automáticamente cuando se activan los micrófonos, para evitar acoples.
+- 2.5 mm barrel connector (pin \+).
+- Provides **12 VDC**, supports up to **200 mA**.
+- When an on-air light is connected:
+  - **Headphones #1** output becomes **monitor speakers** output.
+  - Automatically mutes when microphones are activated to prevent feedback.
 
 ---
 
 ### USB Audio (3)
 
-- Conexión digital a la computadora mediante cable USB A/B (usar el cable provisto).
-- Recomendación: no exceder **4 m** de longitud.
+- Digital connection to computer via USB A/B cable (use provided cable).
+- Recommendation: do not exceed **4 m** length.
 
   <Warning>
-    Asegúrese de que la computadora esté **puesta a tierra**.\
-    Si no lo está, podría dañarse la entrada USB de la consola o de la computadora.
+    Ensure the computer is **properly grounded**.\
+    If not, the console or computer USB input could be damaged.
   </Warning>
-- Compatible con Windows 7 a 11, Linux Ubuntu y macOS (reconocimiento automático).
-- El sistema detecta:
-  - **Dispositivo de reproducción USB** → entrada LINE USB en la consola.
-  - **Dispositivo de grabación USB** → salida de audio desde PGM.
+- Compatible with Windows 7 to 11, Linux Ubuntu and macOS (automatic recognition).
+- System detects:
+  - **USB Playback Device** → LINE USB input on console.
+  - **USB Recording Device** → audio output from PGM.
 
   <Note>
-    En Windows puede gestionarse en: **Panel de Control → Sonido → Audio** → selección de dispositivos de reproducción y grabación.
+    In Windows, manage through: **Control Panel → Sound → Audio** → select playback and recording devices.
   </Note>
 
 ---
 
-### Micrófonos (4)
+### Microphones (4)
 
-- Cuatro entradas balanceadas (XLR) para micrófonos dinámicos.
-- **MIC 3 y MIC 4** comparten el mismo atenuador.
-- Recomendación: usar micrófonos de la misma marca y modelo en entradas compartidas.
-
----
-
-### Auriculares (5)
-
-- Cuatro salidas TRS 1/8” (minijack).
-- Todas entregan el mismo nivel, controlado por la perilla de **CUE MONITOR**.
-- Salida #1 puede usarse como salida de **parlantes monitores**:
-  - Se silencia automáticamente cuando una **luz de aire** está conectada y se activa al enviar micrófonos a PGM.
+- Four balanced inputs (XLR) for dynamic microphones.
+- **MIC 3 and MIC 4** share the same fader.
+- Recommendation: use microphones of same brand and model on shared inputs.
 
 ---
 
-### Línea telefónica terrestre (6)
+### Headphones (5)
 
-- Conector RJ11 para conexión de línea POTS.
-- Puede conectarse directamente a la central pública o a una PBX (central privada).
-- Protección interna contra descargas con varistores.
+- Four 1/8" TRS outputs (minijack).
+- All deliver same level, controlled by **CUE MONITOR** knob.
+- Output #1 can be used as **monitor speakers** output:
+  - Automatically mutes when **on-air light** is connected and microphones are sent to PGM.
+
+---
+
+### Landline Phone (6)
+
+- RJ11 connector for POTS line connection.
+- Can connect directly to public network or PBX (private exchange).
+- Internal surge protection with varistors.
 
   <Warning>
-    Se recomienda protección adicional en zonas de tormenta (descargadores gaseosos y fusibles).\
-    Los daños ocasionados por rayos **no están cubiertos por la garantía**.
+    Additional protection recommended in storm-prone areas (gas arrestors and fuses).\
+    Lightning damage is **not covered by warranty**.
   </Warning>
-- **Preset NULL** permite ajustar rechazo del híbrido.
+- **NULL Preset** allows hybrid rejection adjustment.
 
-  <Accordion title="Ajuste de rechazo (NULL)" icon="gear">
-    Se realiza al conectar la consola a la línea. Si la consola se desconecta y se vuelve a conectar luego a esa misma línea telefónica, no es necesario repetir el ajuste. \
-    Pero se deberá re-ajustar cada vez que se conecte a una línea diferente.
+  <Accordion title="Rejection adjustment (NULL)" icon="gear">
+    Performed when connecting console to line. If console is disconnected and later reconnected to same phone line, adjustment is not necessary. \
+    However, readjustment is required each time connected to a different line.
 
     <Steps>
-      <Step title="Preparar la señal">
-        Enviar contenido hablado a PGM desde la computadora. Si no se dispone contenido hablado, se puede hablar en vivo usando los micrófonos.
+      <Step title="Prepare signal">
+        Send spoken content to PGM from computer. If spoken content unavailable, live microphone speech can be used.
       </Step>
-      <Step title="Establecer llamada">
-        Realizar una llamada usando la línea fija (PHONE).
+      <Step title="Establish call">
+        Make a call using landline (PHONE).
       </Step>
-      <Step title="Silenciar al interlocutor">
-        Pedir al otro extremo que active **mute** o permanezca en silencio. \
-        Se puede llamar a un teléfono móvil propio y silenciar el micrófono.
+      <Step title="Mute caller">
+        Ask other end to activate **mute** or remain silent. \
+        You can call your own mobile phone and mute its microphone.
       </Step>
-      <Step title="Escuchar en CUE">
-        Quitar PGM de auriculares (botón PGM en CUE liberado).
-        Escuchar la línea en CUE.
+      <Step title="Listen in CUE">
+        Remove PGM from headphones (PGM button in CUE released).
+        Listen to line in CUE.
       </Step>
-      <Step title="Ajustar preset NULL">
-        Girar el preset NULL hasta encontrar el punto de **mínimo retorno**.
+      <Step title="Adjust NULL preset">
+        Turn NULL preset until finding point of **minimum return**.
       </Step>
-      <Step title="Finalizar">
-        Cortar la comunicación.
+      <Step title="Finish">
+        End the call.
       </Step>
     </Steps>
   </Accordion>
 
 ---
 
-### Entrada de línea estéreo (7)
+### Stereo Line Input (7)
 
-- Conector TRS 1/4” no balanceado.
-  - Se controla con el atenuador LINE cuando **USB no está conectado**.
-  - Si USB está activo, LINE pasa a ser entrada secundaria (desde sección PHONE).
+- Unbalanced 1/4" TRS connector.
+  - Controlled by LINE fader when **USB is not connected**.
+  - If USB is active, LINE becomes secondary input (from PHONE section).
 
 <Warning>
-  Si el enlace se realiza vía Bluetooth, **LINE IN no puede sumarse** desde la sección PHONE.\
-  Solo estará disponible desde el atenuador LINE si no se conecta USB Audio.
+  If link is via Bluetooth, **LINE IN cannot be added** from PHONE section.\
+  Only available through LINE fader if USB Audio is not connected.
 </Warning>
 
 ---
 
-### Inserción de programa (8)
+### Program Insert (8)
 
-- Entrada **Stream-In** TRS 1/4” con contacto de corte.
-- Al conectarse, **reemplaza la mezcla interna** de PGM en **streaming y USB**.
-- Permite usar procesadores externos:  _PGM Out → Procesador → Stream-In_.
-
----
-
-### Salida de programa (9)
-
-- **Stereo PGM Out** (TRS 1/4”).
-- Envía la mezcla completa: micrófonos, USB, línea auxiliar y líneas telefónicas.
+- **Stream-In** 1/4" TRS with interruption contact.
+- When connected, **replaces internal PGM mix** in **streaming and USB**.
+- Allows external processors: _PGM Out → Processor → Stream-In_.
 
 ---
 
-### Ethernet (red por cable)  (10)
+### Program Output (9)
 
-- Puerto RJ45 para conexión a red local.
-- Usos:
-  - Acceso vía web a configuración del CODEC.
-  - Conexión a Internet para SIP y streaming.
-  - Acceso vía web a grabaciones.
-- Configuración de fábrica: **DHCP habilitado**.
+- **Stereo PGM Out** (1/4" TRS).
+- Sends complete mix: microphones, USB, auxiliary line and phone lines.
 
 ---
 
-### Puertos USB (Wi-Fi y Módem)  (11)
+### Ethernet (Wired Network) (10)
 
-- Puertos USB 2.0 tipo A.
-- Permiten conectar:
-  - **Antena Wi-Fi**.
-  - **Módem 4G** (requiere cable de extensión de 1 m).
+- RJ45 port for local network connection.
+- Uses:
+  - Web access to CODEC configuration.
+  - Internet connection for SIP and streaming.
+  - Web access to recordings.
+- Factory setting: **DHCP enabled**.
+
+---
+
+### USB Ports (Wi-Fi and Modem) (11)
+
+- USB 2.0 type A ports.
+- Allow connection of:
+  - **Wi-Fi antenna**.
+  - **4G modem** (requires 1 m extension cable).
 
 <Warning>
-  **No conectar un módem USB directamente al puerto**. Puede causar **interferencias audibles**.\
-  Use siempre un cable extensor para separar el módem de la consola.\
-  Esto también le permitirá reorientar el Módem en caso de obtener la indicación de señal débil.
+  **Do not connect USB modem directly to port**. Can cause **audible interference**.\
+  Always use extension cable to separate modem from console.\
+  This also allows reorienting modem if weak signal indication is received.
 </Warning>

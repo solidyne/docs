@@ -1,59 +1,67 @@
 ---
-title: "UX18 Panel trasero"
-description: "Instalacion de consola UX18, Panel Trasero"
-keywords: ["instalación","trasero","conectores"]
-tags: "consolas IP,UNIDEX,UX18,UDX2MIC,UDX2TEL,UDXTEL+BT,UDX-USB"
+title: "UX18 Rear Panel"
+description: "UX18 console installation, Rear Panel"
+keywords: ["installation","rear","connectors"]
+tags: "IP consoles,UNIDEX,UX18,UDX2MIC,UDX2TEL,UDXTEL+BT,UDX-USB"
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "8b22133806327ca2583c4c99afceb9ae0e5357ad3272457f5ec026d3fcea8fc0"
+
 ---
 
-## Fuente de alimentación
+## Power Supply
 
-UX18 utiliza una fuente de alimentación externa de tipo conmutada, 110/240V 50/60Hz. En el panel trasero se encuentra el conector para conexión de la fuente.
-
-<Danger>
-  Conecte primero el conector roscado al panel trasero, y luego la fuente a la red eléctrica.
-</Danger>
-
-## Puesta a tierra
-
-UX24 se conecta a tierra a través del cable del alimentación. No utilizar adaptadores o cables que supriman la clavija de toma a tierra. Se recomienda además conectar el borne de puesta a tierra del chasis a la tierra de la instalación, usando cable de 4 mm o superior.
-
-La instalación eléctrica general debe contar con una puesta a tierra adecuada. Como referencia, puede consultar el [plano de conexiones a tierra](/es/puesta-a-tierra) para FM.
+UX18 uses an external switched-mode power supply, 110/240V 50/60Hz. The power supply connector is located on the rear panel.
 
 <Danger>
-  **¡ATENCIÓN!**
-
-  Asegúrese que la computadora conectada a UX24 vía USB tenga una puesta a tierra adecuada.
+  First connect the threaded connector to the rear panel, then connect the power supply to the mains.
 </Danger>
 
-## Panel trasero
+## Grounding
 
-El panel trasero concentra todas las conexiones de la consola. Se emplean conectores RJ45 para todas las conexiones de audio, con excepción de las entradas para micrófono, las salidas para auriculares y para los parlantes en la cabina de control.
+UX24 is grounded through the power cable. Do not use adapters or cables that bypass the ground pin. It is also recommended to connect the chassis ground terminal to the facility's ground using 4 mm cable or larger.
 
-También encontramos puertos **Ethernet**, puerto **USB**, conexiones para **luces de aire** (Tally Light) y control **GPIO**.
+The general electrical installation must have proper grounding. For reference, you can check the [FM ground connections diagram](/es/puesta-a-tierra).
 
-![UX18 Panel Trasero Pn](/images/ux24/UX18_Panel_Trasero.png)
+<Danger>
+  **WARNING!**
 
-<Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} />  [ENTRADAS](/es/unidex/instalacion-entradas) (click para ampliar info)
+  Make sure that any computer connected to UX24 via USB has proper grounding.
+</Danger>
 
-- 5 entradas para micrófonos con conectores XLR.
-- 8 entradas UNIDEX mono agrupables en pares estéreo.
-- 2 balanceadas estéreo.
-- 1 "On-Air Monitor" estéreo no balanceada (asignable a un canal).
-- 2 digitales AES3.
-- 4 USB audio estéreo.
-- 1 streaming de audio (reemplaza AES3-1)
-- OPCIÓN: DANTE x16
+## Rear Panel
 
-<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [**SALIDAS**](/es/unidex/instalacion-salidas)
+The rear panel contains all console connections. RJ45 connectors are used for all audio connections, except for microphone inputs, headphone outputs and control room speaker outputs.
 
-- 2 PGM balanceadas
-- 4 estero balanceadas
-- 2 digitales AES3
-- 4 USB audio estéreo
+You will also find **Ethernet** ports, **USB** port, **Tally Light** connections and **GPIO** control.
+
+![UX18 Rear Panel Pn](/images/ux24/UX18_Panel_Trasero.png)
+
+<Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} />  [INPUTS](/es/unidex/instalacion-entradas) (click for more info)
+
+- 5 microphone inputs with XLR connectors.
+- 8 mono UNIDEX inputs groupable in stereo pairs.
+- 2 balanced stereo.
+- 1 unbalanced stereo "On-Air Monitor" (assignable to a channel).
+- 2 AES3 digital.
+- 4 USB stereo audio.
+- 1 audio streaming (replaces AES3-1)
+- OPTION: DANTE x16
+
+<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [**OUTPUTS**](/es/unidex/instalacion-salidas)
+
+- 2 balanced PGM
+- 4 balanced stereo
+- 2 AES3 digital
+- 4 USB stereo audio
 - 2 audio streams
-- OPCIÓN: DANTE x16
+- OPTION: DANTE x16
 
-<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [SALIDA STUDIO](/es/unidex/instalacion-cableado_monitoreo)
+<Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  [STUDIO OUTPUT](/es/unidex/instalacion-cableado_monitoreo)
 
 <Icon icon="usb-drive" iconType="solid" color="#008dff" size={24} />  [USB](/es/unidex/instalacion-usb)
 

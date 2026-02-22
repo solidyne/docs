@@ -1,110 +1,118 @@
 ---
-title: "Enlace con la radio"
-description: "Opciones de conexión a la radio mediante teléfono móvil"
-keywords: ["enlace"]
-tags: ["consolas portátiles", "MX2100"]
----
-
-## Conexión a celular por Bluetooth
-
-La MX2100 soporta la conexión de un teléfono celular vía **Bluetooth**, para transmisión hacia estudios o para sumar un celular a la transmisión cuando el enlace se realiza desde un computador externo o línea terrestre.
-
-- Compatible con cualquier teléfono con Bluetooth.
-- Elimina la dependencia de cables manos libres, distintos según marca y modelo.
-- Distancia máxima: hasta 5 metros; recomendado: llevar el móvil encima pero separado de la consola (bolsillo de camisa o cinturón en el lado opuesto).
-- Ventaja: la señal se mantiene digital desde el celular hasta el interior del MX2100, logrando mejor calidad de audio.
+title: "Radio Link"
+description: "Mobile phone connection options for radio linking"
+keywords: ["link"]
+tags: ["portable consoles", "MX2100"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "3b1dd3c842dea0288dda2cc2ceab07c7c98af1d7c546fce5c2aee54b1da41020"
 
 ---
 
-### Vincular el celular a la consola
+## Mobile Phone Bluetooth Connection
 
-El primer emparejamiento solo debe hacerse una vez por cada teléfono. A partir de allí, la conexión es automática cuando se activa Bluetooth en ambos equipos.
+The MX2100 supports connecting a mobile phone via **Bluetooth** for transmission to studios or to add a mobile phone to the broadcast when linking through an external computer or landline.
+
+- Compatible with any Bluetooth-enabled phone.
+- Eliminates dependency on hands-free cables that vary by brand and model.
+- Maximum distance: up to 5 meters; recommended: keep the phone on your person but separated from the console (shirt pocket or belt on the opposite side).
+- Advantage: signal remains digital from the phone to inside the MX2100, achieving better audio quality.
+
+---
+
+### Pairing the Phone with the Console
+
+Initial pairing only needs to be done once per phone. After that, connection is automatic when Bluetooth is activated on both devices.
 
 <Steps>
-  <Step title="Apagar Bluetooth en la consola">
-    Verificar que el LED Bluetooth (ubicado en el teclado DTMF) esté apagado.
+  <Step title="Turn off Bluetooth on the console">
+    Verify that the Bluetooth LED (located on the DTMF keypad) is off.
 
-    - Si destella verde cada 2 segundos → está encendido.
-    - Para apagarlo: mantener pulsadas las teclas **“#” y “9”** hasta que el LED se apague.
+    - If it blinks green every 2 seconds → it's on.
+    - To turn it off: hold down the **"#" and "9"** keys until the LED turns off.
   </Step>
-  <Step title="Activar modo búsqueda en la consola">
-    Con Bluetooth apagado, mantener presionadas **“#” y “9”** durante ~10 segundos hasta que el LED destelle en forma rápida alternando verde/rojo.\
-    Esto indica que la MX2100 entró en modo búsqueda.
+  <Step title="Activate search mode on the console">
+    With Bluetooth off, hold down **"#" and "9"** for ~10 seconds until the LED flashes rapidly alternating green/red.\
+    This indicates the MX2100 has entered search mode.
   </Step>
-  <Step title="Buscar dispositivos en el celular">
-    En el teléfono, iniciar la búsqueda de dispositivos Bluetooth.\
-    El procedimiento depende del modelo, consulte el manual del móvil.
+  <Step title="Search for devices on the phone">
+    On the phone, start searching for Bluetooth devices.\
+    The procedure depends on the model, consult your phone's manual.
   </Step>
-  <Step title="Seleccionar la consola">
-    El teléfono mostrará el dispositivo **Solidyne BTM641** (en modelos antiguos: BTM751).
+  <Step title="Select the console">
+    The phone will show the device **Solidyne BTM641** (on older models: BTM751).
 
-    - Si solicita clave: ingresar **0000**.
-    - El ID del MX2100 queda almacenado en el móvil.
-    - El LED de la consola cambia a verde intermitente lento (un destello cada 2 segundos), indicando conexión activa.
+    - If a code is requested: enter **0000**.
+    - The MX2100 ID is stored in the phone.
+    - The console LED changes to slow blinking green (one flash every 2 seconds), indicating active connection.
   </Step>
 </Steps>
 
 <Warning>
-  Bluetooth se enciende manteniendo “#” y “9” (o cualquier combinación entre filas 3 y 4) por ~5 segundos, soltando al encender LED verde.
+  Bluetooth turns on by holding "#" and "9" (or any combination between rows 3 and 4) for ~5 seconds, releasing when green LED lights up.
 
-  - Verde lento = encendido.
-  - Verde/rojo rápido = modo búsqueda.
+  - Slow green = on.
+  - Fast green/red = search mode.
 </Warning>
 
 <Note>
-  En algunos teléfonos, tras detectar el dispositivo es necesario presionar **“conectar”** para que quede activo. Otros lo activan automáticamente.
+  On some phones, after detecting the device you need to press **"connect"** to activate it. Others activate it automatically.
 </Note>
 
 ---
 
-### Re-conectar dispositivo vinculado
+### Reconnecting a Paired Device
 
-Para reconectar un celular previamente emparejado:
+To reconnect a previously paired phone:
 
 <Steps>
-  <Step title="Encender Bluetooth en la consola">
-    Pulsar **“#” y “9”** hasta que el LED encienda verde (5 segundos aprox.).
+  <Step title="Turn on Bluetooth on the console">
+    Press **"#" and "9"** until the LED turns green (approximately 5 seconds).
   </Step>
-  <Step title="Encender Bluetooth en el teléfono">
-    Cuando el móvil confirme conexión, ya está listo para operar.\
-    Al realizar o recibir llamadas, el audio se envía a la consola.
+  <Step title="Turn on Bluetooth on the phone">
+    When the phone confirms connection, it's ready to operate.\
+    When making or receiving calls, audio is sent to the console.
   </Step>
 </Steps>
 
 <Note>
-  En algunos teléfonos la reconexión no es automática y debe elegirse manualmente el dispositivo **Solidyne BTM641** en la lista de equipos Bluetooth.
+  On some phones, reconnection is not automatic and you must manually select the **Solidyne BTM641** device from the Bluetooth devices list.
 </Note>
 
 ---
 
-### Ajuste del volumen
+### Volume Adjustment
 
-- Ajustar el volumen de Bluetooth en el celular al **máximo**, para obtener la mejor relación señal/ruido.
-- El ajuste debe hacerse **durante una llamada** vía Bluetooth.
-- El volumen del teléfono es independiente del volumen de Bluetooth.
-- El valor queda almacenado en la memoria del celular.
-- Si cambia de teléfono, deberá reajustar el nivel al máximo.
+- Set the Bluetooth volume on the phone to **maximum** to obtain the best signal-to-noise ratio.
+- Adjustment must be made **during a Bluetooth call**.
+- Phone volume is independent of Bluetooth volume.
+- The value is stored in the phone's memory.
+- If you change phones, you'll need to readjust the level to maximum.
 
 <Warning>
-  Si se ajusta el volumen sin estar en una llamada Bluetooth, solo se cambia el volumen del parlante del teléfono, **no** el de Bluetooth.
+  If you adjust the volume without being on a Bluetooth call, you only change the phone's speaker volume, **not** the Bluetooth volume.
 </Warning>
 
 ---
 
-### Apagar Bluetooth en la consola
+### Turning off Bluetooth on the Console
 
-Para evitar consumo de batería cuando no se utiliza, apagar Bluetooth manteniendo presionadas **“#” y “9”** hasta que el LED se apague por completo.
+To avoid battery drain when not in use, turn off Bluetooth by holding down **"#" and "9"** until the LED turns off completely.
 
 ---
 
-<Accordion title="Conexión a teléfono móvil por cable (obsoleto)" icon="mobile">
-  El conector **RJ-11 “Cellular&Phone”** permite conectar un celular mediante un accesorio de **manos libres**.
+<Accordion title="Mobile Phone Cable Connection (obsolete)" icon="mobile">
+  The **RJ-11 "Cellular&Phone"** connector allows connecting a mobile phone using a **hands-free** accessory.
 
-  - Se utiliza como respaldo del enlace de la computadora externa, especialmente cuando Bluetooth está en uso para enviar al aire otro celular.
-  - El celular transmite al MX2100 las señales de micrófono (punta del miniplug) y parlante (anillo).
-  - La consola envía la señal de programa al celular, que la retransmite a la radio.
-  - El retorno desde la radio llega al celular y de allí a la consola, integrándose a la mezcla de auriculares (STUDIO).
-  - Mientras se usa este conector, el micrófono y parlante del celular quedan desconectados.
+  - Used as backup for external computer link, especially when Bluetooth is being used to broadcast another phone.
+  - The phone transmits microphone (tip of miniplug) and speaker (ring) signals to the MX2100.
+  - The console sends the program signal to the phone, which retransmits it to the radio.
+  - Return from the radio arrives at the phone and then to the console, integrating into the headphone mix (STUDIO).
+  - While using this connector, the phone's microphone and speaker are disconnected.
 
   <img
     src="/images/mx2100/mx2100-manos-libres.jpg"
@@ -114,8 +122,7 @@ Para evitar consumo de batería cuando no se utiliza, apagar Bluetooth mantenien
     style={{ width:"53%" }}
   />
   <Note>
-    El cable de conexión varía según marca y modelo del celular. Es necesario adquirir el accesorio “manos libres” específico para cada teléfono y seguir la documentación del fabricante.
+    The connection cable varies by phone brand and model. You need to acquire the specific "hands-free" accessory for each phone and follow the manufacturer's documentation.
   </Note>
   
 </Accordion>
-

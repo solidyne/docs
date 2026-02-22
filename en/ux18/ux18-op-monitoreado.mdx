@@ -1,148 +1,156 @@
 ---
-title: "Monitoreado y comunicación interna"
-description: "Operación de UX24 - Monitoreado y comunicación interna"
-keywords: ["operación", "monitoreo", "cue", "talkback", "studio monitor", "auriculares", "studiobox"]
-tags: ["consolas IP", "UNIDEX", "UX18", "studiobox"]
+title: "Monitoring and Internal Communication"
+description: "UX24 Operation - Monitoring and Internal Communication"
+keywords: ["operation", "monitoring", "cue", "talkback", "studio monitor", "headphones", "studiobox"]
+tags: ["IP consoles", "UNIDEX", "UX18", "studiobox"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5ad6c5eacb836dbfacee303edc5927953dec04a71095fe26529e5983bdebfdc7"
+
 ---
 
-## Sección de monitoreo
+## Monitoring Section
 
-La sección de monitoreo se compone de:
+The monitoring section consists of:
 
-- Los **controles de nivel** para parlantes, auriculares y CUE ubicados en la superficie de la consola.
-- La **pantalla MONITOR** para asignación de señales.
+- **Level controls** for speakers, headphones and CUE located on the console surface.
+- The **MONITOR screen** for signal assignment.
 
-## Pantalla MONITOR
+## MONITOR Screen
 
-MONITOR se accede pulsando el botón de acceso rápido ubicado a la derecha de la pantalla. En esta pantalla se asignan las fuentes de audio que se escucharán en los parlantes monitores y auriculares del Estudio y la Cabina de Control.
+MONITOR is accessed by pressing the quick access button located to the right of the screen. This screen assigns the audio sources that will be heard through the studio and control room monitor speakers and headphones.
 
 <img
   src="/images/ux24/ux18-pantalla-MONITOR.png"
-  alt="UX18 Pantalla MONITOR"
-  title="UX18 Pantalla MONITOR"
+  alt="UX18 MONITOR Screen"
+  title="UX18 MONITOR Screen"
   className="mx-auto"
   style={{ width:"66%" }}
 />
 
 <Note>
-  La asignación se produce simplemente tocando sobre cada opción. La opción seleccionada queda señalada en color celeste.
+  Assignment is done by simply touching each option. The selected option is highlighted in light blue.
 </Note>
 
-### STUDIO (Monitoreo en el Estudio)
+### STUDIO (Studio Monitoring)
 
-Selecciona la fuente enviada a la salida **STUDIO MONITOR**.\
-Opciones: `AIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`, `CUE`.
+Selects the source sent to the **STUDIO MONITOR** output.\
+Options: `AIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`, `CUE`.
 
-- El nivel para parlantes y auriculares del Estudio se ajusta desde la opción **\+ADVANCED**. Usualmente este nivel se deja fijo y cada participante ajusta su propio nivel desde un distribuidor de auriculares.
-- En radios de recinto único, los parlantes monitores pueden conectarse a la salida **Control Room** para aprovechar la perilla de volumen física.
+- The level for studio speakers and headphones is adjusted from the **\+ADVANCED** option. Usually this level remains fixed and each participant adjusts their own level from a headphone distribution amplifier.
+- In single-room radio stations, monitor speakers can be connected to the **Control Room** output to take advantage of the physical volume knob.
 
-### CONTROL ROOM (Monitoreo en la Cabina de Control)
+### CONTROL ROOM (Control Room Monitoring)
 
-Permite seleccionar la fuente enviada a los altavoces y los auriculares **CONTROL ROOM**.\
-Opciones: `ONAIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`.
+Selects the source sent to the **CONTROL ROOM** speakers and headphones.\
+Options: `ONAIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`.
 
 <Note>
-  **Silenciado de parlantes del Control:**\
-  Cuando se utiliza un micrófono en la Cabina de Control, se puede configurar que la salida de parlantes de control sea silenciada al activarlo (ver _Pantalla de Canal_).\
-  Esto también se usa en emisoras de estudio único o “cabina caliente”, conectando los parlantes de monitoreo a la salida de **Control Room** y configurando todos los micrófonos como “ubicados en Control Room” para habilitar el silenciado automático.
+  **Control Room Speaker Muting:**\
+  When using a microphone in the Control Room, the control room speaker output can be configured to mute when activated (see _Channel Screen_).\
+  This is also used in single-studio or "hot cabin" stations by connecting the monitoring speakers to the **Control Room** output and configuring all microphones as "located in Control Room" to enable automatic muting.
 </Note>
 
-Los botones **CUE SUM** SPEAKER y PHONES permiten inyectar la señal de CUE en los monitores y/o auriculares de la Cabina de Control.
+The **CUE SUM** SPEAKER and PHONES buttons allow injecting the CUE signal into the Control Room monitors and/or headphones.
 
-- Cuando están activos, la señal CUE se suma a la señal monitoreada.
-- La señal principal es atenuada automáticamente cuando entra una señal CUE.
-- El grado de atenuación se configura en pantalla\*\*\+ADVANCED\*\* .
+- When active, the CUE signal is summed with the monitored signal.
+- The main signal is automatically attenuated when a CUE signal enters.
+- The attenuation level is configured in the **\+ADVANCED** screen.
 
-El bus CUE puede asignarse a cualquier salida para conexión de parlantes auxiliares. De forma predeterminada, está asignado a **OUTPUT 4**.
+The CUE bus can be assigned to any output for auxiliary speaker connection. By default, it is assigned to **OUTPUT 4**.
 
-#### Nivel CUE
+#### CUE Level
 
-En la pantalla se muestra un indicador calibrado en dBfs, que refleja el nivel posterior al control de CUE. Si el atenuador está cerrado, no habrá indicación.
+The screen shows a dBfs-calibrated meter that reflects the level after the CUE control. If the attenuator is closed, there will be no indication.
 
 **CUE RESET**\
-Apaga todos los botones CUE activos en la consola.
+Turns off all active CUE buttons on the console.
 
 ### MONITOR: \+ADVANCED
 
-Muestra controles de nivel y ajustes avanzados para las señales de monitoreo.
+Shows level controls and advanced settings for monitoring signals.
 
 <img
   src="/images/ux24/ux18-monitor-advanced.png"
-  alt="UX18 Monitor Opeciones Advanzadas"
-  title="UX18 Monitor Opeciones Advanzadas"
+  alt="UX18 Monitor Advanced Options"
+  title="UX18 Monitor Advanced Options"
   className="mx-auto"
   style={{ width:"68%" }}
 />
 
 <Note>
-  Para cambiar un valor, toque el control y gire el encoder. Pulse el encoder para confirmar.
+  To change a value, touch the control and turn the encoder. Press the encoder to confirm.
 </Note>
 
 **Studio Speaker**\
-Ajusta el nivel de señal para los altavoces conectados a la salida **Studio Monitor**.\
-La salida es de nivel de línea, diseñada para parlantes activos.
+Adjusts the signal level for speakers connected to the **Studio Monitor** output.\
+The output is line level, designed for active speakers.
 
 **Studio Headphones**\
-Ajusta el nivel de señal para los auriculares conectados a la salida **Studio Monitor**.\
-Está pensada para alimentar un distribuidor de auriculares.
+Adjusts the signal level for headphones connected to the **Studio Monitor** output.\
+It is designed to feed a headphone distribution amplifier.
 
 <Warning>
-  **Nota sobre niveles de monitoreo:**\
-  El nivel de las salidas de altavoces y auriculares del Estudio debe ajustarse para evitar una amplificación excesiva en los monitores activos o en el distribuidor de auriculares.\
-  Si la señal de la consola es demasiado baja y se amplifica posteriormente, se degrada la relación señal/ruido.
+  **Note on monitoring levels:**\
+  The level of the Studio speaker and headphone outputs should be adjusted to avoid excessive amplification in active monitors or headphone distributors.\
+  If the console signal is too low and is amplified later, the signal-to-noise ratio degrades.
 </Warning>
 
 **ON-AIR Input Gain**\
-Controla la ganancia de la entrada **Air Monitor Input** (sintonizador externo).
+Controls the gain of the **Air Monitor Input** (external tuner).
 
 **RING Level**\
-Nivel del tono de “ring” en **CUE**, generado por la consola cuando ingresa una llamada por línea telefónica terrestre o Bluetooth.
+Level of the "ring" tone in **CUE**, generated by the console when a call comes in through landline or Bluetooth.
 
 **Talk-Back Mic Level**\
-Ajusta el nivel del micrófono de talk-back hacia el monitoreo de Estudio, Intercom y líneas telefónicas.
+Adjusts the level of the talk-back microphone to Studio monitoring, Intercom and telephone lines.
 
 **Talk-Back Mic Source**\
-Define la entrada de micrófono utilizada para talk-back (Estudios, TELCO e Intercom).\
-Opciones:
+Defines the microphone input used for talk-back (Studios, TELCO and Intercom).\
+Options:
 
-- Micrófono ambiental incorporado.
-- Entradas de micrófono 1 a 4.
-- UNIDEX-4 L y UNIDEX-4 R.
-- DANTE #1 (cuando está disponible)
+- Built-in ambient microphone.
+- Microphone inputs 1 to 4.
+- UNIDEX-4 L and UNIDEX-4 R.
+- DANTE #1 (when available)
 
-La entrada asignada a talk-back puede asignarse también a un canal, por ejemplo, para poner ese micrófono al aire.
+The input assigned to talk-back can also be assigned to a channel, for example, to put that microphone on-air.
 
 **Control Room CUE Sum Audio Att**\
-Fija la atenuación de la señal que se está monitoreando en la Cabina de Control cuando se superpone una señal CUE en parlantes y/o auriculares.\
-Esta atenuación también se aplica al accionar un botón de talk-back (hacia estudios o línea telefónica) o un Intercom.
+Sets the attenuation of the signal being monitored in the Control Room when a CUE signal overlaps in speakers and/or headphones.\
+This attenuation also applies when activating a talk-back button (to studios or telephone line) or an Intercom.
 
-## Control room, Master-MIC y talk-back
+## Control room, Master-MIC and talk-back
 
 <img
   src="/images/ux24/ux18-zonas-monitor.png"
-  alt="UX18 Zona Monitor"
-  title="UX18 Zona Monitor"
+  alt="UX18 Monitor Zone"
+  title="UX18 Monitor Zone"
   style={{ width:"15%" }}
   className="mx-auto"
 />
 
 ### MASTER ON-AIR MICS (1)
 
-Activa/desactiva simultáneamente todos los canales de micrófono y grupos asignados al botón MASTER.
+Simultaneously activates/deactivates all microphone channels and groups assigned to the MASTER button.
 
-### Nivel en monitores de Control (2)
+### Control Room Monitor Level (2)
 
-Atenuador rotativo que ajusta el nivel de los parlantes conectados a la salida **Control Room**.\
-La salida es de nivel de línea para parlantes activos (potenciados). El nivel máximo alcanzado dependerá también del ajuste de los propios monitores.
+Rotary attenuator that adjusts the level of speakers connected to the **Control Room** output.\
+The output is line level for active (powered) speakers. The maximum level achieved will also depend on the monitors' own settings.
 
-### Nivel en auriculares de Control (3)
+### Control Room Headphone Level (3)
 
-Atenuador rotativo para el nivel de los auriculares del operador (conectados a **Control Room Headphones**).
+Rotary attenuator for the operator's headphone level (connected to **Control Room Headphones**).
 
-### Nivel en CUE (4)
+### CUE Level (4)
 
-Es un atenuador rotativo, que controla el nivel del bus CUE. La pantalla principal muestra un indicador de nivel CUE, calibrado en dBfs. El indicador muestra el nivel de salida posterior al control de nivel CUE; por lo tanto, no habrá indicación si el atenuador CUE está cerrado.
+A rotary attenuator that controls the CUE bus level. The main screen shows a CUE level meter, calibrated in dBfs. The meter shows the output level after the CUE level control; therefore, there will be no indication if the CUE attenuator is closed.
 
-### Botón y micrófono de Talk-Back
+### Talk-Back Button and Microphone
 
-Al pulsar este botón, el micrófono Talk-Back se envía a las salida STUDIO (parlantes y auriculares). En auriculares, Talk-Back se reproduce por el canal izquierdo mientras se mantiene la señal de programa (u otra señal asignada) en el canal derecho. 
+When pressing this button, the Talk-Back microphone is sent to the STUDIO output (speakers and headphones). In headphones, Talk-Back is reproduced through the left channel while maintaining the program signal (or other assigned signal) in the right channel.

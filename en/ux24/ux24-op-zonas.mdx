@@ -1,92 +1,100 @@
 ---
-title: "Operación de UX24"
-description: "Operación de UX24 - Areas en la superficie de la consola"
-keywords: ["operación", "panel", "pantalla principal", "monitoreo"]
-tags: ["consolas IP", "UNIDEX", "UX18"]
+title: "UX24 Operation"
+description: "UX24 Operation - Console Surface Areas"
+keywords: ["operation", "panel", "main screen", "monitoring"]
+tags: ["IP consoles", "UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "cf35c3f00211fcb12689d5b24f2f4924acf9c2dd6fd5fb0873cc604a611bbd89"
+
 ---
 
-## Zonas y controles del panel principal UX24
+## UX24 Main Panel Zones and Controls
 
-![Ux24 Operacion Zonas Jp](/images/ux24/ux24-operacion-zonas.jpg)
+![Ux24 Operation Zones Jp](/images/ux24/ux24-operacion-zonas.jpg)
 
-**A — Controles de canal**\
-Controles tradicionales con faders, botones de asignación, puesta al aire y escucha previa (PFL).\
-Se operan de forma convencional y permiten manejar directamente comunicaciones de línea, VoIP y celulares vía Bluetooth (mediante adaptadores UNIDEX TELCO).
+**A — Channel Controls**\
+Traditional controls with faders, bus assignment buttons, ON AIR and Pre-Fader Listen (PFL).\
+They operate conventionally and allow direct control of line inputs, VoIP and cellular via Bluetooth (through UNIDEX TELCO adapters).
 
-**B — Pantalla táctil**\
-Pantalla de 7" utilizada para operar múltiples funciones de la consola.\
-Incluye 6 botones de acceso rápido y un encoder rotativo.\
-Tanto los botones como el encoder son **controles contextuales**, por lo que su función varía según la pantalla activa.
+**B — Touch Screen**\
+7" screen used to operate multiple console functions.\
+Includes 6 shortcut buttons and a rotary encoder.\
+Both buttons and encoder are **context-sensitive controls**, their function varies according to the active screen.
 
-**C — Zona de monitoreo y órdenes**\
-Área destinada al control de monitoreo y al circuito de talkback.
+**C — Monitoring and Talkback Zone**\
+Area dedicated to monitoring control and talkback circuit.
 
-**D — Control remoto**\
-Permite operar y configurar la consola a distancia.\
-Cualquier computadora con navegador web puede acceder a la consola mediante su dirección IP.\
-Es útil para manejar canales virtuales, usar una tableta como extensión de faders o configurar un estudio remoto.
+**D — Remote Control**\
+Enables remote operation and configuration of the console.\
+Any computer with a web browser can access the console using its IP address.\
+Useful for managing virtual channels, using a tablet as a fader extension, or setting up a remote studio.
 
-## Pantalla principal
+## Main Screen
 
-### Indicadores de nivel
+### Level Meters
 
-Los indicadores **PGM**, **REC**, **AUX** y **VBUS** muestran:
+The **PGM**, **REC**, **AUX** and **VBUS** meters display:
 
-- Nivel promedio en **VU** (barra azul de movimiento lento).
-- Nivel de pico en **dBfs** (segmento amarillo flotante).
+- Average level in **VU** (slow-moving blue bar).
+- Peak level in **dBfs** (floating yellow segment).
 
-La escala está tabulada en dBfs, donde **–20 dBfs corresponde a 0 VU**.\
-El valor numérico a la derecha indica el máximo actual (en VU o dBfs) y se conmuta tocando sobre el número.\
-El indicador principal permanece visible en todas las pantallas y se puede cambiar de bus tocando el nombre del bus sobre la izquierda.
+The scale is calibrated in dBfs, where **-20 dBfs equals 0 VU**.\
+The numerical value on the right shows the current maximum (in VU or dBfs) and toggles by touching the number.\
+The main meter remains visible on all screens and can be switched between buses by touching the bus name on the left.
 
 <Tip>
-  **Nota sobre niveles:**\
-  Los indicadores muestran el nivel del **bus**.
+  **Note about levels:**\
+  Meters show the **bus** level.
 
-  - En salidas digitales, el nivel coincide con el de salida si la ganancia está en 0.
-  - En salidas analógicas, 0 VU = –20 dBfs, con niveles nominales de **\+4 dBu** (balanceadas) y **0 dBu** (no balanceadas).\
-    Si se fija un nivel de ganancia superior al nominal, se reduce el margen de sobrecarga y puede haber recorte antes de que el indicador lo muestre.
+  - For digital outputs, the level matches the output level if gain is set to 0.
+  - For analog outputs, 0 VU = -20 dBfs, with nominal levels of **+4 dBu** (balanced) and **0 dBu** (unbalanced).\
+    If gain is set above nominal level, headroom is reduced and clipping may occur before the meter shows it.
 </Tip>
 
 ### CUE Level
 
-Indica el nivel del bus **CUE**, después de la perilla física de nivel.
+Shows the **CUE** bus level, after the physical level knob.
 
 ### Status
 
-- **Unidex IP:** Dirección IP para control remoto. Ingresar en un navegador web (recomendado: Google Chrome) para acceder a la interfaz de control. Requiere conexión del puerto _Ethernet Remote Control_ a la LAN.
-- **Stream IP:** Dirección IP del módulo de streaming. Ingresar en un navegador para configurar servicios de streaming. Requiere conexión del puerto _Ethernet Streaming_ a la LAN.
-- **SCENE:** Nombre de la escena actualmente activa.
-- **USER:** Perfil de usuario activo (ADMIN, EXPERT o BASIC).
-- **MSG:** Mensajes del sistema.
-- **“\+” Avanzado:** Abre opciones de mantenimiento (incluye apagado del CPU interno antes de cortar energía).
+- **Unidex IP:** IP address for remote control. Enter in a web browser (recommended: Google Chrome) to access the control interface. Requires _Ethernet Remote Control_ port connection to LAN.
+- **Stream IP:** Streaming module IP address. Enter in a browser to configure streaming services. Requires _Ethernet Streaming_ port connection to LAN.
+- **SCENE:** Currently active scene name.
+- **USER:** Active user profile (ADMIN, EXPERT or BASIC).
+- **MSG:** System messages.
+- **"+" Advanced:** Opens maintenance options (includes internal CPU shutdown before power off).
 
-### Reloj central
+### Central Clock
 
-Muestra la hora actual.\
-Se sincroniza automáticamente si la consola está conectada a Internet, o de forma manual (ver pantalla SETTINGS -\> SYS CONFIG).
+Displays current time.\
+Syncs automatically when console is connected to Internet, or manually (see SETTINGS -> SYS CONFIG screen).
 
-### Contador EN EL AIRE
+### ON AIR Counter
 
-Inicia una cuenta ascendente (**hh:mm:ss**) al activar micrófonos. Al apagarlos, el valor permanece en pantalla.
+Starts an ascending count (**hh:mm:ss**) when microphones are activated. When turned off, the value remains on screen.
 
-### Menú contextual
+### Context Menu
 
-Seis botones ubicados debajo de la pantalla ofrecen acceso rápido a funciones principales.\
-Su función varía según la pantalla activa. La navegación y edición se realiza con la pantalla táctil y el encoder.
+Six buttons located below the screen provide quick access to main functions.\
+Their function varies according to the active screen. Navigation and editing are done via touch screen and encoder.
 
-Accesos directos en la pantalla principal:
+Main screen shortcuts:
 
-- **SETTINGS:** Configuración avanzada y del sistema (solo ADMIN).
-- **SCENE:** Gestión de escenas y perfiles de usuario.
-- **PROCESS:** Acceso a ecualización, compresión, de-esser y compuerta de ruido (los procesos disponibles varían para cada entrada).
-- **VIRTUAL:** Pulsando el encoder, se accede la pantalla de control de los canales virtuales (12, 6 o ninguno, según expansiones UX6).
-- **MONITOR:** Asignación de fuentes de audio para Estudio y Cabina de Control, con funciones avanzadas de monitoreo.
-- **TELCO:** Gestión de líneas telefónicas, Bluetooth o VoIP, con controles de nivel y ganancia.
-- **CHANNEL:** Información y control del canal seleccionado, incluyendo ganancia, paneo, procesadores y reasignación de fuente.
+- **SETTINGS:** Advanced and system configuration (ADMIN only).
+- **SCENE:** Scene and user profile management.
+- **PROCESS:** Access to equalization, compression, de-esser and noise gate (available processes vary for each input).
+- **VIRTUAL:** Pressing the encoder accesses the virtual channels control screen (12, 6 or none, depending on UX6 expansions).
+- **MONITOR:** Audio source assignment for Studio and Control Room, with advanced monitoring functions.
+- **TELCO:** Management of telephone lines, Bluetooth or VoIP, with level and gain controls.
+- **CHANNEL:** Selected channel information and control, including gain, panning, processors and source reassignment.
 
 <Note>
-  **Modo ahorro de energía**
-  Las pantallas se apagan tras 15 minutos de inactividad.
-  Se reactivan moviendo un fader o pulsando un botón Intercom.
+  **Power saving mode**
+  Screens turn off after 15 minutes of inactivity.
+  They reactivate by moving a fader or pressing an Intercom button.
 </Note>
