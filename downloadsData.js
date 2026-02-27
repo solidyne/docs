@@ -1,13 +1,11 @@
-const downloads = [
+export const downloads = [
   {
-    product: "TEST PRODUCT",
-    name: "Test Component",
-    description: "Test description",
+    product: "TEST",
+    name: "Test component",
+    description: "Desc",
     platform: "Windows",
     version: "1.0",
     date: "",
     url: "#"
   }
 ];
-
-export default downloads;
