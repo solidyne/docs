@@ -3,13 +3,12 @@ title: "Centro de descargas"
 description: "Firmware y herramientas de software"
 ---
 
-import downloads from "../docs.json";
+import downloads from "../downloadsData";
 
 # Downloads
 
 {downloads.map((item, index) => (
   <div key={index}>
-    <h3>{item.product}</h3>
-    <p>{item.name}</p>
+    {item.name}
   </div>
 ))}
