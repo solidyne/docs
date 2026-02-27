@@ -1,3 +1,7 @@
-import downloads from "/snippets/downloadsData";
+import { downloads } from "../snippets/downloadsData";
 
-TEST {downloads[0]}
+# TEST
+
+{downloads.map((item, i) => (
+  <div key={i}>{item.name}</div>
+))}
