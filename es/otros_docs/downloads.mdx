@@ -3,8 +3,53 @@ title: "Centro de descargas"
 description: "Firmware y herramientas de software"
 ---
 
-import DownloadsFromAPI from '../components/DownloadsFromAPI'
+import downloads from "../docs_downloads.json";
 
 # Downloads
 
-<DownloadsFromAPI />
+{Object.entries(downloads).map(([equipment, items]) => (
+  <section key={equipment} style={{ marginBottom: "3rem" }}>
+    <h2>{equipment}</h2>
+
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <thead>
+        <tr>
+          <th align="left">Componente</th>
+          <th align="left">Plataforma</th>
+          <th align="left">Versión</th>
+          <th align="left">Descarga</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {items.map((item, index) => (
+          <tr key={index} style={{ borderTop: "1px solid #e5e7eb" }}>
+            <td style={{ padding: "0.75rem 0" }}>
+              <strong>{item.name}</strong>
+              <div style={{ fontSize: "0.9em", opacity: 0.8 }}>
+                {item.description}
+              </div>
+            </td>
+
+            <td>{item.platform}</td>
+
+            <td>
+              <strong>{item.version}</strong>
+              {item.date && (
+                <div style={{ fontSize: "0.85em", opacity: 0.7 }}>
+                  {item.date}
+                </div>
+              )}
+            </td>
+
+            <td>
+              <a href={item.url} target="_blank">
+                Descargar
+              </a>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+))}
