@@ -5,7 +5,7 @@ keywords: ["instalación", "USB"]
 tags: ["consolas IP", "UNIDEX"]
 ---
 
-El puerto **USB** incorporado permite el intercambio de señales estéreo entre la consola y un computador con Windows 10.
+El puerto **USB** incorporado brinda conexión directa a la computadora, sin necesidad de interfaces de audio adicionales.
 
 - <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} /> Proporciona **4 dispositivos de reproducción estéreo** (de PC hacia "entradas USB" en la consola).
 - <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} /> Proporciona **4 dispositivos de grabación estéreo** ("salidas USB" de la consola hacia la PC).
@@ -23,16 +23,16 @@ Es decir, la computadora puede **enviar 4 señales estéreo** a la consola, y **
 
 La asignación de señales hacia las salidas USB (es decir, los dispositivos de grabación USB en Windows) se configura desde la consola en la pantalla `SETTINGS → OUTPUTS`
 
-<Warning>
-  La siguiente descripción se refiere al **conector USB incorporado** en el Panel Trasero.\
-  Para instalar un **adaptador externo UDX-USB**, consultar la sección: **Adaptadores externos UNIDEX**
-</Warning>
-
 ---
 
 ## Instalación del controlador USB
 
-UX24 requiere un controlador USB propio para establecer comunicación con el sistema operativo Windows.
+<Warning>
+  La siguiente descripción se refiere al **conector USB incorporado** en el Panel Trasero de los modelos UX24 y UX18.\
+  Para instalar un **adaptador externo UDX-USB**, consultar la sección: **Adaptadores externos UNIDEX**
+</Warning>
+
+UNIDEX requiere un controlador USB propio para que el dispositivo sea correctamente reconocido en Windows.
 
 ### Pasos para la instalación:
 
@@ -42,15 +42,14 @@ UX24 requiere un controlador USB propio para establecer comunicación con el sis
   El uso de cables de **mala calidad o dañados** puede provocar que el computador no reconozca correctamente el dispositivo USB o lo identifique con fallos.
 </Danger>
 
-2. Descargar el controlador desde:\
-   https://solidynepro.com/DW/Solidyne_UsbAudio.zip
+2. Descargar el controlador: [Centro de Descargas](/es/otros_docs/downloads)
 3. Ejecutar el instalador y seguir las instrucciones.
 
 ### Dispositivos USB en Windows
 
 Una vez instalado el driver correctamente, Windows mostrará:
 
-Dispositivos de reproducción (salidas desde la PC hacia UX24):
+Dispositivos de reproducción (salidas desde la PC hacia UNIDEX):
 
 - **Solidyne USB OUT 1 →** Entrada USB 1 (UX24)
 - **Solidyne USB OUT 2 →** Entrada USB 2 (UX24)
@@ -70,11 +69,11 @@ Estas salidas se asignan desde la pantalla en: `SETTINGS → OUTPUTS`
 
 ## Compatibilidad con ASIO 3.0
 
-La consola **UX24 soporta ASIO 3.0**, lo que permite compartir simultáneamente el uso de los canales USB entre distintas aplicaciones.
+La compatibilidad **ASIO 3.0** permite el uso compartido y simultáneo de distintos canales USB entre distintas aplicaciones, incluso aunque estas no sean ASIO compatibles.
 
 ### Ejemplo de aplicación avanzada:
 
-- El software de automatización reproduce música por el canal **USB 1**.
-- Otro software de procesamiento (como un host de efectos) toma el canal **USB 2** de retorno desde la consola y aplica **efectos VST** en tiempo real a las voces de micrófono.
+- El software de automatización reproduce música por el canal **USB 1** vía WDM.
+- Otro software de procesamiento (como un host de efectos ASIO) toma el canal **USB 2** de retorno desde la consola y aplica **efectos VST** en tiempo real a las voces de micrófono.
 
 <Icon icon="video" iconType="solid" color="#b30000" size={25} />  [Uso de efectos externos VST ](https://youtu.be/qKi0MMbBEuc?si=j2B0-sSk--1DxuZE)

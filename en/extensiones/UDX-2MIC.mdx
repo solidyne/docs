@@ -6,9 +6,9 @@ tags: ["expansions", "UNIDEX", "UDX-2MIC", "UX24", "UX18"]
 translation:
   source_lang: "es"
   status: "reviewed"
-  version: 1
+  version: 2
   reviewed_by: "Spinelli"
-  reviewed_at: "2026-02-22"
+  reviewed_at: "2026-02-28"
   source_hash: "c450faaa7dd25711f3eec27371c136c8cd4891dca964a30b75c94aa669c9f431"
 
 ---
@@ -22,22 +22,22 @@ UDX 2MIC is a pre-amplification unit for **two microphones**.
 
 ## Connections
 
-UDX 2MIC connects to the console through a **UNIDEX input**, using a straight-through STP RJ45-RJ45 cable (SOL-P50 or SOL-P25 cables).
-
-<Danger>
-  The cable connecting UDX 2MIC to the UNIDEX input carries voltage when 48V phantom power is enabled. It is recommended to turn off the phantom power before disconnecting.
-</Danger>
+UDX 2MIC connects to the console through a **UNIDEX input**, using a straight-through STP RJ45-RJ45 cable (SOL-P50 or SOL-P25 cables). Next wiring diagram shows the connection to UNIDEX UX24.
 
 <img
-  src="/images/ux24/udx2mic_conexion_2.svg"
-  alt="Udx2mic Conexion 2 Sv"
-  title="Udx2mic Conexion 2 Sv"
+  src="/images/ux/udx2mic_connections.png"
+  alt="UDX2MIC conections diagram"
+  title="UDX2MIC conections diagram"
   className="mx-auto"
   style={{ width:"58%" }}
 />
 
+<Danger>
+  The cable connecting UDX 2MIC to the UNIDEX input carries voltage when 48V phantom power is enabled. Turn off the phantom power before unplug it.
+</Danger>
+
 <Warning>
-  If you have TELCO adapters, we recommend reserving inputs 1 to 4 for TELCO since these adapters use the outputs aligned with those inputs.
+  We recommend reserving inputs 1 to 4 for TELCO (UDX 2TEL; TEL BT; 2BLT) since these adapters use the outputs connectors aligned with inputs 1 to 4.
 </Warning>
 
 ### Microphones
@@ -48,8 +48,8 @@ UDX 2MIC features **10dB input attenuation** switchable via dip-switches. Switch
 
 <img
   src="/images/ux24/udx2mic_pad.png"
-  alt="image.png"
-  title="image.png"
+  alt="UDX2MIC input attenuation"
+  title="UDX2MIC input attenuation"
   className="mx-auto"
   style={{ width:"20%" }}
 />
@@ -72,9 +72,9 @@ Below is the configuration process from the console touch screen. This can also 
 </Note>
 
 <img
-  src="/images/ux24/udx2mic_config_entrada.svg"
-  alt="Udx2mic Config Entrada Sv"
-  title="Udx2mic Config Entrada Sv"
+  src="/images/ux/udx2mic_set_inputs.png"
+  alt="UDX2MIC INPUT SETTINGS"
+  title="UDX2MIC INPUT SETTINGS"
   className="mx-auto"
   style={{ width:"71%" }}
 />
@@ -99,9 +99,9 @@ Below is the configuration process from the console touch screen. This can also 
 8. **Save the SCENE** to record the changes.
 
 <img
-  src="/images/ux24/udx2mic_config_canal.svg"
-  alt="Udx2mic Config Canal Sv"
-  title="Udx2mic Config Canal Sv"
+  src="/images/ux/udx2mic_set_channel.png"
+  alt="UDX2MIC channel configuration"
+  title="UDX2MIC channel configuration"
   className="mx-auto"
   style={{ width:"70%" }}
 />

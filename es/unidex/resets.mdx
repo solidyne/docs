@@ -7,7 +7,7 @@ tags: ["consolas IP", "UNIDEX"]
 
 ## Secuencia de arranque
 
-Al encender la consola, UX24 inicia su sistema operativo. Una vez completada la secuencia de arranque, se muestra la **pantalla principal** y se cargan:
+Al encender la consola, UNIDEX inicia su sistema operativo. Una vez completada la secuencia de arranque, se muestra la **pantalla principal** y se cargan:
 
 1. El **perfil de usuario predeterminado.**
 2. La **última escena activa** antes del apagado.
@@ -34,33 +34,33 @@ Para más información sobre configuración de usuarios, ver:\
 
 ## Apagado del CPU
 
-La consola UX24 posee un **CPU interno** que debe **apagarse de forma segura** antes de desconectar la consola completamente.
+Las consolas UNIDEX poseen un **CPU interno** que debe **apagarse de forma segura** antes de desconectar la consola completamente.
 
 ### Procedimiento de apagado del CPU:
 
 1. En la **pantalla principal**, tocar el ícono **“\+”** ubicado en el sector **STATUS**.
 
    <img
-     src="/images/ux24/STATUS+.png"
-     alt="Pantalla Principal - STATUS+"
-     title="Pantalla Principal - STATUS+"
+     src="/images/ux/ux_home_status.png"
+     alt="Pantalla Principal - STATUS"
+     title="Pantalla Principal - STATUS"
      style={{ width:"24%" }}
    />
 2. En la ventana emergente, seleccionar la opción **POWER-OFF**.
 
    <img
-     src="/images/ux24/UX24_ODROID_STATUS+POWEROFF.png"
-     alt="UNIDEX STATUS+ POWEROFF"
-     title="UNIDEX STATUS+ POWEROFF"
+     src="/images/ux/ux_status_poweroff.png"
+     alt="Status, resets and power-off"
+     title="Status, resets and power-off"
      style={{ width:"53%" }}
    />
 
 <Warning>
   Esta función **no apaga toda la consola**, solo apaga el CPU principal del sistema.\
-  El apagado total se realiza mediante la **llave mecánica** de encendido/apagado ubicada en el panel trasero.
+  El apagado total se realiza mediante la **llave mecánica** de encendido/apagado (en el panel trasero o en la fuente externa según modelo).
 </Warning>
 
-Luego de apagar el CPU, **espere unos segundos** antes de apagar la consola por completo, para permitir el cierre correcto de procesos internos.
+Luego de apagar el CPU, **espere unos segundos** antes de apagar la unidad por completo, para permitir el cierre correcto de procesos internos.
 
 ## Acciones del sistema
 
@@ -79,10 +79,10 @@ Estas funciones permiten **reiniciar por separado distintas etapas del sistema**
   Reinicia únicamente la etapa USB.\
   Fuerza al sistema operativo a reconocer nuevamente los dispositivos USB conectados.
 - **RESET MIXER**\
-  Reinicia el motor de mezcla interno de UX24 y la superficie de control.\
+  Reinicia el motor de mezcla interno de UNIDEX y la superficie de control.\
   No afecta al CPU ni a la pantalla.
 - **RESET DISPLAY**\
   Reinicia el computador de a bordo que gestiona el **streaming** y la **interfaz gráfica**.
 - **FULL RESET**\
-  Reinicia todas las etapas del sistema UX24.\
+  Reinicia todas las etapas del sistema.\
   Equivale a un apagado completo y encendido del equipo.

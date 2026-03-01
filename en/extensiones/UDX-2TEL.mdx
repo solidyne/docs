@@ -5,41 +5,41 @@ keywords: ["landlines", "POTS", "hybrid", "TELCO"]
 tags: ["expansions", "UNIDEX", "UDX-2TEL", "UX24", "UX18"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
+  status: "reviewed"
+  version: 1
+  reviewed_by: "Spinelli"
+  reviewed_at: "2026-02-28"
   source_hash: "17149988b26c24fe22427a32eccfb58d26954c91ef7eaf1b5a72c48f4244a631"
 
 ---
 
 ## Overview
 
-The **UDX 2TEL** expansion allows connection of **two landline telephones** and their associated telephone sets.
+The **UDX 2TEL** interface allows connection of **two analog phone lines** (POTS) and their associated telephone sets.
 
 - **UDX 2TEL-P**\
-  Includes controls to **seize the line** and **transfer it to the console**.\
+  Includes controls to **take the line** and **transfer it to the console**.\
   This allows installing the unit and associated phones in locations away from the console, such as a production office.
 - **UDX 2TEL**\
   Has no onboard controls.\
   Designed for calls to be handled by the operator from the console.
 
 All communication functions (dialing, answering, holding, preview talk) are operated **from the console**.\
-Each telephone line works **independently** on a channel.
+At the mixer, each telephone line works **independently** on a channel.
 
 ---
 
 ## UDX 2TEL Connection
 
-Connection is made with two standard **STP RJ45–RJ45** cables connected **pin-to-pin** (Solidyne models **SOL-P50** or **SOL-P25**).
+Connection is made with two standard **STP RJ45–RJ45** cables connected **pin-to-pin** (Solidyne **SOL-P50** or **SOL-P25**).
 
 - **"TO UNIDEX INPUT" output** → Connect to a **UNIDEX input** (1 to 4)
 - **"FROM UNIDEX OUTPUT" input** → Connect to an **unbalanced analog output** (5 to 8)
 
 <img
-  src="/images/ux24/udx2tel-conexion.svg"
-  alt="Udx2tel Connection Sv"
-  title="Udx2tel Connection Sv"
+  src="/images/ux/udx2tel_connections.png"
+  alt="UDX2TEL connection diagram"
+  title="UDX2TEL connection diagram"
   className="mx-auto"
   style={{ width:"59%" }}
 />
@@ -67,7 +67,7 @@ Telephone lines and their associated sets are connected using standard **RJ11** 
 The telephones work normally when the lines are **not seized by the console**.
 
 <Warning>
-  If there is **no dial tone** when seizing the telephone line, verify that the **LINE** and **TELEPHONE** connections are not reversed on the **UDX TEL** adapter.
+  If there is **no dial tone** when taking the phone line, verify that the **LINE** and **TELEPHONE** connections are not reversed on the **UDX TEL** adapter.
 </Warning>
 
 ### Connection Type
@@ -116,9 +116,9 @@ Once the **UDX 2TEL** (or **TEL\+BT**) adapter is connected, configure:
 8. The next step will be configuring the output.
 
 <img
-  src="/images/ux24/udx-2tel-entradas.svg"
-  alt="Udx 2tel Inputs Sv"
-  title="Udx 2tel Inputs Sv"
+  src="/images/ux/udx2tel_Input_settings.png"
+  alt="UDX2TEL insputs configuration"
+  title="UDX2TEL insputs configuration"
   className="mx-auto"
   style={{ width:"60%" }}
 />
@@ -141,9 +141,9 @@ Once the **UDX 2TEL** (or **TEL\+BT**) adapter is connected, configure:
 </Tip>
 
 <img
-  src="/images/ux24/udx2tel-salidas.svg"
-  alt="Udx2tel Outputs Sv"
-  title="Udx2tel Outputs Sv"
+  src="/images/ux/udx2tel_otputs.png"
+  alt="UDX2TEL outputs configuration"
+  title="UDX2TEL outputs configuration"
   className="mx-auto"
   style={{ width:"64%" }}
 />
