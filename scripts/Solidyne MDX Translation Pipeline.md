@@ -49,7 +49,7 @@ The script:
 ## Command
 
 ```
-node translate-folder.mjs docs/es/unidex
+node translate-folder.mjs ../es/[folder_name]
 ```
 
 Optional flags:

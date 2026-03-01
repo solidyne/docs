@@ -1,6 +1,6 @@
 ---
 title: "USB Audio"
-description: "USB Port Installation"
+description: "USB port installation"
 keywords: ["installation", "USB"]
 tags: ["IP consoles", "UNIDEX"]
 translation:
@@ -9,11 +9,11 @@ translation:
   version: 0
   reviewed_by: ""
   reviewed_at: ""
-  source_hash: "d9d59fdf2388eb3f30f5413f576407c2e877812500f2e12197e8abca673c6df4"
+  source_hash: "7b27efefe6de327cd6bd6f50b4799a8d57b7f2932c85c50eb52d76d5c5592d3f"
 
 ---
 
-The built-in **USB** port enables stereo signal exchange between the console and a Windows 10 computer.
+The built-in **USB** port provides direct computer connection without requiring additional audio interfaces.
 
 - <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} /> Provides **4 stereo playback devices** (from PC to "USB inputs" on the console).
 - <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} /> Provides **4 stereo recording devices** ("USB outputs" from console to PC).
@@ -31,16 +31,16 @@ This means the computer can **send 4 stereo signals** to the console and **recei
 
 Signal routing to USB outputs (i.e., USB recording devices in Windows) is configured from the console in the `SETTINGS → OUTPUTS` screen
 
-<Warning>
-  The following description refers to the **built-in USB connector** on the Rear Panel.\
-  To install an external **UDX-USB adapter**, refer to the section: **External UNIDEX Adapters**
-</Warning>
-
 ---
 
 ## USB Driver Installation
 
-UX24 requires its own USB driver to establish communication with the Windows operating system.
+<Warning>
+  The following description refers to the **built-in USB connector** on the Rear Panel of UX24 and UX18 models.\
+  To install an external **UDX-USB adapter**, see the section: **UNIDEX External Adapters**
+</Warning>
+
+UNIDEX requires its own USB driver for the device to be properly recognized in Windows.
 
 ### Installation steps:
 
@@ -50,15 +50,14 @@ UX24 requires its own USB driver to establish communication with the Windows ope
   Using **poor quality or damaged** cables may cause the computer to incorrectly recognize the USB device or identify it with errors.
 </Danger>
 
-2. Download the driver from:\
-   https://solidynepro.com/DW/Solidyne_UsbAudio.zip
+2. Download the driver: [Downloads Center](/es/otros_docs/downloads)
 3. Run the installer and follow the instructions.
 
 ### USB Devices in Windows
 
 Once the driver is properly installed, Windows will show:
 
-Playback devices (outputs from PC to UX24):
+Playback devices (outputs from PC to UNIDEX):
 
 - **Solidyne USB OUT 1 →** USB Input 1 (UX24)
 - **Solidyne USB OUT 2 →** USB Input 2 (UX24)
@@ -78,11 +77,11 @@ These outputs are assigned from the screen at: `SETTINGS → OUTPUTS`
 
 ## ASIO 3.0 Compatibility
 
-The **UX24 console supports ASIO 3.0**, allowing simultaneous sharing of USB channels between different applications.
+**ASIO 3.0** compatibility allows shared and simultaneous use of different USB channels between different applications, even if they are not ASIO compatible.
 
 ### Advanced application example:
 
-- Automation software plays music through **USB 1** channel.
-- Another processing software (like an effects host) takes the **USB 2** channel returning from the console and applies real-time **VST effects** to microphone voices.
+- Automation software plays music through **USB 1** via WDM.
+- Another processing software (like an ASIO effects host) takes the **USB 2** channel returning from the console and applies real-time **VST effects** to microphone voices.
 
 <Icon icon="video" iconType="solid" color="#b30000" size={25} />  [Using external VST effects](https://youtu.be/qKi0MMbBEuc?si=j2B0-sSk--1DxuZE)

@@ -1,7 +1,7 @@
 ---
-title: "Power on, power off and resets"
+title: "Power On, Off and Resets"
 description: "Startup and shutdown. System module resets"
-keywords: ["power on", "resets", "restart"]
+keywords: ["power", "resets", "restart"]
 tags: ["IP consoles", "UNIDEX"]
 translation:
   source_lang: "es"
@@ -9,24 +9,24 @@ translation:
   version: 0
   reviewed_by: ""
   reviewed_at: ""
-  source_hash: "b58b8d0207e58f0782818512ef795486aefb3ce3df5ce35bb3360c419a65b147"
+  source_hash: "eec92a3f36f6c902a8cf9ace22280c8f45adb2d4c8b26978a19726c486020833"
 
 ---
 
-## Startup sequence
+## Startup Sequence
 
-When powering on the console, UX24 starts its operating system. Once the startup sequence is complete, the **main screen** appears and loads:
+When powering on the console, UNIDEX starts its operating system. Once the startup sequence is complete, the **main screen** appears and loads:
 
 1. The **default user profile.**
 2. The **last active scene** before shutdown.
 
-## User profile and permissions
+## User Profile and Permissions
 
 The user profile determines the **access level to functions** within the console.\
 From settings, you can define which profile loads automatically at startup.\
-By default, the console starts with the **ADMIN** profile, which has full access.
+From factory, the console starts with the **ADMIN** profile, which has full access.
 
-### Available user levels
+### Available User Levels
 
 1. **BASIC** – Restricted access to essential functions
 2. **EXPERT** – Advanced access (password required)
@@ -40,57 +40,57 @@ By default, the console starts with the **ADMIN** profile, which has full access
 For more information about user configuration, see:\
 **SETTINGS → USERS**
 
-## CPU shutdown
+## CPU Shutdown
 
-The UX24 console has an **internal CPU** that must be **safely shut down** before completely disconnecting the console.
+UNIDEX consoles have an **internal CPU** that must be **safely shut down** before completely disconnecting the console.
 
-### CPU shutdown procedure:
+### CPU Shutdown Procedure:
 
 1. On the **main screen**, tap the **"+"** icon located in the **STATUS** section.
 
    <img
-     src="/images/ux24/STATUS+.png"
-     alt="Main Screen - STATUS+"
-     title="Main Screen - STATUS+"
+     src="/images/ux/ux_home_status.png"
+     alt="Main Screen - STATUS"
+     title="Main Screen - STATUS"
      style={{ width:"24%" }}
    />
 2. In the popup window, select the **POWER-OFF** option.
 
    <img
-     src="/images/ux24/UX24_ODROID_STATUS+POWEROFF.png"
-     alt="UNIDEX STATUS+ POWEROFF"
-     title="UNIDEX STATUS+ POWEROFF"
+     src="/images/ux/ux_status_poweroff.png"
+     alt="Status, resets and power-off"
+     title="Status, resets and power-off"
      style={{ width:"53%" }}
    />
 
 <Warning>
   This function **does not power off the entire console**, it only shuts down the system's main CPU.\
-  Complete power off is done using the mechanical power on/off **key switch** located on the rear panel.
+  Complete shutdown is done using the **mechanical power switch** (on the rear panel or external power supply depending on model).
 </Warning>
 
-After shutting down the CPU, **wait a few seconds** before completely powering off the console to allow proper closure of internal processes.
+After shutting down the CPU, **wait a few seconds** before completely powering off the unit to allow proper closure of internal processes.
 
-## System actions
+## System Actions
 
 System actions are available from the main screen by accessing **STATUS → "+"**.
 
-These functions allow you to **separately restart different system stages**, and are not used during normal operation.
+These functions allow **separately restarting different system stages**, and are not used during normal operation.
 
 <Info>
   Reset actions are technical maintenance tools.\
   Under normal operating conditions, **it is not necessary to execute them**.
 </Info>
 
-### Available options
+### Available Options
 
 - **RESET USB**\
   Restarts only the USB stage.\
   Forces the operating system to re-recognize connected USB devices.
 - **RESET MIXER**\
-  Restarts UX24's internal mixing engine and control surface.\
+  Restarts UNIDEX's internal mixing engine and control surface.\
   Does not affect the CPU or display.
 - **RESET DISPLAY**\
   Restarts the onboard computer that manages **streaming** and the **graphical interface**.
 - **FULL RESET**\
-  Restarts all UX24 system stages.\
-  Equivalent to a complete power off and power on of the equipment.
+  Restarts all system stages.\
+  Equivalent to a complete power off and on of the equipment.
