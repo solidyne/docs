@@ -292,7 +292,7 @@
                     "group": "STREAMING",
                     "pages": [
                       "es/612/612-AoIP",
-                      "es/multi-discovery"
+                      "es/612/612-discovery"
                     ]
                   }
                 ]
@@ -505,7 +505,6 @@
                     "pages": [
                       "es/542/542-opcionAoIP",
                       "es/542/542-streamer",
-                      "es/multi-discovery",
                       "es/542/542-dante"
                     ]
                   }
