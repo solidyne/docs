@@ -1,0 +1,95 @@
+---
+title: "Conexões de áudio"
+description: "Conexões de áudio"
+keywords: ["entradas", "saídas", "USB", "modo HD", "dip-switch"]
+tags: ["processadores", "362", "Audimax 362"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "227734ae3959e5656f15c7d976cdca189008c80edb194f4ab943999ea04f181f"
+
+---
+
+## Entradas e saídas analógicas
+
+<img
+  src="/images/362/362-trasero-audio.png"
+  alt="362 Trasero Audio Pn"
+  title="362 Trasero Audio Pn"
+  className="mx-auto"
+  style={{ width:"73%" }}
+/>
+
+| **Identificador** | **Tipo / Conector**               | **Nível nominal** | **Detalhes**                                                                               |
+| :---------------: | --------------------------------- | :---------------: | ------------------------------------------------------------------------------------------ |
+| **1**             | Entradas balanceadas (XLR fêmea)  | \+4 dBu           | balanceadas eletronicamente <br />600 Ohms                                                 |
+| **2**             | Entradas não balanceadas (RCA)    | –10 dBV aprox.    | Maior ganho, projetadas para sinais mais fracos. Impedância 10 KOhms                      |
+| **3**             | Entrada balanceada estéreo (RJ45) | \+4 dBu           | [Diagramas de pinos e cabos adaptadores para montagem de cabos](/es/diagramas/RJ45-pinout)|
+| **4**             | Saídas balanceadas (XLR macho)    | \+4 dBu           | balanceadas eletronicamente <br />600 Ohms / 10 KOhms                                     |
+
+<Info>
+  A conexão para XLR é padrão: malha no **pino 1** os condutores internos no **2 (sinal \+)** e **3 (sinal –)**
+</Info>
+
+## Entrada/saída digital via USB
+
+O modelo **Audimax 362HD/USB** inclui um módulo opcional para enviar e receber áudio através de conexão a um PC com um cabo USB A/B padrão.
+
+- Ao conectar a um computador com **<sup>Windows©</sup>**, o sistema reconhece automaticamente o processador e instala os drivers necessários.\
+  Não são necessários drivers adicionais.
+- O equipamento é reconhecido como uma **placa de som estéreo**:
+  - Dispositivo de **reprodução USB** → corresponde à **entrada de áudio para o processador**.
+  - Dispositivo de **captura USB** → corresponde à **saída de áudio do processador**.
+
+### Sobre a detecção USB
+
+- Antes de conectar a porta USB, certifique-se de que o **console e o PC estejam corretamente aterrados** através de plugues de alimentação de três terminais.
+
+<Danger>
+  Verificar com um multímetro (escala 25 V AC) entre o chassi do PC e o chassi do console.\
+  A leitura deve ser 0 V. Caso contrário, a entrada USB do processador ou do computador pode ser danificada.
+</Danger>
+
+- Evite mudar os cabos USB de porta, pois o Windows pode reassignar a ordem dos dispositivos.
+
+---
+
+## Modo HD (High Definition)
+
+O **modo HD** é indicado para aplicações de áudio onde não se utiliza a etapa de codificação estéreo FM (MPX).
+
+- Emissoras totalmente digitais (HD Radio e streaming).
+- Aplicações de sonorização (pequenas salas, auditórios, centros comerciais).
+
+**Ao comutar para o modo HD:**
+
+- Desativa-se a rede de ênfase FM (e portanto o de-ênfase das saídas de áudio).
+- Habilita-se um **limitador de ação rápida** nas saídas.
+- Desativam-se as saídas **MPX**.
+
+### Habilitar modo HD
+
+Para mudar o modo de trabalho é necessário acessar as **micro-chaves internas**, removendo a tampa superior do equipamento.
+
+<img
+  src="/images/362/362-instalacion-HD.jpg"
+  alt="362 Instalacion HD Jp"
+  title="362 Instalacion HD Jp"
+  style={{ width:"41%" }}
+/>
+
+- Chaves todas **ON** = Modo FM
+- Chaves todas **OFF** = Modo HD
+
+O estado é indicado na frente do equipamento através do LED **"FM"**:
+
+- Aceso = FM
+- Apagado = HD
+
+<Info>
+  De fábrica, a unidade vem configurada em **modo FM**.
+</Info>

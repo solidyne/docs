@@ -1531,6 +1531,159 @@
           }
         ]
       }
+      {
+        "language": "pt",
+        "tabs": [
+        {
+        "tab": "Índice",
+        "groups": [
+        {
+        "group": "Manuais",
+        "pages": [
+        "pt/index",
+        "pt/otros_docs/discontinued"
+        ]
+        },
+        {
+        "group": "Documentação complementar",
+        "pages": [
+        "pt/otros_docs/disassembling",
+        "pt/otros_docs/audiovisual",
+        "pt/otros_docs/tech-docs"
+        ]
+        },
+        {
+        "group": "Suporte técnico",
+        "pages": [
+        "pt/otros_docs/downloads",
+        "pt/otros_docs/schematics",
+        "pt/otros_docs/contact"
+        ]
+        }
+        ]
+        },
+        {
+        "tab": "Consoles IP",
+        "anchors": [
+        {
+        "anchor": "Série UNIDEX",
+        "icon": "book-open",
+        "groups": [
+        {
+        "group": "VISÃO GERAL",
+        "pages": [
+        "pt/unidex/unidex-resumen"
+        ]
+        },
+        {
+        "group": "CABEAMENTO",
+        "pages": [
+        "pt/unidex/instalacion-cableado_estructurado",
+        "pt/unidex/instalacion-cableado-kits",
+        "pt/unidex/instalacion-RJ45-pinout",
+        "pt/unidex/instalacion-cableado_monitoreo",
+        "pt/diagramas/diagrama-tierras"
+        ]
+        },
+        {
+        "group": "INSTALAÇÃO",
+        "pages": [
+        "pt/unidex/instalacion-entradas",
+        "pt/unidex/instalacion-salidas",
+        "pt/unidex/instalacion-usb",
+        "pt/unidex/instalacion-red",
+        "pt/unidex/instalacion-gpio",
+        "pt/unidex/resets"
+        ]
+        },
+        {
+        "group": "CONFIGURAÇÃO",
+        "pages": [
+        "pt/unidex/config-entradas-salidas",
+        "pt/unidex/config-sistema",
+        "pt/unidex/configuracion-DANTE"
+        ]
+        },
+        {
+        "group": "PROCESSAMENTO",
+        "pages": [
+        "pt/unidex/op-procesado"
+        ]
+        },
+        {
+        "group": "ACESSO WEB",
+        "pages": [
+        "pt/unidex/remote-interfaz",
+        "pt/unidex/unidex-discovery"
+        ]
+        }
+        ]
+        }
+        ]
+        },
+        {
+        "tab": "Automação",
+        "anchors": [
+        {
+        "anchor": "AUDICOM",
+        "icon": "robot",
+        "groups": [
+        {
+        "group": "VISÃO GERAL",
+        "pages": [
+        "pt/audicom/audicom-resumen"
+        ]
+        },
+        {
+        "group": "INSTALAÇÃO",
+        "pages": [
+        "pt/audicom/instalacion-requisitos",
+        "pt/audicom/instalacion-instalador"
+        ]
+        },
+        {
+        "group": "OPERAÇÃO",
+        "pages": [
+        "pt/audicom/operacion-interfaz",
+        "pt/audicom/operacion-playlist",
+        "pt/audicom/operacion-archivos"
+        ]
+        }
+        ]
+        }
+        ]
+        },
+        {
+        "tab": "Processamento",
+        "anchors": [
+        {
+        "anchor": "BLT",
+        "icon": "waveform",
+        "groups": [
+        {
+        "group": "VISÃO GERAL",
+        "pages": [
+        "pt/blt200/blt200-resumen"
+        ]
+        },
+        {
+        "group": "INSTALAÇÃO",
+        "pages": [
+        "pt/blt200/instalacion-conexionado"
+        ]
+        },
+        {
+        "group": "CONFIGURAÇÃO",
+        "pages": [
+        "pt/blt200/configuracion-interfaz"
+        ]
+        }
+        ]
+        }
+        ]
+        }
+        ]
+      }
     ]
   },
   "logo": {

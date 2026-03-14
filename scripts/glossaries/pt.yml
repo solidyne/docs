@@ -1,0 +1,85 @@
+language: pt-BR
+
+preferred:
+
+  consola de audio: console de áudio
+  consola de broadcast: console de broadcast
+  monitoreo: monitoração
+  salida de programa: saída de programa
+  aire: transmissão
+
+avoid:
+
+  mesa de áudio
+  monitoramento
+  em transmissão
+
+no_translate:
+
+  - fader
+  - CUE
+  - talkback
+  - DSP
+  - codec
+  - streaming
+  - firmware
+  - preset
+  - snapshot
+  - rack
+  - GPIO
+  - USB
+  - Ethernet
+  - Bluetooth
+  - Dante
+  - AES/EBU
+  - AES67
+  - Livewire
+  - multicast
+  - unicast
+  - buffer
+  - API
+  - software
+
+terms:
+
+  audio: áudio
+  señal de audio: sinal de áudio
+  nivel de señal: nível de sinal
+  ganancia: ganho
+  atenuación: atenuação
+  distorsión: distorção
+  ruido: ruído
+  latencia: latência
+  frecuencia: frequência
+  frecuencia de muestreo: taxa de amostragem
+  rango dinámico: faixa dinâmica
+  saturación: saturação
+  clipping: clipping
+  headroom: headroom
+  señal analógica: sinal analógico
+  señal digital: sinal digital
+  ecualizador: equalizador
+  compresor: compressor
+  limitador: limitador
+  preamplificador: pré-amplificador
+  amplificador: amplificador
+  medidor de nivel: medidor de nível
+  consola IP: console IP
+  canal: canal
+  entrada: entrada
+  salida: saída
+  entrada de micrófono: entrada de microfone
+  entrada de línea: entrada de linha
+  salida de línea: saída de linha
+  mezcla: mixagem
+  monitoreo: monitoração
+  auriculares: fones de ouvido
+  estudio: estúdio
+  sala de control: sala de controle
+  operador: operador
+  locutor: locutor
+  invitado: convidado
+  productor: produtor
+  retorno de estudio: retorno de estúdio
+  preescucha: pré-escuta
+  retorno N-1: retorno N-1

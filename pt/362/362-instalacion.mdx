@@ -1,0 +1,53 @@
+---
+title: "Instalação geral"
+description: "Montagem, alimentação, aterramento."
+keywords: ["aterramento", "tensão", "fonte de alimentação", "ligação"]
+tags: ["processadores", "362", "Audimax 362"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "09228bceb709e4c6af8f050d0a15b8ec16a258d4a42e32a4cb8807452b3f5807"
+
+---
+
+import tierras from '/snippets/snippet-tierras.mdx'
+
+## Montagem
+
+É conveniente considerar as seguintes recomendações ao instalar:
+
+- Os processadores Solidyne Audimax 362HD são projetados para instalação em rack padrão de 483 mm (19"), ocupando uma unidade de altura.\
+  Também é possível colocá-lo sobre uma superfície usando os apoios de borracha autoadesivos fornecidos.
+- A temperatura ambiente deve ser mantida entre **5 °C e 40 °C**.\
+  Deve-se evitar a incidência direta da luz solar sobre o processador, assim como a proximidade de fontes de calor ou fortes campos eletromagnéticos (transformadores de potência, grandes motores, etc.).\
+  Sua proteção interna contra campos de RF permite a montagem próxima a transmissores de AM/FM.
+
+<Danger>
+  Evite a instalação em locais muito úmidos ou com atmosfera salina, pois isso pode causar corrosão nas placas de circuito impresso e componentes eletrônicos.
+</Danger>
+
+## Alimentação
+
+<img
+  src="/images/362/362-trasero-fuente.png"
+  alt="362 Trasero Fuente Pn"
+  title="362 Trasero Fuente Pn"
+  className="mx-auto"
+  style={{ width:"33%" }}
+/>
+
+- **Chave seletora de tensão 110/220 V**: verificar se está na posição correta de acordo com a tensão da rede. \
+  São toleradas variações de até ±10% (exemplo: 200-240 V para a posição de 220 V).
+
+<Warning>
+  Se a tensão da rede exceder este intervalo, instale estabilizadores de ação rápida para evitar danos ao equipamento.
+</Warning>
+
+- **Conector de alimentação Interlock** e **fusível geral de 1 A**.
+- **Chave liga/desliga**.
+
+<tierras />

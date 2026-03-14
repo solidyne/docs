@@ -1,0 +1,94 @@
+---
+title: "Especificações técnicas"
+tags: ["362", "Audimax 362"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "cdc96c9f5c8dd04a7dd812d6a75ac4f677ce86c46383da124c20194c1b38727f"
+
+---
+
+## Especificações gerais
+
+<Accordion title="Entradas">
+  - **Balanceada estéreo**: conectores XLR-3 e RJ45\
+    Nível com auto-ajuste 0 dBu a \+15 dBu, Z = 600/10 kΩ
+  - **Não balanceada estéreo**: conectores RCA\
+    Nível com auto-ajuste –15 dBu a 0 dBu, Z = 10 kΩ
+  - **Digital USB (opcional)**
+</Accordion>
+
+<Accordion title="Saídas">
+  - **Balanceada estéreo**: conectores XLR, \+4 dBu, Z = 600/10 kΩ\
+    Com de-emphasis (resposta plana).
+  - **Digital USB (opcional)**
+</Accordion>
+
+<Accordion title="Saídas MPX">
+  - Saída MPX dupla com ajuste independente de nível (4 Vpp, ajuste de fábrica), Z = 600/10 kΩ.
+  - Saída diferencial para cancelar zumbidos por loops entre o transmissor e o aterramento do estúdio.
+</Accordion>
+
+<Accordion title="Especificações de áudio">
+  - **Resposta em frequência**: 20 – 16.000 Hz ±0,5 dB (medido abaixo do limiar de compressão/limitação).
+  - **Distorção harmônica**: \< 0,02 % (30 – 15.000 Hz).
+  - **Ruído**: \< –90 dBA referido a 100 % de modulação.
+  - **Separação estéreo**: \> 75 dBA.
+  - **Filtro subsônico**: Chebyshev 2ª ordem, 15 Hz.
+</Accordion>
+
+<Accordion title="Processamento">
+  - **Cancelamento assimétrico**: relação 5:1, método Kahn-Bonello.
+  - **Expansor**: inclinação 10:1, ataque de 100 µs.
+  - **AGC (banda larga)**: controlado por VCA.\
+    Faixa: 30 dB (–10 dB / \+20 dB em relação ao nível nominal de entrada).
+  - **Compressão multibanda**:
+    - 3 bandas, 18 dB/oitava, divisor de fase linear.
+    - Compressores: faixa 30 dB, inclinação 5:1.
+    - Ataque automático.
+    - Recuperação: controlada pelos botões _Energy_.
+    - Recortador com cancelador IM (\> 30 dB de atenuação abaixo de 250 Hz).
+    - Dynamic EQ: 0 – 12 dB de reforço dinâmico em graves, médios e agudos.
+</Accordion>
+
+<Accordion title="Alimentação">
+  115 V / 230 V (seletor no painel traseiro)\
+  50/60 Hz, 20 W
+</Accordion>
+
+<Accordion title="Dimensões">
+  Módulo de montagem em rack 19" (44,4 mm).
+</Accordion>
+
+---
+
+## Especificações do Stereo Coder
+
+<Accordion title="Entrada de áudio">
+  2 Vpp para 100 % saída MPX (4 Vpp).
+</Accordion>
+
+<Accordion title="Especificações de áudio">
+  - **Resposta em frequência**:
+    - 15 kHz / 5ª ordem filtro LP elíptico, –1 dB a 15 kHz.
+    - 20 – 14.000 Hz ±0,25 dB.
+    - Atenuação a 19 kHz \> 40 dB.
+  - **Distorção harmônica**:
+    - \< 0,01 % THD (20 – 15.000 Hz).
+    - Típica: 0,003 % @ 1 kHz.
+  - **Relação S/R**: \> 90 dBA (ref. 100 % modulação).
+  - **Separação estéreo**: 65 dB @ 1 kHz.
+</Accordion>
+
+<Accordion title="Supressão de harmônicos">
+  - 38 kHz: melhor que –70 dB (ref. 100 % modulação).
+  - 57, 76 e 95 kHz: melhor que –75 dB (ref. 100 % modulação).
+</Accordion>
+
+<Accordion title="Estabilidade do tom piloto">
+  ±0,002 % (±0,5 Hz).
+</Accordion>

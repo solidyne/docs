@@ -1,9 +1,8 @@
-
-# Solidyne MDX Translation Pipeline
+# Solidyne MDX Translation Pipeline (V3)
 
 ## Overview
 
-This document describes the automated MDX translation pipeline used to translate Spanish documentation (`/docs/es`) into English (`/docs/en`) while preserving:
+This document describes the automated MDX translation pipeline used to translate Spanish documentation (`/docs/es`) into multiple target languages while preserving:
 
 * MDX structural integrity
 * JSX components
@@ -11,11 +10,13 @@ This document describes the automated MDX translation pipeline used to translate
 * Hash-based change detection
 * Safe batch processing
 * Truncation detection and auto-continuation
+* Terminology control via language glossaries
 
 The system is designed for:
 
 * Manual review after translation
 * Incremental updates
+* Multi-language documentation
 * Future automation (event-driven updates)
 
 ---
@@ -31,28 +32,88 @@ docs/
 │       ├── file1.mdx
 │       └── subfolder/
 │           └── file2.mdx
-└── en/
+│
+├── en/
+│   └── <equipment>/
+│
+└── pt/
     └── <equipment>/
 ```
 
 The script:
 
 * Recursively scans `/docs/es/<equipment>`
-* Replicates folder structure under `/docs/en/<equipment>`
+* Replicates folder structure under the target language directory
 * Translates only when required (hash-based)
 * Injects translation metadata into frontmatter
+* Supports multiple target languages
 
 ---
 
-# 2. Translation Workflow
+# 2. Script Location
+
+```
+scripts/
+├── translate-folder.mjs
+├── translation_rules.txt
+├── glossaries/
+│   ├── pt.yml
+│   └── en.yml
+└── reports/
+```
+
+---
+
+# 3. Supported Languages
+
+Languages are defined in the script:
+
+```javascript
+const SUPPORTED_LANGS = ["en", "pt"];
+```
+
+Language naming for prompts is controlled by:
+
+```javascript
+const LANGUAGE_MAP = {
+  en: "English",
+  pt: "Brazilian Portuguese (pt-BR)"
+};
+```
+
+Notes:
+
+* The folder name remains `pt`
+* The translation target is explicitly **Brazilian Portuguese (pt-BR)**
+
+This prevents Portuguese-Portugal terminology from appearing.
+
+---
+
+# 4. Translation Workflow
 
 ## Command
 
 ```
-node translate-folder.mjs ../es/[folder_name]
+node translate-folder.mjs <source-folder> <target-language>
 ```
 
-Optional flags:
+Example:
+
+```
+node translate-folder.mjs docs/es/unidex en
+node translate-folder.mjs docs/es/unidex pt
+```
+
+Translate all supported languages:
+
+```
+node translate-folder.mjs docs/es/unidex all
+```
+
+---
+
+## Optional Flags
 
 ```
 --dry-run
@@ -61,16 +122,28 @@ Optional flags:
 --only-changed
 ```
 
-### Default Mode
+### dry-run
 
-* Translates files that:
+Simulates execution without calling the API.
 
-  * Do not exist in `/en`
-  * Or have different `source_hash`
+Useful to validate:
+
+* paths
+* file detection
+* language selection
 
 ---
 
-# 3. Hash System
+## Default Mode
+
+A file is translated when:
+
+* It does not exist in the target language folder
+* OR the stored `source_hash` differs from the current ES file
+
+---
+
+# 5. Hash System
 
 ## What is a hash?
 
@@ -82,30 +155,35 @@ We use:
 SHA-256
 ```
 
-### Purpose
+---
+
+## Purpose
 
 * Detect content changes in Spanish source files
 * Avoid unnecessary re-translation
 * Enable incremental update logic
 
-### How it works
+---
+
+## How it works
 
 1. Spanish file content is hashed
-2. Hash stored in English frontmatter
+2. Hash is stored in translated frontmatter
 3. On next run:
 
-   * If hash unchanged → file skipped
-   * If hash changed → file re-translated
+* If hash unchanged → file skipped
+* If hash changed → file re-translated
 
 ---
 
-# 4. Translation Metadata (Frontmatter)
+# 6. Translation Metadata (Frontmatter)
 
-Every translated EN file contains:
+Every translated file contains:
 
 ```yaml
 translation:
   source_lang: "es"
+  target_lang: "pt"
   status: "draft"
   version: 0
   reviewed_by: ""
@@ -115,14 +193,27 @@ translation:
 
 ---
 
-# 5. Frontmatter Field Definitions
+# 7. Frontmatter Field Definitions
 
 ## source_lang
 
-Language of original file.
+Language of original document.
 
 ```
 "es"
+```
+
+---
+
+## target_lang
+
+Target language of the translation.
+
+Examples:
+
+```
+"en"
+"pt"
 ```
 
 ---
@@ -139,9 +230,18 @@ updated
 
 ### Meaning
 
-* **draft** → Machine translated, pending human review
-* **reviewed** → Human validated
-* **updated** → Reviewed again after source changes
+**draft**
+
+Machine translated.
+Pending human review.
+
+**reviewed**
+
+Human validated translation.
+
+**updated**
+
+Source document changed and translation was regenerated.
 
 ---
 
@@ -149,25 +249,21 @@ updated
 
 Integer.
 
-Purpose:
-
-Tracks number of human revision cycles.
+Tracks the number of **human revision cycles**.
 
 Example:
 
 ```
-0 → Initial machine translation
-1 → First human revision
-2 → Second human revision
+0 → initial machine translation
+1 → first human revision
+2 → second human revision
 ```
 
 ---
 
 ## reviewed_by
 
-String.
-
-Name or initials of reviewer.
+String identifier of reviewer.
 
 Example:
 
@@ -179,7 +275,7 @@ reviewed_by: "JPD"
 
 ## reviewed_at
 
-ISO 8601 date format (mandatory format):
+ISO-8601 date format (mandatory):
 
 ```
 YYYY-MM-DD
@@ -193,31 +289,68 @@ reviewed_at: "2026-02-21"
 
 Do NOT use:
 
-* 21/02/2026
-* Feb 21, 2026
-* 02-21-26
+```
+21/02/2026
+Feb 21, 2026
+02-21-26
+```
 
-Always ISO format.
+Always use ISO format.
 
 ---
 
 ## source_hash
 
-SHA-256 hash of original Spanish file.
+SHA-256 hash of the original Spanish document.
 
-Automatically generated by script.
+Generated automatically by the script.
 
-Do not edit manually.
+**Do not edit manually.**
 
 ---
 
-# 6. Truncation Control System
+# 8. Glossary System
+
+Language glossaries provide **terminology control** for translations.
+
+Example location:
+
+```
+scripts/glossaries/pt.yml
+```
+
+The glossary contains:
+
+* preferred translations
+* avoided terms
+* non-translatable technical terms
+* broadcast and audio terminology
+
+During execution:
+
+1. The YAML glossary is loaded
+2. Converted to a simplified table
+3. Injected into the translation prompt
+
+Example prompt structure:
+
+```
+TRANSLATION RULES
++ GLOSSARY
++ TRANSLATION INSTRUCTION
+```
+
+This ensures consistent terminology across the documentation.
+
+---
+
+# 9. Truncation Control System
 
 The pipeline includes robust protection against LLM truncation.
 
 ## Problems Observed
 
-Claude sometimes returned:
+Large outputs may occasionally produce placeholder fragments such as:
 
 ```
 [Continued in next part due to length...]
@@ -226,168 +359,44 @@ Claude sometimes returned:
 or
 
 ```
-[Content continues with same careful translation following all rules...]
+[Content continues with same careful translation...]
 ```
 
-or
-
-```
-[Continued translation follows same precise format and rules...]
-```
-
-These are placeholders indicating incomplete output.
+These indicate incomplete output.
 
 ---
 
-## Current Protection Mechanism
+## Protection Mechanism
 
-The script:
+The script automatically:
 
-1. Detects placeholder patterns
-2. Detects abrupt MDX endings
-3. Automatically requests continuation
-4. Allows up to 3 parts
-5. Fails explicitly if still truncated
+1. Detects truncation markers
+2. Requests continuation from the model
+3. Merges additional segments
+4. Allows up to **3 output parts**
+5. Removes placeholder artifacts
 
 This ensures:
 
 * No incomplete MDX is silently saved
 * Batch integrity is preserved
-* Errors are visible in JSON report
+* Errors remain visible in JSON reports
 
 ---
 
-# 7. Token Usage
+# 10. Token Usage
 
 Typical metrics:
 
-* ~3,000–4,000 tokens per file
-* ~5 cents per file average
-* Full 237 file batch ≈ $10–15 USD
-
-Rules are intentionally verbose to preserve MDX safety.
-
-We do not optimize rules for token reduction.
-
-Robustness > marginal cost savings.
-
----
-
-# 8. Review Workflow
-
-## Phase 1 – Batch Translation
-
-Run by equipment folder:
-
 ```
-docs/es/unidex
-docs/es/blt200
-docs/es/audicom
+3,000 – 4,000 tokens per file
+≈ $0.04 – $0.06 per file
 ```
 
-Review in Mintlify locally.
-
----
-
-## Phase 2 – Human Review
-
-For each EN file:
-
-1. Validate terminology
-2. Adjust phrasing if necessary
-3. Update frontmatter:
-
-```yaml
-status: "reviewed"
-version: 1
-reviewed_by: "JPD"
-reviewed_at: "2026-02-21"
-```
-
----
-
-## Phase 3 – Future Updates
-
-If ES changes:
-
-* Hash changes
-* Script detects difference
-* EN re-translated
-* status should become:
+Estimated full batch:
 
 ```
-updated
+~237 files ≈ $10–15 USD
 ```
 
-Version should increment.
-
----
-
-# 9. Future Automation Plan
-
-## Goal
-
-When:
-
-* A new ES file is created
-* An ES file is modified
-
-Then:
-
-* Automatically translate only modified semantic blocks
-* Preserve human-reviewed EN content
-
----
-
-## Proposed Evolution
-
-Future system may:
-
-* Split MDX into semantic blocks
-* Store block hashes externally
-* Re-translate only modified blocks
-* Preserve manually reviewed sections
-
-No inline markers will be added to MDX (to avoid polluting RAG ingestion).
-
----
-
-# 10. Design Principles
-
-* Do not modify MDX structure
-* Do not alter JSX
-* Do not break quoting
-* Never output markdown fences
-* Never allow silent truncation
-* Always use hash-based change detection
-* Always require human review before publication
-
----
-
-# 11. Operational Guidelines
-
-Translate by equipment folder, not by global family.
-
-This ensures:
-
-* Smaller batches
-* Easier validation
-* Lower error surface
-* Better review control
-
----
-
-# Final State
-
-The pipeline is currently:
-
-* Stable
-* Hash-safe
-* Truncation-safe
-* Batch-ready
-* Cost-efficient
-* Ready for future incremental automation
-
----
-
-End of document.
+Translation rules are in
