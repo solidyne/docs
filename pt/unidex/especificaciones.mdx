@@ -1,0 +1,164 @@
+---
+title: "Especificações técnicas"
+description: "Especificações técnicas do UNIDEX"
+keywords: ["especificações"]
+tags: ["UNIDEX", "UX24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a1785d621b4ac5616b1a7eeae857b3eb0da1f0ea74397283053af6d628b341b5"
+
+---
+
+<AccordionGroup>
+  <Accordion title="Características gerais">
+    | Parâmetro               | Especificação                                                                                |
+    | ----------------------- | ------------------------------------------------------------------------------------------- |
+    | Canais                  | 24 canais; 12 faders físicos expansíveis para 24 através de módulos UX-6                    |
+    | Faders virtuais         | 12 (UX24 base) Operáveis através da tela touch ou interface web                            |
+    | Controle remoto         | Interface web interna (HTML5) para operação remota via LAN                                  |
+    | Distribuição de entradas| Configurável sobre os 24 canais                                                             |
+    | Cenas                   | 12 cenas de usuário (configuração de entradas, atribuição de canais, ajustes de processos) |
+    | Tela touch              | 7" — 1024 × 600 pixels, multi-touch                                                         |
+    | Displays por canal      | OLED (nome, nível de entrada, nível de atenuação, indicações especiais)                    |
+  </Accordion>
+  <Accordion title="Entradas">
+    #### Entradas analógicas
+
+    | Tipo                      | Quantidade | Detalhe                                      |
+    | ------------------------- | ---------: | -------------------------------------------- |
+    | MIC                       | 4         | Alimentação +48 V comutável em cada entrada  |
+    | Linha estéreo balanceada  | 4         | Nível + 4 dBu                               |
+
+    #### Entradas digitais
+
+    | Tipo          | Quantidade           | Detalhe                                               |
+    | ------------- | ------------------: | ----------------------------------------------------- |
+    | AES3 estéreo  | 4                  | Entradas digitais                                      |
+    | USB estéreo   | 4                  | Quatro dispositivos de reprodução em um computador     |
+    | UNIDEX        | 16 mono (8 estéreo) | Até 16 microfones adicionais ou 8 dispositivos TELCO  |
+
+    | Processamento | Detalhe                        |
+    | ------------ | ------------------------------ |
+    | DSP          | Processos DSP em cada entrada  |
+  </Accordion>
+  <Accordion title="Saídas">
+    #### Saídas analógicas
+
+    | Tipo                                                     | Quantidade |
+    | -------------------------------------------------------- | ---------- |
+    | PGM estéreo balanceadas                                   | 2          |
+    | Estéreo balanceadas atribuíveis                          | 4          |
+    | Não balanceadas (mix-minus)                               | 8          |
+    | Monitoração Sala de Controle (monitores + fones)          | 2 estéreo  |
+    | Monitoração Estúdios (monitores + fones + talkback)       | 2 estéreo  |
+
+    #### Saídas digitais
+
+    | Tipo           | Quantidade                                          |
+    | -------------- | -------------------------------------------------- |
+    | AES3 estéreo   | 4                                                  |
+    | USB estéreo    | 4 (dispositivos de gravação em um computador)      |
+    | Streaming AoIP | 2 estéreo (RTP, Icecast/Shoutcast)                |
+  </Accordion>
+  <Accordion title="GPIO, intercom e auxiliares">
+    | Função                  | Especificação                                                        |
+    | ----------------------- | ------------------------------------------------------------------- |
+    | Luzes "No Ar"          | 2 saídas (Estúdios A e B), 12 VCC, 250 mA                          |
+    | GPI                     | 4 entradas de uso geral (ativa alta 3.3 ~ 15 V)                     |
+    | GPO                     | 8 saídas (7 coletor aberto; +24 V @ 250 mA; +1 × 12 VDC @ 250 mA)  |
+    | Monitoração de ar       | 1 entrada estéreo não balanceada (sintonizador externo)             |
+    | Talkback dos estúdios   | 1 entrada (em conector Studio Box)                                  |
+    | Microfone de ordens     | Integrado (talk-back)                                               |
+    | Intercom                | 4 botões de intercomunicação atribuíveis                            |
+    | Intercom em TELCO       | PTT (falar-escutar) em canais TELCO usando botão CUE               |
+  </Accordion>
+  <Accordion title="Arquitetura e processamento de áudio">
+    | Parâmetro             | Valor                                                                                                           |
+    | --------------------- | --------------------------------------------------------------------------------------------------------------- |
+    | Buses de mixagem      | 4 buses estéreo (PGM, REC, AUX com atribuição direta da superfície; VBUS atribuível pela tela)                 |
+    | PFL                   | 1 bus PFL (CUE)                                                                                                 |
+    | Resolução / SR        | 24 bits @ 48 kHz                                                                                                |
+    | Processos DSP         | Fixos por entrada e por tipo: EQ paramétrico (3 ou 4 bandas), gate de ruído, compressor/limitador, de-esser    |
+    | Mix-minus / talkback  | Envios automáticos (TELCO)                                                                                      |
+    | Latência              | 1.2 ms (linha analógica → saída analógica) / 1.4 ms (MIC com EQ + dinâmica + de-esser)                         |
+  </Accordion>
+  <Accordion title="Valores e medições (ruído, distorção, níveis)">
+    #### Entradas e saídas digitais (AES3, USB, AoIP)
+
+    | Parâmetro                | Valor                   |
+    | ------------------------ | ----------------------- |
+    | RD                       | 120 dBA                 |
+    | Resposta de frequência   | 20 Hz – 20 kHz ± 0.1 dB |
+    | THD                      | \< 0.002 %              |
+
+    #### Entradas analógicas
+
+    | Parâmetro                | Valor                                         |
+    | ------------------------ | --------------------------------------------- |
+    | Nível de entrada         | Máx: +26 dBu / Mín: –24 dBu / Nominal: +4 dBu |
+    | Faixa dinâmica          | 112 dBA                                       |
+    | Resposta de frequência   | 20 Hz – 20 kHz ± 0.25 dB                     |
+    | THD+N                    | 0.01 %                                        |
+
+    #### Entradas de microfone
+
+    | Parâmetro                | Valor                                                  |
+    | ------------------------ | ------------------------------------------------------ |
+    | Nível de entrada         | Máx: –24 dBu / Mín: –75 dBu / Nominal: –50 dBu (150 Ω) |
+    | Ruído                    | EIN @ –50 dBu: –121 dBA                               |
+    | Resposta de frequência   | 20 Hz – 20 kHz ± 0.5 dB                               |
+    | THD+N                    | 0.01 %                                                 |
+    | Alimentação              | \+48 V individual                                      |
+
+    #### Saídas analógicas
+
+    | Parâmetro                | Valor                          |
+    | ------------------------ | ------------------------------ |
+    | Nível                    | Nominal: +4 dBu / Máx: +24 dBu |
+    | Faixa dinâmica          | \> 110 dBA                     |
+    | Resposta de frequência   | 20 Hz – 20 kHz ± 0.5 dB       |
+    | THD                      | Típ. 0.005 % @ 1 kHz          |
+  </Accordion>
+  <Accordion title="USB">
+    | Característica | Detalhe                                                                   |
+    | -------------- | ------------------------------------------------------------------------- |
+    | Porta          | 1 × USB 2.0                                                               |
+    | Canais         | 4 dispositivos estéreo de reprodução/gravação em um PC                    |
+    | Driver         | ASIO 2.2 (suporta reprodução simultânea em ASIO e WDM)                    |
+    | VST            | Suporta hosts VST de 32-bit e 64-bit (ASIO) para plug-ins em tempo real   |
+    | Multi-cliente  | Suporta mais de uma aplicação ASIO em paralelo                            |
+    | Compatibilidade| Windows 10/8/7 (32 e 64 bits)                                             |
+  </Accordion>
+  <Accordion title="Opção Dante AES67">
+    | Característica         | Detalhe                                                                                             |
+    | --------------------- | --------------------------------------------------------------------------------------------------- |
+    | Canais AoIP           | 16 × 16                                                                                              |
+    | Capacidade de rede    | Compatível com redes DANTE existentes de até 512 × 512 canais                                       |
+    | Mudanças no console   | Substitui 4 entradas de linha estéreo e 4 entradas UNIDEX estéreo por 16 entradas Dante AoIP       |
+    | Saídas AoIP          | PGM, REC, AUX, fones de Controle, fones de Studio e 3 estéreo atribuíveis pelo usuário             |
+  </Accordion>
+  <Accordion title="Dimensões e peso">
+    #### Console (12 faders)
+
+    | Parâmetro    | Valor                                                      |
+    | ------------ | ---------------------------------------------------------- |
+    | Largura      | 730 mm                                                     |
+    | Profundidade | 455 mm (550 mm com a tampa traseira que oculta os cabos)   |
+    | Altura       | 130 mm                                                     |
+    | Peso         | 8 kg                                                       |
+
+    #### Embalagem e acessórios
+
+    | Elemento                           | Valor                    |
+    | ---------------------------------- | ------------------------ |
+    | Dimensões da embalagem             | 850 mm × 610 mm × 270 mm |
+    | Peso com embalagem (UX24 + cabos)  | 15 kg                    |
+    | Adaptadores UDX                    | 0.33 kg cada unidade     |
+    | Kit cabos RJ45                     | 4 kg                     |
+  </Accordion>
+</AccordionGroup>

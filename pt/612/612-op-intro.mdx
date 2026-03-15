@@ -1,0 +1,66 @@
+---
+title: "Operação"
+description: "Considerações gerais sobre a operação do D612"
+keywords: ["operação"]
+tags: ["consolas de estudio", "linha Classic", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "dfc2e24b0d6b01e87c9a6daf6ca52f0afcac091df226d406f25adcda95599abc"
+
+---
+
+## Introdução
+
+Os controles do console são organizados em várias seções de acordo com sua função:
+
+- Canais de entrada.
+- Controle de híbrido telefônico.
+- Monitoramento e ordens para estúdio.
+- Escuta prévia (CUE).
+- Equalizadores de microfone.
+- Indicadores de nível e compressão.
+
+## Microfones
+
+- **MIC 1 e MIC 2:** trabalham apenas com sinal de microfone.
+  - A alimentação phantom de **48 V** é ativada globalmente (todas ou nenhuma).
+  - Os microfones dinâmicos suportam os 48 VCC, portanto podem ser combinados condensadores e dinâmicos.
+- Podem ser atribuídos à etapa de processamento (equalizador de 4 bandas e compressor).
+
+## Linhas
+
+- **Linhas analógicas:** aceitam entradas estéreo balanceadas (BAL) e não balanceadas (LINE) com comutação A/B pelo painel.
+- **Canal digital USB:** gerencia uma entrada digital (USB) e uma entrada analógica estéreo (LINE).
+- A conexão USB também envia as saídas **PGM ou REC** para o computador.
+
+## Torre de VUs
+
+A torre contém VUs em LED que mostram:
+
+- O nível do programa (pico médio).
+- A ação do compressor.
+
+## Verificação rápida
+
+Procedimentos básicos para verificar se o console está corretamente conectado:
+
+### Verificar entrada de sinal
+
+1. Conecte uma fonte de sinal (microfone, áudio USB).
+   - Selecione a entrada correspondente no canal utilizado (**MIC** ou **BAL-LIN**).
+   - Esta é uma causa comum de erro em canais de linha (entrada incorreta).
+2. Pressione **CUE** no canal onde o sinal está entrando.
+3. Abra o fader **CUE** na seção de monitoramento.
+   - O áudio deverá ser ouvido no alto-falante do console.
+
+### Enviar sinal ao ar
+
+1. Atribua **PGM** no canal para enviar o sinal à saída principal.
+2. Abra o fader do canal ao nível desejado.
+   - O sinal será enviado ao ar e visualizado nos VUs de programa.
+3. Ajuste o ganho para que a posição normal de trabalho do fader principal seja **-15 dB** (zona cinza).

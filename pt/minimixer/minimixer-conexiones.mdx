@@ -1,0 +1,72 @@
+---
+title: "Conexões"
+description: "Painel Traseiro e conexões"
+keywords: ["conexões"]
+tags: ["consoles de estúdio", "linha Classic", "minimixer"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b94ed82f35843249e233da5aac1398010155ae4f0dc5e97999f6e7e60658e3e5"
+
+---
+
+A seguir são descritos os conectores e funções do painel traseiro do MiniMixer:
+
+![Minimixer Panel Trasero Pn](/images/minimixer/minimixer-panel_trasero.png)
+
+ 1. **ALIMENTAÇÃO (POWER SUPPLY)**
+    - Conector tubular (pin+ / 2 mm).
+    - Fonte externa switching 90/240V – 50/60 Hz – 12V/1A.
+    - **Utilizar somente a fonte original fornecida pela Solidyne.**
+    - O MiniMixer não possui interruptor de liga/desliga: permanece ativo enquanto a fonte estiver conectada.
+ 2. **TALLY LIGHT (Luz de ar)**
+    - Conector tubular (pin + / 2,5 mm).
+    - Fornece 12 VDC com carga máxima de 200 mA.
+    - Ao conectar a luz de ar, a saída de fones #1 é silenciada automaticamente sempre que os microfones entram no ar.
+ 3. **USB AUDIO **
+    - Porta USB A/B para entrada/saída digital de áudio estéreo para o computador.
+    - O sistema operacional (Windows 7/10 ou superior) detecta dois dispositivos:
+      - **USB Playback Device** (entrada estéreo para o console).
+      - **USB Recording Device** (saída estéreo do console com sinal PGM).
+    - Recomenda-se não exceder 4 metros de cabo.
+    - Garantir sempre um bom aterramento do computador para evitar danos.
+ 4. **MICROFONES**
+    - Quatro entradas balanceadas XLR para microfones dinâmicos.
+    - As entradas **MIC-3** e **MIC-4** compartilham o mesmo fader.
+    - Recomenda-se utilizar microfones do mesmo modelo nestas duas entradas para melhor compensação de níveis.
+ 5. **FONES DE OUVIDO **
+    - Quatro saídas em conector TRS 1/8” (minijack).
+    - Um único controle ajusta o nível geral de fones (seção CUE MONITOR).
+    - A saída **Headphone #1** pode ser usada para monitores autoamplificados.
+    - Quando a luz de ar está conectada, esta saída é silenciada automaticamente ao abrir os microfones.
+ 6. **LINHA TELEFÔNICA FIXA (POTS)**
+    - Conector RJ11 para linha de 2 fios.
+    - Inclui preset de ajuste **NULL** para calibrar a rejeição do híbrido (ver procedimento de ajuste).
+    - A linha pode ser conectada diretamente à central pública ou a uma PBX (neste último caso a qualidade da rejeição pode diminuir).
+    - Proteção interna contra sobretensões através de varistores.
+    - Recomenda-se instalar proteção externa adicional com descarregadores gasosos e fusíveis.
+
+    <Warning>
+      Danos por descargas atmosféricas não estão cobertos pela garantia. Recomenda-se proteção contra picos de tensão em áreas com tempestades.
+    </Warning>
+ 7. **LINHA ESTÉREO**
+    - Entrada não balanceada TRS 1/4” estéreo.
+ 8. **INSERÇÃO DE PROGRAMA**
+    - Entrada/saída estéreo TRS 1/4”.
+    - Permite inserir um processador externo no sinal PGM enviado ao USB.
+    - Útil para aplicar processamento multibanda ou efeitos antes do streaming.
+ 9. **SAÍDA DE PROGRAMA**
+    - Saída estéreo TRS 1/4”.
+    - Contém a mixagem de microfones, USB, linha auxiliar e linhas telefônicas.
+10. **SAÍDA DE MIXAGEM DE MICROFONES (REC OUT)**
+    - Saída estéreo em minijack 1/8”.
+    - Fornece exclusivamente a mixagem de microfones (pós-compressor).
+    - Permite gravar vozes mesmo quando o console está transmitindo outros conteúdos.
+11. **SMART-CAM (opcional)**
+    - Conector miniUSB.
+    - Envia o estado dos microfones para o PC para automatizar a mudança de câmeras.
+    - Utilizado junto com **Audicom Video** e o serviço de streaming.

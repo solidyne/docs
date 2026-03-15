@@ -1,0 +1,60 @@
+---
+title: "Sobre transmissão em MONO"
+description: "Uso estratégico da comutação mono/estéreo"
+keywords: ["mono", "estéreo"]
+tags: ["processadores", "542"]
+
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "3a372477760907ce537e827e01424d6fd398bde910e347b634229e012421d4ab"
+
+---
+
+## Introdução
+
+A transmissão **monoaural**, embora não seja uma prática generalizada, é utilizada por algumas emissoras de FM localizadas em cidades com **alta congestão** e com escassos controles/regulamentação no espectro eletromagnético.
+
+Quando o conteúdo transmitido é principalmente **palavra falada** (magazines, noticiários, esportes, programas jornalísticos), a transmissão em estéreo não oferece vantagens significativas, pois seu benefício se limita principalmente à música.
+
+## Vantagens técnicas do modo mono
+
+- Melhora o **alcance da emissora**.
+- Reduz significativamente as **interferências**.
+- A energia que em estéreo se dispersa em uma largura de banda maior, em mono se concentra em apenas **um quarto da largura de banda**.
+- Isso aumenta até **4 vezes a potência efetiva no ar** (_NAB Engineering Handbook_).
+- Melhora a **cobertura** ao reduzir:
+  - Interferências de emissoras próximas.
+  - Distorção por múltiplos caminhos em áreas urbanas.
+
+<img
+  src="/images/542/542-Mono.jpg"
+  alt="542 Mono Jp"
+  title="542 Mono Jp"
+  style={{ width:"55%" }}
+/>
+
+## Uso estratégico do modo mono
+
+A transmissão mono pode ser usada de forma **programada** para:
+
+- Melhorar a recepção e cobertura em horários de **programas falados (talk-shows)**.
+- Competir pela audiência em horários onde a inteligibilidade é mais crítica que a musicalidade.
+- Alternar entre **mono e estéreo** de acordo com o conteúdo transmitido ou conforme horários.
+
+## Formas de comutação para mono
+
+- **Por preset:**\
+  Cada preset pode incluir um atributo que ativa o modo MONO ao selecioná-lo.\
+  O processador permanecerá em MONO até que um novo preset o modifique.
+- **Microfones no ar (GPI):**\
+  Usando a entrada GPI, comuta-se para um preset de **VOZES** que tenha ativo o modo MONO.\
+  (Ver seção **GPIO** para mais detalhes).
+- **Controle manual:**\
+  A partir do aplicativo de controle **Lite Commander**.
+- **Comutação automática por horários:**\
+  Mediante programação no **Lite Commander**.

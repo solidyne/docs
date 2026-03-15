@@ -1,0 +1,92 @@
+---
+title: "Admicom: configurar emissora"
+description: "Configuração da emissora e distribuição dos blocos comerciais"
+keywords: ["comerciais", "bloco", "publicidade", "programação"]
+tags: ["Software", "Admicom", "audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a3f964617e15290c49ebbb2145aa21a789158e91cd7175eca9ba7ed427f50599"
+
+---
+
+---
+
+O Admicom permite gerenciar a pauta comercial de uma ou várias emissoras na versão **AUDICOM Multicast**.\
+Cada emissora possui uma configuração geral que define os **minutos máximos de publicidade por hora** e a **grade de distribuição de blocos comerciais**.
+
+Ao abrir o aplicativo, é exibida a área de trabalho do Admicom vazia. A partir dos menus, acessa-se as diferentes opções de configuração.
+
+## Emissora
+
+Nesta seção, são inseridos e modificados os dados de cada emissora. Por padrão, aparece uma única emissora chamada **DEMO**.
+
+<AccordionGroup>
+  <Accordion title="Dados principais">
+    - **Código**: Identificação ou abreviação de até 10 caracteres (exemplo: `AM1030`).
+    - **Nome**: Nome da emissora (exemplo: _Rádio América_).
+    - **Tempo máximo de bloco**: Limite de minutos de publicidade por hora. Este valor nunca é excedido; os anúncios em excesso são rejeitados conforme prioridade.
+    - **Caminho de saída**: Pasta onde são gerados os arquivos `.log` da pauta comercial.
+    - **Caminho de áudio**: Pasta onde são armazenados os áudios dos anúncios.
+    - **Imagem**: Logotipo ou símbolo exibido nos relatórios.
+  </Accordion>
+  <Accordion title="Controles">
+    - **Buscar**: Localiza uma emissora existente.
+    - **Modificar**: Altera os dados da emissora atual.
+    - **Novo**: Cria uma nova emissora.
+    - **Excluir**: Remove a emissora selecionada.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Para excluir uma emissora, é necessário apagar primeiro todos os anúncios e blocos associados.\
+  Um método rápido é esvaziar um dia e depois usar **Copiar dia** para replicar a configuração vazia nos demais dias da semana.
+</Note>
+
+## Bloco comercial
+
+Permite definir a **distribuição de blocos comerciais** para cada emissora e cada dia da semana.
+
+- **Emissora**: Seleciona a emissora.
+- **Dia da semana**: Define o dia a ser modificado.
+- **Copiar Emiss.**: Copia a grade de outra emissora.
+- **Copiar dia**: Duplica a distribuição de um dia para outros na semana.
+
+### Definição de blocos
+
+- Criar um bloco: **Novo**.
+- Editar bloco existente: **Editar** ou **Modificar**.
+- **Ref. hora**: Pode ser definido como início ou fim do bloco comercial.
+- **Tolerância**: Minutos em que o bloco pode ser adiantado ou atrasado em relação ao horário programado.
+- **Permitir misturar categorias**: Autoriza que anúncios de uma mesma categoria compartilhem o bloco; caso contrário, são realocados.
+
+## Programas
+
+Aqui são definidos os horários dos programas da emissora selecionada.
+
+- **Programa**: Código e nome (deve ser criado previamente em _Configuração -\> Programa_).
+- **Hora Início / Hora Fim**: Faixa de horário do programa.
+- Os anúncios programados são inseridos automaticamente neste bloco.
+
+## Locutores
+
+Permite registrar os nomes dos locutores na base de dados, o que agiliza o preenchimento nas fichas de anúncios comerciais.
+
+- **Código**: Abreviação de até 10 caracteres.
+- **Nome**: Nome completo do locutor.
+
+## Programas (definição geral)
+
+Aqui são registrados os programas ou segmentos na base de dados do Admicom, independentemente do horário ou da emissora.
+
+- **Código**: Identificação abreviada (máx. 10 caracteres).
+- **Nome**: Nome completo do programa.
+
+<Note>
+  Os horários de início e fim são configurados em **Configuração -\> Bloco comercial**.\
+  Se um programa mudar de dia ou horário, os anúncios associados são reprogramados automaticamente.
+</Note>

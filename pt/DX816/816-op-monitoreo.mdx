@@ -1,0 +1,117 @@
+---
+title: "Monitoramento e fones de ouvido"
+description: "Monitoramento em alto-falantes e fones de ouvido. Comunicação Talk-Back."
+keywords: ["monitoramento", "fones de ouvido", "talkback", "cue", "studiobox"]
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "54200d801fd57bf0166c13c57a17063fc8dab40cb4fba63c0e67cd388427a64c"
+
+---
+
+## Seção de Monitor
+
+Esta seção contém os controles:
+
+- **Studio Monitor**: determina qual sinal será ouvido nos alto-falantes monitores e fones de ouvido do Estúdio.
+- **Control Monitor**: atribui o sinal aos alto-falantes monitores e fones de ouvido da Sala de Controle.
+- Controle de **volume CUE**.
+- Botão e microfone de **Talk-Back** para o Estúdio.
+- Botão Master "**ON-AIR Mics**". Ativa os canais de microfone e os sinais "No AR".
+
+<img
+  src="/images/816/816-panel-monitores.png"
+  alt="816 Op Monitoreo Pn"
+  title="816 Op Monitoreo Pn"
+  className="mx-auto"
+  style={{ width:"66%" }}
+/>
+
+ 1. Controle de nível dos alto-falantes da Sala de Controle.
+ 2. Soma o áudio de CUE aos alto-falantes da Sala de Controle.
+ 3. Controle de nível dos fones de ouvido do operador ou operadora.
+ 4. Atribuição de sinal à saída de monitoramento (fones e alto-falantes) no Estúdio.
+ 5. Atribuição de sinal à saída de monitoramento (fones e alto-falantes) na Sala de Controle.
+ 6. Nível com que o sinal CUE é somado aos fones e alto-falantes da Sala de Controle.
+ 7. Microfone de Talk-Back (diálogo com o estúdio e comunicações).
+ 8. Botão de Talk-Back
+ 9. Sensibilidade do microfone Talk-Back
+10. Botão Master de microfones.
+
+### **Studio Monitor**
+
+- Oferece quatro fontes de sinal: CUE, PGM, REC e ON-AIR [4].
+- O console envia sinais com nível fixo tanto para fones quanto para alto-falantes.
+- Para a distribuição e controle de nível no Estúdio é necessário um **distribuidor de fones**, como os módulos opcionais Solidyne HD3 e HD5.
+
+<Info>
+  Ver conexões em Instalação ⟶ [Monitoramento](/pt/DX816/816-monitoreo)
+</Info>
+
+### **Control Monitor**
+
+- O nível dos fones [3] e alto-falantes [1] é controlado independentemente.
+- Através dos botões de seleção [5] escolhe-se o sinal a ser ouvido no Controle:
+  - **PGM**: sinal enviado ao ar.
+  - **REC**: sinal do bus auxiliar REC.
+  - **ON-AIR**: sinal proveniente de um sintonizador externo, recomendado para monitoramento do ar.
+
+<Note>
+  Ajustar o volume dos alto-falantes monitores para um nível confortável com o controle **SPEAKERS** na posição central.
+</Note>
+
+<Info>
+  Se o link Estúdio-Transmissor ou o processador de áudio produzir um atraso audível, recomenda-se processar o sinal de monitoramento **ON-AIR** com um processador sem atraso, conectado diretamente a uma saída PGM do console.
+</Info>
+
+---
+
+## Pré-escuta (CUE)
+
+Cada canal possui um botão **CUE** que permite ouvir o sinal antes do atenuador (fora do ar). Se vários CUE forem ativados, os sinais são somados.
+
+O sinal CUE pode ser enviado para:
+
+- os alto-falantes de monitoramento da Sala de Controle: pressionar o botão **MIX** [2].
+- os fones da Sala de Controle. Este envio é fixo. CUE é somado ao sinal atribuído pela seleção de monitoramento.
+- o monitoramento do Estúdio. Está disponível como uma fonte de sinal em STUDIO MONITOR.
+
+O volume CUE é controlado unicamente pelo knob **CUE** [6], tanto nos fones quanto nos alto-falantes.
+
+<Warning>
+  Se o knob **CUE [6]** estiver fechado, o sinal CUE não será ouvido mesmo que os knobs de fones e alto-falantes estejam abertos.\
+  Por outro lado, se **SPEAKERS [1]** e **HEADPHONES [3]** estiverem fechados, CUE continuará soando se o knob CUE estiver aberto.
+</Warning>
+
+Outras características:
+
+- O envio CUE é **monoaural**.
+- Para ouvir CUE de forma isolada:
+  - Baixar o nível de **SPEAKERS** ou **HEADPHONES** conforme necessário.
+  - Liberar botões de PGM, REC e ON-AIR.
+
+<Tip>
+  Recomendamos monitorar o sinal do ar em volume moderado e CUE com um nível mais alto, para distingui-los claramente.
+</Tip>
+
+---
+
+## Ordens ao Estúdio (Talk-Back)
+
+O canal de ordens permite ao operador se comunicar com o locutor no Estúdio.
+
+- Pressione o botão **TALK-BACK**.
+- O áudio de programa nos alto-falantes de Controle é interrompido para evitar realimentação.
+- O operador é ouvido no **canal esquerdo** do Estúdio.
+- O **canal direito** mantém o sinal do ar, para referência de locutores e jornalistas.
+- Também é possível ativar **CUE** no canal de microfone para dialogar com o locutor.
+
+<Note>
+  O nível do microfone de ordens está calibrado de fábrica.\
+  Só deve ser ajustado se for estritamente necessário, usando o preset **LEVEL**.
+</Note>

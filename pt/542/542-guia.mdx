@@ -1,0 +1,181 @@
+---
+title: "Guia rápido de instalação"
+description: "Passo a passo para colocação em funcionamento"
+tags: ["processadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "79fccf7873e9c0406a590652cd652c2af4a4639adef438bdf36b3fe904af2126"
+
+---
+
+<Steps>
+  <Step title="Alimentação e ligação" stepNumber={1} titleSize="h3">
+    Antes de conectar o equipamento:
+
+    - Verifique no painel traseiro a posição do **seletor de tensão de rede** (200/240V ou 100/130V).
+    - Utilize o **cabo Interlock de três pinos** fornecido.
+    - Certifique-se de ter **aterramento apropriado**.
+    - O equipamento possui uma **chave liga/desliga** no painel traseiro.
+
+    <Danger>
+      Nunca conecte o equipamento sem verificar a posição correta do seletor de tensão.
+    </Danger>
+  </Step>
+  <Step title="Controle do Equipamento" stepNumber={2} titleSize="h3">
+    **A partir do painel frontal:**
+
+    A frente do equipamento inclui uma **roda de comando**:
+
+    - Gire a roda para escolher opções e alterar valores.
+    - Pressione a roda para confirmar um valor ou acessar uma opção.
+
+    <Info>
+      O display mostra menus de status, entradas ativas, ajustes de ganho e presets de áudio.
+    </Info>
+    **Controle remoto via interface WEB:**
+
+    - Conecte a porta **Ethernet** do 542APC à rede local usando um cabo UTP padrão.
+    - De fábrica o equipamento está em **DHCP**: o roteador atribuirá automaticamente um endereço IP.
+    - O endereço IP aparece na **tela inicial** do processador.
+    - De um computador na mesma rede, abra um navegador web e digite o endereço IP do processador.
+    - Será exibida a **tela inicial do controle remoto web**.
+    - Para editar opções, vá para o modo **ADJUST** no canto superior direito da tela.
+  </Step>
+  <Step title="Conexão das entradas" stepNumber={3} titleSize="h3">
+    - Analógica balanceada (XLR) – entrada padrão.
+    - Analógica RJ45 – compatível com StudioHub®.
+    - Digital AES3
+    - Audio stream (AoIP módulo opcional).
+  </Step>
+  <Step title="Ajuste da entrada" stepNumber={4} titleSize="h3">
+    - Entradas analógicas calibradas para **–18 dBfs** para nível nominal de **\+4 dBu**.
+    - Com o console em 0 VU os picos de sinal na entrada devem estar entre **–22 e –9 dBfs**.
+
+    <Note>
+      Se necessário, o ganho pode ser ajustado pelo painel frontal.
+    </Note>
+    **Escolher uma entrada (painel frontal)**
+
+    1. Gire a roda até a tela **INPUT (VU meters)**.
+    2. Pressione a roda para acessar **entrada ativa**.
+    3. Gire a roda e selecione a entrada desejada (ex: _2:ANALOG2_).
+    4. Pressione para confirmar.
+    5. A entrada ativa é indicada por uma seta na tela INPUT.
+
+    **Alterar o ganho da entrada (painel frontal)**
+
+     1. Gire a roda até **SETUP MENU** e pressione para entrar.
+     2. Gire para selecionar **IN** e pressione para entrar em **SETUP** de entradas.
+     3. Pressione para entrar em **INPUT SEL**.
+     4. Gire para escolher uma entrada e confirme.
+     5. Selecione **GAIN** e pressione.
+     6. Ajuste girando a roda (sentido horário = mais ganho) verificando que os picos estejam entre **–22 e –9 dBFS**.
+     7. Pressione para confirmar.
+     8. Gire para selecionar **BACK** e confirme para sair do menu.
+     9. Gire novamente até BACK e confirme para sair do menu SETUP.
+    10. As alterações ficam armazenadas.
+  </Step>
+  <Step title="Saídas" stepNumber={5} titleSize="h3">
+    **Banda Base MPX**
+
+    - Gerador estéreo com **saída MPX dupla** de nível independente.
+    - Conectar ao transmissor com cabo coaxial (50 ou 75 Ohms).
+
+    **Áudio balanceado**
+
+    - Duas saídas estéreo analógicas: XLR e RJ45
+    - Podem fornecer:
+      - Áudio com pré-ênfase 50/75 μS
+      - Áudio de-enfatizado (para streaming ou retransmissoras).
+
+    <Info>
+      A ativação da ênfase é realizada através do **Controle Web**.
+    </Info>
+  </Step>
+  <Step title="Sintonizador e monitor de transmissão" stepNumber={6} titleSize="h3">
+    O 542APC inclui:
+
+    - **Sintonizador interno**
+    - **Medidor de modulação**
+    - **Gerador de tons de calibração**
+
+    **Antena de recepção**
+
+    - Conecte a antena telescópica (incluída) ao conector **FM ANT (BNC)**.
+    - São fornecidas duas antenas:
+      - Telescópica (recomendada em planta transmissora).
+      - Micro-antena fixa (quando a intensidade de campo é excessiva).
+  </Step>
+  <Step title="Nível de modulação" stepNumber={7} titleSize="h3">
+    **Tom de calibração**
+
+    1. De um navegador (preferencialmente Chrome), digite o **IP do equipamento**.
+    2. Pressione o botão **SETUP** (acima à direita).
+    3. No menu lateral, selecione **FM Output (MPX)**.
+    4. Ative o **Calibrador**. O áudio de entrada é substituído por um tom senoidal.
+       - Piloto: 9% – RDS: 4% (valores de fábrica).
+
+    **Ajuste de modulação**
+
+    1. No Controle Web, entre em **Receptor/Analisador FM**.
+    2. Sintonize a frequência da emissora.
+    3. Verifique o nível no **medidor de modulação**.
+    4. O indicador **RxQTY** deve mostrar **GOOD**.
+    5. Ajuste orientação ou tipo de antena se a recepção estiver deficiente.
+    6. Regule o nível de **entrada MPX no transmissor** até alcançar a modulação desejada (100%).
+    7. Nível de saída MPX de fábrica: **5 Vpp** (ajustável via Controle Web).
+    8. Desligue o calibrador: o áudio de entrada retomará a modulação normal.
+  </Step>
+  <Step title="Ajustes do som" stepNumber={8} titleSize="h3">
+    Escute os diferentes PRESETS de fábrica para definir o som que se ajuste às necessidades da emissora. Sintonize em um bom equipamento de áudio. Pode escutar usando o sintonizador interno do 542APC (use bons fones de ouvido).
+
+    O equipamento inclui **presets de fábrica** e memórias de usuário:
+
+    - 16 presets fixos (não modificáveis).
+    - 16 memórias de usuário para criar ajustes próprios (via Controle Web).
+
+    ### Seleção de preset (painel frontal)
+
+    1. Gire a roda até a tela **PROCESS**.
+    2. Pressione para mudar o preset atual.
+    3. Gire e selecione um novo preset.
+    4. Pressione para confirmar. O som no ar mudará gradualmente para o novo ajuste.
+
+    ### Sound Wizard (controle WEB)
+
+    Permite modificar qualquer preset com 4 controles básicos:
+
+    - Bright (brilho)
+    - Bass (graves)
+    - Compression/Density (densidade)
+    - Loudness (intensidade)
+
+    Etapas adicionais (ativáveis/desativáveis):
+
+    - EQ paramétrico
+    - Bass enhancer
+    - Stereo enhancer
+  </Step>
+  <Step title="Assistência Técnica Remota (ATR)" stepNumber={9} titleSize="h3">
+    O equipamento permite conexão remota para suporte de fábrica. \
+    Passos (requer coordenação prévia com a Equipe de Suporte):
+
+    1. Conectar o processador 542APC à **LAN** (Ethernet de controle).
+    2. Instalar a **antena de recepção**.
+    3. Verificar acesso de um PC digitando o **IP no navegador web**.
+    4. Baixar **TeamViewer QuickSupport** em:\
+       https://get.teamviewer.com/solidynequick
+    5. Executar o arquivo `TeamViewerQS.exe`.
+    6. Aparecerá a janela "Permitir controle remoto" com chat direto com o Suporte.
+
+    ### Contato de suporte
+
+    - 📧 [soporte@solidyne.ar](mailto:soporte@solidyne.ar)
+    - 📱 WhatsApp: \+54 9 11 3119-3254
+  </Step>
+</Steps>

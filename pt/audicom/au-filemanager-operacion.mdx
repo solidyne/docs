@@ -1,0 +1,234 @@
+---
+title: "File Manager, operação"
+description: "Operação e funções."
+keywords: ["File Manager", "operacao"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b1fd2dd70121e414b4276ff6718bad7d64eba90a300cca5a8ada7b8c45c02118"
+
+---
+
+## Operação do File Manager
+
+<Note>
+  Esta seção corresponde ao módulo **File Manager** (descontinuado no Audicom Black e substituído por **Media Manager**). Mantido por compatibilidade operacional e para usuários em transição.
+</Note>
+
+## Modo expandido
+
+- Ao pressionar a **seta vermelha**, aparece uma **segunda janela** à direita do módulo (similar à principal).
+- Serve para **mover ou copiar** arquivos entre pastas, entre outras funções.
+- Ao clicar em um arquivo, muda a **janela ativa**, indicada pela **seta verde**.
+- Os botões de reprodução atuam sobre o arquivo **selecionado na janela ativa**.
+
+---
+
+## Mover e copiar arquivos
+
+<Steps>
+  <Step title="Abrir segunda janela">
+    Ative o **modo expandido** (seta vermelha) para ter dois painéis.
+  </Step>
+  <Step title="Selecionar arquivos">
+    - Seleção múltipla com **Ctrl + clique** (um a um).
+    - Intervalo contínuo com **Shift + clique** (do primeiro ao último).
+  </Step>
+  <Step title="Escolher destino">
+    Na janela secundária, abra a **pasta de destino**.
+  </Step>
+  <Step title="Mover">
+    Arraste a seleção para a pasta de destino.\
+    Se os arquivos estavam **registrados na Base de Dados**, sua **localização é atualizada** automaticamente.
+  </Step>
+  <Step title="Copiar">
+    Arraste **mantendo Ctrl**: verá um **sinal (+)** indicando cópia.
+  </Step>
+</Steps>
+
+<Info>
+  **Pastas autoDB**
+
+  - Se mover/copiar música para uma pasta **autoDB**:\
+    a) Se o arquivo **não estava** registrado, é **cadastrado** automaticamente.\
+    b) Se **já estava** registrado, mantém todas as informações **exceto "Estilo"**, que assume o **nome da nova pasta**.
+  - De uma pasta **autoDB → não autoDB**: a Base de Dados **não muda**.
+  - A lógica **autoDB** aplica-se **apenas no movimento/cópia**; depois não modifica informações.
+</Info>
+
+<Warning>
+  Evite mover/renomear/excluir arquivos registrados **com ferramentas do Windows**:
+
+  - Se movidos, a localização será corrigida quando forem para o ar (AutoDJ/InfoMusic), mas implica **buscas exaustivas**.
+  - Se excluídos ou renomeados, a Base de Dados marcará o meio como **\_missing**.
+</Warning>
+
+---
+
+## Renomear o material
+
+- Pressione **F2** para abrir a janela de edição **Intérprete / Título**.
+- Não é necessário digitar a extensão (não é modificada).
+- Atualiza o **nome do arquivo** e o **título na Base de Dados** (se a pasta for **autoDB** ou se o arquivo já estava registrado desde InfoMusic).
+- Formato de arquivo recomendado: **"Intérprete - Título.ext"**.
+- O botão **[Abc]** alterna **MAIÚSCULAS/minúsculas**.
+
+**Exemplos**
+
+- "Rádio Buenos Aires.mp3" → Intérprete vazio; Título "Rádio Buenos Aires". Com **F2**: Intérprete "Promocional"; fica "Promocional - Rádio Buenos Aires.mp3".
+- "05 - Lucho Gonzalez - Centro ao coração.mp3" → Intérprete "05 - Lucho Gonzalez"; Título "Centro ao coração". Ajuste com **F2**.
+- "JORGE FANDERMOLE" → **[Abc]** → "Jorge Fandermole".
+
+---
+
+## Excluir arquivos
+
+- Clique direito sobre o arquivo → **Delete (Excluir)** → confirme.
+- Se estava na **Base de Dados**, também é removido dela.
+- Permite exclusão múltipla com seleção prévia.
+
+<Danger>
+  - Os arquivos são excluídos **diretamente** (não vão para a Lixeira).
+  - Não exclua meios registrados usando **Windows**: se fizer, deverá limpá-los **manual**mente na Base com **InfoMusic**.
+</Danger>
+
+---
+
+## Buscar arquivos `[F3]`
+
+- **F3** (ou clique direito → _Busca_) abre a caixa de critérios:
+
+**Critérios disponíveis**
+
+- **Buscar**: texto por **nome do arquivo** (não por título da BD).
+- **Modo exaustivo**: se desativado, busca apenas arquivos que **começam** com o texto.
+- **Excluir**: palavras a excluir.
+- **Duração maior que [s]** / **menor que [s]**.
+- **Apenas em discos locais**.
+- **Apenas no diretório atual**.
+- **Entre datas** (segundo _data de modificação_ do Windows).
+- **Entre horários** (segundo _hora de modificação_ do Windows).
+
+**Resultados**
+
+- São listados na janela **Resultados da busca**.
+- A partir daí pode: **reproduzir**, **inserir no CyberPlay**, **enviar para Live Assist**, **excluir** (se tiver permissões).
+- **Report** gera um **.txt** com os resultados.
+
+---
+
+## Adicionar novas pastas
+
+File Manager exibe todas as subpastas em `\Audicom\Audio` e `\Audicom\Text`.
+
+- Para criar: botão **Nova Pasta** e preencha:
+  - **Nome** (máx. 15 caracteres).
+  - **Disco ou servidor** (local ou UNC com permissões de escrita).
+  - **Tipo**:
+    - **Audio** (meios de áudio).
+    - **Texto** (notícias; podem associar texto ao áudio para CyberPlay/Teleprompter).
+    - **Extras** (pastas fora de `\Audicom\Audio` mapeadas temporariamente no File Manager; **apenas uso manual**).
+  - **autoDB** (registro automático no InfoMusic).
+  - **Classe** (chave para autoDB).
+  - **Cor** (aba/tab compartilhado em toda a rede).
+  - **Ordenar por** (Intérprete / Título / Duração).
+  - **Fade** (décimos de segundo: _15_ = 1,5 s).
+
+<Info>
+  Regras **autoDB** (resumo):
+
+  - Prioriza o **nome do arquivo**: "Intérprete - Título.ext". Considera o **último hífen** como separador.
+  - Lê **ID3v1/v2** se disponíveis.
+  - **Classe** na BD = "Classe" definida em _Nova Pasta_.
+  - Se **Classe = Música** → **Estilo = nome da pasta**; caso contrário, Estilo vazio.
+  - **Fades** padrão: música **1 s in/out**; não música **0 s**.
+  - Títulos duplicados → sufixos **(2), (3)...**.
+</Info>
+
+<Warning>
+  - Máximo **320 pastas** (somando todas as unidades locais e de rede).
+  - Evite **nomes duplicados**: File Manager exibirá apenas a primeira encontrada conforme a ordem declarada em `Audicom.ini`.
+  - Declare primeiro **discos locais** e depois **discos de rede**.
+</Warning>
+
+---
+
+## Propriedades de uma pasta (INFO)
+
+- Clique direito sobre a aba → **INFO**.
+- **Nome**: somente leitura.
+- **autoDB**: ativa/desativa registro automático.
+- **Cor**: 8 cores disponíveis para agrupar e filtrar.
+- **Ordenar por**: define a ordem **padrão** ao entrar.
+- **Mostrar Intérprete**: oculta/exibe a coluna (útil em pastas não musicais).
+
+---
+
+## Explorando a rede
+
+- A janela principal mostra **todas** as pastas da rede AUDICOM (exceto restrições por usuário).
+- Em **modo expandido**, a janela direita pode mostrar **todas** as pastas ou **apenas** as de uma **terminal** selecionada (menu superior).
+- Útil quando existem **pastas com o mesmo nome** em diferentes terminais: a aba local mostra **apenas sua pasta local**; para ver a de outra terminal, use o painel direito com seleção de terminal.
+
+---
+
+## Menu de contexto (clique direito sobre arquivo)
+
+- **Cue** / **Cue End** / **Cue Stop**
+- **Add to Play queue**: adiciona o arquivo à **fila de reprodução** do File Manager (reproduz a seguir; o contador muda de cor).
+- **Gravar como PlayList.txt**: salva uma seleção (≥2 títulos) como **lista de reprodução** (fica em **PGM**).
+- **AutoEdit…**: abre no **AutoEdit** para corte automático de silêncios início/fim.
+- **Edita**: abre com o **editor associado no Windows** (padrão FX5).
+- **InfoMusic**:
+  - No Ar: mostra dados no **InfoMusic Ar**.
+  - Em Produção: abre **InfoMusic-Prod**.
+- **Buscar**: abre o diálogo de busca (equivalente a **F3**).
+- **Excluir**: remove do disco e da Base de Dados.
+- **Renomear**: edição de **Intérprete/Título** com atualização da BD (equivalente a **F2**).
+- **Ordenar por título / duração** (equivalente a clique no cabeçalho).
+- **Mostrar…**: filtros rápidos para ver **arquivos recentes**.
+
+---
+
+## Informações avançadas
+
+**Estrutura necessária**
+
+- Todas as unidades devem ter: `\Audicom\Audio` (e `\Audicom\Text`).
+- File Manager **apenas** exibe as pastas dentro de **Audio**.
+- **Não** são aceitas **subpastas** dentro das pastas de **Audio** (são ignoradas).
+- Se criar uma pasta em um disco sem estrutura, File Manager a **criará** automaticamente.
+
+**Declaração de unidades**
+
+- Em **Painel de Configuração > Pastas**:
+  - **Local**: `AudioDrives=` com letras contíguas.
+  - **Rede (UNC)**: caminhos separados por **ponto e vírgula** (ex. `\\Servidor\C;\\Producao\C`).
+  - Veja **Audicom em Rede > Configuração de Arquivos**.
+
+### Importar pastas
+
+- No modo expandido aparece o botão **Importar pasta** (ícone de CD).
+- Permite **carregar temporariamente** uma pasta **fora** de `\Audicom\Audio` (inclusive CD-ROM/rede).
+- É adicionada como **aba extra** para copiar arquivos sem usar o Explorer.
+- Para **remover** as importadas: **feche** File Manager (Alt+F4).
+- As pastas importadas **não são mantidas** ao reabrir.
+
+<Warning>
+  Arquivos de **pastas extras/importadas**:
+
+  - Podem ser **reproduzidos manualmente** e **arrastados para CyberPlay**.
+  - **Não** podem ser incluídos em **LOG/PGM** nem armazenados na **Base de Dados**.
+  - Ficam **excluídos da programação automática**.
+</Warning>
+
+### Excluir pastas
+
+- Só podem ser excluídas se estiverem **vazias** (duplo clique sobre a aba).
+- Para **renomear**: crie uma pasta com o novo nome, **movimente** tudo com File Manager e depois exclua a vazia.
+- Assim mantém-se a **consistência** da Base de Dados.

@@ -1,0 +1,66 @@
+---
+title: "AutoDj Editor"
+description: "Modelos de regras para programação musical automatizada"
+keywords: ["autodj", "programacao", "musica", "automatizacao"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1e7d6bf9cf35b74f6180b048d080ef720dbfb59a00d9ac4421bc6f9531bcfbb1"
+
+---
+
+### Descrição geral
+
+Criar uma programação musical automática com AUDICOM é um processo simples, baseado na definição de blocos automáticos (**AutoDj**) com um **formato** previamente estabelecido. Esses blocos são agendados a partir do **CyberPlay Editor** e são executados ao vivo pelo motor **AutoDj**, um sistema de **seleção musical avançada** que trabalha com base na base de dados de música e nas folhas de formato de estilo.
+
+<Tip>
+  No capítulo [**programação manual**](/pt/audicom/au-cpeditor-comandosmusica) é explicado como agendar os blocos AutoDj. 
+</Tip>
+
+---
+
+### Para acessar o módulo **AutoDj Editor**:
+
+1. Abrir o menu **Iniciar do Windows**.
+2. Ir ao grupo **Programas → AUDICOM**.
+3. Clicar em **AutoDj Editor**.
+
+A tela principal do módulo será aberta.
+
+---
+
+### Função do módulo
+
+O **AutoDj Editor** permite **criar e editar FORMATOS** musicais que serão utilizados pelo motor AutoDj.\
+Cada formato contém os **parâmetros de seleção** que o AUDICOM utiliza para escolher faixas: estilo, gênero, intérprete, entre outros.
+
+Quando um bloco AutoDj está ativo, o sistema:
+
+- **Gera a programação automaticamente** seguindo o formato estabelecido.
+- **Revisa as faixas disponíveis** na base de dados.
+- **Atribui uma pontuação** a cada faixa de acordo com o grau de correspondência com os parâmetros definidos.
+
+---
+
+### Lógica de seleção
+
+- A ordem de revisão começa pelas faixas que **mais tempo estão sem serem tocadas**.
+- Cada faixa recebe uma **pontuação entre 0 e 100**.
+- Se uma faixa superar os **90 pontos**, é inserida diretamente na programação do **CyberPlay**.
+- Esse valor de 90 é a **tolerância do AutoDj** e pode ser ajustado no arquivo `AUTODJ.INI`, modificando a variável **Tolerância**.
+- Se nenhuma faixa atingir a pontuação mínima requerida, é selecionada aquela que obtiver **a melhor classificação relativa**.
+
+---
+
+### Exemplo de ponderação
+
+Cada parâmetro tem um **peso diferente** na pontuação:
+
+- O **Estilo** de uma faixa pode conceder mais pontos que o **Modo**, já que é considerado mais relevante para manter a coerência da programação musical.
+
+Dessa forma, o AutoDj garante que a música programada siga um critério definido pela emissora, respeitando tanto a **rotação temporal** quanto as **características estilísticas** que se deseja destacar na programação.

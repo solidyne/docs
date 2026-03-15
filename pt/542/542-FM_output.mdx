@@ -1,0 +1,168 @@
+---
+title: "MPX e Modulação"
+description: "Configuração das saídas MPX e ajuste da modulação em FM"
+keywords: ["MPX", "modulação", "pré-ênfase", "RDS", "BS.412", "calibrador", "FM OUTPUT"]
+tags: ["processadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "9b5444281d4863e179d2518239a36e9dea8cb20354dfac21919016e0151de3b7"
+
+---
+
+## FM Output – MPX
+
+No menu **FM OUTPUT** são configurados os parâmetros principais da transmissão:
+
+1. **Níveis** das saídas de sinal multiplexado estéreo (MPX)
+2. Configuração básica de **RDS**
+3. Controle de potência **ITU BS.412**
+
+![542 Web FM Output Pn](/images/542/542-web-FM_output.png)
+
+### Nível de MPX
+
+- As duas saídas MPX têm controle de nível calibrado em **Vpp (volts pico a pico)**.
+- O nível é ajustado tipicamente para obter **100% de modulação** no transmissor.
+- Se o transmissor tiver controle de ganho MPX, ajuste o processador para **5 Vpp** e faça a correção fina no transmissor.
+
+### Pré-ênfase
+
+Selecione a curva de **pré-ênfase** de acordo com a norma do seu país:
+
+- 50 μs → Europa
+- 75 μs → EUA, Ásia, América Latina
+
+### Tom piloto e portadora RDS
+
+- **PILOT**: nível do tom piloto → 9% (de fábrica).
+  - Pode ser aumentado até **12%** em áreas com muita congestão de RF.
+  - Quanto maior o nível de piloto/RDS, menor a sonoridade do áudio para um mesmo nível de modulação.
+- **MODE**: permite alternar a transmissão entre **STEREO** e **MONO**. Em MONO, o piloto é suprimido e o sinal MPX é monoaural. A comutação pode ser feita:
+  - A partir da **configuração** (fica fixo no sistema).
+  - Forçada **por preset** → Os presets têm uma variável para comutar para mono (ver _Preset Manager_). Neste caso o controle indicará _"Forced to MONO by preset"_.
+  - **Remotamente** com o aplicativo **542 Lite Commander** _(requer um computador externo e acesso remoto por IP)._
+
+    <Info>
+      Ver [**Sobre a transmissão em MONO**](/pt/542/542-mono)
+    </Info>
+- **RDS**: modulação de subportadora RDS → 4% (de fábrica).
+
+### Compensação da saída MPX
+
+- **Pilot Phase**: ajuste fino da fase do piloto. Permite melhorar separação estéreo.
+- **SUB(L-R) adjust**: ajusta nível do módulo L-R para compensar desajustes do conjunto coaxial/antena.
+
+<img
+  src="/images/542/542-MPX-compensation.png"
+  alt="542 MPX Compensation Pn"
+  title="542 MPX Compensation Pn"
+  className="mx-auto"
+  style={{ width:"50%" }}
+/>
+
+<Info>
+  Ver **Medição e ajuste da separação de canais**
+</Info>
+
+### Controle de potência ITU BS.412
+
+Etapa que regula a potência do sinal MPX segundo a recomendação **ITU-R BS.412**.\
+Aplicável principalmente na **Europa**.
+
+<Danger>
+  Se a legislação do seu país não exige BS.412, não ative este controle.\
+  Reduzirá a sonoridade no ar desnecessariamente.
+</Danger>
+
+- Estabelece um limite à **energia média MPX** (janela 60 seg.), mantendo a modulação máxima em 75 kHz.
+- Busca reduzir interferências entre emissoras com separação de 100 kHz.
+- Padrão de referência: **0 dBr** com tolerância de +0,2 dB.
+
+<img
+  src="/images/542/542-BS412.png"
+  alt="542 BS412 Pn"
+  title="542 BS412 Pn"
+  className="mx-auto"
+  style={{ width:"51%" }}
+/>
+
+O controle de **modulação ITU BS.412** modifica o nível de referência de potência MPX.\
+O gráfico de tempo mostra a evolução da potência MPX em uma janela de 120 segundos.\
+O gráfico apresenta uma curva de integração de 60 segundos conforme estabelece BS.412; e um perfil de integração de tempo curto.
+
+**Presets de processamento e BS.412**
+
+Qualquer preset de processamento pode ser usado estando ativo o controle de potência MPX.\
+Entre os presets de fábrica estão incluídos ajustes otimizados para trabalhar com ITU BS.412.
+
+<Tip>
+  Havendo um limite de potência, não faz sentido usar presets de alta sonoridade, pois estará processando o áudio aumentando a sonoridade para depois diminuí-la. Uma vantagem da regulação ITU BS.412 é que as rádios podem usar mais faixa dinâmica.
+</Tip>
+
+## Ajuste da modulação em FM
+
+De fábrica o tom piloto vem ajustado em **9%** e a portadora RDS em **4%**.\
+Geralmente não é necessário modificar estes valores. Se precisar modificá-los, faça ANTES de realizar o ajuste de modulação.
+
+Passos para ajustar:
+
+1. Ligue o **CALIBRADOR** na tela **FM OUTPUT** → é emitido um tom de 400 Hz que substitui o sinal de entrada.
+2. Sintonize a transmissão no receptor interno e verifique 100% de modulação no indicador de modulação do processador.
+   - Ajuste fino → modificar nível MPX (default: 5 Vpp).
+
+   <Note>
+     O indicador de modulação do 542 mede em **integração rápida** de 125 uS (ajustável de 0 a 1 ms).\
+     Transmissores com medidores lentos podem mostrar valores diferentes com material de programa.\
+     Devido à integração lenta o indicador do transmissor será incapaz de mostrar picos. Neste caso a medição será mais parecida quanto maior for a densidade de picos do material de programa.
+   </Note>
+   <Warning>
+     A medição no 542 é válida somente com **recepção ótima** no sintonizador.
+   </Warning>
+3. Desligue o **CALIBRADOR** → volta o sinal de programa ao nível calibrado.
+
+### Sobre os picos de modulação
+
+- Em muitos países vigoram normas FCC (USA) → Recomendação 73.268.
+- Permite-se exceder **ligeiramente os 100%** em picos não frequentes _("In no case is it to exceed 100 % on peaks of frequent recurrence")_
+- O 542APC cumpre com esta norma, habilitando essa tolerância.
+
+### Medição e ajuste da separação estéreo
+
+A separação de canais pode ser afetada por perdas no sistema coaxial-antena. <sup>1</sup>\
+542APC inclui ajustes de **fase de tom piloto** e de **ganho do módulo (L-R)** que permitem compensar em parte a não linearidade dos sistemas de transmissão, melhorando a separação de canais na transmissão.
+
+> _(1) FM stereo separation degradation as a function of antena system VSWR_, \
+> por Peter Onnigian, Jampro Antenna Company, para a 31ª convenção AES.
+
+Para realizar o ajuste procede-se:
+
+1. Na tela **FM Monitor Analyzer**, realizar a medição de separação de canais.\
+   Quanto mais alto for o número em dB, melhor é a separação.\
+   Se a indicação for maior que 40 dB (Excellent) não é necessário realizar ajustes.
+
+<Danger>
+  A medição introduz **breves tons audíveis no ar**.\
+  É indispensável que a estação esteja corretamente sintonizada para que as medições sejam válidas.
+</Danger>
+
+2. Na tela **FM OUTPUT** abrir a opção **MPX COMPENSATION**
+3. Incrementar em 0,1 dB o valor de "**SUB(L-R) Adjust**".
+4. Repita a medição de separação de canais e verifique se o valor melhorou em relação à medição anterior.
+   - Se a separação aumentou → volte ao passo 3, incrementando novamente em **0,1 dB** e repetindo a medição.
+   - Continue até que a separação não melhore mais.
+5. Se ao invés de melhorar a separação **diminuir**, reduza em **0,2 dB** o valor de **SUB(L-R) Adjust**.
+6. Meça novamente a separação.
+   - Verifique se agora melhorou.
+   - Repita a operação em passos de **0,1 dB** até conseguir o melhor valor possível.
+7. Se ainda não se alcança um valor **Excellent**, tente corrigir em passos de **0,5°** o controle de **Pilot Phase**, primeiro em um sentido e depois no outro, para verificar se pode ser obtida uma melhora adicional.
+8. Uma vez conseguido o melhor valor possível (com bons transmissores e antenas deve ser **Excellent >40 dB**), salve o ajuste na memória interna pressionando **SAVE** no menu da esquerda.
+   - Se não salvar, o ajuste se perde ao reiniciar o processador.
+
+<Note>
+  Não se medem valores superiores a **40 dB**, porque a partir desse ponto está demonstrado que o ouvido humano (mesmo usando fones de ouvido) não percebe melhorias na sensação de espaço estéreo.
+</Note>

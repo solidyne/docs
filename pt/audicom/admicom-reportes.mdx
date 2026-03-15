@@ -1,0 +1,73 @@
+---
+title: "Relatórios"
+description: "Relatórios de transmissão e estatísticas"
+keywords: ["relatórios", "comerciais", "bloco", "publicidade", "programação"]
+tags: ["Software", "Admicom", "audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "7b7afa2b133227b117b690185ed0e3cca5a11d517322e4002f3b5dd163c77589"
+
+---
+
+## Relatórios do Admicom
+
+O Admicom oferece diversas opções de geração de relatórios que permitem controlar as campanhas, verificar transmissões e obter documentação exportável em diferentes formatos (impressão, Excel ou PDF).
+
+### Relatório de vendas
+
+Gera um informe dos anúncios veiculados de um cliente específico dentro de um intervalo de datas.\
+É acessado em `Relatório -> Vendas`.
+
+No formulário são preenchidos:
+
+- **Emissora** (se mais de uma for gerenciada).
+- **Cliente**.
+- **Intervalo de datas**.
+
+Ao clicar em **Relatório**, é exibido o detalhamento dos anúncios correspondentes ao cliente, ordenados alfabeticamente. O relatório pode ser impresso, exportado para Excel compatível ou salvo em PDF.
+
+---
+
+### Liquidação de agência
+
+Permite obter uma lista dos anúncios correspondentes a uma Agência de Publicidade.\
+O relatório inclui o detalhamento dos anúncios veiculados em cada emissora (em instalações com múltiplas emissoras).
+
+As opções de saída são: impressão, exportação para Excel ou salvamento em PDF.
+
+---
+
+### PNT / Patrocínios
+
+Gera um relatório de **Propaganda Não Tradicional (PNT)** e **Patrocínios** para um dia específico.
+
+---
+
+### Perfil de bloco
+
+Mostra de maneira gráfica a densidade de blocos comerciais ao longo do dia.\
+Este relatório só está disponível para blocos já gerados. Se tentar gerar um perfil sobre uma data sem blocos, será exibida a mensagem **"Bloco inexistente"**.
+
+- **Eixo horizontal:** Horas do dia (0 a 24 horas).
+- **Eixo vertical:** Minutos de publicidade acumulados por cada hora.
+
+A linha vermelha **Máx** representa o limite máximo de publicidade permitido por hora, configurado em `Configuração Emissora -> Estação`.\
+O Admicom nunca ultrapassa esse limite em blocos gerados automaticamente, embora possa ser excedido se um bloco for modificado manualmente em outros módulos (exemplo: CyberPlay Editor).
+
+---
+
+### Campanha de um anúncio
+
+Mostra de forma simplificada a pauta de um anúncio comercial, indicando as aparições programadas.
+
+Para relatórios baseados nas transmissões reais efetivadas no ar, utilize o módulo **Aaudit**, que gera relatórios a partir dos registros de transmissão.\
+O relatório pode ser impresso, exportado para Excel compatível ou salvo em PDF.
+
+<Note>
+  IMPORTANTE: Além dos relatórios do Admicom, o módulo **Aaudit** permite auditar e verificar as transmissões efetivamente realizadas no ar.
+</Note>

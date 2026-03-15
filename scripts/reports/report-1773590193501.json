@@ -1,0 +1,12 @@
+{
+  "model": "anthropic/claude-3.5-sonnet",
+  "duration_sec": "380.67",
+  "results": {
+    "pt": {
+      "translated": 11,
+      "skipped": 0,
+      "errors": 0,
+      "total": 11
+    }
+  }
+}

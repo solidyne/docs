@@ -1,0 +1,157 @@
+---
+title: "Processamento de áudio"
+description: "Processadores de áudio integrados no UX24 e UX18"
+keywords: ["operação", "processamento", "eq", "dynamics", "deesser", "process"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "6b3a7df09fff86eae247058fa2503e50950ad99bf7b77f87aa43c5123532f69f"
+
+---
+
+## TELA PROCESS
+
+Para acessar, pressione **PROCESS** na tela principal. Isso também ativa o **modo SELECT** para escolher um canal.
+
+<img
+  src="/images/ux24/ux24-pantalla-processs.jpg"
+  alt="UNIDEX Pantalla Processs"
+  title="UNIDEX Pantalla Processs"
+  style={{ width:"65%" }}
+  className="mr-auto"
+/>
+
+Os processadores estão **fixos em cada entrada**, não no canal. Não podem ser reassignados a outros canais, buses ou saídas. Os processos disponíveis dependem do **tipo de entrada** atribuída ao canal.
+
+| **ENTRADA** | **EQ \+ Filtros** | **Comp. \+ Gate** | **De-esser** |
+| :---------: | :---------------: | :---------------: | :----------: |
+| MIC         | 4 bandas          | **sim**           | **sim**      |
+| UNIDEX      | 3 bandas          | **sim**           | não          |
+| USB         | 3 bandas          | não               | não          |
+| AES3        | 3 bandas          | não               | não          |
+| BALANCED    | 3 bandas          | não               | não          |
+
+**Funções da tela PROCESS**
+
+- Ver quais processadores estão no canal e se estão ativos ou em **BYPASS**.
+- Ativar/desativar um processador tocando em **BYPASS**.
+- Acessar seus ajustes tocando no ícone ou no botão contextual.
+
+**Seleção de canal**
+
+- No modo SELECT, use **CUE/SELECT** no console ou o **encoder** para percorrer os 24 canais (físicos em azul claro, virtuais em violeta).
+- Qualquer ação em PROCESS cancela SELECT, aplicando mudanças ao canal ativo.
+- Da tela PROCESS também é possível ativar SELECT e escolher outro canal.
+
+**Ajuste de parâmetros:**\
+É realizado combinando o **encoder** e as **opções touch**, conforme indicado para cada processador.
+
+<Note>
+  Os ajustes dos processamentos podem ser **salvos na cena**.
+</Note>
+
+---
+
+## EQUALIZADOR PARAMÉTRICO
+
+<img
+  src="/images/ux24/ux24-EQ.png"
+  alt="UNIDEX EQ"
+  title="UNIDEX EQ"
+  style={{ width:"71%" }}
+/>
+
+**1 - NOME:** Indica número e nome do canal. Os canais virtuais mostram a zona de nome em violeta.
+
+**2 - BANDAS:** Seleção de banda. Na tela são mostrados os parâmetros de uma banda por vez.\
+Cada banda tem uma cor que a identifica no gráfico e na zona de parâmetros.\
+Todas as entradas têm 3 bandas paramétricas, exceto as entradas MIC-1 a MIC-4 que contam com quatro bandas.
+
+**3 - CONTROLES:** Parâmetros de cada banda de EQ. A cor de fundo muda com a banda selecionada.
+
+- **GAIN:** Ganho em dB, com uma faixa de ± 9 dB.
+- **FREQ:** Ajusta a frequência de trabalho. Todas as bandas cobrem de 20 Hz a 20 kHz.
+- **Q:** Largura da curva do EQ. Determina a precisão da correção aplicada.
+- **TYPE:** Modo de trabalho da banda. Alterna tocando na opção TYPE na tela.
+  - Banda #1: peak, low-shelf ou HPF.
+  - Banda #2 (e #3 em entradas de microfone): peak ou HPF/LPF.
+  - Banda #3 (#4 em entradas de mic): peak, hi-shelf ou LPF.
+- **ON/OFF:** Liga/desliga da banda. Alterna tocando ON/OFF na tela.
+
+**4 - BY-PASS:** Desabilita todo o estágio de equalização. Também aparece na tela PROCESS.\
+Alterna tocando BY-PASS na tela.
+
+**5 - SELECT:** Ativa o modo seleção de canal.
+
+**6 - BACK:** Retorna à tela anterior.
+
+### Filtros Passa-Alto / Passa-Baixo
+
+- Banda #1 pode funcionar como filtro passa-alto (HPF) de 2ª ordem (12 dB/oct).
+- Banda #3 (Banda #4 em entradas MIC-1 a MIC-4) pode funcionar como filtro passa-baixo (LPF) de 2ª ordem (12 dB/oct).
+- Banda #2 (e Banda #3 em entradas MIC-1 a MIC-4) pode trabalhar como HPF ou LPF.\
+  Se duas bandas forem configuradas como passa-alto ou passa-baixo na mesma frequência, a atenuação total do corte será de **24 dB/oct**.
+
+---
+
+## DYNAMICS
+
+O processador **DYNAMIC** inclui um **gate de ruído** e um **compressor** dinâmico.
+
+<img
+  src="/images/ux24/ux24-dynamics.jpg"
+  alt="UNIDEX Dynamics"
+  title="UNIDEX Dynamics"
+  style={{ width:"65%" }}
+/>
+
+**1 - CURVA DE COMPRESSÃO:** Mostra graficamente a relação entrada-saída do processador dinâmico, incluindo o gate e o compressor.
+
+**2 - NÍVEL DE ENTRADA:** Indica o nível de pico do sinal na entrada do compressor (dBfs).
+
+### 3 - Gate de Ruído (GATE)
+
+- **Threshold:** Limiar de ação do gate (dB).
+- **Attenuation:** Atenuação aplicada ao sinal quando o gate está ativo.
+- **Style:** Muda o tempo de recuperação entre valores predefinidos.
+- **Active:** Indicador que acende em vermelho quando o gate está fechado.
+
+### 4 - Compressor dinâmico
+
+Controles para ajuste de:
+
+- Limiar (threshold)
+- Razão (ratio)
+- Tempo de ataque (attack)
+- Tempo de recuperação (release)
+- Retenção (hold)
+- Nível de saída (output gain)
+
+**5 - BYPASS:** Desativa completamente o estágio de processamento dinâmico (gate \+ compressor).
+
+---
+
+## DE-ESSER
+
+<img
+  src="/images/ux24/ux24-deesser.jpg"
+  alt="UNIDEX De-esser"
+  title="UNIDEX De-esser"
+  style={{ width:"65%" }}
+/>
+
+As entradas **MIC-1** a **MIC-4** contam com um **de-esser** para redução de sibilância.\
+Este processador funciona como um compressor multibanda, atenuando unicamente a faixa de frequências definida quando o nível do sinal supera o limiar estabelecido.
+
+**Controles:**
+
+- **1 - Type:** Ajustes predefinidos.
+- **2 - Frequency start:** Frequência de corte inferior. Ajusta-se segundo as características da voz. Geralmente entre 4.500 e 5.500 Hz.
+- **3 - Frequency end:** Frequência de corte superior. Ajusta-se segundo as características da voz. Geralmente entre 7.000 e 10.000 Hz.
+- **4 - Threshold:** Nível de limiar em dB. Quando o sinal na banda de trabalho supera este valor, é atenuado com uma **razão fixa de 15:1**.
+- **5 - Gain reduction:** Indica a redução de nível aplicada, em dB.

@@ -1,0 +1,96 @@
+---
+title: 'Arranque automático'
+description: 'Cortes de energia e arranque automático.'
+keywords: ["auto-start", "arranque"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "7acb298a5972053bc492720e9a3a1e95c82adfa759f01697e02d77ff36e5f938"
+
+---
+
+## Segurança contra cortes de energia
+
+Nunca se deve permitir que um corte de energia afete o computador.  
+O Windows requer um desligamento progressivo; um corte abrupto pode causar perda de dados ou até mesmo danos aos discos de armazenamento.  
+
+<Warning>  
+É altamente recomendável o uso de uma **Fonte de Alimentação Ininterrupta (UPS)**.  
+</Warning>
+
+- Utilize sempre UPS do tipo **On-Line** ou de **Dupla Conversão**, que garantem continuidade absoluta da alimentação.  
+- Elas permitem desligar o sistema de forma controlada em caso de corte.  
+
+### Funcionamento do AUDICOM em caso de corte
+
+- Se a transmissão for interrompida e o sistema for desligado de forma controlada:  
+  - Ao retornar a energia, o Windows será reiniciado.  
+  - O AUDICOM inicia na **Tela de Ar**, realizando auto-PLAY no horário correspondente.  
+- Os anúncios que não foram ao ar durante o corte aparecem nas planilhas de auditoria como **não enviados ao ar**.  
+- O programa de faturamento do AUDICOM cancela a cobrança dos anúncios omitidos.  
+
+<Note>  
+Deve ser criado um atalho para `aire.exe` (Tela de Ar) no grupo Iniciar do Windows para que o AUDICOM seja executado ao iniciar.  
+A opção **Autorun** deve estar habilitada no Painel de Configuração do AUDICOM.  
+</Note>
+
+---
+
+## Proteção contra raios e descargas elétricas
+
+A maioria dos danos causados por raios ocorre quando eles entram pelas linhas de energia elétrica.  
+Nem as UPS nem os estabilizadores de tensão oferecem proteção contra esse evento, pois as sobretensões superam dezenas de milhares de volts.  
+
+<Warning>  
+Até mesmo tempestades elétricas distantes podem se propagar por linhas aéreas de energia e danificar equipamentos.  
+</Warning>
+
+**Recomendação**: usar **Descargadores de Raios** para linhas de 220 V.  
+- São conectados entre ambos os polos de 220 V e uma haste de aterramento de 2 m enterrada.  
+- Devem ser instalados no quadro principal, **antes da UPS**.  
+
+---
+
+## Arranque automático do AUDICOM
+
+Muitas emissoras não transmitem durante a madrugada e requerem que o AUDICOM inicie a programação de forma automática no início do dia.  
+
+Embora não seja estritamente parte da instalação, esse caso é muito frequente e está incluído aqui.  
+
+### Exemplo de configuração
+
+- A emissora interrompe a transmissão às **00:00** e retoma às **07:00**.  
+- A equipe liga os equipamentos ou usa um **timer de ligamento automático**.  
+- O AUDICOM deve iniciar a reprodução exatamente às 07:00.  
+
+**Solução**: programar um bloco satelital de preenchimento (SatFill) durante o tempo fora do ar.  
+- O computador permanece ligado durante toda a noite, reproduzindo o bloco SatFill.  
+- Às 07:00, o bloco termina e começa o seguinte (exemplo: bloco musical AutoDJ).  
+
+Exemplo de instrução no arquivo PGM:
+
+```ini
+/Block /00:00-07:00 /Satfill
+/Block /07:00-09:00 /AutoDJ="Música da manhã"
+```
+
+<Note>  
+O último operador deve deixar o computador em reprodução antes de sair.  
+</Note>
+
+### Notas adicionais
+
+- Se a emissora interromper às **23:00**, o bloco SatFill é dividido em dois:  
+  - Das 23:00 às 00:00.  
+  - Das 00:00 às 07:00.  
+- O bloco completo é formado ao unir o final da programação de um dia com o início do dia seguinte.  
+- Esse modo de programação é independente da opção **Autoarranque**, explicada no item anterior.  
+
+<Info>  
+Para mais detalhes sobre programação, consulte o capítulo **CyberPlay Editor**.  
+</Info>

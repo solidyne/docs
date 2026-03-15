@@ -1,0 +1,93 @@
+---
+title: "Configurações do sistema"
+description: "Configurações do sistema"
+keywords: ["GPIO","security","password","network"]
+tags: ["procesadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5e1a6c9cd50910ce4929e54ce29b0bbcd678271a4f3800266ee95a4853b45628"
+
+---
+
+## Ajustes gerais do sistema
+
+![542 SYSTEM General Pn](/images/542/542-SYSTEM-General.png)
+
+### GPIO CONFIG
+
+- **GPI VOICE CHANGE PRESET**:\
+  Quando a GPI é ativada, alterna o preset de processamento.
+  - O sinal de disparo é gerado no Estúdio ao habilitar os microfones.
+  - Pode chegar ao processador por conexão **hardware** ou via **LAN** (modelos com opção /AoIP).
+  - O campo à direita define o preset a ser aplicado (padrão: **VOICE-LOUD**).
+- **GPO TRIGGER**:\
+  Lista de eventos que podem ativar a saída GPO:
+  1. AUDIO SILENCE
+  2. INPUT FAIL BACKUP
+  3. OVERMODULATION
+  4. LOW RF POWER
+  5. FORCE FM MONO
+
+<Info>
+  Ver detalhes de [conexão das GPIO](/pt/unidex/instalacion-gpio)
+</Info>
+
+---
+
+### SECURITY
+
+Permite habilitar senha (password) desmarcando a opção **Disable Password Protection** (padrão: ativado).
+
+- Senha padrão: `1234`.
+- Para modificá-la, escrever no campo **PASSWORD** e pressionar **APPLY**.
+- Regras: até **8 caracteres**, somente letras **MAIÚSCULAS** e números.
+- **FRONT PANEL CHANGES (LOCK/UNLOCK)**:\
+  Bloqueia ou habilita o acesso pelo painel frontal.\
+  Se estiver bloqueado, a senha é necessária para modificar pelo painel.
+
+---
+
+### User Interface (Interface do usuário)
+
+- **LOUDNESS EBU REFERENCE**: Nível de referência de sonoridade no monitoramento geral (padrão: 0 dBfs).
+- **AUTO-OPEN LEFT MENU**: Abre automaticamente o menu ao aproximar o mouse.
+- **ENABLE TOOLTIPS**: Ativa mensagens emergentes de ajuda sobre controles e indicadores.
+
+---
+
+### NETWORK
+
+- Configuração de rede.
+- De fábrica: modo **DHCP**.
+- Pode ser atribuído um **IP estático** desativando DHCP.
+- O endereço IP é exibido no painel frontal do equipamento ou via LAN com a ferramenta **Solidyne Multi-Discovery**.
+
+<Info>
+  Para mais detalhes ver [Conexão e acesso Ethernet](/pt/542/542-instalacion-web).
+</Info>
+
+---
+
+### TECHNICAL REPORT
+
+Gera um relatório com parâmetros de funcionamento e configuração do equipamento.
+
+- O relatório é salvo na pasta de downloads do navegador.
+- Pode ser enviado ao **suporte técnico** para diagnóstico.
+
+---
+
+### Status e Logs
+
+- **SYSTEM TIME**:
+  - Se o equipamento tem acesso à Internet, sincroniza hora com um servidor **NTP**.
+  - Também pode ser sincronizado do PC com **SYNC FROM PC**.
+  - Data e hora são usados apenas em relatórios e registros.
+- **SYSLOG**:
+  - Registro de eventos em memória interna.
+  - Uso reservado a **pessoal especializado** em diagnóstico e suporte técnico.

@@ -1,0 +1,98 @@
+---
+title: "Manutenção e suporte técnico"
+description: "Manutenção e depuração da Base de Dados de mídia."
+keywords: ["manutenção", "dbreindex", "base de dados"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5f3c2fb9845d54b458294c892f3d30c4ba52b2050cde757fd45fbecc31b8a2ef"
+
+---
+
+## Base de Dados / dbReindex
+
+Embora a Base de Dados do AUDICOM seja confiável, podem ocorrer falhas (por exemplo, quedas de energia ou erros no PC) que danifiquem sua integridade. Se você detectar anomalias no **AutoDJ** ou no **InfoMusic**, é possível que a Base de Dados esteja afetada.
+
+Para repará-la:
+
+1. Feche todas as aplicações que usam a Base de Dados (Aire, InfoMusic, AutoDJ Editor, File Manager).
+2. Execute `dbReindex.exe` a partir da pasta `\Audicom`.
+
+**Opções disponíveis:**
+
+- **Reindexa a Base de Dados:** Reconstrói os índices. Requer ter executado antes a opção _Compacta_.
+- **Compacta a Base de Dados:** Remove registros deletados (por exemplo, títulos eliminados no InfoMusic) e otimiza a base. Recomenda-se usar sempre esta opção.
+- **Verifica que existam os arquivos:** Verifica se os títulos têm arquivos associados. Os arquivos faltantes são marcados como `_missing`.
+- **Revalida arquivos perdidos:** Recupera títulos marcados como `_missing` se os arquivos voltarem a estar disponíveis (útil para discos removíveis).
+- **Apaga os títulos perdidos:** Remove definitivamente os títulos marcados como `_missing`.
+- **Organiza o campo título:** Converte os nomes dos títulos para o modo _frase_ (primeira letra em maiúscula).
+- **Organiza os campos:** Normaliza maiúsculas/minúsculas em Autor, Intérprete, Gênero e Estilo. Os campos vazios são marcados como _NÃO CLASSIFICADO_.
+- **Ajusta o mapeamento de unidades:** Corrige referências de discos quando o Windows muda a letra atribuída a uma unidade.
+- **`Renomeia arquivos para <intérprete - título>:`** Renomeia fisicamente os arquivos de acordo com sua informação na Base de Dados. **Não pode ser desfeito.**
+- **Reinicializa a data de passada:** Atribui data e hora atuais a todos os títulos, alterando sua ordem de reprodução.
+- **Atribui códigos a cada título:** Adiciona códigos únicos aos títulos, necessários para sincronizar com sistemas externos (ex. PowerGold).
+- **Cria informação do sistema para suporte:** Gera um relatório (`C:\soporte.txt`) e o anexa ao e-mail padrão para enviar ao suporte técnico.
+- **Sincroniza a info em arquivos com DB:** Escreve a informação da Base de Dados nos metadados dos arquivos de áudio/vídeo.
+
+**Botões de ação:**
+
+- **Procced:** Inicia o processo selecionado.
+- **Quit:** Fecha a aplicação.
+
+---
+
+### Sistema de Autodiagnóstico
+
+O AUDICOM inclui um mecanismo que verifica o estado da Base de Dados ao ser fechado de forma incorreta. Se forem detectados erros, ele tenta repará-los automaticamente.
+
+Este sistema pode ser ativado ou desativado modificando o arquivo `Audicom.ini`:
+
+```
+[Settings]
+Autoreindex=1
+```
+
+`1` = Autodiagnóstico ativo.
+
+`0` = Autodiagnóstico inativo.
+
+---
+
+### Backup da informação
+
+Para garantir a segurança, faça cópias de backup periódicas dos seguintes diretórios e arquivos:
+
+- `\Audicom\DB` → Base de Dados musical, usuários (`user.ini`) e conteúdo (`data.sqlite`).
+- `\Audicom\Log\*.log` → Pautas comerciais.
+- `\Audicom\Pgm\*.pgm` → Organização de programas e blocos.
+- `\Audicom\Air\*.air` → Registros de transmissão (opcional, se desejar manter históricos).
+- `\Admicom` → Base de Dados administrativa.
+
+<Warning>
+  O sistema **NÃO faz cópias automáticas**. É responsabilidade do administrador de rede ou chefe técnico realizar e manter os backups.
+</Warning>
+
+Os instaladores de atualização **não sobrescrevem** esses arquivos, portanto podem ser executados com segurança.
+
+---
+
+## Suporte Técnico
+
+- As atualizações são gratuitas durante um ano a partir da compra. Incluem todas as mudanças da mesma linha de produto (**AUDICOM** e **AUDICOM BLACK**).
+- Após esse período, você pode renovar a licença entrando em contato com a Solidyne ou um distribuidor autorizado. A renovação inclui um ano de **serviços WebTools**.
+- A data de expiração da licença é mostrada no módulo de início **I-Logon** e na Barra de Ferramentas do AUDICOM.
+
+Em caso de problemas:
+
+1. Verifique primeiro a informação na ajuda e FAQ.
+2. Se não for suficiente, entre em contato com o suporte da Solidyne por e-mail ou telefone.
+3. Você pode solicitar suporte remoto: os técnicos acessam a rede AUDICOM para revisar configurações e detectar problemas.
+
+<Note>
+  Este serviço remoto tem custo adicional, mas permite economizar tempo e evitar interrupções na operação da emissora.
+</Note>

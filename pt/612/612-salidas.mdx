@@ -1,0 +1,54 @@
+---
+title: "Saídas"
+description: "Conexão das saídas"
+keywords: ["saídas"]
+tags: ["consolas de estudio", "linea Classic", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "3a245b4475b0ba4448c5ceda848569ef573854a5f8f2870b12513d5407fa0793"
+
+---
+
+## Programa e gravação
+
+- **PGM (Programa):** saída principal balanceada, com conectores **TRS ¼"** fêmea (plug fêmea). 
+- **REC (Gravação):** saída auxiliar, não balanceada, com conectores RCA.
+
+### Conexão balanceada TRS para XLR macho (por canal)
+
+| TRS (Plug)         | XLR (Cannon)       |
+| ------------------ | ------------------ |
+| Terra = corpo      | Pin 1 = Terra      |
+| Sinal (\+) = ponta | Pin 2 = Sinal (\+) |
+| Sinal (-) = anel   | Pin 3 = Sinal (-)  |
+
+<Warning>
+  Para desbalancear a saída PGM conecte o terminal **(\+)**, deixando sem conexão o terminal **(-)**.
+</Warning>
+
+<Warning>
+  Nunca use conectores **plug mono** (TS) para conectar estas saídas.
+</Warning>
+
+### Níveis de saída
+
+- Nível nominal: **\+4 dBu** quando o VU-metro indica "0 VU".
+- Em modo desbalanceado (usando apenas o terminal \+): **-2 dBu**.
+
+<Info>
+  Se conectar equipamentos de gravação não profissionais, o nível pode ser muito alto e causar saturação.\
+  Use o controle de nível de entrada do dispositivo.\
+  Se não for suficiente, utilize um atenuador fixo (divisor resistivo) para reduzir o nível da saída.
+</Info>
+
+## Envio PGM via USB
+
+A conexão USB entrega o sinal de **PGM** ou **REC** (de acordo com a posição da chave **USB OUT** no Canal 5).
+
+- Não requer instalação adicional: o computador reconhece automaticamente o dispositivo de gravação USB.
+- O sinal pode ser usado para gravação em disco rígido ou para streaming via Internet (Webcasting).

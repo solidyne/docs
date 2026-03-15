@@ -1,0 +1,69 @@
+---
+title: "Entradas de áudio"
+description: "Descrição e conexão das entradas de áudio"
+keywords: ["entradas","usb","microfones","phantom"]
+tags: ["consoles de estúdio", "linha Classic", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "af598025e1771762a03c97f5627951b73fd71b9414ccf0473f1825f8a19ae5df"
+
+---
+
+## Entradas de linha
+
+Os consoles DX816/822 apresentam diversos tipos de entradas, que se combinam nos diferentes canais do console:
+
+- **2 BAL-LINE**: entradas balanceadas.
+- **4 AUX LINE**: entradas não balanceadas.
+  - **2 RCA** em canais LINE, comutáveis pelo painel frontal.
+  - **2 miniplug** em canais USB, a **comutação é automática**: ao inserir um plug TRS, o áudio USB é silenciado.
+
+<Info>
+  As entradas de linha não balanceadas têm nível nominal **–10 dBV** sobre **10 KΩ**.
+
+  O ajuste de ganho é comum para ambas (principal/auxiliar). Pode ser necessário reajustá-lo de acordo com o equipamento conectado.
+</Info>
+
+### Conexão das entradas balanceadas
+
+As entradas balanceadas utilizam conectores **RJ45** blindados e requerem cabo multipar blindado categoria 5. Pode-se adquirir o kit de cabos pré-montados **MNGDX822**, que inclui os cabos necessários para a conexão.
+
+<Tip>
+  [Diagramas de pinos e cabos adaptadores para montagem de cabos](/pt/diagramas/RJ45-pinout).
+</Tip>
+
+---
+
+## Entradas para microfones
+
+As entradas de microfone são balanceadas eletronicamente e utilizam conectores **XLR padrão**.
+
+<img
+  src="/images/816/816-trasero-mics.jpg"
+  alt="816 Trasero Mics Jp"
+  title="816 Trasero Mics Jp"
+  className="mx-auto"
+  style={{ width:"56%" }}
+/>
+
+- O painel traseiro apresenta 5 conectores XLR.
+- As entradas **MIC-4** e **MIC-5** compartilham o pré-amplificador com **MIC-2** e **MIC-3**, respectivamente. Canal 2 e Canal 3 podem gerenciar dois microfones cada:
+  - Canal 2 ⟶ Entradas MIC-2 e MIC-4
+  - Canal 3 ⟶ Entradas MIC-3 e MIC-5
+
+<Warning>
+  Quando são utilizados dois microfones em um mesmo canal, devem ser da **mesma marca e modelo** para garantir homogeneidade no sinal.
+</Warning>
+
+### Alimentação "Phantom" 48V
+
+O botão **48V** na frente do módulo ativa a alimentação phantom flutuante para **todos os microfones**. No modelo DX822, um segundo interruptor comuta a alimentação nas entradas MIC-6 a MIC-10.
+
+<Info>
+  Os microfones dinâmicos suportam alimentação phantom de 48V, portanto é possível misturar microfones dinâmicos e condensadores sem risco.
+</Info>

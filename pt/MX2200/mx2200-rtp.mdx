@@ -1,0 +1,120 @@
+---
+title: "Streaming RTP"
+description: "Conectar Estúdios via RTP"
+keywords: ["RTP","enlace"]
+tags: ["consolas portáteis", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "2cb6ef47d36bb16072c3ee950505c2f91ae89675bb87349bf20e4a87e22807d1"
+
+---
+
+A conexão **RTP** oferece máxima qualidade e baixa latência, mas exige **configuração de rede** em ambas as extremidades (transmissor e receptor).\
+É ideal para **instalações fixas** ou locais com **redes conhecidas e controladas**.
+
+<Warning>
+  **Pré-condições de rede**\
+  Certifique-se de ter definido **IP/porta** corretos e de ter resolvido **NAT / firewall / port forwarding** no receptor. Sem essa preparação, a conexão pode não ser estabelecida.
+</Warning>
+
+<Tabs>
+  <Tab title="Iniciar RTP a partir da MX2200">
+    <Steps>
+      <Step title="Abrir Connection Center">
+        Gire o **encoder** até **CONNECTION CENTER** e pressione-o para entrar nas opções de conexão.
+
+        <img
+          src="/images/mx2200/mx2200-connection_center.png"
+          alt="Mx2200 Connection Center Pn"
+          title="Mx2200 Connection Center Pn"
+          style={{ width:"50%" }}
+        />
+      </Step>
+      <Step title="Selecionar RTP STREAM">
+        Escolha **RTP STREAM** e pressione para abrir a tela do link RTP (habilitar/desabilitar).
+
+        <img
+          src="/images/mx2200/mx2200-conection_center_RTP.png"
+          alt="Mx2200 Conection Center RTP Pn"
+          title="Mx2200 Conection Center RTP Pn"
+          style={{ width:"51%" }}
+        />
+      </Step>
+      <Step title="Habilitar a conexão">
+        Selecione **YES** para iniciar a conexão RTP com os estúdios.
+
+        <img
+          src="/images/mx2200/mx2200-connection_center_RTPenable.png"
+          alt="Mx2200 Connection Center RT Penable Pn"
+          title="Mx2200 Connection Center RT Penable Pn"
+          style={{ width:"51%" }}
+        />
+
+        Quando ativo, as telas **CONNECTION CENTER** e **HOME** mostram **RTP STREAM ENABLED**.
+      </Step>
+      <Step title="Finalizar a conexão">
+        Repita o procedimento e selecione **NO** para desabilitar o RTP.
+      </Step>
+    </Steps>
+    <Info>
+      Antes de iniciar, verifique se a **configuração de rede e formato** de áudio na MX2200 coincide com o esperado no receptor (IP destino, **porta**, **codec** e **frequência de amostragem**).
+    </Info>
+  </Tab>
+  <Tab title="Retorno dos Estúdios">
+    A transmissão **RTP é unidirecional**. Normalmente não se usa retorno neste modo porque o local gera o conteúdo sem interação com o estúdio.
+
+    <Note>
+      Se precisar de **retorno** (intercomunicação ou programa), utilize **uma chamada SIP** ou uma **comunicação telefônica** (celular Bluetooth ou linha fixa POTS) em paralelo ao RTP.
+    </Note>
+  </Tab>
+  <Tab title="Recepção nos Estúdios (VLC)">
+    Para receber o streaming de uma MX2200 em um **computador**, use um software com suporte **RTP**. Recomenda-se o **VLC Player** (gratuito).
+
+    <Steps>
+      <Step title="Escolher formato compatível">
+        Configure na MX2200 um formato que o receptor suporte diretamente:
+
+        - **PCM16 @ 44.1 kHz** (linear)
+        - **MP3** (qualquer um dos modos disponíveis)
+
+        <Note>
+          **OPUS** requer um arquivo **SDP (Session Description)** para descrever o conteúdo ao reprodutor.
+        </Note>
+      </Step>
+      <Step title="Abrir localização de rede no VLC">
+        No **VLC Player** vá para **Mídia → Abrir localização de rede**.
+      </Step>
+      <Step title="Inserir a URL">
+        Use o formato:
+
+        ```
+        [protocolo]://[IP_fonte]:[porta]
+        ```
+
+        Exemplo:
+
+        ```
+        rtp://0.0.0.0:3030
+        ```
+
+        Onde:
+
+        - `rtp` é o protocolo utilizado pela MX2200.
+        - `0.0.0.0` indica "**escutar de qualquer IP entrante**" no PC receptor.
+        - `3030` é a **porta** configurada para recepção.
+
+        <Info>
+          Algumas versões do VLC também aceitam: `rtp://@:3030`
+        </Info>
+      </Step>
+      <Step title="Verificar firewall/porta">
+        Certifique-se de que a **porta UDP** configurada esteja **permitida** no firewall do sistema e do roteador do estúdio.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>

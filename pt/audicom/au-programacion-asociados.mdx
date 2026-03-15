@@ -1,0 +1,146 @@
+---
+title: "Arquivos associados"
+description: "Configuração de apresentações e áudio associado à música"
+keywords: ["partners", "apresentações"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "dd3b9bcbdea2084e919017204b1f5140a6193a30587c974e5c5fb241e7960a8b"
+
+---
+
+## Arquivos para relatórios de hora e estado do tempo
+
+A seguir são descritas as diferentes opções para gerar as vozes dos relatórios meteorológicos.\
+A locução pode ser gravada de diversas formas, conforme como os arquivos de áudio são definidos no **Painel de Configuração Audicom**, seção **HTH**.\
+Os arquivos são armazenados na pasta `Audicom\Meteor`.\
+Formatos suportados: **WAV** (recomendado) ou **MP3**.
+
+A **temperatura**, a **umidade** e a **chuva** compartilham os arquivos numéricos, mas não a **hora**.
+
+---
+
+## Locução da hora
+
+O anúncio é gerado combinando arquivos de áudio:
+
+- Exemplo: `"vinte e duas horas"` + `"quarenta e sete minutos"`\
+  Arquivos: `H-22.wav` + `M-47.wav`
+- Para as horas em ponto, usa-se: `H-nn.wav` + `U-OCLOCK.wav`\
+  (o arquivo pode conter a frase **“em ponto”** ou **“zero minutos”**).
+- Arquivos opcionais:
+  - Apresentação inicial: `P-HOUR.wav`
+  - Encerramento: `S-HOUR.wav`\
+    (frases como “Rádio X apresenta a hora…” ou efeitos sonoros).
+
+### Variantes
+
+- **Reproduzir hora com segundos**\
+  São adicionados:
+  - Número de segundos (`N-nnnn.wav`)
+  - Unidade (`U-SEC.wav` ou `U-SECS.wav`)
+- **Interjeição "E"**\
+  Insere-se entre horas e minutos o arquivo `U-Y.wav`\
+  Exemplo: “Quinze horas **e** vinte e cinco minutos”.
+- **Formato 24 Hs / 12 Hs**
+  - `Formato 24 Hs` (00–23, padrão).
+  - `Formato 12 Hs` (01–12) com opção **AM/PM**.\
+    Arquivos: `U-AM.wav`, `U-PM.wav`.
+
+---
+
+## Anúncio de temperatura
+
+1. **Apresentação inicial**: `P-TEMP.wav`\
+   Exemplo: “A temperatura atual…”
+2. Métodos:
+   - **Arquivo único**
+     - Positivos: `T+nnn.wav` (ex.: `T+024.wav` = “vinte e quatro graus”).
+     - Negativos: `T-nnn.wav` (ex.: `T-003.wav` = “três graus abaixo de zero”).
+   - **Separando “graus”**
+     - Arquivo numérico: `N-nnnn.wav`
+     - Unidade: `U-DEGS.wav`, `U-DEG.wav`, `U-DEGB0.wav`, `U-DEGSB0.wav`.
+   - **Relatar décimos**
+     - `U-DEC.wav` + número decimal (`N-nnnn.wav`)\
+       Exemplo:\
+       `P-TEMP.wav` → `T+024.wav` → `U-DEC.wav` → `N-0003.wav`\
+       → “A temperatura atual… vinte e quatro graus, decimal três”.
+3. **Encerramento**: `S-TEMP.wav`
+
+---
+
+## Anúncio de umidade
+
+- **Abertura**: `P-HUM.wav` (opcional).
+- Opções:
+  - Arquivo único: `A-nn.wav` (ex.: `A-043.wav` = “43 por cento”).
+  - Separado: `N-nnnn.wav` + `U-PERC.wav`.
+- **Encerramento**: `S-HUM.wav` (opcional).
+
+---
+
+## Anúncio de pressão atmosférica
+
+- **Abertura**: `P-PRES.wav` (opcional).
+- Opções:
+  - Arquivo único: `N-nnnn.wav` (ex.: “mil e dez hectopascais”).
+  - Separado: `N-nnnn.wav` + `U-HP.wav` ou `U-MB.wav`.
+- **Encerramento**: `S-PRES.wav`.
+
+<Note>
+  Os números 950 a 1040 são reservados exclusivamente para pressão.\
+  Se forem usados arquivos únicos, devem incluir a unidade na locução.
+</Note>
+
+---
+
+## Anúncio de chuva
+
+- **Abertura**: `P-RAIN.wav` (opcional).
+- Opções:
+  - Arquivo único: `R-nnn.wav` (ex.: `R-052.wav` = “52 milímetros”).
+  - Separado: `N-nnnn.wav` + `U-MM.wav` ou `U-MMS.wav`.
+- **Encerramento**: `S-RAIN.wav`.
+
+---
+
+## Gravação de vozes
+
+- O locutor deve cuidar da **entonação natural**.
+- Convém gravar frases completas e depois **editar** para cortar em partes.
+- Arquivos são salvos em `Audicom\Meteor`.
+- Podem ser gravados em **WAV** (preferido) ou **MP3**.
+
+### Lista de arquivos necessários
+
+Conforme o método configurado, podem ser necessários alguns ou todos:
+
+- `H-00.wav` … `H-23.wav` → horas.
+- `M-01.wav` … `M-59.wav` → minutos.
+- `U-OCLOCK.wav` → “em ponto” / “zero minutos”.
+- `N-0000.wav` … `N-0300.wav` → números para temperatura, umidade, chuva.
+- `N-0750.wav` … `N-1040.wav` → números para pressão.
+- `P-HOUR.wav`, `S-HOUR.wav` → abertura e encerramento de hora.
+- `P-TEMP.wav`, `S-TEMP.wav` → abertura e encerramento de temperatura.
+- `P-HUM.wav`, `S-HUM.wav` → abertura e encerramento de umidade.
+- `P-PRES.wav`, `S-PRES.wav` → abertura e encerramento de pressão.
+- `P-RAIN.wav`, `S-RAIN.wav` → abertura e encerramento de chuva.
+- `T+nnn.wav`, `T-nnn.wav` → temperatura positiva/negativa.
+- `A-nn.wav` → umidade (modo arquivo único).
+- `R-nnn.wav` → chuva (modo arquivo único).
+- Unidades:
+  - `U-AM.wav`, `U-PM.wav`
+  - `U-DEC.wav`
+  - `U-DEG.wav`, `U-DEGS.wav`, `U-DEGB0.wav`, `U-DEGSB0.wav`
+  - `U-HOUR.wav`, `U-HOURS.wav`
+  - `U-HP.wav`, `U-MB.wav`
+  - `U-MIN.wav`, `U-MINS.wav`
+  - `U-MM.wav`, `U-MMS.wav`
+  - `U-PERC.wav`
+  - `U-SEC.wav`, `U-SECS.wav`
+  - `U-Y.wav`

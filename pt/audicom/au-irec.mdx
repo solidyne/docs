@@ -1,0 +1,108 @@
+---
+title: "I-REC"
+description: "Gravadora instantânea"
+keywords: ["i-rec", "gravação"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "495631379a4ef464a0c5d864355ae415d63b38457f0920abc256e6c854aa0767"
+
+---
+
+## Operação
+
+<Steps>
+  <Step title="Iniciar gravação">
+    Pressione o botão **REC**. A gravação começa imediatamente.\
+    O módulo **I-REC** aparece na tela com um vúmetro que mostra o nível do sinal de entrada.\
+    <Warning>
+      Verifique se as últimas linhas vermelhas do vúmetro não acendem para evitar cortes no sinal.
+    </Warning>
+  </Step>
+  <Step title="Parar gravação">
+    - Clique na imagem do módulo.
+    - Ou feche a janela do I-REC (pressionando novamente o botão na Barra de Ferramentas).
+  </Step>
+  <Step title="Mover a janela">
+    Arraste-a pela barra de título (Instant Recorder).\
+    <Note>
+      Recomenda-se movê-la apenas quando não estiver gravando, pois um clique na imagem interrompe a gravação.
+    </Note>
+  </Step>
+</Steps>
+
+<Info>
+  O módulo sempre abre na mesma posição em que foi fechado.
+</Info>
+
+### Nomes de arquivo
+
+Existem dois modos:
+
+- **Automáticos**:\
+  O I-REC atribui nomes ao finalizar a gravação sem intervenção do operador.\
+  Formato: `AAMMDD HHMMSS` (Ano, Mês, Dia, Hora, Minuto, Segundo).
+- **Definidos pelo operador**:\
+  Ative o **N** à esquerda do vúmetro.\
+  Aparecerá uma caixa de diálogo para inserir o nome antes de salvar.
+
+---
+
+## Configuração
+
+Acesse clicando com o **botão direito** sobre o módulo.\
+<Warning>
+  Enquanto a janela de configuração estiver aberta, o I-REC não gravará.
+</Warning>
+
+
+### Entrada de áudio
+
+- A placa de áudio é selecionada durante a instalação no **Painel de Configuração**.
+- Para modificar: execute o **aConfig** a partir da barra de ferramentas ou da pasta de instalação.
+- No campo _Gravação Instantânea I-Rec_ selecione o dispositivo de gravação (entrada de linha recomendada).
+
+### Sample Rate (Hz)
+
+- **44.100 / 32.000**: alta qualidade.
+- **22.050**: material de arquivo sem alta exigência.
+- **11.025 ou menos**: linhas telefônicas.
+
+<Note>
+  O I-REC não comprime o áudio.\
+  Um minuto estéreo a 44.100 Hz ocupa ~10 MB.
+</Note>
+
+### Canais
+
+Defina se a gravação será **mono** ou **estéreo**.
+
+### Diretório
+
+- Pasta onde os arquivos gravados serão salvos.
+- Recomenda-se um **disco local**.
+- Deve fazer parte da estrutura AUDICOM para aparecer no **File Manager**.
+- Configuração de fábrica: `C:\Audicom\Audio\I-REC`.
+
+### Loop Recorder (gravação em loop)
+
+- Neste modo, o I-REC mantém na memória os últimos **N minutos** do programa.
+- Para gravar no disco: clique com o botão esquerdo sobre o módulo.
+- O nome do arquivo poderá ser automático ou definido pelo operador.
+- O modo Loop é indicado pela **L vermelha** à direita do vúmetro.
+
+<Info>
+  O I-REC pode permanecer no modo Loop por muitas horas, pois não usa o disco e só requer memória para os minutos configurados.
+</Info>
+
+---
+
+<Note>
+  O I-REC só funciona no **escritório de ar**.\
+  Não está disponível no escritório geral do AUDICOM (`Desktop.exe`).
+</Note>

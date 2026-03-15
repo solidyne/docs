@@ -1,0 +1,70 @@
+---
+title: "Integração com sistemas de faturamento externos"
+description: "Exportar relatórios para planilhas para integração com outros sistemas"
+keywords: ["relatórios", "comerciais", "tanda", "publicidade", "programação"]
+tags: ["Software", "Admicom", "audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "4df0cdc6ce77a7d47fc50261cb2252291ad0a2b2730936082ffc6fc7f44ca305"
+
+---
+
+No **ADMICOM**, a opção `Relatórios > Vendas` permite exportar a base de dados completa para integrá-la com um sistema de faturamento de terceiros.
+
+O procedimento é simples:
+
+1. Selecionar o intervalo de datas para exportação.
+2. Clicar em **Relatório**.
+3. Clicar no botão **Exportar para Excel**.
+
+Este processo deve ser realizado **uma vez por mês**, para obter todos os campos comerciais que o ADMICOM armazena sobre cada ordem publicitária. O arquivo resultante pode ser importado por qualquer software de faturamento externo utilizado pela emissora.
+
+---
+
+### Relatórios de gestão personalizados
+
+O ADMICOM também permite gerar **modelos de relatórios personalizados** que podem ser exportados para o formato Excel e utilizados pela gerência da emissora.
+
+Esses relatórios permitem analisar dados como:
+
+- Valores a faturar por cliente.
+- Vendas por programa.
+- Vendas por agência.
+- Distribuição por segmento comercial.
+- Totais por mês.
+
+No módulo `Relatórios > Vendas`, o painel superior direito inclui as ferramentas de personalização:
+
+- O usuário pode trabalhar com um **cubo de 3 eixos (X, Y, Z)** para organizar os dados.
+- Após projetar o relatório, ele pode ser **salvo** para reutilização ou **carregado** a partir de um já existente com os botões `CARREGAR / SALVAR`.
+- O botão **PIVOTAR** permite aplicar filtros e gerar praticamente qualquer tipo de relatório possível.
+
+Quando os dados estão prontos, basta exportá-los com o botão **Excel**. O arquivo resultante pode:
+
+- Ser importado para outros programas que leiam planilhas de cálculo.
+- Ser utilizado diretamente no Excel para criar gráficos e relatórios de gestão mais detalhados.
+
+---
+
+### Campos-chave para a integração
+
+De todos os campos disponíveis nos relatórios, alguns são **cruciais para interrelacionar o ADMICOM com o sistema de faturamento externo**:
+
+- **Número da Agência:**\
+  Código de campanha atribuído pelas agências.\
+  Geralmente segue o formato `1234/0`, onde o dígito após a barra indica revisões (ex. `1234/1` após um processo de _Anula e Substitui_).
+- **Número Interno:**\
+  Código atribuído pelo ADMICOM a cada nova ordem carregada.\
+  Este número é **único** e também segue a convenção `1234/0`.\
+  Ao usar a função _Anula e Substitui_, a pauta original é mantida com data vencida, e uma nova versão é gerada com numeração incremental (`1234/1`, `1234/2`, etc.).\
+  Este campo é o mais adequado para identificar de forma única as ordens em um sistema de faturamento externo.
+- **Cliente:**\
+  Nome do cliente a ser faturado.
+- **Bruto:**\
+  Valor total a ser faturado.\
+  (O relatório também inclui valores parciais e descontos intermediários que podem ser úteis para certos sistemas de gestão).

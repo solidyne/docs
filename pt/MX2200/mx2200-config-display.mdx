@@ -1,0 +1,230 @@
+---
+title: "Configuração a partir do equipamento"
+description: "Configuração do sistema a partir do painel frontal do equipamento."
+keywords: ["configuração","SETUP", "encoder", "oled", "display"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b4f17088103053cb09f66016d148ee4f42a55ae81717ff47e81c1c9f47b9aad8"
+
+---
+
+## A tela SETUP
+
+A tela **SETUP** é uma das quatro telas principais.\
+É acessada girando o **encoder** e permite configurar todas as opções de rede e transmissão.
+
+- Na visualização inicial mostra o status do **Wi-Fi, Ethernet e Modem**.
+- Para cada conexão indica se há um **IP atribuído** ou se está **inativa**.
+- No Wi-Fi também é mostrado o **nome da rede** conectada.
+
+Pressionando o encoder são exibidas todas as opções de configuração.
+
+---
+
+### SETUP → Wi-Fi
+
+- Lista as redes sem fio **2.4G e 5.8G** disponíveis, ordenadas por intensidade de sinal.
+- O nível do sinal é expresso em **dB milivolts** (valores mais próximos a 0 = sinal mais forte).
+- No canto superior direito aparece o **MAC da interface Wi-Fi**.
+
+<Note>
+  Alguns provedores exigem informar o **MAC** da interface para autorizar a conexão.
+</Note>
+
+---
+
+### SETUP → Ethernet
+
+<img
+  src="/images/mx2200/mx2200-display-setup-ethernet.png"
+  alt="Mx2200 Display Setup Ethernet Pn"
+  title="Mx2200 Display Setup Ethernet Pn"
+  style={{ width:"45%" }}
+/>
+
+- Configura parâmetros da rede cabeada.
+- De fábrica vem com **DHCP ativado**, recebendo um IP automaticamente.
+- Para usar **IP fixo**, deve-se desativar DHCP e atribuir manualmente:
+  - Endereço IP
+  - Máscara de sub-rede
+  - Gateway
+  - Servidores DNS
+- Mostra o endereço **MAC** como dado informativo (não editável).
+
+<Warning>
+  A configuração manual deve ser realizada por **pessoal técnico especializado**.
+</Warning>
+
+---
+
+### SETUP → Modem
+
+<img
+  src="/images/mx2200/mx2200-display-setup-modem.png"
+  alt="Mx2200 Display Setup Modem Pn"
+  title="Mx2200 Display Setup Modem Pn"
+  style={{ width:"45%" }}
+/>
+
+- Compatível com **dongles 4G** (plug & play).
+- Os dongles modernos atuam como adaptadores Ethernet e não requerem configuração.
+- Os dongles antigos 3G necessitam de parâmetros de **APN, usuário e senha** (fornecidos pelo ISP).
+- Se a conexão está ativa, mostra um **IP diferente de 0.0.0.0**.
+
+<Warning>
+  Sempre conectar o modem com um **cabo USB de extensão**.\
+  A conexão direta na porta USB pode causar **interferências audíveis**.
+</Warning>
+
+---
+
+### SETUP → RTP Stream
+
+<img
+  src="/images/mx2200/mx2200-display-setup-rtp.png"
+  alt="Mx2200 Display Setup Rtp Pn"
+  title="Mx2200 Display Setup Rtp Pn"
+  style={{ width:"45%" }}
+/>
+
+- Configuração de transmissão RTP:
+  - Endereço IP destino
+  - Porta
+  - Codec (MP3, Opus, PCM)
+
+<Warning>
+  Estes ajustes avançados devem ser realizados por **pessoal técnico especializado**.
+</Warning>
+
+---
+
+### SETUP → HTTP Stream
+
+<img
+  src="/images/mx2200/mx2200-display-setup-http.png"
+  alt="Mx2200 Display Setup Http Pn"
+  title="Mx2200 Display Setup Http Pn"
+  style={{ width:"45%" }}
+/>
+
+- Configuração de transmissão para servidores web tipo **Icecast/Shoutcast**.
+- São inseridas as credenciais e parâmetros do servidor contratado.
+
+---
+
+### SETUP → SIP Account
+
+<img
+  src="/images/mx2200/mx2200-display-setup-sip.png"
+  alt="Mx2200 Display Setup Sip Pn"
+  title="Mx2200 Display Setup Sip Pn"
+  style={{ width:"45%" }}
+/>
+
+- Inserção dos dados da **conta SIP** (fornecidos pelo serviço).
+- São necessárias pelo menos **duas contas**:
+  - Um endereço SIP para o console. Ex: `mx2200@sip.linphone.org`.
+  - Um endereço SIP para os estúdios, que será configurado no software VoIP usado para receber (ou gerar) as chamadas. Ex: `estudio@sip.linphone.org`.
+
+<Info>
+  Os serviços SIP podem ser gratuitos (ex: [Linphone](https://www.linphone.org)) ou pagos, dependendo da complexidade da implementação.
+</Info>
+
+### Qualidade de áudio SIP
+
+SIP account QUALITY permite definir a qualidade de áudio preferida para as chamadas SIP.\
+Opções disponíveis:
+
+- Mono VoIP 16 kbps
+- Mono Wideband 32 kbps
+- Mono FM 64 kbps
+- Mono HiStudio 128 kbps
+- Stereo Mid 128 kbps
+- Stereo HiStudio 256 kbps
+
+<Note>
+  MX2200 prioriza o codec **Opus** na qualidade selecionada.\
+  Se o receptor não o suportar, outro codec disponível será negociado automaticamente.
+</Note>
+
+---
+
+### SETUP → SIP Contacts
+
+<img
+  src="/images/mx2200/mx2200-display-setup-contactos.png"
+  alt="Mx2200 Display Setup Contactos Pn"
+  title="Mx2200 Display Setup Contactos Pn"
+  style={{ width:"45%" }}
+/>
+
+- Mostra a agenda de contatos SIP.
+- Navegação básica pelo console; edição completa **somente pela interface web**.
+
+<Accordion title="Adicionar um contato (interface web)" icon="pencil" iconType="solid">
+  1. [Acessar a interface web](/pt/mx2200/mx2200-config-acceso).
+  2. Selecionar a aba **CONTACTS**.
+
+     <img
+       src="/images/mx2200/mx2200-web_SIP_contacts.jpg"
+       alt="Mx2200 Web SIP Contacts Jp"
+       title="Mx2200 Web SIP Contacts Jp"
+       style={{ width:"54%" }}
+     />
+  3. Inserir **SIP Address** e **Friendly Name**.
+  4. Pressionar **ADD** e depois **APPLY** para enviar alterações ao hardware.
+
+  #### Editar contato
+
+  1. Selecionar o contato na lista.
+  2. Modificar os campos.
+  3. Pressionar **UPDATE** e depois **APPLY**.
+
+  #### Excluir contato
+
+  1. Selecionar o contato.
+  2. Pressionar **DELETE** e depois **APPLY**.
+</Accordion>
+
+---
+
+### SETUP → Power Info
+
+<img
+  src="/images/mx2200/mx2200_display_setup_power.png"
+  alt="Setup - Power Info"
+  title="Mx2200 Display Setup Power Pn"
+  style={{ width:"45%" }}
+/>
+
+- Mostra o status de alimentação e bateria.
+- Indica se o equipamento está usando bateria interna ou fonte externa.
+- Exemplo: `Battery 7,0 V` → console alimentado por bateria.
+- O campo `Bat level` indica o nível restante (%).
+- Uma carga a 100% oferece normalmente mais de 3 horas de transmissão.
+- O equipamento desliga automaticamente ao atingir **6,2 V**.
+- Pode ser usado um **power bank de 12 V** como fonte externa.
+
+---
+
+### SETUP → Time Zone
+
+- Ajusta o fuso horário para atribuir corretamente a data/hora às gravações.
+- Normalmente é configurado uma única vez.
+- A sincronização é realizada através de **servidores NTP públicos**.
+
+---
+
+### SETUP → RX Volume
+
+- Ajusta o nível de retorno enviado pela emissora quando a conexão é via **SIP**.
+- Este retorno é somado a:
+  - Circuito de monitoramento CUE (fones de ouvido).
+  - Envio para linhas **POTS**.
+  - Envio para linha **Bluetooth**.

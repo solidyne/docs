@@ -1,0 +1,132 @@
+---
+title: "Vincular um celular Bluetooth"
+description: "Pairing: vincular um celular Bluetooth."
+keywords: ["Bluetooth", "pairing", "emparelhar", "vincular"]
+tags: ["hibridos", "BLT200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "bd101bfff2913805afd4c117194ee8c01c4f6dc44dd6a470f1a2825d26dd8c39"
+
+---
+
+## Conceitos gerais
+
+Qualquer telefone celular pode se conectar ao BLT200 via Bluetooth.\
+A interface possui dois dispositivos Bluetooth denominados **A** e **B**.
+
+<img
+  src="/images/blt200/UDX-BLT-200FRONT.jpg"
+  alt="UDX BLT 200FRONT Jp"
+  title="UDX BLT 200FRONT Jp"
+  className="mx-auto"
+  style={{ width:"52%" }}
+/>
+
+Cada canal tem seu próprio controle rotativo de nível de saída.\
+No telefone, o volume Bluetooth deve ser sempre ajustado no máximo para obter a melhor relação sinal/ruído (ver adiante).
+
+Os botões **CONTROL A** e **CONTROL B** são luminosos e piscam em diferentes frequências de acordo com o estado do Bluetooth.
+
+### Modos de iluminação do botão CONTROL
+
+| Modo | Estado                                                                   | Indicação                                                                                         |
+| :--: | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| A    | Celular conectado (sem chamada ativa)                                    | Aceso breve (1s) em amarelo, apagado longo (2s).                                                  |
+| B    | Chamada em andamento / Celular não conectado (Bluetooth ligado sem vínculo) | Aceso lento (2s) em amarelo, apagado curto (1s). Quando um celular se conecta, volta ao modo A.   |
+| C    | Modo busca (Pairing)                                                     | Pisca rápido em amarelo.                                                                          |
+| D    | Chamada recebida                                                         | Aceso permanente em azul.                                                                         |
+
+<Info>
+  Não confundir estas três ações:
+
+  - **Ativar/desativar Bluetooth no celular**: habilita ou desabilita o sistema Bluetooth do telefone.
+  - **Vincular (Pairing)**: o celular detecta e registra pela primeira vez um dispositivo externo (ex.: fones de ouvido, viva-voz, canal A ou B do BLT200).
+  - **Conectar/desconectar**: o celular se conecta a um dispositivo já vinculado. Esta ação não requer repetir o emparelhamento.\
+    Quando o celular tem Bluetooth ativado, pode conectar-se ou desconectar-se facilmente dos dispositivos vinculados a partir da lista de dispositivos registrados.\
+    Os dispositivos não vinculados previamente não aparecerão nessa lista.
+</Info>
+
+## Emparelhar um celular com BLT200
+
+Para vincular um canal Bluetooth com um celular, siga estes passos:
+
+<Steps>
+  <Step title="Desligar Bluetooth no BLT200">
+    Verifique se o canal que deseja vincular (A ou B) está desligado.\
+    Se o botão CONTROL estiver piscando, mantenha pressionado até que se apague.
+  </Step>
+  <Step title="Ativar modo emparelhamento">
+    Com o Bluetooth desligado, mantenha pressionado o botão CONTROL por cerca de 8 segundos.\
+    A luz passará de piscar lento para piscar rápido em amarelo.\
+    Isto indica que o canal entrou em modo **Pairing**.
+  </Step>
+  <Step title="Buscar dispositivos no celular">
+    No telefone, ative o Bluetooth e busque novos dispositivos.\
+    Dependendo do modelo do celular, este procedimento pode variar.
+  </Step>
+  <Step title="Selecionar o dispositivo">
+    Aparecerão **Solidyne BLT-A** e **Solidyne BLT-B**.\
+    Selecione o correspondente de acordo com o canal a ser usado.
+  </Step>
+</Steps>
+
+<Tip>
+  No celular é possível alterar o nome "Solidyne BLT-A" ou "Solidyne BLT-B" para diferenciar melhor os canais ou as unidades BLT200 em uso.
+</Tip>
+
+Uma vez emparelhado, o botão CONTROL pisca lentamente em amarelo (modo conectado sem chamada).\
+O emparelhamento se mantém enquanto se usar o mesmo celular nesse canal.\
+Para vincular outro celular ou o mesmo no outro canal, repita o procedimento.
+
+<Warning>
+  Um mesmo celular pode ser vinculado a ambos os canais A e B, mas só pode estar **conectado** a um deles por vez.\
+  Também não é possível conectar simultaneamente dois celulares a um mesmo canal.
+</Warning>
+
+### Distância ao celular
+
+Embora o alcance seja de até 3 metros, recomenda-se manter o telefone próximo à interface, mas nunca apoiado diretamente sobre o BLT200.
+
+---
+
+## Reconectar um celular já vinculado
+
+Um celular previamente emparelhado pode desconectar-se do BLT200 em várias situações:
+
+- **Se o Bluetooth for desligado no celular.**\
+  Normalmente isso transfere a chamada em andamento para o telefone.\
+  Ao religar o Bluetooth, a reconexão pode ser automática ou manual dependendo do modelo.
+- **Se durante uma chamada o canal Bluetooth for desconectado no telefone.**\
+  A chamada passa para o telefone.\
+  Ao reconectar, volta para o BLT200.
+- **Se o modo "Alto-falante" for ativado no telefone.**\
+  Isso tira a chamada do BLT200 e passa para o telefone.\
+  Ao reativar o Bluetooth, a chamada volta para o BLT200.
+- **Se o canal Bluetooth for desligado no BLT200.**
+
+A reconexão não será possível se esse canal foi emparelhado com outro telefone e este último estiver conectado.
+
+---
+
+## Ajuste do volume
+
+<Warning>
+  No telefone, o volume Bluetooth deve ser sempre ajustado no máximo para garantir uma recepção adequada e a melhor relação sinal/ruído.
+</Warning>
+
+O ajuste deve ser realizado durante uma chamada estabelecida por Bluetooth.\
+O volume do alto-falante do celular é independente do volume Bluetooth: se for ajustado fora de uma chamada, só se modifica o alto-falante, não a transmissão Bluetooth.
+
+O nível de Bluetooth fica guardado no telefone.\
+Se um novo celular for vinculado, certifique-se de ajustar novamente o volume no máximo.
+
+---
+
+## Desligar Bluetooth no BLT200
+
+Para desligar um canal Bluetooth, manter pressionado o botão CONTROL correspondente até que pare de piscar.

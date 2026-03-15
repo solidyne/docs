@@ -1,0 +1,105 @@
+---
+title: "News Suite"
+description: "Editor de textos para conteúdos lidos"
+keywords: ["news suite"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "37a98e8af480e63cfd97f146e27610055b5c6804ebb83a08e2903c987799aaba"
+
+---
+
+## Introdução
+
+A AUDICOM oferece diferentes formas de **programar notícias** para que sejam transmitidas automaticamente, seja quando geradas na rádio ou quando chegam remotamente por **e-mail** ou **telefone**. Existem dois modos principais: **notícias programadas** e **notícias instantâneas**.
+
+### Notícias programadas
+
+As notícias programadas se dividem em duas categorias:
+
+- **De ocorrência certa**\
+  São aquelas cuja existência está confirmada e são incluídas diretamente na programação.\
+  Exemplo: comandos `/METEOR` (hora, temperatura, etc.).\
+  Neste caso, recomenda-se defini-las diretamente na programação da rádio (`.PGM`) ou por meio de uma **Inclusão Especial (ExactTime)**.
+- **De ocorrência incerta**\
+  São notícias que deveriam ser transmitidas em um horário definido, mas cuja chegada não está garantida.\
+  São implementadas por meio de **itens encadeados** dentro de uma Inclusão Especial (ExactTime).\
+  Estes permitem definir até **4 arquivos consecutivos** (abertura, promocional, notícia e encerramento).
+  - A sequência **só é transmitida** se todos os arquivos existirem.
+  - Se faltar um, toda a sequência é cancelada.
+  - O arquivo da notícia usa um **metanome**, que muda a cada dia, garantindo sua validade apenas para essa data.
+
+Para mais detalhes, consulte: **“Inclusão Especial” em “Pautar Conteúdos → Programação Manual → Criar blocos de conteúdo”**.
+
+As notícias programadas podem vir de:
+
+- **AUDICOM WebTools** (mail-link).
+- **Software de Voice Mailing** (telefônico).
+
+### Notícias instantâneas
+
+Projetadas para rádios que transmitem em **programação automática** (`AutoDJ`, `i-Link`, satélite), sem necessidade de alterar manualmente a programação.
+
+- O sistema **NEWS** é uma aplicação que roda em segundo plano e verifica periodicamente a chegada de notícias.
+- Se uma notícia chegar (por e-mail ou telefone, dependendo da implementação), o sistema a envia ao ar e depois retoma a programação habitual.
+
+## News Suite
+
+O módulo **News Suite** é projetado para operação em **vivo**.
+
+- Permite trabalhar com **arquivos de texto** associados a **arquivos de áudio**.
+- Pode inserir notícias na **Tela de Ar**, sejam **apenas texto** ou **texto + áudio**.
+- Em redes, vários jornalistas podem redigir suas notícias em diferentes terminais e enviá-las ao editor-chefe, que as organiza e reenvia ao terminal do operador.
+- O operador associa cada texto aos **arquivos de áudio** correspondentes para sua transmissão.
+
+<img
+  src="/images/audicom/au-news_suite.png"
+  alt="Au News Suite Pn"
+  title="Au News Suite Pn"
+  className="mx-auto"
+  style={{ width:"59%" }}
+/>
+
+Acessamos o módulo **News Suite** pelo menu **“+”** na **barra de ferramentas**.\
+Trata-se de um **editor de texto** destinado à redação de **notícias** e **relatórios jornalísticos**.
+
+- Trabalha com arquivos padrão no formato **TXT**.
+- Sua operação é semelhante à de outros processadores básicos (ex.: Bloco de Notas do Windows).
+- Permite trabalhar com **múltiplos arquivos abertos ao mesmo tempo**.
+
+A **linha verde** que aparece à direita indica a **largura à qual o texto será ajustado** na **janela de comentários** da Tela de Ar e na interface **WebTools**.\
+Para visualizar o texto como o locutor o verá, é necessário ajustar manualmente a janela até a linha verde.
+
+**Estimativa de Tempo de Leitura**
+
+O News Suite incorpora uma ferramenta que permite **estimar o tempo de leitura** de um texto.
+
+- O cálculo é baseado em uma variável de **velocidade de leitura** expressa em **caracteres por segundo (c.p.s.)**.
+- O valor padrão é **15 c.p.s.** (valor médio).
+- Pode ser modificado no menu: **Edit \> Set Speed**.
+
+Para conhecer a duração estimada de um texto:
+
+- Clique no **ícone do relógio** ou pressione a tecla **F9**.
+- Aparecerá uma caixa com:
+  - Quantidade total de palavras.
+  - Total de caracteres.
+  - Tempo estimado de leitura (minutos e segundos).
+
+### Arquivos de Texto com Áudio Associado
+
+Cada arquivo de texto pode ser associado a um ou dois **arquivos de áudio**.
+
+**Procedimento:**
+
+1. Redija e salve o arquivo de texto.
+2. Abra o **File Manager** e expanda a segunda janela (seta vermelha no canto inferior direito).
+3. Visualize em uma janela os **arquivos de texto** e na outra os **arquivos de áudio** a serem associados.
+4. Selecione o arquivo de texto e arraste o arquivo de áudio para ele.
+
+O arquivo de texto passará a ser renomeado desta forma:

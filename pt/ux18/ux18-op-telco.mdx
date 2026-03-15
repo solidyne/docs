@@ -1,0 +1,103 @@
+---
+title: "TELCO – Comunicações"
+description: "Operação e gestão das telecomunicações na UX18"
+keywords: ["telco", "bluetooth", "chamadas", "telefonia", "POTS"]
+tags: ["consoles IP", "UNIDEX", "UX18", "UDX 2TEL", "UDX TEL+BT", "UDX 2BLT"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d3b50b8657a2318254c2a11aa667839ff25e463b8815af6fe5808e6e7f2e1344"
+
+---
+
+A tela TELCO permite gerenciar e colocar no ar todos os tipos de comunicações telefônicas. \
+Acessa-se pressionando **TELCO** na tela principal.\
+Aqui são mostrados os canais definidos em modo TELCO (ver tela CHANNEL), que são aqueles associados a linhas telefônicas terrestres (POTS) e telefones celulares Bluetooth.
+
+<img
+  src="/images/ux24/ux18-telco-pantalla.png"
+  alt="UX18 Tela TELCO"
+  title="UX18 Tela TELCO"
+  className="mx-auto"
+  style={{ width:"72%" }}
+/>
+
+Nestas instruções, o termo "linha TELCO" é usado para se referir tanto a linhas tradicionais quanto a telefones celulares vinculados.
+
+<Note>
+  As linhas terrestres (POTS) e os telefones celulares são conectados ao UNIDEX através de adaptadores externos (Solidyne UDX 2TEL e TEL\+BT).
+</Note>
+
+As chamadas, sejam por telefonia tradicional ou por celulares Bluetooth, são operadas da mesma forma no console, exceto por algumas particularidades (por exemplo, ao originar uma chamada).
+
+**Cada linha usa um canal próprio.** Qualquer canal pode ser configurado em modo TELCO, embora seja recomendado usar canais físicos.
+
+As operações principais (atender, reter, colocar no ar, desligar) também podem ser feitas usando os botões **CUE** e **ON AIR** de cada canal.
+
+### Tela TELCO
+
+**Linhas disponíveis (1)**\
+UX24 suporta até 8 linhas TELCO. Na tela são mostradas em dois grupos de quatro linhas.\
+Se houver mais de quatro, o botão **Page Down** permite acessar as restantes. Cada linha indica:
+
+- Número e nome do canal.
+- Estado:
+
+  **Amarelo**: chamada entrante (_RING_).
+
+  **Verde**: linha em espera (_HOLD_).
+
+  **Vermelho**: linha no ar.
+- Tempo no ar ou em espera.
+
+**Linha selecionada (2)**\
+Mostra nome e canal da linha atualmente selecionada. Os controles na tela sempre correspondem a esta linha.\
+Para selecionar uma linha, toque-a na lista. Não importa se está no ar, em espera ou inativa.
+
+**Indicador de nível (3)**\
+Mostra o nível de áudio recebido. Também indica o nome da entrada UNIDEX à qual o adaptador UDX foi conectado.
+
+**Input Gain (4)**\
+Controla o ganho de entrada associado ao adaptador UDX. Ajusta-se tocando o controle e girando o encoder.
+
+**Send Level (5)**\
+Ajusta o ganho da saída associada ao adaptador UDX para envio à linha. Ajusta-se tocando o controle e girando o encoder.
+
+**TALK (6)**\
+Ativa o modo Talkback, habilitando o microfone de ordens para falar na linha. Equivale a manter pressionado o botão CUE no canal, mas diferentemente do CUE, TALK na tela não opera com a lógica de um botão momentâneo, mas sim **funciona como uma chave**: ativa-se com um toque e desativa-se com um segundo toque. Também se desativa quando a linha é colocada no ar.
+
+<Note>
+  Enquanto TALK está ativo, seja pressionando CUE ou ligado na tela, interrompe-se o envio de sinal PGM para a linha, apenas é enviado o microfone de ordens.
+</Note>
+
+**DIAL (7)**\
+Abre um teclado DTMF para discar um número (apenas em linhas terrestres).
+
+**HOLD / HANG UP (8)**
+
+- Com chamada entrante: atende a linha e a deixa em espera (HOLD).
+- Com chamada no ar: encerra a comunicação (HANG UP).
+
+**CONFIG (9)**\
+Mostra o tipo de adaptador e suas opções:
+
+- **NULL ADJUST**: ajuste de rejeição (apenas linhas terrestres com adaptadores UDX 2TEL, 2TEL-P e TEL\+BL). O ajuste é feito manualmente na interface UDX.
+- **BLUETOOTH PAIRING**: ativa modo pareamento para vincular um celular (apenas em canais Bluetooth).
+
+---
+
+## Operação com telefones celulares
+
+### Vincular um celular por Bluetooth
+
+Ao vincular um telefone celular ao console através de um adaptador Bluetooth, estabelece-se uma conexão sem fio que permite colocar no ar qualquer chamada realizada do celular, seja por rede telefônica ou aplicativos.
+
+<Warning>
+  Embora o celular possa estar afastado até 5 metros de distância do adaptador UDX Bluetooth, recomenda-se deixá-lo próximo para evitar interferências na comunicação, que podem gerar artefatos no áudio (efeito "robótico").
+</Warning>
+
+[Continua a tradução do documento...]

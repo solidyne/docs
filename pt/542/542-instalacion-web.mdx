@@ -1,0 +1,87 @@
+---
+title: "Ethernet e acesso web"
+description: "Conexão, configuração e acesso via Ethernet"
+keywords: ["Ethernet", "DHCP", "IP estática", "remoto", "port forwarding"]
+tags: ["procesadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "4506a553b1d6afc0c398e520278e522e0636d9a26db066dc8b4da8d552bddbbb"
+
+---
+
+import discovery from '/snippets/discovery-pt.mdx';
+
+## Conexão à rede local
+
+Todas as opções de configuração e ajustes avançados do processador **542APC** são realizadas através da **interface de controle WEB**.
+
+Para acessar:
+
+1. Conecte o equipamento a uma porta do **roteador ou switch** da rede local usando a **porta Ethernet Control**.
+
+   <Warning>
+     Não confundir a **porta Ethernet de Control** com a **porta Ethernet AoIP** (modelos com opção Streamer/AoIP).
+   </Warning>
+2. O **endereço IP atribuído** é exibido na tela OLED no painel frontal do equipamento.
+
+   <discovery />
+     
+   <Info>
+     Por padrão, o 542APC trabalha com IP dinâmico (DHCP ativado):
+
+     O roteador atribui automaticamente um endereço IP livre.
+
+     Este endereço pode mudar ao reiniciar o equipamento.
+
+     É possível atribuir um **IP estático** através da tela de sistema para evitar mudanças de IP.
+   </Info>
+3. Usando um computador conectado à mesma LAN que o processador, digite o endereço IP em um **navegador web** (recomendado Google Chrome).
+
+   <Info>
+     Recomenda-se que o computador esteja conectado à LAN por **cabo Ethernet**.\
+     Em alguns casos, um PC conectado por Wi-Fi pode não ter permissões para acessar dispositivos cabeados na mesma rede.
+   </Info>
+
+## Acesso remoto via Internet
+
+### Unidades com módulo STREAMER AoIP
+
+Em unidades equipadas com a expansão _STREAMER AoIP_ (com número de _série AD_ e posteriores) o acesso ao processador via Internet é simplificado através de um serviço que gera um link fixo.
+
+<Icon icon="globe" iconType="solid" color="#ff6c00" size={18} />  Ver Acesso remoto simplificado → Equipamentos com serviços AoIP
+
+### Unidades sem STREAMER AoIP
+
+Se o equipamento não possui o **serviço simplificado**, é possível acessar de fora da LAN de duas maneiras:
+
+#### 1. Usando um software de Área de Trabalho Remota
+
+Um método simples, que não requer maiores configurações, é usar um software de **área de trabalho remota** (TeamViewer, Anydesk, Parsec, etc.) para acessar um computador da LAN conectado por Ethernet ao processador.
+
+- A partir desse computador local, abra um navegador web e acesse a **interface web do 542APC**.
+- Desta forma é possível configurar remotamente o processador e até instalar atualizações de firmware sem riscos.
+- A comunicação entre o PC e o processador ocorre dentro da **rede local**.
+- A Internet só intervém no controle remoto do computador.
+
+<Tip>
+  Este método é o mais seguro e simples para suporte remoto, pois não requer modificar configurações de rede.
+</Tip>
+
+#### 2. Configurar acesso externo ao IP do equipamento
+
+A segunda opção consiste em instalar o processador com um **endereço IP estático** e configurar a rede local para permitir acesso externo a esse endereço.
+
+Isto implica em:
+
+- Configuração de **redirecionamento de portas**.
+- Contratação de **IPs públicos estáticos** e/ou uso de serviços de **DNS dinâmico**.
+
+<Warning>
+  Este procedimento requer conhecimentos avançados de redes.\
+  Recomenda-se consultar um técnico especializado em administração de redes.
+</Warning>

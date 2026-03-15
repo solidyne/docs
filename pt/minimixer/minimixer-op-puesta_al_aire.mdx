@@ -1,0 +1,79 @@
+---
+title: "Puesta al aire"
+description: "Canais de microfone, linhas e monitoramento"
+keywords: ["operação"]
+tags: ["consoles de estúdio", "linha Classic", "minimixer"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d2a180968baa67c80259d8139bf364d9f58ba3868b29f4d3293269bbf093f022"
+
+---
+
+## Microfones
+
+O MiniMixer permite conectar até **4 microfones dinâmicos**.\
+As entradas **MIC 3** e **MIC 4** compartilham o mesmo fader.
+
+- O botão **MASTER MIC** habilita todos os microfones ao ar e ativa a saída da **Luz de Ar (Tally Light)**.
+- A soma dos microfones é comprimida internamente.
+  - O compressor atua quando o sinal atinge **0 VU**.
+  - É importante que o canal **MIC 3+4** chegue a 0 VU para que o compressor possa compensar diferenças de nível entre diferentes vozes.
+- A ação do compressor é visualizada no indicador **MIC COMP**.
+
+---
+
+## Linhas
+
+- O fader **USB/LINE IN** controla a entrada digital **USB** quando o computador está conectado.
+- Se o USB não estiver conectado, este fader controla o sinal de **LINE IN**.
+- Quando o USB está em uso, a entrada LINE IN também pode ser utilizada como entrada alternativa a partir dos controles da zona **PHONE**, que permitem alternar entre **PHONE** e **LINE IN**.
+  - Isso permite somar ao ar: 4 microfones + 2 linhas estéreo + Bluetooth.
+
+Para enviar **USB/LINE IN** ao ar:
+
+- Levantar diretamente o fader.
+- O nível correto de trabalho é alcançado quando os picos atingem **0 VU**.
+
+O sinal **USB/LINE IN** também pode ser pré-ouvido em CUE com o fader fechado, pressionando o botão **CUE** localizado acima dele.
+
+<Info>
+  A porta **USB** gera um envio do sinal de programa para o computador.\
+  Este fluxo de áudio é utilizado para realizar o **streaming pela Internet**.
+</Info>
+
+## Monitoramento
+
+O controle de fones de ouvido na zona **CUE MONITOR** define o nível para as quatro saídas de fones de ouvido.
+
+<img
+  src="/images/minimixer/minimixer-monitoreo.png"
+  alt="Minimixer Monitoreo Pn"
+  title="Minimixer Monitoreo Pn"
+  className="mx-auto"
+  style={{ width:"38%" }}
+/>
+
+- Para ter controle de volume individual em cada fone de ouvido, devem ser usados fones de ouvido com controle próprio de nível, ou então conectar um distribuidor de fones de ouvido externo a qualquer uma das saídas.
+- Quando um sinal é enviado para **CUE**, ele é distribuído para todas as saídas de fones de ouvido.
+- O botão **PGM** na zona **CUE MONITOR** permite silenciar o sinal de programa nos fones de ouvido e ouvir apenas os sinais em **CUE**.
+
+---
+
+### Saída para monitores de caixa
+
+- A saída de **Fones de Ouvido #1** pode funcionar como saída para monitores de caixa, com silenciamento automático quando a saída de **Luz de Ar** está conectada.
+- Ao habilitar os microfones, a ativação da Luz de Ar silencia automaticamente a saída de fones de ouvido #1, evitando acoplamentos entre caixas e microfones.
+- O áudio permanece disponível nas demais saídas de fones de ouvido.
+
+---
+
+### Talk
+
+- O botão **TALK** interrompe momentaneamente o sinal nos fones de ouvido e envia a voz do microfone interno incorporado no console.
+- Isso permite que o operador se comunique diretamente com todos os fones de ouvido, mesmo que os membros da equipe estejam distantes.
+- Dessa forma, evitam-se sinais visuais ou a necessidade de retirar os fones de ouvido (que estão recebendo sinal de programa) para poder dialogar.

@@ -27,6 +27,8 @@ DOCUMENT COMPLETENESS
 - Never summarize content.
 - Never omit sections.
 - Never replace content with placeholders.
+- Do NOT compress or shorten the text.
+- The translated document should have approximately the same length and level of detail as the original.
 - Never insert phrases such as:
   - "continued in next part"
   - "translation continues"

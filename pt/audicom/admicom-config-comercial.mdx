@@ -1,0 +1,86 @@
+---
+title: "ADMICOM: Gestão comercial"
+description: "Categorias, agências, segmentos e meios de pagamento no Admicom"
+keywords: ["relatórios", "comerciais", "bloco", "publicidade", "programação"]
+tags: ["Software", "Admicom", "audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "54c9af982502755c18a3c2ddfa5ac1408fcdadeea2adb78bb6980ebde7994ff5"
+
+---
+
+Esta seção permite configurar todos os elementos relacionados à gestão comercial da emissora: **categorias de clientes**, **agências de publicidade**, **segmentos comerciais**, **meios de pagamento**, entre outros.
+
+## Categoria de cliente
+
+As categorias permitem classificar os diferentes tipos de clientes, como:
+
+- Promocionais da emissora
+- Campanhas de bem público
+- Clientes locais
+- Clientes nacionais
+
+Cada categoria tem uma **prioridade de veiculação**, representada por uma letra de A a Z. Essa prioridade define a ordem em que os anúncios serão posicionados dentro dos blocos comerciais. Não são permitidas categorias com a mesma letra.
+
+<Note>
+  Se um mesmo cliente precisa veicular anúncios com diferentes prioridades, ele deve ser registrado como **Agência publicitária** em vez de Cliente.
+</Note>
+
+- **Prioridade**: Letra de A a Z. Recomenda-se deixar as primeiras letras livres para clientes futuros.
+- **Código**: Abreviação de até 10 caracteres alfanuméricos.
+- **Nome**: Nome completo da categoria (ex: _Promos da rádio_).
+
+## Agência publicitária
+
+Permite registrar agências que agrupam vários clientes. Cada agência pode concentrar múltiplas campanhas e gerenciar prioridades específicas por cliente associado.
+
+## Segmento comercial
+
+Os segmentos comerciais permitem classificar os anúncios de acordo com sua temática. Exemplos típicos:
+
+- Restaurantes
+- Telefonia
+- Hotéis
+- Sorveterias
+
+Para cada segmento, devem ser definidos:
+
+- **Código**: Identificação de até 10 caracteres alfanuméricos.
+- **Nome**: Nome do segmento.
+
+<Note>
+  A definição de segmentos está vinculada à opção “Permitir misturar segmentos” nos blocos comerciais.\
+  Em casos especiais —por exemplo, cortes promocionais da emissora— pode-se ativar a opção **“Desabilitar a rejeição de campanhas com mesmo Segmento”**, o que permite que vários anúncios do mesmo segmento coexistam em um mesmo bloco.
+</Note>
+
+## Central de mídia
+
+Agrupa várias **Agências de Publicidade** sob uma entidade matriz ou _holding_. Permite acompanhar em conjunto as agências associadas.
+
+## Executivo de conta
+
+Permite registrar os **vendedores ou executivos de contas**.\
+Durante a programação de campanhas, é possível atribuir um executivo a cada operação comercial para gerar relatórios de desempenho.
+
+## Meio de pagamento
+
+Define os meios de pagamento aceitos pela emissora: transferência, dinheiro, cartão, troca, etc.\
+Cada operação pode registrar o meio utilizado para facilitar o acompanhamento administrativo.
+
+## Origem
+
+O campo "Origem" permite agrupar campanhas de acordo com sua procedência ou condição contratual. Alguns exemplos típicos:
+
+- Troca
+- Pauta estatal
+- Campanhas de bem público
+- Vendedores próprios
+
+<Note>
+  Essas etiquetas são úteis para gerar relatórios específicos ou aplicar filtros dentro do sistema.
+</Note>

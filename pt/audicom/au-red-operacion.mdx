@@ -1,0 +1,129 @@
+---
+title: "Exemplo de Audicom configurado em rede"
+description: "Exemplos de configuração de Audicom em rede"
+keywords: ["rede"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f37880707a2f2d83b8c524f33569f0874868f4153761b7d29b93987acfdd2fad"
+
+---
+
+Continuaremos com o exemplo de uma rede **peer-to-peer**, composta por cinco terminais e um servidor:
+
+1. Terminal de AM — `"AM"`
+2. Terminal de FM — `"FM"`
+3. Estúdio de Produção — `"Producao"`
+4. Produção de Notícias — `"Noticias"`
+5. Administração comercial — `"Comercial"`
+6. Servidor de Áudio — `"ServerSolidyne"`
+
+Cada computador tem acesso a discos **locais** (próprios) e **de rede** (outros terminais), sempre por meio de referências **UNC**.
+
+**Terminais AM, FM, Produção, Notícias e Comercial**
+
+- **C:** não compartilhado; partição dedicada ao SO e AUDICOM.
+- **D:** pasta `Audicom` compartilhada como leitura/escrita.
+
+**Servidor**
+
+- **C:** não compartilhado; partição dedicada ao SO.
+- **D:** pasta `Audicom` compartilhada como leitura/escrita.
+- **E:** pasta `Audicom` compartilhada como leitura/escrita.
+
+---
+
+## Acesso aos dados entre terminais
+
+Módulos como **CyberPlay Editor**, **AutoDj Editor** e **InfoMusic-Prod** permitem trabalhar de um terminal sobre os dados de outro, graças ao menu suspenso **Terminal atual**:
+
+- `"Default host"`: referência ao terminal local, exceto se redefinido em `audicom.ini`.
+- Na primeira vez, o sistema explora a rede para detectar terminais ativos (pode demorar).
+- O resultado fica em cache, evitando demoras posteriores.
+- Para atualizar a lista, use a opção **\_update hosts...**.
+
+---
+
+## Arquivos de Áudio e Banco de Dados
+
+- **Música e apresentações** → armazenadas no **Servidor**.
+- **Spots, promos, Banco de Dados e arquivos de programação** → locais em cada terminal de Ar (para continuar operando em caso de falhas de rede).
+
+São utilizados **Bancos de Dados sincronizados (SDB)**:
+
+- Cada terminal de ar tem seu próprio Banco de Dados.
+- Produção trabalha diretamente sobre os Bancos de Dados de Ar.
+- A organização de arquivos é detalhada em _Organização de Arquivos_.
+
+---
+
+## Registro de arquivos
+
+Fluxo recomendado:
+
+1. Em Produção, os títulos são gravados e editados.
+2. São enviados para o terminal destino (música, spots, promos).
+3. São registrados no Banco de Dados correspondente.
+
+Exemplo:
+
+- Em Produção, grava-se o arquivo `Tu nos has elejido.wav`.
+- Edita-se e deixa-se pronto para transmissão.
+- No File Manager, abre-se o terminal FM (`\\FM\Audicom`).
+- Move-se o arquivo para FM (arrastar e soltar; `Ctrl` para copiar).
+- No InfoMusic-Prod, seleciona-se o terminal FM.
+- Registra-se o arquivo como **Novo** (usando caminho UNC).
+- O arquivo fica disponível apenas em FM.
+
+<Note>
+  Normalmente, os **anúncios comerciais** não são registrados no Banco de Dados, exceto se desejar aplicar fundidos entre anúncios.
+</Note>
+
+---
+
+## Montagem da programação
+
+Se a programação é gerada a partir de **Comercial**:
+
+- **CyberPlay Editor, AutoDj Editor, InfoMusic-Prod, File Manager** → permitem selecionar o **terminal atual**.
+- **Admicom**:
+  - "Admicom AM" gera pautas comerciais (`.log`) para o terminal AM.
+  - "Admicom FM" gera pautas comerciais (`.log`) para FM.
+- Exemplo:
+  - Para programar FM, seleciona-se FM no CyberPlay Editor.
+  - Os arquivos são salvos em `\\FM\Audicom\Log` e `\\FM\Audicom\Pgm`.
+- AutoDj Editor salva os formatos em `autodj.ini` de cada terminal de Ar.
+
+<Note>
+  Ao inserir títulos no CyberPlay Editor, File Manager ou InfoMusic, deve estar selecionado o **terminal correto**, ou corre-se o risco de programar títulos não disponíveis nessa estação.
+</Note>
+
+---
+
+## Organização dos arquivos
+
+### Um único terminal de Ar
+
+- Todos os arquivos residem no **PC de Ar**.
+- São gerados em Produção e depois transferidos para o Banco de Dados de Ar por meio do **InfoMusic-Prod**.
+- Ao exportar de Produção → **copia-se** para o PC de Ar (fica duplicado).
+- Recomenda-se manter duplicados **promos e artísticas**, pois ocupam pouco espaço e são difíceis de repor.
+
+<Note>
+  Todas as pastas de áudio devem estar dentro de `\Audicom\Audio`.\
+  Qualquer pasta fora desse caminho será ignorada pelo AUDICOM.
+</Note>
+
+### Múltiplos terminais de Ar
+
+- Música → armazenada no **Servidor** (ou um terminal que atue como servidor).
+- Comerciais, promos, fillers e artísticas → **repetidos em cada terminal de Ar**, garantindo operação local se a rede falhar.
+- A distribuição é feita a partir de Produção, via **File Manager** e **InfoMusic-Prod**.
+- Evite pastas com o mesmo nome em diferentes terminais para prevenir conflitos.
+
+---

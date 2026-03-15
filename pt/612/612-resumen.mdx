@@ -1,0 +1,100 @@
+---
+title: "Console clássica D162"
+description: "D612: Descrição geral de recursos"
+keywords: ["resumo", "features"]
+tags: ["consoles de estúdio", "linha Classic", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "2ffa09cc890563ccf98e221a9428ed0440acce1dfeb5064fea3657e4e2552f9d"
+
+---
+
+![D612 Pn](/images/thumbnails/d612.png)
+
+## Características gerais
+
+O console D612 é uma unidade compacta, sólida e elegante. Apesar de seu tamanho reduzido, possui uma enorme flexibilidade de interconexão, incluindo entrada e saída digital via USB, que permite que o console se comunique digitalmente com o computador, sem necessidade de usar placas de som caras no PC.
+
+Possui 5 faders de 100 mm de cerâmica condutiva, que em combinação com o controle ETM-VCA proporcionam uma durabilidade superior a 10 milhões de operações em condições normais de uso.
+
+## Entradas
+
+### Microfones
+
+- 2 canais gerenciam 4 microfones.
+- Os microfones dispõem de alimentação phantom de 48V, comutável pelo painel frontal.
+- A mixagem de microfones pode ser atribuída a um equalizador de 4 bandas.
+- Compressor automático de faixa dinâmica sobre a mixagem de microfones.
+
+Cada canal de microfone pode gerenciar até dois microfones em paralelo, que se conectam em 4 conectores XLR (MIC-1a, MIC-1b, MIC-2a, MIC-2b).
+
+O nível entre os microfones que compartilham canal é equilibrado, dentro de certos limites, pelo compressor interno. Quando forem utilizados microfones no mesmo canal, recomendamos que sejam da mesma marca e modelo.
+
+### Linhas
+
+Os 3 canais de linha permitem conectar até 6 fontes de áudio estéreo:
+
+- Os canais 3 e 4 aceitam entradas analógicas não balanceadas (LIN-1 e LIN-2) e balanceadas (BAL-1 e BAL-2).
+- O canal 5 é digital, com conexão direta ao computador via USB, e também aceita uma entrada auxiliar não balanceada.
+
+Todos os canais contam com um controle de ganho que atua sobre a entrada selecionada (principal ou auxiliar).
+
+<Note>
+  Em equipamentos com opção /AoIP, a entrada auxiliar LIN-2 fica internamente atribuída ao sinal de áudio do módulo de streaming e não pode ser usada para outros sinais.
+</Note>
+
+## Saídas
+
+O console D612 possui duas saídas principais:
+
+- **PGM (Programa):** sinal principal para transmissão ou streaming.
+- **REC (Gravação):** permite gravar sem interferir com a saída ao ar.
+
+Além disso:
+
+- A conexão USB entrega digitalmente PGM ou REC ao PC, selecionável pelo operador. No computador é reconhecido como dispositivo de gravação externo (USB recording device).
+- **PGM / REC digital via USB** pode ser usado para transmissão via Internet.
+- **PGM via Ethernet (opcional):** em modelos com opção /IP, pode enviar streaming RTP para planta transmissora ou streaming MPEG para um servidor Icecast (ver Modelos D612/IP).
+- **Híbrido externo:** envio e retorno dedicados, integrados ao canal do híbrido interno.
+
+Uma saída para **Luz de Ar (Tally Light)** permite conectar indicadores de LEDs. É ativada ao abrir qualquer canal de microfone. O console também inclui um indicador LED em seu chassi.
+
+<Warning>
+  A carga máxima sobre a saída Tally Light **não deve exceder 120 mA** (dois sinais Solidyne LA100).
+</Warning>
+
+## Linhas telefônicas
+
+O canal de híbrido telefônico gerencia duas linhas: uma terrestre (2 fios) e um telefone celular via Bluetooth. Todas as linhas podem estar em conferência. Muitas funções são automatizadas, facilitando a operação.
+
+O console inclui envio e retorno para conexão de híbridos externos. O híbrido externo se integra ao circuito do híbrido incorporado, evitando o uso de canais adicionais para sua conexão.
+
+## Monitoramento
+
+A seção de monitoramento distribui os sinais para alto-falantes e fones de ouvido de estúdio e controle.
+
+- Tanto Estúdio como Controle contam com controle de nível global e chaves de atribuição para enviar sinal de ar (sintonizador externo), saída de console (PGM) ou saída de gravação (REC).
+- Nos estúdios, o nível se mantém fixo no console e recomenda-se instalar monitores ativos e distribuidores de fones de ouvido com controle próprio de nível.
+- O acessório Solidyne **StudioBox** é uma excelente opção complementar.
+
+## Escuta prévia CUE
+
+O console inclui um alto-falante interno para escuta prévia com controle de nível. CUE permite escutar o sinal antes do fader (PFL). Em estúdios integrados, o alto-falante CUE pode ser desativado e enviar CUE aos fones de ouvido do operador.
+
+A seção de monitoramento também incorpora o microfone de ordens ao estúdio (talkback), que também é utilizado para dialogar em privado com uma linha telefônica.
+
+## Atenuadores ETM-VCA
+
+A tecnologia **ETM-VCA (Electrometric Voltage Controlled Amplifier)** evita que o sinal de áudio atravesse os faders, reduzindo ruídos e desgaste. O nível é controlado mediante amplificadores de baixo ruído e alta estabilidade; os faders só transmitem sinal de controle DC.
+
+Vantagens principais:
+
+- Elimina totalmente ruídos por desgaste de faders.
+- Reduz manutenção e prolonga a vida útil.
+- Proporciona correlação estéreo excepcional (erro menor que 0,1 dB).
+- Permite usar faders que superam 10 milhões de operações (em condições de uso corretas).

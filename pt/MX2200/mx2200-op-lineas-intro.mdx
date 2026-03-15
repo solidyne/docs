@@ -1,0 +1,106 @@
+---
+title: "Linhas telefônicas"
+description: "Linhas telefônicas fixa e celular (Bluetooth). Descrição e controles."
+keywords: ["operação", "linhas", "Bluetooth"]
+tags: ["consolas portáteis", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "0f2e99c9980ce982322b680cbbfc2445654743995e37d046b032a7b5b0debb9a"
+
+---
+
+## Descrição geral
+
+A **MX2200** gerencia:
+
+- Uma linha telefônica terrestre convencional (POTS).
+- Um telefone celular vinculado por **Bluetooth**.
+
+A função principal de ambas as linhas é servir como **enlace de backup** para a conexão de Internet.\
+Também podem ser utilizadas:
+
+- Como canal de transmissão principal quando não há Internet disponível.
+- Como fonte de áudio para adicionar uma chamada à transmissão.
+
+---
+
+## Uso de linhas "no ar"
+
+- Podem-se adicionar participantes (repórteres ou entrevistados) à transmissão.
+- Isso pode ser feito com linha fixa ou com celular Bluetooth, mesmo enquanto o console transmite via Internet.
+- A linha pode interagir em privado com o operador do console, e também com os estúdios quando enviada ao programa (PGM).
+- O sinal de retorno do estúdio (SIP) é injetado no monitoramento (CUE) e no envio às linhas fixa e Bluetooth.
+- O nível de retorno do enlace SIP é ajustado pela tela, em **SETUP → RX VOLUME**.
+
+<Warning>
+  **Atenção\!**\
+  A conferência entre linha fixa e celular Bluetooth **não é suportada**.\
+  É possível colocar ambas as linhas no ar, mas não se escutarão entre si nem poderão dialogar.
+</Warning>
+
+---
+
+## Linha como enlace ao estúdio
+
+- Uma vez estabelecida a chamada, os estúdios recebem sempre a **mixagem PGM** através da linha telefônica.
+- Em **posição CUE**, o sinal de retorno enviado pelo Estúdio é ouvido apenas no monitoramento. Se o botão TALK dessa linha for pressionado, o microfone de ordens é enviado aos estúdios.
+- Em **posição PGM**, o retorno do Estúdio é suprimido do CUE e somado ao PGM.
+- O envio à linha é **mix-minus**: o retorno do Estúdio não é somado ao PGM que é enviado de volta, evitando realimentação.
+- Em posição PGM, o microfone de ordens não é enviado ao estúdio.
+- Portanto, ao usar a linha como enlace, deve ser sempre configurada em **PGM**, evitando que o mic TALK saia ao ar acidentalmente.
+- O retorno do estúdio (áudio do outro extremo) pode ser ouvido nos fones misturando PGM com a linha telefônica (verificar se o monitoramento de PGM está habilitado em CUE).
+- Se não for necessário ouvir o retorno, manter fechado o potenciômetro PGM.
+
+---
+
+## Controles (linha fixa e Bluetooth)
+
+Os seguintes controles se aplicam tanto para adicionar chamadas à transmissão local quanto para usar as linhas como enlace ao estúdio:
+
+<img
+  src="/images/mx2200/mx2200-telco.png"
+  alt="Mx2200 Telco Pn"
+  title="Mx2200 Telco Pn"
+  className="mx-auto"
+  style={{ width:"66%" }}
+/>
+
+ 1. **PHONE/LINE IN**
+    - Comuta entre linha telefônica e entrada de linha estéreo.
+    - Com enlace por Internet é possível operar com 4 microfones e 2 fontes de áudio (LINE IN e USB).
+    - Se entrar uma chamada em linha terrestre, o botão **HOLD** pisca. O operador pode passar de LINE IN para PHONE e atender a chamada.
+
+    <Warning>
+      Quando não há Internet e o enlace é feito por Bluetooth, não é possível somar desde PHONE LINE nem a linha terrestre nem LINE IN, já que **PHONE LINE não é somado à mixagem enviada ao Bluetooth**.\
+      LINE IN poderá ser usado somente desde seu próprio fader se não houver áudio USB.
+    </Warning>
+ 2. **Potenciômetro de nível da linha telefônica / LINE IN**
+    - Ajusta nível tanto em CUE como em PGM.
+ 3. **Botão TALK (linha fixa)**
+    - Permite falar em prévio com a linha fixa usando o microfone TALK incorporado.
+ 4. **HOLD**
+    - Indica chamada entrante (pisca com o ring).
+    - Permite atender e deixar a linha em espera ou enviá-la a PGM.
+ 5. **CUE/PGM**
+    - Comuta o sinal (telefônico ou LINE IN) entre escuta em prévio (CUE) e saída de programa (PGM).
+ 6. **Controle de nível de áudio do celular Bluetooth**
+ 7. **Liga/desliga Bluetooth**
+    - Ativa também o modo "parear" para vincular um telefone celular.
+ 8. **CUE/PGM Bluetooth**
+    - Comuta sinal Bluetooth entre escuta em CUE e saída em PGM.
+ 9. **Botão TALK (Bluetooth)**
+    - Permite falar em prévio com a linha Bluetooth usando o mic TALK incorporado.
+10. **Controle geral de fones**
+11. **PGM to Headphones**
+
+- Remove o sinal PGM dos fones, deixando apenas o presente em CUE.
+- Útil para dialogar com uma linha telefônica ou escutar apenas retorno de estúdio em chamada SIP.
+
+12. **Botão TALK para fones**
+
+- Envia a voz do microfone de ordens incorporado aos fones.

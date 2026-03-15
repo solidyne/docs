@@ -1,0 +1,100 @@
+---
+title: "Entradas e saídas de áudio"
+description: "Configuração das entradas e saídas de áudio"
+keywords: ["setup", "instalação", "filtros", "saídas", "entradas"]
+tags: ["procesadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1468f66c8f7305a80ef15a14e38a1e759d0a6a419aecec9a1a18095eb6ac37c4"
+
+---
+
+## Entradas de áudio
+
+No modo avançado (**SETUP**), selecione no menu lateral a opção **AUDIO INPUT**.\
+Cada entrada possui os seguintes controles:
+
+![542 Web Inputs Pn](/images/542/542-web-inputs.png)
+
+### Ganho (GAIN)
+
+- Ajusta o nível do sinal de entrada em uma faixa de **±14 dB**.
+- Para entradas analógicas, o valor **0 dB** corresponde a **\+4 dBu**, referenciado a **–18 dBfs (AES K18)**. \
+  Isto implica em **18 dB de headroom** (margem de sobrecarga).
+
+<Tip>
+  O ganho deve ser ajustado de forma que os **picos de 0 VU no console** oscilem entre **–22 e –9 dBfs** no indicador de nível do processador.
+</Tip>
+
+### Trim R
+
+- Compensação de ganho para o canal direito.
+- Faixa de ajuste: **±3 dB**.
+- Permite corrigir **desequilíbrios entre canais**.
+
+### ST/MONO
+
+- Alterna a entrada entre:
+  - **STEREO**
+  - **MONO** (soma dos canais esquerdo e direito).
+
+### Entrada principal e alternativas
+
+O 542APC comuta automaticamente entre entradas de acordo com a presença ou ausência de sinal.
+
+- Define-se uma **entrada principal**.
+- Podem ser configuradas até **duas entradas alternativas** (FAIL BACKUP 1 e 2).
+- O equipamento comuta nesta ordem:
+  1. Entrada principal
+  2. FAIL BACKUP 1
+  3. FAIL BACKUP 2
+
+#### Parâmetros de comutação
+
+- **LEVEL** → limiar abaixo do qual considera-se que o sinal caiu.
+  - Ajustável entre **–45 e –80 dB** (passos de 5 dB).
+- **FAIL TIME** → tempo em segundos que o sinal deve permanecer abaixo do limiar **LEVEL** para ativar a comutação.
+
+### Filtros de entrada
+
+- **HI PASS** (passa-altas, tipo Chebyshev)
+  - Opções: 0 (desativado), 20 Hz (valor de fábrica), 40 Hz, 60 Hz, 80 Hz.
+  - Elimina sinais subsônicos, tipicamente captados por microfones.
+- **LOW PASS** (passa-baixas)
+  - Opções: 15 kHz, 16 kHz, 20 kHz.
+  - Pode ser desativado (**None**).
+
+## Saídas de áudio
+
+No modo avançado (**SETUP**), selecione no menu lateral a opção **AUDIO OUTPUT**.
+
+O processador possui **quatro saídas de áudio**, cada uma com **ajuste de nível independente.**
+
+![542 Web Outputs Pn](/images/542/542-web-outputs.png)
+
+1. **Saída analógica balanceada** (XLR)
+2. **Saída analógica não balanceada** (RJ45)
+3. **Saída digital AES-3**
+4. **Streaming sobre Ethernet (AoIP)**
+
+### PRE-ênfase
+
+Todas as saídas possuem comutação de **pré-ênfase**. A ativação entrega a saída com a curva de ênfase de 50 uS ou 75 uS, conforme configuração.
+
+A saída com pré-ênfase é utilizada em configurações onde o excitador ou o transmissor aplicam de-ênfase ao áudio de entrada.
+
+### Comutação de fonte de sinal
+
+As saídas **RJ45 analógica**, **AES-3 digital** e **AoIP** podem ser configuradas para enviar:
+
+- Sinal processado.
+- Sinal proveniente do receptor de FM.
+
+<Info>
+  Quando uma saída transmite o sinal do receptor FM, o nível de saída reflete o **nível real no ar**, assumindo: Modulação = 100%; Ganho de entrada do **FM Receiver** = 0 dB.
+</Info>

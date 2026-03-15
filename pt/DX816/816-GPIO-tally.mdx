@@ -1,0 +1,76 @@
+---
+title: "Tally Light e GPIO"
+description: "Conexão de luzes de sinalização e GPIO"
+keywords: ["tally light", "gpio", "luz de ar", "gpo"]
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "7f14cf1611555145189b6bf51315fa6f7dbe735fcf3181e4891a2ed17173fc6e"
+
+---
+
+## Luz de Ar (Tally Light)
+
+A saída **Tally Light** fornece **12 VCC / 150 mA** quando o **Botão Master de microfones** é ativado.\
+Permite conectar até **dois módulos de sinalização Solidyne LA100**.
+
+Além disso, o console inclui uma **luz de ar incorporada no gabinete**.
+
+<Danger>
+  A saída **Tally Light** desliga automaticamente se a carga exceder **150 mA**.
+</Danger>
+
+## GPIO
+
+Os minijacks marcados como **GPIO** são saídas de propósito geral (**GPO**, _General Purpose Output_), que permitem comandar dispositivos externos ao habilitar certos canais do console.
+
+- No **DX816**: geram sinais os canais de microfone **MIC-1, MIC-2, MIC-3** e as linhas **USB-1** e **USB-2**.
+- No **DX822**: além dos anteriores, também dispõem de GPO **MIC-4, MIC-5 e MIC-6**.
+
+<Note>
+  As saídas de controle são do tipo **coletor aberto**, funcionando como um interruptor:
+
+  - Em estado inativo → alta impedância.
+  - Ao habilitar um canal → a saída se conecta ao terra.
+</Note>
+
+**Especificações elétricas:**
+
+- Máximo: **\+24 V - 0,1 A**.
+
+**Conectores:**
+
+- Tipo **jack TRS de 3,5 mm**, localizados no painel traseiro.
+- No DX816: "MIC 1&2", "MIC-3" e "LIN USB 6&7".
+- No DX822: são adicionados "MIC 4&5" e "MIC-6".
+
+---
+
+**GPO MIC 1&2** _(idem para MIC 4&5 no DX822)_
+
+| Conector | Sinal |
+| -------- | ----- |
+| Corpo    | GND   |
+| Anel     | MIC-1 |
+| Ponta    | MIC-2 |
+
+**GPO MIC-3** _(idem MIC-6 no DX822)_
+
+| Conector | Sinal         |
+| -------- | ------------- |
+| Corpo    | GND          |
+| Anel     | MIC-3        |
+| Ponta    | Não conectado |
+
+**GPO USB**
+
+| Conector | Sinal |
+| -------- | ----- |
+| Corpo    | GND   |
+| Anel     | USB-1 |
+| Ponta    | USB-2 |

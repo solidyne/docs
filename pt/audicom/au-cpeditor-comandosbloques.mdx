@@ -1,0 +1,405 @@
+---
+title: "Comandos para blocos de conteúdo"
+description: "Definir a grade de programação diária"
+keywords: ["CyberPlay Editor", "blocos"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d13438c22af0360ec2ee235fc865827a80caeba863b4d9ffa4879b39a95cacb1"
+
+---
+
+## Blocos ao vivo (LIVE)
+
+**Sintaxe:**
+
+`/Block /HH:MM-HH:MM /Live [Título do bloco]`
+
+**Descrição detalhada**\
+Um bloco ao vivo define um trecho de programação em que a condução e os conteúdos são realizados manualmente no ar, enquanto **AUDICOM apenas programa e administra os intervalos comerciais**. Durante o bloco, a tela Ar apresenta um **contador** que indica o tempo restante até o próximo intervalo. Quando **faltar menos de um minuto**, aparece uma **linha vermelha** sobre o contador que **cresce progressivamente**, sinalizando a proximidade do intervalo. Esta sinalização é **informativa**: o operador deve **pressionar Play** para iniciar o intervalo quando corresponder (não é disparado automaticamente no modo LIVE).
+
+**Parâmetros da instrução**
+
+`/HH:MM-HH:MM`
+
+→ Hora de **início** e **término** do bloco (formato 24h).
+
+`/Live`
+
+→ Indica que o bloco é **ao vivo** (manual).
+
+`[Título do bloco]`
+
+→ **Opcional**; permite nomear o bloco (até **32 caracteres**). Os colchetes não são digitados no arquivo: apenas indicam que o título é opcional.
+
+**Exemplo**\\
+
+`/Block /17:00-20:00 /Live ENTREVISTAS AO ENTRARDECER`
+
+Bloco ao vivo que começa às **17:00** e termina às **20:00**. Durante esse período, AUDICOM gerenciará apenas os intervalos; o restante do conteúdo (música, artísticos, microfone) é gerenciado pelo operador em tempo real.
+
+---
+
+## MetaNomes para programação de conteúdo pré-gravado
+
+Orientado para a inclusão de conteúdos pré-gravados ou "enlatados", adquiridos de produtoras externas. Estes programas são baixados da Internet em formatos de áudio comprimido e devem ser programados para ir ao ar da forma mais automática possível.
+
+Com a introdução dos **MetaNomes no AUDICOM**, esta tarefa pode ser totalmente automatizada.
+
+### Problema antes dos MetaNomes
+
+Tradicionalmente, cada arquivo enlatado tinha um nome diferente de acordo com o dia da semana, o que obrigava a programar um bloco distinto para cada dia.\
+Exemplo típico de um programa diário dividido em quatro blocos de 15 minutos:
+
+Tus_40_Favoritos_Segunda-Bloque1.mp3
+Tus_40_Favoritos_Segunda-Bloque2.mp3
+Tus_40_Favoritos_Segunda-Bloque3.mp3
+Tus_40_Favoritos_Segunda-Bloque4.mp3
+
+Ao mudar o dia, os nomes também mudavam (`Terça`, `Quarta`, etc.), portanto era necessário duplicar as programações.
+
+### Solução com MetaNomes
+
+Graças aos MetaNomes, é possível definir um bloco genérico válido para toda a semana, independentemente do dia.
+
+Exemplo:
+
+```
+/Block /10:00-11:00 /Live Programa Enlatado Tus 40 Favoritos\
+Tus_40_Favoritos\_\<dia\>-Bloque1.mp3\
+Tus_40_Favoritos\_\<dia\>-Bloque2.mp3\
+Tus_40_Favoritos\_\<dia\>-Bloque3.mp3\
+Tus_40_Favoritos\_\<dia\>-Bloque4.mp3
+```
+
+Neste caso, AUDICOM substitui automaticamente `<dia>` pelo dia da semana correspondente: _Segunda, Terça, Quarta_, etc. Assim, evita-se a criação de arquivos de programação separados.
+
+### MetaNomes disponíveis
+
+Os MetaNomes podem ser combinados de diferentes formas, permitindo adaptar-se a múltiplos esquemas de nomenclatura de arquivos:
+
+- `<d>` → Dia do mês em um dígito (1–31).
+- `<dd>` → Dia do mês em dois dígitos (01–31).
+- `<dia>` → Nome completo do dia da semana.
+- `<dia3>` → Nome abreviado do dia (Seg, Ter, etc.).
+- `<m>` → Número do mês (1–12).
+- `<mm>` → Número do mês em dois dígitos (01–12).
+- `<mes>` → Nome completo do mês (Janeiro, Fevereiro, etc.).
+- `<mes3>` → Nome abreviado do mês (Jan, Fev, etc.).
+- `<aa>` → Ano em dois dígitos (11, 12, etc.).
+- `<aaaa>` → Ano em quatro dígitos (2011, 2012, etc.).
+- `<s>` → Número da semana dentro do mês.
+
+### Exemplo com notícias horárias
+
+Os MetaNomes também são úteis em **serviços informativos**. Suponha arquivos baixados de uma agência de notícias como TELAM (Argentina):
+
+BOLETIN-09hs-20120307.mp3
+BOLETIN-10hs-20120307.mp3
+BOLETIN-11hs-20120307.mp3
+
+Com MetaNomes, a programação pode ser definida genericamente desta forma:
+
+```
+/Exacttime /09:00\
+BOLETIN-09hs-\<aaaa\>\<mm\>\<dd\>.mp3
+
+/Exacttime /10:00\
+BOLETIN-10hs-\<aaaa\>\<mm\>\<dd\>.mp3
+
+/Exacttime /11:00\
+BOLETIN-11hs-\<aaaa\>\<mm\>\<dd\>.mp3
+```
+
+Aqui, AUDICOM substitui automaticamente os valores de `<aaaa>`, `<mm>` e `<dd>` pela data do dia de transmissão.
+
+### Automação completa
+
+Além dos MetaNomes, AUDICOM incorpora ferramentas que permitem automatizar o download desses arquivos da Internet, tornando possível que a operação completa —download, atualização e programação— seja realizada de forma totalmente automática.
+
+---
+
+## Inclusão direta
+
+A **inclusão direta** permite, dentro de um bloco **LIVE** ou **AutoDj**, **pré-programar uma lista de arquivos** que aparecerão na Tela Ar prontos para reprodução, **na ordem escrita** abaixo da linha do bloco. É ideal para "enlatados" curtos, separadores fixos, microconteúdos ou músicas específicas que devem tocar dentro de um trecho automático ou ao vivo.
+
+#### Exemplo básico (bloco LIVE)
+
+```
+/Block /12:00-24:00 /Live
+Dead Leaf Echo
+Denn die todten reiten schnell
+Corvus Corax - Bacchus
+Zauberquelle
+Psyche
+```
+
+**Como é executado:**
+
+- Os títulos escritos imediatamente **abaixo** do bloco são inseridos **exatamente como estão** na pauta e reproduzidos nessa ordem.
+- Se a **duração** da lista **exceder** o tempo disponível até o próximo **intervalo**, **AUDICOM passa ao intervalo** e, ao finalizá-lo, **continua** com os títulos restantes.
+- Na Tela Ar, você verá os itens conforme foram agendados, com os **intervalos intercalados** nos horários correspondentes.
+
+#### Comandos admissíveis junto aos arquivos
+
+Além de títulos, pode-se inserir **comandos** da família **Meteor**, **pausas**, **comentários** e **seleção aleatória**:
+
+- **Meteor** (hora e meteorologia):\
+  `/Time`, `/Temp`, `/Hum`, `/Pres`, `/Rain`, `/Meteor`
+- **Pausas**:\
+  `/Pause` (pausa simples), `/Text ...` (pausa com texto e duração estimada)
+- **Comentários** (linhas informativas que não são reproduzidas):\
+  Começam com `;`
+- **Aleatório (Random)** a partir de uma pasta:\
+  `/RND,Pasta,n*prefixo`
+
+Estes comandos **convivem** com os títulos listados abaixo do bloco e são executados na **mesma sequência**.
+
+---
+
+### Inclusão direta em blocos AutoDj
+
+Também é possível **forçar um ou mais títulos** no início (ou dentro) de um bloco automático e deixar que **AutoDj complete o resto** para encaixar no tempo.
+
+**Exemplo (título fixo no início de cada hora; o resto é preenchido pelo AutoDj):**
+
+`/Block /00:00-01:00 /AutoDJ="clasica" Madrugada`\
+Mensagem1
+
+`/Block /01:00-02:00 /AutoDJ="clasica" Madrugada2`\
+Mensagem2
+
+`/Block /02:00-03:00 /AutoDJ="clasica" Madrugada3`\
+Mensagem3
+
+**Comportamento:**
+
+- O **primeiro item** de cada bloco (Mensagem1/Mensagem2/Mensagem3) **fica fixado**.
+- A **diferença de tempo** até completar a hora é preenchida pelo **AutoDj** com música do **formato** indicado.
+- O resultado é **previsível** (sempre começa com a mensagem) e **ajustado** (AutoDj compensa tempos e evita falhas).
+
+---
+
+### Rotação automática de "mensagens" com RANDOM
+
+Se, em vez de uma única "MensagemX" fixa por hora, você deseja **variá-la automaticamente todos os dias**, use **/RND** para escolher **aleatoriamente** um arquivo de uma pasta:
+
+`/Block /00:00-01:00 /AutoDJ="clasica" Madrugada`\
+`/RND,pastaMensagens1,1`
+
+`/Block /01:00-02:00 /AutoDJ="clasica" Madrugada2`\
+`/RND,pastaMensagens2,1`
+
+`/Block /02:00-03:00 /AutoDJ="clasica" Madrugada3`\
+`/RND,pastaMensagens3,1`
+
+**Notas sobre RANDOM:**
+
+- O terceiro parâmetro indica **quantos itens** são inseridos (aqui, **1**).
+- A **seleção não usa** o Banco de Dados nem datas de passagem; é **puramente aleatória** dentro da **pasta**.
+- Opcionalmente, pode-se restringir por **prefixo** com `*` (ex.: `/RND,Spots,2*ID` para arquivos que começam com "ID...").
+
+---
+
+### Inclusão direta para "agendar" em horas específicas
+
+Quando você precisa que **certos arquivos sejam reproduzidos em horários específicos**, uma técnica limpa é **dividir o trecho amplo** em **vários blocos** contíguos e **colocar o(s) título(s) abaixo** de cada bloco, deixando que o **AutoDj** complete:
+
+**Exemplo (três horas, cada uma com uma mensagem diferente no início):**
+
+```
+/Block /00:00-01:00 /AutoDJ="clasica" Madrugada
+Mensagem1
+/Block /01:00-02:00 /AutoDJ="clasica" Madrugada2
+Mensagem2
+/Block /02:00-03:00 /AutoDJ="clasica" Madrugada3
+Mensagem3
+```
+
+**Vantagens:**
+
+- Garante a **aparição** do elemento no **trecho desejado** sem quebrar a lógica de horários.
+- O **AutoDj** se encarrega de **compensar** e **encerrar no tempo** cada bloco.
+- Se houver também **intervalos**, o AUDICOM os **respeita** e **retoma** após a sequência agendada.
+
+---
+
+### Boas práticas
+
+- **Ordem e leitura**: a **tela de pré-visualização (TEST)** do Editor mostra exatamente como os **títulos, intervalos e comandos serão intercalados**; use-a para **validar**.
+- **Arquivos existentes**: se um título da lista **não existir** nos servidores de áudio, aparecerá em **vermelho** (e será **pulado** no ar).
+- **Intervalos**: a inclusão direta **não desloca** os intervalos; se não houver tempo, o intervalo **interrompe** e então o bloco **continua**.
+- **Volume e mixagem**: se precisar "sobrepor" música com separadores/patrocínios, use **blocos AutoDj** com **/Sponsor** ou **ExactTime** com o operador `+` e parâmetros `/SS/KK** (ver seções correspondentes).
+
+---
+
+## Inclusão Especial (ExactTime)
+
+A instrução `/ExactTime` permite programar eventos em um horário determinado **dentro de um bloco**. É útil para conteúdos fixos ou recorrentes (patrocínios, seções musicais, microprogramas, informativos, "tema da semana", etc.).
+
+Sintaxe:
+`/ExactTime [Nome] /HH:MM SYZ`
+
+Parâmetros:
+
+- `[Nome]`: Identificação opcional do evento (até 32 caracteres).
+- `/HH:MM`: Hora em que deve ir ao ar (horas e minutos).
+- `SYZ`: Variáveis de flexibilidade, equivalentes às de Intervalos:
+  - `S` ou `E`: define se a hora corresponde ao início (Start) ou ao término (End) do evento.
+  - `C` ou `F`: indica se a execução é em hora exata (Clock) ou flexível (Flexible).
+  - `Z`: minutos de tolerância para eventos flexíveis.
+
+<Note>
+  Se não for especificada flexibilidade, o valor padrão é `SF5` (início flexível ±5 minutos).
+</Note>
+
+### Comportamento no CyberPlay:
+
+- Os `/ExactTime` são exibidos em cor violeta, similar a um Intervalo.
+- Os Intervalos têm prioridade sobre `/ExactTime`. Se os horários coincidirem com a mesma prioridade, `/ExactTime` é reposicionado após o intervalo. Se as flexibilidades diferirem, programa-se primeiro aquele com menor tolerância.
+- Dentro de um `/ExactTime` podem ser usados todos os comandos de Intervalos: `/Time`, `/Rnd`, `/Pause`, `/Text`, comentários `;`, eventos encadeados `@`, etc.
+- MetaNomes são admitidos (ex.: para áudios que mudam conforme a data/dia). Para evitar erros de marcação, escreva-os sempre entre aspas ou usando crases: `<dd>`, `<mm>`, `<aaaa>` → `"<dd>"`, `"<mm>"`, `"<aaaa>"`.
+
+**Exemplo 1** — Bloco AutoDj com mensagens por hora:
+
+```
+/Block /00:00-06:00 /AutoDJ="clasica" Madrugada
+/Exacttime /00:00
+/RND,pastaMensagens1,1
+/Exacttime /01:00
+/RND,pastaMensagens2,1
+/Exacttime /03:00
+/RND,pastaMensagens3,1
+```
+
+**Exemplo 2** — Ao vivo com separador em horário fixo:
+
+```
+/Block /19:00-20:00 /Live
+/Exacttime EXEMPLO /19:30
+; Em ExactTime podem ser adicionados comentários como este
+Recordações no tempo
+Título-1
+Título-2
+```
+
+O bloco segue normalmente até as 19:30. Ao chegar nessa hora, o operador deve pressionar Play para executar o ExactTime; depois continua o bloco.
+
+**Exemplo 3** — AutoDj com boletim meteorológico:
+
+```
+/Block /08:30-12:30 /AutoDj="Jazz Music"
+/Exacttime /10:00 SF3
+/Time
+/Temp
+/Hum
+```
+
+Às 10:00 são emitidos hora/temperatura/umidade e então retoma o AutoDj.
+
+**Exemplo 4** — Relatório de trânsito com encadeados e MetaNomes:
+
+```
+/Block /07:00-12:00 /Live
+/Exacttime /07:45 ; RELATÓRIO DE TRÂNSITO
+@Transito Abertura
+@transito`<dd><mm><aaaa>`
+@Transito Encerramento
+```
+
+Cada dia busca-se transitoDDMMAAAA. Se não existir, também não saem abertura/encerramento por estarem encadeados com @.
+
+### **Sponsors "sobrepostos" à música dentro do ExactTime**
+
+Além de inseridos como itens, AUDICOM permite combinar uma música com um sponsor que "sobrepõe" sua introdução.
+
+Sintaxe:
+
+`"Título"/SS/KK`
+
+- "Título": arquivo sponsor.
+- /SS: segundos desde o início da música até a inserção do sponsor.
+- /KK: relação de mixagem (10, 25, 50 ou 100).
+
+Se omitir `/SS/KK`, o sponsor é reproduzido desde o início da música respeitando o nível definido pelo controle MIX.
+
+**Exemplo:** Satélite com sponsor "sobrepondo" música
+
+```
+/Block /18:00-20:00 /Satslave
+/Exacttime /18:45 EC
+Título-1
++"Recordações no tempo"/05/25 
+```
+
+Executa "Título-1" e, 5s depois, entra o sponsor com mixagem a 25%.
+
+---
+
+### Blocos com Sponsors
+
+O comando `/Sponsor` permite associar arquivos de áudio (sponsors, separadores, vinhetas, etc.) ao início, desenvolvimento ou encerramento de um bloco de programação.\
+Deve ser colocado sempre **após** a linha de comando do bloco.
+
+**Sintaxe geral:**
+`/Sponsor [NomeDoSponsor] +Open="Título"/SS/KK +Mid="Título"/SS/KK +Close="Título"/SS/KK`
+
+#### Parâmetros principais
+
+- **\+Open="Título"**\
+  Arquivo reproduzido no início do bloco (ex.: apresentação do programa).
+- **\+Mid="Título"**\
+  Arquivo reproduzido após cada intervalo do bloco (ex.: "continuamos com nosso programa...").
+- **\+Close="Título"**\
+  Arquivo reproduzido no fim do bloco (encerramento do programa).
+
+#### Símbolos (+ e *)
+
+- Em blocos **AutoDj**:
+  - `+` → o arquivo Sponsor é sobreposto ("sobrepõe") a música em reprodução.
+  - `*` → o Sponsor é reproduzido e depois continua a música, sem sobreposição.
+- Em blocos **Live**, **SatFill** e **SatSlave**:\
+  Não há diferença entre `+` e `*`; ambos são interpretados como `*`.
+
+#### Parâmetros opcionais
+
+- `/SS`: tempo em segundos desde o início da música até a entrada do Sponsor.
+- `/KK`: nível relativo de mixagem entre Sponsor e música. Valores possíveis: `10`, `25`, `50`, `100`.
+
+Se não forem especificados `/SS/KK`, o Sponsor começa no início da música e a mixagem respeita o nível configurado no controle **MIX**.
+
+---
+
+#### Exemplos
+
+**Exemplo 1 — Bloco ao vivo com sponsors na abertura, intervalo e encerramento**
+
+/Block /22:00-24:00 /Live
+/Sponsor EXEMPLO \*Open="Título-1" \*Mid="Título-2" \*Close="Título-3"
+
+- No início do bloco (22:00) é reproduzido **Título-1**.
+- Ao finalizar cada intervalo dentro do bloco é emitido **Título-2**.
+- Como encerramento, ao terminar o bloco, é reproduzido **Título-3**.
+
+---
+
+**Exemplo 2 — Bloco AutoDj com sponsors e mixagem controlada**
+
+/Block /03:00-07:00 /AutoDj="Clássica" Música sem Tempo
+/Sponsor SEPARADORES \*Open="Título-1" +Mid="Título-2"/03/50 \*Close="Título-3"
+
+- **Título-1** abre o bloco, seguido da música do AutoDj.
+- Em cada intervalo, reproduz-se uma música e, **3 segundos** depois, entra **Título-2**, sobreposto à música com uma relação de mixagem de **50%**.
+- Ao finalizar a última música do bloco, é emitido **Título-3** como encerramento.
+
+---
+
+<Note>
+  Nos blocos AutoDj, o Sponsor de encerramento (`Close`) é executado no início da **última música do bloco**.\
+  Nos blocos **Live** e **Satelitales**, o encerramento ocorre **ao finalizar o último intervalo**.
+</Note>

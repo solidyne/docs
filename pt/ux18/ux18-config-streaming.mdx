@@ -1,0 +1,219 @@
+---
+title: "Serviços de streaming"
+description: "Configuração dos serviços de streaming no UX18"
+keywords: ["configuração", "streaming", "RTP", "Icecast", "Shoutcast", "Down-Stream", "remote player"]
+tags: ["consoles IP", "UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "83650d2b95b88eb0f0bc9410d9f518e4fefd724dc487c7d6f20cfa036a2bad76"
+
+---
+
+## Resumo dos serviços de streaming
+
+Os consoles UX18 podem gerar **dois streams de áudio independentes** e decodificar um streaming de áudio entrante.
+
+- **Streaming 1 (saída)**\
+  Utiliza o protocolo **RTP**, ideal para link com planta transmissora (**STL**).
+- **Streaming 2 (saída)**\
+  Compatível com **servidores Shoutcast/Icecast** para transmissão pela internet.
+- **Streaming 3 (entrada)**\
+  Pode ser **RTP** ou um **streaming público HTTP**.\
+  Quando esta função é habilitada, o áudio recebido é **decodificado e comutado automaticamente** substituindo a entrada **AES-1**.
+- **Monitoramento remoto:** UX18 incorpora um **serviço WebRTC** que permite ouvir remotamente o áudio pela **Interface de Controle WEB**, tanto no acesso local quanto externo via Internet.
+
+## Configuração dos serviços de streaming
+
+É feita pela tela **SETTINGS**, na opção **STREAMING**. Requer perfil ADMIN.\
+STREAMING abre a tela de Acesso à Interface de Streaming.
+
+Mostra um **resumo do estado dos fluxos de transmissão e recepção de áudio**, e permite acessar outras instâncias de configuração:
+
+- **STREAM CFG** → Acesso à configuração dos serviços de streaming.
+- **SYSTEM** → Acesso à configuração da LAN para os serviços de streaming do UX18\
+  (não deve ser confundido com a configuração LAN do controle remoto WEB).
+
+---
+
+### UP-STREAM (TX) - Icecast/Shoutcast
+
+A aba **UP-STREAM** permite configurar um servidor de difusão tipo **Icecast** ou **Shoutcast** para publicar o sinal de programa.
+
+- **RUN/STOP**: Habilita ou desabilita o envio do streaming quando as mudanças são confirmadas pressionando **APPLY**.
+
+  <Tip>
+    Para otimizar os recursos do sistema, manter parado quando o serviço não estiver em uso.
+  </Tip>
+- **PROTOCOL**: Define se o servidor é do tipo Icecast ou Shoutcast.
+- **SERVER IP**: Endereço IP de destino do servidor.
+- **PORT**: Porta TCP de escuta do servidor.
+- **MOUNTPOINT**: Nome único que identifica o stream no servidor.
+- **Stream NAME**: Nome que identifica o stream.
+- **PASSWORD**: Senha de acesso para publicação (se aplicável).
+- **CODEC**: Formato de áudio de transmissão (Opus ou MP3).
+- **QUALITY**: Taxa de bits para codificação
+- **APPLY**: Aplica e salva as alterações e inicia ou para a transmissão (conforme estado RUN/STOP).
+
+<Note>
+  Os parâmetros de configuração para Icecast/Shoutcast são fornecidos pelo provedor do servidor.
+</Note>
+
+### Processamento de áudio para streaming
+
+Pressionando o ícone **PROCESS** acessa-se o processador de áudio, que inclui **normalização de nível** e **reforço de graves**. Este processamento afeta apenas o _streaming_ para **Icecast/Shoutcast**.
+
+<img
+  src="/images/ux24/ux18-streaming-procesado.png"
+  alt="UX18 Processamento de streaming"
+  title="UX18 Processamento de streaming"
+  className="mx-auto"
+  style={{ width:"63%" }}
+/>
+
+#### Normalizer
+
+Reduz a dinâmica do sinal e ajusta o nível a um valor constante, obtendo um som mais consistente, sem saltos de volume.
+
+- **Target LUFS**: Determina o nível alvo do sinal de streaming (± 1 LU).\
+  Ajusta-se em função do tipo de conteúdo:
+  - **-21 a -19 LU** → Sinais com grande variação de nível, sem controle prévio (exemplo: microfones sem compressão).
+  - **-18 a -15 LU** → Sinais mistos de música e voz, usando compressores nos canais de microfone para limitar a dinâmica.
+  - **-14 a -12 LU** → Sinais já fortemente comprimidos (música).
+- **Style**: Define os tempos de ação do normalizador.\
+  Valores possíveis: _slow_, _normal_, _fast_.
+  - _Slow_: recomendado quando há grandes variações de volume.
+  - _Fast_: útil para normalizar sinais previamente comprimidos.
+
+#### Bass Boost
+
+Aplica um reforço de graves no sinal de _streaming_.
+
+- **FREQ.** → Frequência de corte; abaixo dela aplica-se o reforço.
+- **ACTION** → Ajusta o grau de reforço aplicado.
+
+<Tip>
+  **Recomendação**: usar _Bass Boost_ em transmissões focadas na voz, para obter vozes com graves de maior impacto.
+</Tip>
+
+---
+
+### RTP LINK
+
+A aba **RTP LINK** permite configurar o envio de streaming para um endereço IP específico, por exemplo, para enviar o sinal de programa a uma planta transmissora (**STL**).
+
+<Warning>
+  A implementação de um link RTP requer conhecimentos avançados em configuração de redes.
+</Warning>
+
+<img
+  src="/images/ux24/ux24-config-rtplink.png"
+  alt="UX18 RTP Link"
+  title="UX18 RTP Link"
+  style={{ width:"62%" }}
+/>
+
+- **ENABLE/DISABLED**: Habilita ou desabilita o streaming RTP quando as mudanças são confirmadas pressionando **APPLY**.
+
+  <Tip>
+    Para otimizar os recursos do sistema, manter parado quando o serviço não estiver em uso.
+  </Tip>
+- **DESTINATION ADDRESS**: Endereço IP de destino.
+- **PORT**: Porta TCP de transmissão.
+- **CODEC**: Formato de áudio para RTP (**PCM** / **MP3**).
+- **QUALITY**: Bitrate MP3 ou frequência de amostragem PCM.
+- **GPO**: Habilita o envio de sinais de **luz de ar (Tally Light)** via TCP/IP para equipamentos Solidyne compatíveis.
+  - **Estúdio A e B** (linhas 1 e 2 respectivamente)
+  - **Estúdio B e A** (ordem invertida)
+  - **A\+B** (o sinal é ativado em ambas as linhas, qualquer que seja o estúdio ativo)
+
+---
+
+### Down-Stream (RX)
+
+Permite configurar um streaming entrante. Quando o módulo **DOWN-STREAM** está ativado, o áudio decodificado é enviado internamente para a entrada **AES-1**, que muda seu nome para **STREAM-1**.\
+Neste modo, o conector AES-1 do painel traseiro fica desabilitado.
+
+- **RUN/STOP**\
+  Inicia ou para a decodificação de _streaming_ quando as mudanças são confirmadas com **APPLY**.
+
+  <Tip>
+    Para otimizar os recursos do sistema, manter parado quando o serviço não estiver em uso.
+  </Tip>
+- **PROTOCOL**\
+  Define o tipo de _streaming_ entrante. São suportados os seguintes formatos:
+  - Streams públicos **HTTP** e **MMS** codificados em PCM 16 (44.1/48 kHz), MP3 ou Opus.
+  - Streams **RTP** em PCM 16 (44.1 kHz) e MP3.
+- **SERVER URL/IP**\
+  Nome ou endereço IP do servidor que gera o _streaming_.
+- **PORT**\
+  Porta TCP por onde entra o _streaming_.\
+  Valor padrão: **0**.
+- **MOUNTPOINT**\
+  Nome único que identifica o _stream_.
+- **APPLY**\
+  Aplica as mudanças na configuração.
+
+<Note>
+  **Passo a passo** Baixar um guia passo a passo para [configurar um streaming entrante](http://www.solidyne.dx.com.ar/wordpress-files/DW/doc-guides/UNIDEX_AplicationNote-Incoming_streaming.pdf).
+</Note>
+
+---
+
+### REMOTE PLAYER
+
+A **Interface de Controle Remoto WEB** permite ouvir o áudio do console através de um serviço **WebRTC**.
+
+#### Formato de Áudio
+
+- Codificação: **Opus**
+- Bitrate configurável: **128 a 320 kbps**
+
+#### Funcionamento em rede local
+
+Quando se acessa de um terminal da **LAN**, não são necessárias configurações avançadas.\
+O reprodutor remoto reproduzirá o áudio diretamente através da rede local.
+
+#### Funcionamento via Internet
+
+Para acessar o áudio pela **Interface de Controle WEB** através da Internet, é necessário que a rede implemente:
+
+- **NAT simétrico**
+- **Servidor TURN**
+
+> Se estes serviços não estiverem disponíveis, aparecerá uma mensagem de advertência no reprodutor.
+
+---
+
+### SERVICES CFG
+
+A tela **Services Configuration** permite atribuir as fontes de áudio aos serviços de streaming.
+
+| Serviço      | Fonte de áudio atribuída                                                                   | Configuração adicional                                   |
+| ------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| **STREAM-1** | Sinal de **Programa** presente na saída **AES3-1 PGM**                                     | Nível ajustável em `SETTINGS → OUTPUTS → AES-1/STREAM-1` |
+| **STREAM-2** | Pode ser atribuído a **PGM**, **REC**, **AUX**, **VBUS**, **STUDIO**, **CUE** ou **Talk-Back** | Configurável em `SETTINGS → OUTPUTS → STREAM-2`          |
+
+#### Notas operacionais
+
+- A coluna **ENABLE** permite iniciar ou parar cada serviço.
+- Recomenda-se **manter parados** os serviços que não estejam em uso para otimizar os recursos do sistema.
+
+---
+
+### Streaming System
+
+Ajustes gerais de rede para o módulo **Streamer UX18** (não confundir com o acesso para controle web).
+
+<img
+  src="/images/ux24/ux24-config-streaming_eth.png"
+  alt="UX18 Configuração Ethernet Streaming"
+  title="UX18 Configuração Ethernet Streaming"
+  style={{ width:"75%" }}
+/>
+
+Por padrão, o endereço IP trabalha em modo dinâmico (DHCP). O endereço atribuído é mostrado na tela principal como **STREAM IP**.

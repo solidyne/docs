@@ -1,0 +1,57 @@
+---
+title: "Saídas"
+description: "Conexão das saídas em UNIDEX UX24 e UX18"
+keywords: ["instalação", "saídas"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "722c0b299d0b116214dadd9ae3ae4d485afda6866b29f6f8e658888fd7c6449a"
+
+---
+
+## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Saídas analógicas
+
+Cada saída utiliza um conector **RJ45**, que transporta os sinais **esquerdo e direito** em um único cabo. Em algumas aplicações, estas saídas estéreo podem ser configuradas como **dois canais mono independentes**. Por exemplo, os adaptadores **UDX para linhas telefônicas** utilizam as saídas não balanceadas mono para enviar sinal às linhas de comunicação externas.
+
+<Info>
+  As saídas identificadas como PGM e/ou REC (balanceadas) entregam a mixagem do BUS por padrão.
+
+  Outras saídas são atribuíveis, podendo ser configuradas para entregar qualquer um dos buses de mixagem ou até mesmo redirecionar entradas (DIRECT OUT)
+</Info>
+
+## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Saídas digitais AES3
+
+- São conectadas através de cabo **RJ45–RJ45 CAT5** e adaptador **SOL-F3/XLRM**.
+- Utilizam o mesmo **pin-out** que as saídas analógicas balanceadas estéreo, embora **apenas o canal esquerdo seja transmitido**.
+- Suportam também a conexão de sinais **S/PDIF**.
+- São balanceadas a transformador
+
+### Atribuição de saídas AES3 no UX24
+
+- **AES-1** → Bus **PGM**
+- **AES-2** → Bus **REC**
+- **AES-3 e AES-4** → Atribuíveis pela tela `SETTINGS → OUTPUTS`
+
+### Atribuição de saídas AES3 no UX18
+
+- **AES-1** → atribuível
+- **AES-2** → atribuível
+
+<Warning>
+  **MUITO IMPORTANTE:** 
+
+  As **SAÍDAS** **AES3 SÓ OPERAM A 48 kHz**.
+
+  \
+  É imprescindível **configurar o dispositivo** de gravação no Windows em **48.000 Hz** para evitar erros de compatibilidade. Para configurar a frequência de amostragem no Windows 10:
+
+  1. Abrir o menu **Configurações do sistema** e selecionar **Som**.
+  2. Em **Configurações de som**, abrir as **propriedades do dispositivo de entrada**.
+  3. Acessar **Outras configurações do dispositivo**.
+  4. Na aba **Avançado**, estabelecer a **frequência de amostragem em 48.000 Hz**.
+</Warning>

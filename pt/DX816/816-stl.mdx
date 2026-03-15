@@ -1,0 +1,136 @@
+---
+title: "Link Estúdio-Transmissor"
+description: "Conexão e configuração do módulo streamer como link STL."
+keywords: ["streamer", "stl", "link", "streaming"]
+tags: ["consolas de estudio", "linea Classic", "DX816/AoIP", "DX822/AoIP"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a45b2617a29851f592f0d59720b0c456692ba14bbe2a9b9f75cea533c0cc33a1"
+
+---
+
+## Link Estúdio-Transmissor
+
+- No estúdio, o console com opção **/AoIP** opera como **codificador** e gera um streaming de áudio para a planta transmissora.
+- Na planta, um **decodificador** recebe o fluxo e o envia para o **processador de áudio** (por exemplo Solidyne **ADA102**).
+
+  Alguns processadores de FM podem receber e decodificar o stream de áudio (por exemplo Solidyne 542APC /AoIP)
+
+**Requisitos de rede:**
+
+- Estúdio e Transmissor na **mesma LAN** com link ponto a ponto (físico ou sem fio), ou
+- **VPN** sobre Internet de alto desempenho (consultar com técnico de redes).
+
+---
+
+## Conexão e acesso
+
+**Procedimento:**
+
+1. Conectar o console à rede usando cabo **Ethernet**.
+2. Verificar **LEDs** no conector Ethernet: indicam que os módulos AoIP estão **alimentados por USB** (pelo menos um USB conectado a PC ligado ou fonte USB externa). Os LEDs devem piscar.
+3. A rede atribui **IP por DHCP**. Com IP obtido, o LED verde do RJ45 fica piscando.\
+   Se não houver DHCP, o módulo buscará um **IP livre** (pode demorar alguns minutos).
+4. Obter o IP com **Solidyne Multi-Discovery**.
+
+  <Note>
+     **Solidyne Multi-Discovery**
+
+     Se não tiver acesso físico ao console, você pode [**baixar a ferramenta Multi-Discovery**](/pt/DX816/816-discovery) que detecta dispositivos Solidyne conectados à rede.
+</Note>
+
+5. Abrir um navegador (Firefox/Chrome) e inserir o **IP** encontrado. Aparecerá o **Painel de Controle IP**.
+
+---
+
+## Configuração de streaming
+
+### **IP destino (Basic settings)**
+
+A tela inicial de status indica a configuração da porta IP. O módulo vem configurado de fábrica como _Codificador: Studio Encoder_ (opção "Location" → 'Studio Encoder').
+
+Para verificar a configuração, acessar a opção **"Configuration"** e no menu da esquerda escolher **"Basic settings"**.
+
+<img
+  src="/images/816/816-stream-basic-settings.png"
+  alt="image.png"
+  title="image.png"
+  className="mr-auto"
+  style={{ width:"51%" }}
+/>
+
+| Parâmetro            | Configuração / Descrição                                  |
+| -------------------- | -------------------------------------------------------- |
+| Location (Site type) | De fábrica em **Studio Encoder** (codificador no Estúdio). |
+| Stream method        | **Push (RTP)**                                           |
+| URL                  | Inserir **IP ou DNS** e **porta destino** do streaming.  |
+| Apply                | Pressionar para confirmar valores.                       |
+
+
+### Opções de áudio
+
+Acesso: **Configuration → Audio**.
+
+<img
+  src="/images/816/816-streamer-audio.png"
+  alt="image.png"
+  title="image.png"
+  className="mr-auto"
+  style={{ width:"66%" }}
+/>
+
+| Parâmetro     | Valor de fábrica / Recomendação | Notas                               |
+| ------------- | ------------------------------- | ----------------------------------- |
+| Input source  | Line Stereo                     | Não modificar.                      |
+| Format        | PCM 16 bits stereo              | Predefinido.                        |
+| Sample rate   | 44.1 kHz                        | Predefinido. 48 kHz não suportado   |
+| Bitrate (PCM) | ~1.6 Mbit/s                     | Para PCM16@48 kHz estéreo.          |
+
+
+### Tela de status
+
+| Campo                    | Descrição                                                                         |
+| ------------------------ | --------------------------------------------------------------------------------- |
+| Site type                | Modo de trabalho (ex., **Studio Encoder** no Estúdio).                           |
+| Stream mode              | Evento/método configurado para iniciar transmissão ao remoto.                     |
+| Keep-alive               | Estratégia de manutenção de conexão ativa.                                        |
+| Connection status        | Estado do link. **Verde** = OK com IP destino; **Vermelho** = problema de conexão. |
+| Incoming Stream          | Estado de streaming entrante (inativo em codificador unidirecional).              |
+| Outgoing Stream          | Estado de streaming sainte (ativo no codificador).                                |
+| Audio input              | Fonte de áudio utilizada (analógicas).                                            |
+| Audio format             | Formato aplicado ao áudio transmitido (ex.: PCM16/48k).                           |
+| Input/Output audio level | Níveis reais de áudio (dBFS) de entrada/saída.                                    |
+| Relay 1 .. 4            | Não implementado.                                                                  |
+| Remote inputs            | Não implementado.                                                                  |
+| Local inputs             | Estado de entradas locais.                                                         |
+| Local relays             | Não implementado.                                                                  |
+
+---
+
+## Link digital de micro-ondas
+
+Para distâncias de **até 45 km**, pode ser utilizado um link de dados ponto a ponto em **5.8 GHz** (ou **2.4 GHz** dependendo do país), padrão **802.11.x**:
+
+- Banda **gratuita**, sem autorizações especiais.
+- Permite transportar áudio **PCM 16 bits / 44.1 kHz** (sem compressão) ou áudio **codificado**.
+- Suporta **conexão bidirecional** para aplicações especiais.
+
+<Info>
+  Para mais detalhes: [**info@solidynepro.com**](mailto:info@solidynepro.com)
+</Info>
+
+---
+
+## Alimentação dos módulos AoIP
+
+- Os módulos AoIP são alimentados via **USB**; requerem pelo menos **um USB** conectado a um **PC ligado**.
+- Sem PC por USB, ou com o PC desligado, o serviço IP **não estará disponível**.
+
+<Note>
+  Se não houver PC conectado, pode-se usar uma **fonte de alimentação USB padrão (5 V)** para energizar os módulos AoIP.
+</Note>

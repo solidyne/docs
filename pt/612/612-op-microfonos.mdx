@@ -1,0 +1,85 @@
+---
+title: "Canais de microfone"
+description: "Operação e ajustes dos canais de microfone"
+keywords: ["microfones", "phantom", "compressor"]
+tags: ["consoles de estúdio", "linha Classic", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "175194d3015d134231d30c4b5ed4b89668892f403c14f18fa08ca819533a5f7d"
+
+---
+
+## Descrição
+
+O console possui **dois canais de microfone**.
+
+<img
+  src="/images/612/612-panel-mic.png"
+  alt="612 Panel Mic Pn"
+  title="612 Panel Mic Pn"
+  className="mx-auto"
+  style={{ width:"52%" }}
+/>
+
+1. Ajuste de **ganho** da entrada.
+2. **_Tensão phantom 48V_**: É ativada para todos os microfones.
+3. **EQ.** Controles de ganho das bandas de frequência.
+4. **EQ.** Atribuição da saída do equalizador aos barramentos PGM e REC.
+5. **BUS:** Atribui o canal à saída PGM ou ao equalizador.
+6. **CUE:** Ativa a pré-escuta do fader principal (<Tooltip tip="Pre-Fader LEvel">PFL</Tooltip>)
+7. **OVL:** indica a zona correta de trabalho. Se o fader estiver abaixo desta indicação, indica ganho de entrada excessivo.
+8. **Fader:** Controle de nível principal. Deve trabalhar na zona marcada entre -20 e -10 dB.
+
+## Ajuste do ganho
+
+Nos canais de microfone, dependendo do locutor e distância ao microfone, pode ser necessário ajustar o ganho para trabalhar o atenuador na zona de operação correta: acima da indicação de sobrecarga **OVL (-30 dB)**.
+
+<Warning>
+  Em qualquer console, um excesso de ganho de entrada reduz a faixa dinâmica.\
+  Se o fader trabalha abaixo do OVL, o sinal é amplificado desnecessariamente e ocorrem **distorções por clipagem nos picos**.
+</Warning>
+
+---
+
+## Atribuição
+
+Cada canal pode:
+
+- Ser enviado diretamente ao ar (**PGM**).
+- Ser enviado ao equalizador.
+
+O sinal processado pode então ser enviado para **PGM** e **REC**. A posição OFF remove o sinal do BUS (não é um bypass).\
+Não é possível enviar um canal diretamente para REC.
+
+---
+
+## Equalização
+
+A equalização é comum para ambos os canais de microfone.
+
+- Os extremos do espectro trabalham em modo **Shelving**, com uma faixa de ±15 dB.
+- Os controles são projetados especificamente para a voz humana:
+
+| Banda         | Tipo     | Frequência central | Função principal                                |
+| ------------- | -------- | ------------------ | ---------------------------------------------- |
+| Graves        | Shelving | —                  | Adiciona "corpo" e "peso" à voz                |
+| Médios-graves | Peak EQ  | 160 Hz             | Controla ressonância ou _popeo_ em vozes masculinas |
+| Médios-agudos | Peak EQ  | 5 kHz              | Reduz problemas de **chiado** e sibilância     |
+| Agudos        | Shelving | —                  | Adiciona "presença" e melhora inteligibilidade |
+
+---
+
+## Compressão
+
+O **compressor** mantém constantes os picos da voz:
+
+- Atua sempre que a mixagem de microfones ultrapassa **0 VU**.
+- Abaixo desse nível, a faixa dinâmica permanece intacta.
+- Tem inclinação de compressão abrupta, com tempos de ataque e recuperação rápidos.
+- A ação é mostrada na torre principal:
+  - O indicador **MIC COMPRESSOR** mostra em decibéis a redução aplicada.

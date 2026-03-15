@@ -1,0 +1,107 @@
+---
+title: "Entradas"
+description: "Conexão das entradas"
+keywords: ["microfones", "phantom", "entradas", "USB"]
+tags: ["consolas de estudio", "linea Classic", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b5402ab0d381a6c1718c206e4ab9880e67ec9f774307660a470f37ef1d991c2f"
+
+---
+
+## Canais de entrada
+
+No painel traseiro do console estão concentrados todos os conectores de entrada e saída.
+
+<Note>
+  A qualidade da conexão das diferentes fontes ao console garante uma operação segura e livre de falhas. Tome o tempo necessário para realizar as conexões com cuidado, utilizando sempre materiais de primeira qualidade.
+</Note>
+
+## Entradas de microfone
+
+Os canais de microfone são balanceados eletronicamente e usam conectores XLR padrão.
+
+<img
+  src="/images/612/612-trasero-mics.jpg"
+  alt="612 Trasero Mics Jp"
+  title="612 Trasero Mics Jp"
+  className="mx-auto"
+  style={{ width:"43%" }}
+/>
+
+- Cada canal apresenta **dois conectores XLR**, somados internamente.
+- Ao utilizar dois microfones no mesmo canal, é recomendável que sejam da mesma marca e modelo, preferencialmente dinâmicos.
+- As diferenças de nível de voz são compensadas pelos compressores internos do console.
+
+A chave **48V**, localizada no painel frontal, ativa a alimentação phantom de 48V em todas as entradas.
+
+<Note>
+  Os microfones dinâmicos podem receber tensão phantom sem risco de dano, já que sua bobina móvel tem conexão flutuante que desacopla a tensão.
+</Note>
+
+## Entradas de linha
+
+Cada canal de linha possui duas entradas estéreo, selecionáveis a partir do painel frontal do console:
+
+<img
+  src="/images/612/612-trasero-lineas.jpg"
+  alt="612 Trasero Lineas Jp"
+  title="612 Trasero Lineas Jp"
+  className="mx-auto"
+  style={{ width:"46%" }}
+/>
+
+- **Canais 3 e 4:** entradas não balanceadas em conectores **RCA** (LIN-1 e LIN-2) e entradas balanceadas em um conector **DIN-5** (BAL-1 e BAL-2).
+- **Canal 5:** digital. É uma porta USB para conexão direta ao computador. Aceita uma entrada auxiliar não balanceada (RCA).
+
+<Note>
+  Em equipamentos com opção /AoIP, a entrada auxiliar LIN-2 fica internamente atribuída ao módulo de streaming e não pode ser usada para outros sinais.
+</Note>
+
+Para conectar equipamentos com saída balanceada é necessário montar um cabo DIN-5 para dois XLR fêmea ou para um conector TRS estéreo de ¼", conforme apropriado.
+
+**Distribuição DIN-5 para XLR**
+
+| <img   src="/images/612/612-DIN5-male.jpg"   alt="DIN5 Male"   style={{ width:"50px" }} />            <br />DIN-5 (estéreo balanceado) | <img   src="/images/612/612-XLR3-female.jpg"   alt="XLR3 Female"   style={{ width:"50px" }} />            <br />XLR Fêmea |
+| :------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
+| Pin 1 → Áudio (-) Direito                                                                                                             | Pin 1 → Terra (malha)                                                                                                      |
+| Pin 2 → Áudio (\+) Direito                                                                                                            | Pin 2 → Áudio (\+)                                                                                                         |
+| Pin 3 → Áudio (-) Esquerdo                                                                                                            | Pin 3 → Áudio (-)                                                                                                          |
+| Pin 4 → Áudio (\+) Direito                                                                                                            |                                                                                                                            |
+| Pin 5 → Áudio (\+) Esquerdo                                                                                                           |                                                                                                                            |
+
+- As entradas não balanceadas RCA aceitam equipamentos com saída -10 dBV sobre 10 kΩ (equipamentos domésticos).
+- O controle de ganho é comum a ambas as entradas e atua sempre sobre a entrada selecionada.
+
+## Entrada digital USB
+
+O Canal 5 conecta diretamente o console a um computador através de uma porta USB (cabo padrão USB A/B).
+
+- Compatível com portas 1.1, 2.0 e 3.0.
+- Recomenda-se usar cabos de 2-3 m de comprimento; não exceder 4 m mesmo com extensões.
+- Compatível com Windows® 7/10, Linux e macOS.
+- Os drivers são instalados automaticamente; não são necessários drivers adicionais.
+
+<Warning>
+  Antes de conectar o console ao PC via USB, verifique se o computador possui **aterramento** efetivo através do terminal de bronze no painel traseiro.
+
+  - Use um multímetro na escala de 25 VCA entre os chassis do PC e console; a leitura deve ser **0 V**.
+  - Se não houver conexão à terra, a entrada USB do console ou do PC poderá ser danificada.
+</Warning>
+
+Ao conectar o console ligado, o Windows® detecta um "dispositivo de reprodução USB" e um "dispositivo de gravação USB". No console, o indicador **Digital IN/Out** mostrará **U4**, confirmando que a entrada e saída estéreo foram reconhecidas.
+
+No Windows®, pode ser verificado em: **Painel de Controle → Dispositivos de som e áudio**, onde são definidos os dispositivos de reprodução e gravação padrão.
+
+Nos aplicativos de software, selecione os dispositivos USB de reprodução e gravação.
+
+Se o PC não tiver outra interface de áudio, o Windows® usará como padrão os dispositivos USB-1 (entrada Canal 5 e saída PGM/REC do D612).
+
+<Info>
+  O Canal 5 também dispõe de uma entrada auxiliar estéreo não balanceada com conectores RCA para equipamentos convencionais.
+</Info>

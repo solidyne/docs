@@ -1,0 +1,56 @@
+---
+title: "Cabeamento para monitoramento"
+description: "Cabeamento para monitoramento no Estúdio"
+keywords: ["instalação", "monitoramento", "studiobox"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "e2e6341ab3c421ee0391f88e87308bc8ff26fb75b532c97fd1d655f5c2b33efd"
+
+---
+
+## Conector de saída STUDIO MONITOR
+
+O conector de saída **STUDIO MONITOR** transporta os sinais de monitoramento para o estúdio principal (Estúdio A).
+
+As unidades de monitoramento **Solidyne StudioBox HD3 e HD5** são conectadas diretamente a esta saída através de um cabo **RJ45–RJ45 STP**, com conexão **pino a pino**.
+
+Quando não se utiliza uma StudioBox, o console inclui um cabo adaptador **RJ45 para conectores de áudio**, que permite conectar diretamente alto-falantes ativos e distribuidores de fones de ouvido no estúdio.
+
+<Warning>
+  A saída **STUDIO MONITOR** não deve ser conectada utilizando cabos diferentes do original nem através de adaptadores RJ45 genéricos. Isso pode causar falhas ou danos na saída Studio Monitor.
+</Warning>
+
+Os sinais presentes no conector **STUDIO MONITOR** são:
+
+| **PIN** | **SINAL**                        |
+| :-----: | -------------------------------- |
+| 1       | Fones Esquerdo (\+4 dBu)         |
+| 2       | Fones Direito                    |
+| 3       | GND                              |
+| 4       | ON-AIR (\+14 V)                  |
+| 5       | Talkback para Sala de Controle   |
+| 6       | VCC \+14 V                       |
+| 7       | Alto-falantes Esquerdo (\+4 dBu) |
+| 8       | Alto-falantes Direito            |
+|         | \*Chassi = GND                   |
+
+<img
+  src="/images/ux24/UNIDEX-StudioMonitoring.jpg"
+  alt="RJ45 vista frontal - Pinos conforme TIA-568B"
+  style={{ maxWidth:"350px",height:"auto",marginBottom:"1rem" }}
+  title=""
+/>
+
+---
+
+<Info>
+  **ESTÚDIO B no UX24**
+
+  Para configurar um circuito de monitoramento em um segundo estúdio, atribui-se uma das saídas gerais, configurada para ser **silenciada** quando o Estúdio B está ativo.
+</Info>

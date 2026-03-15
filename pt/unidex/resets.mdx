@@ -1,0 +1,97 @@
+---
+title: "Ligando, desligando e resets"
+description: "Inicialização e desligamento. Reiniciar módulos do sistema"
+keywords: ["ligando", "resets", "reinício"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "efeb32f71fba95da9fb2c805c27de9c68c98454cc5721c3a5376c2d428a6d749"
+
+---
+
+## Sequência de inicialização
+
+Ao ligar o console, o UNIDEX inicia seu sistema operacional. Uma vez completada a sequência de inicialização, é exibida a **tela principal** e são carregados:
+
+1. O **perfil de usuário padrão.**
+2. A **última cena ativa** antes do desligamento.
+
+## Perfil de usuário e permissões
+
+O perfil de usuário determina o **nível de acesso às funções** dentro do console.\
+Nas configurações, é possível definir qual perfil é carregado automaticamente ao ligar a unidade.\
+De fábrica, o console inicia com o perfil **ADMIN**, que tem acesso completo.
+
+### Níveis de usuário disponíveis
+
+1. **BASIC** – Acesso restrito a funções essenciais
+2. **EXPERT** – Acesso avançado (requer senha)
+3. **ADMIN** – Acesso total (requer senha)
+
+<Info>
+  Durante a inicialização, **não é solicitada senha**, mesmo se o perfil padrão tiver proteção.\
+  Para que o UX24 inicie em modo restrito e exija senha para acessar funções avançadas, é necessário **alterar o perfil padrão** para um diferente de ADMIN.
+</Info>
+
+Para mais informações sobre configuração de usuários, ver:\
+**SETTINGS → USERS**
+
+## Desligamento da CPU
+
+Os consoles UNIDEX possuem uma **CPU interna** que deve ser **desligada de forma segura** antes de desconectar o console completamente.
+
+### Procedimento de desligamento da CPU:
+
+1. Na **tela principal**, toque no ícone **"+"** localizado no setor **STATUS**.
+
+   <img
+     src="/images/ux/ux_home_status.png"
+     alt="Tela Principal - STATUS"
+     title="Tela Principal - STATUS"
+     style={{ width:"24%" }}
+   />
+2. Na janela pop-up, selecione a opção **POWER-OFF**.
+
+   <img
+     src="/images/ux/ux_status_poweroff.png"
+     alt="Status, resets and power-off"
+     title="Status, resets and power-off"
+     style={{ width:"53%" }}
+   />
+
+<Warning>
+  Esta função **não desliga todo o console**, apenas desliga a CPU principal do sistema.\
+  O desligamento total é realizado através da **chave mecânica** liga/desliga (no painel traseiro ou na fonte externa dependendo do modelo).
+</Warning>
+
+Após desligar a CPU, **aguarde alguns segundos** antes de desligar a unidade completamente, para permitir o encerramento correto dos processos internos.
+
+## Ações do sistema
+
+As ações do sistema estão disponíveis na tela principal, acessando a opção **STATUS → "+"**.
+
+Estas funções permitem **reiniciar separadamente diferentes estágios do sistema**, e não são utilizadas durante a operação normal.
+
+<Info>
+  As ações de reinício são ferramentas técnicas de manutenção.\
+  Em condições normais de uso, **não é necessário executá-las**.
+</Info>
+
+### Opções disponíveis
+
+- **RESET USB**\
+  Reinicia apenas o estágio USB.\
+  Força o sistema operacional a reconhecer novamente os dispositivos USB conectados.
+- **RESET MIXER**\
+  Reinicia o motor de mixagem interno do UNIDEX e a superfície de controle.\
+  Não afeta a CPU nem a tela.
+- **RESET DISPLAY**\
+  Reinicia o computador de bordo que gerencia o **streaming** e a **interface gráfica**.
+- **FULL RESET**\
+  Reinicia todos os estágios do sistema.\
+  Equivale a um desligamento completo e religamento do equipamento.

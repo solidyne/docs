@@ -1,0 +1,239 @@
+---
+title: "Modelos com opção AoIP"
+description: "D612 equipadas com serviços de streaming"
+keywords: ["AoIP", "streaming", "RTP", "firmware"]
+tags: ["consoles de estúdio", "linha Classic", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "06bc0a622b831f988f72153bf32ae0dbec7fa92815746dab47c6de1b31669af6"
+
+---
+
+import icecast from '/snippets/snippet-icecast-pt.mdx';
+
+## Introdução
+
+Os modelos com opção **/AoIP** incluem um módulo que gera streaming do sinal de programa, permitindo:
+
+- Conectar o console com a planta transmissora através de enlace de dados ponto a ponto. O áudio é enviado em PCM ou MP3 de baixa compressão, usando protocolo RTP.
+- Enviar ou receber áudio de outros consoles através da LAN (streaming RTP de outros equipamentos Solidyne com opção /AoIP).
+
+O console vem de fábrica com firmware **STL** para enlace Estúdio-Planta.\
+Pode ser atualizado para novas versões ou alterado para o modelo **Upstreamer**, compatível com servidores shoutcast/icecast.
+
+---
+
+## Atualização do firmware
+
+O firmware pode ser atualizado para:
+
+- Mudar para uma nova versão STL.
+- Migrar para o modelo Upstreamer (transmissão para servidores shoutcast/icecast).
+
+<icecast />
+
+---
+
+## Alimentação
+
+O módulo IP **é alimentado pela conexão USB**.
+
+- Só está disponível se o console estiver conectado a um computador via USB.
+- Se o PC estiver desligado, o serviço IP não funciona.
+- Alternativamente, pode-se usar uma **fonte de alimentação USB 5V padrão** conectada à porta.
+
+---
+
+## Enlace Estúdio-Planta (STL)
+
+Nos estúdios, o D612/IP opera como **codificador**, transmitindo streaming de áudio para a planta transmissora.
+
+Na planta, o streaming pode ser recebido através de:
+
+- Um decodificador dedicado (ex. Solidyne ADA102).
+- Um processador com decodificador integrado (ex. Solidyne 542 APC).
+- Um computador com software compatível, por exemplo VLC Player (não recomendado, reservado para testes ou casos de emergência).
+
+A conexão entre estúdio e planta pode ser feita via:
+
+- VPN.
+- Enlace físico ponto a ponto (ex. fibra).
+- Enlace de dados com antenas (micro-ondas).
+
+<Accordion title="Enlace de dados por micro-ondas" icon="signal">
+  - Banda: 5,8 GHz (ou 2,4 GHz em alguns países).
+  - Padrão: **802.11.x** (uso livre em todos os países).
+  - Alcance: até **45 km** sem obstáculos.
+  - Permite transmitir áudio PCM sem compressão (16 bits/48 kHz).
+  - Suporta também áudio codificado e aplicações bidirecionais.
+
+  Para mais detalhes: [**info@solidynepro.com**](mailto:info@solidynepro.com)
+</Accordion>
+
+---
+
+## Configuração do módulo IP
+
+A configuração é feita **através de um navegador** web. O equipamento vem de fábrica em modo **IP dinâmico (DHCP)**.
+
+<Warning>
+  As configurações detalhadas a seguir requerem conhecimentos em administração de redes.
+</Warning>
+
+### Passos de configuração
+
+1. Conecte o console à fonte de alimentação. Conecte a porta USB a um computador (ligado) ou a uma fonte externa USB (um carregador padrão).
+2. O módulo TCP anuncia o endereço IP atribuído por áudio:
+   - Coloque a chave BAL-LIN do Canal 4 em "LIN-2".
+   - Pressione **CUE** no Canal 4 e dê nível ao alto-falante CUE.
+3. Conecte o console a um roteador da rede através de cabo Ethernet. Este atribuirá IP por DHCP.
+4. Anote o endereço IP anunciado.
+   - Se não ouviu o anúncio ou não conseguiu anotar, desconecte e reconecte o cabo USB do console (com o PC ligado).
+5. Uma vez obtido o IP, o LED verde no RJ45 pisca indicando operação.
+   - Se não houver DHCP, o console buscará um IP livre (pode demorar minutos).
+6. Abra um navegador e digite o endereço IP anunciado.
+   - Será aberto o Painel de Controle IP do D612.
+
+<Note>
+     **Solidyne Multi-Discovery**
+
+     Se não tiver acesso físico ao console, você pode [**baixar a ferramenta Multi-Discovery**](/pt/612/612-discovery) que detecta dispositivos Solidyne conectados à rede.
+</Note>
+
+---
+
+### Endereço IP destino
+
+- Definido em `Configuration → Basic settings`.
+- De fábrica: modo `Studio Encoder.`
+
+<img
+  src="/images/612/612-streaming-basic_settings.jpg"
+  alt="612 Streaming Basic Settings Jp"
+  title="612 Streaming Basic Settings Jp"
+  style={{ width:"60%" }}
+/>
+
+**Configuração**
+
+- `Stream method`**:** Push (RTP).
+- `URL`**:** endereço IP ou DNS do receptor \+ porta destino.
+- Pressione **Apply** para confirmar.
+
+<Accordion title="Direcionamento de portas" icon="sparkles">
+  O endereço IP destino corresponde ao endereço externo da rede na Planta Transmissora, onde está conectado o DECODER (geralmente um IP estático atribuído pelo provedor de Internet).
+
+  Quando os pacotes de dados enviados pelo console alcançam o roteador ou firewall no extremo da planta, estes devem ser redirecionados para o endereço IP interno do DECODER (por exemplo, 192.168.0.30).
+
+  Como o D612/IP transmite sempre para um endereço IP e uma porta determinados, na planta todos os pacotes que chegarem a essa porta no endereço configurado do roteador devem ser encaminhados ao DECODER ou, na sua ausência, a um computador que processe o sinal de áudio.
+
+  Este procedimento é realizado através de redirecionamento de portas (port forwarding), que permite identificar quais pacotes devem ser entregues ao equipamento encarregado de convertê-los novamente em áudio.
+</Accordion>
+
+---
+
+### Opções de áudio
+
+São configuradas em `Configuration → Audio`:
+
+- `Input source`**:** Line Stereo (não modificar).
+- `Format`**:** MPEG Stereo.
+- `Sample rate`**:** 44,1 kHz.
+- `Quality`**:** 7 (highest).
+
+Isto gera um streaming de **192 kbps**.\
+Se a largura de banda permitir, pode-se usar PCM sem compressão em enlaces ponto a ponto.
+
+---
+
+### Tela inicial
+
+<img
+  src="/images/612/612-streaming-main.jpg"
+  alt="612 Streaming Main Jp"
+  title="612 Streaming Main Jp"
+  style={{ width:"58%" }}
+/>
+
+- `Site type`**:** modo de trabalho (ex. Studio Encoder).
+- `Stream mode`**:** evento ativo configurado.
+- `Keep-alive:` estratégia de manutenção de conexão.
+- `Connection status`**:** verde = conexão bem-sucedida; vermelho = erro.
+- `Incoming Stream`**:** estado do streaming entrante (inativo em modo encoder).
+- `Outgoing Stream`**:** estado do streaming sainte.
+- `Audio input`**:** fonte usada.
+- `Audio Format`**:** formato de codificação.
+- `Input/Output level`**:** níveis em dBfs.
+- `Relay, Remote inputs, Local inputs`**:** não implementados.
+
+---
+
+## Recepção na planta usando um computador
+
+Para receber streaming RTP com um PC:
+
+- Recomenda-se o **VLC Player** (http://www.videolan.org/vlc/).
+- Formatos suportados:
+  - MP3 44,1 kHz / Qualidade 7 (default).
+  - PCM16 @ 44,1 kHz (sem compressão).
+
+### Configuração no VLC
+
+1. Menu `Mídia → Abrir localização de rede`.
+2. Digite:
+
+   `rtp://[IP_fonte]:[porta]`
+
+   Exemplo: `rtp://0.0.0.0:3030`
+
+- `0.0.0.0` = qualquer IP entrante.
+- `3030` = porta usada.
+
+<Note>
+  Algumas versões do VLC também aceitam: `rtp://@:3030`
+</Note>
+
+---
+
+## D612/IP como receptor de streaming
+
+O console pode ser configurado como **DECODER** de um streaming RTP gerado por outro dispositivo.
+
+### Passos
+
+1. Acessar o módulo IP pelo navegador.
+2. Nas opções que aparecem na parte superior da janela, escolher **Location**
+3. Mudar de _Studio Encoder_ para **_Transmitter decoder_**. São adotados valores predeterminados para a recepção, que normalmente não é necessário modificar, com exceção das portas e endereços IP.
+4. Em `configuration`**→ ** `streaming`:
+   - Em `Port` inserir a porta usada pelo codificador.
+   - Em `URL` deixar `0.0.0.0`.
+   - Pressionar **Apply**.
+
+**Buffer RTP**
+
+No receptor é importante controlar o tamanho do buffer de entrada (RTP delay), que atua como memória para armazenar o streaming recebido e assim evitar interrupções de áudio (drops). Estas interrupções costumam aparecer quando a largura de banda disponível é insuficiente para a qualidade de áudio transmitida; em tais casos, o problema pode ser mitigado aumentando o tamanho do buffer.
+
+Deve-se ter em conta que, quanto maior o tamanho do buffer, maior será também o atraso introduzido na reprodução. O valor adequado dependerá tanto da largura de banda da rede quanto do formato de áudio utilizado.
+
+O buffer é expresso em milissegundos. Para transmissões em PCM, valores entre 40 e 80 ms são apropriados. Já para formatos com compressão são necessários tempos de buffer mais altos, devido ao processamento adicional que implica a decodificação do streaming comprimido.
+
+---
+
+## Áudio do streaming entrante
+
+O áudio decodificado é somado internamente à entrada auxiliar do **Canal 4 (LIN-2)**.
+
+Para enviá-lo ao ar:
+
+1. Comutar Canal 4 para **LIN-2**.
+2. Certificar-se de que não há sinal nas entradas RCA.
+3. Levantar o fader do canal.
+
+<Note>
+  Quando se usa o áudio do streaming, não se pode usar simultaneamente a entrada RCA do Canal 4, já que ambos os sinais são somados internamente.
+</Note>

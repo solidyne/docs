@@ -1,0 +1,220 @@
+---
+title: "Programação da campanha comercial"
+description: "Como cadastrar clientes, agendar anúncios e gerar a pauta comercial (.log) no Admicom"
+keywords: ["comerciais", "bloco", "publicidade", "programação"]
+tags: ["Software", "Admicom", "audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "08b6734f78a7d9417d09e6be5b0ecb94f49b9ac19b79ec9511eb8cd8fa739b74"
+
+---
+
+Esta seção permite **cadastrar Fichas de Cliente**, **definir a programação** dos anúncios e **gerar os arquivos de pauta comercial** (`.log`). Antes de começar, certifique-se de ter configurado:
+
+- A **grade de blocos comerciais** em **Configuração Emissora → Bloco comercial**.
+- As **categorias de cliente** (e suas **prioridades**) em **Configuração Comercial → Categoria de cliente**.
+- Os **ramos comerciais** em **Configuração Comercial → Ramo comercial**.
+- Os **meios de pagamento** em **Configuração Comercial → Meio de pagamento**.
+
+---
+
+## Ficha do Cliente
+
+Acesse **Programação campanha → Cliente** para registrar um cliente na base de dados do Admicom.\
+Cada cliente está associado a uma **Categoria**, e **essa categoria define a prioridade de transmissão** de todos os seus anúncios. Essa prioridade é utilizada quando:
+
+- Vários comerciais do **mesmo ramo** competem por um bloco que **não aceita repetição de ramos**.
+- Dois ou mais anúncios com **mesma "posição no bloco"** competem dentro de um mesmo bloco.
+
+Preencha a ficha e clique em **Salvar** para confirmar.
+
+---
+
+## Comercial (agendamento da campanha)
+
+O núcleo do Admicom está em **Programação Campanha → Comercial**. Aqui você define **o que será transmitido, quando e como**.
+
+### Dados principais
+
+- **Estação**: emissora para a qual o anúncio está agendado (abreviação e nome completo).
+- **Agência**: agência de publicidade (opcional).
+- **Cliente**: titular do anúncio (deve existir em "Cliente").
+- **Nome**: identificador da campanha (ex.: _Celuphone Dia dos Pais_).
+- **Ramo**: ramo comercial associado.
+- **Executivo**: vendedor que negociou a pauta (opcional).
+- **Nº Interno / Nº de Ordem da Agência**: referências administrativas.
+- **Origem**: rótulo de agrupamento (ex.: _Troca_, _Pauta estatal_, _Bem público_).
+- **Meio de pagamento**: configurado na seção comercial.
+- **Comentários**: texto livre.
+- **Bruto**: valor **fixo mensal** (se aplicável). **Soma-se** ao valor variável por segundo.
+- **Prop. Agência**: percentual de comissão da agência.
+- **Descontos**: valor de descontos aplicados.
+
+### Controles da janela de agendamento
+
+- **Buscar campanha**: lista anúncios ativos; pode filtrar por **Emissora**, **Cliente** ou **Arquivo**.
+  - **Ativo** (padrão): mostra anúncios **atuais e futuros**.\
+    Se desativar **Ativo**, também verá **contratos vencidos** (em vermelho).\
+    Após alterar esta opção, clique em **Buscar** novamente para atualizar os resultados.
+  - Para revisar/modificar um anúncio, dê **duplo clique** no resultado.
+- **Novo**: limpa campos para inserir um anúncio do zero.
+- **Modificar**: edita o agendamento do anúncio atual.
+- **Excluir**: remove o agendamento do anúncio atual.
+- **Copiar**: duplica o agendamento para **replicá-lo em outras emissoras** da rede.
+- **Anula e substitui**: clona a campanha para **modificar sem perder o histórico**.\
+  A original fica como `[ordem]/0`; a substituição passa a `[ordem]/1`, e assim por diante.\
+  O efeito prático é **dividir** a campanha em passado (até hoje, `/0`) e **novo esquema** a partir de amanhã (`/1`).
+
+---
+
+## Campanha de um anúncio
+
+É possível combinar duas formas de agendamento: **Programação detalhada** (por dia/horário específicos) e **Programação simples** (regras gerais).\
+Se um anúncio estiver programado **em ambos os modos**, **as exibições serão somadas**.
+
+### Programação detalhada
+
+Permite agendar exibições **em datas e faixas horárias específicas** de um mês.
+
+1. **Selecione o mês** no calendário.
+2. Clique em **Novo** para criar um agendamento detalhado.
+3. Preencha os parâmetros:
+
+**Parâmetros disponíveis**
+
+- **Tipo de comercial**:
+  - **Convencional (Áudio)**, **PNT** (menção ao vivo) ou **Auspício**.
+- **Arquivo e Duração**: selecione o áudio; a duração é preenchida automaticamente.\
+  Existem controles para **ouvir** o arquivo.
+- **Hora início / fim**: faixa horária para este agendamento detalhado.
+- **Valor Seg**: tarifa **por segundo** válida para estas exibições.
+- **Posição no bloco**: _Início_, _Segundo anúncio_, _Penúltimo_, _Encerramento_ ou _Indiferente_.\
+  Se houver competição pela mesma posição, a ordem é definida pela **prioridade da categoria** do cliente.
+- **Texto PNT**: se for uma menção ao vivo, aqui vai o texto que o locutor verá no WebTools.
+
+<Note>
+  **Auspícios**: para serem transmitidos, precisam estar **no horário exato** e **deve existir um bloco** nesse horário. Os auspicíos **não** aparecem na pauta comercial; são relatados por meio de **relatórios de auspicíos**.
+</Note>
+
+Na grade do mês, cada célula representa um **dia** dentro da **faixa horária** escolhida: **informe a quantidade de exibições** por célula.\
+Esta modalidade facilita ajustes para **picos de audiência** ou **metas diárias**.
+
+---
+
+### Programação simples
+
+Define regras gerais de exibição (por **vigência**, **dias**, **faixa horária**, **programas** ou **horário exato**).
+
+**Campos comuns**
+
+- **Tipo de comercial**: Convencional, PNT ou Auspício.
+- **Arquivo e Duração**: a duração é preenchida automaticamente ao carregar o áudio.
+- **Posição no bloco**: _Início_, _Segundo anúncio_, _Penúltimo_, _Encerramento_, _Indiferente_.\
+  Em empates, prioriza-se a **categoria** do cliente.
+- **Locutor**: identifica **voz masculina** ou **feminina** (útil para PNT).
+- **Data Ini. / Data Fim**: vigência do agendamento.\
+  Deixe **Data Fim vazia** para continuidade **indefinida**.
+- **Valor Seg**: valor por segundo a ser faturado por cada exibição.
+- **Texto PNT**: o texto que o locutor verá no WebTools.
+- **Dias da semana**: selecione em quais dias será transmitido.
+
+**Modalidades de agendamento**
+
+- **Por FAIXA HORÁRIA**\
+  Defina um intervalo (ex. 10:00–22:00) e a **quantidade de inserções** nesse intervalo (ex. 4).\
+  Se a quantidade **coincidir** com a **quantidade de blocos** existentes nesse intervalo, a distribuição típica será **uma inserção por bloco**.
+
+  <Note>
+    Você pode **contar os blocos** de um dia consultando os arquivos **LOG** no **CyberPlay Editor** (os blocos são numerados na geração).
+  </Note>
+- **Por PROGRAMA**\
+  Associe o anúncio a **programas/segmentos** definidos em **Configuração Emissora → Bloco comercial**.\
+  A vantagem é operacional: **se o programa mudar de dia ou horário**, o anúncio é **reposicionado automaticamente** sem editar cada agendamento.
+- **Por HORÁRIO EXATO**\
+  São **especificados os horários** nos quais o anúncio deverá ser programado.\
+  **Obviamente, deve existir um bloco** definido para esse horário.\
+  **Se não houver bloco** nesse horário, o anúncio será programado no **bloco mais próximo**.\
+  Para **inserir um horário**, digite-o no campo e clique em **"Adicionar horário"** para incluí-lo na lista.\
+  **"Excluir horário"** remove o horário selecionado da lista.
+
+---
+
+## Boas práticas e lembretes
+
+- Combine **Programação simples** (regras globais) com **Detalhada** (ajuste fino por dia/horário) para otimizar **cobertura** e **frequência**.
+- Respeite os **limites de minutos por hora** (definidos por regulamentação ou por “Tempo máximo de bloco” na emissora).\
+  O Admicom **não excederá** esse limite; em caso de saturação, recusará anúncios conforme **prioridade**.
+- Use **"Anula e substitui"** para **versionar campanhas** sem perder registros; evite editar diretamente campanhas históricas.
+
+---
+
+## Funções especiais para programação de anúncios
+
+### Anúncios alternados
+É possível inserir manualmente no campo "arquivo" dois ou mais anúncios diferentes, separados por um caractere **pipe** (`|`). Dessa forma, os anúncios serão programados de forma alternada. O limite de anúncios é determinado pelo tamanho do campo "título". Os nomes dos arquivos devem ser digitados manualmente, sem extensão.
+
+**Exemplo:**  
+`YPF-1|YPF-2`  
+Neste caso, serão programados alternadamente os anúncios `YPF-1` e `YPF-2`.
+
+---
+
+### Anúncios concatenados
+É possível relacionar até dois anúncios para que sejam agendados um após o outro. Os nomes dos anúncios são escritos em sequência e separados pelo sinal `>` (maior que). Também não é necessário escrever a extensão do arquivo.
+
+**Exemplo:**  
+`anuncio1>anuncio2`  
+
+Isso gerará a seguinte sequência no bloco:  
+- `ANUNCIO1`  
+- `ANUNCIO2`  
+
+Os nomes de arquivo também podem ser combinados com instruções AUDICOM. Isso é útil para anúncios de hora, temperatura etc.
+
+**Exemplo:**  
+`AUSPICIO_TEMPO>/TEMP`  
+
+Gerará na pauta:  
+- `AUSPICIO_TEMPO`  
+- `/TEMP`
+
+---
+
+### Instruções AUDICOM
+Algumas instruções do AUDICOM podem ser programadas como se fossem anúncios comerciais. Para isso, são inseridas manualmente no lugar do nome do arquivo. Recomenda-se criar uma categoria dedicada para essas instruções.
+
+- **Meteor:** Instruções como `/Time`, `/Temp`, `/Hum`, `/Pres`, `/Meteor` programam os anúncios meteorológicos com as vozes pré-gravadas.  
+  Crie uma campanha especial com o cliente `AUDICOM` e agende as instruções por horário de transmissão.  
+
+- **Random:** A instrução `/RND,<Pasta>,<Quantidade>` reproduz um arquivo aleatório da pasta indicada.  
+  Exemplo: `/RND,Segurança Viária,1`  
+  Cada vez que for agendada, será transmitido um arquivo escolhido aleatoriamente da pasta `Segurança Viária`.  
+
+- **Pausas:** A instrução `/Pause` insere uma pausa no bloco comercial, interrompendo temporariamente a reprodução no programa de Ar.
+
+---
+
+## Gerar Bloco
+(Programação Campanha → Gerar Bloco) Aqui são gerados os arquivos de programação comercial que a terminal de Ar AUDICOM utiliza para construir a grade integrada no CyberPlay (blocos + música + eventos ao vivo).
+
+**Passos:**
+1. Definir em `Data Início` e `Data Fim` o intervalo de dias para gerar a pauta comercial. Por padrão, só é criada a pauta do dia atual, mas uma semana inteira pode ser gerada.  
+2. Escolher na lista as emissoras para as quais a pauta será gerada.  
+3. Clicar em **Gerar**. O Admicom produzirá os arquivos de agendamento comercial (`.log`) para os dias selecionados.
+
+Os blocos gerados podem ser visualizados no módulo **CyberPlay Editor**, que exibe a grade integrada (blocos, música, eventos). Além disso, o módulo **Aaudit** permite obter relatórios do que foi efetivamente transmitido ao ar.
+
+---
+
+### Anúncios recusados
+Ao finalizar a geração dos blocos, é exibido um relatório com os anúncios recusados, indicando o cliente e o bloco/segmento correspondente. As causas podem ser:
+
+- **SEG:** Tempo excedido. Foi atingido o máximo de publicidade permitido por hora (definido em `Configuração Emissora → Estação`). Todos os blocos dessa hora recusarão novos anúncios.  
+- **CAT:** Conflito de categoria. Dois anúncios do mesmo ramo tentam entrar em um bloco que não permite repetição. Só será transmitido o de maior prioridade.  
+- **POS:** Conflito de posições. Dois anúncios com mesma prioridade e posição competem em um bloco. Verifique a prioridade das categorias ou altere a posição no bloco.  
+- **REP:** Anúncio repetido. Foi tentado programar o mesmo anúncio duas vezes no mesmo bloco, o que não é permitido.

@@ -1,0 +1,157 @@
+---
+title: "Monitoramento e comunicação interna"
+description: "Operação da UX24 - Monitoramento e comunicação interna"
+keywords: ["operação", "monitoramento", "cue", "talkback", "studio monitor", "fones de ouvido", "studiobox"]
+tags: ["consoles IP", "UNIDEX", "UX18", "studiobox"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5ad6c5eacb836dbfacee303edc5927953dec04a71095fe26529e5983bdebfdc7"
+
+---
+
+## Seção de monitoramento
+
+A seção de monitoramento é composta por:
+
+- Os **controles de nível** para alto-falantes, fones de ouvido e CUE localizados na superfície do console.
+- A **tela MONITOR** para atribuição de sinais.
+
+## Tela MONITOR
+
+MONITOR é acessado pressionando o botão de acesso rápido localizado à direita da tela. Nesta tela são atribuídas as fontes de áudio que serão ouvidas nos alto-falantes monitores e fones de ouvido do Estúdio e da Sala de Controle.
+
+<img
+  src="/images/ux24/ux18-pantalla-MONITOR.png"
+  alt="UX18 Pantalla MONITOR"
+  title="UX18 Pantalla MONITOR"
+  className="mx-auto"
+  style={{ width:"66%" }}
+/>
+
+<Note>
+  A atribuição é feita simplesmente tocando em cada opção. A opção selecionada é indicada em azul claro.
+</Note>
+
+### STUDIO (Monitoramento no Estúdio)
+
+Seleciona a fonte enviada para a saída **STUDIO MONITOR**.\
+Opções: `AIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`, `CUE`.
+
+- O nível para alto-falantes e fones de ouvido do Estúdio é ajustado na opção **\+ADVANCED**. Geralmente este nível é deixado fixo e cada participante ajusta seu próprio nível a partir de um distribuidor de fones.
+- Em rádios de ambiente único, os alto-falantes monitores podem ser conectados à saída **Control Room** para aproveitar o botão físico de volume.
+
+### CONTROL ROOM (Monitoramento na Sala de Controle)
+
+Permite selecionar a fonte enviada aos alto-falantes e fones de ouvido **CONTROL ROOM**.\
+Opções: `ONAIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`.
+
+<Note>
+  **Silenciamento dos alto-falantes de Controle:**\
+  Quando um microfone é usado na Sala de Controle, pode-se configurar para que a saída dos alto-falantes de controle seja silenciada ao ativá-lo (ver _Tela de Canal_).\
+  Isso também é usado em emissoras de estúdio único ou "cabine quente", conectando os alto-falantes de monitoramento à saída **Control Room** e configurando todos os microfones como "localizados na Sala de Controle" para habilitar o silenciamento automático.
+</Note>
+
+Os botões **CUE SUM** SPEAKER e PHONES permitem injetar o sinal CUE nos monitores e/ou fones de ouvido da Sala de Controle.
+
+- Quando ativos, o sinal CUE é somado ao sinal monitorado.
+- O sinal principal é atenuado automaticamente quando entra um sinal CUE.
+- O grau de atenuação é configurado na tela **\+ADVANCED**.
+
+O bus CUE pode ser atribuído a qualquer saída para conexão de alto-falantes auxiliares. Por padrão, está atribuído à **OUTPUT 4**.
+
+#### Nível CUE
+
+Na tela é mostrado um indicador calibrado em dBfs, que reflete o nível posterior ao controle de CUE. Se o atenuador estiver fechado, não haverá indicação.
+
+**CUE RESET**\
+Desliga todos os botões CUE ativos no console.
+
+### MONITOR: \+ADVANCED
+
+Mostra controles de nível e ajustes avançados para os sinais de monitoramento.
+
+<img
+  src="/images/ux24/ux18-monitor-advanced.png"
+  alt="UX18 Monitor Opeciones Advanzadas"
+  title="UX18 Monitor Opeciones Advanzadas"
+  className="mx-auto"
+  style={{ width:"68%" }}
+/>
+
+<Note>
+  Para alterar um valor, toque no controle e gire o encoder. Pressione o encoder para confirmar.
+</Note>
+
+**Studio Speaker**\
+Ajusta o nível de sinal para os alto-falantes conectados à saída **Studio Monitor**.\
+A saída é de nível de linha, projetada para alto-falantes ativos.
+
+**Studio Headphones**\
+Ajusta o nível de sinal para os fones de ouvido conectados à saída **Studio Monitor**.\
+É projetada para alimentar um distribuidor de fones.
+
+<Warning>
+  **Nota sobre níveis de monitoramento:**\
+  O nível das saídas de alto-falantes e fones de ouvido do Estúdio deve ser ajustado para evitar amplificação excessiva nos monitores ativos ou no distribuidor de fones.\
+  Se o sinal do console estiver muito baixo e for amplificado posteriormente, a relação sinal/ruído será degradada.
+</Warning>
+
+**ON-AIR Input Gain**\
+Controla o ganho da entrada **Air Monitor Input** (sintonizador externo).
+
+**RING Level**\
+Nível do tom de "ring" em **CUE**, gerado pelo console quando recebe uma chamada por linha telefônica fixa ou Bluetooth.
+
+**Talk-Back Mic Level**\
+Ajusta o nível do microfone de talkback para o monitoramento de Estúdio, Intercom e linhas telefônicas.
+
+**Talk-Back Mic Source**\
+Define a entrada de microfone utilizada para talkback (Estúdios, TELCO e Intercom).\
+Opções:
+
+- Microfone ambiente incorporado.
+- Entradas de microfone 1 a 4.
+- UNIDEX-4 L e UNIDEX-4 R.
+- DANTE #1 (quando disponível)
+
+A entrada atribuída ao talkback pode ser também atribuída a um canal, por exemplo, para colocar esse microfone no ar.
+
+**Control Room CUE Sum Audio Att**\
+Define a atenuação do sinal que está sendo monitorado na Sala de Controle quando um sinal CUE é sobreposto em alto-falantes e/ou fones.\
+Esta atenuação também se aplica ao acionar um botão de talkback (para estúdios ou linha telefônica) ou um Intercom.
+
+## Control room, Master-MIC e talkback
+
+<img
+  src="/images/ux24/ux18-zonas-monitor.png"
+  alt="UX18 Zona Monitor"
+  title="UX18 Zona Monitor"
+  style={{ width:"15%" }}
+  className="mx-auto"
+/>
+
+### MASTER ON-AIR MICS (1)
+
+Ativa/desativa simultaneamente todos os canais de microfone e grupos atribuídos ao botão MASTER.
+
+### Nível nos monitores de Controle (2)
+
+Atenuador rotativo que ajusta o nível dos alto-falantes conectados à saída **Control Room**.\
+A saída é de nível de linha para alto-falantes ativos (amplificados). O nível máximo alcançado dependerá também do ajuste dos próprios monitores.
+
+### Nível nos fones de Controle (3)
+
+Atenuador rotativo para o nível dos fones de ouvido do operador (conectados a **Control Room Headphones**).
+
+### Nível em CUE (4)
+
+É um atenuador rotativo que controla o nível do bus CUE. A tela principal mostra um indicador de nível CUE, calibrado em dBfs. O indicador mostra o nível de saída posterior ao controle de nível CUE; portanto, não haverá indicação se o atenuador CUE estiver fechado.
+
+### Botão e microfone de Talk-Back
+
+Ao pressionar este botão, o microfone Talk-Back é enviado para a saída STUDIO (alto-falantes e fones). Nos fones de ouvido, Talk-Back é reproduzido pelo canal esquerdo enquanto o sinal de programa (ou outro sinal atribuído) é mantido no canal direito.

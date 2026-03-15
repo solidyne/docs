@@ -1,0 +1,154 @@
+---
+title: "Media Manager"
+description: "Gerenciador de mídia e banco de dados"
+keywords: ["media Manager","banco de dados"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "66eb0e196a59ad97f279145209570a887160916d4bca74f57133f9918d35147a"
+
+---
+
+## Gerenciamento de mídia e buscas
+
+Nesta janela é possível realizar as seguintes operações:
+
+- Visualizar e modificar informações no **Banco de Dados**.
+- Realizar **buscas múltiplas** (por título, intérprete, estilo, etc.).
+- **Ouvir/visualizar em prévia (CUE)** o material.
+- **Inserir títulos no CyberPlay** (arrastar e soltar ou seta de inserção).
+- Modificar o **tempo de crossfade** do áudio.
+- Modificar o **tempo de Intro** do material.
+- Marcar **ponto de início** (_Start_).
+- Marcar **ponto de término** (_End_).
+
+---
+
+## Usos no terminal de Ar
+
+Há três modos principais de operação:
+
+1. **Acompanhamento da programação.**
+2. **Busca e acesso** a títulos no Banco de Dados.
+3. **Pré-escuta** de arquivos (CUE).
+
+### Acompanhamento da programação
+
+- O InfoMusic mostra em tempo real as informações do título que está no ar.
+- O operador pode **modificar parâmetros** e **salvar** no Banco de Dados (botão **Salvar**) sempre que seu **perfil de usuário** permitir.
+
+### Busca e acesso de títulos
+
+- Pressione **Clear** para suspender o acompanhamento e entrar no **modo Busca** (o botão muda para **A/Z Search**).
+- Configure filtros (Título, Intérprete, Estilo, etc.) e pressione **Search**.
+
+**Resultados de busca**
+
+- São exibidos em **janelas auxiliares** redimensionáveis.
+- Uma segunda busca abre uma segunda janela; a terceira substitui o conteúdo da primeira; a quarta substitui a segunda, e assim sucessivamente.
+- Para trabalhar com **uma única janela**, feche a janela 1 antes de uma nova busca.
+- Para **reter** a busca na janela 1 e usar a janela 2 para novas buscas, feche a janela 2 após cada busca.
+
+**Inserção no CyberPlay**
+
+- Na janela de resultados você pode **arrastar** títulos para o **CyberPlay**, ou usar a **Seta de Inserção** (insere sobre o **cursor amarelo** no CyberPlay).
+
+<Note>
+  Os menus (Estilo, Intérprete, etc.) são **atualizados ao abrir** o InfoMusic.\
+  Se novos Estilos/Intérpretes forem adicionados em Produção, eles não aparecerão até **fechar e reabrir** o InfoMusic no Ar.\
+  Para mais informações consulte **InfoMusic – Produção**.
+</Note>
+
+---
+
+## Crossfades, Intro e marcas de Início/Término
+
+No InfoMusic Ar podem ser visualizados e editados:
+
+- **Crossfade** (crossfade) do título atual.
+- **Intro** (tempo desde o início musical até a entrada da voz).
+- **Start/End** (marcas de **início** e **término** de reprodução).
+
+### Crossfade
+
+- Os tempos de crossfade são armazenados no **Banco de Dados**.
+- No Ar, eles podem ser alterados **apenas para a instância atual** ou **definitivamente** (botão **Salvar**).
+- A janela mostra **graficamente** o título e como ele se sobrepõe ao anterior/próximo.
+- Ajuste arrastando os **controles azuis** (sobreposição de **0 a 5 s**).
+
+**Critérios de aplicação**
+
+- Se dois títulos tiverem tempos diferentes, usa-se o **menor**.
+- **Fade In**: sempre 0 (o valor de _Fade In_ é tempo de sobreposição no início).
+- **Fade Out**: ajusta automaticamente de acordo com o valor do crossfade para um melhor resultado artístico.
+
+**Persistência de alterações**
+
+- **Salvar** grava no Banco de Dados (se o perfil permitir).
+- Se não salvar, a alteração vale apenas para a **inserção atual** do título.
+
+<Warning>
+  As modificações em duração e crossfade **só se aplicam** a partir do **segundo título** abaixo daquele que está em reprodução.\
+  Se editar o título **em reprodução** ou o **imediatamente seguinte**, as alterações são **ignoradas** (o sistema pré-calcula crossfades por desempenho).
+</Warning>
+
+### Intro
+
+Permite definir ou modificar o **tempo de introdução**:
+
+1. Pressione **Play** (no InfoMusic Ar) para reproduzir em **prévia**.
+2. Quando terminar a intro, pressione **SET** → o display **INTRO** mostra o valor.
+3. Se pressionar **SET** com o CUE parado, o valor volta para **0**.
+4. Ajustes finos com as **setas**:
+   - **Botão esquerdo**: passos de **1 s**.
+   - **Botão direito**: passos de **0,1 s**.
+   - Manter pressionado acelera a alteração.
+5. Pressione **Salvar** para persistir (conforme permissões).
+
+<Note>
+  Os tempos de **Intro** normalmente são definidos no **Terminal de Produção/Gravação**.
+</Note>
+
+### Tempo de início (Start Time)
+
+- Reproduza em **CUE** (Play do InfoMusic Ar) e pressione **SET** no ponto desejado.
+- **SET** com CUE parado → volta para **0**.
+- Atalhos de precisão: **CTRL + Setas Esq/Dir**
+  - A prévia entra em **loop de 0,5 s**.
+  - Pressionamentos repetidos movem a marca de **INÍCIO** em passos de **0,5 s**.
+- **Salvar** para persistir (se o perfil permitir).
+
+### Tempo de término (End Time)
+
+- Reproduza em **CUE** e pressione **SET** onde o tema deve **terminar**.
+- **SET** com CUE em Stop → display em **0**.
+- Atalhos: **CTRL + Setas Esq/Dir**
+  - Loop de **0,5 s** para precisão.
+  - Ajusta a marca de **TÉRMINO** em passos de **0,5 s**.
+- **Salvar** para persistir (se o perfil permitir).
+
+---
+
+## Controle via teclado (Funções InfoMusic)
+
+- **F5 – Busca**: executa a busca com os parâmetros carregados.
+- **F6 – Limpar campos**: suspende acompanhamento, entra em **Busca** e limpa todos os campos (exceto **Classe**).
+- **F7 – Estilo**: abre menu **Estilo** (navegar com setas, confirmar com Enter).
+  - Se estivesse em acompanhamento, passa para **Busca** mantendo apenas **Estilo**.
+- **F8 – Gênero**: mesmo critério, para **Gênero**.
+- **F9 – Autor**: mesmo critério, para **Autor**.
+- **F10 – Intérprete**: mesmo critério, para **Intérprete**.
+- **F11 – Top Hit**: mesmo critério, para **Top Hit**.
+- **F12 – Abrir/Fechar InfoMusic**.
+- **CTRL + Setas Esq/Dir**: movimenta marcas de **INÍCIO/TÉRMINO** (conforme qual estiver ativa) em passos de **0,5 s**.
+
+<Info>
+  Exemplo de uso do F7 durante acompanhamento:\
+  Se estiver tocando um tema catalogado como "Clássicos-Pop" e você pressionar **F7**, o InfoMusic limpa todos os campos exceto **Estilo = Clássicos-Pop**.\
+  Em seguida, **F5** retorna todos os títulos desse estilo.
+</Info>

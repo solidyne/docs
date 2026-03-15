@@ -1,0 +1,137 @@
+---
+title: "Link com o Estúdio"
+description: "Conexão à Internet e métodos de transmissão."
+keywords: ["Internet","Wi-Fi","Ethernet","4G"]
+tags: ["consolas portáteis", "exteriores", "CODECS", "links", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "e677361229523ca49c7009ace0dd67b6a457af4410fa82690cd694446a3805e8"
+
+---
+
+## Introdução
+
+A transmissão para os estúdios pode ser estabelecida de diferentes formas:
+
+1. **Áudio digital via Internet**
+   - Chamada SIP (full-duplex com mínimo atraso).
+   - Streaming RTP (somente transmissão).
+   - Servidor Shoutcast/Icecast.
+2. **Chamada telefônica móvel** (Bluetooth).
+3. **Chamada telefônica fixa** (POTS).
+
+Na prática, uma vez configuradas as opções de transmissão pela Internet, o usuário só precisa **conectar a MX2200 à Internet** e iniciar a transmissão desejada, sem necessidade de configurações adicionais.
+
+As formas de transmissão podem ser combinadas, seja para ter um **backup** (ex. SIP + celular) ou como **complemento** (streaming RTP + comunicação telefônica privada com o estúdio).
+
+---
+
+## Conexão à Internet
+
+O CODEC-MIXER MX2200 pode se conectar à Internet de três maneiras. Apenas **uma conexão** pode estar ativa por vez, embora seja possível configurar mais de uma para que, se uma falhar, a console restabeleça a conexão automaticamente por outra via.
+
+<Tabs>
+  <Tab title="Conexão Wi-Fi">
+    <Steps>
+      <Step title="Conectar antena">
+        <img
+          src="/images/mx2200/mx2200-antena.png"
+          alt="Mx2200 Antena Pn"
+          title="Mx2200 Antena Pn"
+          style={{ width:"15%" }}
+        />
+
+        Conecte a antena Wi-Fi (fornecida) a uma porta USB traseira identificada como **Wi-Fi**.
+
+        <Tip>
+          Se já reconhece uma rede utilizada anteriormente e as credenciais ainda são válidas, a conexão será automática, não sendo necessários os passos seguintes.
+        </Tip>
+      </Step>
+      <Step title="Verificar conexão">
+        Na parte superior da tela HOME aparecerá o ícone Wi-Fi. Inicialmente será mostrado em cinza (sem sinal).
+      </Step>
+      <Step title="Acessar redes disponíveis">
+        Gire o encoder até **SETUP**, pressione para acessar, e depois selecione **Wi-Fi**.\
+        Será mostrada uma lista de redes disponíveis.
+
+        <img
+          src="/images/mx2200/mx2200-setup_WiFi.bmp"
+          alt="Mx2200 Setup Wi Fi Bm"
+          title="Mx2200 Setup Wi Fi Bm"
+          style={{ width:"47%" }}
+        />
+      </Step>
+      <Step title="Selecionar e conectar">
+        Escolha a rede desejada e insira a senha com o teclado **DATA ENTRY**.
+
+        <img
+          src="/images/mx2200/mx2200-display-wifi.pass.png"
+          alt="Mx2200 Display Wifi Pass Pn"
+          title="Mx2200 Display Wifi Pass Pn"
+          style={{ width:"48%" }}
+        />
+
+        - Se a senha estiver correta, a rede atribui um endereço IP (visível em **SETUP/Wi-Fi**). Isso pode demorar alguns segundos.
+        - Se estiver incorreta, o IP permanecerá em **0.0.0.0** e você deverá repetir o procedimento.
+      </Step>
+      <Step title="Confirmar conexão">
+        Uma vez conectada, o ícone Wi-Fi na tela principal mostrará a **intensidade do sinal**.\
+        O equipamento está pronto para chamadas SIP, streaming RTP ou conexão a servidor web.
+      </Step>
+    </Steps>
+    <Note>
+      Você pode verificar o acesso à Internet conectando um celular ou notebook à mesma rede Wi-Fi e navegando na web.\
+      Também é possível usar um **telefone celular em modo Hotspot**, criando um ponto Wi-Fi ao qual a MX2200 se conectará.
+    </Note>
+    <Warning>
+      **Redes públicas abertas**\
+      Verifique sempre a rede utilizada. Em redes abertas com login web, a MX2200 pode indicar "conexão OK" mesmo que não haja acesso real à Internet.
+    </Warning>
+  </Tab>
+  <Tab title="Conexão Ethernet">
+    <Steps>
+      <Step title="Conectar cabo">
+        Com um cabo UTP padrão, conecte a porta **Ethernet** da MX2200 à rede local.
+      </Step>
+      <Step title="Atribuição de IP">
+        De fábrica a console tem **DHCP habilitado**, então o router/switch atribuirá automaticamente um endereço IP.
+      </Step>
+      <Step title="Verificar IP">
+        Na tela **SETUP** confirme que foi atribuído um endereço válido (diferente de **0.0.0.0**).
+      </Step>
+    </Steps>
+    <Note>
+      Para verificar o acesso à Internet, conecte um notebook à mesma rede e abra um navegador web.
+    </Note>
+  </Tab>
+  <Tab title="Conexão 4G/5G">
+    <Steps>
+      <Step title="Conectar modem USB">
+        Conecte um **modem USB 4G/5G** (não fornecido) às portas traseiras indicadas.\
+        Use um cabo extensor USB de pelo menos **30 cm**.
+
+        <img
+          src="/images/mx2200/mx2200-MODEM.png"
+          alt="Mx2200 MODEM Pn"
+          title="Mx2200 MODEM Pn"
+          style={{ width:"49%" }}
+        />
+      </Step>
+      <Step title="Verificar ícone">
+        Uma vez detectado, o ícone **4G** será mostrado na tela principal.
+      </Step>
+      <Step title="Confirmar operação">
+        O equipamento está pronto para iniciar chamadas SIP, streaming RTP ou conexão a servidor web.
+      </Step>
+    </Steps>
+    <Warning>
+      Não conecte o modem **diretamente** à console: pode causar **interferências no áudio**.\
+      Use sempre o cabo extensor USB.
+    </Warning>
+  </Tab>
+</Tabs>

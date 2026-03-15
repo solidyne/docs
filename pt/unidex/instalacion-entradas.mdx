@@ -1,0 +1,71 @@
+---
+title: "Entradas"
+description: "Descrição das entradas no UNIDEX UX24 e UX18"
+keywords: ["entradas","conexões","instalação"]
+tags: ["consoles IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ef2dae6ca7d5ac6e738cd746db7c6c3806b40c44893cac963be214091fdf278f"
+
+---
+
+<Tip>
+  Cada entrada pode ser atribuída a qualquer canal físico ou virtual.
+</Tip>
+
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Entradas para microfones
+
+As entradas balanceadas para microfones suportam alimentação _phantom_ **48 V.** A tensão é ativada/desativada para cada canal através da tela.
+
+Cada entrada possui um **microinterruptor que permite reduzir o ganho do pré-amplificador em –12 dB**. O interruptor na posição para baixo **ativa a atenuação**.
+
+<Info>
+  No UX18, a entrada MIC-5 é de nível fixo.
+</Info>
+
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#6f07ab" size="22" />  Entradas tipo UNIDEX
+
+As entradas tipo **UNIDEX** são entradas especiais que, além de áudio, transportam **alimentação PoE** e canais de **comunicação de controle** para operar os **adaptadores externos** Solidyne **UDX**.
+
+Normalmente são utilizadas para conectar **adaptadores UDX** que permitem adicionar microfones, linhas telefônicas ou telefones celulares.
+
+As entradas UNIDEX também **podem ser usadas como entradas balanceadas** convencionais. Cada conector de entrada UNIDEX contém os sinais balanceados esquerdo e direito.
+
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Entradas analógicas balanceadas
+
+- Cada entrada utiliza um **único cabo** STP que transporta os sinais balanceados **esquerdo e direito**.
+- Na extremidade, o RJ45 é adaptado ao tipo de conector de áudio necessário (XLR, TRS, RCA).
+
+Para conectar uma fonte em **modo desbalanceado**, deve-se utilizar um **cabo adaptador adequado**, conectando:
+
+- O terminal de sinal **(–)** à **malha** do cabo.
+- O terminal de sinal **(+)** como o **vivo** do sinal.
+
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Entradas digitais AES3
+
+- São conectadas através de cabo **RJ45–RJ45 CAT5**, utilizando o adaptador **SOL-F3/XLRF**.
+- Para facilitar a compatibilidade da fiação, empregam o **mesmo pin-out** que as entradas balanceadas estéreo, embora o cabo **use apenas o canal esquerdo** para o sinal AES3.
+- Suportam sinais **S/PDIF**.
+
+<Note>
+  Quando a função de recepção de streaming é habilitada, o áudio decodificado substitui internamente a entrada **AES1**. O conector **AES-1** do painel traseiro é automaticamente desconectado.
+</Note>
+
+## Entrada para sintonizador externo
+
+O console possui uma **entrada estéreo para sintonizador externo** (ON AIR MONITOR) através de conector **TRS de 1/4"** (não balanceado). Esta entrada está disponível na atribuição de monitoramento para o Estúdio e o Controle, permitindo escutar diretamente o sinal sintonizado.
+
+<Tip>
+  Em FM, é importante que tanto nos estúdios quanto na sala de controle, o monitoramento seja feito com o sinal **processado do ar**, não do bus PGM direto. Isso permite detectar erros reais de transmissão e proporciona uma escuta mais confortável, sem saltos de volume que podem ocorrer no sinal direto.
+</Tip>
+
+<Note>
+  No **UX18** a entrada **ON AIR MONITOR** também pode ser atribuída a um canal; assim, funciona como uma entrada auxiliar adicional quando não é usada para monitoramento da transmissão.
+
+  Quando atribuída a um canal, continua disponível como fonte selecionável na seção de monitoramento.
+</Note>

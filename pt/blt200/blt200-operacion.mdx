@@ -1,0 +1,91 @@
+---
+title: "Colocação no ar"
+description: "Operação do BL200"
+keywords: ["colocação no ar", "chamadas", "Bluetooth", "talkback"]
+tags: ["hibridos", "BLT200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d8a12bb14f2faa95b8ce7e23bd2c94412912d6aa4c889845f9abb1b348e405ad"
+
+---
+
+As seguintes diretrizes indicam o procedimento para obter o áudio dos telefones celulares na saída de áudio do BLT200.\
+A colocação no ar dependerá do console utilizado e do [esquema de conexão](/pt/blt200/blt200-conexiones) configurado.
+
+<Steps>
+  <Step title="Ligar canal Bluetooth no BLT200">
+    Pressione o botão **CONTROL A** ou **CONTROL B** e mantenha pressionado até que se ilumine (aprox. 5 segundos).\
+    O botão piscará com intermitência lenta, indicando que o Bluetooth está ativo.
+  </Step>
+  <Step title="Ativar Bluetooth no celular">
+    O celular deve ter sido previamente pareado com o canal correspondente do BLT200.\
+    Ao ligar o Bluetooth, a conexão é restabelecida automaticamente e em poucos segundos fica conectado.
+  </Step>
+</Steps>
+
+## Chamadas recebidas
+
+<Steps>
+  <Step title="Detectar a chamada">
+    Quando uma chamada é recebida e o Bluetooth está ativo no celular, o botão **CONTROL** correspondente se ilumina em **azul** (modo D).\
+    Pode ser atendida do BLT200 com um toque curto no botão CONTROL, ou pela tela do telefone.
+
+    <Info>
+      Alguns celulares anteriores a 2020 não permitem atender pela interface Bluetooth quando a chamada vem de aplicativos (WhatsApp, Skype, Hangouts, etc.).\
+      Nestes casos só pode ser atendida pela tela do telefone.
+    </Info>
+  </Step>
+  <Step title="Se o Bluetooth estiver desligado no celular">
+    Atenda a chamada pelo próprio telefone e depois ative o Bluetooth para transferi-la ao BLT200. Uma vez transferida, o celular receberá e enviará áudio através do BLT200.
+  </Step>
+  <Step title="Falar em privado">
+    Use o circuito de **talkback** do console para comunicação privada com a linha (de acordo com o modo de conexão configurado).
+  </Step>
+  <Step title="Colocar no ar">
+    A chamada será colocada no ar através do canal do console.\
+    Ajuste os níveis de cada canal Bluetooth do BLT200 usando os controles do painel para entregar um nível ótimo.
+  </Step>
+  <Step title="Finalizar a comunicação">
+    A chamada pode ser finalizada com um toque curto no botão **CONTROL**, ou diretamente pelo telefone.
+  </Step>
+  <Step title="Retomar a chamada no celular">
+    É possível devolver a chamada ao telefone mudando do modo **Bluetooth/Headset** para **Alto-falante (Speaker)**.
+
+    Exemplo no Android:
+
+    <img
+      src="/images/android_bluetooth.jpg"
+      alt="Android Bluetooth Jp"
+      title="Android Bluetooth Jp"
+      style={{ width:"25%" }}
+    />
+
+    - _Bluetooth_: transfere a chamada para o dispositivo Bluetooth (ex. BLT200).
+    - Ao desativar _Bluetooth_, a chamada volta para o telefone.
+
+    Outros modelos podem mostrar dois botões, menus suspensos ou outras combinações (consulte o manual do telefone).
+  </Step>
+</Steps>
+
+---
+
+## Gerar a chamada no celular
+
+<Steps>
+  <Step title="Iniciar a chamada no celular">
+    No telefone, mude o modo para **Alto-falante (Speaker)** para falar pelo próprio dispositivo.\
+    Realize a chamada (SEND), seja telefônica ou através de aplicativos (WhatsApp, Skype, Linphone, etc.).
+  </Step>
+  <Step title="Transferir a chamada para o BLT200">
+    Uma vez estabelecida a comunicação, volte a ativar o modo **Bluetooth/Headset** no celular.\
+    O canal correspondente no BLT200 deve estar ligado.
+  </Step>
+  <Step title="Continuar pelo console">
+    Proceda a partir do **passo 3 da seção Chamadas recebidas**, gerenciando a colocação no ar pelo console.
+  </Step>
+</Steps>

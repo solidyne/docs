@@ -1,0 +1,105 @@
+---
+title: "Operação do UX18"
+description: "Operação do UX18 - Áreas na superfície do console"
+keywords: ["operação","painel","tela principal","grupos","monitoramento"]
+tags: ["consoles IP", "UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "20bb7429e76870aaf25df6b86c1f0d50d3f2e2ca8e98c1df650c4c10b2be31ba"
+
+---
+
+## Zonas e controles do painel principal UX18
+
+<img
+  src="/images/ux24/UX18-cenital_zonas.png"
+  alt="UX18 Superfície"
+  title="UX18 Superfície"
+  className="mx-auto"
+  style={{ width:"65%" }}
+/>
+
+**A — Controles de canal**\
+Controles tradicionais com faders, botões de atribuição, colocação no ar e escuta prévia (PFL).\
+São operados de forma convencional e permitem controlar diretamente comunicações de linha, VoIP e celulares via Bluetooth (através de adaptadores UDX TELCO).
+
+**B — Grupos**\
+4 GRUPOS controlam **submixagens** de canais. Os canais 7 a 18 podem ser atribuídos aos grupos. As submixagens de cada grupo são controladas a partir de um mixer na tela que aparece ao pressionar o acesso direto GROUPS.
+
+**C — Tela sensível ao toque**\
+Tela de 7" utilizada para operar múltiplas funções do console. Inclui 4 botões contextuais de acesso rápido e um encoder rotativo com botão.
+
+**D — Monitoramento e ordens**\
+Área destinada ao controle de monitoramento e ao circuito de talkback.
+
+## Tela principal
+
+### Indicadores de nível
+
+Os indicadores **PGM**, **REC**, **AUX** e **VBUS** mostram:
+
+- Nível médio em **VU** (barra azul de movimento lento).
+- Nível de pico em **dBfs** (segmento amarelo flutuante).
+
+A escala está tabulada em dBfs, onde **–20 dBfs corresponde a 0 VU**.\
+O valor numérico à direita indica o máximo atual (em VU ou dBfs) e pode ser alternado tocando sobre o número.\
+O indicador principal permanece visível em todas as telas e pode-se mudar de bus tocando o nome do bus à esquerda.
+
+<Tip>
+  **Nota sobre níveis:**\
+  Os indicadores mostram o nível do **bus**.
+
+  - Em saídas digitais, o nível coincide com o de saída se o ganho estiver em 0.
+  - Em saídas analógicas, 0 VU = –20 dBfs, com níveis nominais de **\+4 dBu** (balanceadas) e **0 dBu** (não balanceadas).\
+    Se for definido um nível de ganho superior ao nominal, reduz-se a margem de sobrecarga e pode haver corte antes que o indicador mostre.
+</Tip>
+
+### CUE Level
+
+Indica o nível do bus **CUE**, após o potenciômetro físico de nível.
+
+### Status
+
+- **Unidex IP:** Endereço IP para controle remoto. Inserir em um navegador web (recomendado: Google Chrome) para acessar a interface de controle. Requer conexão da porta _Ethernet Remote Control_ à LAN.
+- **Stream IP:** Endereço IP do módulo de streaming. Inserir em um navegador para configurar serviços de streaming. Requer conexão da porta _Ethernet Streaming_ à LAN.
+- **SCENE:** Nome da cena atualmente ativa.
+- **USER:** Perfil de usuário ativo (ADMIN, EXPERT ou BASIC).
+- **MSG:** Mensagens do sistema.
+- **"+" Avançado:** Abre opções de manutenção (inclui desligamento do CPU interno antes de cortar energia).
+
+### Relógio central
+
+Mostra a hora atual.\
+Sincroniza automaticamente se o console estiver conectado à Internet, ou manualmente (ver tela SETTINGS -\> SYS CONFIG).
+
+### Contador NO AR
+
+Inicia uma contagem crescente (**hh:mm:ss**) ao ativar microfones. Ao desligá-los, o valor permanece na tela.
+
+### Botões de acesso rápido
+
+4 botões localizados à direita da tela oferecem acesso rápido a funções principais.
+
+1. **HOME** Chama a tela principal.
+2. **GROUPS** Mostra os controles de atribuição e submixagens de grupos.
+3. **TELCO** Interface para gerenciamento dos canais atribuídos a linhas telefônicas e telefones Bluetooth.
+4. **MONITOR** Mostra a atribuição de fontes de áudio para o Estúdio e a Cabine de Controle. Contém funções avançadas relacionadas ao monitoramento em alto-falantes e fones de ouvido.
+
+### MENU na tela principal
+
+Acessos diretos na tela principal:
+
+- **SETTINGS:** Configuração avançada e do sistema (somente ADMIN).
+- **SCENE:** Gestão de cenas e perfis de usuário. Também o assistente CHANNEL MAP.
+- **PROCESS:** Acesso a equalização, compressão, de-esser e gate de ruído.
+- **VIRTUAL:** Acessa a tela de controle dos canais virtuais. Quando um canal virtual está ativado, VIRTUAL pisca em vermelho.
+- **CHANNEL:** Informação e controle do canal selecionado, incluindo ganho, panorâmica, processadores e reatribuição de fonte.
+
+<Note>
+  **Modo economia de energia** As telas se apagam após 15 minutos de inatividade. São reativadas movendo um fader ou pressionando um botão Intercom.
+</Note>

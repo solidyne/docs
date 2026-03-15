@@ -1,0 +1,118 @@
+---
+title: "Seção de Monitoramento"
+description: "Operação dos alto-falantes e fones de ouvido"
+keywords: ["monitoramento", "fones de ouvido", "cue", "talkback"]
+tags: ["consoles de estúdio", "linha Classic", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ef5a8f34be045e634ef495a0ea761ca5f1a5015b4a4325eb8df2af829f8acdc9"
+
+---
+
+## Descrição dos controles
+
+<img
+  src="/images/612/612-monitoreo.png"
+  alt="612 Monitoreo Pn"
+  title="612 Monitoreo Pn"
+  className="mx-auto"
+  style={{ width:"54%" }}
+/>
+
+1. Nível de monitores e fones de ouvido para o Estúdio
+2. Alterna monitoramento do Estúdio entre entrada externa 'ON AIR' (sintonizador externo) e PGM/REC.
+3. Atribui a mixagem de PGM ou REC ao monitoramento do Estúdio.
+4. Nível de monitores e fones de ouvido para Cabine de Controle.
+5. Alterna monitoramento do Controle entre 'ON AIR' (sintonizador externo) e PGM/REC.
+6. Atribui a mixagem de PGM ou REC ao monitoramento da Cabine de Controle.
+
+<img
+  src="/images/612/612-tlbk-CUE.png"
+  alt="612 Tlbk CUE Pn"
+  title="612 Tlbk CUE Pn"
+  className="mx-auto"
+  style={{ width:"34%" }}
+/>
+
+- **CUE:** ajusta o nível de pré-escuta do sinal CUE.
+
+<Note>
+  O alto-falante incorporado pode ser desativado e o sinal CUE injetado nos fones de ouvido do controle.\
+  Para isso, é necessário modificar uma conexão interna. Ver em [Instalação - Alto-falantes e fones de ouvido](/pt/612/612-monitoreo)
+</Note>
+
+## Ajuste dos níveis
+
+Um único controle de nível gerencia **fones de ouvido do estúdio** e **alto-falantes monitores do estúdio**.
+
+- Primeiro ajusta-se o nível dos fones de ouvido.
+- Depois, ajusta-se o nível dos alto-falantes usando o controle dos monitores ativos.
+
+### Opções para controle individual de fones de ouvido
+
+- **Amplificador/distribuidor externo (recomendado):** por exemplo o **Solidyne Studio Box HD5** que gerencia 5 fones de ouvido.
+- **Fones de ouvido com controle de volume integrado.**
+- **Controle individual próprio:** montar um potenciômetro de 1 kΩ na mesa do locutor (ver no capítulo de Instalação).
+
+---
+
+## Alto-falantes no Estúdio e no Controle
+
+- A saída de **Studio Monitor** é projetada para **alto-falantes ativos** (nível 0 dBu, 0,775 Vrms).
+- Ao ativar microfones, os **alto-falantes do estúdio são automaticamente silenciados** para evitar realimentação.
+- A saída de **Control Monitor** também tem um controle único de nível.
+
+### Seleção de sinal nos monitores
+
+Com as chaves de seleção escolhe-se qual sinal ouvir no Estúdio e no Controle
+
+- **PGM:** sinal de programa.
+- **REC:** canais atribuídos à saída de gravação.
+- **AIR:** entrada externa (sintonizador), para ouvir transmissão no ar.
+
+---
+
+## Operação em estúdios integrados
+
+Em estúdios modernos, console, locutores e jornalistas compartilham o mesmo ambiente, reduzindo custos de construção e acústica.
+
+- Conecta-se um par de alto-falantes ativos à saída **Studio Monitor**.
+  - Ao abrir microfones, estes são silenciados automaticamente.
+- Os fones de ouvido de jornalistas e convidados são conectados à saída **Studio**.
+- Os fones de ouvido do operador são conectados à saída **Control Monitor**.
+
+---
+
+## Pré-escuta (CUE)
+
+- O console inclui um **alto-falante interno** para CUE.
+- Cada canal tem um botão **CUE** que permite ouvir o sinal sem ir ao ar (fader fechado).
+- Se vários CUE são pressionados, os sinais são somados.
+
+Em estúdios integrados:
+
+- É necessário modificar a configuração de CUE para enviar o sinal aos fones de ouvido do Controle e silenciar o alto-falante incorporado. Ver [Instalação - Alto-falantes e fones de ouvido](/pt/612/612-monitoreo)
+
+O botão CUE ajusta o nível do alto-falante CUE ou o envio aos fones de ouvido da Cabine.
+
+---
+
+## Ordens ao estúdio (Talkback)
+
+O canal de ordens permite ao operador dialogar com o locutor no Estúdio:
+
+- Pressionar **Talkback**.
+  - O áudio é interrompido nos alto-falantes do Controle (para evitar realimentação).
+  - No Estúdio, ouve-se o operador pelo **canal esquerdo** dos alto-falantes e fones de ouvido.
+  - No **canal direito** continua-se ouvindo o programa, para que locutores e jornalistas mantenham referência.
+- Para ouvir a resposta, o operador deve ativar **CUE** no canal do microfone.
+
+<Note>
+  O nível do microfone de ordens vem calibrado de fábrica.\
+  Apenas se necessário, pode ser ajustado com o preset **LEVEL** no painel do console, usando uma chave de fenda.
+</Note>

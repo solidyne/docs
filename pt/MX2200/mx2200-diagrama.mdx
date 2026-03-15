@@ -1,0 +1,56 @@
+---
+title: "Fluxo de trabalho"
+description: "Diagrama geral do fluxo de trabalho no MX2200"
+keywords: ["configuração", "diagramas"]
+tags: ["consolas portáteis", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d27408a45a62152aa04a12074a1a3100920629da023225cbb3d0cb0d3af89182"
+
+---
+
+O diagrama exemplifica um cenário operacional que permite visualizar todas as possibilidades do **MX2200**.
+
+![Mx2200 Flujo Jp](/images/mx2200/mx2200-flujo.jpg)
+
+## Mixagem de programa
+
+- **4 microfones dinâmicos** (dois compartilham o fader MIC 3\+4).
+- **1 telefone celular**:
+  - Pode ser usado com um microfone Bluetooth.
+  - Pode ser vinculado via Bluetooth a uma segunda console **Solidyne MX2100** para gerenciar vários microfones e fones de ouvido.
+- **Notebook via USB**: reproduz áudio diretamente na console, permitindo gerar todo o conteúdo a partir da localização remota.
+
+## Transmissão para os estúdios
+
+O **MX2200** obtém acesso à Internet através de:
+
+- Conexão a uma rede Wi-Fi
+- Conexão a uma LAN por cabo
+- Modem 4G
+
+**Link para o estúdio:**
+
+- A conexão é realizada através de **chamadas SIP** full-duplex, sem atrasos audíveis.
+- O estabelecimento da chamada é imediato: a console disca e o estúdio atende (ou vice-versa).
+- Um servidor na Internet (**Cloud Service**) conecta inicialmente ambas as extremidades (1 e 2). Uma vez estabelecida, a conexão se transforma em um **túnel privado (Internet Tunneling)** entre a console e o estúdio (3).
+- Em paralelo à chamada SIP, o **CODEC do MX2200** pode transmitir:
+  - Um streaming RTP para um endereço IP
+  - Outro streaming para um servidor web (Icecast/Shoutcast), com qualidades diferenciadas
+- Como backup, pode ser utilizado:
+  - Uma **linha terrestre (POTS)**
+  - O **telefone celular Bluetooth** (se não estiver sendo usado para adicionar ao programa)
+
+## Recepção no estúdio
+
+A chamada SIP é recebida utilizando um computador com software de terceiros para gestão de contas VoIP. Existem opções gratuitas, como [Linphone](https://www.linphone.org/).
+
+## Gravação
+
+O **MX2200** permite gravar em sua memória interna mais de **100 horas** de programa em formato **MP3 @192 kbps**.\
+A gravação pode ser ativada simultaneamente com a transmissão.

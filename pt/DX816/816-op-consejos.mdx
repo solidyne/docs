@@ -1,0 +1,101 @@
+---
+title: "Dicas gerais"
+description: "Dicas gerais para a operação do console"
+keywords: ["operação"]
+tags: ["consoles de estúdio", "linha Classic", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "554896af14b9821b42253fe2c869739695ec6d1c46749e9e6054070b80f24bde"
+
+---
+
+## Verificação operacional do console
+
+Procedimento básico para verificar a conexão:
+
+1. Use uma fonte de sinal (microfone, reprodutor, etc.).
+   - Nos canais 4 ou 5, selecione corretamente a entrada (BAL/LIN).
+   - Erro comum: ausência de sinal por entrada mal atribuída.
+2. Pressione o botão **CUE** no canal de entrada.
+3. Selecione **CUE** como fonte no monitoramento e ajuste o nível de CUE.
+   - O áudio deve ser ouvido nos fones de ouvido (e nos monitores se estiverem atribuídos).
+
+**Para enviar o sinal ao ar:**
+
+1. Pressione **PGM** no canal para enviá-lo à saída principal.
+2. Abra o fader do canal ao nível desejado.
+   - O sinal será enviado ao ar e será visualizado nos VUs de programa.
+
+<Warning>
+  O ganho deve ser ajustado em cada canal (exceto USB) através dos presets de ganho do painel, de modo que a posição normal de trabalho do fader principal seja **–15 dB (zona cinza)**.
+</Warning>
+
+---
+
+## Gravação de programas
+
+Os consoles série DX possuem dois buses estéreo de saída:
+
+- **PGM (Programa)**: sinal enviado ao ar.
+- **REC (Recording)**: sinal auxiliar, geralmente destinado à gravação.
+
+Cada canal pode ser atribuído a **PGM** ou **REC** através de botões de atribuição, o que permite gravar enquanto se transmite outro sinal.
+
+### Gravação via USB
+
+Os sinais de PGM e REC estão disponíveis no computador através de **USB**.
+
+No **<sup>Windows©</sup>**:
+
+- **Dispositivo de gravação USB 1** → corresponde a **USB-1**, sinal de PGM.
+- **Dispositivo de gravação USB 2** → corresponde a **USB-2**, sinal de REC.
+
+No **computador**:
+
+- Configurar o aplicativo de gravação para usar o dispositivo adequado.
+
+No **console**:
+
+- No monitoramento, atribuir **REC** aos monitores de Controle ou Estúdio se desejar que os locutores ouçam a gravação.
+- Remover de **PGM** e atribuir a **REC** os canais a gravar (ex: microfones).
+
+  → Estes canais NÃO irão ao ar.
+- A rádio continua no ar com outro canal (ex: Line-1 em PGM).
+
+**Ajuste de nível:**
+
+- Verificar níveis nos VUs de REC do console e no software.
+- Ajustar pelo console com o fader do canal → **0 VU = –15 dBfs**.
+
+<Danger>
+  Os dispositivos de gravação **USB-1 e USB-2 não têm controle de nível de entrada por software**.\
+  O ajuste é sempre feito no console.
+</Danger>
+
+**Monitoramento:**
+
+- Os locutores podem monitorar por fones de ouvido ou monitores.
+- Para reproduzir o gravado: atribuir a **REC** o canal correspondente a esse PC.
+
+<Warning>
+  Evite loops de realimentação no PC. Silencie no software de gravação (ou no Windows) possíveis retornos da entrada USB-2 (REC)
+</Warning>
+
+Ao finalizar, restaure os controles à sua posição original.
+
+---
+
+### Gravação de linhas telefônicas
+
+O canal **TELCO** pode ser atribuído a qualquer uma das saídas através do botão **PGM/REC**.
+
+Exemplo: gravar uma entrevista telefônica enquanto toca música no ar.
+
+- Atribuir o **híbrido** e um **microfone** à saída **REC**.
+- Proceder com a comunicação como em _Canal de híbrido_.
+- Atribuir monitoramento a **REC** para ouvir a conversação.

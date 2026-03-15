@@ -1,0 +1,154 @@
+---
+
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "28c86acfc8bceea355d2fd0847b7ba8e6de36fa0ea587baf56af557200103dc1"
+---
+
+```mdx
+---
+title: "Gerenciador de Arquivos"
+description: "Gerenciador de arquivos. Descrição."
+keywords: ["Gerenciador de Arquivos", "descricao"]
+tags: ["Software", "Audicom"]
+---
+
+## Introdução
+
+<Note>
+  O módulo **Gerenciador de Arquivos** foi descontinuado a partir do **AUDICOM 14 (Audicom Black)** e substituído pelo **Gerenciador de Mídia**.\
+  Ainda está incluído na distribuição para evitar mudanças bruscas, mas recomendamos migrar para o **Gerenciador de Mídia**, pois o Gerenciador de Arquivos será removido em versões futuras.
+</Note>
+
+Acesse pelo menu **“+ ferramentas”** na barra superior da área de trabalho principal.\
+O módulo está organizado em abas que mostram os arquivos de áudio disponíveis em cada terminal (discos locais ou rede).
+
+**Características:**
+
+- Utiliza uma **estrutura de pastas fixa** (pastas externas serão ignoradas).
+- Os arquivos são classificados por tipo (Música, Spots, Comerciais, Efeitos, etc.).
+- Os títulos podem:
+  - ser reproduzidos no ar,
+  - ser inseridos na grade de programação,
+  - ou carregados nos botões de acesso rápido do Live Assist.
+
+<Note>
+  Em cada terminal, são exibidas apenas as pastas declaradas nesse terminal (**audioDrives**).\
+  Além disso, o Administrador pode restringir o acesso de cada usuário a pastas específicas através de **Níveis de Acesso**.
+</Note>
+
+---
+
+## Visão Geral
+
+A janela principal exibe os arquivos da pasta selecionada com os seguintes campos:\
+**Intérprete – Título – Duração – Formato – Localização**.
+
+- Para ver outras pastas: clique nas abas superiores (Tabs).
+- Se houver mais de 18 pastas: use os botões de navegação `<-- -->`.
+- O tamanho e a posição da janela são configuráveis.
+- A ordem das colunas pode ser alterada clicando no cabeçalho.
+- Também é possível realizar **busca rápida por letra**:
+  - Exemplo: Se pressionar “A”, o cursor posiciona-se no primeiro arquivo que começa com “A” na coluna ativa.
+
+---
+
+## Cores dos Títulos (última reprodução no ar)
+
+Os arquivos de áudio registrados no banco de dados aparecem em cores diferentes de acordo com o tempo desde sua última transmissão:
+
+- **Vermelho**: < 4 horas
+- **Laranja**: 4–12 horas
+- **Verde**: 12–24 horas
+- **Preto**: > 24 horas
+
+Os intervalos de tempo são configuráveis no **Painel de Configuração**.
+
+---
+
+## Cores das Pastas
+
+Cada pasta pode ser atribuída a uma cor para facilitar a identificação.
+
+- Os filtros permitem exibir apenas pastas de uma cor específica.
+- As cores são únicas e válidas para todos os terminais da rede.
+- São definidas ao criar a pasta ou através da janela **INFO**.
+
+<Tip>
+  Recomendamos criar uma tabela de referência visível no estúdio.\
+  Exemplo: vermelho = música, verde = alertas, amarelo = efeitos.
+</Tip>
+
+---
+
+## Botões Principais
+
+### Atualizar
+
+`[Teclado Numérico /]`
+
+- Atualiza a pasta selecionada para mostrar novos arquivos.
+- Por padrão, o Gerenciador de Arquivos salva o conteúdo na memória ao abrir uma pasta; as alterações só aparecem ao pressionar **Atualizar**.
+- A janela exibe a data e hora da última atualização.
+
+### Inserir
+
+`[Enter]`
+
+- Insere o título selecionado na janela **CyberPlay** (acima do cursor amarelo).
+- Também suporta **Arrastar e Soltar**.
+- É possível inserir múltiplos títulos selecionados de uma vez.
+
+### Cue Start / Stop
+
+`[Delete]`
+
+- Reproduz o título selecionado em **prévia**.
+- Duplo clique = reprodução em prévia.
+- Segundo clique ou Delete = reproduzir os últimos 5 segundos (Cue End).
+- Clique direito = parar prévia.
+
+<Warning>
+  Se o sistema trabalha com **uma única placa de áudio**, não há canal de monitoramento.\
+  Nesse caso, o duplo clique reproduz o arquivo diretamente **no ar**.
+</Warning>
+
+### Reproduzir
+
+- Reproduz o título selecionado pela saída de **Programa** (igual ao CyberPlay).
+- Se o CyberPlay já estiver em reprodução, o arquivo é misturado ao ar.
+- Inclui vumeters, contador de tempo e barra de posição.
+
+### Parar / Pausar
+
+- **Um clique**: para e entra em pausa (pode retomar).
+- **Duplo clique**: para completamente e avança para o próximo arquivo.
+
+### Editar Áudio
+
+- Acessível pelo menu contextual ou janela expandida.
+- Abre o arquivo no editor associado de acordo com a extensão (.wav, .mp3, .txt).
+- Por padrão, arquivos .wav são abertos no **FX5**.
+- Se outro editor estiver instalado, o Windows pode associá-lo automaticamente.
+
+### Sincronizar
+
+Permite **sincronizar pastas** entre dois locais (esquerda/direita).
+
+Opções:
+
+- **Sincronizar esquerda**: copia da direita → esquerda.
+- **Sincronizar direita**: copia da esquerda → direita.
+- **Ambas**: ambas as pastas terminam com conteúdo idêntico.
+
+---
+
+<Info>
+  Embora o Gerenciador de Arquivos ainda seja funcional, recomendamos migrar progressivamente para o **Gerenciador de Mídia**, que substitui todas essas funções com um design mais moderno e escalável.
+</Info>
+```

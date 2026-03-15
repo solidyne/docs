@@ -1,0 +1,128 @@
+---
+title: "Compressores e limitadores"
+description: "Ajuste das etapas de Compressão e Limitação"
+keywords: ["compressores", "limitadores", "densityEQ", "clippers", "drive"]
+tags: ["processadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "72f6697dba132e31e0c88d554d1724145cab8ab93761d37a017eb6298e12ef15"
+
+---
+
+## Compressão dinâmica
+
+A redução da dinâmica é produzida pela combinação de três etapas: **compressão**, **limitação** e **recorte**.\
+Estas etapas trabalham de forma complementar para diminuir a dinâmica do sinal e aumentar a energia média. Quanto maior a ação conjunta, mais "denso" e "compacto" será o som. Portanto, os ajustes devem ser feitos em conjunto.
+
+Em termos gerais:
+
+- O compressor trabalha com inclinações suaves e limiares baixos, reduzindo a dinâmica em uma ampla faixa de níveis.
+- O limitador atua com inclinações abruptas e limiares mais altos, aplicando grande redução de ganho para que o sinal não ultrapasse o limiar. Sua ação pode ser muito notória.
+- Os tempos de ataque costumam ser mais lentos no compressor e muito rápidos no limitador. Desta forma, os ataques que ficam abaixo do limiar do limitador são preservados, proporcionando naturalidade. Os ataques que o superam são atenuados pelo limitador, dependendo do ajuste de DRIVE.
+
+---
+
+## Compressor multibanda
+
+As cinco bandas de trabalho correspondem às definidas no AGC multibanda. Cada compressor é independente e conta com os seguintes ajustes:
+
+![542 Procesado Compresor Pn](/images/542/542-procesado-compresor.png)
+
+- **Limiar (THS):** nível a partir do qual o compressor começa a atuar. Uma vez atingido o limiar, entra em ação o tempo de ataque e depois a atenuação segundo a relação de compressão.
+- **Ratio:** define a atenuação aplicada em uma faixa de 1:1 a 10:1. Os compressores utilizam transição suave (_soft knee_). Como regra geral, quanto menor o limiar, menor o ratio; quanto maior o limiar, maior o ratio. Um limiar baixo com compressão suave afeta mais sinais, o que combinado com o limitador produz um som mais compacto.
+- **Ataque:** tempo que leva para o compressor atuar após ultrapassar o limiar. Quanto maior for, mais impacto terá essa banda, mas também mais recorte deverá realizar o limitador e o clipper. O ajuste depende do material:
+  - Rock/pop → tempos mais lentos, proporcionam impacto e sensação de faixa dinâmica.
+  - Percussão → convém usar ataques lentos nas bandas LOW e M1 para maior "punch".
+  - Música orquestral/jazz/piano → convêm ataques rápidos para preservar naturalidade.
+- **Recuperação (Release):** tempo para recuperar o ganho unitário ao cair abaixo do limiar. É um ajuste chave para a sensação de faixa dinâmica:
+  - Recuperação lenta → o compressor atua todo o tempo, como um _leveler_. Mantém dinâmica mas não gera grandes aumentos de sonoridade.
+  - Recuperação rápida → reforça transientes e ataques. Exemplos:
+    - Música eletrônica → recovery curto nos graves para que cada _kick_ seja afetado pelo ataque.
+    - Banda de agudos → recovery rápido aumenta presença e brilho, mas pode endurecer o som.
+- **Retenção (Hold):** tempo durante o qual se mantém a compressão uma vez ativada, independentemente da variação de entrada. Quanto maior a retenção, menor a agressividade do processo mas também menor a sonoridade.
+
+---
+
+## Limitador multibanda
+
+Os limitadores aplicam uma relação fixa próxima a 100:1.
+
+![542 Procesado MB Limiter Pn](/images/542/542-procesado-MBLimiter.png)
+
+Cada banda dispõe de cinco controles:
+
+- **Limiar (THS) e DRIVE:**
+  - DRIVE aplica ganho antes da limitação. Equivale a um controle de nível de saída no compressor. Se o DRIVE é aumentado mantendo o limiar, mais picos são limitados e aumenta a energia da banda.
+  - Se o limiar é baixado, aumenta a limitação mas reduz a energia. Para compensar, pode-se elevar a banda no **Density EQ**.
+- **Ataque (ATK):** durante o tempo de ataque, o limitador deixa passar picos que serão contidos mais adiante pelos recortadores. Ataques rápidos minimizam o recorte, mas o som se torna "plano" e pouco natural.
+- **Hold e Release:** funcionam de modo análogo aos do compressor.
+
+---
+
+## Density EQ
+
+O **equalizador de densidade** permite ajustar o balanço espectral do som, dosando quanto cada banda contribui para a mixagem final.
+
+<img
+  src="/images/542/542-procesado-densityEQ.png"
+  alt="542 Procesado Density EQ Pn"
+  className="mx-auto"
+  style={{ width:"72%" }}
+/>
+
+Quanto mais se eleva uma banda no Density EQ, mais próxima fica de seu recortador e maior é a sonoridade, mas também se reduz a dinâmica por recorte suave, o que gera um som mais áspero.
+
+## Clippers (etapas de recorte)
+
+![542 Procesado Clippers Pn](/images/542/542-procesado-clippers.png)
+
+### Band Clippers
+
+Os limitadores de banda funcionam como recortadores suaves (_soft clippers_), contendo os picos que atravessam a etapa de compressão devido aos tempos de ataque.
+
+O controle principal ajusta o **limiar de recorte**. A referência "0" equivale a 100% de modulação de áudio.
+
+- Limiar abaixo de zero → essa banda nunca chegará a modular 100% por si só, embora a soma das bandas sim o faça.
+- Limiar em zero ou superior → não garante alcançar 100%, pois depende do nível no Density EQ.
+
+Os indicadores de nível mostram o sinal de cada banda e a quantidade de limitação.\
+Acima do limiar, o indicador marca o **sinal limitado** em cor laranja.
+
+Na prática, os band clippers são ajustados em 100% ou até 1 dB abaixo de zero, exceto a banda de graves, que costuma ser configurada entre 2 e 6 dB abaixo para deixar margem na soma final.
+
+---
+
+### Limitador de banda larga (WB Limiter)
+
+A soma das bandas é realizada depois dos limitadores individuais. Mesmo que estejam ajustados em 100%, a soma gera picos acima desse valor. O **limitador de banda larga** contém esses picos, mantendo o sinal em 100%.
+
+Este limitador "prediz" a atenuação necessária com um sistema de _look ahead_ (ataque zero), evitando distorção harmônica. O limiar é fixo em 100% de modulação.
+
+- O controle **DRIVE** permite amplificar a mixagem, aumentando a ação do limitador e, portanto, a energia total.
+- O controle **SHAPE** introduz recorte suave para trabalhar com limitações mais altas, minimizando efeitos de intermodulação. Este recorte só entra em ação com densidades elevadas de picos, ficando mascarado ao ouvido.
+
+<Info>
+  A limitação em banda larga aumenta a sonoridade até reduções de 6 dB. Além desse ponto, não traz benefícios e pode gerar um som plano e sem profundidade.
+</Info>
+
+---
+
+## Recortador de MPX (MPX Clipper)
+
+Ao final da cadeia, os sinais **soma (L+R)** e **diferença (L–R)** são recortados separadamente com um recortador suave. O limiar se localiza em 100% de modulação.
+
+O controle **DRIVE** aplica ganho antes do recorte:
+
+- DRIVE = 0 → o recorte é praticamente nulo.
+- DRIVE = 1 dB → implica em 1 dB de recorte.
+- Valores de 0,5 a 1 dB são toleráveis na maioria dos casos.
+- Valores maiores geram um som mais áspero, que alguns identificam como **"FM style"**.
+
+<Warning>
+  Usar esta técnica apenas se for necessário alcançar níveis de sonoridade muito altos no ar.
+</Warning>

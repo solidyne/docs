@@ -1,0 +1,130 @@
+---
+description: "Acessar o sistema. Usuários e senhas."
+title: "Acessando o Audicom"
+keywords: ["i-logon"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ef7c9c117683c40847ad5362e9bb687ba31ff98d8e7b200c964d00774c56e997"
+
+---
+
+## I-Logon
+
+O instalador cria um atalho para o AUDICOM na área de trabalho do Windows e um grupo de aplicativos no menu **Iniciar**.
+
+Ao executar o AUDICOM, a janela de acesso ao sistema (**Log-on**) é exibida.
+
+<img
+  src="/images/audicom/au-op-ilogon.png"
+  alt="AUDICOM I-logon"
+  title="AUDICOM I-logon"
+  className="mx-auto"
+  style={{ width:"66%" }}
+/>
+
+- Aqui, você deve inserir o nome de usuário e senha.
+- O perfil correspondente será carregado, incluindo a organização da área de trabalho e os níveis de segurança padrão.
+- Usuários com permissões e restrições são gerenciados no **Painel de Administração** (ver _Níveis de acesso e senhas_).
+
+Recomenda-se que cada operador, ao finalizar seu turno, encerre sua sessão.\
+O sistema continuará funcionando sob o usuário do sistema (**auto**).\
+O novo operador deve fazer login acessando a janela I-Logon com um duplo clique na área **RADIO/USUÁRIO**.
+
+- Duplo clique no ícone **USER** abre a janela de acesso I-Logon.
+
+  <img
+    src="/images/audicom/au-op-topbar-user.png"
+    alt="AUDICOM Tool Bar"
+    title="AUDICOM Tool Bar"
+    style={{ width:"67%" }}
+  />
+
+<Note>
+  O I-Logon e a Barra de Ferramentas (botão Info) exibem a data de expiração da licença de suporte e atualizações.
+</Note>
+
+Após inserir o usuário e senha, pressione **Começar**.
+
+- O nome de usuário **não diferencia maiúsculas/minúsculas**.
+- A senha **diferenciam maiúsculas/minúsculas**.
+
+Todas as mudanças de usuário são registradas nos arquivos `.air`, de modo que a equipe hierárquica pode controlar quem operou o sistema em cada momento.
+
+---
+
+## Nomes de usuário e senhas
+
+### Usuários predefinidos
+
+O AUDICOM inclui um grupo de usuários predefinidos, com perfis distintos:
+
+- **user**
+- **admin**
+- **auto**
+
+Os usuários predefinidos não possuem senha.\
+O usuário **auto** faz parte do sistema e **não pode ser excluído**.
+
+- Ele é ativado quando um operador encerra a sessão.
+- Mantém a programação no modo automático.
+
+<Note>
+  O modo Auto também é usado após uma queda de energia.\
+  Se a janela I-Logon permanecer aberta por 1 minuto sem que nenhum usuário faça login, o AUDICOM inicia automaticamente.\
+  Um minuto depois, a reprodução de áudio começa.\
+  Ver: _Quedas de energia – autoinício_.
+</Note>
+
+### Novos usuários
+
+- Os nomes de usuário e senhas são definidos pelo administrador.
+- Uma vez criado, o nome não pode ser alterado.
+- A senha pode ser alterada a partir do I-Logon:
+  1. Pressione **Alterar Senha**.
+  2. Insira a senha atual.
+  3. Digite a nova senha e confirme-a.
+  4. Pressione **OK**.
+
+No próximo início, você deverá usar a nova senha.
+
+<Tip>
+  Você pode criar um usuário por operador ou usuários por terminal de trabalho (ex. “Produção”, “Programação”).\
+  Assim, cada terminal tem uma única chave de acesso.
+</Tip>
+
+---
+
+## Encerrar a sessão
+
+Quando um operador se retira, ele deve **encerrar sua sessão** para evitar usos indevidos.
+
+- Se outro operador fizer login, ele o fará diretamente com seu usuário.
+- Isso encerrará automaticamente a sessão anterior.
+
+Se desejar deixar o sistema ativo sem um operador responsável:
+
+- No I-Logon, selecione **Encerrar sessão**.
+- O AUDICOM permanecerá ativo sob o usuário **auto**.
+
+Neste modo:
+
+- Apenas funções básicas estarão habilitadas (**Play / Stop**).
+- Personalizações da área de trabalho não são salvas.
+- Alterações na pauta comercial não são permitidas.
+
+<Warning>
+  A programação deve estar preparada para que o AUDICOM continue operando automaticamente (AutoDJ, streaming, PlayLists, etc.).
+</Warning>
+
+---
+
+## Desligar o AUDICOM
+
+Para fechar todos os aplicativos, pressione **Desligar (Close)**.\
+Isso encerrará todos os programas relacionados ao AUDICOM.

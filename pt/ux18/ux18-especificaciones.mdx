@@ -1,0 +1,166 @@
+---
+title: "Especificações técnicas"
+description: "Especificações técnicas"
+keywords: ["especificações"]
+tags: ["UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "54fda3302b31016756c018bc884bd0a7d5c7a6be6249c34e0230e23f4320b228"
+
+---
+
+<AccordionGroup>
+  <Accordion title="Características gerais">
+    | Item                  | Especificação                                                         |
+    | --------------------- | --------------------------------------------------------------------- |
+    | Canais               | 18 canais                                                             |
+    | Faders físicos       | 10 no painel. 4 podem trabalhar como grupos (submixagens)             |
+    | Faders virtuais      | 8 Operáveis via tela touch, atribuíveis aos grupos                    |
+    | Controle remoto      | Interface web interna (HTML5) via LAN                                 |
+    | Roteamento           | Entradas atribuíveis aos 18 canais                                    |
+    | Cenas                | 12 cenas de usuário                                                   |
+    | Tela touch           | 7" — 1024 × 600 px, multi-touch                                       |
+    | Displays por canal   | OLED nos canais 1 a 6 (nome, nível de entrada, atenuação, estados)    |
+  </Accordion>
+  <Accordion title="Entradas">
+    #### Entradas analógicas
+
+    | Tipo          | Quantidade | Detalhe                                                                           |
+    | ------------- | ---------: | --------------------------------------------------------------------------------- |
+    | Microfone     | 5         | alimentação phantom +48 V comutável por canal                                      |
+    | Linha estéreo | 3         | 2 balanceadas + 1 não balanceada                                                   |
+    | UNIDEX        | 4         | Configuráveis dual-mono / estéreo. Suporta adaptadores UDX (mic, Telco, USB, etc.) |
+
+    #### Entradas digitais
+
+    | Tipo                   | Quantidade  | Detalhe                                                 |
+    | ---------------------- | ----------: | ------------------------------------------------------- |
+    | AES3                   | 2 (estéreo) | Entradas AES3 suportam 44.1 e 48 kHz                   |
+    | USB                    | 4 (estéreo) | 4 dispositivos de reprodução a partir de um PC          |
+    | Bluetooth              | 1           | Pareamento de celulares (Hands Free + A2DP music input) |
+    | Dante/AES67 (opcional) | 16          | Somente na opção **UX18/A67**                           |
+  </Accordion>
+  <Accordion title="Saídas">
+    #### Saídas analógicas
+
+    | Tipo                | Quantidade  | Detalhe                             |
+    | ------------------- | ----------: | ----------------------------------- |
+    | PGM                 | 2 (estéreo) | 1 balanceada + 1 não balanceada     |
+    | REC                 | 1           | Balanceada                          |
+    | Atribuíveis        | 4 (estéreo) | Não balanceadas                     |
+    | Monitoração Control | 2 (estéreo) | Monitores + fones                   |
+    | Monitoração Estúdio | 2 (estéreo) | Monitores + fones + talkback        |
+
+    #### Saídas digitais
+
+    | Tipo                   | Quantidade  | Detalhe                                   |
+    | ---------------------- | ----------: | ----------------------------------------- |
+    | AES3                   | 2 (estéreo) | Saídas AES3 operam em 48 kHz              |
+    | USB                    | 4 (estéreo) | 4 dispositivos de gravação em um PC       |
+    | Streaming              | 2           | RTP + Icecast/Shoutcast (independentes)   |
+    | Dante/AES67 (opcional) | 16          | Somente na opção **UX18/A67**             |
+  </Accordion>
+  <Accordion title="GPIO, intercom e auxiliares">
+    | Item                               | Especificação                                                  |
+    | ---------------------------------- | -------------------------------------------------------------- |
+    | Luz "No Ar"                        | 12 VCC / 250 mA                                                |
+    | GPI                                | 2 entradas (ativa alta 3.3 ~ 15 V)                             |
+    | GPO                                | 7 saídas (coletor aberto; +24 V @ 250 mA)                      |
+    | Air monitor (sintonizador externo) | 1 entrada estéreo não balanceada (também atribuível a canais)  |
+    | Reverse talkback do Estúdio        | 1 entrada (conector Studio Box)                                |
+    | Talkback                           | Microfone de ordens integrado                                  |
+    | Intercom TELCO                     | PTT (falar/escutar) em canais TELCO com botão CUE              |
+  </Accordion>
+  <Accordion title="Arquitetura de áudio">
+    | Item                 | Especificação                                                                 |
+    | -------------------- | ----------------------------------------------------------------------------- |
+    | Buses                | 4 estéreo (PGM, REC, AUX, VBUS)                                               |
+    | Bus PFL              | 1 (CUE)                                                                       |
+    | Resolução / SR       | 24 bits @ 48 kHz                                                              |
+    | Processamento        | DSP em todas as entradas (fixo por entrada)                                   |
+    | Processos            | EQ paramétrico 3 bandas, gate, compressor/limitador, de-esser                 |
+    | Mix-minus / talkback | Envios automáticos para TELCO                                                 |
+    | Latência             | 1.2 ms (linha→saída analógica) / 1.4 ms (MIC→saída com EQ+Dinâmica+De-Esser) |
+  </Accordion>
+  <Accordion title="Valores e medições (áudio)">
+    #### Digital (AES3, AoIP)
+
+    | Parâmetro                | Valor                   |
+    | ----------------------- | ----------------------- |
+    | Faixa dinâmica (RD)     | 120 dBA                 |
+    | Resposta de frequência  | 20 Hz – 20 kHz ± 0.1 dB |
+    | THD                     | \< 0.002 %              |
+    | AES3 (entradas)         | 44.1 / 48 kHz           |
+    | AES3 (saídas)          | 48 kHz                  |
+
+    #### USB
+
+    | Parâmetro      | Valor                                          |
+    | -------------- | ---------------------------------------------- |
+    | Porta          | USB 2.0                                        |
+    | Canais         | 4 dispositivos estéreo reprodução/gravação     |
+    | ASIO           | Driver ASIO 3.0 (ASIO + WDM simultâneo)        |
+    | Multi-cliente  | Sim (várias apps ASIO em paralelo)             |
+    | Windows        | 11/10 (32/64 bits)                             |
+
+    #### Entradas analógicas (linha)
+
+    | Parâmetro                | Valor                                      |
+    | ----------------------- | ------------------------------------------ |
+    | Nível de entrada        | Max +26 dBu / Min −24 dBu / Nominal +4 dBu |
+    | Faixa dinâmica         | 112 dBA                                    |
+    | Resposta de frequência  | 20 Hz – 20 kHz ± 0.25 dB                   |
+    | THD+N                   | 0.01 %                                     |
+
+    #### Entradas de microfone
+
+    | Parâmetro                | Valor                                               |
+    | ----------------------- | --------------------------------------------------- |
+    | Nível de entrada        | Max −24 dBu / Min −75 dBu / Nominal −50 dBu @ 150 Ω |
+    | Atenuação              | −10 dB em MIC-1 a MIC-4                             |
+    | Ruído (EIN)            | −121 dBA @ −50 dBu                                  |
+    | Resposta de frequência  | 20 Hz – 20 kHz ± 0.5 dB                            |
+    | THD+N                   | 0.01 %                                              |
+    | Phantom                 | \+48 V individual (DIN 45596)                       |
+
+    #### Saídas analógicas
+
+    | Parâmetro                | Valor                        |
+    | ----------------------- | ---------------------------- |
+    | Nível de saída          | Nominal +4 dBu / Máx +24 dBu |
+    | Faixa dinâmica         | \> 110 dBA                   |
+    | Resposta de frequência  | 20 Hz – 20 kHz ± 0.5 dB      |
+    | THD                     | typ 0.005 % @ 1 kHz          |
+  </Accordion>
+  <Accordion title="Opção Dante/AES67 (UX18/A67)">
+    | Item           | Especificação                                                                        |
+    | -------------- | ------------------------------------------------------------------------------------ |
+    | Canais         | 16 × 16                                                                              |
+    | Compatibilidade | Pode trabalhar com redes Dante existentes até 512 × 512                             |
+    | Saídas AoIP    | PGM, REC, AUX, fones do Control, fones do Estúdio + 3 estéreo atribuíveis           |
+  </Accordion>
+  <Accordion title="Dimensões e peso">
+    #### Dimensões
+
+    | Item         | Valor                            |
+    | ------------ | -------------------------------- |
+    | Largura      | 730 mm                           |
+    | Profundidade | 455 mm (550 mm com tampa traseira)|
+    | Altura       | 130 mm                           |
+
+    #### Embalagem e peso
+
+    | Item                               | Valor              |
+    | ---------------------------------- | ------------------ |
+    | Embalagem                          | 850 × 610 × 270 mm |
+    | Peso UX18                          | 8 kg               |
+    | Adaptadores UDX                    | 0.33 kg cada       |
+    | Kit cabos RJ45                     | 4 kg               |
+    | Total com embalagem (UX18 + cabos) | 15 kg             |
+  </Accordion>
+</AccordionGroup>

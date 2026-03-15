@@ -1,0 +1,216 @@
+---
+title: "Visão geral e funções"
+description: "Operação do MX2200. Descrição dos controles e funções gerais."
+keywords: ["descrição"]
+tags: ["consolas portáteis", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "251dbac0b09ed3cbdd5bf8d96076ba03773a2e2ca1b41888fbfd4ac55878154b"
+
+---
+
+## Áreas operacionais
+
+As fontes de áudio (microfones, computador e linhas telefônicas) entram no console através dos canais de entrada, que as amplificam.\
+O console mistura todos os sinais para gerar um único sinal principal chamado **Programa (PGM)**.
+
+O nível de cada fonte é controlado através dos faders principais. A mixagem final é enviada aos estúdios por um ou mais canais de transmissão.
+
+No console podem ser distinguidas diferentes áreas:
+
+<img
+  src="/images/mx2200/mx2200-panel_secciones.png"
+  alt="Mx2200 Panel Secciones Pn"
+  title="Mx2200 Panel Secciones Pn"
+  className="mx-auto"
+  style={{ width:"72%" }}
+/>
+
+1. **INTERCOM**: controles para falar com as linhas telefônicas e fones de ouvido.
+2. **TELECOMUNICAÇÕES**: controles para gerenciar a linha terrestre e um telefone móvel conectado via Bluetooth.
+3. **DISPLAY E CONTROLE ROTATIVO**: permitem gerenciar as opções de conexão via Internet (streaming e SIP) e gravação.
+4. **TECLADO DTMF**: usado para inserir caracteres em campos de texto e discar (DTMF) em chamadas por linha terrestre.
+5. **FADERS**: permitem mixar sinais de microfones e linhas (USB ou analógica) para gerar o PGM. Recomenda-se manter o nível em torno de **0 VU (-10 dBFS)**.
+6. **DISTRIBUIÇÃO DE CONEXÕES**: indicações para localizar facilmente os conectores principais no painel traseiro.
+
+---
+
+## Fonte de alimentação
+
+O equipamento possui uma bateria interna que permite operar até **4 horas** (ver especificações).\
+O nível é indicado no display e recomenda-se conectar o carregador quando cair para **10%**.\
+O tempo de carga completa, se a bateria estiver descarregada, é de **10 horas**.
+
+<Warning>
+  O carregamento da bateria requer que o equipamento esteja **LIGADO** e conectado à fonte externa.
+</Warning>
+
+- O carregador incluído fornece **12 VCC / 2 A** e funciona em redes de **110/240V 50/60 Hz**.
+- O console pode ser usado conectado ao carregador mesmo com a bateria em 100%.
+- Se a alimentação externa for desconectada com o equipamento ligado, o sistema muda automaticamente para modo bateria.
+
+---
+
+## Ligar / desligar
+
+O botão liga/desliga está no painel traseiro.
+
+- Ao ligar, aparece uma tela inicial durante 15 segundos e depois a tela principal.
+- Para desligar, pressione novamente: o sistema desliga após 5 segundos.
+- Recomenda-se esperar alguns segundos antes de ligar novamente.
+
+---
+
+## Display e controle rotativo
+
+A navegação é realizada através do encoder rotativo:
+
+- **Giro**: navegar entre telas ou opções dentro de uma tela.
+- **Toque curto**:
+  - sobre tela: entrar em seus itens
+  - sobre item: editá-lo
+  - sobre valor: confirmar mudança
+- **Toque longo (1 s)**: cancelar opção ou mudança
+
+O teclado **DATA ENTRY** permite inserir caracteres alfanuméricos:
+
+- Pressionando sucessivamente uma tecla, cicla pelos caracteres associados.
+- Girando o encoder move a posição a editar.
+- Confirmação: toque curto. Cancelamento: toque longo.
+
+### Telas principais (visão rápida)
+
+1. **HOME SCREEN**
+
+   <img
+     src="/images/mx2200/mx2200_display_home.jpg"
+     alt="Mx2200 Display Home Jp"
+     style={{ width:"45%" }}
+   />
+   - Indicadores de nível de PGM (L/R) em dBFS. A marca em **0 VU (-10 dBFS)** é mostrada mais brilhante. Evitar que o sinal ultrapasse permanentemente este nível.
+   - Indicador de nível de recepção (Rx) para chamadas SIP.
+   - Estado das redes (4G/Ethernet/Wi-Fi).
+   - Estado das conexões SIP, RTP e streaming (ativo, desligado ou erro).
+   - Nível da bateria (conectar em 10%).
+   - Acesso rápido à agenda de **Contatos SIP** pressionando o encoder.
+2. **CONNECTION CENTER**
+
+   <img
+     src="/images/mx2200/mx2200_display_connection_center.png"
+     alt="Mx2200 Display Connection Center Pn"
+     title="Mx2200 Display Connection Center Pn"
+     style={{ width:"45%" }}
+   />
+   - Mostra os três modos de conexão e seu estado atual.
+   - Permite estabelecer ou interromper cada conexão.
+3. **SETUP**
+
+   <img
+     src="/images/mx2200/mx2200_display_SETUP-1.bmp"
+     alt="Mx2200 Display SETUP 1 Bm"
+     title="Mx2200 Display SETUP 1 Bm"
+     style={{ width:"45%" }}
+   />
+   - Mostra endereços IP ativos.
+   - A partir daqui se acessa todas as opções de configuração:
+      1. Wi-Fi
+      2. Ethernet
+      3. Modem 4G
+      4. RTP Stream
+      5. HTTP Stream (webcasting)
+      6. Conta SIP
+      7. Agenda SIP
+      8. Info bateria
+      9. Fuso horário (para gravações)
+     10. Versão do firmware
+
+   A configuração também pode ser realizada remotamente via navegador web.
+4. **RECORDING**
+
+   <img
+     src="/images/mx2200/mx2200_display_recording.bmp"
+     alt="Mx2200 Display Recording Bm"
+     title="Mx2200 Display Recording Bm"
+     style={{ width:"46%" }}
+   />
+   - Mostra e edita parâmetros de gravação na memória interna.
+
+---
+
+## Canais
+
+### Microfones
+
+- O MX2200 gerencia **3 canais de microfone** e admite um quarto compartilhado com o fader do MIC 3.
+- Os ganhos são **automáticos**, ajustando-se conforme a posição do fader. Isso otimiza a relação sinal/ruído e evita saturação dos pré-amplificadores.
+- O botão **MASTER MIC** habilita os microfones, os envia ao PGM, ativa a **Luz de Ar** e silencia fones #1 (quando há uma Luz de Ar conectada).
+- Os microfones **não** são enviados ao CUE; só são ouvidos nos fones quando estão em programa.
+
+#### Compressor de microfones
+
+- O compressor dinâmico atua ao ultrapassar o limiar de **-10 dBFS (0 VU)**.
+- Relação alta, atenuando até **20 dB**.
+- Indicador **MIC COMP** de 3 estados:
+  - Verde: alcança limiar (-10 dBFS)
+  - Vermelho: atenuação máxima, próximo ao clipping (-5 dBFS)
+  - Clipping: indicado com retenção de 3 s
+
+Quando se usam dois microfones no canal compartilhado (MIC 3\+4), o sinal deve ser mantido na zona amarela e ocasionalmente vermelha.
+
+<Info>
+  **Sobre mixagens em estéreo**\
+  Embora o MX2200 transmita em estéreo, os canais de microfone geram uma **mixagem mono**.\
+  Para capturas em estéreo (ex. som ambiente), é necessário um console auxiliar conectado à entrada de linha, geralmente com microfones de condensador e alimentação phantom.
+</Info>
+
+---
+
+### USB e linha analógica
+
+- O fader **USB/LINE IN** controla o áudio USB se houver computador conectado.
+- Se não houver USB, utiliza o sinal da entrada analógica estéreo **LINE IN**.
+- Com USB conectado, a LINE IN pode ser usada através do controle de linha telefônica (**PHONE**) quando o híbrido não está em uso.
+- Para enviar ao programa: subir fader. Nível ótimo quando picos alcançam **0 VU**.
+- Para ouvir em CUE: pressionar o botão **CUE** sobre o fader.
+
+<Note>
+  **Áudio USB**\
+  Ao conectar a porta USB a um computador, o sistema operacional instala um **dispositivo de gravação USB** que recebe a mixagem PGM.
+</Note>
+
+---
+
+## Monitoramento
+
+- O controle **CUE MONITOR** ajusta o nível nas quatro saídas de fones de ouvido.
+- Todo sinal em CUE é enviado a todas as saídas.
+- O botão **PGM** permite silenciar o sinal de programa nos fones e ouvir apenas o presente em CUE.
+
+<img
+  src="/images/mx2200/mx2200-monitoreo-auriculares.png"
+  alt="Mx2200 Monitoreo Auriculares Pn"
+  title="Mx2200 Monitoreo Auriculares Pn"
+  className="mx-auto"
+  style={{ width:"32%" }}
+/>
+
+Se for necessário controle de volume individual, usar fones com controle próprio ou um distribuidor externo (recomendado).
+
+### Saída para monitores de áudio
+
+- Com uma luz de ar conectada, a saída de fones #1 funciona como saída de alto-falantes.
+- Esta é silenciada quando os microfones são ativados para evitar microfonia.
+- O áudio é mantido nos fones #2, #3 e #4.
+
+### Talk to CUE
+
+Pressionando o botão **TALK** na zona CUE MONITOR:
+
+- Interrompe-se o sinal nos fones.
+- Envia-se a voz do microfone incorporado.
+- Permite ao operador se comunicar com a equipe nos fones sem gritar nem fazer sinais, e sem removê-los.

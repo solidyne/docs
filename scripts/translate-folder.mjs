@@ -1,3 +1,4 @@
+import { postProcessMdx, validateMdx } from "./mdx-postprocess.mjs";
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
@@ -10,6 +11,7 @@ const __dirname = path.dirname(__filename);
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const MODEL = "anthropic/claude-3.5-sonnet";
+//const MODEL = "deepseek/deepseek-chat";
 
 const MAX_TOKENS = 8000;
 const MAX_PARTS = 3;
@@ -289,8 +291,14 @@ async function processLanguage(sourceFolder, lang) {
         lang
       );
 
+      // POST-PROCESS: fix internal links and snippets
+      const processedContent = postProcessMdx(translatedContent, lang);
+
+      // validation warnings
+      validateMdx(processedContent, relativePath, lang);
+
       const finalContent = injectTranslationMetadata(
-        translatedContent,
+        processedContent,
         newHash,
         lang
       );
@@ -342,19 +350,17 @@ async function main() {
   }
 
   const duration = ((Date.now() - startTime) / 1000).toFixed(2);
-
-  const report = {
-    model: MODEL,
-    duration_sec: duration,
-    results
-  };
+  const date = new Date().toISOString().slice(0, 10);
+  const folderName = path.basename(sourceFolder);
+  const reportFile = `translate-report_${folderName}_${langArg}_${date}.json`;
 
   ensureDirSync(path.join(__dirname, "reports"));
 
   fs.writeFileSync(
-    path.join(__dirname, "reports", `report-${Date.now()}.json`),
-    JSON.stringify(report, null, 2)
+    path.join(__dirname, "reports", reportFile),
+    JSON.stringify({ model: MODEL, duration_sec: duration, results }, null, 2)
   );
+
 
   console.log("\n🎉 Translation complete.");
 }

@@ -1,0 +1,109 @@
+---
+title: "AutoDj: Modelos de musicalização"
+description: "Criação de modelos de critério para musicalização automática"
+keywords: ["autodj", "programacao", "musica", "automatizacao"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1ded516ca87ca65396daa3268f9a859f1efd40ca730e30ed75ada9f4dac8100b"
+
+---
+
+A criação de um **modelo de musicalização (formato)** para o AutoDj define os critérios com os quais o sistema selecionará e reproduzirá música de forma automática. Um formato estabelece regras como **estilos**, **intérpretes**, **autores**, **gêneros**, **tempos/modos**, e inclui opções para **promocionais** e **apresentações**.
+
+---
+
+## Passos para criar um formato
+
+<Steps>
+  <Step title="Selecionar o terminal de destino">
+    Em redes com vários **terminais de Ar**, escolha o terminal em que o formato será usado no menu de terminais.\
+    Se existir apenas um terminal, o formato será criado automaticamente no local correto.
+  </Step>
+  <Step title="Criar um novo formato">
+    Pressione **`NEW`** para iniciar uma configuração em branco.\
+    Insira o **nome do formato** no campo **`Format`**.
+  </Step>
+  <Step title="Definir estilos musicais">
+    Em **`Styles`**, expanda a lista de **estilos** provenientes da **Base de Dados** e pressione **`Add`** para incorporá-los.
+
+    - Para incluir **todos os estilos**, marque **`All`**.
+    - Para **remover** um estilo, selecione-o e pressione **`Delete`**.
+
+    **Modo Induzido (Induced Mode):** define **quantos títulos** por estilo serão programados.\
+    Cada vez que você pressionar **`Add`**, o estilo será adicionado ao final da sequência.\
+    Exemplo: _Pop, Pop, Pop, Clássico80, Latino_ → AutoDj programará **3 Pop**, **1 Clássico80** e **1 Latino**, e depois reiniciará o ciclo.\
+    Você pode **reordenar** arrastrando com o mouse (_Drag & Drop_).
+  </Step>
+  <Step title="Escolher intérpretes (opcional)">
+    Adicione intérpretes permitidos para este formato.\
+    A caixa **`Repeat every`** define a **quantidade mínima** de músicas entre duas do **mesmo intérprete** (valor indicativo, não estrito).
+  </Step>
+  <Step title="Escolher autores (opcional)">
+    Adicione autores permitidos.\
+    A lógica é a mesma que para **intérpretes**.
+  </Step>
+  <Step title="Incluir Top Hits (opcional)">
+    Ative **Top Hits** para programar periodicamente títulos marcados como **Top** em **InfoMusic-Produção**.\
+    Selecione a categoria (por exemplo, **Top-10**, **Top-40**) e a **frequência**.\
+    Exemplo: _Top-10 a cada 0,5 h_ → uma música **Top-10** aproximadamente **a cada 30 minutos**.
+  </Step>
+  <Step title="Definir gêneros e suas repetições">
+    Para cada **gênero**, atribua um valor em **`Repeat`** que indique quantos **títulos de gêneros diferentes** devem ser intercalados **no mínimo** entre dois do mesmo gênero.\
+    Exemplo: se _Solista Masculino_ = **3**, entre duas músicas desse gênero haverá **pelo menos 3** de gêneros diferentes. (Não é uma regra estrita.)
+  </Step>
+  <Step title="Configurar matrizes de Tempo e Modo">
+    Marque as **combinações a restringir** nas matrizes de **Tempo** (velocidade) e **Modo** (sonoridade).
+
+    - **Caixas marcadas** → reduzem a probabilidade de que essa combinação ocorra.
+    - **Sem restrições** → deixe **todas as células em branco**.
+
+    Exemplo: se na **linha “Suave”** você marcar a **coluna “Muito Forte”**, o AutoDj evitará que uma música **muito forte** suceda uma **suave**.
+
+    **Regra de previsão (primeira música do bloco):** se uma **linha inteira** estiver marcada (por exemplo, _Allegro_), esse valor perde prioridade como **primeira música** do bloco, para não deixar sem sucessores compatíveis.
+  </Step>
+  <Step title="Inserir promocionais (Promos)">
+    Em **`Promos`**, o campo **`Every Titles`** define a cada **quantas músicas** será inserido um **promocional**.\
+    O campo **`Promo`** permite filtrar por **prefixo** do **título** do promo (ex.: “Verão” → apenas _PromoPGM_ cujo título comece com “Verão”).
+
+    **Categorias recomendadas em InfoMusic:**
+
+    - **`PromoPGM`**: promos específicos de um programa; inseridos a cada _n_ músicas pelo AutoDj.
+    - **`Promo`**: promos gerais 24/7; úteis para **ajustes de tempo** (pré-tanda exata).
+    - **`Separadores`**: peças que **não** devem ser gerenciadas automaticamente.
+
+    <Note>
+      Em `Autodj.ini`, você pode redefinir qual categoria o AutoDj usa ao inserir a cada _n_ músicas: `promoPgmClass=PromoPgm` (padrão) ou `Promo`.
+    </Note>
+  </Step>
+  <Step title="Habilitar apresentações (Partners)">
+    Ative **`Use Partner Files`** para reproduzir **apresentações** associadas a cada música (arquivos _Partner_).\
+    Se estiver desativado, as apresentações não serão reproduzidas, mesmo que existam.
+  </Step>
+  <Step title="Verificar o formato (CHECK)">
+    Pressione **`CHECK`** para validar o formato e detectar **erros** (por exemplo, estilos inexistentes na Base de Dados). Se um estilo foi removido, o AutoDj poderá **substituí-lo** por **promos** para cumprir os tempos; é recomendável corrigir o formato.
+  </Step>
+  <Step title="Salvar o formato">
+    Pressione **`Salvar`** (ícone de disco).\
+    O formato ficará disponível no **menu de formatos**.\
+    Para modificá-lo posteriormente: selecione-o, edite e **salve** novamente.
+  </Step>
+</Steps>
+
+---
+
+## Considerações importantes
+
+- Um **modelo** determina principalmente os **estilos** que o AutoDj pode usar.
+- Os **estilos** vêm da **Base de Dados** (não dependem da estrutura de pastas).
+- Se nenhum formato for atribuído, será usado **`Default`**, que inclui **todos** os estilos disponíveis.
+- Em instalações com vários terminais, crie/edite formatos selecionando o **Terminal atual** (veja _AUDICOM em rede_).
+
+<Note>
+  O formato **Default** atua como backup quando nenhum formato específico é atribuído.
+</Note>

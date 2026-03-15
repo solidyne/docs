@@ -1,0 +1,116 @@
+---
+title: "Blocos Auto-DJ e musicalizadores externos"
+description: "Instruções para blocos musicais automatizados"
+keywords: ["CyberPlay Editor", "Auto-DJ"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1b7b4e3981879bda01cc4e09d33e59eb13ed05cc52f37eb1c8d8470decd69b7c"
+
+---
+
+### Auto-DJ
+
+`/Block /HH:MM-HH:MM /AutoDj="Formato" [Título do bloco]`
+
+
+Este comando define um bloco **AutoDj**. Neste modo, o AUDICOM se encarrega de gerar uma **musicalização automática em tempo real**, selecionando os títulos diretamente da **Base de Dados** conforme o **formato indicado**.
+
+Na **Tela de Ar**, os blocos AutoDj aparecem representados em **cor azul claro** com uma linha denominada _"AutoDj Controller"_. Esta linha indica que o bloco será programado pelo AutoDj. Diferentemente de outros blocos, na grade de ar **não serão exibidas listas de títulos pré-programados**, já que a seleção é realizada dinamicamente quando o bloco está prestes a ir ao ar.
+
+#### Comportamento dinâmico
+
+- **Compensação de tempos**: durante os blocos AutoDj, a sincronização é automática e dinâmica.
+- **Intervenção do operador**: o operador pode **remover manualmente** um título programado pelo AutoDj; nesse caso, o sistema **insere outro imediatamente** para manter a programação.
+- Também é possível **adicionar títulos manualmente** dentro de um bloco AutoDj ou **alterar a ordem** dos que foram gerados automaticamente.
+
+Dessa forma, alcança-se um equilíbrio entre a automação total e a intervenção manual quando necessário.
+
+#### Parâmetros do comando
+
+- **/HH:MM-HH:MM** → Define o horário de início e término do bloco, expresso em horas e minutos.
+- **/AutoDj="Formato"** → Especifica o **formato AutoDj** que determinará o estilo musical e as regras de seleção. Esses formatos são criados e gerenciados no **módulo AutoDj Editor**.
+- **[Título do bloco]** → Texto opcional, que permite nomear o bloco com até 32 caracteres (os colchetes não são digitados no comando).
+
+#### Exemplo
+
+`/Block /00:00-03:00 /AutoDj="Tangos" Estrelas e Tango`
+
+Neste exemplo, das **00:00 até as 03:00 horas**, o AUDICOM selecionará e reproduzirá automaticamente títulos do formato denominado _Tangos_. O bloco aparecerá na grade de Ar como _Estrelas e Tango_.
+
+#### Importante
+
+- O AutoDj **seleciona apenas títulos que estejam registrados na Base de Dados**. Se um arquivo de áudio não estiver nela, não poderá ser utilizado.
+- Para realizar os **ajustes de tempos** (quando um evento deve começar exatamente em um horário), o AUDICOM utiliza **Promocionais** e **Fills** definidos na Base de Dados.
+- Se não houver promocionais ou áudios de preenchimento suficientes, **não será possível compensar os tempos**, o que pode gerar **buracos de silêncio** na programação.
+
+### External-DJ
+
+Permite integrar no AUDICOM uma **lista de músicas gerada por um musicalizador externo** (por exemplo, **RCS Selector** ou **Power Gold**) e usá-la diretamente na grade de ar. A ideia é que o musicalizador produza o "roteiro musical" (por títulos ou por códigos) e o AUDICOM o execute respeitando a grade, com respaldo e controle horário próprios.
+
+#### Passos de integração
+
+1. **Configurar o musicalizador externo**\
+   Exportar **24 blocos de 1 hora** (cobre 00:00–24:00).\
+   Salvar em `C:\AUDICOM\PGM` com o nome `ddmmaa.txt`.\
+   Com esse formato, o **CyberPlay Editor** e o **PlayList Manager** poderão visualizar e testar as listas.
+2. **Definir os blocos no AUDICOM**\
+   Programar blocos `ExternalDJ` no PGM. Exemplos de uso:
+
+   ⬥ **Cobertura de todo o dia**\
+   `/Block /00:00-24:00 /ExternalDJ="C:\AUDICOM\pgm\<dd><mm><aa>.TXT Música do dia`
+
+   ⬥ **Intervalos parciais (ex.: madrugada 02:00–06:00)**\
+   `/Block /02:00-06:00 /ExternalDJ="C:\AUDICOM\pgm\<dd><mm><aa>.TXT Música na madrugada`
+
+<Note>
+Os meta-nomes `<dd> <mm> <aa>` devem estar **dentro de linhas de código** ou aspas (como acima) para que o MDX não os interprete como tags. Em tempo de execução, o AUDICOM os substitui pela data correspondente.
+</Note>
+---
+
+#### Listas por **códigos** (em vez de títulos)
+
+Alguns musicalizadores exportam **códigos** (IDs) em vez de nomes de músicas. Para integrá-los:
+
+- Carregar esses **códigos** no campo **External-ID** da Base de Dados (via **InfoMusic-Produção** ou **InfoMusic Ar**).
+- Configurar a exportação diária com o nome `YYYYMMDD.cod` (sem extensão `.txt`).
+
+**Diferenças de interpretação por extensão:**
+
+- **`.txt`** → a lista contém **títulos** (o AUDICOM usa o nome da música).
+- **`.cod`** → a lista contém **códigos** (o AUDICOM busca correspondência no campo **External-ID**).
+
+Se além disso forem usados **relógios horários** na lista por códigos, incluir linhas que delimitem a hora de cada bloco:
+
+`/xx:00`
+
+onde `xx` varia de `00` a `23`.\
+Salvar sempre as listas em `C:\Audicom\pgm` para que o **CyberPlay Editor** e o **PlayList Manager** possam exibi-las.
+
+**`Programação típica com listas por códigos (.cod):`**
+
+`/Block /00:00-01:00 /ExternalDJ="C:\Audicom\pgm\<YYYY><MM><DD>.cod"`
+`/Block /01:00-02:00 /ExternalDJ="C:\Audicom\pgm\<YYYY><MM><DD>.cod"`
+...
+`/Block /22:00-23:00 /ExternalDJ="C:\Audicom\pgm\<YYYY><MM><DD>.cod"`
+`/Block /23:00-24:00 /ExternalDJ="C:\Audicom\pgm\<YYYY><MM><DD>.cod"`
+
+> **Importante (sincronia horária):** Dentro da **extensão** de um bloco `ExternalDJ` é **necessário** programar **um evento a cada hora exata** (por exemplo, **Tanda** ou **ExactTime**) para garantir a marcação e a continuidade no início da hora.
+
+---
+
+#### Comportamento se faltar a lista do dia
+
+Se o AUDICOM **não encontrar** a lista externa do dia (seja `.txt` ou `.cod`), ativa automaticamente um **AutoDj** com o formato **Default** como **backup**. Assim, evita-se o silêncio e a grade continua no tempo.
+
+---
+
+#### Arquivos de ponteiro `.PTR`
+
+Para cada lista externa utilizada, o AUDICOM mantém um **ponteiro** com o **último item reproduzido**, salvo como um arquivo **`.PTR`** (com o mesmo nome da lista) em `C:\AUDICOM\PGM`.\
+Isso permite **retomar** corretamente após uma recarga ou reinício, **sem repetir** nem **pular** conteúdos.

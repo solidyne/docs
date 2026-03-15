@@ -1,0 +1,130 @@
+---
+title: "Híbrido e Bluetooth"
+description: "Conexão de linha telefônica e celular"
+keywords: ["híbrido", "Bluetooth", "rejeição", "null"]
+tags: ["consolas de estudio", "linha Classic", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a31bc7004afff6a13a17bc3f824f29f2fa9bbe010961e9f488428fbd1574925c"
+
+---
+
+## Conexão de linhas fixas
+
+O canal de híbrido gerencia duas linhas telefônicas:
+
+- Uma linha terrestre convencional (2 fios).
+- Um telefone celular vinculado por Bluetooth.
+
+Os ajustes internos são calibrados na fábrica e não requerem intervenção. Apenas o preset de rejeição do híbrido (**null**) deve ser ajustado ao instalar o console ou ao trocar a linha telefônica.
+
+No painel traseiro encontram-se dois conectores RJ11:
+
+<img
+  src="/images/612/612-trasero-rj11.jpg"
+  alt="612 Trasero Rj11 Jp"
+  title="612 Trasero Rj11 Jp"
+  className="mx-auto"
+  style={{ width:"51%" }}
+/>
+
+- Um para a linha.
+- Outro para o telefone associado.
+
+A linha pode ser conectada diretamente à central pública ou ao PBX da emissora.\
+Os PBX privados podem deteriorar a rejeição do híbrido; recomenda-se usar linhas públicas sempre que possível.
+
+### Proteções
+
+As linhas são protegidas internamente contra descargas de alta tensão (raios indiretos) através de varistores de óxido metálico.
+
+<Danger>
+  É imprescindível instalar proteção externa na linha telefônica (descarregadores gasosos e fusíveis).\
+  Os danos por raios **não são cobertos pela garantia**.
+</Danger>
+
+### Ajuste de rejeição (Null)
+
+Este ajuste aplica-se apenas à linha terrestre. É realizado uma vez durante a instalação.\
+A rejeição evita que o sinal transmitido retorne misturado com a voz do interlocutor remoto, melhorando a qualidade da voz local.
+
+**Procedimento:**
+
+1. Estabeleça uma chamada telefônica através do híbrido.
+2. Faça com que um locutor fale pelo microfone com a pessoa na linha.
+3. Ajuste o nível da linha (botão Telephone Control) até que o VU-metro PGM alcance a zona vermelha.
+4. Ouvindo a voz local em PGM, gire o preset **NULL** até obter uma qualidade idêntica à que se percebe com _Telephone Control_ fechado.\
+   Um método prático: girar NULL para ambos os extremos, ouvir a deterioração e localizar o ponto médio onde o som é ótimo (nula ou muito pouca coloração).
+5. Repita o ajuste se trocar de linha telefônica.
+
+## Telefones móveis (Bluetooth)
+
+Qualquer telefone com Bluetooth pode ser vinculado ao D612. Uma vez vinculados, a conexão é realizada automaticamente quando o Bluetooth está ativo em ambos os equipamentos.
+
+**Alcance:** até 10 m (recomenda-se manter o celular próximo ao console, mas não em cima).
+
+### Procedimento de vinculação
+
+1. **No console:** verifique se o LED Bluetooth está apagado (o LED encontra-se no painel de VU-metros).
+   - Se estiver aceso (pisca verde lento, 1 a cada 2 s), desligue-o mantendo pressionado o botão **Bluetooth** na seção Híbrido.
+2. Com Bluetooth desligado, mantenha pressionado o botão **Cellular Phone Bluetooth** por cerca de 10 s até que os LEDs pisquem alternadamente verde/vermelho. O console entra em modo _busca_.
+
+   <Info>
+     Observe que primeiro o Bluetooth liga em modo normal, com pisca lento. Não solte o botão até que inicie o pisca rápido.
+   </Info>
+3. **No celular:** procure dispositivos Bluetooth (o procedimento depende do modelo).
+4. Selecione o dispositivo **Solidyne BTM641** (ou BTM751 em equipamentos muito antigos).
+   - Se pedir senha, digite **0000**.
+5. Os equipamentos ficam emparelhados (pairing). O LED fica verde com pisca lento (1 a cada 2 s), indicando Bluetooth ativo.
+
+### Reconectar um dispositivo vinculado
+
+1. Ligue o Bluetooth no D612 mantendo pressionado **Cellular Phone Bluetooth** até que o LED verde acenda (≈5 s).\
+   O LED verde fica piscando lentamente.
+2. Ative o Bluetooth no celular.\
+   Quando aparecer o aviso de conexão, o console está pronto.
+
+<Note>
+  Em alguns telefones, a reconexão não é automática. Será necessário selecionar manualmente **Solidyne BTM641** da lista de dispositivos Bluetooth.
+</Note>
+
+### Ajuste do volume
+
+<Warning>
+  No celular, o volume Bluetooth deve ser ajustado ao máximo durante uma chamada para garantir recepção adequada e melhor relação sinal/ruído.
+</Warning>
+
+- Este ajuste é independente do volume do alto-falante do telefone.
+- Se ajustar volume sem vincular Bluetooth, só muda o volume do alto-falante do celular.
+- O telefone memoriza o último ajuste de nível do Bluetooth.
+- Se trocar de celular, repita o ajuste.
+
+### Desligar Bluetooth no console
+
+Mantenha pressionado **Cellular Phone Bluetooth** até que o LED se apague definitivamente.
+
+## Híbrido externo
+
+O D612 dispõe de um conector para envio e retorno para um híbrido telefônico externo.
+
+- **Jack 6,35 mm (TRS):** combina entrada e saída.
+
+<img
+  src="/images/612/612-cable-insert.bmp"
+  alt="612 Cable Insert Bm"
+  title="612 Cable Insert Bm"
+  className="mx-auto"
+  style={{ width:"65%" }}
+/>
+
+**Atribuição de contatos**
+
+- **Tip (ponta):** envio MIX-MINUS (programa, sem áudio de linhas telefônicas). Este sinal se conecta à **entrada do híbrido externo**.
+- **Ring (anel):** retorno do híbrido externo (áudio da linha). Conecta-se à saída do híbrido externo. No console soma-se à saída PGM via canal de híbrido interno.
+
+O atenuador do canal Híbrido comporta-se igual que com linhas diretas, enviando sinal ao ar ou ao monitoramento prévio (ver Operação do console).

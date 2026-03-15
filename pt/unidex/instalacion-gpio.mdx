@@ -1,0 +1,174 @@
+---
+title: "GPIO e Tally Light"
+description: "Controle de dispositivos externos via GPIO no UNIDEX"
+keywords: ["GPIO", "Tally Light", "instalação", "luz de ar"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "ad28d339f10e1e1afa81a8ce2e820d8ba75e8007cc1747545ee6324bef22074b"
+
+---
+
+## Controle por GPIO
+
+O conector **GPIO** _(General Purpose Input/Output)_ oferece entradas e saídas que permitem controlar funções do console (GPI) como a ativação de microfone; ou controlar dispositivos externos (GPO) como luzes de sinalização ou processamento de áudio.
+
+- **GPI** suporta sinais de disparo de **5-15V/150mA** (ativo alto).
+- **GPO 1 a 7** são do tipo _"open drain"_. Funcionam como interruptores, conectando a saída ao terra. Suportam sinais de **5–24 V / 250 mA**.
+- **PIN 8** fornece **tensão CC** (difere segundo o modelo do console, ver a seguir). Pode ser usado para disparar diretamente os GPI (com um interruptor). Ou para alimentar um dispositivo externo acionado através de um GPO (por exemplo, uma luz ou um pequeno relé)
+
+## Pin-out e configuração
+
+<AccordionGroup>
+  <Accordion title="GPIO UX24">
+    ### DB15 PIN-OUT (UX24)
+
+    <img
+      src="/images/UX24-GPIO.png"
+      alt="UX24 GPIO"
+      title="UX24 GPIO"
+      className="mx-auto"
+      style={{ width:"49%" }}
+    />
+
+    <Note>
+      **GPO 8** fornece **\+12V / 250 mA** quando ativo. 0V quando inativo.
+    </Note>
+    ### CONFIGURAÇÃO DAS AÇÕES
+
+    <img
+      src="/images/ux24/unidex-config-GPIO.png"
+      alt="Unidex Config GPIO"
+      title="Unidex Config GPIO"
+      className="mx-auto"
+      style={{ width:"64%" }}
+    />
+
+    As ações que disparam as GPIO são definidas na tela `SETTINGS→GPIO`. Cada **GP-IN** e **GP-OUT** pode ser associado a um canal e a uma ação determinada.
+
+    As ações disponíveis para as **GPI** são:
+
+    `UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A;  MASTER MIC B`
+
+    As ações disponíveis para as **GPO** são:
+
+    `UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING;  OUTPUT +12V` (apenas GPO8)
+  </Accordion>
+  <Accordion title="GPIO UX18">
+    ### DB15 PIN-OUT (UX18)
+
+    <img
+      src="/images/ux18_gpio.png"
+      alt="Ux18 Gpio"
+      title="Ux18 Gpio"
+      className="mx-auto"
+      style={{ width:"49%" }}
+    />
+
+    <Note>
+      **PIN 8** FORNECE UMA TENSÃO FIXA DE **\+15 VCC / 100 mA** (max).
+    </Note>
+    ### CONFIGURAÇÃO DAS AÇÕES
+
+    As ações que disparam as GPIO são definidas na tela `SETTINGS→GPIO`. Cada **GP-IN** e **GP-OUT** pode ser associado a um canal e a uma ação determinada.
+
+    As ações disponíveis para as **GPI** são:
+
+    `UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A`
+
+    As ações disponíveis para as **GPO** são:
+
+    `UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING`
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  **EXEMPLOS**
+
+  \
+  A seguinte configuração para GPI: **GPI 1  |  CHANNEL ON/OFF  |  CHANNEL 1**
+
+  ...fará com que o Canal 1 ligue ou desligue de acordo com o sinal de controle presente na entrada **GPI 1**.
+
+  A seguinte configuração para GPO: GPO 1  |   CHANNEL ON/OFF  |  CHANNEL 6
+
+  ...fará com que mude o estado da saída **GPO 1** de acordo com o ligar ou desligar do Canal 6.
+</Tip>
+
+## Casos de aplicação para as GPIO
+
+### Braço suporte com LED (GPO)
+
+As saídas **GPO 1 a 7** podem funcionar como **chaves eletrônicas**, comutando LEDs conectados a uma fonte de alimentação externa, desde que o consumo não ultrapasse **250 mA**.
+
+<Danger>
+  Se o consumo exceder **250 mA**, deve-se utilizar um **relé externo** para a comutação. Recomenda-se usar **GPO 8** para comandar diretamente um relé de bobina 12 V com consumo de até 250 mA.
+</Danger>
+
+A figura mostra um exemplo de conexão direta de um **braço de microfone com LED**, utilizando **GPO-1**.
+
+<img
+  src="/images/ux24/unidex_GPIO_brazo.jpg"
+  alt="UNIDEX GPIO brazo"
+  title="UNIDEX GPIO brazo"
+  style={{ width:"51%" }}
+  className="mx-auto"
+/>
+
+Na **configuração de GPIO**, as saídas GPO devem ser atribuídas à função de ligar/desligar do canal MIC correspondente.
+
+Exemplo típico:
+
+- **GPO 1 →** ON/OFF Canal MIC 1
+- **GPO 2 →** ON/OFF Canal MIC 2
+- etc.
+
+### Silenciar microfone (uso de GPI)
+
+As entradas **GPI** permitem executar ações automatizadas no console.
+
+Uma das mais úteis é o silenciamento temporário do canal (MUTE), ideal para implementar um **botão de tosse** no estúdio. Isso permite ao locutor silenciar seu microfone sem intervenção do operador.
+
+O seguinte exemplo mostra a conexão de um **botão momentâneo** para ativar **GPI 1**.
+
+<img
+  src="/images/ux24/gpio-mute.png"
+  alt="UNIDEX GPIO Mute"
+  title="UNIDEX GPIO Mute"
+  style={{ width:"52%" }}
+  className="mx-auto"
+/>
+
+Neste caso:
+
+- **GPI 1** é configurado com a ação **MUTE** e associado ao canal desejado.
+- **GPO 8** fornece uma tensão fixa.
+
+<Warning>
+  No UX24, configurar GPO-8 para tensão fixa. No UX18 o pin-8 sempre fornece tensão fixa
+</Warning>
+
+Durante o silêncio ativado por GPI, se o operador **mover o fader manualmente**, o console devolve o controle, e o microfone volta ao ar automaticamente.
+
+## Luzes de sinalização "NO AR" (Tally Light)
+
+No painel traseiro do console encontra-se **a saída de 12 V / 250 mA** para conexão de luzes de sinalização **"NO AR"**. O modelo UX24 tem duas saídas: Tally Light A e B.
+
+- Podem ser conectadas até **duas luzes de ar Solidyne LA100** por saída.
+- Para luzes de outras marcas, certifique-se de que o consumo total **não ultrapasse 250 mA**.
+
+<Warning>
+  As saídas de luz de ar são protegidas por um componente **PTC (fusistor)** que atua por temperatura.\
+  Se a corrente exceder **250 mA**, a saída é desconectada automaticamente para proteger o console.
+
+  Para restabelecer a saída:
+
+  1. Desconectar a carga (a luz).
+  2. Revisar o sistema para identificar a causa do sobreconsumo (ex. excesso de LEDs ou curto-circuito).
+  3. Esperar que o PTC esfrie antes de reconectar.
+</Warning>

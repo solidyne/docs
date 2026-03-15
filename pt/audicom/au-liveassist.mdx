@@ -1,0 +1,213 @@
+---
+title: "Live Assist"
+description: "Painéis de acesso instantâneo."
+keywords: ["Live Assist"]
+ttags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "8d73676bbcbcc7752ba35e6042513f21b62bf1eacd3b550702257c077615f1eb"
+
+---
+
+## Painéis Live Assist
+
+Os módulos **Live Assist 1** e **Live Assist 2** permitem enviar conteúdos ao ar de forma instantânea.\
+São utilizados principalmente para reproduzir **SFX, promocionais, separadores e cortinas**.
+
+<img
+  src="/images/audicom/au-liveassist.png"
+  alt="Au Liveassist Pn"
+  title="Au Liveassist Pn"
+  className="mx-auto"
+  style={{ width:"51%" }}
+/>
+
+- Os conteúdos são organizados em grades de botões.
+- Cada perfil possui 12 páginas ou abas (tabs).
+- A quantidade de botões por página depende das linhas e colunas definidas no **Painel de Configuração**.
+- O painel pode ser redimensionado e o tamanho dos botões ajusta-se automaticamente.
+
+Live Assist suporta controle por:
+
+- Teclado (ver seção _Controle pelo teclado_).
+- Controladores externos via **MIDI**.
+
+### Dispositivos de áudio
+
+- Podem ser atribuídos dispositivos de saída independentes ou compartilhar o mesmo que **CyberPlay**.
+- Caso compartilhado, a mixagem é realizada internamente conforme o valor de **MIX**.
+- A atribuição é feita no **Painel de Configuração**.
+
+### Vídeo
+
+No **Audicom Black Video**, o Live Assist também suporta reprodução de vídeo.
+
+- Não interrompe nem se sobrepõe a vídeos em reprodução pelo CyberPlay ou PlayList Manager.
+
+
+
+## Dispositivos de saída
+
+Ambos módulos podem reproduzir por mixagem interna sobre o CyberPlay ou por saídas independentes.\
+A atribuição é feita no **Painel de Configuração**.
+
+
+
+## Visualização expandida
+
+É possível alternar entre visualização reduzida e expandida.
+
+- A alteração é feita com o botão **Maximizar**, localizado na barra de título.
+
+
+
+## Pausa, Stop e Fade-Stop
+
+- **Pausa**: interrompe a reprodução e permite retomar com Play.
+- **Stop**: para completamente e retorna ao início.
+- **Fade-Stop**: atenua progressivamente o nível e depois para.
+
+
+
+## Pré-escuta (CUE)
+
+- Clique direito em um botão → reprodução em **CUE** por canal dedicado.
+- Manter clique direito >1s também ativa CUE.
+- Alternativamente: duplo clique na legenda **CUE** no display.
+
+<Warning>
+  O modo CUE por console não é recomendado:
+
+  - Não reporta em RDS/iRDS.
+  - Não registra em arquivos `.air`.
+  - Requer ativar/desativar CUE em cada ação → propenso a erros.
+</Warning>
+
+
+
+## Modos de reprodução
+
+Live Assist possui três modos, selecionáveis pressionando o botão sucessivamente:
+
+- **Normal**:
+  - Reproduz uma vez.
+  - Se outro arquivo for disparado, fica em fila (texto piscando).
+- **Loop**:
+  - Reprodução em loop.
+  - Para com Stop ou mudando de modo.
+- **Instantâneo**:
+  - Se outro botão for disparado, interrompe o anterior.
+
+### Encadeamento com ar
+
+- Com o módulo de Ar parado:
+  - Dispare um ou vários botões no Live Assist.
+  - Em seguida, pressione o botão de encadeamento ao ar.
+- A janela fecha e, ao terminar a sequência, continua a lista de Ar.
+
+<Note>
+  Pelo teclado, a mesma operação é feita com a **barra de espaço** após disparar um arquivo.
+</Note>
+
+
+
+## Marcadores de início e fim
+
+<Steps>
+  <Step title="Ativar CUE">
+    Coloque o Live Assist em modo CUE com duplo clique na legenda CUE.\
+    Isso evita que o áudio seja reportado em RDS ou registrado em arquivos `.air`.
+  </Step>
+  <Step title="Disparar botão">
+    Pressione o botão que deseja marcar.
+  </Step>
+  <Step title="Definir marcas">
+    Com clique direito, selecione **Mark In** ou **Mark Out**.\
+    Ouça o áudio e marque no momento desejado.
+  </Step>
+</Steps>
+
+
+
+## Janela de ícones
+
+- Exibe o nome e ícone do perfil Live Assist ativo.
+- Os ícones são arquivos `.ico` localizados em `\Audicom\LA-Icons`.
+- Podem ser adicionados ou removidos conforme preferência.
+
+### Perfis privados
+
+- Os perfis privados só são acessíveis pelo usuário que os criou.
+- São identificados com o nome do proprietário.
+- Se outro usuário tentar acessar, aparece uma mensagem de restrição.
+
+
+
+### Exportar / Importar página
+
+- **Exportar**: salva a página atual como uma Playlist (`.txt`).
+- **Importar**: carrega uma Playlist no painel Live Assist.
+
+Os itens da lista são carregados nos botões conforme sua ordem.
+
+
+
+### Criar perfis Live Assist
+
+<Steps>
+  <Step title="Abrir menu de criação">
+    Na janela de ícones, clique direito → **Adicionar (Add)**.\
+    Insira nome e ícone para o perfil.
+  </Step>
+  <Step title="Definir privacidade">
+    Ative a opção **Privado** se o perfil só deve estar disponível para esse usuário.\
+    (Requere autorização do administrador).
+  </Step>
+  <Step title="Carregar conteúdos">
+    Arraste conteúdos do Media Manager.\
+    O botão assume a cor da categoria do conteúdo.
+  </Step>
+  <Step title="Editar perfil">
+    Para alterar nome ou ícone: carregue o perfil → clique direito no ícone → **Editar**.
+  </Step>
+</Steps>
+
+
+
+## Configuração do Live Assist
+
+### Tamanho dos painéis
+
+- Definido em **Painel de Configuração > Preferências**.
+- Pode-se modificar número de linhas e colunas.
+- Botões maiores com menos quantidade, menores com mais quantidade.
+- Configuração padrão: **4 colunas x 12 linhas = 48 botões por página**.
+- Também pode-se alterar tipo e tamanho da fonte.
+
+### Arquivos de dados
+
+- As informações são salvas em `Liveass.dat` e `Liveass2.dat`.
+- O caminho é definido em `audicom.ini`.
+
+Exemplo:
+
+```ini
+[Live Assist]
+Grid=5 12
+State=1
+LastPos=0 3 0
+IconPath=c:\Audicom\LA-ICONS
+File=c:\Audicom\LIVEASS.DAT
+LastPos2=0 0 0
+```
+
+### Ícones
+
+- Localizados por padrão em `\Audicom\LA-Icons`.
+- A localização pode ser alterada em `audicom.ini`.
+- Podem ser adicionados ou removidos livremente.

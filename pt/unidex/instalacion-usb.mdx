@@ -1,0 +1,88 @@
+---
+title: "USB Audio"
+description: "Instalação da porta USB"
+keywords: ["instalação", "USB"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d68e06607aa095f5d95babfefa95f01969e31eaaabf88ead28d97049cc38c28a"
+
+---
+
+A porta **USB** incorporada oferece conexão direta ao computador, sem necessidade de interfaces de áudio adicionais.
+
+- <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size={22} /> Fornece **4 dispositivos de reprodução estéreo** (do PC para "entradas USB" no console).
+- <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} /> Fornece **4 dispositivos de gravação estéreo** ("saídas USB" do console para o PC).
+
+Ou seja, o computador pode **enviar 4 sinais estéreo** ao console, e **receber outros 4 sinais estéreo** dele.
+
+<Info>
+  Embora USB seja tecnicamente uma porta de dados, neste contexto nos referimos como **entradas e saídas de áudio USB**.
+
+  - As "**saídas USB**" do console correspondem a **dispositivos USB de gravação** no Windows.
+  - As "**entradas USB**" do console correspondem a **dispositivos USB de reprodução** no Windows.
+
+    Ter isso em mente é fundamental para compreender corretamente o fluxo de sinais.
+</Info>
+
+A atribuição de sinais para as saídas USB (ou seja, os dispositivos de gravação USB no Windows) é configurada no console na tela `SETTINGS → OUTPUTS`
+
+---
+
+## Instalação do driver USB
+
+<Warning>
+  A seguinte descrição se refere ao **conector USB incorporado** no Painel Traseiro dos modelos UX24 e UX18.\
+  Para instalar um **adaptador externo UDX-USB**, consulte a seção: **Adaptadores externos UNIDEX**
+</Warning>
+
+UNIDEX requer um driver USB próprio para que o dispositivo seja corretamente reconhecido no Windows.
+
+### Passos para a instalação:
+
+1. Conectar a porta USB do console ao PC utilizando o cabo **USB A/B** fornecido.
+
+<Danger>
+  O uso de cabos de **má qualidade ou danificados** pode fazer com que o computador não reconheça corretamente o dispositivo USB ou o identifique com falhas.
+</Danger>
+
+2. Baixar o driver: [Centro de Downloads](/pt/otros_docs/downloads)
+3. Executar o instalador e seguir as instruções.
+
+### Dispositivos USB no Windows
+
+Uma vez instalado o driver corretamente, o Windows mostrará:
+
+Dispositivos de reprodução (saídas do PC para UNIDEX):
+
+- **Solidyne USB OUT 1 →** Entrada USB 1 (UX24)
+- **Solidyne USB OUT 2 →** Entrada USB 2 (UX24)
+- **Solidyne USB OUT 3 →** Entrada USB 3 (UX24)
+- **Solidyne USB OUT 4 →** Entrada USB 4 (UX24)
+
+Dispositivos de gravação (envios do UX24 para o PC):
+
+- **Solidyne USB IN 1 ←** Saída USB 1 (UX24)
+- **Solidyne USB IN 2 ←** Saída USB 2 (UX24)
+- **Solidyne USB IN 3 ←** Saída USB 3 (UX24)
+- **Solidyne USB IN 4 ←** Saída USB 4 (UX24)
+
+Estas saídas são atribuídas na tela em: `SETTINGS → OUTPUTS`
+
+---
+
+## Compatibilidade com ASIO 3.0
+
+A compatibilidade **ASIO 3.0** permite o uso compartilhado e simultâneo de diferentes canais USB entre diferentes aplicações, mesmo que estas não sejam compatíveis com ASIO.
+
+### Exemplo de aplicação avançada:
+
+- O software de automação reproduz música pelo canal **USB 1** via WDM.
+- Outro software de processamento (como um host de efeitos ASIO) pega o canal **USB 2** de retorno do console e aplica **efeitos VST** em tempo real às vozes do microfone.
+
+<Icon icon="video" iconType="solid" color="#b30000" size={25} />  [Uso de efeitos externos VST ](https://youtu.be/qKi0MMbBEuc?si=j2B0-sSk--1DxuZE)

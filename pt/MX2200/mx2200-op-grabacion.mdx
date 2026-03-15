@@ -1,0 +1,94 @@
+---
+title: "Gravação"
+description: "Gravação interna."
+keywords: ["gravação","MP3","backup"]
+tags: ["consolas portáteis", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "4e32f976aeb2a59bbecd01a6b6b133fd09acb2a140733af00a1e600ff388748c"
+
+---
+
+## Tela de gravação
+
+A console **MX2200** permite realizar uma **gravação de segurança do evento** em formato estéreo **MP3 (16 bits / 48 kHz)**, amplamente suportado por players e editores de áudio.
+
+Acessa-se a tela RECORDING girando o encoder na tela HOME. Permite **iniciar/parar** a gravação e configurar seus parâmetros.
+
+<img
+  src="/images/mx2200/mx2200_display_recording.bmp"
+  alt="Mx2200 Display Recording Bm"
+  title="Mx2200 Display Recording Bm"
+  className="mx-auto"
+  style={{ width:"49%" }}
+/>
+
+A navegação é similar a outras telas: pressionando o botão acessa-se a navegação interna e, dentro de cada opção, um clique permite alterar seu valor ou estado.
+
+- **STATUS**\
+  Permite **habilitar ou parar** a gravação.\
+  Ao pará-la, é gerado automaticamente o arquivo com o conteúdo gravado até aquele momento.
+- **MAX TIME**\
+  Define o tempo máximo de gravação.
+  - Evita que o operador tenha que pará-la manualmente.
+  - A gravação é cortada automaticamente ao atingir o tempo definido.
+  - Edição: insere-se o valor com o teclado numérico da console (máximo **240 minutos / 4 horas**).
+  - É possível **aumentar o tempo limite enquanto a gravação está em andamento**, sem interrompê-la.
+- **BIT RATE**\
+  Define a qualidade do áudio.
+  - Faixa: **64 a 320 kbps**.
+  - Quanto maior o valor, melhor qualidade e maior tamanho do arquivo.
+  - Em **192 kbps** são armazenadas aproximadamente **100 horas** dentro da console.
+
+<Info>
+  Quando a gravação está habilitada, a tela principal indica o estado da gravação e mostra o **tempo restante disponível**.
+</Info>
+
+---
+
+## Gerenciamento das gravações
+
+O gerenciamento (monitoramento, reprodução, renomeação, download e limpeza) é realizado **remotamente** de um computador conectado em rede.
+
+Para acessar: digite em um navegador (Firefox, Chrome, Safari, Edge, etc.) o endereço IP do equipamento seguido de **/recording**.
+
+Exemplo: `192.168.0.118/recording`
+
+<Steps>
+  <Step title="Conectar a console">
+    Conecte a console à rede local usando a porta **Ethernet** (recomendado) ou a antena **Wi-Fi**.
+  </Step>
+  <Step title="Abrir o navegador">
+    Em um computador da mesma rede, abra um navegador e digite o **endereço IP** da MX2200 com o subpath `/recording`.
+  </Step>
+  <Step title="Obter endereço IP">
+    Para conhecer o IP atribuído, gire o botão **CONTROL (encoder)** e acesse a tela **SETUP**.\
+    Os três primeiros itens mostram o estado da conexão e o endereço IP de **Ethernet**, **Wi-Fi** e **Modem 4G**.
+  </Step>
+</Steps>
+
+---
+
+### Interface Web
+
+<img
+  src="/images/mx2200/mx2200-web-recording.png"
+  alt="Mx2200 Web Recording Pn"
+  title="Mx2200 Web Recording Pn"
+  style={{ width:"98%" }}
+  className="mx-auto"
+/>
+
+- Cada _gravação_ é salva com o nome: `[Nome do equipamento] + [Data e hora]`
+- A interface **HTML5** inclui player para **avançar, retroceder e pausar**.
+- A listagem pode ser ordenada por **nome, data ou tamanho**.
+
+  <Note>
+    A data mostrada corresponde à **hora local do computador cliente**, não da console.
+  </Note>
+- O áudio pode ser **baixado** e será salvo na pasta de downloads padrão do navegador.

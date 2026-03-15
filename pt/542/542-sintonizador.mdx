@@ -1,0 +1,142 @@
+---
+title: "Sintonizador e medições"
+description: "Sintonizador de FM e monitoramento da transmissão"
+keywords: ["sintonizador", "medições", "relatório", "recepção", "receptor", "modulação"]
+tags: ["processadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a4dfb5001a375ccb742609013eb300b60241fb3828df140ab7c0abd403118f78"
+
+---
+
+## Sintonizador de FM
+
+O **sintonizador de FM interno** permite realizar medições sobre a onda de rádio recebida.\
+Acessa-se através do menu lateral do modo SETUP, na opção **FM RECEIVER – ANALYZER**.
+
+- Geralmente a emissora sintonizada é a mesma em que o processador está operando.
+- Também é possível sintonizar qualquer outra emissora para visualizar seus valores.
+
+O sintonizador está associado a um **monitor de modulação**, que mostra em tempo real diferentes aspectos da transmissão, analisando o sinal de RF recebido.
+
+<Warning>
+  As medições só são válidas quando a estação está corretamente sintonizada.
+
+  - Se o nível de RF for **menor que 40 dB** ou o multipath ultrapassar **10%**, as medições **não são válidas**.
+  - Nessas condições, os campos de dados aparecem escurecidos.
+</Warning>
+
+### Controles do sintonizador
+
+- **ON/OFF** → liga ou desliga o sintonizador de FM.\
+  Se a recepção estiver muito ruim, o equipamento o desliga automaticamente.
+- **FREQ** → inserir a frequência da emissora (MHz, usar ponto decimal, ex. 95.9).
+  - Digite o valor com o teclado e confirme com **ENTER**.
+  - Se estava desligado, o sintonizador liga.
+
+### Parâmetros de recepção
+
+- **Reception Quality:** Indicadores de validade da recepção:
+  - Indicam se a qualidade do sinal permite medições confiáveis.
+  - Caso contrário, são mostradas as variáveis fora de faixa: _RF low level_, _Multipath_, _Noise_, _Adjacent channel interference_.
+- A qualidade da recepção depende da **antena conectada**.\
+  (Ver seção **Antena receptora de FM**).
+- **RF LEVEL** → nível de sinal RF na antena. Deve ser \> 40 dB.
+- **Multipath** → percentual de distorção por reflexões. Deve ser \< 10%.
+- **Band Type** → tipo de banda de FM conforme a região.
+- **RBDS Mode** → ativa o sistema RBDS (versão do RDS utilizada nos EUA).
+
+---
+
+### DIAL SCAN
+
+Ferramenta que explora a banda de FM em passos de **100 kHz** e gera um gráfico com a intensidade de sinal de cada emissora detectada.
+
+![542 DIAL SCAN Pn](/images/542/542-DIAL_SCAN.png)
+
+---
+
+## Análise de transmissão
+
+### Medições de FM
+
+Monitoramento dos parâmetros medidos sobre o sinal sintonizado:
+
+![542 FM ANALYZER Pn](/images/542/542-FM_ANALYZER.png)
+
+- **TOTAL MODULATION** → nível de modulação de FM medido sobre o sinal sintonizado.
+- **MODULATION MEASUREMENT RESPONSE** → tempo de integração da medição:
+  - Instantânea
+  - 125 µs (recomendado para pico)
+  - 250 µs
+  - 500 µs
+  - 1 ms
+
+    <Note>
+      A integração apropriada depende das normas de cada região.
+    </Note>
+- **PILOT** → % de modulação do tom piloto (padrão: 9%).
+- **RDS** → % de modulação da subportadora RDS (padrão: 4%).
+- **AUDIO L/R** → nível de áudio (dBFS).
+- **CARRIER OFFSET** → desvio da portadora (kHz).
+- **RDS BER** (bit error ratio) → qualidade de dados RDS.
+  - 0% = sem erros.
+  - 100% = dados ilegíveis.
+- **RDS DATA** → textos transmitidos por RDS.
+
+---
+
+### Separação de canais, distorção e SNR
+
+O sistema mede:
+
+- Separação de canais.
+- Distorção harmônica \+ ruído (THD\+N).
+- Relação sinal-ruído (SNR).
+
+![542 FM Measurrements Pn](/images/542/542-FM_measurrements.png)
+
+Estas medições contemplam o **conjunto completo**: processador \+ codificador estéreo \+ transmissor \+ antena.
+
+- Podem ser feitas **remotamente**, sem interromper a transmissão.
+- No processo:
+  - É injetado um tom audível muito breve (~250 ms).
+  - Para SNR, o sinal é silenciado por 2 segundos.
+
+**Procedimento**
+
+- Pressione a opção **RUN new measurement** que aparece à direita do parâmetro.
+- Isso executa a medição para esse parâmetro e o resultado aparece na tela.
+
+**Escala para separação de canais**
+
+| Separação (dB) | Avaliação    |
+| :-------------: | :-----------: |
+| **\> 40 dB**    | **Excelente** |
+| 35 a 40 dB      | Muito boa     |
+| 30 a 35 dB      | Boa           |
+| 25 a 30 dB      | Regular       |
+| \< 25 dB        | Ruim          |
+
+<Info>
+  A separação pode ser otimizada através dos controles avançados do codificador estéreo.\
+  Ver **Medição e ajuste da separação de canais**.
+</Info>
+
+---
+
+### Relatório técnico de transmissão
+
+- O botão **DOWNLOAD FULL TEST** executa todas as medições e gera um arquivo de texto com os resultados, incluindo os valores do Analisador FM.
+- O arquivo é salvo na pasta de downloads do navegador.
+- Este relatório pode ser enviado ao **Suporte Técnico** para diagnóstico remoto.
+- Se o sintonizador estiver desligado, não é possível gerar relatórios. Para ligá-lo: pressione **ON/OFF** e aguarde até que os valores se estabilizem.
+
+<Warning>
+  O relatório introduz **breves tons audíveis no ar** durante as medições.
+</Warning>

@@ -1,0 +1,145 @@
+---
+title: "Control Lite Commander"
+description: "Controlar o 542APC a partir do aplicativo remoto Solidyne Lite Commander"
+keywords: ["LiteCommander", "schedule", "preset", "stereo-mono"]
+tags: ["processadores", "542"]
+
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "a17910dfef4fc47a8b5af84fe2e0b1ea81bc74b372bebf69c95b0669b9ba21c9"
+
+---
+
+O **542 Lite Commander** permite controlar o equipamento **542APC** a partir de um PC na LAN.\
+É de fácil configuração e permite automatizar tarefas como:
+
+- Comutar o **preset de processamento** de forma remota.
+- Alterar o modo de transmissão entre **estéreo / mono**.
+
+A comutação pode ser realizada:
+
+- **Manualmente**.
+- Programada, de acordo com uma **pauta horária**.
+
+---
+
+## Download e instalação
+
+- O aplicativo pode ser baixado gratuitamente em:\
+  👉 https://www.solidynepro.com/DW/lite.rar
+- Compatível com Windows 10, 11 assim como com edições Windows Server (32 e 64 bits).
+- O instalador permite configurar inicialização automática pelo menu Iniciar do Windows ou criar um atalho na Área de Trabalho.
+- Alternativamente, o executável pode ser copiado para qualquer pasta e executado diretamente.
+- Não requer permissões de administrador.
+
+**Pastas padrão:**
+
+- Aplicativo: `C:\Program Files (x86)\Solidyne 542 Lite commander`
+- Dados: `<appData>\Solidyne` (exemplo: `C:\Users\Usuario\AppData\Roaming\Solidyne`)
+
+**Portas utilizadas:**
+
+- Discovery → `30303 UDP`
+- Aplicativo → `80 TCP`
+- Timeout TCP padrão → `1000 ms`
+
+<Info>
+  O aplicativo foi projetado para controlar um único equipamento por vez, embora possam ser executadas várias instâncias para comandar mais de um 542APC.
+</Info>
+
+---
+
+## Tela principal
+
+A tela principal permite visualizar:
+
+- **Host IP** do equipamento selecionado.
+- Preset de processamento atual.
+- Estado do modo FM (Mono / Estéreo).
+
+  <img
+    src="/images/542/542-LiteCommander.gif"
+    alt="542 Lite Commander Gi"
+    title="542 Lite Commander Gi"
+    style={{ width:"64%" }}
+  />
+
+### Controles principais
+
+- **Switch Stereo–Mono**: mostra e comuta o modo de transmissão.
+  - Em **MONO** a subportadora de 38 kHz é suprimida.
+  - Ver detalhes em [Sobre a transmissão em MONO](/pt/542/542-mono)
+  - 
+- **Switch Schedule**: ativa/desativa o programador horário.
+- **Always on top**: mantém o aplicativo visível mesmo quando outro software está em uso.
+- **Presets:** Permite comutar o preset de processamento. A mudança ocorre imediatamente. \
+  As mudanças de preset ou modo realizadas **no painel frontal do equipamento** também são refletidas nesta tela.
+- Botões disponíveis:
+  - **Discovery** → abre a tela de busca de equipamentos na LAN.
+  - **Schedule** → abre o editor de programação horária.
+
+## Schedule
+
+A janela de **Schedule** permite criar uma agenda horária:
+
+- Define qual **preset** e qual **modo de transmissão** (Estéreo/Mono) serão aplicados de acordo com dia e hora.
+- À esquerda são listados todos os presets disponíveis.
+- À direita configura-se a agenda por horas e dias.
+
+<img
+  src="/images/download.png"
+  alt="download.png"
+  title="download.png"
+  style={{ width:"65%" }}
+/>
+
+### Funções principais
+
+- **Set preset** → programa um preset em uma hora determinada.
+- **Set mode** → programa o modo de transmissão.
+- **Clean preset / Clean mode** → remove programação.
+
+Os arquivos de agenda são:
+
+- `Week.sch` → de segunda a sexta-feira.
+- `Saturday.sch` → sábados.
+- `Sunday.sch` → domingos.
+
+<Info>
+  É possível criar arquivos para dias específicos (ex: `Monday.sch`, `Tuesday.sch`).\
+  Deve-se copiar `Week.sch` e renomear com o dia desejado.
+</Info>
+
+Os campos em branco indicam que o software não controla o preset/modo nesse intervalo.
+
+## Discovery
+
+<img
+  src="/images/542/542-LiteCommander-Discovery.png"
+  alt="542 Lite Commander Discovery Pn"
+  title="542 Lite Commander Discovery Pn"
+  style={{ width:"81%" }}
+/>
+
+- Envia uma **mensagem broadcast** na LAN para localizar equipamentos 542APC.
+- Se o equipamento estava desligado, repita a busca com o botão **[Discovery]**.
+- Os equipamentos encontrados são listados com:
+  - Endereço IP
+  - Nome do host
+  - Endereço MAC
+  - Detalhes do dispositivo
+- Se houver várias interfaces de rede no PC, pode-se escolher a placa de rede para a busca.
+- Selecione um equipamento na lista e pressione **[Select]** para comandá-lo.
+
+<Warning>
+  É recomendável que o processador tenha **IP fixo**.
+</Warning>
+
+- O IP selecionado é salvo no arquivo `V-RACK.INI`, para uso posterior em reinicializações.
+
+---

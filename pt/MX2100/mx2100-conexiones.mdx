@@ -1,0 +1,119 @@
+---
+title: "Conexões"
+description: "Descrição das conexões no MX2100"
+keywords: ["conectividade", "conectores"]
+tags: ["consolas portáteis", "exteriores", "MX2100"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f4ad2b52ce3044f8bb45460176be7ac59a06edffe8da5076e50d78fe1111da5a"
+
+---
+
+## Entradas de microfone
+
+O MX2100 possui 3 entradas de microfone (MIC-1, MIC-2 e MIC-3) com conectores do tipo **TRS 1/4” (6,25 mm)**.
+
+Os pré-amplificadores utilizam a técnica _local feedback_, que evita a saturação diante de altos níveis de pressão sonora (por exemplo, um locutor gritando um gol).
+
+### Microfone incorporado
+
+- Microfone electret incorporado na frente do equipamento (MIC-4).
+- Permite ir ao ar mesmo sem microfones externos.
+- Compartilha o controle de nível com a entrada de linha e o retorno Bluetooth.
+
+<Warning>
+  MIC-4 é desativado se a conexão USB (a um computador ou carregador) for utilizada ou se a entrada de linha for conectada.\
+  O controle **MIC-4/LIN/Bluetooth** apresenta sinais diferentes dependendo do cenário de trabalho (ver _Operação da consola_).
+</Warning>
+
+---
+
+## Entrada de linha
+
+- **LIN-4:** entrada de linha mono.
+- Aceita conexão direta a partir de saídas de fones de ouvido de gravadores portáteis, telefones celulares, notebooks, tablets, etc.
+- Pode ser usado um cabo miniplug estéreo 1/8”, embora na consola o anel (canal direito) fique sem conexão.
+- Compartilha controle de nível com o microfone incorporado (MIC-4) e o retorno Bluetooth.
+
+<Warning>
+  Se um equipamento estéreo for conectado, a entrada usará apenas um canal. O anel do plug (canal direito) fica sem conexão na consola.
+</Warning>
+
+---
+
+## Saída de programa (Bal Out)
+
+- Saída balanceada, monoaural, com conector **TRS 1/8”**.
+- Mistura de sinais: MIC-1, MIC-2, MIC-3/USB e MIC-4/LINE/Bluetooth.
+
+### Processamento dinâmico
+
+O sinal PGM passa por um compressor de faixa dinâmica projetado para voz humana:
+
+- Controla picos e evita diferenças de níveis.
+- Livre de distorção e sem aumento de ruído de fundo.
+- Indicação de compressão por meio de dois LEDs frontais.
+
+Este sistema permite realizar entrevistas com níveis consistentes, sem necessidade de operador de áudio.
+
+A saída PGM pode ser usada para:
+
+- Conectar a gravadores digitais portáteis e obter gravações de qualidade.
+- Enviar sinal a Estúdios através de link de rádio VHF/UHF em alta qualidade (30–15.000 Hz).
+
+---
+
+## Saídas de fones de ouvido
+
+- Distribuidor interno de sinal para fones de ouvido.
+- 3 saídas com conectores minijack 3,5 mm.
+- A mistura enviada aos fones de ouvido depende do modo de conexão e do cenário de trabalho (ver _Operação da consola_).
+
+---
+
+## Áudio USB
+
+A consola **MX2100** foi projetada para simplificar a conexão com notebooks, permitindo transmissões de streaming via Internet.
+
+- A conexão **USB** resolve tanto os **envios** quanto os **retornos** de sinal com Estúdios.
+- É utilizado um cabo padrão **mini-USB a USB-A macho**.
+
+### Detecção automática do sistema operacional
+
+Ao conectar o MX2100 a um computador com **Windows 7/8/10**, **Linux** ou **OS-X**:
+
+- O sistema operacional detecta a consola e instala automaticamente os drivers necessários.
+- Não são necessários drivers adicionais.
+
+<Info>
+  No Windows, o dispositivo USB é configurado automaticamente como **dispositivo padrão**.
+</Info>
+
+### Dispositivos detectados
+
+A consola é identificada como:
+
+- **Dispositivo de reprodução USB (stereo out):** o computador envia áudio para o MX2100.
+- **Dispositivo de gravação USB (stereo in):** o computador recebe áudio proveniente do MX2100.
+
+---
+
+## Alimentação USB
+
+- Bateria interna recarregável Ni-Cd.
+- Autonomia: 16 horas em uso contínuo graças à tecnologia CMOS.
+- Carregador USB externo multivoltagem automático (100–240 VCA) incluído.
+- Conexão através de cabo USB-A a mini-USB.
+
+### Tempo e forma de carga
+
+- Tempo para carga completa: ~12 horas.
+- Acima desse valor, a corrente de carga diminui e pode ser deixado conectado sem risco.
+- LED vermelho (CHG) indica carga em andamento.
+- O LED permanece aceso enquanto a unidade estiver conectada ao carregador, mesmo desligada.
+- Também recarrega ao ser conectado via USB a um computador.

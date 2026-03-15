@@ -1,0 +1,168 @@
+---
+title: "Operação"
+description: "Operação e colocação no ar"
+keywords: ["operação"]
+tags: ["híbridos", "HL240"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "bbc86fb232573e76026df1a013d55f7fc8715c84a46f316421047581ab9f31c9"
+
+---
+
+## Linhas terrestres
+
+As linhas telefônicas são controladas com um **botão** e um **controle de nível**:
+
+<img
+  src="/images/hl240/hl204-frente-lineas.png"
+  alt="Hl204 Frente Lineas Pn"
+  title="Hl204 Frente Lineas Pn"
+  className="mx-auto"
+  style={{ width:"57%" }}
+/>
+
+- **ON**: captura a linha telefônica.
+- **Rotativo-HOLD**: Nesta posição (totalmente à esquerda) mantém a chamada com áudio do ar.
+- **Rotativo-AR**: Para a direita, ajusta o nível na mixagem de saída.
+- **OFF**: libera a linha e a devolve ao telefone associado.
+
+Quando uma chamada entra, o botão da linha se ilumina no ritmo do toque.\
+A chamada também tocará no telefone associado.
+
+- Para **atender pelo HL240-VQ**, pressione o botão da linha.
+- Para **ligar do estúdio**, disque no telefone e depois transfira para o HL240-VQ pressionando o botão da linha e desligando o fone.
+
+<Tip>
+  **Para conferência:** se houver uma chamada no ar, coloque a segunda em **HOLD** antes de atendê-la, evitando que entre diretamente no ar.\
+  Enquanto está em HOLD, a pessoa ouve o programa que está no ar.
+</Tip>
+
+---
+
+## Celulares via Bluetooth
+
+O HL240-VQ gerencia até **dois telefones celulares vinculados por Bluetooth**.
+
+<img
+  src="/images/hl240/hl240-frente-BLT.png"
+  alt="Hl240 Frente BLT Pn"
+  title="Hl240 Frente BLT Pn"
+  className="mx-auto"
+  style={{ width:"42%" }}
+/>
+
+A operação é similar ao trabalho com linhas terrestres:
+
+- Pressione e mantenha o botão **BLT** para ligar o canal (LED piscando).
+- Ative o Bluetooth no celular já vinculado.
+- Conecte o celular ao dispositivo Solidyne BLT-1 ou BLT-2.
+- As chamadas recebidas ou realizadas pelo celular passam pelo canal Bluetooth.
+
+<Note>
+  Para evitar interferências, mantenha a distância entre o celular e o HL240-VQ o mais curta possível.
+</Note>
+
+---
+
+## Receber uma chamada
+
+As chamadas recebidas (linha terrestre ou celular) podem ser atendidas pelo telefone associado ou pelo HL240-VQ.\
+Os botões **LINE** e **BLT** piscam no ritmo do toque.
+
+- **Bluetooth**: um toque no botão BLT atende a chamada no celular. Se desejar atender e dialogar pelo telefone, primeiro deve-se desconectar do Bluetooth e depois reconectar para transferir ao híbrido.
+- **Linhas terrestres**: pressione **ON/OFF** para que o híbrido capture a linha. Também é possível atender pelo telefone associado e transferir ao HL240-VQ pressionando ON/OFF antes de desligar.
+
+---
+
+## Chamada em espera e talkback
+
+O equipamento sempre envia retorno de áudio ao telefone remoto, independentemente do controle de nível.
+
+- Com o controle na posição **HOLD** e uma chamada ativa, o áudio da linha não é somado à saída, mas o outro lado ouve o programa em andamento (sinal de **AUDIO IN**).
+- Nesta condição, pode-se falar com as linhas usando o microfone **Talkback** integrado.
+
+  Ao pressionar **Talkback**, interrompe-se temporariamente o sinal de AUDIO IN e envia a voz do operador **para todas as linhas**.
+
+  <img
+    src="/images/hl240/hl240-talkback.png"
+    alt="Hl240 Talkback Pn"
+    title="Hl240 Talkback Pn"
+    className="mx-auto"
+    style={{ width:"33%" }}
+  />
+
+<Warning>
+  Talkback **não deve ser usado quando há uma chamada no ar**, pois interrompe o áudio do programa para o interlocutor.
+</Warning>
+
+As linhas podem ser ouvidas monitorando o canal HL240-VQ no console de mixagem. Também podem ser usados fones de ouvido conectados em "HEADPHONES" no painel traseiro da unidade.
+
+---
+
+## Colocação no ar
+
+O HL240-VQ inclui um mixer interno para conferências.\
+A mixagem é ajustada com os controles do painel frontal e enviada ao console através de **AUDIO OUT**.
+
+<Steps>
+  <Step title="Enviar à mixagem de saída">
+    Posicione o controle de nível no centro. Se conversarmos em privado com a linha fora do ar, aproveite este momento para ajustar o nível.
+  </Step>
+  <Step title="Habilitar no console">
+    Abra no console o canal designado ao HL240-VQ.
+  </Step>
+  <Step title="Ajustar nível no ar">
+    Se não houve conversa prévia (ou foi pelo telefone), realize o ajuste final de nível ao vivo pelo HL240-VQ. Os picos no indicador **OUTPUT LEVEL** a +4 dBu.
+  </Step>
+</Steps>
+
+---
+
+## Finalizar a chamada
+
+- **Em linhas telefônicas**:
+  - OFF desconecta a linha do híbrido e a devolve ao telefone associado.
+  - Se OFF for pressionado com o telefone na base durante uma chamada, a comunicação é cortada.
+  - Para transferir ao telefone, primeiro tire a chamada do ar, retire o fone da base e depois pressione OFF.
+- **Em canais Bluetooth**:
+  - Pressione brevemente o botão BLT ou desligue pelo celular.
+  - Antes de desligar, retire a chamada do ar.
+  - Se desligar diretamente pelo HL240-VQ, será emitido um _beep_ de finalização que poderia ir ao ar.
+
+---
+
+## Nível de envio às linhas
+
+O áudio enviado às linhas entra por **AUDIO IN**.\
+O controle **INPUT LEVEL (Send to Lines)** ajusta este nível.
+
+O nível de envio deve ser mantido com picos entre **–2 e +4 dBu**.
+
+<Warning>
+  Um envio excessivo deteriora a rejeição, gerando realimentação de sinal pela linha e sujando a voz direta.
+</Warning>
+
+---
+
+## Nível de saída
+
+A saída balanceada entrega a mixagem de linhas e canais Bluetooth.\
+Ajuste os controles de nível para que o indicador **OUTPUT LEVEL** mostre picos em **\+4 dBu**.
+
+Isto assegura uma correta excitação do processamento **VQR**.
+
+<Note>
+  Ao operar com Bluetooth, verifique se o volume do celular está no máximo.
+</Note>
+
+### Saídas diretas
+
+As saídas **PH-1** e **BLT-1** entregam sinal **pre-fader** com nível fixo.\
+Permitem monitorar Linha-1 e Bluetooth-1 no console, mesmo se outras linhas estiverem no ar.
+
+Mesmo usando as saídas diretas, os sinais continuam disponíveis na mixagem principal do HL240-VQ.

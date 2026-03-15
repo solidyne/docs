@@ -1,0 +1,89 @@
+---
+title: "Sistema e níveis de acesso"
+description: "Configurações de sistema e níveis de acesso"
+keywords: ["configuração", "sistema", "hora", "início", "usuários"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "1ecf42303a4859b36b5842b28efdabcad798323f038879be5419e21b14444a12"
+
+---
+
+## Configurações de sistema
+
+A opção SYS CONFIG na tela SETTINGS permite configurar diferentes funções do sistema.
+
+<img
+  src="/images/ux24/unidex-config-sysconfig.jpg"
+  alt="UNIDEX Sysconfig"
+  title="UNIDEX Sysconfig"
+  style={{ width:"75%" }}
+/>
+
+### **1** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Start On-Air Input
+
+Define a entrada que será automaticamente colocada no ar se o console reiniciar devido a uma falha no fornecimento de energia.\
+Para entradas estéreo, qualquer um dos canais do par pode ser selecionado.
+
+A entrada escolhida deve estar atribuída a um canal físico ou virtual. O console sempre inicia com a última cena utilizada; portanto, se a emissora trabalha em modo automatizado, certifique-se de que a cena selecionada tenha pelo menos um canal atribuído com a entrada definida para "início automático".
+
+A fonte de áudio conectada a essa entrada também deve retomar automaticamente.
+
+**Default Bus**\
+Indica os buses que serão ativados no canal atribuído à entrada definida em `Start on-air input`.
+
+**Level**\
+Nível pré-configurado, independente da posição do fader físico. Se o fader for movido, o nível mudará para o valor correspondente à sua posição atual.
+
+### **2** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Configurações de rede (acesso remoto)
+
+Configura a conexão de rede para o controle remoto via Ethernet Control.\
+Por padrão, o console trabalha em modo **DHCP**. O endereço IP atribuído pelo roteador é exibido na tela principal (campo _UNIDEX IP_ no setor **STATUS**).
+
+Através deste IP, é possível acessar o console de qualquer computador na mesma LAN usando um navegador web.\
+UNIDEX incorpora um servidor HTML5 interno que fornece a interface gráfica para operar e configurar todas as suas funções.
+
+### **1** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Clock Settings
+
+Abre uma janela para ajustar a hora. O ajuste pode ser feito de três maneiras:
+
+1. **Sincronização automática pela porta STREAMING**\
+   Conecte a porta Ethernet STREAMING a uma LAN com acesso à Internet. A sincronização é realizada automaticamente com um relógio padrão internacional (UTC), sem intervenção do usuário.
+2. **Sincronização automática pela porta CONTROL**\
+   Conecte a porta Ethernet CONTROL a uma LAN com acesso à Internet. Isso sincroniza o relógio interno do console (_UX-Core_). Em seguida, sincronize manualmente o computador de controle (tela touch) pressionando a opção **SYNC FROM UX-CORE**.
+3. **Ajuste manual**\
+   Insira a hora manualmente em casos onde não há acesso à Internet.
+
+**Fuso horário**\
+Defina o fuso horário correspondente no campo `Time Zone`.
+
+---
+
+## Usuários e níveis de acesso
+
+São acessados pela tela **SETTINGS**, na opção **USERS**.\
+UNIDEX possui três níveis de usuário:
+
+- **ADMIN**
+- **EXPERT**
+- **BASIC**
+
+Os perfis **ADMIN** e **EXPERT** são protegidos por senha, definida nesta tela.\
+Somente o usuário **ADMIN** pode modificar senhas.\
+As senhas padrão são os nomes de usuário em minúsculas: `admin` e `expert`.
+
+#### Como iniciar com acesso restrito
+
+A opção `DEFAULT USER` define o usuário que é carregado ao ligar o console.\
+O usuário padrão é **ADMIN** e, na inicialização, o sistema nunca solicita senha.
+
+Para **restringir o acesso** a funções avançadas, recomenda-se alterar o usuário padrão (**ADMIN**) para **BASIC** ou **EXPERT**, dependendo do nível de restrição desejado.
+
+- Se o console iniciar com nível **BASIC**, o operador deverá inserir a senha de **EXPERT** ou **ADMIN** para acessar funções restritas.
+- Se iniciar com nível **EXPERT**, apenas as funções que requerem nível **ADMIN** são bloqueadas.

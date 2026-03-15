@@ -1,0 +1,101 @@
+---
+title: "Conexão de Baias StudioBox"
+description: "Conexão das baias para monitoramento no Estúdio"
+keywords: ["monitoramento", "fones de ouvido"]
+tags: ["expansões", "SutudioBox", "HD3", "HD5", "UX24", "UX18", "DX816", "D612"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "54cbd1599d18b32e4ac3c4d632a21b36116a5dffe09ca4cb3e3126a35379b682"
+
+---
+
+Os módulos para monitoramento Solidyne StudioBox HD5 e HD3 resolvem o envio dos sinais de monitoramento para o estúdio para fones de ouvido e alto-falantes.
+
+Características:
+
+- HD5: conexão para 5 fones de ouvido com controles de volume independentes
+- HD3: conexão para 3 fones de ouvido
+- Canal duplo de escuta
+- Saída para alto-falantes amplificados com controle de nível
+- Luz indicadora de NO AR
+- Reverse talkback do Estúdio para o Controle
+- Timer/Clock (disponível apenas no HD5)
+
+## Conexão das StudioBox
+
+As caixas **HD3** e **HD5** são conectadas ao conector **Studio Monitor** localizado no painel traseiro do console, utilizando um único cabo **multipar blindado CAT-5 RJ45–RJ45** (incluído com a StudioBox, 5 metros).
+
+<Danger>
+  A saída STUDIO MONITOR da UNIDEX **não é compatível com StudioHub**. Não deve ser conectada usando cabos RJ45 projetados para outras saídas de áudio. Se não dispuser do sistema Solidyne Studiobox, utilize o **cabo fornecido** de fábrica para conexão de fones de ouvido e alto-falantes à saída STUDIO MONITOR.
+</Danger>
+
+Através deste cabo, o console:
+
+- Envia os sinais de **fones de ouvido** e **alto-falantes monitores**.
+- Recebe o sinal de **talkback reverso** do estúdio.
+
+<img
+  src="/images/ux/ux-studiobox-diagrama.png"
+  alt="Ux Studiobox Diagrama Pn"
+  title="Ux Studiobox Diagrama Pn"
+  className="mx-auto"
+  style={{ width:"47%" }}
+/>
+
+<img
+  src="/images/ux24/ux-hd3-trasero.png"
+  alt="Ux Hd3 Trasero Pn"
+  title="Ux Hd3 Trasero Pn"
+  className="mx-auto"
+  style={{ width:"50%" }}
+/>
+
+### Saídas da StudioBox
+
+- **Alto-falantes monitores**\
+  Conector TRS 1/8" estéreo (**minijack**).\
+  É uma saída de **nível de linha**, portanto requer **alto-falantes amplificados** no estúdio.
+- **Fones de ouvido**\
+  Conectores TRS 1/4" estéreo (**jack**) localizados na frente da caixa.\
+  Compatível com fones de ouvido de **16, 32 e 64 Ω**.
+
+<Note>
+  Nos modelos **HD3**, as saídas de fones de ouvido **2 e 3 são gêmeas**: compartilham o controle de nível e a atribuição de fonte.
+</Note>
+
+### Entrada auxiliar
+
+Permite inserir uma **fonte de monitoramento adicional** ao sinal atribuído na seção STUDIO MONITOR do console (**ON-AIR, PGM, AUD, SEND ou CUE**).
+
+- Comutação entre entradas:
+  - **Entrada A**: sinal do console
+  - **Entrada B**: sinal auxiliar
+- **Modelo HD5**: a comutação A/B é independente para fones 1, 2 e 3. Os fones 4 e 5 recebem sempre o sinal **Studio Monitor** atribuído no console.
+- **Modelo HD3**: os fones 2 e 3 compartilham a atribuição.
+
+A entrada auxiliar é **não balanceada** com conector RJ45.\
+Pode ser conectada a qualquer saída de áudio RJ45 (balanceada ou não balanceada) usando um cabo padrão **STP RJ45–RJ45 pino a pino**.
+
+---
+
+## Conexão de múltiplas StudioBox
+
+Podem ser conectadas várias unidades StudioBox em paralelo. O console UNIDEX suporta até:
+
+- **3 unidades HD3**, ou
+- **2 unidades HD5**
+
+A conexão é realizada em **paralelo** derivando a **saída STUDIO MONITOR** do console. **Podem ser usadas** caixas de derivação RJ45 "Y" (**Y-splitter**) padronizadas, com conexão **pino a pino**.
+
+<img
+  src="/images/ux24/RJ45_splitter.png"
+  alt="RJ45 Splitter"
+  title="RJ45 Splitter"
+  className="mx-auto"
+  style={{ width:"47%" }}
+/>

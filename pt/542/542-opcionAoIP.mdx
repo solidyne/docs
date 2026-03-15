@@ -1,0 +1,54 @@
+---
+title: "Equipamentos com serviços AoIP"
+description: "Configuração de equipamentos com serviços de STREAMING e DANTE AoIP"
+keywords: ["AoIP", "streamer", "RTP", "Icecast", "Dante"]
+tags: ["procesadores", "542", "542/AoIP"]
+
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b71fd13ca97ebdb0447e4aa2a453fd0ede022f184971d42468893caf5e1e2a71"
+
+---
+
+import discovery from '/snippets/discovery-pt.mdx';
+
+## Resumo de recursos
+
+Os processadores da série 542APC suportam dois tipos de expansões para gerenciamento de áudio em redes.
+
+<Warning>
+  - Estas opções são excludentes, não podem ser instaladas juntas.
+  - Podem vir instaladas de fábrica ou serem adicionadas após a compra.
+  - São suportadas apenas por equipamentos com **número de série** que comecem em AD ou posteriores.
+</Warning>
+
+### 1. Opção STREAMER (542APC /AoIP)
+
+Recursos:
+
+1. Geração de um streaming RTP de saída (link estúdio-transmissor).
+2. Streaming de saída para servidores Icecast/Shoutcast.
+3. Decodificação de um streaming de entrada (link ponto a ponto com o transmissor).
+4. Monitoramento remoto de áudio via web.
+5. Acesso remoto direto simplificado através da Internet, sem necessidade de IP fixo ou redirecionamento de portas.
+6. Atualização simplificada de firmware.
+
+### 2. Opção DANTE/AES67 (542APC /A67)
+
+Interface Dante 2x2, projetada para conexão em redes AoIP em estúdios.
+
+1. Saída estéreo de sinal processado.
+2. Entrada estéreo.
+
+### Montagem de módulos
+
+Os módulos de expansão são vendidos separadamente. Embora a montagem seja simples, requer desconectar e abrir o equipamento, por isso recomenda-se que seja realizada por pessoal técnico qualificado.
+
+<Info>
+  Consultar o _Manual de opcionais e desmontagem_.
+</Info>

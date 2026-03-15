@@ -1,0 +1,72 @@
+---
+title: "Streaming para um servidor web"
+description: "Transmissão para servidores Icecast/Shoutcast"
+keywords: ["streaming", "Icecast","Shoutcast"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "bdd7975febc93a8ba1e17f6af3688b2f0cd97eaa28c22ac4a4854a0fe018d4db"
+
+---
+
+Um **servidor web multimídia** é um serviço de terceiros que recebe a transmissão de áudio da **MX2200** e a retransmite através de um link público acessível em qualquer parte do mundo, e simultaneamente por múltiplos dispositivos.
+
+- A contratação geralmente é feita de acordo com a **quantidade de usuários simultâneos** permitidos.
+- Uma vez configurado o acesso no console, o uso é muito simples: basta que a MX2200 esteja conectada à Internet e iniciar a transmissão.
+- É um método ideal quando se requer **distribuição massiva do sinal**.
+
+<Warning>
+  O **atraso** neste tipo de transmissão pode variar entre **5 e 30 segundos**, dependendo da plataforma e da conexão. Por este motivo, é recomendado apenas quando o sinal é gerado a partir da localização remota **sem interação em tempo real** com os estúdios.
+</Warning>
+
+---
+
+<Tabs>
+  <Tab title="Iniciar HTTP STREAM">
+    <Steps>
+      <Step title="Abrir Connection Center">
+        Gire o **encoder** até a tela **CONNECTION CENTER** e pressione-o para entrar.
+
+        <img
+          src="/images/mx2200/mx2200-connection_center.png"
+          alt="Mx2200 Connection Center Pn"
+          title="Mx2200 Connection Center Pn"
+          style={{ width:"49%" }}
+        />
+      </Step>
+      <Step title="Selecionar HTTP STREAM">
+        Navegue com o encoder, selecione **HTTP STREAM** e pressione para abrir a opção.
+
+        <img
+          src="/images/mx2200/mx2200_connection_center_HTTPstream.png"
+          alt="Mx2200 Connection Center HTT Pstream Pn"
+          title="Mx2200 Connection Center HTT Pstream Pn"
+          style={{ width:"49%" }}
+        />
+      </Step>
+      <Step title="Habilitar a conexão">
+        Na tela de controle, selecione **YES** para iniciar a conexão com o servidor web.\
+        Quando a conexão é estabelecida, as telas **CONNECTION CENTER** e **HOME** mostrarão **HTTP STREAM ENABLED**.
+      </Step>
+      <Step title="Finalizar a conexão">
+        Repita o procedimento e selecione **NO** para desabilitar a transmissão.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Recepção nos estúdios">
+    A recepção de uma transmissão via servidor web é a mais simples:
+
+    - O provedor do serviço fornece um **link http**.
+    - O link pode ser aberto em **qualquer navegador web** em PC, tablet ou smartphone.
+    - Não são necessárias configurações adicionais nos estúdios.
+  </Tab>
+</Tabs>
+
+<Info>
+  Este método é ideal para **streaming público** de uma emissora ou evento, permitindo acesso global sem necessidade de software especializado para os ouvintes.
+</Info>

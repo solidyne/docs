@@ -1,0 +1,108 @@
+---
+title: "Montagem de cabos RJ45"
+description: "Diagramas para cabeamento estruturado"
+keywords: ["cabeamento", "cabos", "conexões", "RJ45"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "89b0e574d95874053b7bb1a6799e627c014cbcff4cb2efe1ee379684631b0bec"
+
+---
+
+Para montar os cabos de conexão, recomenda-se:
+
+- Utilizar conectores **RJ45 blindados**.
+- Usar cabo **CAT-5 STP ou S/FTP de primeira qualidade**.
+- Garantir que a blindagem do conector esteja corretamente conectada à malha do cabo.
+
+A tabela a seguir mostra a nomenclatura padrão de cores e numeração do conector RJ45.
+
+## Nomenclatura padrão do conector RJ45
+
+<img
+  src="/images/ux24/RJ-45_TIA-568B.png"
+  alt="RJ45 vista frontal - Pinos segundo TIA-568B"
+  style={{ maxWidth:"300px",height:"auto",marginBottom:"1rem" }}
+  title=""
+/>
+
+| **PINO** | **COR DO CABO**    |
+| :------: | ------------------ |
+| 1        | Laranja / Branco   |
+| 2        | Laranja            |
+| 3        | Verde / Branco     |
+| 4        | Azul               |
+| 5        | Azul / Branco      |
+| 6        | Verde              |
+| 7        | Marrom / Branco    |
+| 8        | Marrom             |
+
+## Configuração de pinos para conexão de áudio balanceado
+
+| **PINO** | **FUNÇÃO**             | **COR DO CABO**    |
+| :------: | --------------------- | ------------------ |
+| 1        | Canal esquerdo (\+)    | Laranja / Branco   |
+| 2        | Canal esquerdo (–)     | Laranja            |
+| 3        | Canal direito (\+)     | Verde / Branco     |
+| 4        | Terra                  | Azul               |
+| 5        | Reservado              | Azul / Branco      |
+| 6        | Canal direito (–)      | Verde              |
+| 7        | –15 V (opcional)       | Marrom / Branco    |
+| 8        | \+15 V (opcional)      | Marrom             |
+
+## Configuração de pinos para conexão de áudio NÃO balanceado
+
+| **PINO** | **FUNÇÃO**             | **COR DO CABO**    |
+| :------: | --------------------- | ------------------ |
+| 1        | Canal esquerdo (\+)    | Laranja / Branco   |
+| 2        | NC                     | Laranja            |
+| 3        | Canal direito (\+)     | Verde / Branco     |
+| 4        | Terra                  | Azul               |
+| 5        | Reservado              | Azul / Branco      |
+| 6        | NC                     | Verde              |
+| 7        | –15 V (opcional)       | Marrom / Branco    |
+| 8        | \+15 V (opcional)      | Marrom             |
+
+## Adaptadores para conectores de áudio convencionais
+
+### RJ45 para RCA não balanceado
+
+<img
+  src="/images/ux24/RJ45-a-RCA.jpg"
+  alt="RJ45 para RCA"
+  style={{ maxWidth:"550px",height:"auto",marginBottom:"1rem" }}
+  title=""
+/>
+
+### RJ45 para XLR balanceado
+
+<img
+  src="/images/ux24/RJ45-a-XLR.jpg"
+  alt="RJ45 para RCA"
+  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
+  title=""
+/>
+
+### RJ45 para plug TRS balanceado
+
+<img
+  src="/images/ux24/RJ45-a-TRS.jpg"
+  alt="RJ45 para RCA"
+  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
+  title=""
+/>
+
+---
+
+<Warning>
+  Os adaptadores SOL-M12/minijack (para miniplug fêmea) podem ser conectados a SAÍDAS balanceadas ou não balanceadas. Não é recomendado para desbalancear entradas, pois deixam o pino (-) desconectado, podendo introduzir ruído.
+</Warning>
+
+<Warning>
+  Os adaptadores SOL-M12/RCAM (para RCA macho) podem ser conectados a ENTRADAS balanceadas para desbalanceá-las, pois conectam o sinal (-) do balanceado ao terra. **NÃO DEVEM SER USADOS EM SAÍDAS BALANCEADAS**, porque as saídas devem ser desbalanceadas deixando o pino (-) sem conexão.
+</Warning>

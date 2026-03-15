@@ -1,0 +1,113 @@
+---
+title: "Blocos de anúncios publicitários"
+description: "Criação manual de blocos (tandas) comerciais"
+keywords: ["CyberPlay Editor", "tandas", "comerciais", "pauta"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "432f79935ae7f8dfdbd8ca86d47a9a17157e0f82b6e684d83f8ba97c5b1802aa"
+
+---
+
+Existem duas formas de criar uma **tanda de anúncios publicitários**:
+
+- **Automática**: através do módulo **Admicom** (recomendado).\
+  → Ver: _Tráfego, Administração e Estatísticas_.
+- **Manual**: diretamente no **CyberPlay Editor**.
+
+Rádios não comerciais ou com poucos anunciantes costumam gerenciar as tandas manualmente, sem a necessidade de gerenciar uma base de dados comercial.
+
+---
+
+## Criação manual de tandas
+
+1. Na janela **Tanda**, insira a instrução de tanda.\
+   Cada instrução corresponde a uma única tanda; será necessário repeti-la para todas as tandas do dia.
+
+   **Exemplo:**
+
+   ```txt
+   /Tanda Tanda Nro. 1 /00:00
+   ```
+2. Abaixo, escreva os nomes dos arquivos das publicidades que compõem essa tanda.\
+   Você pode arrastá-los do **File Manager** ou **InfoMusic-Produção**.
+
+   **Exemplo:**
+
+   ```txt
+   /Tanda Tanda Nro. 1 /00:00
+   Coca-Cola
+   Sancor
+   Sony
+   La Masa Records
+   ```
+
+   <Note>
+     - Não é possível programar arquivos de **pastas extras** (ver File Manager).
+     - Arquivos que contêm um **ponto (.)** no nome e não estão registrados na Base de Dados **devem ser pautados com a extensão completa** (ex.: `107.5.wav`).
+   </Note>
+3. Para adicionar outra tanda (ex.: às 00:30), repita os passos anteriores.
+4. Após finalizar todas as tandas, salve o arquivo no formato correspondente (ver seção de salvamento).
+
+---
+
+## Criação de tandas com Magic Programming
+
+A ferramenta **Magic Programming** simplifica a geração de tandas manuais. Insere automaticamente as instruções, e o operador só precisa carregar os arquivos abaixo de cada tanda.
+
+<img
+  src="/images/audicom/au-cpeditor-easylog-1.png"
+  alt="Au Cpeditor Easylog 1 Pn"
+  title="Au Cpeditor Easylog 1 Pn"
+  className="mx-auto"
+  style={{ width:"37%" }}
+/>
+
+Ao escolher **Gerar Esqueleto de Tanda**, aparece uma caixa de diálogo com estas opções:
+
+- **Hora desde**: hora de início da primeira tanda.
+- **Até hora**: hora da última tanda.
+- **Intervalo entre tandas**: minutos entre cada tanda.
+- **Flexibilidade**: margem em minutos para deslocar a tanda em programas AutoDJ.\
+  _(Todas as tandas criadas pelo Magic Programming são flexíveis; para alterar seus atributos, deve ser editado manualmente)._
+
+### Pautar um anúncio comercial
+
+Permite programar um **spot em várias tandas** automaticamente.\
+Define-se:
+
+- O **intervalo horário** (ex.: de 19:00 a 22:00).
+
+  <img
+    src="/images/audicom/au-cpeditor-easylog-3.png"
+    alt="Au Cpeditor Easylog 3 Pn"
+    title="Au Cpeditor Easylog 3 Pn"
+    className="mr-auto"
+    style={{ width:"34%" }}
+  />
+- A **separação mínima** entre aparições (ex.: a cada 15 minutos).
+
+O anúncio será inserido em todas as tandas dentro do intervalo definido.
+
+### Eliminar a ocorrência de um anúncio
+
+Permite **eliminar todas as aparições** de um anúncio em um intervalo horário determinado.
+
+<Note>
+  Lembre-se: Para que as modificações tenham efeito, é necessário **salvar os arquivos** e, se corresponder à programação de **hoje ou amanhã**, deverá **recarregar os arquivos no terminal de Ar**.
+</Note>
+
+### Imprimir
+
+Opção para imprimir:
+
+- O **registro de tandas** (`.LOG`).
+- O **registro de programas** (`.PGM`).
+- A **programação completa** (janela CyberPlay).
+
+A impressão é realizada sobre os arquivos carregados no momento.

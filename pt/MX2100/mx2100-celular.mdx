@@ -1,0 +1,129 @@
+---
+title: "Enlace com o rádio"
+description: "Opções de conexão ao rádio por meio de telefone celular"
+keywords: ["enlace"]
+tags: ["consolas portáteis", "exteriores", "MX2100"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "18594905203aae8a2bf02b6baa5b61ae49a1c77b06b0c7cce6657068169430a2"
+
+---
+
+## Conexão ao celular por Bluetooth
+
+A MX2100 suporta a conexão de um telefone celular via **Bluetooth**, para transmissão para estúdios ou para adicionar um celular à transmissão quando o enlace é realizado a partir de um computador externo ou linha terrestre.
+
+- Compatível com qualquer telefone com Bluetooth.
+- Elimina a dependência de cabos de viva-voz, que variam conforme a marca e o modelo.
+- Distância máxima: até 5 metros; recomendado: levar o celular consigo, mas separado da consola (bolso de camisa ou cinto no lado oposto).
+- Vantagem: o sinal permanece digital desde o celular até o interior da MX2100, alcançando melhor qualidade de áudio.
+
+---
+
+### Parear o celular com a consola
+
+O primeiro emparelhamento só precisa ser feito uma vez para cada telefone. A partir daí, a conexão é automática quando o Bluetooth é ativado em ambos os dispositivos.
+
+<Steps>
+  <Step title="Desligar o Bluetooth na consola">
+    Verifique se o LED Bluetooth (localizado no teclado DTMF) está apagado.
+
+    - Se piscar verde a cada 2 segundos → está ligado.
+    - Para desligar: mantenha pressionadas as teclas **“#” e “9”** até que o LED se apague.
+  </Step>
+  <Step title="Ativar o modo de busca na consola">
+    Com o Bluetooth desligado, mantenha pressionadas **“#” e “9”** por ~10 segundos até que o LED pisque rapidamente alternando entre verde/vermelho.\
+    Isso indica que a MX2100 entrou em modo de busca.
+  </Step>
+  <Step title="Buscar dispositivos no celular">
+    No telefone, inicie a busca por dispositivos Bluetooth.\
+    O procedimento varia conforme o modelo; consulte o manual do celular.
+  </Step>
+  <Step title="Selecionar a consola">
+    O telefone mostrará o dispositivo **Solidyne BTM641** (em modelos antigos: BTM751).
+
+    - Se solicitar senha: insira **0000**.
+    - O ID da MX2100 fica armazenado no celular.
+    - O LED da consola muda para verde intermitente lento (uma piscada a cada 2 segundos), indicando conexão ativa.
+  </Step>
+</Steps>
+
+<Warning>
+  O Bluetooth é ligado mantendo “#” e “9” (ou qualquer combinação entre as linhas 3 e 4) por ~5 segundos, soltando ao acender o LED verde.
+
+  - Verde lento = ligado.
+  - Verde/vermelho rápido = modo de busca.
+</Warning>
+
+<Note>
+  Em alguns telefones, após detectar o dispositivo, é necessário pressionar **“conectar”** para que fique ativo. Outros o ativam automaticamente.
+</Note>
+
+---
+
+### Reconectar dispositivo pareado
+
+Para reconectar um celular previamente emparelhado:
+
+<Steps>
+  <Step title="Ligar o Bluetooth na consola">
+    Pressione **“#” e “9”** até que o LED acenda verde (aproximadamente 5 segundos).
+  </Step>
+  <Step title="Ligar o Bluetooth no telefone">
+    Quando o celular confirmar a conexão, já está pronto para operar.\
+    Ao realizar ou receber chamadas, o áudio é enviado para a consola.
+  </Step>
+</Steps>
+
+<Note>
+  Em alguns telefones, a reconexão não é automática e o dispositivo **Solidyne BTM641** deve ser escolhido manualmente na lista de equipamentos Bluetooth.
+</Note>
+
+---
+
+### Ajuste do volume
+
+- Ajuste o volume do Bluetooth no celular para o **máximo**, para obter a melhor relação sinal/ruído.
+- O ajuste deve ser feito **durante uma chamada** via Bluetooth.
+- O volume do telefone é independente do volume do Bluetooth.
+- O valor fica armazenado na memória do celular.
+- Se trocar de telefone, deverá reajustar o nível para o máximo.
+
+<Warning>
+  Se ajustar o volume sem estar em uma chamada Bluetooth, apenas o volume do alto-falante do telefone será alterado, **não** o do Bluetooth.
+</Warning>
+
+---
+
+### Desligar o Bluetooth na consola
+
+Para evitar consumo de bateria quando não estiver em uso, desligue o Bluetooth mantendo pressionadas **“#” e “9”** até que o LED se apague completamente.
+
+---
+
+<Accordion title="Conexão ao telefone celular por cabo (obsoleto)" icon="mobile">
+  O conector **RJ-11 “Cellular&Phone”** permite conectar um celular por meio de um acessório de **viva-voz**.
+
+  - É utilizado como backup do enlace do computador externo, especialmente quando o Bluetooth está em uso para enviar ao ar outro celular.
+  - O celular transmite para a MX2100 os sinais de microfone (ponta do miniplug) e alto-falante (anel).
+  - A consola envia o sinal de programa para o celular, que o retransmite para o rádio.
+  - O retorno do rádio chega ao celular e de lá para a consola, integrando-se à mixagem de fones de ouvido (STUDIO).
+  - Enquanto este conector está em uso, o microfone e o alto-falante do celular ficam desconectados.
+
+  <img
+    src="/images/mx2100/mx2100-manos-libres.jpg"
+    alt="Mx2100 Manos Libres Jp"
+    title="Mx2100 Manos Libres Jp"
+    className="mx-auto"
+    style={{ width:"53%" }}
+  />
+  <Note>
+    O cabo de conexão varia conforme a marca e o modelo do celular. É necessário adquirir o acessório “viva-voz” específico para cada telefone e seguir a documentação do fabricante.
+  </Note>
+  
+</Accordion>

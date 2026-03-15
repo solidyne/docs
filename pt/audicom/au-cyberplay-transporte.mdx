@@ -1,0 +1,214 @@
+---
+title: "Controles de reprodução"
+description: "Tela de informações e controles de transporte"
+keywords: ["transporte"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "69da10045fd808da98f6f49e26978f96d86e65d14cd5718130145ec854a9f74e"
+
+---
+
+\
+O módulo de reprodução contém:
+
+- Intérprete, título e estilo do arquivo em reprodução.
+- Indicador de nível (dBfs).
+- Indicador de tempo decorrido (horas:minutos:segundos).
+- Uma barra horizontal que se completa conforme a reprodução avança.
+- Controles de transporte (explicados na seção _Operação do CyberPlay_).
+
+  <img
+    src="/images/audicom/au-cyberplay-transporte.png"
+    alt="AUDICOM - Cyberplay Transporte"
+    title="AUDICOM - Cyberplay Transporte"
+    style={{ width:"75%" }}
+  />
+
+### Intro
+
+Contador em contagem regressiva que indica a duração da introdução de uma música, ou seja, o tempo antes da entrada da voz do cantor.
+
+- Serve para que o locutor saiba quanto tempo tem para falar “pisando” a música.
+- O tempo de **Intro** é definido na janela **InfoMusic Produção** e pode ser modificado a partir de **InfoMusic Ar**.
+- Se os títulos têm arquivos de apresentação (**Partner**), o tempo de Intro é crucial para ajustar essas apresentações.
+
+### Fundidos
+
+À direita do indicador **Intro** aparece um círculo que se completa progressivamente sempre que o AUDICOM realiza um fundido entre dois áudios.
+
+### Block (bloco)
+
+Mostra em minutos e segundos o tempo restante até o término de um bloco.
+
+- Uma linha sobre os números indica graficamente o tempo decorrido.
+- Em programas ao vivo (uso manual), o AUDICOM permanece parado durante o bloco.
+- O contador mostra quanto falta para a próxima tanda, como um aviso.
+- O operador deve pressionar **Play** para que a tanda vá ao ar.
+
+### Error
+
+Indica em minutos e segundos quanto a programação está adiantada ou atrasada em relação à pauta original.
+
+- No modo automático, o AUDICOM corrige o erro sempre que possível, usando tolerâncias dos blocos comerciais.
+- No modo manual, pode ocorrer erro devido à duração diferente de um programa ou noticiário.
+
+Exemplo:
+
+- Um erro de **-05:00** indica que o próximo bloco começará 5 minutos antes do previsto.
+- Essa informação permite ao operador corrigir com ações como adicionar ou remover músicas, promos ou anúncios.
+
+### Modo expandido
+
+Permite ampliar a janela CyberPlay, exibindo mais informações do display.
+
+- **LOG**: arquivo de tandas carregado para o dia atual.
+  - Duplo clique no campo abre uma janela para carregar qualquer arquivo `.log` do dia.
+- **PGM**: arquivo de programas carregado para o dia atual.
+  - Duplo clique no campo abre uma janela para carregar qualquer arquivo `.pgm` do dia.
+
+### Janela de comentários
+
+Exibe dados adicionais do título em reprodução:
+
+- Intérprete e autor.
+- Anotações ou comentários.
+
+Todos os dados são provenientes da base de dados.
+
+- Quando faltam 15 segundos para o término do título, aparece a informação do próximo tema.
+- Também informa se o título tem um arquivo associado, como apresentações.
+
+### Mensagens emergentes
+
+Se um usuário tentar realizar uma operação não permitida, aparece uma mensagem emergente (pop-up) informando a restrição.
+
+- Essas mensagens desaparecem automaticamente após alguns segundos.
+- Também podem ser fechadas com um clique ou pressionando **ESC**.
+
+Exemplo: tentativa de reprodução a partir do **File Manager** por um usuário não autorizado.
+
+---
+
+## Controles de reprodução
+
+A seguir são descritos os controles e operações da janela CyberPlay (Tela de Ar).\
+Entre colchetes são indicados os atalhos de teclado.
+
+### Play `[barra de espaço / Home]`
+
+- Inicia a reprodução a partir do título marcado como “próximo” (cursor verde).
+- Se pressionado durante a reprodução, pula para o próximo título.
+  - O salto é sempre feito por corte.
+  - Para passar para o próximo por fundido, use **Fade → Play**.
+
+**Modo Autoarranque (Autorun)**
+
+- Em caso de reinicialização após um corte de energia, se **Autorun** estiver habilitado:
+  - O AUDICOM inicia como usuário **auto**.
+  - Se passar 1 minuto sem intervenção, inicia a reprodução a partir do título mais próximo da hora atual.
+- Configuração em **Painel de Configuração \> Preferências**.
+
+<Warning>
+  Para que o AUDICOM seja executado ao iniciar o computador, deve ser criado um atalho para `aire.exe` no menu **Iniciar (StartUp)** do Windows.
+</Warning>
+
+<Note>
+  Algumas emissoras geram um “autoarranque virtual” programando um bloco **Satfill** na madrugada.\
+  Esse procedimento é explicado em _Corte noturno da transmissão_.
+</Note>
+
+---
+
+### Pausa / Stop `[End]`
+
+- Se pressionado durante a reprodução:
+  - **Pausa**: interrompe o título, podendo retomar com Play.
+  - **Stop**: interrompe completamente a reprodução.
+
+---
+
+### Fade & Stop `[Ctrl + End]`
+
+Reduz o nível em 20 dB por segundo até parar a reprodução.
+
+---
+
+### Fade & Play `[Ctrl + Home]`
+
+- O título atual termina com fundido progressivo.
+- O próximo título é iniciado.
+- Se os títulos têm fundidos de entrada e saída, é aplicado **crossfade**.
+
+---
+
+### Ponto de parada `[Page Up]`
+
+Insere uma pausa na lista do CyberPlay:
+
+- Quando o título atual termina, a reprodução é interrompida.
+- O próximo título passa a ser o “próximo” (cursor verde).
+- Representação: barra preta com a legenda **PAUSE**.
+
+Operações:
+
+- Inserir pausa sobre o título selecionado (cursor amarelo).
+- Se não houver seleção, é inserido abaixo do cursor vermelho (título em reprodução).
+- Remover pausa: selecione-a e pressione o botão _Pausa_, ou arraste-a para a esquerda.
+- Também pode ser feito a partir do menu emergente (clique direito).
+
+---
+
+## Ações na janela de títulos
+
+### Selecionar um título `[Setas ↑ / ↓]`
+
+- Um clique sobre um título o marca com cursor amarelo (seleção).
+- Com as setas, o cursor de seleção se move na lista.
+
+### Escuta prévia (Cue) `[Supr]`
+
+- Duplo clique sobre um título → reprodução pela saída **Cue**.
+- Segundo duplo clique → reproduz os 5 segundos finais (**CUE END**).
+- Configuração da saída em **Painel de Configuração**.
+- Controle a partir de **InfoMusic Ar**, com indicadores de nível e barra de posição.
+- Parar reprodução em Cue: **Stop-cue** no InfoMusic ou tecla **ESC**.
+
+**Cue desde console**
+
+- Ative **CUE** com duplo clique na legenda esquerda do contador.
+- O áudio é reproduzido desde o Live Assist, mas:
+  - Não é reportado por RDS/iRDS.
+  - Não é registrado em arquivos `.air**.
+
+<Warning>
+  Este modo não é recomendado. Pode induzir erros ao trabalhar sem canal de monitoramento dedicado.
+</Warning>
+
+### Remover um título `[Backspace]`
+
+- Selecione o título e arraste-o para o lado esquerdo do CyberPlay ou para os contadores.
+- Alternativamente: clique direito → **Remover**.
+
+### Inserir um título `[Ins]`
+
+- Pode inserir títulos a partir de outros módulos (InfoMusic, MediaManager, Live Assist).
+- Arraste-o para a janela CyberPlay.
+- Aparece uma linha azul indicando a posição de inserção.
+- Também pode ser feito com o botão de inserção (seta azul) ou a tecla **Enter**.
+
+### Alterar a posição de um título
+
+- Selecione o título e arraste-o para cima/baixo.
+- Aparece uma linha azul indicando a nova posição.
+
+<Danger>
+  Muitas operações podem ser restritas pelo perfil do usuário.\
+  Se tentar uma ação proibida, aparecerá uma mensagem emergente indicando a restrição.\
+  Em caso de dúvidas, consulte o administrador da rede ou responsável técnico.
+</Danger>

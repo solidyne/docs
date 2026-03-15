@@ -1,0 +1,309 @@
+---
+title: "Canais e grupos"
+description: "Operação do UX18 - Canais e grupos"
+keywords: ["operação", "canais", "grupos", "submisturas", "SELECT", "CUE", "virtual mixer"]
+tags: ["consoles IP", "UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "82527bc80d9aeb3bb14be0407908ac1abee8395b37947f34546ceb86a85abbb2"
+
+---
+
+## Canais físicos
+
+O console **UNIDEX UX18** possui 18 canais. O painel do console principal apresenta 10 canais com faders soft-touch de 100 mm.\
+Outros 8 canais podem ser operados através da **tela touch** ou remotamente via web.
+
+<img
+  src="/images/ux24/ux18-canales.png"
+  alt="UX18 - Canais"
+  title="UX18 - Canais"
+  style={{ width:"15%" }}
+  className="mx-auto"
+/>
+
+### 1 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Buses
+
+O sinal em cada canal pode ser atribuído a 4 buses de mixagem: **PGM**, **REC**, **AUX** e **VBUS**.
+
+- Nos canais 1 a 6, a atribuição a PGM, REC e AUX é feita através de três botões de acesso rápido. Quando o canal está atribuído, o botão acende em laranja.
+- Os canais 7 a 18 são atribuídos aos buses de saída acessando a tela CHANNEL ou VIRTUAL CHANNELS na tela principal. Quando um canal é atribuído a um grupo, ele assume a atribuição de buses do grupo.
+- Para todos os canais, a atribuição ao VBUS é feita pela tela CHANNEL ou pelo controle web.
+
+### 2 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Botão CUE/SELECT
+
+Tem três funções:
+
+- **CUE:** Pré-escuta (_pre-fader_). Permite ouvir o sinal presente no canal antes do fader e do botão ON-AIR.
+- **SELECT:** Seleção do canal para ajustes e configuração.
+- **TALKBACK:** O modo TALK-BACK é usado em comunicações (canais TELCO e USB atribuídos a software de chamadas) e para gerar um segundo canal de ordens para o Estúdio. Mantendo pressionado CUE, ativa-se o microfone talk-back para falar.
+
+#### 3 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Botão ON-AIR
+
+Ativa o canal.\
+Quando está ligado, o sinal é enviado aos buses atribuídos de acordo com o nível do fader.
+
+#### 4 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Display OLED
+
+Mostra:
+
+- Nível de sinal antes do fader. A indicação **CLIP** indica que o sinal de entrada alcança 0 dBfs e requer redução do ganho.
+- Nome ou etiqueta do canal.
+- Estado em modos especiais como SELECT ou TELCO.
+
+  <Note>
+    **Sobre o brilho dos OLEDs**\
+    O brilho reduz após 5 minutos de inatividade e desliga após 15 minutos.\
+    Qualquer ação nos controles reativa a tela.
+  </Note>
+
+#### 5 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Fader principal
+
+Controla o nível do sinal nos buses de mixagem.\
+Se o nível for modificado pela tela CHANNEL ou remotamente via web, o valor real de atenuação pode não coincidir com a posição física do fader (não motorizado). Nesse caso, a tela OLED pisca mostrando o valor atual.\
+Movendo o fader, o valor sincroniza progressivamente.
+
+## Grupos e submisturas
+
+O console **UX18** apresenta **4 faders de GRUPOS**.\
+Cada grupo pode ter atribuído um ou vários **canais virtuais** (canais 7 a 18).
+
+**Comportamento**
+
+- **Um único canal atribuído** → o grupo comporta-se como mais um canal, dando ao canal virtual controles físicos (fader, botão **ON-AIR** e **CUE**).
+- **Dois ou mais canais atribuídos** → o grupo funciona como um **sub-master**, controlando uma **submistura** desses canais virtuais.
+- Os canais de grupo podem ser vinculados ao botão **MASTER ON-AIR MIC** pela tela **CHANNEL**.
+
+<img
+  src="/images/ux24/ux18-grupos.png"
+  alt="UX18 - Grupos"
+  title="UX18 - Grupos"
+  className="mx-auto"
+  style={{ width:"37%" }}
+/>
+
+### Controles e tela GROUPS
+
+- **Físicos**: fader, ON-AIR, CUE.
+- **Tela GROUPS:** Acessa-se pressionando o botão de acesso rápido GROUPS. Permite gerenciar as atribuições aos buses e as submisturas.
+
+<img
+  src="/images/ux24/ux18-groups-pantalla.png"
+  alt="UX18 - Tela Grupos"
+  title="UX18 - Tela Grupos"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+A tela GROUPS mostra, inicialmente:
+
+- **Atribuição a buses:** permitem a atribuição às saídas de cada grupo. Todos **os canais** vinculados ao grupo **herdam** esta atribuição.
+- **Informações essenciais:** Permitem trabalhar com a tela GRUPOS sem perder de vista: nível de programa, hora atual, contador de tempo e indicação de microfones "no ar".
+- Pressionando **MIX** na parte inferior de cada grupo acessa-se a **tela de submistura** dos canais atribuídos ao grupo.
+
+  <img
+    src="/images/ux24/ux18-GROUPS_MIX.png"
+    alt="UX18 GROUPS MIX"
+    title="UX18 GROUPS MIX"
+    className="mx-auto"
+    style={{ width:"65%" }}
+  />
+- As submisturas de grupo são **salvas na cena**.
+
+### Atribuir canais a um grupo
+
+Os canais virtuais podem ser atribuídos a um grupo de duas maneiras:
+
+1. Através do assistente **CHANNEL MAP**, acessível pela tela **CENAS** ou pressionando **ADD** na vista de submistura do grupo.
+2. Através da tela **CHANNEL**, acessível pela tela principal.
+
+<Note>
+  Para atribuir ou remover canais de um grupo é necessário acesso com perfil **ADMIN**.
+
+  A configuração dos grupos é salva na cena.
+</Note>
+
+## A função SELECT
+
+O modo **SELECT** converte temporariamente os botões **CUE** em botões de seleção de canal.\
+Quando ativo, os botões CUE acendem em azul e as telas OLED dos canais mostram o texto SELECT.
+
+Esta função é usada para escolher um canal e visualizá-lo ou realizar ajustes nele. Por exemplo, para ajustar um equalizador, deve-se primeiro selecionar o canal para visualizar seus controles.
+
+No modo SELECT é possível selecionar um grupo. Neste caso, serão mostradas informações dos canais atribuídos ao grupo.
+
+### Ativação do modo SELECT
+
+O modo SELECT é ativado em qualquer das seguintes situações:
+
+- Ao pressionar **CHANNEL** na tela principal.
+- Ao pressionar **PROCESS** na tela principal.
+- Ao pressionar **SELECT** na tela CHANNEL ou em uma tela de processos (EQ, compressor, etc.).
+
+Estando ativo o modo SELECT, é possível escolher um canal de duas formas:
+
+1. **MODO A**\
+   Pressionando um botão CUE/SELECT o canal é mostrado na tela. O modo SELECT permanece ativo, podendo-se selecionar outros canais (isto permite comparar/revisar canais facilmente). O botão CUE/SELECT do canal atualmente selecionado permanece piscando.
+2. **MODO B**\
+   Girando o encoder para percorrer os canais. O encoder percorre os 24 canais, sejam físicos ou virtuais.
+
+Para confirmar a seleção de um canal, pressione o botão SELECT na tela ou pressione o encoder. Também se confirma se tocar um controle do canal na tela.
+Ao confirmar, o modo SELECT é desativado e os botões CUE/SELECT voltam ao seu modo de trabalho normal (CUE).
+
+## Canais "virtuais"
+
+UNIDEX UX18 controla 8 canais **pela tela touch**.\
+**VIRTUAL MIXER** permite controlar todas as funções destes canais. Quando um ou mais canais virtuais estão no ar, a indicação **VIRTUAL** na tela principal **pisca em vermelho** para indicar esta condição.
+
+<Tip>
+  **Pressionando o encoder** na tela principal acessa-se o mixer de canais, que são apresentados em duas telas de 6 canais.
+</Tip>
+
+Para facilitar a operação touch, os controles de cada canal virtual estão divididos em duas telas.
+
+A tela **LEVEL** mostra os faders e os botões de ativação ON AIR.
+
+<img
+  src="/images/ux24/ux18-VIRTUAL.png"
+  alt="UX18 VIRTUAL"
+  title="UX18 VIRTUAL"
+  className="mx-auto"
+  style={{ width:"61%" }}
+/>
+
+A tela **BUSES** mostra os botões de atribuição PGM, REC, AUX, VBUS e o CUE.
+
+<img
+  src="/images/ux24/unidex-virtual-buses.png"
+  alt="UNIDEX Virtual Buses"
+  title="UNIDEX Virtual Buses"
+  className="mx-auto"
+  style={{ width:"61%" }}
+/>
+
+### VIRTUAL MIXER e canais atribuídos a grupos
+
+Os canais virtuais podem estar atribuídos a submisturas de grupo. Há quatro canais de grupo, cada um identificado por uma cor. Os canais atribuídos a um grupo são mostrados no VIRTUAL MIXER com **a cor correspondente ao grupo**.
+
+As **atribuições** a buses de saída ficam bloqueadas no canal, pois os canais agrupados herdam a atribuição do grupo.
+
+O botão de ativação de um canal agrupado muda de **ON AIR para ON/OFF**, dado que a entrada no ar do canal depende da ativação do grupo.
+
+## Tela de canal (CHANNEL)
+
+A **tela de canal** mostra todos os valores e configurações associados a um canal.\
+Inclui funções básicas, como o ajuste de ganho da entrada, e opções avançadas que requerem permissões especiais.
+
+#### Acesso à tela de canal
+
+1. **Da tela principal**, pressione a opção **CHANNEL**.
+
+   Isto abrirá a tela no último canal selecionado e ativará o **modo SELECT**.\
+   No menu, a opção CHANNEL mudará para SELECT para permitir ativá-lo ou desativá-lo.
+2. **Selecionar um canal**:\
+   Com **SELECT** ativo, os botões **CUE/SELECT** permitem escolher um canal. Enquanto o modo de seleção estiver ativo, pode-se alternar entre diferentes canais para comparar seus ajustes.
+   - Os **canais virtuais** são selecionados girando o **encoder**, que percorre os 18 canais.
+   - Na tela, a área do nome do canal é mostrada em **azul claro** para os canais físicos e em **violeta** para os canais virtuais.
+   - Quando se seleciona um **GRUPO**, na tela é mostrada uma lista dos canais atribuídos a esse grupo. Tocando um canal da lista, acessa-se a tela desse canal.
+3. **Sair do modo SELECT**:\
+   Para confirmar e sair, pressione o botão **SELECT** na tela ou pressione o **encoder**.\
+   O modo seleção também é cancelado automaticamente quando se modifica algum parâmetro no canal selecionado.
+
+<img
+  src="/images/ux24/ux24-channel-pantalla.png"
+  alt="UX18 Tela Channel"
+  title="UX18 Tela Channel"
+  className="mx-auto"
+  style={{ width:"68%" }}
+/>
+
+### Elementos da tela CHANNEL
+
+#### 1 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  VU meter
+
+Indicador de nível visível em todas as telas.\
+Mostra o nível de um bus de mixagem, habitualmente **PROGRAMA**, em escala VU com pico retido.
+
+- Tocando a legenda PGM, pode-se mudar para mostrar AUX, REC ou VBUS.
+- O número à direita indica o valor máximo, em VU ou dBfs. Tocando o número alterna entre ambas as unidades. A mudança de unidade VU/dBfs aplica-se a todas as telas.
+
+#### 2 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Balance
+
+Em entradas estéreo ajusta a relação entre canais esquerdo e direito.\
+Em entradas mono atua como _pan-pot_.\
+Para mudar o valor, toque o controle e gire o encoder. Pressione o encoder para confirmar.
+
+#### 3 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Nível do canal
+
+Representa o fader físico e modifica o nível de sinal nos buses.\
+Em canais com faders mecânicos, o valor na tela reflete a posição física. Se o nível for modificado pela tela, o valor real muda mas o fader físico não se move (não é motorizado). Neste caso, na tela OLED do canal pisca o valor atual para indicar que difere da posição física do fader.
+
+<Note>
+  O nível nas saídas pode diferir do mostrado nos medidores devido a compensações de ganho de saída. A coincidência ocorre apenas quando a saída está ajustada ao seu nível nominal (4 dBu para saídas analógicas).
+</Note>
+
+#### 4 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Buses
+
+Mostram as atribuições do canal a buses de mixagem.
+
+- Em canais físicos refletem os botões PGM, REC e AUX.
+- Em canais virtuais permitem atribuir a qualquer bus.
+- Em ambos permite atribuir o canal ao bus **VBUS**, que não tem botão de atribuição de hardware.
+
+A ativação/desativação é feita pela tela touch e, em canais físicos, reflete-se também nos botões mecânicos.
+
+### 5 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Nome
+
+Permite atribuir um nome de até 10 caracteres. Em canais físicos é mostrado na tela OLED do canal. \
+Tocando o nome abre-se uma janela para edição do texto.
+
+#### 6 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Input Config
+
+Inclui o controle de ganho e a informação da entrada atribuída.
+
+- Perfil ADMIN: acesso à configuração completa tocando SETTINGS ou reatribuição pelo menu suspenso.
+- **Ganho**: ajuste em decibéis através da tela touch e encoder.
+
+#### 7 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Modo
+
+Define o comportamento do canal segundo o tipo de sinal:
+
+- **LINE**: para qualquer fonte diferente de microfones e comunicações.
+- **MIC**: para sinais de microfone, sejam entradas a bordo, adaptadores UDX externos ou pré-amplificadores de terceiros conectados a entradas de linha.
+- **TELCO**: para comunicações (linhas terrestres, VoIP, celulares Bluetooth), controlando pela tela TELCO adaptadores UNIDEX compatíveis.
+
+#### 8 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Channel Actions
+
+Funções específicas segundo o **MODO** do canal.
+
+- **CUE SOLO**: ao ativar CUE no canal, desliga CUE em outros canais com esta opção ativa.\
+  Os canais que não tenham CUE SOLO ativo não são afetados, podendo estar CUE ligado em mais de um canal ao mesmo tempo. \
+  Se todos os canais trabalham em modo CUE SOLO, haverá um único CUE ligado. Uma configuração habitual é usar o modo CUE SOLO nas linhas (computadores e reprodutores de áudio) e em modo normal microfones e canais TELCO.
+- **CUE AUTO OFF**: desliga CUE automaticamente ao colocar o canal no ar.
+
+**Ações para canais em modo MIC:**
+
+- **MASTER MIC A/B**: atribui o canal a um ou ambos os botões mestres.
+- **STUDIO A/B**: associa o canal à sinalização de um dos estúdios.
+- **CTRL ROOM MIC**: silencia os alto-falantes do Controle (não os do Estúdio) ao colocar o canal no ar.
+
+#### 9 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Process
+
+Mostra os processadores disponíveis na entrada atribuída e seu estado (ativo/inativo).
+
+- Liga/desliga tocando o nome (exceto perfil BASIC).
+- Edição de ajustes pelo EDIT (somente perfil ADMIN).
+
+  <Note>
+    Os processos disponíveis não são próprios de cada canal, mas dependem das entradas que têm atribuídas.
+  </Note>
+
+#### 10 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Output Routing
+
+Indica se o canal está associado a uma saída direta (ex. adaptadores UNIDEX para linhas TELCO).\
+A configuração de roteamento é acessível no perfil ADMIN pelo SETTINGS.

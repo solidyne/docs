@@ -1,0 +1,112 @@
+---
+title: "BotNews"
+description: "Automação de notícias de última hora"
+keywords: ["botnews", "notícias", "ia"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f8ea04ecc55e4bf18b0c3fd3cb93bfbce73dfde05611d67036b0f0b75c08b1a4"
+
+---
+
+## Conceitos Gerais
+
+**BotNews** é um poderoso gerenciador e gerador de relatórios de notícias ao vivo, voltado para emissoras com um alto nível de **automação**.
+
+- Funciona de maneira **autônoma**, sem intervenção do operador.\
+  Interrompe a programação para lançar um bloco de notícias e depois retoma a transmissão ajustando os tempos.
+- Suporta a reprodução de **arquivos de áudio enviados remotamente**.
+- Utiliza técnicas de **text-to-speech (TTS)** e vozes geradas por **IA** para ler textos enviados de forma remota.
+- Gera seus próprios relatórios com base em **temas predefinidos** por meio de **sindicação web (RSS)**, que são lidos ao vivo por vozes virtuais.
+
+Durante uma programação automática (AutoDJ), o BotNews monitora a chegada de **notícias remotas**.\
+Quando uma notícia aparece, é agendada **imediatamente** ao vivo, com abertura, separadores e encerramento.
+
+Os arquivos de notícias podem ser recebidos de pastas **FTP sincronizadas** ou anexos em **e-mails** por meio de funções do **AUDICOM WebTools**.
+
+Para evitar interromper uma sequência comercial, o BotNews avalia o **tempo restante do título atual**:
+
+- Só insere a notícia se faltarem **mais de 25 segundos** para finalizar.
+
+Além disso, existe um **tempo de confirmação** antes de validar um arquivo como apto:
+
+- Por padrão: **30 segundos** (configurável).
+- Isso permite que um jornalista modifique ou substitua um arquivo, por exemplo, em gravações telefônicas ou transferências FTP.
+
+<Note>
+  O BotNews **não** foi projetado para ser usado enquanto a **Tela de Ar** está em um bloco **ao vivo (LIVE)**.
+</Note>
+
+---
+
+## Tela e Configuração
+
+O módulo é executado manualmente a partir do menu **“+”** na barra de ferramentas.\
+Ao iniciá-lo, a seguinte janela é apresentada:
+
+<img
+  src="/images/audicom/au-BotNews.png"
+  alt="Au Bot News Pn"
+  title="Au Bot News Pn"
+  style={{ width:"65%" }}
+/>
+
+- **Diretório de origem das notícias**:\
+  Até **4 pastas** do sistema podem ser definidas como origem das notícias.
+  - Se não forem necessárias, deixe os campos vazios.
+  - Recomenda-se mantê-las dentro da pasta **AUDICOM**.
+  - Podem ser pastas locais ou de rede (`UNC`).
+
+  Os arquivos transmitidos são movidos para a pasta `\Audicom\Audio\OldNews`, renomeados como:
+
+DiaDaSemana_Hora_Minuto.wav
+
+Isso evita que sejam transmitidos novamente.
+
+<Note>
+  Se a pasta de origem estiver em uma unidade de rede, é necessário **permissão de escrita**. Caso contrário, a notícia entrará em loop e será programada indefinidamente.
+</Note>
+
+- **Abertura**: Arquivo reproduzido antes do relatório.\
+  Deve estar na **pasta de origem** e ser incluído com o nome completo e extensão.\
+  Se deixado vazio, não será reproduzido, mesmo que exista.
+- **Notícia**: Permite definir um **filtro** para selecionar arquivos de notícias.\
+  Exemplo:
+
+urgente\*.mp3
+
+Somente serão programados arquivos cujo nome comece com “urgente”.
+
+- **Locutor**: Define a **voz do sistema** que lerá os textos.
+- O campo à direita ajusta a **atenuação em dB** para a música de fundo.
+- **Back music**: Loop de áudio utilizado como **fundo** para as notícias lidas.
+- **Encerramento**: Arquivo reproduzido após a notícia (mesma lógica que Abertura).
+- **Safe Time (tempo de segurança)**:\
+  Tempo de espera (em minutos) antes de validar uma notícia recém-gerada.
+- Útil quando um jornalista precisa **revisar, confirmar ou regravar** uma nota.
+
+---
+
+## Controles Principais
+
+- **Start**: Ativa o BotNews em segundo plano.
+- Quando detecta e valida uma notícia, insere um **PAUSE** no CyberPlay após o título em reprodução.
+- Ao finalizar o título, o BotNews emerge na Tela de Ar e reproduz o bloco de notícias.
+- Uma vez terminado, o AUDICOM retoma a programação ajustando os tempos.
+
+Os arquivos transmitidos são movidos para `\Audicom\Audio\OldNews` e também são registrados nos **logs de transmissão**.
+
+- **Play**:\
+  Permite durante a configuração **pré-visualizar** vozes TTS e ajustar o nível da música de fundo.
+- **Parar**:\
+  Interrompe a reprodução de áudio ou a leitura TTS em andamento.
+
+<Note>
+  O módulo BotNews suporta o modo **Autorun**.\
+  Se estiver habilitado no AUDICOM (Painel de Configuração Geral), o BotNews será ativado automaticamente se, após executá-lo, nenhuma operação for realizada em um minuto.
+</Note>

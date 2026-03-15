@@ -1,0 +1,188 @@
+---
+title: "CyberPlay Editor: uso e funcionalidades"
+description: "Uso do CyberPlay Editor"
+keywords: ["CyberPlay Editor", "operação"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "6e7b4306129e448874f11dd8c79726a59cb820c30aaf9b5fea21dccbd9d50506"
+
+---
+
+## Carregar e salvar arquivos
+
+### Carregamento individual de arquivos LOG / PGM
+
+Este procedimento aplica-se tanto às janelas **LOG** quanto **PGM**.\
+Permite carregar arquivos de forma individual, embora também seja possível carregá-los em conjunto (ver seção seguinte).
+
+Ao pressionar o botão de carregamento, aparece uma janela com menus suspensos para escolher:\
+**Dia – Dia da semana – Mês – Ano**.\
+Também é possível selecionar um arquivo diretamente da lista à direita.
+
+<Info>
+  O nome dos arquivos corresponde sempre à data para a qual foram gerados, conforme explicado na seção anterior.
+</Info>
+
+---
+
+## Carregamento da programação completa por data
+
+Quando o **CyberPlay Editor** é aberto, os arquivos de **tandas comerciais** e **blocos de programa** correspondentes ao **dia corrente** são carregados automaticamente.
+
+O botão de **carregamento por data** permite selecionar simultaneamente os arquivos **LOG** e **PGM** para uma data específica.
+
+<Steps>
+  <Step title="Carregar programação por data">
+    Pressione o botão correspondente e selecione a data no calendário.\
+    Confirme com **OK**.
+  </Step>
+  <Step title="Resultado">
+    O CyberPlay Editor carregará os arquivos LOG e PGM seguindo a ordem de prioridade explicada na seção anterior.\
+    Em seguida, gerará uma **pré-visualização gráfica** na janela **Test CyberPlay**.
+  </Step>
+  <Step title="Edição posterior">
+    Uma vez carregados, os arquivos LOG e PGM podem ser editados e salvos de forma independente.
+  </Step>
+</Steps>
+
+---
+
+## Salvar arquivo LOG / PGM
+
+Ao pressionar este botão, as alterações realizadas em um arquivo LOG ou PGM são salvas.\
+A janela de salvamento é semelhante à utilizada para carregar arquivos.
+
+- Para criar um **novo arquivo**, insira um nome e pressione **OK**.
+- Se o nome não existir, um novo arquivo será criado para a data indicada.
+- Se já existir, um diálogo será exibido para confirmar a substituição. Ao aceitar, o arquivo anterior será sobrescrito.
+
+<Note>
+  O campo **Ano** sempre exibe: o ano anterior e os dois anos posteriores ao atual.\
+  O AUDICOM inclui **arquivos de exemplo** (7 LOG e 7 PGM), que devem ser excluídos para evitar interferências na programação real.
+</Note>
+
+---
+
+## PlayLists – Listas de títulos
+
+Dentro da janela **Salvar PGM**, existe um botão específico para salvar **PlayLists**, ou seja, listas de títulos em formato **TXT** que podem ser inseridas na pauta de programação ao ar.
+
+- Ao pressionar o botão, aparece uma caixa para inserir o nome do **PlayList**.
+- Esse nome será exibido no **PlayList Manager**, responsável por gerenciar essas listas no módulo de Ar.
+- Os PlayLists são sempre salvos na pasta **PGM**.
+
+Ao marcar a caixa **Mostrar apenas PlayList**, a janela exibirá apenas esse tipo de arquivo.
+
+<Info>
+  As listas de reprodução também podem ser criadas diretamente pelos operadores na tela de Ar, por meio do **PlayList Manager**.
+</Info>
+
+---
+
+## Inserção de títulos nas janelas LOG e PGM
+
+Existem três formas de inserir títulos nas janelas de edição **LOG** e **PGM**:
+
+- **Digitação manual** (escrevendo diretamente).
+- **Drag & Drop** a partir do **File Manager**.
+- **Drag & Drop** a partir do **InfoMusic**.
+
+---
+
+## Teste de programação (F9)
+
+A janela de **pré-visualização CyberPlay** exibe graficamente como a **pauta de programação** está organizada.
+
+- Ao pressionar **Teste**, o gráfico é gerado com base nos comandos inseridos em **LOG** e **PGM**.
+- O gráfico simula o que o **operador de Ar** verá.
+- Simultaneamente, uma **validação** da programação é realizada, e os resultados são exibidos na janela **ESTADO (STATUS)** abaixo de LOG e PGM.
+
+---
+
+### Janela Test-CyberPlay
+
+A janela **Test-CyberPlay** permite **verificar e modificar** os comandos inseridos.
+
+Ao pressionar **TESTE**, os seguintes aspectos são verificados:
+
+- **Arquivos programados**:
+  - Se um título não corresponde a nenhum arquivo, ele aparece em **VERMELHO**.
+  - No módulo de Ar, esse arquivo será **ignorado**, marcado como erro, e a reprodução continuará com o próximo.
+- **Formatos AutoDJ**:
+  - A existência dos formatos atribuídos é validada.
+  - Se um formato não existir, ele aparece em **ESTADO** e deve ser corrigido a partir de PGM.
+  - Se não for corrigido, o bloco será montado com o formato **Default**, que inclui todos os estilos disponíveis na Base de Dados.
+
+### Escuta de títulos em programação
+
+A partir da **Terminal de Programação** (requer placa de som instalada):
+
+- Selecione um título na janela **CyberPlay**.
+- Pressione **PLAY** para ouvi-lo em prévio.
+
+---
+
+## Alterar a pauta a partir da janela de pré-visualização
+
+A **janela de pré-visualização** permite modificar diretamente vários aspectos da **pauta de programação**.
+
+- **Clique direito sobre um item** abre um menu com as seguintes opções:
+  - **PLAY / STOP** → Controles de reprodução (se o item for um arquivo de áudio).
+  - **INSERT METEOR** → Insere uma instrução **METEOR** acima do item selecionado.
+  - **INSERT PAUSE** → Insere uma **PAUSA** acima do item selecionado.
+  - **REMOVE** → Remove o item selecionado.
+    - No caso de um **anúncio comercial**, apenas essa ocorrência é removida.
+    - Para remover **todas as ocorrências** do anúncio, deve-se usar **Magic Programming** (em breve, essa função estará disponível também no menu contextual).
+    - Não é possível excluir blocos completos a partir deste menu.
+- Cada alteração realizada na janela de pré-visualização gera automaticamente o **código correspondente** na janela **LOG** ou **PGM** (conforme o caso).
+- **Duplo clique** sobre um item no CyberPlay exibe a **linha de código** que o gera na janela de instruções correspondente.
+
+### Alterar a posição dos arquivos
+
+É possível **reordenar os arquivos pautados**:
+
+- Clique sobre um título e arraste-o para cima ou para baixo.
+- Também é possível arrastar **pausas** ou **comandos Meteor**.
+- **Não é possível mover tandas nem blocos de programa**.
+
+Para alterar a **hora de início ou término** de um bloco:
+
+- Duplo clique sobre o **cabeçalho do bloco** → o código é exibido em LOG ou PGM.
+- Edite diretamente a linha de código com a hora desejada.
+
+<Warning>
+  Verifique sempre visualmente a programação.\
+  Erros como **sobreposição de horários**, **lacunas**, ou **títulos inexistentes** devem ser corrigidos.\
+  Caso contrário, a programação no **Módulo de Ar** resultará em erro.
+</Warning>
+
+---
+
+## Múltiplas terminais de Ar
+
+A partir de uma **terminal de Produção**, é possível **navegar e operar** sobre qualquer uma das terminais da rede. Isso é útil quando há mais de uma terminal de Ar ativa, pois permite gerenciar a programação de uma ou outra.
+
+<img
+  src="/images/audicom/au-cpeditor-terminales.jpg"
+  alt="Au Cpeditor Terminales Jp"
+  title="Au Cpeditor Terminales Jp"
+  className="mx-auto"
+  style={{ width:"58%" }}
+/>
+
+- No menu suspenso **“Terminal atual”**, aparecem todas as terminais disponíveis.
+- O valor **“Default host”** aponta sempre para a **terminal local**, a menos que o administrador redefina a configuração padrão em `audicom.ini`.
+- Se você selecionar uma **terminal de Ar**, os **arquivos de programação** dessa terminal serão exibidos, permitindo trabalhar diretamente em seus **LOG/PGM**.
+
+<Info>
+  Ao abrir o menu pela primeira vez, o sistema explora a rede em busca de **terminais AUDICOM ativas**.\
+  Esse processo pode levar alguns segundos, mas o resultado fica armazenado na memória, acelerando acessos posteriores.
+</Info>
+
+Para atualizar a lista de terminais disponíveis, selecione a opção **\_update hosts**.

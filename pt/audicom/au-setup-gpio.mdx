@@ -1,0 +1,162 @@
+---
+description: "Manuseio de sinais remotos. Controle de periféricos."
+title: "Sinais GPIO"
+keywords: ["GPIO"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "742b29a460842b9a111a22140b3c6f5588146e03f6c2a8625af48c8f25fdce64"
+
+---
+
+## Controle via USB
+
+A interface **E/S USB (GPIO USB)** é um acessório comercializado separadamente (consulte seu distribuidor).
+
+- Possui 2 entradas e 2 saídas de controle.
+- Permite controlar externamente funções de transporte do AUDICOM.
+- O AUDICOM também pode enviar comandos para controlar dispositivos externos.
+
+Exemplo: em consoles que transmitem sinais de controle, estes podem ser usados para comandar a reprodução no AUDICOM.
+
+- Ao abrir o fader ou habilitar o botão de ar, o AUDICOM inicia a reprodução.
+- Ao fechá-lo, interrompe a reprodução.
+
+<Note>
+  O envio e recebimento de comandos deve ser habilitado no painel de configuração do AUDICOM.
+</Note>
+
+<img
+  src="/images/audicom/au-USB-GPIO.jpg"
+  alt="AUDICOM USB GPIO"
+  title="AUDICOM USB GPIO"
+  className="mx-auto"
+  style={{ width:"44%" }}
+/>
+
+### Aviso
+
+<Danger>
+  Os terminais de terra da interface USB compartilham o terra com a porta USB do PC.\
+  Por não estarem isolados internamente, podem expor o potencial de terra USB do computador.
+
+  - Verifique os circuitos antes de realizar a conexão.
+  - Uma tensão inversa ou pico elevado pode danificar a interface ou o computador.
+  - As saídas fornecem 5 V e possuem resistência interna de 250 Ohms para limitar a corrente.
+  - As entradas são de **contato seco**, comutam quando conectadas diretamente ao terra.
+</Danger>
+
+---
+
+## Opções para manuseio de sinais remotos
+
+### Enlace via Internet
+
+Uma estação "cabeça" pode controlar uma estação "repetidora", que apenas substitui blocos comerciais por conteúdos locais.\
+Mais detalhes no capítulo **Ferramentas para Internet**.
+
+### Blocos remotos
+
+Anteriormente chamados “satelitais”. Automatizam a comutação entre áudio local e uma fonte externa (satélite, decoder de streaming, etc.).\
+Também permitem controlar estações repetidoras.
+
+Modos disponíveis:
+
+- **SatFill (Preenchimento)**: comutação conforme horários.
+- **SatSlave (Mestre-Escravo)**: controle centralizado de terminais remotos.
+
+O módulo **Multicast** gerencia transmissões diretas para estações via Internet (ver Ferramentas para Internet).
+
+### Bloco remoto SatFill (Preenchimento)
+
+- Usado quando é necessário comutar programação local com fontes externas (satélite, enlaces ponto a ponto, etc.).
+- Na Tela de Ar, estes blocos aparecem como **SYNC**.
+- Enquanto o evento SYNC está ativo, reproduz o sinal externo.
+- Ao finalizar, o AUDICOM retoma a programação local do CyberPlay.
+
+### Bloco remoto SatSlave (Mestre-Escravo)
+
+- Permite vincular terminais AUDICOM em diferentes localidades.
+- O terminal Mestre envia a ordem através da instrução **/REGIONAL**, que gera um pulso via E/S USB (ex. GPO).
+- Os terminais Escravos comutam entre a programação da Mestre e programação local.
+- O último bloco pode ser programado como **Syncro**, garantindo comutação no horário se o pulso não chegar.
+
+### Retransmissão de sinais externos com SatFill
+
+Exemplo: um terminal de ar comutando entre sinal local e sinal satelital.
+
+Formas de comutação:
+
+**a) Controlando módulos de console via porta USB**
+
+- O sinal externo entra em um módulo do console.
+- O AUDICOM envia comandos pela interface USB para ativar/desativar módulos VCA.
+- Conexões:
+  - **Dados**: interface USB ↔ console.
+  - **Áudio**: sinal de satélite e sinal local para os módulos do console.
+
+**b) Comutando por software a entrada de linha**
+
+- O sinal externo entra na linha de uma placa de som.
+- O AUDICOM comuta entre essa entrada e o áudio local.
+- Controla apenas uma entrada; para mais sinais é necessária placa multicanal.
+- No console: saída PGM-1 para áudio local, entrada de linha para satélite.
+
+### Retransmissão de streaming com SatFill
+
+O AUDICOM suporta blocos **iLink** para reproduzir streaming de áudio diretamente.
+
+### Controle de estações remotas desde terminal Mestre
+
+Configuração baseada em blocos SatSlave:
+
+- **Terminal Mestre**: envia sinal de programa e pulsos de controle.
+- **Terminal Escravo**: recebe programação e ordens de comutação.
+
+O Mestre ao encontrar /REGIONAL altera uma saída de porta (USB ou paralela), transmitindo a ordem ao Escravo.\
+O Escravo comuta entre sinal satelital e programação local.
+
+#### Terminal central (uplink para satélite)
+
+<img
+  src="/images/audicom/au-subida-sat.jpg"
+  alt="Au Subida Sat Jp"
+  title="Au Subida Sat Jp"
+  className="mx-auto"
+  style={{ width:"57%" }}
+/>
+
+- Conexões da interface USB descritas em **Sinais de controle por USB**.
+- A entrada /REGIONAL muda de estado (ex. SAT-1 DataBit 2) e pode comutar o console de áudio.
+- Também pode entrar diretamente na placa de áudio sem console.
+
+#### Terminais remotos (downlink de satélite)
+
+<img
+  src="/images/audicom/au-sat-bajada.jpg"
+  alt="AUDICOM downlink-satélite"
+  title="AUDICOM downlink-satélite"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+- Conexões da interface USB descritas em **Controle via porta paralela**.
+
+#### Configuração de comandos de controle
+
+- Em caso de várias placas de som, pode-se definir qual será a entrada de linha para blocos satelitais.
+- Configura-se no arquivo `Audicom.ini` na seção `[Hardware]`:
+
+```ini
+[Hardware]
+LineInID=0
+```
+
+- O valor `0` indica a placa padrão do Windows.
+- O valor `1` corresponde à segunda placa, embora a ordem possa variar conforme a enumeração do Windows.
+- Em alguns casos será necessário determinar a entrada desejada por tentativa e erro.

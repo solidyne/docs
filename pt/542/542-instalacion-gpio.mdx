@@ -1,0 +1,58 @@
+---
+title: "Sinais GPIO"
+description: "Conexão das entradas e saídas de propósito geral (GPIO)"
+keywords: ["GPIO", "DB9", "GPI", "GPO"]
+tags: ["procesadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "cefeb5011ce559384210df7accace98b1ea680d2080c25fb5e4cffa36dfa4a49"
+
+---
+
+## Conector GPIO
+
+O Solidyne 542APC possui uma entrada e uma saída de propósito geral (GPIO) disponíveis em um conector tipo **DB9**. Os sinais no conector são:
+
+<img
+  src="/images/542/GPIO_DB9.png"
+  alt="GPIO DB9 Pn"
+  title="GPIO DB9 Pn"
+  style={{ width:"35%" }}
+/>
+
+| **PIN** | **SINAL**              |
+| ------- | ---------------------- |
+| 1       | GPI - TENSÃO           |
+| 2       | GPI - COMUM            |
+| 3       | NÃO CONECTADO          |
+| 4       | GPO - COLETOR ABERTO   |
+| 5       | 12 VCC / 100 mA MAX    |
+| 6 a 9   | CHASSI                 |
+
+## Conexão e usos da GPI
+
+A entrada de propósito geral (GPI) permite comutar o ajuste de processamento para um ajuste otimizado para vozes quando os microfones são ativados no ar.
+
+A GPI é ativada aplicando uma **tensão entre 5 e 15** **volts** no **PIN-1**. Não usa referência de terra interna. O PIN-2 é conectado como GPI-COM ao sinal externo. Isso evita loops de realimentação que podem produzir ruído.
+
+A GPI não tem polaridade, a ativação ocorre com tensões positivas ou negativas dentro da faixa de trabalho.
+
+Quando a tensão na GPI é zero, retorna-se ao preset de processamento principal. A comutação dos presets de processamento é indicada na tela OLED do equipamento.
+
+Quando o Solidyne 542APC é instalado nos estúdios, o disparo da GPI pode ser resolvido conectando a saída de tensão da luz de ar diretamente à GPI do 542APC.\
+Verificar se a tensão "tally light" fornecida pelo console está dentro da faixa suportada (5-15 VCC).
+
+Quando o Solidyne 542APC está na planta transmissora, o disparo da GPI pode ser resolvido utilizando um contato remoto (relé) do link Estúdio-Planta se o equipamento utilizado o fornece.
+
+## Conexão e usos da GPO
+
+A saída de propósito geral (GPO) permite comandar um dispositivo externo diante de uma determinada condição do processador.
+
+É conectada no PIN 4 do DB9. É um contato tipo "Coletor Aberto" normalmente aberto, que fecha (conecta-se ao terra do chassi) quando está ativo. **Suporta 100 mA máximo**.
+
+As condições que ativam a GPO são estabelecidas a partir da tela de Controle WEB, na opção de menu **CONFIGURAÇÃO**.

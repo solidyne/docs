@@ -1,0 +1,212 @@
+---
+title: "Cenas e perfis de usuário"
+description: "Gerenciamento de cenas e perfis de acesso"
+keywords: ["operação", "usuários", "cenas", "perfis", "channel map", "acesso", "permissões"]
+tags: ["consoles IP", "UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "6ef96f82e725c9570b3fe77f1fd9380318c79b6f2180b43cbf6e1b803c1ffec2"
+
+---
+
+A tela para gerenciamento de usuários e cenas permite:
+
+- Alterar o usuário ativo.
+- Alterar a cena atual.
+- Utilizar funções avançadas para organizar canais.
+
+Acessa-se pressionando a opção **SCENES**, disponível nos botões contextuais quando o console mostra a **tela principal**.
+
+<img
+  src="/images/ux24/ux24-pantallas-escenas.jpg"
+  alt="UX18 Tela Cenas"
+  title="UX18 Tela Cenas"
+  className="mx-auto"
+  style={{ width:"75%" }}
+/>
+
+## OS USUÁRIOS
+
+Na área **USER LOGIN** (1) da tela é mostrado o usuário atualmente ativo e permite-se mudar para outro usuário tocando na opção correspondente.\
+Existem **três níveis de usuários** com diferentes permissões pré-estabelecidas. As restrições se aplicam tanto na operação pela tela do console quanto pela interface web remota.
+
+### Usuário BASIC
+
+Perfil mais restrito:
+
+- Não tem proteção por senha.
+- Sem acesso a opções de configuração avançadas (SETTINGS).
+- Pode mudar de cena, mas não salvar alterações nem criar novas cenas.
+- Pode visualizar os ajustes e o estado dos processadores, mas não modificá-los nem ligar/desligar.
+- Pode modificar temporariamente opções básicas do canal (**GANHO**, **NOME**, **PANORÂMICA**, **AÇÕES DO CANAL**), mas sem salvar as alterações na cena.
+
+### Usuário EXPERT
+
+Perfil com restrições intermediárias:
+
+- Protegido por senha (padrão: `expert`). Somente o usuário ADMIN pode alterá-la.
+- Igual ao BASIC, sem acesso à configuração avançada (**SETTINGS**).
+- Acesso total aos processos de áudio.
+- Na tela **CHANNEL** pode alterar **ganho**, **panorâmica**, **nome**, **atribuição de entrada** e **modo do canal**, mas sem acessar SETTINGS.
+- Pode salvar a cena atual, exceto se estiver protegida.
+- Pode criar novas cenas, inclusive a partir de uma protegida.
+
+### Usuário ADMIN
+
+Perfil com acesso total:
+
+- Protegido por senha (padrão: `admin`). Pode alterar todas as senhas pela tela **SETTINGS**.
+- Pode criar cenas protegidas ou somente leitura, que são operacionais para BASIC e EXPERT mas só editáveis por ADMIN.
+
+<Note>
+  As senhas são definidas na tela **SETTINGS - USERS**.
+</Note>
+
+#### Usuário de inicialização
+
+Ao ligar, o console inicia com um perfil de usuário predefinido (de fábrica: ADMIN) e nunca solicita senha.
+
+Em **SETTINGS → USERS** é possível:
+
+- Alterar o usuário de inicialização.
+- **Alterar as senhas** de ADMIN e EXPERT.
+
+## AS CENAS
+
+Uma **cena** armazena toda a configuração do console, com exceção dos ajustes de sistema (rede, streaming, usuário de inicialização, etc.). Inclui:
+
+- Configuração de entradas e saídas.
+- Atribuição de canais e buses.
+- Ganhos.
+- Ajustes de processadores de áudio.
+
+As cenas permitem carregar rapidamente uma configuração predeterminada segundo os requisitos de cada programa; por exemplo, reatribuindo entradas, mudando a ordem de canais ou ajustando processadores de microfone.
+
+<Warning>
+  É necessário salvar a cena após modificar qualquer parâmetro (ganho, equalizador, nome do canal, etc.) para que a alteração fique armazenada de forma definitiva.
+</Warning>
+
+### Cenas disponíveis
+
+A lista (ver 2 na imagem) mostra 12 cenas de usuário.
+
+- Navega-se girando o encoder e confirma-se pressionando-o.
+- A cena ativa é destacada em **azul claro**.
+- A cena selecionada (mas não confirmada) é destacada em **laranja**.
+
+### Cenas protegidas (Lock)
+
+- Somente o perfil **ADMIN** pode criá-las.
+- São identificadas com um ícone de cadeado.
+- Os usuários BASIC e EXPERT podem carregá-las mas não modificá-las nem apagá-las.
+
+### Scene Manager
+
+Apresenta dois grupos de opções: para a **cena selecionada** e para a **cena ativa**.
+
+**LOAD**: Carrega a cena selecionada. Pode ser feito pela tela touch, botão contextual ou encoder.
+
+- Requer confirmação (cancela após 8 segundos sem confirmação).
+- Todos os perfis podem carregar qualquer cena.
+- Se há canais no ar, estes permanecem ativos mesmo mudando de posição, mantendo sua atribuição de buses.
+- Se o novo canal atribuído tem outro nível de fader, mantém-se o nível digital anterior e indica-se piscando no OLED.
+- **O áudio é cortado se a entrada previamente no ar não estiver atribuída** a um canal na nova cena.
+- Não se pode mudar de cena com uma linha telefônica no ar ou em espera.
+
+**RENAME**: Altera o nome da cena selecionada.
+
+- Desabilitado para BASIC.
+
+**COPY CURRENT**: Copia a cena ativa sobre a selecionada.
+
+- Requer confirmação.
+- Desabilitado para BASIC.
+
+**SET TO DEFAULT**: Restaura a cena ativa para a configuração de fábrica.
+
+- Desabilitado para BASIC.
+
+**SAVE**: Salva a configuração atual de:
+
+- Atribuição de entradas aos 24 canais.
+- Atribuição de sinais às saídas.
+- Configuração específica de entradas e saídas (phantom, modos MIX-MINUS, etc.).
+- Ganhos de entradas e saídas.
+- Etiquetas e ações de canais.
+- Ajustes de processadores de áudio.
+- Estado de atribuições, incluindo VBUS.
+
+<Warning>
+  A cena **não salva** o estado dos botões **ON-AIR** nem **CUE**.
+</Warning>
+
+### Cenas de fábrica
+
+Qualquer uma das 12 cenas pode ser restabelecida para uma configuração predeterminada. Além disso, o UNIDEX vem de fábrica com cenas projetadas com diferentes configurações e expansões UDX, pensadas para servir de base ou exemplo para criação de novas configurações.
+
+<Note>
+  Baixar [infográfico sobre a configuração da cena default](https://solidynepro.com/descargas/productos/UX24_Quickguide_Default_scenes_routing.pdf) (PDF)
+</Note>
+
+### Exportar e importar cenas
+
+As cenas podem ser exportadas e importadas pela **interface de controle WEB**. \
+A partir da opção de gerenciamento de cenas do controle web, é possível exportar cada cena como um arquivo em disco. E importá-las depois em qualquer uma das 12 posições disponíveis.
+
+## Channel Map (Mapa de Canais)
+
+A função **CHANNEL MAP** mostra a configuração de todos os canais e permite reordená-los facilmente.\
+Existem dois modos de operação: **SWAP 2 CH** (trocar dois canais) e **ORDER CH** (reorganizar canais).
+
+### SWAP 2 CH (Trocar dois canais)
+
+Permite trocar a posição de dois canais.
+
+<img
+  src="/images/ux24/ux24-chmap.png"
+  alt="UX18 Channel Map"
+  title="UX18 Channel Map"
+  style={{ width:"65%" }}
+/>
+
+**Procedimento:**
+
+1. Pressionar **SWAP 2 CH** para habilitar a opção.
+2. Selecionar na lista os dois canais que se deseja trocar.
+3. Pressionar **APPLY** para executar a troca.
+4. Pressionar **SAVE** para salvar as alterações na cena atual.
+
+---
+
+## ORDER CH (Reorganizar canais)
+
+Permite atribuir novas posições a um ou mais canais.
+
+<img
+  src="/images/ux24/ux24-OrderCH.png"
+  alt="UX18 Order CH"
+  title="UX18 Order CH"
+  style={{ width:"65%" }}
+/>
+
+**Procedimento:**
+
+1. Pressionar **ORDER CH**.\
+   Aparecerá um menu suspenso à direita do número do canal, que permite atribuir uma nova posição.
+2. Tocar no menu na tela e escolher a nova posição para o canal.\
+   Podem-se realocar vários canais ao mesmo tempo.
+
+<Warning>
+  Se for atribuída a um canal uma posição já ocupada, a informação do canal de destino será sobrescrita ao aplicar as alterações.
+</Warning>
+
+3. Pressionar **APPLY** para confirmar.
+   - **APPLY** aplica as alterações temporariamente (ainda não são salvas).
+   - Se a cena for abandonada sem salvar, as alterações são perdidas.
+4. Pressionar **SAVE** para que as alterações sejam definitivas na cena.
+5. Para cancelar, desativar **ORDER CH** tocando novamente na opção ou pressionar o botão contextual **BACK**.

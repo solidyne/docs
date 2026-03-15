@@ -1,0 +1,106 @@
+---
+title: "Monitoramento"
+description: "Conexão de alto-falantes e fones de ouvido no Estúdio e Sala de Controle"
+keywords: ["monitoramento", "studiobox", "fones de ouvido", "instalação", "conexões"]
+tags: ["consoles de estúdio", "linha Classic", "DX816", "DX822"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f1f707f49f4cc52688e68ae20465f15206ea0b71c0da90651a3a6869b61031d6"
+
+---
+
+## Monitoramento na Sala de Controle
+
+As saídas **CONTROL** apresentam conectores **TRS fêmea de 1/8" (mini-jack)** para alto-falantes e fones de ouvido. A saída de alto-falantes trabalha com nível nominal de **0 dBu**, projetada para conexão de monitores ativos.\
+Na seção MONITOR do painel do console encontram-se os controles para atribuição de sinais e nível, para os alto-falantes e fones de ouvido.
+
+<Note>
+  A saída **Control Speaker** é silenciada automaticamente ao ativar o **talkback**, evitando realimentação com o microfone de ordens.
+</Note>
+
+---
+
+## Monitoramento no Estúdio
+
+O console fornece sinais de monitoramento para o Estúdio através de **STUDIO MONITOR OUT**, com conector RJ45. A conexão é realizada com cabo **STP RJ45-RJ45 (pino a pino)** para as caixas de monitoramento opcionais **Solidyne Studiobox HD3/HD5**.
+
+<Danger>
+  Esta saída **não deve ser conectada** com cabos RJ45 usados para saídas de áudio.\
+  Não é compatível com o padrão **StudioHub**.
+</Danger>
+
+<img
+  src="/images/816/816-monitoreo-studiobox.png"
+  alt="816 Monitoreo Studiobox Pn"
+  title="816 Monitoreo Studiobox Pn"
+  className="mx-auto"
+  style={{ width:"56%" }}
+/>
+
+Características:
+
+- Os alto-falantes do Estúdio são **silenciados automaticamente** ao abrir microfones.
+- O sinal para fones de ouvido **nunca é silenciado**. Recebem sempre o sinal atribuído no console e o áudio do microfone de ordens (talkback).
+
+Para mais detalhes, ver seção **Módulos de monitoramento Studiobox HD3 / HD5**.
+
+---
+
+## Monitoramento em cabine única
+
+Quando o console for utilizado em um estúdio integrado ou de cabine única, é conveniente conectar os alto-falantes à saída **STUDIO MONITOR**.
+
+<Warning>
+  A saída de alto-falantes CONTROL **não é silenciada ao ligar os microfones**, portanto existe risco de realimentação se os microfones e alto-falantes estiverem no mesmo ambiente.
+</Warning>
+
+---
+
+## Conexão sem opcional Studiobox
+
+O console é fornecido com um **cabo adaptador** em "Y" (RJ45 para duplo jack TRS) para conexão de distribuidores de fones de ouvido genéricos e alto-falantes amplificados.
+
+- A saída **STUDIO MONITOR** fornece sinais em nível fixo.
+- Se não for usado Studiobox, o nível dos alto-falantes é ajustado pelos controles próprios dos monitores.
+- Pode-se utilizar um distribuidor/amplificador de fones de ouvido com entrada dupla para controlar o volume dos alto-falantes a partir do console.
+  - Entrada A → sinal para fones de ouvido.
+  - Entrada B → sinal para alto-falantes.
+
+<img
+  src="/images/816/816-monitores-sin_studiobox.png"
+  alt="816 Monitores Sin Studiobox Pn"
+  title="816 Monitores Sin Studiobox Pn"
+  className="mx-auto"
+  style={{ width:"46%" }}
+/>
+
+O controle de volume dos alto-falantes é atribuído à entrada B. Desta forma, uma única unidade controla fones de ouvido e monitores do Estúdio.
+
+### Studio Monitor Out
+
+<img
+  src="/images/image.png"
+  alt="image.png"
+  title="image.png"
+  style={{ width:"10%" }}
+/>
+
+| # | Sinal                           |
+| :-: | ------------------------------- |
+| 1 | Fones Esquerdo (\+4 dBu)        |
+| 2 | Fones Direito                   |
+| 3 | GND                             |
+| 4 | ON-AIR (\+14 V)                 |
+| 5 | Talkback para Sala de Controle  |
+| 6 | VCC \+ 14 V                     |
+| 7 | Alto-falantes Esquerdo (\+4 dBu) |
+| 8 | Alto-falantes Direito           |
+
+<Note>
+  Chassi = GND
+</Note>

@@ -1,0 +1,55 @@
+---
+title: "Enlace com linhas telefônicas"
+description: "Enlace ao Estúdio usando linha telefônica fixa e celular Bluetooth"
+keywords: ["enlace","POTS","Bluetooth"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "4278099bc8f0f12612dd1b03d016098ba356293f43e63029b27760a8c1371fad"
+
+---
+
+Quando o equipamento transmite através da Internet, a linha fixa (POTS) ou um telefone celular podem ser usados como método de transmissão de backup.\
+Ou se a transmissão é feita usando um telefone celular Bluetooth, uma linha fixa pode ser usada simultaneamente como transmissão de backup do celular.
+
+A configuração das linhas para operar como enlaces é:
+
+<Tabs>
+  <Tab title="Linha como enlace">
+    Também é possível usar uma linha telefônica como **canal de transmissão principal**.
+
+    - Na posição **PGM**, o retorno do estúdio é suprimido do monitoramento CUE e é somado à mixagem de programa.
+    - O **mic TALK** não é enviado ao estúdio.
+    - Recomenda-se usar a linha na posição **PGM**, para evitar que o microfone de ordens vá acidentalmente ao ar.
+    - Se não for necessário escutar o retorno do estúdio: manter o **potenciômetro PGM fechado**.
+    - Para escutar retorno: abrir o potenciômetro **PGM** → o sinal do estúdio é ouvido em todos os fones que monitoram a mixagem PGM.
+    - O envio de sinal para as linhas é em modo **mix-minus**: elimina-se do envio o sinal proveniente do estúdio, evitando realimentações.
+  </Tab>
+  <Tab title="Linha como backup">
+    Enquanto MX2200 transmite através da **Internet**, a linha fixa ou um telefone celular podem ser usados como **método de backup**.
+
+    - Quando a linha está na posição **CUE**, o retorno do estúdio é enviado apenas para o monitoramento de fones.
+
+    <Info>
+      Uma vez estabelecida a chamada, os estúdios recebem sempre a mixagem de **PGM**, independentemente se a linha está em modo **CUE** ou **PGM**.
+    </Info>
+    - Se for pressionado **TALK** nessa linha, o microfone de ordens é enviado ao estúdio por essa linha.
+    - Esta condição permite ao operador da MX2200 dialogar com o Estúdio em privado, enquanto o console transmite pela Internet.
+  </Tab>
+</Tabs>
+
+<Note>
+  Mais detalhes sobre operação das linhas em [Uso das linhas telefônicas](/pt/mx2200/mx2200-op-lineas-intro)
+</Note>
+
+---
+
+## Recepção nos estúdios
+
+- As chamadas telefônicas são recebidas no estúdio mediante **híbridos telefônicos e interfaces convencionais**.
+- Todos os consoles **Solidyne** suportam linhas padrão **POTS** e interfaces **Bluetooth** para vincular telefones celulares.

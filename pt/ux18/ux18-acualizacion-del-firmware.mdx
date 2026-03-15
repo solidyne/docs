@@ -1,0 +1,66 @@
+---
+title: "Atualização de firmware"
+description: "Procedimento para atualizar o software do UNIDEX UX18"
+keywords: ["firmware","update","atualização"]
+tags: ["consolas IP", "UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "fe211dc44ece81141575079821702c58376a56c25b3d3a2f0ebc04d3a3e60669"
+
+---
+
+import discovery from '/snippets/discovery-pt.mdx';
+
+## Atualização de firmware
+
+O software do console pode ser atualizado através da interface WEB usando um computador com acesso à Internet.
+
+As atualizações podem incluir:
+
+- Firmware do motor de mixagem (hardware).
+- Interface gráfica.
+- Ferramentas de streaming.
+
+## Procedimento de atualização
+
+### 1. Conexão à rede
+
+1. Conectar à rede local as portas Ethernet **"Streaming Out"** e **"Remote Control"** do console.
+2. Verificar se a rede tem acesso à Internet.
+3. Na tela principal (VU meters), verificar o endereço IP atribuído ao módulo de streaming.
+
+<discovery />
+
+### 2. Acesso à tela de atualização
+
+De um computador conectado à mesma rede:
+
+1. Abrir um navegador web.
+2. Inserir o endereço IP do console.
+3. A tela de atualizações será aberta.
+4. No menu à esquerda, selecionar UPDATE.
+5. No setor direito será carregada a tela de atualizações.
+
+<img
+  src="/images/ux24/ux24-update-firmware.png"
+  alt="UNIDEX Firmware Update"
+  title="UNIDEX Firmware Update"
+  style={{ width:"61%" }}
+/>
+
+4. Pressionar **CHECK FOR UPDATES**.
+3. Se houver atualizações disponíveis, será exibida uma lista com os detalhes.
+4. A opção **INSTALL** inicia o processo de atualização.
+
+<Warning>
+  O sistema **NUNCA INSTALA ATUALIZAÇÕES AUTOMATICAMENTE**. Para instalar uma atualização, é necessária a intervenção do operador.
+</Warning>
+
+<Info>
+  Dependendo do tipo de atualização, o equipamento poderá reiniciar, INTERROMPENDO o sinal no ar por alguns segundos.
+</Info>

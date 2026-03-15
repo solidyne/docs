@@ -1,0 +1,111 @@
+---
+title: "Operação do console"
+description: "Descrição dos controles"
+keywords: ["operação"]
+tags: ["consoles portáteis", "exteriores", "MX2100"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "32086199d769633ffffbad21952c1d8b2832f68cde166182a9c44e5724d4c4b5"
+
+---
+
+<img
+  src="/images/mx2100/mx2100-frente.png"
+  alt="Mx2100 Frente Pn"
+  title="Mx2100 Frente Pn"
+  className="mx-auto"
+  style={{ width:"71%" }}
+/>
+
+## Painel frontal
+
+### Ligar/Desligar
+
+O equipamento é ligado pressionando o botão **ON**, seja quando conectado ao carregador ou funcionando com bateria interna.
+
+<Note>
+  Quando a unidade está conectada por USB, ao carregador ou a um computador, o LED indicador de carga (**CHG**) permanece aceso mesmo com o console desligado.\
+  Autonomia da bateria: 16 horas em uso contínuo.\
+  Tempo de carga total: 12 horas.\
+  O sistema de carga reduz automaticamente a corrente quando atinge 100%, podendo permanecer conectado indefinidamente.
+</Note>
+
+<Warning>
+  Lembre-se de desligar o console após o uso para evitar consumo desnecessário da bateria.
+</Warning>
+
+---
+
+## Mixador de programa
+
+O sinal de programa (**PGM**) é gerado a partir da soma das fontes: **MIC-1, MIC-2, MIC-3, MIC-4 (incorporado), LINE, Bluetooth e USB**.\
+Algumas entradas compartilham controles e sua disponibilidade depende da forma de conexão do console.
+
+- O sinal PGM é enviado para o rádio via telefone ou computador com Internet.
+- Também está presente no conector **BAL OUT** do painel traseiro.
+
+**Controle MIC-3/USB**
+
+Alterna entre a entrada MIC-3 ou o computador conectado ao USB. Quando a MX2100 é usada conectada a um computador para transmissão via Internet, um microfone **deve ser conectado ao MIC-3**. Nesta condição, o USB não entra na mixagem PGM, mas é ouvido nos fones como retorno direto.
+
+**Controle MIC-4/LIN/Bluetooth**
+
+Gerencia o sinal do microfone incorporado, da entrada de LINE ou do dispositivo Bluetooth; dependendo da condição de trabalho:
+
+- Sinal do MIC-4 disponível se **NÃO** for usado USB nem a entrada de linha.
+- Sinal de LINE disponível apenas quando LIN-4 está conectada (anula MIC-4).
+- Retorno Bluetooth disponível na mixagem PGM apenas quando o console está conectado por USB (cenário de transmissão a partir do computador externo).
+
+## Fones de ouvido
+
+A mixagem dos fones varia conforme o modo de uso:
+
+- **(a) Comunicação telefônica (fixa ou Bluetooth):**
+  - Mixagem PGM: MIC-1, MIC-2, MIC-3 e Line/MIC-4.
+  - Retorno direto da Central (híbrido ou Bluetooth).
+  - Tom de chamada em ligações recebidas.
+- **(b) USB e computador externo com streaming unidirecional:**
+  - Mixagem PGM: MIC-1, MIC-2, USB e Bluetooth (usado para colocar no ar outro celular).
+  - Retorno via USB (não se usa retorno da Central devido ao atraso do streaming).
+- **(c) USB e computador externo com link em tempo real (VoIP):**
+  - Mixagem PGM: MIC-1, MIC-2, MIC-3 e LINE.
+  - Retorno USB (Central).
+  - Retorno Bluetooth.
+  - Retorno híbrido.
+
+<Note>
+  O jornalista em exteriores ouve a si mesmo através da mixagem de programa.\
+  Não é necessário que o operador na Central retransmita seu sinal.
+</Note>
+
+<Warning>
+  O piso de ruído nos fones aumenta se o híbrido estiver ativo (botão **ON-AIR** pressionado).\
+  Verifique se não está pressionado quando o híbrido não está em uso.
+</Warning>
+
+---
+
+## Indicador de nível
+
+- Indicador de LED duplo mostra a ação do compressor interno.
+- LED verde: nível baixo, sem compressão.
+- LED vermelho: indica compressão.
+- Quanto maior a compressão, maior a intensidade do LED vermelho.
+
+<Note>
+  O nível adequado de trabalho é alcançado quando os picos de sinal ativam ocasionalmente o LED vermelho.
+</Note>
+
+---
+
+### Ação do compressor
+
+A MX2100 incorpora um **compressor + limitador automático**, que mantém constantes os picos de sinal na saída.
+
+- Melhora a relação sinal/ruído.
+- Garante uniformidade nos diferentes canais de transmissão.

@@ -1,0 +1,122 @@
+---
+title: "CyberPlay Editor"
+description: "Programação de conteúdos."
+keywords: ["cyberplay editor","tandas","comerciais","blocos","grade"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "e7dd4bfd89dcb18b0cd84edc208a3198dea9fcca61408d9965b6017d98b6ca0e"
+
+---
+
+## Sobre a grade de programação
+
+As **tandas de anúncios publicitários** e os **programas** são criados separadamente e armazenados em arquivos distintos:
+
+- `.LOG` para tandas comerciais.
+- `.PGM` para blocos de programa.
+
+As tandas comerciais podem ser criadas **manualmente** com o **CyberPlay Editor** (este capítulo) ou **automaticamente** com o **módulo de Tráfego do ADMICOM** (consulte o capítulo **ADMICOM**).\
+Os **blocos de programa** são definidos no **CyberPlay Editor** em diferentes segmentos horários: programas ao vivo, **AutoDJ**, playlists predefinidas, blocos satelitais, etc.
+
+Tandas e blocos são criados por meio de **instruções próprias do AUDICOM**. Não é necessário memorizá-las: existem **assistentes** (por exemplo, _Magic Programming_) e ferramentas de edição visual que agilizam a programação.
+
+### Descrição geral
+
+Acesse a área de trabalho do AUDICOM e, no menu suspenso, abra o **CyberPlay Editor**.\
+Requer permissão no seu **perfil de usuário** (consulte **Níveis de Acesso**).
+
+O AUDICOM compõe a programação a partir de:
+
+- **.LOG** (tandas publicitárias)
+- **.PGM** (blocos musicais, ao vivo, satelitais, etc.)
+
+Os **comandos** de tandas e programas e os **nomes de arquivos** (promocionais, músicas, spots, etc.) são editados nas janelas **LOG** e **PGM** do CyberPlay Editor.\
+Muitos comandos podem ser gerenciados **graficamente** pelo **CyberPlay-Test** ou com assistentes como o **Magic Programming**.
+
+<Tip>
+  Pense na **grade clássica** do rádio: programação diária **00:00 a 24:00**. Isso é o que você definirá no CyberPlay Editor.
+</Tip>
+
+<img
+  src="/images/audicom/au-cpedior-grilla_ej.jpg"
+  alt="Au Cpedior Grilla Ej Jp"
+  title="Au Cpedior Grilla Ej Jp"
+  className="mx-auto"
+  style={{ width:"78%" }}
+/>
+
+### Instruções para programar conteúdos
+
+A seguir são descritos os **comandos** ou instruções que geram os diversos blocos de conteúdos. As instruções começam com **/ (barra)** salvo indicação contrária.\
+Cada instrução vem em **uma única linha**.
+
+- O **primeiro bloco** deve **começar às 00:00** e o **último terminar às 24:00**.
+- O uso de **maiúsculas/minúsculas** é indiferente.
+- Se houver um horário **sem bloco**, o CyberPlay exibirá um bloco **cinza** com **EMPTY**.
+
+<Warning>
+  Se a programação não começar às **00:00** ou não terminar às **24:00**, o sistema **não identificará** a mudança de dia e a programação ficará **incorreta**.
+</Warning>
+
+A **janela de status** reporta: erros de sintaxe, blocos vazios, sobreposições de horários, **formatos AutoDJ** inexistentes e outros problemas.
+
+![Au Cpedior Pn](/images/audicom/au-cpedior.png)
+
+---
+
+## Arquivos LOG e PGM – Grade de programação
+
+As datas de transmissão de **tandas (.LOG)** e **programas (.PGM)** podem ser definidas assim:
+
+- Para uma **data específica** (ex.: 1998-12-25).
+- Para um **dia da semana de um mês** (ex.: todas as **segundas-feiras de abril**).
+- Para um **dia fixo da semana** (ex.: **toda segunda-feira** do ano).
+- Para um **mês** (ex.: **agosto**).
+- Para **todo um ano**.
+
+### Ordem de prioridade ao carregar PGM/LOG
+
+Quando o módulo de ar **CyberPlay** monta a programação, carrega **PGM** e **LOG** segundo esta ordem:
+
+1. `YYYYMMDD.LOG` / `YYYYMMDD.PGM`\
+   Ano-Mês-Dia (ex.: `20040501`) para o **1 de maio de 2004**.
+2. `WED11.LOG` / `WED11.PGM`\
+   Todas as **quartas-feiras de novembro**.
+3. `SUN00.LOG` / `SUN00.PGM`\
+   **Qualquer domingo** do ano (o `00` indica "todos").
+4. `MONTH04.LOG` / `MONTH04.PGM`\
+   **Todo o mês de abril**.
+5. `MONTH00.LOG` / `MONTH00.PGM`\
+   **Todos os dias do ano**.
+
+<Note>
+  Abreviações: **SUN** Domingo, **MON** Segunda, **TUE** Terça, **WED** Quarta, **THU** Quinta, **FRI** Sexta, **SAT** Sábado, **MONTH** Mês.
+</Note>
+
+---
+
+## Programação no gerenciador de Ar
+
+O módulo de **Ar** carrega diariamente a programação do **dia seguinte** usando **LOG/PGM** e a **ordem de prioridade** acima. Ex.: no **14/08/2005** pode carregar `980814.LOG` (tandas do dia) e `MONTH08.PGM` (blocos do mês de agosto).
+
+O carregamento **automático** ocorre às **18:00** (configurável no **Painel de Configuração**).
+
+Se forem modificados:
+
+- **Arquivos do dia atual**
+- **Arquivos do dia seguinte** após o horário de recarga automática
+
+<Warning>
+  O responsável pela programação **deve avisar** ao **operador de Ar** para que execute a **recarga manual** dos arquivos (consulte **Reload** na seção do CyberPlay).
+</Warning>
+
+<Danger>
+  Faça **backups periódicos** de `C:\Audicom\LOG` e `C:\Audicom\PGM` (localizações padrão).\
+  Se forem excluídos acidentalmente, a **programação será perdida**.
+</Danger>

@@ -1,0 +1,181 @@
+---
+title: "Conexões e inicialização"
+description: "Descrição das opções de conexão e configuração inicial."
+keywords: ["conectividade", "conectores"]
+tags: ["consolas portáteis", "exteriores", "CODECS", "enlaces", "MX2200"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "525f23ae0a8ace65625aec9e6f474b0804d69cb65dfbb4ff34e06ebc3bfe76fd"
+
+---
+
+## Conectores no painel traseiro
+
+<img
+  src="/images/mx2200/mx2200-trasero.png"
+  alt="Mx2200 Trasero Pn"
+  title="Mx2200 Trasero Pn"
+  className="mx-auto"
+  style={{ width:"92%" }}
+/>
+
+### Alimentação (1)
+
+1. **Entrada para fonte externa**: Conector tubular 2 mm (pino \+).
+   - Fonte chaveada 90/240 V → saída **12 V / 1.5 A**.
+   - Também aceita bateria externa de 12 V (respeitar a polaridade).
+2. **Bateria interna**: autonomia aprox. **4 horas** (chamada SIP por Ethernet, sem Wi-Fi nem Bluetooth).
+3. **Recarga**: é realizada com o equipamento **ligado e conectado** à fonte externa.
+   - Tempo de carga completa (bateria totalmente descarregada): **10 horas**.
+
+<Warning>
+  O uso de **fontes externas não fornecidas de fábrica** causará a **perda da garantia**.
+</Warning>
+
+---
+
+### Luz de ON AIR (2)
+
+- Conector tubular 2,5 mm (pino \+).
+- Fornece **12 VDC**, suporta até **200 mA**.
+- Quando uma luz de ON AIR é conectada:
+  - A saída de **fones #1** passa a funcionar como saída para **monitores**.
+  - É silenciada automaticamente quando os microfones são ativados, para evitar realimentação.
+
+---
+
+### USB Audio (3)
+
+- Conexão digital ao computador através de cabo USB A/B (usar o cabo fornecido).
+- Recomendação: não exceder **4 m** de comprimento.
+
+  <Warning>
+    Certifique-se de que o computador esteja **aterrado**.\
+    Caso contrário, a entrada USB do console ou do computador pode ser danificada.
+  </Warning>
+- Compatível com Windows 7 a 11, Linux Ubuntu e macOS (reconhecimento automático).
+- O sistema detecta:
+  - **Dispositivo de reprodução USB** → entrada LINE USB no console.
+  - **Dispositivo de gravação USB** → saída de áudio do PGM.
+
+  <Note>
+    No Windows pode ser gerenciado em: **Painel de Controle → Som → Áudio** → seleção de dispositivos de reprodução e gravação.
+  </Note>
+
+---
+
+### Microfones (4)
+
+- Quatro entradas balanceadas (XLR) para microfones dinâmicos.
+- **MIC 3 e MIC 4** compartilham o mesmo atenuador.
+- Recomendação: usar microfones da mesma marca e modelo em entradas compartilhadas.
+
+---
+
+### Fones de ouvido (5)
+
+- Quatro saídas TRS 1/8" (minijack).
+- Todas fornecem o mesmo nível, controlado pelo potenciômetro **CUE MONITOR**.
+- Saída #1 pode ser usada como saída de **monitores de áudio**:
+  - É silenciada automaticamente quando uma **luz de ON AIR** está conectada e é ativada ao enviar microfones para PGM.
+
+---
+
+### Linha telefônica fixa (6)
+
+- Conector RJ11 para conexão de linha POTS.
+- Pode ser conectada diretamente à central pública ou a um PABX (central privada).
+- Proteção interna contra descargas com varistores.
+
+  <Warning>
+    Recomenda-se proteção adicional em áreas de tempestade (descarregadores a gás e fusíveis).\
+    Os danos causados por raios **não são cobertos pela garantia**.
+  </Warning>
+- **Preset NULL** permite ajustar rejeição do híbrido.
+
+  <Accordion title="Ajuste de rejeição (NULL)" icon="gear">
+    É realizado ao conectar o console à linha. Se o console for desconectado e reconectado depois à mesma linha telefônica, não é necessário repetir o ajuste. \
+    Mas deverá ser reajustado cada vez que for conectado a uma linha diferente.
+
+    <Steps>
+      <Step title="Preparar o sinal">
+        Enviar conteúdo falado para PGM do computador. Se não houver conteúdo falado disponível, pode-se falar ao vivo usando os microfones.
+      </Step>
+      <Step title="Estabelecer chamada">
+        Realizar uma chamada usando a linha fixa (PHONE).
+      </Step>
+      <Step title="Silenciar o interlocutor">
+        Pedir ao outro lado que ative o **mute** ou permaneça em silêncio. \
+        Pode-se ligar para um celular próprio e silenciar o microfone.
+      </Step>
+      <Step title="Escutar em CUE">
+        Remover PGM dos fones (botão PGM em CUE liberado).
+        Escutar a linha em CUE.
+      </Step>
+      <Step title="Ajustar preset NULL">
+        Girar o preset NULL até encontrar o ponto de **mínimo retorno**.
+      </Step>
+      <Step title="Finalizar">
+        Encerrar a comunicação.
+      </Step>
+    </Steps>
+  </Accordion>
+
+---
+
+### Entrada de linha estéreo (7)
+
+- Conector TRS 1/4" não balanceado.
+  - É controlado pelo atenuador LINE quando **USB não está conectado**.
+  - Se USB estiver ativo, LINE passa a ser entrada secundária (da seção PHONE).
+
+<Warning>
+  Se o enlace for realizado via Bluetooth, **LINE IN não pode ser somada** da seção PHONE.\
+  Só estará disponível pelo atenuador LINE se não houver conexão USB Audio.
+</Warning>
+
+---
+
+### Inserção de programa (8)
+
+- Entrada **Stream-In** TRS 1/4" com contato de corte.
+- Quando conectada, **substitui a mixagem interna** de PGM em **streaming e USB**.
+- Permite usar processadores externos: _PGM Out → Processador → Stream-In_.
+
+---
+
+### Saída de programa (9)
+
+- **Stereo PGM Out** (TRS 1/4").
+- Envia a mixagem completa: microfones, USB, linha auxiliar e linhas telefônicas.
+
+---
+
+### Ethernet (rede cabeada) (10)
+
+- Porta RJ45 para conexão à rede local.
+- Usos:
+  - Acesso via web à configuração do CODEC.
+  - Conexão à Internet para SIP e streaming.
+  - Acesso via web às gravações.
+- Configuração de fábrica: **DHCP habilitado**.
+
+---
+
+### Portas USB (Wi-Fi e Modem) (11)
+
+- Portas USB 2.0 tipo A.
+- Permitem conectar:
+  - **Antena Wi-Fi**.
+  - **Modem 4G** (requer cabo de extensão de 1 m).
+
+<Warning>
+  **Não conectar um modem USB diretamente à porta**. Pode causar **interferências audíveis**.\
+  Use sempre um cabo extensor para separar o modem do console.\
+  Isso também permitirá reorientar o Modem caso receba indicação de sinal fraco.
+</Warning>

@@ -1,0 +1,117 @@
+---
+title: "CyberPlay: Barra de ferramentas"
+description: "Funções da barra de ferramentas do CyberPlay"
+keywords: ["cyberplay","ferramentas"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b1a071a05d971a717d26f47e5dbe1fc0ed3fa594d13b7e390fa9fe8c531eda59"
+
+---
+
+### Load PGM ON/OFF
+
+- Com **Load PGM** ativado (valor padrão), o CyberPlay monta a programação final usando as diretrizes criadas no **CyberPlay Editor** (`.pgm`).
+- Se **Load PGM** estiver desativado, o CyberPlay ignora os arquivos `.pgm` e utiliza apenas os blocos comerciais.
+
+  O operador pode inserir conteúdos entre blocos ou usar o **Playlist Manager**.
+
+<Note>
+  No Painel de Configuração, é possível habilitar que o AUDICOM elimine automaticamente as **pausas** ao final de cada bloco comercial.
+</Note>
+
+### Reload: mudanças na diretriz de programação
+
+- O CyberPlay carrega automaticamente os arquivos de programação todos os dias.
+- O carregamento diário de **LOG** e **PGM** ocorre às **18:00 hs** (configurável no Painel de Configuração).
+- É possível **recarregar manualmente** a programação em caso de mudanças de última hora.
+
+Casos em que deve ser usado o Reload:
+
+- Modificação da diretriz do dia atual.
+- Modificação da diretriz do dia seguinte após o horário de recarga automática.
+
+Modo de uso:
+
+- O operador pressiona **RELOAD** ou usa o atalho `[Alt + R]`.
+- Durante a recarga:
+  - O título atual continua tocando, mas desaparece da janela do CyberPlay.
+  - Ao finalizar, o cursor verde se posiciona no item mais conveniente de acordo com a hora.
+  - O operador pode:
+
+    Forçar o início com Play.
+
+    Não intervir: o sistema continuará com a nova programação após o título em execução.
+
+<Note>
+  - Se o **LOG** for modificado, o botão RELOAD pisca indicando mudança.
+  - Se um **PGM** ou LOG do dia seguinte for modificado, o sistema não avisa: é necessário **notificar o operador** para que recarregue.
+  - Também é possível recarregar um único arquivo (LOG ou PGM) com duplo clique no display do CyberPlay no campo correspondente.
+</Note>
+
+### Save Log e autoLog
+
+- As mudanças nos blocos comerciais são salvas automaticamente no arquivo **LOG** (função _autoLog_).
+- O autoLog **não salva** mudanças se:
+  - O usuário não estiver habilitado para modificar blocos.
+  - O LOG foi modificado externamente e o alarme está ativo (botão Reload piscando).
+
+O botão **Save LOG** permite salvar manualmente:
+
+- Mesmo se o arquivo foi modificado externamente.
+- Não funcionará se o usuário não tiver permissões.
+- Solicita confirmação antes de sobrescrever.
+
+### Botão Next Title `[Enter]`
+
+- Seleciona o título marcado com cursor amarelo como **próximo título** (cursor verde).
+- Se não houver título selecionado, o próximo será o que está abaixo do cursor vermelho (em reprodução).
+- É possível selecionar com duplo clique na área de horários (coluna esquerda).
+  - Duplo clique na área de cor reproduz em **CUE**.
+
+### Insert AutoDJ
+
+Insere um bloco de **AutoDJ** na programação.
+
+- O usuário define **formato**, hora de início e término.
+- Os blocos comerciais incluídos no intervalo permanecem intactos.
+
+### Mix `[Asterisco]`
+
+Controla a atenuação do CyberPlay quando outro módulo (ex. Live Assist) reproduz na mesma saída.
+
+- Valores disponíveis: **100%, 50%, 25%, 10%** (alternam-se pressionando o botão).
+- Na reprodução de vídeo:
+  - A atenuação afeta apenas o áudio do vídeo.
+  - Se outro módulo também reproduzir vídeo, apenas o áudio é misturado.
+
+### Opções do menu de clique direito
+
+Ao pressionar o botão direito sobre um título, aparecem estas opções:
+
+- **CUE**: reprodução em prévia.
+- **CUE End**: reproduz os últimos 5 segundos.
+- **Play**: inicia a reprodução respeitando o crossfade em temas musicais.
+- **Stop**: interrompe a reprodução.
+- **Fade & Play**: atenua o áudio atual e inicia o próximo.
+- **Fade & Stop**: atenua o áudio atual e o interrompe.
+- **InfoMusic**: carrega o título no InfoMusic (apenas se estiver na base de dados).
+- **Internet…**: abre o navegador para buscar informações do título.
+- **Copy TANDA**: copia o conteúdo de um bloco.
+- **Insert TANDA**: insere um bloco vazio.
+- **Insert Meteor**: insere uma instrução Meteor.
+- **Insert Pause**: insere uma pausa acima do título selecionado.
+- **Insert Random**: seleciona aleatoriamente um áudio de uma pasta definida.
+- **Remove**: remove o item da programação.
+- **Remove all equal**: remove todas as instâncias desse item.
+
+<Danger>
+  Algumas operações podem estar restritas de acordo com o perfil do usuário.\
+  Se tentar uma ação proibida, aparecerá uma mensagem pop-up indicando falta de permissões.\
+  Em caso de dúvidas, consulte o administrador da rede ou o responsável técnico.
+</Danger>

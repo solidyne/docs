@@ -1,0 +1,61 @@
+---
+description: "Atualização e reinstalação"
+title: "Atualizações"
+keywords: ["updates"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "99a4dd32cd38c7e9325c7228b5c9d9aacf7e356bc6976d52f0231cb6d079d4e5"
+
+---
+## Atualização / Reinstalação
+
+Para trocar o computador de ar ou reinstalar o AUDICOM, siga este procedimento:
+
+<Steps>
+  <Step title="Instalar no novo computador">
+    Instale o AUDICOM com o instalador original.  
+    O novo computador deve ter o **mesmo nome de rede** do computador original.
+  </Step>
+
+  <Step title="Substituir pasta AUDICOM">
+    Substitua no novo computador a pasta `C:\AUDICOM` criada pelo instalador, pela pasta `C:\AUDICOM` do computador atual.
+  </Step>
+
+  <Step title="Substituir pasta ADMICOM">
+    Substitua no novo computador a pasta `C:\ADMICOM` criada pelo instalador, pela pasta `C:\ADMICOM` do computador atual.
+  </Step>
+
+  <Step title="Atualizar versão (opcional)">
+    Se desejar atualizar a versão do AUDICOM, deve ter um **contrato de suporte e atualizações vigente**.  
+    O serviço de suporte anual inclui acesso remoto de um técnico especializado para atualizar e configurar o sistema.
+  </Step>
+</Steps>
+
+O usuário pode instalar atualizações baixando-as em [www.solidyne.ar](http://www.solidyne.ar).  
+Para instalar uma atualização, selecione a opção **“Modular - Reinstall”**:  
+- Instala os mesmos programas do modo genérico, mas permite escolher módulos individualmente a partir de um menu.  
+- Geralmente as atualizações são distribuídas em um único arquivo executável baixável do site.  
+
+<Danger>  
+Embora o instalador não sobrescreva informações do usuário, **sempre faça cópias de backup atualizadas da pasta `C:\AUDICOM`** antes de atualizar.  
+</Danger>
+
+### Arquivos para backup
+
+- `\Audicom\AUDIO`: arquivos de áudio.  
+- `\Audicom\DB`: base de dados musical, contém `user.ini` (usuários) e `data.sqlite` (Media Asset Management).  
+- `\Audicom\Log\*.log`: programação de blocos comerciais.  
+- `\Audicom\Pgm\*.pgm`: organização de programas e blocos. Inclui playlists (`.pls`, `.m3u`, `.txt`).  
+- `\Audicom\Air\*.air`: registros de títulos transmitidos ao ar.  
+  <Note>Fazer backup apenas se a emissora desejar manter um histórico completo. Cada arquivo .air ocupa aprox. 80 KB.</Note>  
+- `\Admicom\`: contém toda a base de dados administrativa.  
+
+<Danger>  
+Nunca reinstale a **base de dados demo** nem os **arquivos de programação de demonstração**, pois isso sobrescreveria a base de dados real da emissora.  
+</Danger>

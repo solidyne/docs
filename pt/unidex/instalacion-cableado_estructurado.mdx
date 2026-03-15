@@ -1,0 +1,47 @@
+---
+title: "Instalações com cabeamento estruturado"
+description: "Cabeamento estruturado RJ45 em consoles UNIDEX"
+keywords: ["RJ45", "instalação"]
+tags: ["consoles IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "9e2e312e92db024027f3977cc92f86b49ef69813fc32b9ea4165f4a36cbed690"
+
+---
+
+## Considerações gerais
+
+Os consoles UNIDEX utilizam conectores **RJ45** para muitas de suas entradas e saídas, empregando cabo multipar **CAT-5 blindado**.
+
+Com a adoção do áudio sobre IP (AoIP), o uso de conectores RJ45 tornou-se padrão, permitindo substituir múltiplos tipos de conectores analógicos e digitais por um único formato. Isso simplifica as instalações e reduz o tamanho físico dos consoles.
+
+O cabeamento estruturado apresenta várias vantagens:
+
+- Utiliza-se um único tipo de cabo para toda a instalação.
+- Não requer soldas.
+- Pode transportar sinais analógicos, áudio digital ou dados.
+
+Para conectar dispositivos de áudio convencionais (microfones, alto-falantes, reprodutores, interfaces), são utilizados **cabos adaptadores** que vão do RJ45 fêmea ao conector de áudio correspondente (XLR, TRS, RCA, etc.).
+
+<Warning>
+  Os conectores RJ45 são confiáveis e duráveis **somente se a instalação estiver bem realizada**.
+
+  - É fundamental evitar cabos pendurados que exerçam tensão sobre os conectores.
+  - Os adaptadores **UDX devem ser fixados corretamente** e não deixados soltos dentro do rack ou sobre a mesa.
+  - Recomenda-se utilizar **canaletas ou conduítes** para organizar a instalação.
+  - Em trechos longos, usar RJ45-RJ45 e um adaptador curto RJ45 fêmea para o conector de áudio necessário.
+  - Utilizar cabo estruturado STP ou SFTP de boa qualidade.
+</Warning>
+
+<Warning>
+  **Evite misturar cabos** de áudio com cabos de alimentação AC. Para evitar interferências e zumbidos, devem percorrer caminhos separados.
+</Warning>
+
+<Warning>
+  Se existir um zumbido persistente e as conexões de terra estiverem corretas, é possível que seja devido a **ondas estacionárias de RF** induzidas pela antena de FM. Nestes casos, recomenda-se colocar **anéis de ferrite** em todos os cabos que entram no console.
+</Warning>

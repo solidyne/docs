@@ -1,0 +1,108 @@
+---
+title: "Processamento VQR"
+description: "Restauração do áudio com processamento VQR."
+keywords: ["VQR"]
+tags: ["híbridos", "HL240"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f5359c5742ce903d10800d4aec4dcc18b2c7e283407d9bb07c4d6abebcefecbd"
+
+---
+
+## Fundamentos
+
+O processamento **VQR (Voice Quality Restoration)** foi desenvolvido pela Solidyne para sua linha de híbridos analógicos com linhas terrestres.\
+Seu objetivo é **melhorar a qualidade de áudio de uma chamada**, reconstruindo o espectro perdido durante a transmissão telefônica.
+
+As linhas convencionais (POTS) limitam a largura de banda a uma faixa aproximada de **300 Hz – 3.000 Hz**, suficiente para a inteligibilidade, mas que elimina frequências baixas e altas que proporcionam sensação de naturalidade.
+
+- O sistema VQR pode **reconstruir graves até 50 Hz**.
+- Também é capaz de gerar componentes de alta frequência, devolvendo brilho e clareza à voz.
+- Embora tenha sido desenvolvido para linhas terrestres, o VQR também melhora chamadas realizadas através de **telefonia móvel**.
+
+<Tip>
+  Os melhores resultados são obtidos ao usar consoles de exteriores e microfones dinâmicos de boa qualidade.
+</Tip>
+
+<Info>
+  Para uma explicação técnica detalhada, consultar o documento: [Teoria do sistema VQR](https://www.solidynepro.com/descargas/manual_antiguos/TeoriadelsistemaVQR.pdf)
+</Info>
+
+---
+
+## Uso do processamento VQR
+
+O VQR é ativado pressionando seu botão para a posição **ON**.\
+O usuário controla a reconstrução através de três controles:
+
+<img
+  src="/images/hl240/hl240-VQR.png"
+  alt="Hl240 VQR Pn"
+  title="Hl240 VQR Pn"
+  className="mx-auto"
+  style={{ width:"47%" }}
+/>
+
+- **LOW BAND** (graves)
+- **HI BAND** (agudos)
+- **NOISE** (redutor de ruído)
+
+### Controle LOW BAND
+
+Regula a quantidade de graves adicionados ao sinal.
+
+- Para a esquerda (OFF): sem reconstrução em baixas frequências.
+- Girando no sentido horário: reforçam-se as frequências graves.
+
+<Note>
+  A efetividade depende da qualidade do áudio original (telefone usado, nível de envio do console, interferências, etc.).\
+  Quanto pior for a qualidade da chamada, menor será a melhoria proporcionada pelo VQR.
+</Note>
+
+<Warning>
+  Monitorar sempre o resultado em **monitores principais**.\
+  O uso de fones de ouvido ou alto-falantes de baixa qualidade pode dar uma falsa sensação de excesso de graves.
+</Warning>
+
+### Controle HI BAND
+
+Regula a quantidade de agudos adicionados ao sinal.
+
+- Para a esquerda: processamento desativado em agudos.
+- No sentido horário: reforço progressivo das altas frequências.
+
+<Warning>
+  O ajuste de agudos é mais crítico que o de graves:\
+  um excesso pode produzir um som artificial, com agudos crepitantes desagradáveis para o ouvinte.
+</Warning>
+
+<Tip>
+  Em emissoras AM geralmente requer-se maior ênfase em alta frequência, por isso o controle HI BAND oferece uma faixa muito ampla.
+</Tip>
+
+<Note>
+  É importante que o sinal alcance a etapa VQR com os picos de áudio atingindo a zona vermelha do VU-metro. Se o nível estiver muito baixo ou alto, a reconstrução será defeituosa.
+</Note>
+
+### Controle NOISE (redutor de ruído)
+
+Este controle ativa um **gate de ruído** (Expander-Gate).\
+Sua função é atenuar o ruído de fundo durante as pausas na conversação.
+
+- Controle à esquerda (OFF): gate desativado.
+- Girando à direita: aumenta o limiar, ou seja, o nível abaixo do qual o gate atenua o ruído.
+
+**Considerações:**
+
+- Se o piso de ruído for muito alto, sempre estará acima do limiar e o gate não atuará corretamente.
+- Se o ruído for muito variável (exemplo: ambiente de rua), convém não usar o gate para evitar um fundo entrecortado.
+- Se o ruído for constante (zumbido ou sopro), pode ser preferível deixá-lo presente, já que o ouvido tende a mascará-lo.
+
+<Note>
+  O critério do operador determinará quando é benéfico ativar o gate e quando é melhor manter o ruído ambiente.
+</Note>

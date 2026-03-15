@@ -1,0 +1,63 @@
+---
+title: "Atualização do firmware"
+description: "Procedimento para atualizar firmware no console"
+keywords: ["firmware", "update"]
+tags: ["consolas IP", "UNIDEX", "UX24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "7038712a7c8167196ca0b5029e3c9cfdc4a11df818e0450476287b81a86bb87e"
+
+---
+
+import discovery from '/snippets/discovery-pt.mdx';
+
+### Atualização de software
+
+Os modelos UX24 **fabricados desde 2023** permitem atualizar o software acessando a interface web a partir de um computador com acesso à Internet.\
+Para modelos anteriores, que não incluem esta função, escreva para: [**info@solidyne.ar**](mailto:info@solidyne.ar).
+
+**Componentes que podem ser atualizados:**
+
+- Firmware do motor de mixagem (hardware).
+- Interface gráfica.
+- Ferramentas de streaming.
+
+#### Procedimento de atualização
+
+1. Conecte à rede local as portas **Ethernet Streaming Out** e **Remote Control** do console.
+2. Certifique-se de que a rede tenha **acesso à Internet**.
+3. Na tela principal do console, verifique o endereço IP atribuído a **STREAMING IP**.
+
+<img
+  src="/images/ux24/unidex_streaming_ip.jpg"
+  alt="UNIDEX Streaming IP"
+  title="UNIDEX Streaming IP"
+  style={{ width:"34%" }}
+/>
+
+<discovery />
+
+ 4. No navegador, digite o endereço IP seguido de `/update`.\
+    Exemplo: `192.168.0.88/update`
+ 5. Pressione **Enter** para abrir a tela de atualizações.
+
+    <img
+      src="/images/ux24/ux24-update-firmware.png"
+      alt="UNIDEX Firmware Update"
+      title="UNIDEX Firmware Update"
+      style={{ width:"61%" }}
+    />
+ 6. Clique em **CHECK FOR UPDATES**.
+ 7. Se não houver atualizações, o sistema informará que está atualizado.
+ 8. Se houver atualizações disponíveis, será exibida uma lista com os detalhes.
+ 9. As atualizações **não são instaladas automaticamente**.
+10. Para instalar uma atualização, pressione **INSTALL**.
+
+    <Warning>
+      Dependendo do tipo de atualização, o console poderá reiniciar, interrompendo o sinal no ar por alguns segundos.
+    </Warning>

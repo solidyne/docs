@@ -1,0 +1,223 @@
+---
+title: "iLink"
+description: "Retransmissão em estações repetidoras"
+keywords: ["internet", "ilink", "repetidoras", "enlaces"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "3cbc2dd62d85313981d6a9265658ce3875d1c74896e9eee3939ad98dad5d6751"
+
+---
+
+Com uma aparência muito similar ao **CyberPlay**, o **iLink** recria a **lista única e contínua de programação**. iLink é um **controle de exibição**: quando o AUDICOM opera no modo iLink, **toda** a programação é reproduzida a partir da **emissora matriz**, **exceto**:
+
+- os **blocos de comerciais** (blocos verdes), e
+- a **artística** da emissora matriz, que é **substituída automaticamente** por seus equivalentes **locais**.
+
+<img
+  src="/images/audicom/au-iLink.jpg"
+  alt="Au I Link Jp"
+  title="Au I Link Jp"
+  className="mx-auto"
+  style={{ width:"47%" }}
+/>
+
+A informação exibida pelo iLink corresponde aos **arquivos programados no CyberPlay da matriz**. Com esses dados, o controle sabe **quando** alternar de **Remoto** para **Local**, reproduzir o áudio local e **retornar** exatamente quando o programa continua na matriz.
+
+Além de se conectar via Internet a uma matriz remota, o iLink permite **substituir blocos comerciais de duração variável com precisão**, preenchendo com **músicas**, **promos** ou **arpejos** até atingir a **duração exata** necessária.
+
+**Artística local:** O iLink substitui a artística da matriz por peças **locais** de **mesma duração**, em **tempo real**, sem que o ouvinte perceba.
+
+**Backup (foldback):** Se a conexão à Internet for interrompida, o iLink aciona um **bloco de música** com um **formato musical pré-definido** por horário. Os **blocos comerciais regionais** continuam a ser transmitidos em seus **horários**. Ao restabelecer a conexão, o iLink **aguarda** o término da música atual e **retoma** o enlace.
+
+**Requisitos na repetidora:**
+
+- AUDICOM **Multicast** instalado.
+- Acesso à Internet de **banda larga**.
+
+---
+
+## Canal de reprodução iLink
+
+A reprodução do streaming iLink usa o **dispositivo de reprodução padrão** do Windows.\
+Para alterá-lo, ajuste o **dispositivo padrão** nas **configurações de som do Windows**.
+
+---
+
+## Programação do evento iLink no CyberPlay Editor
+
+Na repetidora, programe um **evento iLink** dentro da **programação (PGM)** com o **horário** do enlace à matriz. Você pode criar **um único bloco iLink** para todo o dia ou **vários blocos** em horários diferentes.
+
+O bloco iLink é similar aos blocos **Live**, **AutoDj** ou **Satelital**. Ele é criado com o assistente **Magic Programming**, opção **"Bloco iLink"**.
+
+### PASSOS
+
+1. **Criar bloco iLink (Assistente)**\
+   Abra **Magic Programming** e escolha **"Bloco iLink"**.
+
+   <img
+     src="/images/audicom/au-magicprogramming-iLink.jpg"
+     alt="Au Magicprogramming I Link Jp"
+     title="Au Magicprogramming I Link Jp"
+     className="mr-auto"
+     style={{ width:"46%" }}
+   />
+2. **Nome do programa (endereço de enlace)**\
+   Insira o **endereço de acesso ao streaming** gerado pelo iRDS na matriz (campo **iLink address**).
+
+   <img
+     src="/images/audicom/au-magicprogramming-iLink_2.jpg"
+     alt="Au Magicprogramming I Link 2 Jp"
+     title="Au Magicprogramming I Link 2 Jp"
+     style={{ width:"45%" }}
+   />
+   - Exemplo por **IP e porta**: `iLink://190.247.72.170:8081`
+   - Exemplo por **servidor** (se o iRDS publica em um servidor): `iLink://encoder.iviplanet.com/AUDICOM`
+
+   **De / Até:** defina o **início** e **fim** do bloco iLink.
+3. **Passo intermediário não utilizado**\
+   Pressione **Continuar**.
+4. **Formato musical (preenchimento e contingência)**\
+   Selecione o **formato AutoDj** que o iLink usará quando:\
+   a) O **bloco comercial da matriz dura mais** que o **bloco regional** → é ajustado com **músicas**.\
+   b) A **Internet é perdida** → o iLink programa **música** e mantém **blocos regionais** até reconectar.
+
+   <img
+     src="/images/audicom/au-magicprogramming-iLink_4.jpg"
+     alt="Au Magicprogramming I Link 4 Jp"
+     title="Au Magicprogramming I Link 4 Jp"
+     style={{ width:"47%" }}
+   />
+
+   **Recomendação:** o formato deve incluir **músicas de durações variadas** para facilitar o **ajuste de tempos**. Evite o **Modo Induzido** se restringir muito a seleção (por exemplo, uma sequência rígida **Hits-80 → Hits-90 → Hits-00** limita as correspondências de duração).
+5. **Passo final não utilizado**\
+   Pressione **Continuar** e **salve**.
+
+**Exemplo de instrução de bloco iLink (no PGM):**
+
+\
+`/Block /00:00-24:00 /ILink="AutoDj Jazz" iLink://190.247.72.170:8080`
+
+Você pode criar **múltiplos blocos iLink** com **diferentes formatos de preenchimento** de acordo com o conteúdo de cada programa da matriz.
+
+---
+
+## Evento iLink com protocolo xLink (sem atraso)
+
+Quando é necessária uma **repetidora sem atraso**, a matriz transmite **apenas metadados** com **xLink**, e o **áudio** chega à repetidora por uma **conexão física** (analógica ou digital) em sua **entrada de linha**. A repetidora recebe **metadados via LAN** e substitui **anúncios** e **artística** localmente.
+
+No **PGM** da repetidora, programe uma instrução iLink no modo **xLink**:
+
+`/Block /08:00-14:00 /ILink="formato autodj" xLink://url/placaDeAudio/entrada`
+
+**Parâmetros:**
+
+- **URL** → IP do servidor com iRDS/xLink ativo. Ex.: `192.168.0.50` (porta padrão `8088`).
+- **Placa de áudio** → nome do **dispositivo de entrada**. Ex.: `Realtek High Definition Audio`.
+- **Entrada** → a **fonte** do dispositivo. Ex.: `Entrada de linha`.
+
+<Note>
+  Também é possível definir dispositivo e entrada do xLink no arquivo de configuração para não repeti-los em cada bloco.\
+  Seção `\[Hardware]` com:
+  \
+  `xLinkDeviceIn=HD Audio device`
+  `xLinkLineInName=Line In`
+</Note>
+
+**Instrução completa — exemplo:**\
+`/Block /08:00-14:00 /ILink="Latinos" xLink://192.168.0.50/Realtek High Definition Audio/Entrada de linha`
+
+## Substituição de blocos comerciais (iLink)
+
+Durante um **evento iLink**, o AUDICOM reproduz o **streaming** da matriz.\
+Quando a matriz entra em **bloco comercial**, o iLink **interrompe** o streaming e transmite o **bloco regional**.
+
+> Deve existir a **mesma quantidade de blocos comerciais** na matriz e na emissora regional.
+
+## Quantidade de blocos comerciais: comportamentos
+
+- **Matriz com mais blocos comerciais que a regional:** ao terminar todos os blocos regionais, o **áudio da matriz é retomado**; **não** se repetem blocos regionais nem é gerado preenchimento adicional.
+- **Matriz com menos blocos comerciais que a regional:** os **blocos regionais excedentes** são **ignorados**.
+
+## Duração de cada bloco comercial: ajustes automáticos
+
+O comum é pré-acordar a duração de cada bloco comercial. Se não coincidirem, o iLink age assim:
+
+### Matriz **mais longa** que a regional → preencher tempo restante
+
+**Nível 1 (Música):** tenta cobrir a diferença com **músicas** conforme o **formato AutoDj** definido para o bloco iLink. Se não conseguir o **ajuste exato** (muito comum se a diferença for \< ~3 min), passa para o Nível 2.\
+**Nível 2 (Promos):** preenche com arquivos `Classe=Promo` de acordo com o tempo faltante. Se o remanescente for muito **curto** para um promo (geralmente duram \>2–3 s), passa para o Nível 3.\
+**Nível 3 (Fills):** preenche com `Classe=Fill` (arpejos/efeitos de **1–5 s** aprox.). Por serem curtos, o AUDICOM pode **cortá-los finamente** se necessário (raro).
+
+### Matriz **mais curta** que a regional
+
+O iLink **transmite o bloco regional completo** e depois retorna à matriz.
+
+<Note>
+  Evite esse cenário: o bloco da matriz "pega no meio".
+</Note>
+
+---
+
+## Programação contra streaming "clássico"
+
+É possível enlazar uma matriz **sem AUDICOM** (ou um programa via Internet). O bloco é montado como iLink, com estas ressalvas:
+
+- Use o esquema `mms://` em vez de `iLink://`.
+- Não há controle remoto de blocos comerciais: os **blocos locais** são exibidos por **horário exato** conforme **LOG/PGM**.
+
+**Exemplo de bloco:**\
+`/Block /22:00-23:59 /ILink="Preenchimento Pop" mms://encoder.su-servidor.com:8080/RadioDemo`
+
+---
+
+## Substituição de cortes promocionais (artística da matriz)
+
+Pode ser definida a **substituição de promos/IDs** da matriz por **artística regional**.\
+Ex.: quando na matriz toca `BsAs_identificacao-1`, em Córdoba toca `Cba_identificacao-1`.
+
+**Regra por prefixo:** os arquivos da matriz a substituir compartilham um **prefixo**, por exemplo `BsAs_`.\
+Os regionais usam outro prefixo (por exemplo `Cba_`) e devem ter **mesma duração** (tolerância **±0,5 s**). Se não houver coincidência na duração, **não** há substituição.
+
+<Note>
+  Somente são substituídos arquivos **programados** na grade e os **disparados pelo Live Assist no canal principal** (não no modo MIX). Se disparado "pisando" em música, **não** é substituído.
+</Note>
+
+### Onde localizar os arquivos regionais
+
+Coloque as substituições em:\
+`C:\Audicom\Audio\Replace`
+
+> Conheça a **duração** dos cortes da matriz a substituir e prepare **pelo menos** um arquivo regional **equivalente**.
+
+---
+
+## Instrução `/replace` dentro do bloco iLink
+
+Apenas **um** critério `/replace` para **cada** bloco iLink. Variantes:
+
+- `/replace ORIGINAL=`\
+  Substitui o arquivo **exato** `ORIGINAL` por **qualquer** arquivo em `Replace` de **mesma duração**.
+- `/replace ORIGINAL*=`\
+  Substitui **todos** que começam com `ORIGINAL` por **qualquer** arquivo em `Replace` de **mesma duração**.
+- `/replace ORIGINAL*=REPLACEMENT`\
+  Substitui todos os que começam com `ORIGINAL` pelo arquivo **específico** `REPLACEMENT` (mesma duração).
+- `/replace ORIGINAL*=REPLACEMENT*`\
+  Substitui todos os que começam com `ORIGINAL` por **qualquer** arquivo em `Replace` que **comece** com `REPLACEMENT` (mesma duração).
+- `/replace ORIGINAL=REPLACEMENT`\
+  Substitui `ORIGINAL` por `REPLACEMENT` (mesma duração).
+
+**Correspondência de duração:** Se `REPLACEMENT` **não** coincidir, busca-se **qualquer** arquivo em `Replace` com **mesma duração** (±0,5 s). Se não houver, a substituição **é abortada**.
+
+**Exemplo por prefixos:**\
+`/replace BsAs_*=Cba_*`\
+Substitui tudo que começa com `BsAs_` por arquivos que começam com `Cba_` **de mesma duração**.
+
+<Note>
+  Embora haja apenas um `/replace` por bloco, você pode criar **múltiplos blocos iLink** no dia, **cada um** com seu próprio critério de substituição.
+</Note>

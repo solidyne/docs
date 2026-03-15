@@ -1,0 +1,63 @@
+---
+title: "Alarmes"
+description: "Configuração de alarmes e avisos"
+keywords: ["alarmes", "avisos", "alertas"]
+tags: ["processadores", "542"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "8a875e03b169249f75f0bfdb85e2686727f76300d80ea0ef1890b1bda2682d4d"
+
+---
+
+## Alarmes
+
+Acesso através de **SYSTEM → aba ALARMS**.
+
+<Danger>
+  Os parâmetros que disparam alarmes são baseados no sinal do **sintonizador FM**.
+
+  - Se RF Level \< 40 dB ou multipath \> 10%, as medições não são válidas.
+  - Nesse caso, os campos aparecem escurecidos e não são gerados alarmes.
+</Danger>
+
+O 542APC pode enviar alertas por e-mail nos seguintes eventos:
+
+1. **AUDIO SILENCE**
+2. **OVERMODULATION**
+3. **LOW RF POWER**
+
+### Configuração de alarmes
+
+![542 Sistema Alarmes Pn](/images/542/542-sistema-alarmas.png)
+
+- **E-mail Send To** → endereço para o qual serão enviados os alertas.
+  - "Send Test" envia um e-mail de teste.
+
+<Note>
+  Para enviar alertas para múltiplos endereços, use a função de **encaminhamento automático (mail forwarding)** na conta configurada.
+</Note>
+
+- **Caixas LOG e E-MAIL** → habilitam registro na memória interna e/ou envio por e-mail.
+
+### Tipos de alarmes
+
+- **AUDIO SILENCE**:
+  - É disparado quando o sinal cai abaixo do limiar definido em **Fail Backup**.
+  - O tempo limite (segundos) é ajustado com um controle deslizante.
+  - Importante: analisa-se o sinal do **FM Receiver post-Gain**, portanto o ganho afeta a detecção.
+- **OVERMODULATION**:
+  - Ativa-se se a modulação exceder o valor definido no alarme.
+  - Este ajuste **não afeta a transmissão**, apenas a detecção.
+- **LOW RF POWER LEVEL**:
+  - Ativa-se ao detectar baixa potência de transmissão.
+  - Procedimento: pressionar **Set REF** em condições normais. Depois definir a % de perda que dispara o alarme.
+  - Não afeta a transmissão.
+- **SYSTEM START**:
+  - Gera alarme quando o equipamento reinicia (ex. por corte de energia).
+- **SYSTEM ERRORS**:
+  - Apenas para uso interno. Os eventos são registrados em **SYSLOG**.

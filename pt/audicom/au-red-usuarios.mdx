@@ -1,0 +1,152 @@
+---
+title: "Níveis de acesso e senhas"
+description: "Configuração de usuários e restrições de acesso"
+keywords: ["usuários", "senhas", "password"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "f33ac57dfea1b31239aeb670095d2d323f8277547b6b859c5048b579bb348e02"
+
+---
+
+## Configuração de usuários e níveis de acesso
+
+<img
+  src="/images/audicom/niveles_de_acceso.png"
+  alt="Níveis De Acesso Pn"
+  title="Níveis De Acesso Pn"
+  className="mx-auto"
+  style={{ width:"90%" }}
+/>
+
+Cada operador possui um **usuário** e uma **senha**, que determinam suas permissões dentro do sistema.\
+A administração de usuários e permissões é realizada exclusivamente a partir do módulo **Níveis de Acesso** (`security.exe`), acessível em:
+
+`Menu Iniciar > Programas > AUDICOM > Níveis de Acesso`
+
+---
+
+## Criação de perfis de usuário
+
+### Administrador
+
+- O primeiro usuário a configurar é sempre o **Administrador**.
+- Acesso inicial:
+  - Usuário: `admin`
+  - Senha: _(vazia)_
+- Após acessar, defina uma senha com o botão **Password**.
+  - Deve ser guardada em um local seguro: se perdida, será necessário contatar o **suporte técnico da Solidyne** (`info@solidynePro.com`).
+- Qualquer usuário pode se tornar administrador ativando a opção **Usuário é administrador**.
+- Os administradores:
+  - Podem acessar o módulo **Níveis de Acesso**.
+  - Modificar permissões de todos os usuários.
+  - Não possuem restrições operativas.
+
+### Novos usuários
+
+<Steps>
+  <Step title="Adicionar usuário">
+    Pressione **Adicionar** e insira o nome do novo usuário.
+  </Step>
+  <Step title="Atribuir senha">
+    Pressione **Password** para definir a senha.\
+    Recomendação: permitir que o usuário defina sua própria senha, evitando esquecimentos de senhas impostas pelo Administrador.
+  </Step>
+  <Step title="Configurar permissões">
+    Ajuste as permissões e atribuições do usuário de acordo com seu papel.
+  </Step>
+  <Step title="Salvar">
+    Pressione **Salvar** para registrar as alterações.
+  </Step>
+  <Step title="Excluir">
+    Para excluir um usuário, selecione-o e pressione **Excluir**.
+  </Step>
+</Steps>
+
+<Note>
+  Se um usuário esquecer sua senha, será necessário excluí-lo e criá-lo novamente.
+</Note>
+
+---
+
+## Opções de segurança
+
+### Servidor de segurança
+
+- O Banco de Dados de segurança armazena **senhas e perfis** em um arquivo criptografado.
+- Todos os terminais devem acessar este arquivo (normalmente localizado no **Servidor**).
+
+### Falhas de rede
+
+- Ao iniciar a sessão, uma cópia local do perfil do usuário é criada.
+- Se o Servidor não estiver disponível, o AUDICOM usará essa cópia local.
+- Nessa condição, **as alterações na área de trabalho não são salvas**.
+
+---
+
+## Áreas de permissões
+
+### Ar
+
+- **Executar ar**: acesso à Tela de Ar.
+- **Alterar ordem de reprodução**: se restrito, o operador não pode alterar a sequência (cursor verde).
+- **Modificar blocos comerciais**: impede a inserção, exclusão ou reordenação de anúncios; as pausas continuam editáveis.
+- **Utilizar Meteor**: bloqueia o uso manual do Meteor.
+- **Usar Instant-Rec**: restringe o acesso ao módulo de gravação rápida.
+
+### File Manager
+
+- **Reproduzir a partir do File Manager**: bloqueia a reprodução direta ao ar.
+- **Adicionar/remover pastas, modificar cores**: restringe alterações estruturais.
+- **Mover, renomear, excluir arquivos**: evita a manipulação de arquivos.
+- **Pastas ocultas**: listadas separadas por `;` (ex.: `Edições;Chamados-2`).
+- **Servidores/Volumes ocultos**: restringe o acesso a discos ou terminais UNC (ex.: `\\Produção\D`).
+
+### Live Assist
+
+- **Reproduzir a partir do Live Assist**: habilita botões.
+- **Criar/modificar botões públicos**: acesso compartilhado por todos os usuários.
+- **Criar botões privados**: visíveis apenas para o usuário.
+
+### Tráfego, administração e faturamento
+
+- **Executar Tráfego / CyberPlay Editor**: acesso ao ADMICOM e CyberPlay.
+- **Executar Aaudit**: acesso aos registros de emissão.
+- **Editar formatos AutoDj**: acesso ao AutoDj Editor.
+- **Acessar Ficha de Clientes**: acesso à base de clientes.
+- **Executar Faturamento**: acesso ao módulo de faturamento.
+
+### InfoMusic
+
+- **Adicionar/Excluir títulos**.
+- **Editar títulos existentes**.
+- **Modificar Intro e Cross Fade**.
+- **Operações entre Bancos de Dados**: restringe exportações de títulos.
+
+### Aplicação inicial
+
+- Define qual aplicação é aberta ao iniciar a sessão.
+  - Em terminais de Ar: `aire.exe`
+  - Em Produção ou outros: `desktop.exe`
+- Em usuários mistos (Ar + Produção) recomenda-se ajustar os atalhos.
+
+### Skin favorito
+
+- Define o ambiente gráfico do usuário.
+- Se desejar um único skin fixo, exclua os demais em `\Audicom\Skins`.
+
+### Presets
+
+- Configurações padrão de acordo com o cargo do usuário.
+
+### Mensagens emergentes
+
+- Se o usuário tentar uma ação restrita, um **pop-up de aviso** será exibido.
+- A mensagem desaparece automaticamente após alguns segundos ou ao pressionar `ESC`.
+
+---

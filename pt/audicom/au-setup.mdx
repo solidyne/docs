@@ -1,0 +1,215 @@
+---
+title: "Instalação"
+description: "Instalação do Audicom em suas diferentes versões"
+keywords: ["Instalação"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d86805cefa7da45953937553ae345dd99e6e2db97273f83ac24c51765f0ba45b"
+
+---
+
+## Instalação
+
+### Configuração do computador e placas de áudio
+
+#### Configuração geral: Recomendações
+
+Para o correto funcionamento do **AUDICOM**, verifique se as configurações do computador e do Windows atendem aos seguintes requisitos:
+
+ 1. **Sistema Operacional**: Windows 10/11
+ 2. **Antivírus**: Configure-o para excluir as pastas `C:/Audicom` e `C:/Admicom` em todos os terminais da rede. Certifique-se de que as exceções sejam respeitadas em 100 %.
+ 3. Recomenda-se **desativar o APM (Gerenciador Avançado de Energia)** no BIOS do computador. Ao fazer isso, o Windows pode solicitar a reinstalação de alguns componentes.
+ 4. Se o equipamento tiver placa de som integrada, ela pode ser usada como canal de monitoramento (CUE).\\
+
+    <Danger>
+      Não utilize áudio “on board” para a saída de programa. Essas placas não atendem aos requisitos mínimos de qualidade para sistemas profissionais com AUDICOM.
+    </Danger>
+ 5. Não se recomenda o uso de **protetores de tela**. Configure, em vez disso, o desligamento automático do monitor quando o AUDICOM estiver operando em modo automático.
+ 6. **Não ative tarefas programadas de manutenção** do Windows.
+ 7. Configure o tamanho da fonte em **100 %**. Usar 125 % ou 150 % pode afetar a exibição das janelas do AUDICOM.
+ 8. Desative os **sons do Windows**, pois eles podem ser transmitidos ao ar acidentalmente.
+ 9. Configure a **Barra de tarefas** para ocultar-se automaticamente, otimizando o uso da tela para o AUDICOM.
+10. Evite teclados com teclas de desligamento ou “sleep”. Se o operador as pressionar por engano, pode desligar a máquina ao ar.
+    - Desative essas funções no gerenciamento avançado de energia (APM) no BIOS.
+    - O procedimento varia conforme o modelo do computador e o sistema operacional, e em alguns casos não é possível desativá-las.
+
+#### Placas de som suportadas
+
+- Muitas mesas de áudio atuais incluem canais com conexão **USB**, eliminando a necessidade de placas de áudio adicionais.
+- O AUDICOM funciona com interfaces que suportem drivers **WASAPI, DirectSound ou MME**.
+- No caso de interfaces multicanal, certifique-se de que o hardware seja compatível com **WDM ou WASAPI**.
+
+  <Note>
+    ASIO não é suportado pelo AUDICOM.
+  </Note>
+
+Dependendo do fabricante, algumas interfaces multicanal só funcionam em modo ASIO para áudio multicanal, mas no modo Windows podem operar como um único dispositivo estéreo de entrada/saída.
+
+- **Placas integradas**: Podem ser usadas como canal de reprodução para monitoramento (CUE). Não se recomenda seu uso para saída ao ar.
+- **Sistemas AoIP**: O AUDICOM suporta dispositivos virtualizados em sistemas de Áudio sobre IP como **Dante** e **LiveWire**.
+
+### Chave de licenças
+
+- O AUDICOM requer uma **chave de licenças USB** para funcionar.
+- Por segurança, recomenda-se fixá-la ao chassi com um lacre ou cabo, ou colocá-la no interior do gabinete.
+- A chave habilita os diferentes módulos conforme a configuração do sistema.
+
+## Instalação _Full_
+
+O instalador no modo **Full** instala todos os módulos e acessórios do AUDICOM.\
+Recomenda-se para a primeira instalação, quando não existem instalações prévias.
+
+Inclui:
+
+- **Segurança**: Drivers para a chave de licenças.
+- **AUDICOM**: todos os módulos principais (Ar, Media Manager, File Manager, InfoMusic Produção, CyberPlay Editor, AutoDJ Editor, ferramentas para Internet —requer assinatura anual—, arquivos de ajuda, entre outros).
+- **Admicom**: geração automática de blocos e faturamento (versões Multicast e HD).
+- **Media**: conteúdos de demonstração (música, videoclipes, efeitos, cortes promocionais) —opcional—.
+- **Programação**: demonstrações —opcional—.
+- **AutoRec 202**: gravação 24 h em MP3. Comercializado separadamente, mas habilitado em 2 canais mediante licença AUDICOM.
+- **Reaper**: editor de áudio (software de terceiros desenvolvido por Cocko’s).
+
+Uma vez finalizada a instalação:
+
+- Será solicitado **reiniciar o computador**.
+- Será criado um grupo de programas AUDICOM no menu **Iniciar** do Windows.
+- Todos os arquivos serão instalados na pasta `C:\AUDICOM`, compartilhada com acesso total para o usuário atual.
+
+**Estrutura de pastas:**
+
+- `AIR`: registros de transmissão ao ar.
+- `AUDIO`: pastas de áudio utilizadas pelo AUDICOM.\\
+
+  <Warning>
+    Todos os arquivos de áudio devem estar organizados dentro desta pasta.
+  </Warning>
+- `DB`: base de dados musical.
+- `LA-ICONS`: ícones para o módulo Live Assist.
+- `LOG`: pautas de programação comercial.
+- `PGM`: pautas de programação musical.
+- `METEOR`: arquivos de hora e dados meteorológicos.
+- `TEXT`: arquivos de texto do sistema.
+
+<Note>
+  Esta estrutura é fixa. Sua localização está definida no arquivo `Audicom.ini`, que deve ser modificado ao instalar o AUDICOM em rede.\
+  Ver: **Audicom em Rede \> Configuração do Software**.
+</Note>
+
+#### AStart (Configuração dos serviços Web Tools)
+
+Durante a instalação, devem ser preenchidos os dados do usuário e terminal. É fundamental registrar essas informações com cuidado e conservá-las.
+
+<img
+  src="/images/audicom/au-aStart-1.jpg"
+  alt="Au A Start 1 Jp"
+  title="Au A Start 1 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+<img
+  src="/images/audicom/au-aSStart-2.jpg"
+  alt="Au A S Start 2 Jp"
+  title="Au A S Start 2 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+<img
+  src="/images/audicom/au-aStart-3.jpg"
+  alt="Au A Start 3 Jp"
+  title="Au A Start 3 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+- Um **multimídia** agrupa várias emissoras, cada uma com seus usuários WebTools.
+  - Exemplo: “Rádio Nacional” pode conter “AM Nacional”, “Nacional Rock”, “Nacional Folclórica”.
+- O **nome do multimídia** será requerido para acessar o Painel de Administração do WebTools, onde são criados usuários para cada emissora.
+- Em emissoras autônomas, o alias (com sufixo **-admin**) será o nome padrão para administração.
+- Esses dados são confirmados por um e-mail enviado pelo servidor **AUDICOM WebTools**, validando a criação da conta.
+
+<img
+  src="/images/audicom/au-aStart-4.jpg"
+  alt="Au A Start 4 Jp"
+  title="Au A Start 4 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+<img
+  src="/images/audicom/au-aStart-5.jpg"
+  alt="Au A Start 5 Jp"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+## Migração de outros sistemas
+
+### Arquivos de áudio suportados
+
+- **PCM**: Arquivos `.wav` sem compressão, 16/24 bits a 44.1/48 kHz.
+- **MP3**: 64 – 320 kbps a 44.1 kHz.
+- **FLAC**: suportado.
+
+**Formatos antigos e obsoletos:**
+
+- `.wav` codificados em MPEG Layer 3: usados em sistemas antigos, hoje em desuso.
+- **ADPCM** (tipicamente extensão `.wav`): existiram diferentes variantes; algumas ainda suportadas pelo Windows. O AUDICOM suporta **MS-ADPCM** e qualquer variante compatível com **ACM** se o codec correspondente estiver disponível.
+- **MP2 / WAV-MP2 (MPEG Layer 2)**: extensão `.mp2` ou `.wav`. Utilizados por sistemas com placas ANTEX, Digigram ou outras. Podem ser usados diretamente sem reconversão se um codec adequado for instalado (não incluído com o AUDICOM).
+- **Dolby AC2**: extensões `.wav` ou `.atx`.\\
+
+  <Danger>
+    Não são suportados pelo AUDICOM.
+  </Danger>
+
+### Localização dos arquivos de áudio e vídeo
+
+O AUDICOM trabalha com uma estrutura de pastas rígida, para garantir a manutenção e organização da informação.
+
+Todos os arquivos de áudio e vídeo devem ser organizados em subpastas do sistema:
+
+```
+\AUDICOM\AUDIO
+POP 80s
+POP 90s
+SALSA
+ROCK-NOVEDADES
+SFX
+PROMOS
+CUÑAS
+```
+
+- Essas pastas são denominadas **pastas de mídia**.
+
+<Warning>
+  Não devem conter subpastas; em caso de existência, o AUDICOM as ignora.
+</Warning>
+
+Se os arquivos do sistema anterior forem compatíveis, basta organizá-los nessas pastas para poder utilizá-los imediatamente ao ar.
+
+Para criar pastas e copiar mídias para o sistema, devem ser usados os módulos **File Manager** ou **Media Manager**, que garantem a estrutura correta.\
+O usuário apenas seleciona o disco e o nome da pasta.\
+Consulte os capítulos **Audicom Media Manager** e **Audicom File Manager** para mais informações.
+
+### Base de dados
+
+Para a operação automatizada (AutoDJ), é obrigatório que os arquivos de mídia sejam inseridos na **Base de Dados de mídia**.
+
+- Isso é feito a partir do **Media Manager** (recomendado) ou **File Manager**.
+- O módulo **InfoMusic Produção** permite gerenciar a base de dados.
+
+Consulte o capítulo **InfoMusic** para mais detalhes.
+
+### Pauta de programação
+
+O AUDICOM oferece várias opções para gerar pautas comerciais e de conteúdos:
+
+- O módulo **Admicom** administra a pauta comercial por meio de sua própria base de dados, independente da de mídia.
+- A geração da programação de conteúdos é feita a partir do **CyberPlay Editor** e **Admicom**.

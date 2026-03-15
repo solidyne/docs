@@ -1,0 +1,94 @@
+---
+title: "Portas Ethernet"
+description: "Portas para Controle Remoto e Streaming"
+keywords: ["instalação", "rede", "Ethernet", "Discovery", "controle remoto", "streaming"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "851e28e91bbe8a3a0f0b67e6cfa8fb667387be18e177977779a6e17529f7c71d"
+
+---
+
+## Conexão Ethernet para controle remoto
+
+A console possui uma **porta Ethernet** para controle remoto através de rede local (LAN). A **interface de controle web interna** é acessada através de um navegador web de qualquer computador conectado à mesma rede.
+
+### Passo 1: Conexão física
+
+Conecte a porta **ETHERNET de controle** da UNIDEX a uma porta do **roteador**, utilizando um cabo de rede Ethernet padrão.
+
+<Warning>
+  Não confundir o conector Ethernet para **CONTROLE** com a porta Ethernet para **STREAMING**.
+
+  <img
+    src="/images/ux24/trasero-control.jpg"
+    alt="Traseiro RJ45 Controle"
+    title="Traseiro RJ45 Controle"
+    className="mx-auto"
+    style={{ width:"40%" }}
+  />
+</Warning>
+
+- De fábrica, a UNIDEX está configurada em modo **DHCP ativado**.
+- O roteador atribuirá automaticamente um endereço IP disponível. Este IP pode mudar ao reiniciar a console, a menos que seja configurado um IP fixo, mas normalmente isso não é necessário.
+- O endereço IP atual é exibido na **tela principal** da console, sob o nome:\
+  **UNIDEX IP.**
+
+  <img
+    src="/images/ux24/unidex-ControlIP.png"
+    alt="RJ45 para RCA"
+    style={{ width:"45%" }}
+    title=""
+    className="mx-auto"
+  />
+- Se for necessário atribuir um IP estático, acesse:`SETTINGS → SYSTEM`
+
+### **Passo 2**: Acesso pelo navegador web
+
+De qualquer computador conectado à **mesma rede local** (preferencialmente por cabo) abra um navegador web (recomendado: **Google Chrome**) e digite o endereço IP mostrado como **UNIDEX IP**.
+
+<Note>
+     **Solidyne Multi-Discovery**
+
+     Se não tiver acesso físico à console, você pode [**baixar a ferramenta Multi-Discovery**](/pt/unidex/unidex-discovery) que detecta dispositivos Solidyne conectados à rede.
+</Note>
+
+Isso abrirá a interface web de operação e configuração da console. A interface é similar à que é mostrada na **tela touch integrada**.
+
+---
+
+## Conexão Ethernet para serviços de streaming
+
+1. Conecte a porta **Streaming Out** ao roteador da LAN usando um cabo Ethernet padrão.
+
+   <Warning>
+     NÃO CONFUNDIR o **conector Ethernet de streaming** com o conector Ethernet de **controle remoto**.\
+     Ambos usam RJ45, mas cumprem funções totalmente diferentes.
+
+     <img
+       src="/images/ux24/trasero-streaming.jpg"
+       alt="Traseiro RJ45 Streaming"
+       title="Traseiro RJ45 Streaming"
+       style={{ width:"40%" }}
+       className="mx-auto"
+     />
+   </Warning>
+2. O roteador atribuirá um endereço IP por **DHCP**, visível na tela principal como: **Stream IP**
+3. Este IP pode mudar ao reiniciar a console, a menos que seja configurado um IP fixo.
+4. A configuração dos serviços de streaming pode ser realizada de duas formas:
+   - Pela **tela touch** da console.
+   - De qualquer computador na rede, acessando o endereço **Stream IP** através de um navegador web.
+
+     <img
+       src="/images/ux24/unidex_streaming_ip.jpg"
+       alt="Unidex Streaming Ip Jp"
+       className="mx-auto"
+       style={{ width:"45%" }}
+     />
+
+<discovery />

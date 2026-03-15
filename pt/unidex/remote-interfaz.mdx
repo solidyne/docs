@@ -1,0 +1,155 @@
+---
+title: "Interface de controle HTML"
+description: "Acesso à configuração e operação do UNIDEX via web."
+keywords: ["web control","remote control","html interface"]
+tags: ["consolas IP","UNIDEX","ux18","ux24"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "22a88d5c63be21582e54bb9ace50a1a9866e0ef27275f497d86bc8f428171a71"
+
+---
+
+Todas as funções e configurações do **UNIDEX** podem ser controladas remotamente conectando o console à **LAN** e acessando seu endereço IP através de um navegador web.
+
+<Note>
+  As telas do controle web oferecem as mesmas opções que a tela touch integrada, embora a disposição e o design de alguns controles possam variar.\
+  Nesta seção são descritas apenas as telas que apresentam maiores diferenças.
+</Note>
+
+## Conexão do UNIDEX à rede
+
+<Icon icon="network-wired" iconType="solid" color="#ff6600" size={22} />  [**Conexão à LAN**](/pt/unidex/instalacion-red)
+
+## Acesso à interface de controle WEB
+
+De um computador conectado à mesma LAN que o UNIDEX (preferencialmente por cabo), abra um navegador web —recomenda-se **Google Chrome**— e digite o endereço **Unidex IP** para acessar a interface de controle de operação e configuração.
+
+Ao acessar, será exibida a tela principal, muito similar à que aparece no próprio console.
+
+### Perfil de usuário
+
+Permite alternar o usuário para a interface web, independentemente do usuário estabelecido no hardware. Será exibida uma caixa de diálogo para inserir o nome de usuário, e em seguida outra para inserir a senha.
+
+<img
+  src="/images/ux24/ux24-WEB-USERS.png"
+  alt="UNIDEX WEB USERS"
+  title="UNIDEX WEB USERS"
+  className="mx-auto"
+  style={{ width:"82%" }}
+/>
+
+<Note>
+  Existem três perfis de usuário:
+
+  - ADMIN  com acesso total.
+  - EXPERT  com acesso a algumas funções avançadas
+  - BASIC    com acesso restrito.
+</Note>
+
+Por padrão, a senha é igual ao nome do usuário. A opção LOGOUT deixa a interface web operando com as restrições do usuário BASIC.
+
+### Interface de operação remota
+
+Ao selecionar a opção **REMOTE CONTROL** no menu, acessa-se a interface de operação remota.
+
+As funções disponíveis são as mesmas oferecidas pelo hardware e pela tela integrada, portanto as explicações deste manual são válidas para cada uma delas. No entanto, existem algumas diferenças operacionais que são descritas a seguir.
+
+A tela principal da interface remota é similar à tela **HOME** do hardware.\
+Inclui indicadores de nível, contadores, sinalização ON AIR e um menu de acesso rápido na zona inferior.
+
+- **PROCESS:** Acesso direto à tela de processadores. Também é possível chegar a esta tela a partir do _console de mixagem_.
+- **REMOTE:** Abre o **_console de mixagem_**, uma interface gráfica que emula os controles da superfície física do console.
+- **SCENES:** Permite mudar de cena. A mudança é realizada diretamente no console, igual a se fosse feita pela tela integrada. A interface web não possui cenas próprias, embora seja possível importar cenas do disco.
+- **SETTINGS:** Acesso às opções de configuração. As opções são apresentadas em um menu vertical, similar à disposição da tela **SETTINGS** integrada.
+
+### Console de mixagem
+
+A interface WEB pode controlar todos os canais do console. Seu design está otimizado para trabalhar em telas touch.
+
+Uma aplicação "tradicional" é configurá-lo como controlador auxiliar à tela integrada, rodando em um monitor touch de grande tamanho.
+
+<img
+  src="/images/ux24/ux24_monitor_touch.jpg"
+  alt="Control WEB - Monitor Touch"
+  className="mx-auto"
+  style={{ width:"84%" }}
+/>
+
+Em um nível mais avançado, possibilita **configurar um estúdio auxiliar** para operar sinais sem necessidade de instalar um segundo console. Para este caso, a interface de mixagem remota conta com um painel de monitoramento e a possibilidade de escutar através da rede o áudio enviado pelo console.
+
+<img
+  src="/images/ux24/ux24-WEB-remotemixer.jpg"
+  alt="Control WEB - Remote Mixer"
+  className="mx-auto"
+  style={{ width:"87%" }}
+/>
+
+Os **canais visíveis** na interface de mixagem WEB são estabelecidos pressionando o ícone "lápis". Somente o usuário ADMIN pode modificar esta configuração. Ao pressionar o ícone de edição, aparece uma lista com os 24 canais.
+
+<img
+  src="/images/ux24/ux24-WEB-remote_edit.png"
+  alt="Control WEB - Config Mixer"
+  title="Control WEB - Config Mixer"
+  className="mx-auto"
+  style={{ width:"74%" }}
+/>
+
+Na interface remota, os canais marcados como visíveis serão sempre mostrados em ordem crescente.\
+Este ajuste pode ser **salvo na cena** ativa.
+
+### **Canais de microfone e linha**
+
+Em cada canal são replicados os mesmos controles presentes na superfície do console.\
+As operações realizadas a partir do controlador web são refletidas imediatamente no console físico.
+
+- **BOTÕES DE BUSES:** Atribuem o canal ao bus correspondente.
+- **CUE:** Ativa o monitoramento de CUE para esse canal. O áudio é ouvido através do circuito CUE no console.
+- **ON AIR:** Alterna entre ligado/desligado do canal.
+- **ATENUADOR:** Controla o nível do canal.
+  - Quando ajustado pelo controlador web, o console atualiza o nível e mostra o valor em dB na tela OLED, que pisca para indicar que a mudança foi remota.
+  - **O atenuador físico não é motorizado**, portanto sua posição não muda. Se o operador mover o atenuador físico, o nível se ajusta suavemente ao novo valor e a interface web atualiza a posição do fader.
+
+### Canais TELCO
+
+Os canais de telecomunicações incluem, além dos controles já vistos, um botão **RING/HOLD** que permite atender uma chamada entrante; e informação sobre o estado da linha.
+
+No entanto, as funções de talkback e discagem devem ser feitas a partir do console, ou em uma configuração de Estúdio remoto, utilizando um telefone associado.
+
+### Processamentos de áudio
+
+Na interface remota, os processamentos de áudio são acessados através da opção **PROCESS** da tela inicial REMOTE CONTROL, ou através do ícone **FX** em cada canal do mixer web.
+
+**Processamentos disponíveis:**
+
+- Equalizador paramétrico.
+- De-esser.
+- Compressor e gate de ruído.
+
+<Note>
+  Os processamentos estão atribuídos às entradas, portanto a disponibilidade de cada um depende da entrada conectada ao canal.
+</Note>
+
+<img
+  src="/images/ux24/ux24-WEB-EQ.jpg"
+  alt="Control WEB - EQ"
+  title="Control WEB - EQ"
+  className="mx-auto"
+  style={{ width:"74%" }}
+/>
+
+**Características e uso:**
+
+1. Os processadores estão inseridos em cada entrada.
+   - Para vê-los, selecione a entrada no menu suspenso **INPUT (1)**.
+   - Também é possível escolher um canal através de **CHANNEL**; a interface mostrará os processamentos da entrada atribuída a esse canal.
+2. No **EQ paramétrico**, a interface remota apresenta algumas diferenças em relação à tela integrada:
+   - Os botões **ON/OFF** habilitam ou desabilitam cada banda.
+   - As caixas **B1**, **B2** e **B3** permitem selecionar a banda a editar **(2)**.
+   - Este design reduz a quantidade de controles visíveis e facilita seu uso em telas touch.
+3. A comutação entre processamentos é realizada tocando nos ícones correspondentes **(3)**.
+   - Os processamentos disponíveis mudam de acordo com a entrada selecionada.

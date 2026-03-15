@@ -1,0 +1,45 @@
+---
+title: "Monitoramento com canal duplo de talkback"
+description: "Conexão e uso do Studiobox com canal duplo de talkback no UX18"
+keywords: ["instalação", "talkback", "studiobox"]
+tags: ["consoles IP", "UNIDEX", "UX18"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "c16aa0dc26f3b64b6c2cc83cf3a0a3509bf38d7935e7657cbc34d6bef14f1f79"
+
+---
+
+O UX18 permite configurar suas saídas para utilizar a entrada **AUX** das StudioBox com circuitos de ordens diferenciados. Desta forma, o operador pode falar com um grupo de fones de ouvido em privado, ou com todos os participantes.
+
+![Studiobox Doble Talkback Pn](/images/ux24/studiobox-doble-talkback.png)
+
+O diagrama mostra a conexão e configuração da **StudioBox HD5** com canal duplo de talkback em uma UNIDEX UX-18.\
+Para o caso da **StudioBox HD3**, a conexão é a mesma.
+
+### Conexão
+
+- A entrada **STUDIO MONITOR** da StudioBox se conecta à saída **STUDIO MONITOR** no console, utilizando um cabo STP RJ45 para RJ45 pino a pino (cabos SOL P25 ou P50).
+- A entrada **AUX-IN** da StudioBox se conecta a uma **saída configurável** do console (OUT1 a OUT4) utilizando um cabo STP RJ45 para RJ45 pino a pino (cabos SOL P25 ou P50).
+
+### Configuração
+
+- Na StudioBox, atribuir um ou mais fones de ouvido à entrada **AUX**.
+- No UX18, a saída conectada ao AUX IN é configurada da seguinte forma (ver SETTINGS → OUTPUTS):
+  - **Source:** `STUDIO`. O sinal que a saída fornece segue a atribuição feita na tela _MONITOR_.
+  - **Talk-Back Ch:** Selecionar um canal (ou grupo) para vinculá-lo à saída.\
+    Ao ativar o Talk-Back nesse canal, o sinal será enviado, através desta saída, aos fones de ouvido atribuídos ao **AUX IN**.\
+    Por exemplo: se você quiser falar em privado com os fones de ouvido do _MIC-1_, você atribuirá "Talk-Back Ch" ao canal MIC-1.
+  - **Studio Talk-Back link:** `Habilitado`.
+
+### Operação
+
+- Com a configuração anterior, todos os fones de ouvido escutam o sinal atribuído no console para monitoramento no Estúdio (tela MONITOR).
+- O **botão Talk-Back principal** permite falar para todos os fones de ouvido através do microfone de ordens.
+- O **botão CUE/SELECT** do canal ou grupo vinculado permite falar **somente** para os fones de ouvido atribuídos ao AUX.\
+  Para fazer isso, pressione e mantenha pressionado **CUE/SELECT** no canal.\
+  O display do canal indicará `TLBK`.

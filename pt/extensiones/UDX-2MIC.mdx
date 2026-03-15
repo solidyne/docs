@@ -1,0 +1,112 @@
+---
+title: "Adaptador UDX-2MIC"
+description: "Expansão para dois microfones"
+keywords: ["microfones", "expansão", "adaptadores", "entradas unidex"]
+tags: ["ux24", "ux18", "UNIDEX", "UDX 2MIC"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "e3f5c765e7d565b24225a8389616b36cae22ae5f6037aa416b1a11877441eec4"
+
+---
+
+## Resumo
+
+UDX 2MIC é uma unidade de pré-amplificação para **dois microfones**.
+
+- Possui alimentação _phantom 48V_ comutável através da tela do console.
+- No console é atribuído a dois canais, que são configurados para operar da mesma forma que os canais atribuídos às entradas do painel traseiro.
+
+## Conexões
+
+UDX 2MIC se conecta ao console através de uma **entrada UNIDEX**, usando um cabo STP RJ45-RJ45 pin a pin (cabos SOL-P50 ou SOL-P25).
+
+<Danger>
+  O cabo que conecta o UDX 2MIC à entrada UNIDEX conduz tensão quando a alimentação 48V está ativada. Recomenda-se verificar se a fonte phantom está desligada antes de desconectá-lo.
+</Danger>
+
+<img
+  src="/images/ux24/udx2mic_conexion_2.svg"
+  alt="Udx2mic Conexion 2 Sv"
+  title="Udx2mic Conexion 2 Sv"
+  className="mx-auto"
+  style={{ width:"58%" }}
+/>
+
+<Warning>
+  Se você possui adaptadores TELCO, recomendamos reservar as entradas 1 a 4 para TELCO, pois estes adaptadores usam as saídas que estão alinhadas a essas entradas.
+</Warning>
+
+### Microfones
+
+Os microfones são conectados ao adaptador UDX 2MIC usando cabos XLR padrão. Se os microfones necessitarem de alimentação _phantom_, esta será ativada posteriormente através da tela do console.
+
+UDX 2MIC possui **atenuação nas entradas de 10dB** comutável através de dip-switches. As chaves etiquetadas A e B comutam a atenuação para as entradas A e B respectivamente (as chaves centrais não são utilizadas).
+
+<img
+  src="/images/ux24/udx2mic_pad.png"
+  alt="image.png"
+  title="image.png"
+  className="mx-auto"
+  style={{ width:"20%" }}
+/>
+
+## Configuração das entradas UNIDEX
+
+Detalhamos a configuração através da tela do console. Também pode ser feita pela interface de controle web de maneira similar.
+
+1. Na tela principal, acessar a opção **SETTINGS**.
+2. Girar o encoder até selecionar o **canal "L"** da entrada UNIDEX à qual o UDX 2MIC foi conectado. "L" corresponde ao canal A do UDX 2MIC enquanto "R" é o canal B.
+3. Tocando na tela, configurar **MODE** em **MONO**.
+4. No menu **UDX TYPE** escolher: **2MIC**.
+5. Se necessário, ativar a **tensão 48V**. Será ativada para ambas as entradas.
+6. Tocando na tela, abrir o menu ASSIGNED TO CHANNEL para **atribuir um CANAL** à entrada. Se for escolhido um canal que já tem uma entrada atribuída, aparecerá um aviso. Se continuar, a entrada nesse canal será substituída.
+7. Pressionar BACK para voltar à tela principal.
+8. O próximo passo será configurar o canal.
+
+<Note>
+  A distribuição e forma dos controles mostrados a seguir podem variar. Isso não altera o procedimento de configuração.
+</Note>
+
+<img
+  src="/images/ux24/udx2mic_config_entrada.svg"
+  alt="Udx2mic Config Entrada Sv"
+  title="Udx2mic Config Entrada Sv"
+  className="mx-auto"
+  style={{ width:"71%" }}
+/>
+
+<Tip>
+  Você pode analisar como referência a configuração de uma das cenas predefinidas que têm canais configurados para UDX 2MIC.
+</Tip>
+
+## Configuração do canal
+
+1. Na tela principal, pressionar **CHANNEL**. Os botões CUE mudam para modo SELECT.
+2. Pressionar o botão **CUE/SELECT** no canal a configurar. O console sai do modo SELECT e mostra a tela CHANNEL do canal selecionado. Para selecionar canais virtuais, girar o encoder e pressionar para confirmar.
+3. Na opção **MODE**, abrir o menu e escolher **MIC**.
+4. Para editar a **etiqueta**, tocar sobre o nome. Aparecerá um teclado na tela.
+5. Girar encoder para escolher **GANHO**. Pressionar encoder para editar o valor.
+6. **Ajustar o GANHO** da entrada para que ao falar no microfone, os picos atinjam -9dBfs no indicador de nível.
+7. Tocando na tela, definir as **AÇÕES** para esse canal de microfone. As ações permitem:
+   - Vincular ao botão Master MIC A/B
+   - Vinculá-lo ao ESTÚDIO A/B (determina qual luz "NO AR" é acionada)
+   - Definir o modo CUE
+   - Definir o canal como microfone de Control Room (determina qual monitoramento é silenciado).
+8. **Salvar a CENA** para registrar as alterações.
+
+<img
+  src="/images/ux24/udx2mic_config_canal.svg"
+  alt="Udx2mic Config Canal Sv"
+  title="Udx2mic Config Canal Sv"
+  className="mx-auto"
+  style={{ width:"70%" }}
+/>
+
+<Warning>
+  PARA ARMAZENAR DEFINITIVAMENTE OS AJUSTES, **SALVE A CENA**.
+</Warning>

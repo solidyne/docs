@@ -1,0 +1,103 @@
+---
+title: "AutoEdit"
+description: "Remoção automática de silêncios"
+keywords: ["gravação", "hdcorder", "ingestão"]
+tags: ["Software", "Audicom"]
+translation:
+  source_lang: "es"
+  target_lang: "pt"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "6c8466afd1354309f192453f043ff7de6d3af5ccb7dbadfffe27d41f51faff39"
+
+---
+
+Evitar silêncios no início e no final dos arquivos previne **buracos** inesperados no ar. **AutoEdit** remove esses silêncios de forma **automática** e, mais importante, pode **editar MP3 sem recomprimir**, preservando integralmente a qualidade (recomprimir um MP3 recodifica-o e degrada o áudio).
+
+**Formatos suportados:** WAV PCM (não comprimido), MP3 (MPEG Layer III), WAV-MP3 (arquivos `.wav` que internamente são MP3) e qualquer outro formato cujo **CODEC** esteja instalado no sistema.
+
+---
+
+## Uso do AutoEdit
+
+### Pasta de origem
+
+Indique a pasta que contém os arquivos a serem processados (por padrão, a pasta **CD Ripper**).\
+Use **Escolher** para abrir a pasta e selecione um arquivo; seu nome aparecerá no campo **Arquivo** (ver próximo ponto).
+
+### Arquivo
+
+Exibe o **nome completo** do arquivo selecionado. Você pode:
+
+- **Processar apenas esse arquivo**, ou
+- Ampliar a seleção com **curingas** (`*`) para abranger múltiplos arquivos.
+
+**"Nome Genérico" (padrão de seleção) — Exemplo passo a passo:**
+
+1. Selecione (via **Escolher Diretório de Origem**) o arquivo\
+   `"Kraftwerk - Expo 2000 (Radio Mix).mp3"`\
+   → aparece em **Arquivo** exatamente esse nome.
+2. Pressione **Nome Genérico** → o campo muda para `Kraftwerk -*.mp3`\
+   → serão processados **todos os arquivos** que comecem com `Kraftwerk -`.
+3. Pressione **Nome Genérico** novamente → `K*.mp3`\
+   → serão processados **todos** os arquivos que comecem com `K`.
+4. Pressione mais uma vez → `*.mp3`\
+   → serão processados **todos** os MP3 da pasta.
+
+<Note>
+  Para arquivos musicais, use sempre o padrão de nome `Artista - Título.mp3`.\
+  Facilita o carregamento automático na Base de Dados.
+</Note>
+
+### Pasta de destino
+
+Segundo a configuração (ver **Configurações**), os arquivos editados podem:
+
+- Permanecer na **pasta de origem**, ou
+- Ser salvos em uma **pasta de destino** (padrão: `AutoEdit`).
+
+### Processar
+
+Inicia a edição. AutoEdit remove os silêncios de **entrada** e **saída** de forma muito rápida.
+
+- AutoEdit trabalha **diretamente sobre o áudio comprimido**, **sem conversões** → **sem perda** de qualidade.
+- Os **limiares** de detecção de silêncio são **fixos** (testados com diverso material musical).
+- Os resultados aparecem na janela **Resultados**: tempo suprimido no início/fim, **duração total** e **localização** do arquivo editado.\
+  Use o botão **Expandir** (dupla seta vermelha) para ver o relatório em detalhe.
+
+### Configurações
+
+Opções de configuração essenciais:
+
+- **Usar diretório destino = diretório origem**:\
+  Os arquivos editados são salvos **na mesma pasta** de origem.
+- **Apaga o arquivo original**:\
+  Se ativado, ao terminar a edição **o original é eliminado** (sobra apenas o editado).\
+  Se os editados são mantidos na pasta de origem, os originais são **renomeados** com o prefixo `BAK` e mantêm **a extensão** (por exemplo, `.mp3`).
+- **Ignora arquivos anteriores a N dias**:\
+  Permite processar **apenas** os arquivos **recentes**. Insira o número de dias (por exemplo, `2` → processa o gravado nos **últimos dois dias**).
+
+### Play
+
+Reproduz o arquivo selecionado em **Resultados**.\
+Se pressionar **Play** enquanto já está em reprodução, ouve-se os **últimos 10 segundos** (útil para verificar o final).\
+Não é possível reproduzir enquanto AutoEdit está **processando**.
+
+---
+
+## AutoEdit e Base de Dados
+
+Se processar arquivos **já registrados** na Base de Dados (por exemplo, toda a pasta `Jazz`), ative **"diretório destino = diretório origem"** para que o caminho **não mude**.
+
+Para maior segurança, pode **desativar** "Apaga o arquivo original".\
+A Base de Dados **atualiza-se automaticamente** com as **novas durações**; os tempos **Intro** também são corrigidos se for o caso.
+
+<Note>
+  **Redes:** para que a Base de Dados possa atualizar-se, carregue arquivos no AutoEdit usando **Ambiente de Rede** (referência **UNC**).\
+  Exemplo **correto**: `\\Produção\C\Audicom\Áudio\CD-Ripper`\
+  Exemplo **incorreto**: `C:\Audicom\Áudio\CD-Ripper` (neste caso, a BD **não** se atualizará).
+</Note>
+
+---
