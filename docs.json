@@ -2297,8 +2297,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/LOGOSOLIDYNE.svg",
-    "dark": "/logo/LOGOSOLIDYNENEGATIVO.svg"
+    "light": "/logo/logoSOLIDYNE_negro.svg",
+    "dark": "/logo/logoSOLIDYNE_blanco.svg"
   },
   "navbar": {
     "links": [
