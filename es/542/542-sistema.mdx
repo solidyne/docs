@@ -1,7 +1,7 @@
 ---
 title: "Configuraciones de sistema"
 description: "Configuraciones del sistema "
-keywords: ["GPIO","security","password","network"]
+keywords: ["GPIO", "security", "password", "network"]
 tags: ["procesadores", "542"]
 ---
 
@@ -43,18 +43,11 @@ Permite habilitar contraseña (password) desmarcando la opción **Disable Passwo
 
 ---
 
-### User Interface (Interfaz de usuario)
-
-- **LOUDNESS EBU REFERENCE**: Nivel de referencia de sonoridad en el monitoreo general (default: 0 dBfs).
-- **AUTO-OPEN LEFT MENU**: Despliega automáticamente el menú al acercar el mouse.
-- **ENABLE TOOLTIPS**: Activa mensajes emergentes de ayuda sobre controles e indicadores.
-
----
-
 ### NETWORK
 
-- Configuración de red.
-- De fábrica: modo **DHCP**.
+Configuración de red.
+
+- De fábrica: modo **DHCP habilitado**.
 - Puede asignarse una **IP estática** desactivando DHCP.
 - La dirección IP se informa en el frente del equipo o vía LAN con la herramienta **Solidyne Multi-Discovery**.
 
@@ -64,21 +57,23 @@ Permite habilitar contraseña (password) desmarcando la opción **Disable Passwo
 
 ---
 
+### User Interface (Interfaz de usuario)
+
+- **LOUDNESS EBU REFERENCE**: Nivel de referencia de sonoridad en el monitoreo general (default: 0 dBfs).
+- **AUTO-OPEN LEFT MENU**: Despliega automáticamente el menú al acercar el mouse.
+- **ENABLE TOOLTIPS**: Activa mensajes emergentes de ayuda sobre controles e indicadores.
+
+---
+
 ### TECHNICAL REPORT
 
 Genera un reporte con parámetros de funcionamiento y configuración del equipo.
 
-- El reporte se guarda en la carpeta de descargas del navegador.
+- Pulsando "DOWNLOAD" el reporte se guarda en la carpeta de descargas del navegador.
 - Puede enviarse al **soporte técnico** para diagnóstico.
 
----
+<Warning>
+  **SYSTEM SOFTWARE RESET**
 
-### Status y Logs
-
-- **SYSTEM TIME**:
-  - Si el equipo tiene acceso a Internet, sincroniza hora con un servidor **NTP**.
-  - También puede sincronizarse desde la PC con **SYNC FROM PC**.
-  - Fecha y hora se usan solo en reportes y registros.
-- **SYSLOG**:
-  - Registro de eventos en memoria interna.
-  - Uso reservado a **personal especializado** en diagnóstico y soporte técnico.
+  Reinicia el equipo, lo que puede generar una breve interrupción al aire.
+</Warning>

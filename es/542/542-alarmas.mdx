@@ -1,5 +1,5 @@
 ---
-title: "Alarmas"
+title: "Alarmas, panel de estado y logs"
 description: "Configuración de alarmas y avisos"
 keywords: ["alarmas", "avisos", "alertas"]
 tags: ["procesadores", "542"]
@@ -24,7 +24,9 @@ El 542APC puede enviar alertas por correo electrónico en los siguientes eventos
 
 ### Configuración de alarmas
 
-![542 Sistema Alarmas Pn](/images/542/542-sistema-alarmas.png)
+<Frame>
+  ![542 Sistema Alarmas Pn](/images/542/542-sistema-alarmas.png)
+</Frame>
 
 - **E-mail Send To** → dirección a la cual serán enviadas las alertas.
   - “Send Test” envía un correo de prueba.
@@ -52,3 +54,21 @@ El 542APC puede enviar alertas por correo electrónico en los siguientes eventos
   - Genera alarma al reiniciarse el equipo (ej. por corte eléctrico).
 - **SYSTEM ERRORS**:
 - Solo para uso interno. Los eventos se registran en **SYSLOG**.
+
+---
+
+### Status y Logs
+
+<Frame>
+  ![542 System Status](/images/542_system_status.png)
+</Frame>
+
+- **SYSTEM STATUS**
+  - Muestra los módulos en ejecución e indica si están corriendo con normalidad (Procesador central, Generador Estéreo, Monitor de FM, RDS y AoIP/Streaming).
+- **SYSLOG**:
+  - Registro de eventos en memoria interna.
+  - Uso reservado a **personal especializado** en diagnóstico y soporte técnico.
+- **SYSTEM TIME**:
+  - Si el equipo tiene acceso a Internet, sincroniza hora con un servidor **NTP**.
+  - También puede sincronizarse desde la PC con **SYNC FROM PC**.
+  - Fecha y hora se usan solo en reportes y registros.
