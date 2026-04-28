@@ -1,5 +1,5 @@
 ---
-title: "Alarms"
+title: "Alarms, Status and Logs"
 description: "Alarms and alerts configuration"
 keywords: ["alarms", "alerts", "warnings"]
 tags: ["processors", "542"]
@@ -7,10 +7,7 @@ translation:
   source_lang: "es"
   status: "draft"
   version: 0
-  reviewed_by: ""
-  reviewed_at: ""
   source_hash: "8a875e03b169249f75f0bfdb85e2686727f76300d80ea0ef1890b1bda2682d4d"
-
 ---
 
 ## Alarms
@@ -20,7 +17,7 @@ Access through **SYSTEM → ALARMS tab**.
 <Danger>
   The parameters that trigger alarms are based on the **FM tuner** signal.
 
-  - If RF Level < 40 dB or multipath > 10%, measurements are not valid.
+  - If RF Level \< 40 dB or multipath \> 10%, measurements are not valid.
   - In this case, fields appear dimmed and no alarms are generated.
 </Danger>
 
@@ -32,7 +29,9 @@ The 542APC can send email alerts for the following events:
 
 ### Alarms Configuration
 
-![542 Alarms System Pn](/images/542/542-sistema-alarmas.png)
+<Frame>
+  ![542 Alarms System Pn](/images/542/542-sistema-alarmas.png)
+</Frame>
 
 - **E-mail Send To** → address where alerts will be sent.
   - "Send Test" sends a test email.
@@ -60,3 +59,21 @@ The 542APC can send email alerts for the following events:
   - Generates alarm when equipment restarts (e.g. power outage).
 - **SYSTEM ERRORS**:
   - For internal use only. Events are logged in **SYSLOG**.
+
+---
+
+### Status and Logs
+
+<Frame>
+  ![542 System Status](/images/542_system_status.png)
+</Frame>
+
+- **SYSTEM STATUS**
+  - Shows the current status of the internal stages (Main Processor, Stereo Generator, FM Monitor, RDS and AoIP/Streaming).
+- **SYSTEM TIME**:
+  - If the unit has Internet access, it syncs time with an **NTP** server
+  - It can also be synchronized from PC using **SYNC FROM PC**
+  - Date and time are only used in reports and logs
+- **SYSLOG**:
+  - Internal memory event log
+  - Reserved for **specialized personnel** in diagnostics and technical support

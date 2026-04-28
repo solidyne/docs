@@ -1,7 +1,7 @@
 ---
 title: "System Settings"
 description: "System Settings"
-keywords: ["GPIO","security","password","network"]
+keywords: ["GPIO","security","password","network","reset"]
 tags: "processors,542"
 translation:
   source_lang: "es"
@@ -51,14 +51,6 @@ Allows enabling password protection by unchecking **Disable Password Protection*
 
 ---
 
-### User Interface
-
-- **LOUDNESS EBU REFERENCE**: Loudness reference level for general monitoring (default: 0 dBfs)
-- **AUTO-OPEN LEFT MENU**: Automatically expands the menu when mouse approaches
-- **ENABLE TOOLTIPS**: Activates help popup messages over controls and indicators
-
----
-
 ### NETWORK
 
 - Network configuration
@@ -71,6 +63,13 @@ Allows enabling password protection by unchecking **Disable Password Protection*
 </Info>
 
 ---
+### User Interface
+
+- **LOUDNESS EBU REFERENCE**: Loudness reference level for general monitoring (default: 0 dBfs)
+- **AUTO-OPEN LEFT MENU**: Automatically expands the menu when mouse approaches
+- **ENABLE TOOLTIPS**: Activates help popup messages over controls and indicators
+
+---
 
 ### TECHNICAL REPORT
 
@@ -79,14 +78,12 @@ Generates a report with equipment operating parameters and configuration.
 - The report is saved to the browser's downloads folder
 - Can be sent to **technical support** for diagnostics
 
+<Warning>
+  **SYSTEM SOFTWARE RESET**
+
+  Restarting the unit may cause a brief on-air signal interruption.
+</Warning>
+
+
 ---
 
-### Status and Logs
-
-- **SYSTEM TIME**:
-  - If the unit has Internet access, it syncs time with an **NTP** server
-  - It can also be synchronized from PC using **SYNC FROM PC**
-  - Date and time are only used in reports and logs
-- **SYSLOG**:
-  - Internal memory event log
-  - Reserved for **specialized personnel** in diagnostics and technical support
