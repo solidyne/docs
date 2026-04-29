@@ -6,10 +6,10 @@ tags: ["processadores", "542"]
 translation:
   source_lang: "es"
   target_lang: "pt"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
+  status: "reviewed"
+  version: 1
+  reviewed_by: "Spinelli"
+  reviewed_at: "20260429"
   source_hash: "8a875e03b169249f75f0bfdb85e2686727f76300d80ea0ef1890b1bda2682d4d"
 
 ---
@@ -61,3 +61,16 @@ O 542APC pode enviar alertas por e-mail nos seguintes eventos:
   - Gera alarme quando o equipamento reinicia (ex. por corte de energia).
 - **SYSTEM ERRORS**:
   - Apenas para uso interno. Os eventos são registrados em **SYSLOG**.
+
+  ---
+
+  ### Status e Logs
+- **SYSTEM STATUS**
+  - Mostra os módulos em execução e indica se estão operando normalmente (Processador central, Gerador estéreo, Monitor de FM, RDS e AoIP/Streaming).
+- **SYSTEM TIME**:
+  - Se o equipamento tem acesso à Internet, sincroniza hora com um servidor **NTP**.
+  - Também pode ser sincronizado do PC com **SYNC FROM PC**.
+  - Data e hora são usados apenas em relatórios e registros.
+- **SYSLOG**:
+  - Registro de eventos em memória interna.
+  - Uso reservado a **pessoal especializado** em diagnóstico e suporte técnico.

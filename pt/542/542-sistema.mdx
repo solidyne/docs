@@ -1,7 +1,7 @@
 ---
 title: "Configurações do sistema"
 description: "Configurações do sistema"
-keywords: ["GPIO","security","password","network"]
+keywords: ["GPIO","security","password","network","reset"]
 tags: ["procesadores", "542"]
 translation:
   source_lang: "es"
@@ -52,14 +52,6 @@ Permite habilitar senha (password) desmarcando a opção **Disable Password Prot
 
 ---
 
-### User Interface (Interface do usuário)
-
-- **LOUDNESS EBU REFERENCE**: Nível de referência de sonoridade no monitoramento geral (padrão: 0 dBfs).
-- **AUTO-OPEN LEFT MENU**: Abre automaticamente o menu ao aproximar o mouse.
-- **ENABLE TOOLTIPS**: Ativa mensagens emergentes de ajuda sobre controles e indicadores.
-
----
-
 ### NETWORK
 
 - Configuração de rede.
@@ -73,6 +65,14 @@ Permite habilitar senha (password) desmarcando a opção **Disable Password Prot
 
 ---
 
+### User Interface (Interface do usuário)
+
+- **LOUDNESS EBU REFERENCE**: Nível de referência de sonoridade no monitoramento geral (padrão: 0 dBfs).
+- **AUTO-OPEN LEFT MENU**: Abre automaticamente o menu ao aproximar o mouse.
+- **ENABLE TOOLTIPS**: Ativa mensagens emergentes de ajuda sobre controles e indicadores.
+
+---
+
 ### TECHNICAL REPORT
 
 Gera um relatório com parâmetros de funcionamento e configuração do equipamento.
@@ -80,14 +80,9 @@ Gera um relatório com parâmetros de funcionamento e configuração do equipame
 - O relatório é salvo na pasta de downloads do navegador.
 - Pode ser enviado ao **suporte técnico** para diagnóstico.
 
----
+<Warning>
+  **SYSTEM SOFTWARE RESET**
 
-### Status e Logs
+  Reiniciar o equipamento pode gerar uma breve interrupção do áudio no ar.
+</Warning>
 
-- **SYSTEM TIME**:
-  - Se o equipamento tem acesso à Internet, sincroniza hora com um servidor **NTP**.
-  - Também pode ser sincronizado do PC com **SYNC FROM PC**.
-  - Data e hora são usados apenas em relatórios e registros.
-- **SYSLOG**:
-  - Registro de eventos em memória interna.
-  - Uso reservado a **pessoal especializado** em diagnóstico e suporte técnico.
