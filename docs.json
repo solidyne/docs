@@ -2321,5 +2321,12 @@
       "facebook": "https://www.facebook.com/SolidynePRO/"
     }
   },
+  "redirects": [
+   {
+    "source": "/",
+    "destination": "/es",
+    "permanent": false
+   }
+  ],
   "description": "Manuales de uso, guias de instalación, notas de aplicación e información técnica"
 }
