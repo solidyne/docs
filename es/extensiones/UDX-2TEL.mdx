@@ -26,7 +26,9 @@ Cada línea telefónica funciona de forma **independiente** sobre un canal.
 La conexión se realiza con dos cables estándar **STP RJ45–RJ45** conectados **pin a pin** (modelos Solidyne **SOL-P50** o **SOL-P25**).
 
 - **Salida “TO UNIDEX INPUT”** → Conectar a una **entrada UNIDEX** (1 a 4)
-- **Entrada “FROM UNIDEX OUTPUT”** → Conectar a una **salida analógica no balanceada** (5 a 8)
+- **Entrada “FROM UNIDEX OUTPUT”** → Conectar a una **salida analógica no balanceada** 
+
+El siguiente diagrama muestra la conexión de UDX 2TEL a una consola UX24.
 
 <img
   src="/images/ux24/udx2tel-conexion.svg"
@@ -37,17 +39,17 @@ La conexión se realiza con dos cables estándar **STP RJ45–RJ45** conectados 
 />
 
 <Tip>
-  En el panel posterior de la consola, las entradas **UNIDEX 1, 2, 3 y 4** están alineadas con las salidas no balanceadas **5, 6, 7 y 8**, para simplificar el cableado.
+  Para simplificar el cableado, en el panel posterior los conectores de las entradas **UNIDEX 1, 2, 3 y 4** están alineadas con las salidas que corresponden según la asignación predeterminada (salidas en modo mix-minus).
 </Tip>
 
-### Correspondencia entrada/salida recomendada
+### Correspondencia de entradas para salidas en modo mix-minus
 
-| Entrada UNIDEX | Salida no balanceada |
-| -------------: | -------------------- |
-| UNIDEX 1       | UNBAL 5              |
-| UNIDEX 2       | UNBAL 6              |
-| UNIDEX 3       | UNBAL 7              |
-| UNIDEX 4       | UNBAL 8              |
+| Entrada | Salidas (UX24) | Salidas (UX18) |
+| --: | :-: | :-: |
+| UNIDEX 1 | UNBAL 5 | UNBAL 1 |
+| UNIDEX 2 | UNBAL 6 | UNBAL 2 |
+| UNIDEX 3 | UNBAL 7 | UNBAL 3 |
+| UNIDEX 4 | UNBAL 8 | UNBAL 4 |
 
 ## Conexión a líneas telefónicas
 
@@ -99,7 +101,6 @@ Una vez conectado el adaptador **UDX 2TEL** (o **TEL\+BT**), configure:
 3. Tocando la pantalla, configurar**INPUT MODE**  en  **MONO.**
 4. En la opción \*\*UDX TYPE \*\*elegir **2TEL**
 5. Tocando la pantalla, desplegar el menú **ASSIGNED TO CHANNEL** para asignar un CANAL a la entrada. Si se elige un canal que ya tiene asignada una entrada, aparecerá una advertencia. Si se continúa, la entrada en ese canal es reemplazada.
-
    <Warning>
      Se recomienda asignar las líneas TELCO a canales físicos.
    </Warning>
@@ -120,9 +121,7 @@ Una vez conectado el adaptador **UDX 2TEL** (o **TEL\+BT**), configure:
 1. Desde la pantalla principal, acceder a la opción **SETTINGS**.
 2. En SETTINGS elegir la opción **OUTPUTS**.
 3. Girarndo el encoder seleccionar canal “L” de la salida a la cual se conectó UDX 2TEL.
-
    OUT-L =  UDX 2TEL Línea A
-
    OUT-R =  UDX 2TEL  Línea B
 4. En la opción **AUDIO MODE**, definir la salida como **MONO**.
 5. Configurar **SEND MODE** en **MIX-MINUS**. Al activar MIX-MINUS la salida quedará asociada a la entrada UNIDEX que le corresponda.
@@ -172,7 +171,6 @@ Este ajuste se aplica a las cajas:
 1. Pulsar botón **TELCO** para acceder a pantalla de operación de Telecomunicaciones.
 2. Establecer una llamada (puede ser saliente o entrante). Del otro lado de la línea se deberá silenciar el micrófono del teléfono.
 3. En la sección \*\*CONFIG \*\*de la pantalla TELCO pulsar ENTER **Null Adjust**. La consola inyecta un tono de ajuste en la línea telefónica. El nivel con el que retorna se visualiza en INPUT LEVEL.
-
    No es necesario que la línea esté en el aire (el atenuador puede estar cerrado).
 4. El rechazo se ajusta desde la caja UDX 2TEL. cada línea tiene un preset de ajuste.
 5. Usando un perillero, girar suavemente el preset en un sentido y el otro hasta encontrar el punto en que el retorno de la señal mostrado en el indicador sea mínimo.

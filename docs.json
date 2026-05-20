@@ -173,7 +173,7 @@
                 "icon": "book-open",
                 "groups": [
                   {
-                    "group": "INTERFACES UDX",
+                    "group": "INTERFACES EXTERNAS",
                     "pages": [
                       "es/extensiones/UNIDEX-adaptadores",
                       "es/extensiones/UDX-2MIC",
