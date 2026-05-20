@@ -10,8 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-const MODEL = "anthropic/claude-3.5-sonnet";
-//const MODEL = "deepseek/deepseek-chat";
+//const MODEL = "anthropic/claude-3.5-sonnet";
+const MODEL = "deepseek/deepseek-chat";
 
 const MAX_TOKENS = 8000;
 const MAX_PARTS = 3;
