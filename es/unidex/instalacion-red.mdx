@@ -2,7 +2,7 @@
 title: "Puertos Ethernet"
 description: "Puertos para Control Remoto y Streaming"
 keywords: ["instalación", "red", "Ethernet", "Discovery", "control remoto", "streaming"]
-tags: ["consolas IP","UNIDEX","ux18","ux24"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 ---
 
 ## Conexión Ethernet para control remoto
@@ -26,28 +26,25 @@ Conecte el puerto **ETHERNET de control** de UNIDEX a una boca del **router**, u
 </Warning>
 
 - De fábrica, UNIDEX está configurada en modo **DHCP activado**.
-- El router asignará automáticamente una dirección IP disponible. Esta IP puede cambiar al reiniciar la consola, salvo que se configure una IP fija, pero normalmente esto no es necesario.
+- El router asignará automáticamente una dirección IP disponible. Esta IP puede cambiar al reiniciar la consola, salvo que se configure una IP fija, pero normalmente esto no es necesario (si se requiere una IP estática, ingresar en:`SETTINGS → SYSTEM`).
 - La dirección IP actual se muestra en la **pantalla principal** de la consola, bajo el nombre:\
   **UNIDEX IP.**
-
   <img
     src="/images/ux24/unidex-ControlIP.png"
     alt="RJ45 a RCA"
     style={{ width:"45%" }}
-    title=""
     className="mx-auto"
   />
-- Si se requiere asignar una IP estática, ingresar en:`SETTINGS → SYSTEM`
+
+<Note>
+  **Solidyne Multi-Discovery**
+
+  Si no se tiene acceso físico a la consola, se puede [**descargar la herramienta Multi-Discovery**](/es/unidex/unidex-discovery) que detecta dispositivos Solidyne conectados a la red.
+</Note>
 
 ### **Paso 2**: Acceso desde navegador web
 
 Desde cualquier computadora conectada a la **misma red local** (preferentemente por cable) abrir un navegador web (recomendado: **Google Chrome**) e ingresar la dirección IP mostrada como **UNIDEX IP**.
-
-<Note>
-     **Solidyne Multi-Discovery**
-
-     Si no se tiene acceso físico a la consola, se puede [**descargar la herramienta Multi-Discovery**](/es/unidex/unidex-discovery) que detecta dispositivos Solidyne conectados a la red.
-</Note>
 
 Esto abrirá la interfaz web de operación y configuración de la consola. La interfaz es similar a la que se muestra en la **pantalla táctil a bordo**.
 
@@ -56,11 +53,9 @@ Esto abrirá la interfaz web de operación y configuración de la consola. La in
 ## Conexión Ethernet para servicios de streaming
 
 1. Conectar el puerto **Streaming Out** al router de la LAN usando un cable Ethernet estándar.
-
    <Warning>
      NO CONFUNDIR el **conector Ethernet de streaming** con el conector Ethernet de **control remoto**.\
      Ambos usan RJ45, pero cumplen funciones totalmente distintas.
-
      <img
        src="/images/ux24/trasero-streaming.jpg"
        alt="Trasero RJ45 Streaming"
@@ -74,7 +69,6 @@ Esto abrirá la interfaz web de operación y configuración de la consola. La in
 4. La configuración de los servicios de streaming puede realizarse de dos formas:
    - Desde la **pantalla táctil** de la consola.
    - Desde cualquier computadora en la red, accediendo a la dirección **Stream IP** desde un navegador web.
-
      <img
        src="/images/ux24/unidex_streaming_ip.jpg"
        alt="Unidex Streaming Ip Jp"
@@ -82,5 +76,8 @@ Esto abrirá la interfaz web de operación y configuración de la consola. La in
        style={{ width:"45%" }}
      />
 
-<discovery />
-  
+<Note>
+  **Solidyne Multi-Discovery**
+
+  Si no se tiene acceso físico a la consola, se puede [**descargar la herramienta Multi-Discovery**](/es/unidex/unidex-discovery) que detecta dispositivos Solidyne conectados a la red.
+</Note>

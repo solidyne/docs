@@ -2,7 +2,7 @@
 title: "Encendido, apagado y resets"
 description: "Arranque y apagado. Reiniciar módulos del sistema"
 keywords: ["encendido", "resets", "reinicio"]
-tags: ["consolas IP","UNIDEX","ux18","ux24"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 ---
 
 ## Secuencia de arranque
@@ -12,11 +12,12 @@ Al encender la consola, UNIDEX inicia su sistema operativo. Una vez completada l
 1. El **perfil de usuario predeterminado.**
 2. La **última escena activa** antes del apagado.
 
+---
+
 ## Perfil de usuario y permisos
 
 El perfil de usuario determina el **nivel de acceso a funciones** dentro de la consola.\
-Desde la configuración, se puede definir qué perfil se carga automáticamente al encender la unidad.\
-De fábrica, la consola inicia con el perfil **ADMIN**, que tiene acceso completo.
+Desde la configuración, se puede definir qué perfil se carga automáticamente al encender la unidad. De fábrica, la consola inicia con el perfil **ADMIN**, que tiene acceso completo.
 
 ### Niveles de usuario disponibles
 
@@ -29,44 +30,28 @@ De fábrica, la consola inicia con el perfil **ADMIN**, que tiene acceso complet
   Para que UX24 arranque en modo restringido y exija contraseña para acceder a funciones avanzadas, se debe **cambiar el perfil predeterminado** a uno distinto de ADMIN.
 </Info>
 
-Para más información sobre configuración de usuarios, ver:\
-**SETTINGS → USERS**
+Para más información sobre configuración de usuarios, ver: `SETTINGS → USERS`
 
-## Apagado del CPU
+---
 
-Las consolas UNIDEX poseen un **CPU interno** que debe **apagarse de forma segura** antes de desconectar la consola completamente.
+## Acciones del sistema
 
-### Procedimiento de apagado del CPU:
+Las acciones del sistema están disponibles desde la pantalla principal, accediendo a la opción **STATUS → "\+"**.
 
 1. En la **pantalla principal**, tocar el ícono **“\+”** ubicado en el sector **STATUS**.
-
    <img
      src="/images/ux/ux_home_status.png"
      alt="Pantalla Principal - STATUS"
      title="Pantalla Principal - STATUS"
      style={{ width:"24%" }}
    />
-2. En la ventana emergente, seleccionar la opción **POWER-OFF**.
-
+2. Aparece una ventana emergente. Estas funciones permiten **reiniciar por separado distintas etapas del sistema**, y no se utilizan durante la operación normal.
    <img
      src="/images/ux/ux_status_poweroff.png"
      alt="Status, resets and power-off"
      title="Status, resets and power-off"
      style={{ width:"53%" }}
    />
-
-<Warning>
-  Esta función **no apaga toda la consola**, solo apaga el CPU principal del sistema.\
-  El apagado total se realiza mediante la **llave mecánica** de encendido/apagado (en el panel trasero o en la fuente externa según modelo).
-</Warning>
-
-Luego de apagar el CPU, **espere unos segundos** antes de apagar la unidad por completo, para permitir el cierre correcto de procesos internos.
-
-## Acciones del sistema
-
-Las acciones del sistema están disponibles desde la pantalla principal, accediendo a la opción **STATUS → "\+"**.
-
-Estas funciones permiten **reiniciar por separado distintas etapas del sistema**, y no se utilizan durante la operación normal.
 
 <Info>
   Las acciones de reinicio son herramientas técnicas de mantenimiento.\
@@ -86,3 +71,16 @@ Estas funciones permiten **reiniciar por separado distintas etapas del sistema**
 - **FULL RESET**\
   Reinicia todas las etapas del sistema.\
   Equivale a un apagado completo y encendido del equipo.
+- **POWER-OFF**\
+  Apaga el computador interno, que maneja la pantalla táctil y los servicios de streaming.\
+  La consola podrá seguir operando, incluso comandada desde el Control WEB.\
+  Para apagar por completo el equipo, aguarde unos segundos y apague la fuente de alimentación (en el panel trasero o en la fuente externa según modelo).
+
+<Warning>
+  ### Apagado del CPU
+
+  Las consolas UNIDEX poseen un **CPU interno** que debe **apagarse de forma segura** antes de desconectar la consola completamente. Esta función **no apaga toda la consola**, solo apaga el CPU principal del sistema.
+
+  - Luego de apagar el CPU, **espere unos segundos** antes de apagar la unidad por completo, para permitir el cierre correcto de procesos internos.
+  - El apagado total se realiza mediante la **llave mecánica** de encendido/apagado (en el panel trasero o en la fuente externa según modelo).
+</Warning>
