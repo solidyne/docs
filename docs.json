@@ -62,6 +62,12 @@
                     ]
                   },
                   {
+                    "group": "GUÍAS AUDIOVISUALES",
+                    "pages": [
+                      "instalacion"
+                    ]
+                  },
+                  {
                     "group": "CABLEADO",
                     "pages": [
                       "es/unidex/instalacion-cableado_estructurado",
