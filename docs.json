@@ -58,12 +58,7 @@
                   {
                     "group": "INTRODUCCIÓN",
                     "pages": [
-                      "es/unidex/unidex-resumen"
-                    ]
-                  },
-                  {
-                    "group": "GUÍAS AUDIOVISUALES",
-                    "pages": [
+                      "es/unidex/unidex-resumen",
                       "instalacion"
                     ]
                   },
