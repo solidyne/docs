@@ -2,7 +2,7 @@
 title: "USB Audio"
 description: "Instalación del puerto USB"
 keywords: ["instalación", "USB"]
-tags: ["consolas IP","UNIDEX","ux18","ux24"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 ---
 
 El puerto **USB** incorporado brinda conexión directa a la computadora, sin necesidad de interfaces de audio adicionales.
@@ -16,9 +16,7 @@ Es decir, la computadora puede **enviar 4 señales estéreo** a la consola, y **
   Aunque USB es técnicamente un puerto de datos, en este contexto lo referimos como **entradas y salidas de audio USB**.
 
   - Las “**salidas USB**” de la consola corresponden a **dispositivos USB de grabaciópn** en Windows.
-  - Las “**entradas USB**” de la consola corresponden a \*\*dispositivos USB de reproducción \*\*en Windows.
-
-    Tener esto en mente es fundamental para comprender correctamente el flujo de señales.
+  - Las “**entradas USB**” de la consola corresponden a \*\*dispositivos USB de reproducción \*\*en Windows. Tener esto en mente es fundamental para comprender correctamente el flujo de señales.
 </Info>
 
 La asignación de señales hacia las salidas USB (es decir, los dispositivos de grabación USB en Windows) se configura desde la consola en la pantalla `SETTINGS → OUTPUTS`
@@ -27,10 +25,10 @@ La asignación de señales hacia las salidas USB (es decir, los dispositivos de 
 
 ## Instalación del controlador USB
 
-<Warning>
+<Note>
   La siguiente descripción se refiere al **conector USB incorporado** en el Panel Trasero de los modelos UX24 y UX18.\
   Para instalar un **adaptador externo UDX-USB**, consultar la sección: **Adaptadores externos UNIDEX**
-</Warning>
+</Note>
 
 UNIDEX requiere un controlador USB propio para que el dispositivo sea correctamente reconocido en Windows.
 
@@ -76,4 +74,4 @@ La compatibilidad **ASIO 3.0** permite el uso compartido y simultáneo de distin
 - El software de automatización reproduce música por el canal **USB 1** vía WDM.
 - Otro software de procesamiento (como un host de efectos ASIO) toma el canal **USB 2** de retorno desde la consola y aplica **efectos VST** en tiempo real a las voces de micrófono.
 
-<Icon icon="video" iconType="solid" color="#b30000" size={25} />  [Uso de efectos externos VST ](https://youtu.be/qKi0MMbBEuc?si=j2B0-sSk--1DxuZE)
+<Icon icon="video" iconType="solid" color="#b30000" size={25} />  [Videotutorial: Uso de efectos externos VST ](https://youtu.be/qKi0MMbBEuc?si=j2B0-sSk--1DxuZE)

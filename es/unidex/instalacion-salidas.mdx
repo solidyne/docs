@@ -2,7 +2,7 @@
 title: "Salidas"
 description: "Conexión de las salidas en UNIDEX UX24 y UX18"
 keywords: ["instalación", "salidas"]
-tags: ["consolas IP","UNIDEX","ux18","ux24"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 ---
 
 ## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Salidas analógicas
@@ -22,23 +22,18 @@ Cada salida utiliza un conector **RJ45**, que transporta las señales **izquierd
 - Soportan también la conexión de señales **S/PDIF**.
 - Son balanceadas a transformador
 
-### Asignación de salidas AES3 en UX24
-
-- **AES-1** → Bus **PGM**
-- **AES-2** → Bus **REC**
-- **AES-3 y AES-4** → Asignables desde pantalla `SETTINGS → OUTPUTS`
-
-### Asignación de salidas AES3 en UX18
-
-- **AES-1** → asignable
-- **AES-2** → asignable
+| Salida AES | UX24 | UX18 |
+| :-: | :-: | :-: |
+| AES-1 | Bus PGM | Asignable por configuración |
+| AES-2 | Bus REC | Asignable por configuración |
+| AES-3 | Asignable por configuración | No disponible |
+| AES-4 | Asignable por configuración | No disponible |
 
 <Warning>
-  **MUY IMPORTANTE:** 
+  **MUY IMPORTANTE:**
 
   Las **SALIDAS** **AES3 SOLO OPERAN A 48 kHz**.
 
-  \
   Es imprescindible **configurar el dispositivo** de grabación en Windows a **48.000 Hz** para evitar errores de compatibilidad. Para configurar la frecuencia de muestreo en Windows 10:
 
   1. Abrir el menú **Configuración del sistema** y seleccionar **Sonido**.
