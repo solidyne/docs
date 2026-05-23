@@ -227,7 +227,8 @@
                       "es/DX816/816-usb",
                       "es/DX816/816-monitoreo",
                       "es/DX816/816-telco",
-                      "es/DX816/816-GPIO-tally"
+                      "es/DX816/816-GPIO-tally",
+                      "es/DX816/816-instalacion-tierras"
                     ]
                   },
                   {
@@ -471,6 +472,7 @@
                       "es/542/542-guia",
                       "es/542/542-instalacion-montaje",
                       "es/542/542-instalacion-cableado",
+                      "es/542/542-instalacion-tierras",
                       "es/542/542-instalacion-gpio",
                       "es/542/542-firmware"
                     ]

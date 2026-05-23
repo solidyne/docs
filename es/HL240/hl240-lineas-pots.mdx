@@ -1,6 +1,11 @@
 ---
-title: "hl240-lineas-pots"
+title: "Líneas terrestres (POTS)"
+description: "Uso de HL240 con líneas fijas"
+keywords: ["VoIP"]
+tags: ["híbridos", "HL240"]
 ---
+
+import tierras from '/snippets/snippet-tierras.mdx';
 
 ## Conexionado
 
@@ -18,13 +23,7 @@ El uso de PBX deteriora el rechazo del híbrido, por lo que se recomienda conect
 - Las conexiones telefónicas están protegidas contra descargas de alta tensión (centellas o rayos no directos) mediante varistores de óxido metálico, soportando sobretensiones de hasta 2 kV.
 - Si utiliza líneas ADSL (con señal de Internet), asegúrese de contar con el filtro de RF correspondiente, suministrado por la compañía proveedora del servicio (ISP).
 
-<Card title="IMPORTANTE" type="danger">
-  Para evitar daños en los equipos, se deben adoptar las medidas correspondientes de puesta a tierra y protección en las líneas de Internet y telefonía. La garantía no cubre daños ocasionados por descargas atmosféricas (rayos), sobretensiones o fallas en la red eléctrica.
-</Card>
-
-## Recomendación general de puesta a tierra y protecciones
-
-![Recomendaciones de puesta a tierra y protecciones para una estación de radio](/images/Grounding_recomendations.jpg)
+<tierras />
 
 ---
 
@@ -82,4 +81,4 @@ Este sistema tiene dos objetivos:
 - Evite usar música de fondo (_cortinas_), o manténgala a muy bajo nivel, ya que podría disparar el sistema de prioridad y atenuar el audio entrante.
 - En entrevistas y diálogos, la acción del sistema de prioridad es natural y no percibida por el oyente.
 - En aplicaciones especiales (ej.: concursos donde el oyente debe identificar una canción), la atenuación puede resultar indeseada.\
-  En estos casos, se recomienda utilizar teléfonos Bluetooth.
+  En estos casos, se recomienda utilizar teléfonos Bluetooth. 

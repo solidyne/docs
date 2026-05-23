@@ -5,6 +5,8 @@ keywords: ["líneas terrestres", "POTS", "híbrido", "TELCO"]
 tags: ["ux24", "ux18", "UNIDEX", "UDX 2TEL"]
 ---
 
+import tierras from '/snippets/snippet-tierras.mdx'
+
 ## Resúmen
 
 La expansión **UDX 2TEL** permite conectar **dos líneas telefónicas terrestres** y sus teléfonos asociados.
@@ -78,11 +80,12 @@ Los adaptadores **UDX TEL** incluyen:
 - Protección interna contra descargas de alta tensión (centellas o rayos indirectos) mediante varistores de óxido metálico.
 
 <Danger>
-  Las líneas telefónicas cuentan con protección interna contra descargas de alta tensión (centellas o rayos no directos) mediante **varistores de óxido metálico**. Sin embargo, es **imprescindible** instalar **protectores externos** en las líneas de centrales públicas, conectados a una **tierra de jabalina enterrada 2 m**.
-
-  En caso de daños provocados por rayos, **la garantía del equipo no cubre las reparaciones**.\
-  Consulte el **Diagrama General de Conexiones a Tierra** para su correcta instalación.
+  Las líneas telefónicas cuentan con protección interna contra descargas de alta tensión mediante **varistores de óxido metálico**. Sin embargo, es **imprescindible** instalar **protectores externos** en las líneas de centrales públicas, conectados a una **tierra de jabalina enterrada 2 m**.
 </Danger>
+
+<tierras />
+
+## Configuraciones
 
 Una vez conectado el adaptador **UDX 2TEL** (o **TEL\+BT**), configure:
 
@@ -90,7 +93,7 @@ Una vez conectado el adaptador **UDX 2TEL** (o **TEL\+BT**), configure:
 - **Salidas (envíos)**
 - **Canales**
 
-## Configurar entradas
+### Configurar entradas
 
 <Note>
   La distribución y forma de los controles que se muestran a continuación pueden variar. Esto no altera el procedimiento de configuración.
@@ -116,7 +119,7 @@ Una vez conectado el adaptador **UDX 2TEL** (o **TEL\+BT**), configure:
   style={{ width:"60%" }}
 />
 
-## Configurar salidas
+### Configurar salidas
 
 1. Desde la pantalla principal, acceder a la opción **SETTINGS**.
 2. En SETTINGS elegir la opción **OUTPUTS**.
@@ -139,7 +142,7 @@ Una vez conectado el adaptador **UDX 2TEL** (o **TEL\+BT**), configure:
   style={{ width:"64%" }}
 />
 
-## Configuración del canal
+### Configuración del canal
 
 1. En pantalla principal, pulsar **CHANNEL**. Los botones CUE cambian a modo SELECT.
 2. Pulsar el botón **CUE/SELECT** en el canal a configurar. La consola sale de modo SELECT y muestra la pantalla CHANNEL del canal seleccionado.
