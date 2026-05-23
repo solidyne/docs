@@ -575,7 +575,8 @@
                       "es/HL240/hl240-conexiones",
                       "es/HL240/hl240-lineas-bluetooth",
                       "es/HL240/hl240-lineas-pots",
-                      "es/HL240/hl240-lineas-VoIP"
+                      "es/HL240/hl240-lineas-VoIP",
+                      "es/HL240/puesta-a-tierray-protecciones"
                     ]
                   },
                   {
