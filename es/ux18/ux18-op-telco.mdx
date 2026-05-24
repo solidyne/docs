@@ -17,63 +17,65 @@ Aquí se muestran los canales definidos en modo TELCO (ver pantalla CHANNEL), qu
   style={{ width:"72%" }}
 />
 
-En estas instrucciones, el término “línea TELCO” se utiliza para referirse tanto a líneas tradicionales como a teléfonos móviles vinculados.
-
 <Note>
-  Las líneas terrestres (POTS) y los teléfonos móviles se conectan a UNIDEX mediante adaptadores externos (Solidyne UDX 2TEL y TEL\+BT).
+  UX18 incluye un enlace Bluetooth a bordo. Más enlaces Bluetooth o líneas terrestres (POTS) se pueden agregar mediante adaptadores externos (Solidyne UDX 2TEL; TEL\+BT y 2BLT).
 </Note>
+
+En estas instrucciones, el término “línea TELCO” se utiliza para referirse tanto a líneas tradicionales como a teléfonos móviles vinculados.
 
 Las llamadas, ya sean por telefonía tradicional o por móviles Bluetooth, se operan de igual forma en la consola, salvo por algunas particularidades (por ejemplo, al originar una llamada).
 
-**Cada línea usa un canal propio.** Cualquier canal se puede configurar en modo TELCO, aunque se recomienda usar canales físicos. 
+**Cada línea usa un canal propio.** Cualquier canal se puede configurar en modo TELCO, aunque se recomienda usar canales físicos.
 
 Las operaciones principales (atender, retener, poner al aire, colgar) también se pueden hacer usando los botones **CUE** y **ON AIR** de cada canal.
 
 ### Pantalla TELCO
 
-**Líneas disponibles (1)**\
-UX24 soporta hasta 8 líneas TELCO. En pantalla se muestran en dos grupos de cuatro líneas.\
+#### **Líneas disponibles (1)**
+
+UX18 soporta hasta 8 líneas TELCO. En pantalla se muestran en dos grupos de cuatro líneas.\
 Si hay más de cuatro, el botón **Page Down** permite acceder a las restantes. Cada línea indica:
 
 - Número y nombre del canal.
-- Estado:
-
-  **Amarillo**: llamada entrante (_RING_).
-
-  **Verde**: línea en espera (_HOLD_).
-
-  **Rojo**: línea al aire.
+- Estado: **Amarillo**: llamada entrante (_RING_). **Verde**: línea en espera (_HOLD_). **Rojo**: línea al aire.
 - Tiempo en el aire o en espera.
 
-**Línea seleccionada (2)**\
+#### **Línea seleccionada (2)**
+
 Muestra nombre y canal de la línea actualmente seleccionada. Los controles en pantalla siempre corresponden a esta línea.\
 Para seleccionar una línea, tocarla en la lista. No importa si está al aire, en espera o inactiva.
 
-**Indicador de nivel (3)**\
+#### **Indicador de nivel (3)**
+
 Muestra el nivel de audio recibido. También indica el nombre de la entrada UNIDEX a la que se conectó el adaptador UDX.
 
-**Input Gain (4)**\
+#### **Input Gain (4)**
+
 Controla la ganancia de entrada asociada al adaptador UDX. Se ajusta tocando el control y girando el encoder.
 
-**Send Level (5)**\
+#### **Send Level (5)**
+
 Ajusta la ganancia de la salida asociada al adaptador UDX para envío a la línea. Se ajusta tocando el control y girando el encoder.
 
-**TALK (6)**\
+#### **TALK (6)**
+
 Activa el modo Talkback, habilitando el micrófono de órdenes para hablar a la línea. Equivale a mantener pulsado el botón CUE en el canal, pero a diferencia de CUE, TALK en pantalla no opera con la lógica de un pulsador, sino que **acciona como un interruptor**: se activa con un toque y se desactiva con un segundo toque. También se desactiva cuando se pone la línea en el aire.
 
 <Note>
   Mientras TALK está activo, ya sea pulsando CUE o encendido en pantalla, se interrumpe el envío de señal PGM a la línea, solo se envía el micrófono de órdenes.
 </Note>
 
-**DIAL (7)**\
+#### **DIAL (7)**
+
 Abre un teclado DTMF para discar un número (solo en líneas terrestres).
 
-**HOLD / HANG UP (8)**
+#### **HOLD / HANG UP (8)**
 
 - Con llamada entrante: toma la línea y la deja en espera (HOLD).
 - Con llamada al aire: corta la comunicación (HANG UP).
 
-**CONFIG (9)**\
+#### **CONFIG (9)**
+
 Muestra el tipo de adaptador y sus opciones:
 
 - **NULL ADJUST**: ajuste de rechazo (solo líneas terrestres con adaptadores UDX 2TEL, 2TEL-P y TEL\+BL). El ajuste se hace manualmente desde la interfaz UDX.
@@ -93,9 +95,8 @@ Al vincular un teléfono celular a la consola mediante un adaptador Bluetooth, s
 
 Procedimiento para vincular un teléfono por primera vez:
 
-1. Seleccionar en \*\*TELCO \*\*la línea Bluetooth deseada.
-2. Pulsar **BLUETOOTH PAIRING** (modo búsqueda). La pantalla OLED del canal también indica el estado _“pairing”_.
-
+1. Seleccionar en TELCO la línea Bluetooth deseada.
+2. Pulsar` BLUETOOTH PAIRING` (modo búsqueda). La pantalla OLED del canal también indica el estado _“pairing”_.
    <img
      src="/images/ux24/ux18-telco-pair.png"
      alt="UX18 Bluetooth Pairing"
@@ -107,7 +108,7 @@ Procedimiento para vincular un teléfono por primera vez:
 5. En pantalla TELCO y OLED se muestra PAIRED.
 
 <Tip>
-  Recomendación: Subir **al máximo el volumen de Bluetooth **en el teléfono durante una llamada para la mejor relación señal/ruido.
+  Recomendación: Subir **al máximo el volumen de Bluetooth** en el teléfono durante una llamada para la mejor relación señal/ruido.
 </Tip>
 
 ### Desconexión y reconexión de Bluetooth
@@ -148,9 +149,9 @@ Ejemplo: En la consola hay tres líneas Bluetooth llamadas BLT-1, BLT-2 y BLT-3.
   **CASO PRÁCTICO:** el móvil personal de un productor o un periodista fue vinculado a dos o más canales Bluetooth, para poder conectarlo a cualquiera de ellos en caso que algunos ya estén ocupados por otros móviles de la radio. Al tener identificados los dispositivos, el operador le podrá indicar una línea, y la persona podrá rápidamente localizarla en el teléfono.
 </Tip>
 
-<Info>
+<Callout icon="pencil">
   **Editar el nombre en el teléfono:** esta opción se encuentra en las propiedades del dispositivo Bluetooth; el procedimiento varía según el sistema operativo.
-</Info>
+</Callout>
 
 ### Llamada entrante en teléfono móvil
 
@@ -161,20 +162,16 @@ El teléfono está conectado a la consola vía Bluetooth.
    - Pulsando **CUE/SELECT** en el canal.
    - Tocando **HOLD** en pantalla TELCO.
 3. Al atender, la línea queda “retenida” (HOLD). Quién llama <u>no sale al aire</u> pero escucha la señal de programa. Esta condición es indicada en pantalla (HOLD en verde) y por el botón ON AIR destellando.
-
    <Info>
-     Cuando la llamada se origina usando una aplicación (Wathsapp, Skype, Hangouts, Linphone u otra) muchos teléfonos **móviles anteriores a 2020** no soportan atender desde Bluetooth. En ese caso:
-
-     • Atender la llamada directamente en el teléfono.
-
-     • Pulsar luego ON AIR en el canal correspondiente. La llamada queda RETENIDA.
-
+     **LLAMADAS DESDE APPS**
+     Cuando la llamada se origina usando una aplicación (Wathsapp, Telegram, Linphone, Viber u otra) muchos teléfonos **móviles anteriores a 2020** no soportan atender desde Bluetooth. En ese caso: 
+     • Atender la llamada directamente en el teléfono. \
+     • Pulsar luego ON AIR en el canal correspondiente. La llamada queda RETENIDA. \
      • Proseguir con la operación normal (ver a continuación).
    </Info>
 4. Para hablar en privado: **mantener pulsado** **CUE** (envía micrófono de órdenes y silencia monitoreo de control). Al soltar CUE, se vuelve al estado previo (la función talkback no cambia el estado de CUE). Con CUE encendido escuchamos a quién está al otro lado de la línea.
 5. Para poner al aire: pulsar **ON AIR** y subir el fader.
 6. Para volver a retener la línea, pulsar ON AIR nuevamente.
-
    <Tip>
      Recordar que el teléfono móvil puede retomar la llamada desconectando el dispositivo Bluetooth, y devolverla a la consola reconectando Bluetooth.
    </Tip>
@@ -200,7 +197,7 @@ El teléfono está conectado a la consola vía Bluetooth.
   - Hacer la llamada y <u>luego activar/conectar Bluetooth</u> en el móvil. Si Bluetooth estaba desactivado, normalmente se reconectará a UNIDEX al activarlo. Si en el móvil Bluetooth está activado pero no conectado, conectarlo seleccionando el dispositivo UNIDEX en la lista de dispositivos.
   - También se puede <u>activar Bluetooth antes</u> de realizar la llamada y una vez conectado a la consola, discar.
 
-### Comunicaciones desde software externo
+## Comunicaciones desde software externo
 
 En los últimos años se popularizaron las llamadas de voz y videollamadas por Internet (WhatsApp, Discord, Zoom, Google Meet, etc.).
 
@@ -210,7 +207,7 @@ En los últimos años se popularizaron las llamadas de voz y videollamadas por I
    - El operador puede usar **CUE en modo talk-back** (manteniendo pulsado) para hablar en privado con el software, igual que con una línea TELCO.
    - Es posible integrar estas comunicaciones en **conferencia** con una o más líneas TELCO.
 
-### Operación con líneas terrestres
+## Operación con líneas terrestres
 
 #### Llamada entrante
 
@@ -218,7 +215,6 @@ En los últimos años se popularizaron las llamadas de voz y videollamadas por I
 2. Atender:
    - Pulsando **CUE/SELECT** en el canal.
    - Tocando **HOLD** en la pantalla.
-
      <Note>
        Al atender, queda tomada la línea y la llamada en HOLD. El audio de la línea no sale al aire pero quien llama escucha la señal de programa.
      </Note>
@@ -235,20 +231,17 @@ En los últimos años se popularizaron las llamadas de voz y videollamadas por I
 
 1. Pulsar **TELCO**.
 2. Seleccionar línea terrestre.
-3. Tocar \*\*DIAL \*\*para acceder al telcado de discado. Esta acción **toma la línea**, que queda en HOLD. El tono de discado se escucha por el circuito CUE.
+3. Tocar DIAL para acceder al telcado de discado. Esta acción **toma la línea**, que queda en HOLD. El tono de discado se escucha por el circuito CUE.
 4. **Marcar el número**. Los números son discados directamente a medida que se introducen.
 5. Hablar en privado por CUE.
 6. Proceder como en llamada entrante.
-
    <Danger>
-     \*\*Importante: \*\*No exceder el nivel de envío a la línea para evitar realimentación a través del híbrido.
+     **IMPORTANTE**\
+     No exceder el nivel de envío a la línea para evitar realimentación a través del híbrido.
    </Danger>
 
 <Info>
+  **SOBRE EL NIVEL DE AUDIO AL AIRE**
+
   Una comunicación telefónica no siempre debe alcanzar 0VU para igualar la sonoridad de las voces del estudio _picando_ a igual nivel. Los graves, que portan la mayor carga de energía, producen mayor desviación en los indicadores, pero no están presentes en el audio de la línea telefónica. Para el oído, la sonoridad queda definida por el rango de frecuencias medias. Si se observa que el vúmetro “pica más bajo” con línea telefónica respecto a las voces de estudio, esto no significa que “se escucha más bajo”. Además, el procesador de audio de transmisión se encargará de igualar ambas señales.
 </Info>
-
-### Llamadas remotas con UDX-Producer
-
-Permite que un operador remoto transfiera llamadas a la consola en modo HOLD.\
-Si el control vuelve a la consola, el UDX-Producer pasa a modo pasivo y las llamadas entran directamente a TELCO.
