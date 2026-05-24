@@ -21,14 +21,12 @@ La expansión **UDX 2TEL** permite conectar **dos líneas telefónicas terrestre
 Todas las funciones de comunicación (discar, atender, poner en espera, dialogar en previo) se operan **desde la consola**.\
 Cada línea telefónica funciona de forma **independiente** sobre un canal.
 
----
-
 ## Conexión de UDX 2TEL
 
 La conexión se realiza con dos cables estándar **STP RJ45–RJ45** conectados **pin a pin** (modelos Solidyne **SOL-P50** o **SOL-P25**).
 
 - **Salida “TO UNIDEX INPUT”** → Conectar a una **entrada UNIDEX** (1 a 4)
-- **Entrada “FROM UNIDEX OUTPUT”** → Conectar a una **salida analógica no balanceada** 
+- **Entrada “FROM UNIDEX OUTPUT”** → Conectar a una **salida analógica no balanceada**
 
 El siguiente diagrama muestra la conexión de UDX 2TEL a una consola UX24.
 
@@ -52,6 +50,76 @@ El siguiente diagrama muestra la conexión de UDX 2TEL a una consola UX24.
 | UNIDEX 2 | UNBAL 6 | UNBAL 2 |
 | UNIDEX 3 | UNBAL 7 | UNBAL 3 |
 | UNIDEX 4 | UNBAL 8 | UNBAL 4 |
+
+## Configuraciones
+
+Una vez conectado el adaptador **UDX 2TEL** configure:
+
+- **Entradas**
+- **Salidas (envíos)**
+- **Canales**
+
+### Configurar entradas
+
+<Note>
+  La distribución y forma de los controles que se muestran a continuación pueden variar. Esto no altera el procedimiento de configuración.
+</Note>
+
+1. En la pantalla principal, acceder a la opción `SETTINGS`.
+2. **Girar el encoder** hasta seleccionar el **canal “L”** de la entrada UNIDEX a la que se conectó UDX  2TEL. "L" corresponde al LINEA A de UDX 2MIC mientras que "R" es la LINEA B.
+3. Tocando la pantalla, configurar `INPUT MODE` en `MONO`.
+4. En la opción `UDX TYPE` elegir `2TEL`
+5. Tocando la pantalla, desplegar el menú `ASSIGNED TO CHANNEL` para asignar un CANAL a la entrada. Si se elige un canal que ya tiene asignada una entrada, aparecerá una advertencia. Si se continúa, la entrada en ese canal es reemplazada.
+   <Warning>
+     Se recomienda asignar las líneas TELCO a canales físicos.
+   </Warning>
+6. En la sección `PROCESS `se puede predefinir una ecualización y/o compuerta de ruido.
+7. Pulsar `BACK `para volver a pantalla principal.
+8. El siguiente paso será configurar la salida.
+
+<img
+  src="/images/ux24/udx-2tel-entradas.svg"
+  alt="Udx 2tel Entradas Sv"
+  title="Udx 2tel Entradas Sv"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+### Configurar salidas
+
+1. Desde la pantalla principal, acceder a la opción `SETTINGS`.
+2. En `SETTINGS `elegir la opción `OUTPUTS`.
+3. Girarndo el encoder seleccionar canal “L” de la salida a la cual se conectó UDX 2TEL. OUT-L =  UDX 2TEL Línea A OUT-R =  UDX 2TEL  Línea B
+4. En la opción `AUDIO MODE`, definir la salida como **MONO**.
+5. Configurar `SEND MODE` en `MIX-MINUS`. Al activar MIX-MINUS la salida quedará asociada a la entrada UNIDEX que le corresponda.
+6. Repetir la operación para la Línea B.
+
+<Tip>
+  El **nivel de envío** a la línea (OUT GAIN) y la**ganancia de entrada**  se pueden ajustar **durante la operación** desde la pantalla TELCO.
+</Tip>
+
+<img
+  src="/images/ux24/udx2tel-salidas.svg"
+  alt="Udx2tel Salidas Sv"
+  title="Udx2tel Salidas Sv"
+  className="mx-auto"
+  style={{ width:"64%" }}
+/>
+
+### Configuración del canal
+
+1. En pantalla principal, pulsar `CHANNEL`. Los botones `CUE `cambian a modo `SELECT`.
+2. Pulsar el botón `CUE/SELECT` en el canal a configurar. La consola sale de modo `SELECT` y muestra la pantalla `CHANNEL `del canal seleccionado.
+3. En la opción `MODE`, desplegar el menú y elegir `TELCO`.
+4. Para editar la **etiqueta**, tocar sobre el nombre. Aparecerá un teclado en pantalla para ingresar el texto.
+5. Verificar que la asignación de salida indique la salida correspondiente a la entrada utilizada, y que el modo sea MIX-MINUS.
+6. Pulsar `BACK `para volver a la pantalla principal.
+
+<Warning>
+  PARA ALMACENAR DE MANERA DEFINITIVA LOS AJUSTES, **GUARDE LA ESCENA**.
+</Warning>
+
+---
 
 ## Conexión a líneas telefónicas
 
@@ -85,76 +153,6 @@ Los adaptadores **UDX TEL** incluyen:
 
 <tierras />
 
-## Configuraciones
-
-Una vez conectado el adaptador **UDX 2TEL** (o **TEL\+BT**), configure:
-
-- **Entradas**
-- **Salidas (envíos)**
-- **Canales**
-
-### Configurar entradas
-
-<Note>
-  La distribución y forma de los controles que se muestran a continuación pueden variar. Esto no altera el procedimiento de configuración.
-</Note>
-
-1. En la pantalla principal, acceder a la opción **SETTINGS**.
-2. **Girar el encoder** hasta seleccionar el **canal “L”** de la entrada UNIDEX a la que se conectó UDX  2TEL. "L" corresponde al LINEA A de UDX 2MIC mientras que "R" es la LINEA B.
-3. Tocando la pantalla, configurar**INPUT MODE**  en  **MONO.**
-4. En la opción \*\*UDX TYPE \*\*elegir **2TEL**
-5. Tocando la pantalla, desplegar el menú **ASSIGNED TO CHANNEL** para asignar un CANAL a la entrada. Si se elige un canal que ya tiene asignada una entrada, aparecerá una advertencia. Si se continúa, la entrada en ese canal es reemplazada.
-   <Warning>
-     Se recomienda asignar las líneas TELCO a canales físicos.
-   </Warning>
-6. En la sección \*\*PROCESS \*\*se puede predefinir una ecualización y/o compuerta de ruido.
-7. Pulsar BACK para volver a pantalla principal.
-8. El siguiente paso será configurar la salida.
-
-<img
-  src="/images/ux24/udx-2tel-entradas.svg"
-  alt="Udx 2tel Entradas Sv"
-  title="Udx 2tel Entradas Sv"
-  className="mx-auto"
-  style={{ width:"60%" }}
-/>
-
-### Configurar salidas
-
-1. Desde la pantalla principal, acceder a la opción **SETTINGS**.
-2. En SETTINGS elegir la opción **OUTPUTS**.
-3. Girarndo el encoder seleccionar canal “L” de la salida a la cual se conectó UDX 2TEL.
-   OUT-L =  UDX 2TEL Línea A
-   OUT-R =  UDX 2TEL  Línea B
-4. En la opción **AUDIO MODE**, definir la salida como **MONO**.
-5. Configurar **SEND MODE** en **MIX-MINUS**. Al activar MIX-MINUS la salida quedará asociada a la entrada UNIDEX que le corresponda.
-6. Repetir la operación para la Línea B.
-
-<Tip>
-  El **nivel de envío** a la línea (OUT GAIN) y la**ganancia de entrada**  se pueden ajustar **durante la operación** desde la pantalla TELCO.
-</Tip>
-
-<img
-  src="/images/ux24/udx2tel-salidas.svg"
-  alt="Udx2tel Salidas Sv"
-  title="Udx2tel Salidas Sv"
-  className="mx-auto"
-  style={{ width:"64%" }}
-/>
-
-### Configuración del canal
-
-1. En pantalla principal, pulsar **CHANNEL**. Los botones CUE cambian a modo SELECT.
-2. Pulsar el botón **CUE/SELECT** en el canal a configurar. La consola sale de modo SELECT y muestra la pantalla CHANNEL del canal seleccionado.
-3. En la opción **MODE**, desplegar el menú y elegir **TELCO**.
-4. Para editar la **etiqueta**, tocar sobre el nombre. Aparecerá un teclado en pantalla para ingresar el texto.
-5. Verificar que la asignación de salida indique la salida correspondiente a la entrada utilizada, y que el modo sea MIX-MINUS.
-6. Pulsar BACK para volver a la pantalla principal.
-
-<Warning>
-  PARA ALMACENAR DE MANERA DEFINITIVA LOS AJUSTES, **GUARDE LA ESCENA**.
-</Warning>
-
 ## Ajuste del rechazo (Null)
 
 Es fundamental ajustar el **factor de rechazo** o _null_ para cada línea telefónica.
@@ -173,8 +171,7 @@ Este ajuste se aplica a las cajas:
 
 1. Pulsar botón **TELCO** para acceder a pantalla de operación de Telecomunicaciones.
 2. Establecer una llamada (puede ser saliente o entrante). Del otro lado de la línea se deberá silenciar el micrófono del teléfono.
-3. En la sección \*\*CONFIG \*\*de la pantalla TELCO pulsar ENTER **Null Adjust**. La consola inyecta un tono de ajuste en la línea telefónica. El nivel con el que retorna se visualiza en INPUT LEVEL.
-   No es necesario que la línea esté en el aire (el atenuador puede estar cerrado).
+3. En la sección `CONFIG` de la pantalla `TELCO `pulsar `ENTER Null Adjust`. La consola inyecta un tono de ajuste en la línea telefónica. El nivel con el que retorna se visualiza en `INPUT LEVEL`. No es necesario que la línea esté en el aire (el atenuador puede estar cerrado).
 4. El rechazo se ajusta desde la caja UDX 2TEL. cada línea tiene un preset de ajuste.
 5. Usando un perillero, girar suavemente el preset en un sentido y el otro hasta encontrar el punto en que el retorno de la señal mostrado en el indicador sea mínimo.
 6. Una vez ajustado el rechazo, corte la comunicación.
