@@ -1,56 +1,61 @@
-# Solidyne MDX Translation Pipeline (V3)
+# Solidyne MDX Translation Pipeline (V3) – Actualizado a Mayo 2026
 
-## Overview
+## Resumen
 
-This document describes the automated MDX translation pipeline used to translate Spanish documentation (`/docs/es`) into multiple target languages while preserving:
+Este documento describe el pipeline automatizado usado para traducir documentación MDX en español (`/docs/es`) a múltiples idiomas destino, con preservación de:
 
-* MDX structural integrity
-* JSX components
-* Frontmatter consistency
-* Hash-based change detection
-* Safe batch processing
-* Truncation detection and auto-continuation
-* Terminology control via language glossaries
+* Integridad estructural MDX
+* Componentes JSX
+* Consistencia de frontmatter (metadatos de traducción)
+* Control hash para detección de cambios
+* Procesamiento seguro en batch
+* Detección y control de truncamiento automático
+* Control de terminología vía glosarios por idioma
 
-The system is designed for:
+El sistema está diseñado para:
 
-* Manual review after translation
-* Incremental updates
-* Multi-language documentation
-* Future automation (event-driven updates)
+* Revisión manual post-traducción
+* Actualizaciones incrementales
+* Soporte multi-idioma
+* Futura automatización basada en eventos
+
+> **Importante:** El script requiere una clave de acceso (`OPENROUTER_API_KEY`) a la API de OpenRouter para funcionar. Se usa por defecto el modelo configurado en el script; actualmente:  
+> `deepseek/deepseek-chat` (puede cambiarse editando la variable `MODEL` en el script).
 
 ---
 
-# 1. Architecture
+# 1. Arquitectura
 
-## Source Structure
+## Estructura de carpetas fuente y traducciones
 
 ```
 docs/
 ├── es/
-│   └── <equipment>/
-│       ├── file1.mdx
-│       └── subfolder/
-│           └── file2.mdx
+│   └── <equipo>/
+│       ├── arch1.mdx
+│       └── subcarpeta/
+│           └── arch2.mdx
 │
 ├── en/
-│   └── <equipment>/
+│   └── <equipo>/
 │
 └── pt/
-    └── <equipment>/
+    └── <equipo>/
 ```
 
-The script:
+El script realiza:
 
-* Recursively scans `/docs/es/<equipment>`
-* Replicates folder structure under the target language directory
-* Translates only when required (hash-based)
-* Injects translation metadata into frontmatter
-* Supports multiple target languages
+* Escaneo recursivo de `/docs/es/<equipo>`
+* Replica la estructura de carpetas para cada idioma destino
+* Traduce solo donde es necesario (según hash)
+* Inyecta metadatos de traducción en el frontmatter
+* Soporta múltiples idiomas destino definidos en el script
+
+> **Importante:** Actualmente solo se soporta **español** como idioma fuente.
 
 ---
 
-# 2. Script Location
+# 2. Ubicación y archivos relevantes del pipeline
 
 ```
 scripts/
@@ -64,15 +69,15 @@ scripts/
 
 ---
 
-# 3. Supported Languages
+# 3. Idiomas soportados y modelo de traducción
 
-Languages are defined in the script:
+Los idiomas destino están definidos en el script:
 
 ```javascript
 const SUPPORTED_LANGS = ["en", "pt"];
 ```
 
-Language naming for prompts is controlled by:
+El mapeo destino para los prompts es:
 
 ```javascript
 const LANGUAGE_MAP = {
@@ -81,31 +86,45 @@ const LANGUAGE_MAP = {
 };
 ```
 
-Notes:
+* El nombre de la carpeta sigue siendo `pt`.
+* La traducción es explícitamente **Portugués Brasil (pt-BR)**.
+* El modelo utilizado por defecto se define en la variable:
+  ```javascript
+  const MODEL = "deepseek/deepseek-chat";
+  ```
+  Cambia esta línea para utilizar otro modelo disponible en OpenRouter.
 
-* The folder name remains `pt`
-* The translation target is explicitly **Brazilian Portuguese (pt-BR)**
-
-This prevents Portuguese-Portugal terminology from appearing.
+> Verifica la [lista oficial de modelos soportados](https://openrouter.ai/models).
 
 ---
 
-# 4. Translation Workflow
+# 4. Requisitos previos
 
-## Command
+1. Define y exporta tu `OPENROUTER_API_KEY` antes de ejecutar el script.
+   ```bash
+   export OPENROUTER_API_KEY=tu_api_key
+   ```
+2. Requiere Node.js v18+ y dependencias (`npm install` según package.json).
+3. El nombre de la carpeta fuente debe contener `/es/` para detectar correctamente la estructura.
+
+---
+
+# 5. Ejecución y opciones
+
+## Comando principal
 
 ```
-node translate-folder.mjs <source-folder> <target-language>
+node translate-folder.mjs <carpeta-fuente> <idioma-destino>
 ```
 
-Example:
+Ejemplos:
 
 ```
 node translate-folder.mjs docs/es/unidex en
 node translate-folder.mjs docs/es/unidex pt
 ```
 
-Translate all supported languages:
+Para traducir a todos los idiomas disponibles:
 
 ```
 node translate-folder.mjs docs/es/unidex all
@@ -113,72 +132,48 @@ node translate-folder.mjs docs/es/unidex all
 
 ---
 
-## Optional Flags
+## Flags soportadas
 
 ```
 --dry-run
 --force
---only-new
---only-changed
+--only-new   (No implementado)
+--only-changed   (No implementado)
 ```
 
-### dry-run
+### Descripción de flags
 
-Simulates execution without calling the API.
-
-Useful to validate:
-
-* paths
-* file detection
-* language selection
+- **--dry-run:** Simula la ejecución sin llamar a la API. Útil para validar rutas, archivos y selección de idiomas.
+- **--force:** Fuerza la retraducción de todos los archivos aunque el hash no haya cambiado.
+- **--only-new/--only-changed:** *Actualmente no implementadas*, aunque aparecen en el script. No afectan la lógica.
 
 ---
 
-## Default Mode
+## Modo de traducción por defecto
 
-A file is translated when:
+Un archivo se traduce cuando:
 
-* It does not exist in the target language folder
-* OR the stored `source_hash` differs from the current ES file
-
----
-
-# 5. Hash System
-
-## What is a hash?
-
-A **hash** is a cryptographic fingerprint of a file's content.
-
-We use:
-
-```
-SHA-256
-```
+* No existe en la carpeta de destino
+* **O** el `source_hash` guardado en el archivo traducido **no coincide** con el hash actual del archivo fuente en español
 
 ---
 
-## Purpose
+# 6. Sistema de hash
 
-* Detect content changes in Spanish source files
-* Avoid unnecessary re-translation
-* Enable incremental update logic
+## ¿Para qué se usa el hash?
 
----
+Un **hash SHA-256** se calcula del contenido del archivo fuente en español y se inserta en el frontmatter del archivo traducido.
+Esto permite:
 
-## How it works
-
-1. Spanish file content is hashed
-2. Hash is stored in translated frontmatter
-3. On next run:
-
-* If hash unchanged → file skipped
-* If hash changed → file re-translated
+* Detectar cambios en el original
+* Evitar retraducciones innecesarias
+* Soportar actualizaciones incrementales
 
 ---
 
-# 6. Translation Metadata (Frontmatter)
+# 7. Metadatos de traducción (frontmatter)
 
-Every translated file contains:
+Cada archivo traducido incluye:
 
 ```yaml
 translation:
@@ -188,215 +183,125 @@ translation:
   version: 0
   reviewed_by: ""
   reviewed_at: ""
-  source_hash: "08227fc2834f4cffca04b80527394122614fbccb5828776afb4212f39b4bee68"
+  source_hash: "..."
 ```
+
+**Notas:**
+- `version`, `reviewed_by` y `reviewed_at` deben mantenerse manualmente al revisar traducciones. El script *no* incrementa ni actualiza estos campos.
+- No edites manualmente `source_hash`: se genera automáticamente.
 
 ---
 
-# 7. Frontmatter Field Definitions
+# 8. Definición de los campos de metadatos
 
-## source_lang
+- **source_lang**: `"es"`
+- **target_lang**: `"en"` o `"pt"`
+- **status**:  
+  - `"draft"` — traducción automática, pendiente de revisión  
+  - `"reviewed"` — validada por humano  
+  - `"updated"` — regenerada tras un cambio en el original
 
-Language of original document.
+- **version**:  
+  Un entero que marca el ciclo de revisión humana (0: auto, 1: primera revisión, etc.)
 
-```
-"es"
-```
+- **reviewed_by**:  
+  Identificador del revisor.
 
----
+- **reviewed_at**:  
+  Fecha en formato ISO (YYYY-MM-DD).
 
-## target_lang
-
-Target language of the translation.
-
-Examples:
-
-```
-"en"
-"pt"
-```
+- **source_hash**:  
+  Hash SHA-256 del archivo fuente en español.
 
 ---
 
-## status
+# 9. Glosario por idioma
 
-Allowed values:
+Cada idioma destino puede tener su glosario con:
 
-```
-draft
-reviewed
-updated
-```
+* Traducciones preferidas
+* Términos a evitar
+* Términos técnicos no traducibles
 
-### Meaning
-
-**draft**
-
-Machine translated.
-Pending human review.
-
-**reviewed**
-
-Human validated translation.
-
-**updated**
-
-Source document changed and translation was regenerated.
-
----
-
-## version
-
-Integer.
-
-Tracks the number of **human revision cycles**.
-
-Example:
-
-```
-0 → initial machine translation
-1 → first human revision
-2 → second human revision
-```
-
----
-
-## reviewed_by
-
-String identifier of reviewer.
-
-Example:
-
-```
-reviewed_by: "JPD"
-```
-
----
-
-## reviewed_at
-
-ISO-8601 date format (mandatory):
-
-```
-YYYY-MM-DD
-```
-
-Example:
-
-```
-reviewed_at: "2026-02-21"
-```
-
-Do NOT use:
-
-```
-21/02/2026
-Feb 21, 2026
-02-21-26
-```
-
-Always use ISO format.
-
----
-
-## source_hash
-
-SHA-256 hash of the original Spanish document.
-
-Generated automatically by the script.
-
-**Do not edit manually.**
-
----
-
-# 8. Glossary System
-
-Language glossaries provide **terminology control** for translations.
-
-Example location:
+Ejemplo de ubicación:
 
 ```
 scripts/glossaries/pt.yml
 ```
 
-The glossary contains:
-
-* preferred translations
-* avoided terms
-* non-translatable technical terms
-* broadcast and audio terminology
-
-During execution:
-
-1. The YAML glossary is loaded
-2. Converted to a simplified table
-3. Injected into the translation prompt
-
-Example prompt structure:
-
-```
-TRANSLATION RULES
-+ GLOSSARY
-+ TRANSLATION INSTRUCTION
-```
-
-This ensures consistent terminology across the documentation.
+La estructura simplificada será incluida automáticamente en los prompts para una traducción consistente.
 
 ---
 
-# 9. Truncation Control System
+# 10. Protección frente a truncamientos del modelo
 
-The pipeline includes robust protection against LLM truncation.
-
-## Problems Observed
-
-Large outputs may occasionally produce placeholder fragments such as:
+Para archivos grandes, el script detecta respuestas truncadas como:
 
 ```
 [Continued in next part due to length...]
-```
-
-or
-
-```
 [Content continues with same careful translation...]
 ```
 
-These indicate incomplete output.
+El pipeline:
+
+* Detecta esos casos
+* Solicita continuación y une hasta **3 partes**
+* Limpia los artefactos de truncamiento
+* Garantiza no guardar archivos incompletos
+* Registra cualquier error en el reporte JSON
 
 ---
 
-## Protection Mechanism
+# 11. Validaciones y postprocesado
 
-The script automatically:
+Tras la traducción, el script:
 
-1. Detects truncation markers
-2. Requests continuation from the model
-3. Merges additional segments
-4. Allows up to **3 output parts**
-5. Removes placeholder artifacts
-
-This ensures:
-
-* No incomplete MDX is silently saved
-* Batch integrity is preserved
-* Errors remain visible in JSON reports
+* Ejecuta utilidades de postprocesado (`postProcessMdx`) para corregir enlaces internos y snippets
+* Valida la estructura MDX (`validateMdx`)
+* Todas las advertencias aparecen en consola y reporte
 
 ---
 
-# 10. Token Usage
+# 12. Reportes de ejecución
 
-Typical metrics:
+Después de cada corrida, se genera un archivo JSON en `scripts/reports` con el resumen de la traducción:
 
+- Nombre del modelo utilizado
+- Duración total
+- Archivos traducidos, omitidos, con error, y total
+
+Ejemplo:
 ```
-3,000 – 4,000 tokens per file
-≈ $0.04 – $0.06 per file
-```
-
-Estimated full batch:
-
-```
-~237 files ≈ $10–15 USD
+scripts/reports/translate-report_<carpeta>_<idioma>_<fecha>.json
 ```
 
-Translation rules are in
+---
+
+# 13. Limitaciones conocidas
+
+- Las flags `--only-new` y `--only-changed` **no tienen efecto real**.
+- La estructura fuente debe contener `/es/` en el path para detectar correctamente la raíz de destino.
+- El incremento de versión/revisión debe hacerse manualmente al revisar traducciones.
+
+---
+
+# 14. Métricas típicas de uso
+
+```
+3,000 – 4,000 tokens por archivo
+≈ $0.04 – $0.06 USD por archivo
+```
+Batch completo típico:
+```
+~237 archivos ≈ $10–15 USD
+```
+
+---
+
+# 15. Notas finales
+
+- Edita la variable `MODEL` en el script para cambiar el modelo de traducción activo.
+- Si aparecen problemas con el modelo, verifica en [OpenRouter Models](https://openrouter.ai/models) qué modelos están habilitados para tu cuenta/API Key.
+- Verifica las advertencias en consola y en los reportes JSON.
+
+---

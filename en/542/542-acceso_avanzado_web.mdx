@@ -1,105 +1,104 @@
 ---
 title: "WEB Control Interface"
-description: "Access, configuration and settings from the web interface"
+description: "Access, configuration, and settings through the web interface"
 keywords: ["web interface", "monitoring", "setup", "presets", "sound wizard", "FM Receiver", "MPX", "modulation", "advanced configuration", "password"]
+tags: ["processors", "542"]
 translation:
   source_lang: "es"
+  target_lang: "en"
   status: "draft"
   version: 0
   reviewed_by: ""
   reviewed_at: ""
-  source_hash: "09cbcbfb8d37c3b5beddb77b232065b1ebf86e72a4a5618b9ce0e0d154cf8153"
+  source_hash: "770dc33bbccc527cd5e22068c8c0303f4df26765c66b238fec41e43af7cd6d41"
 
 ---
 
 <Icon icon="link-simple" iconType="solid" color="#0a00ff" size={22} />  [How to configure WEB access](/en/542/542-instalacion-web)
 
-## Initial MONITORING Screen
+## Initial MONITORING screen
 
-When accessing the processor via network, the web control interface displays **monitoring screens** that show the action and current status of the different stages of the equipment.
+When accessing the processor via the network, the web control interface displays **monitoring screens** showing the action and current status of the various equipment stages.
 
 ![542 Web Home Pn](/images/542/542-web-home.png)
 
-- These screens **do not allow configuration modifications**.
-- To edit parameters, it is necessary to activate **SETUP mode** by pressing the button located in the upper right corner of the window.
+- These screens **do not allow configuration edits**.
+- To modify parameters, you must activate **SETUP mode** by pressing the button located in the top-right corner of the window.
 
-The monitoring screens are organized in sections that can be **expanded or collapsed** by clicking the icon (±):
+Monitoring screens are organized into sections that can be **expanded or collapsed** by clicking the (±) icon:
 
-1. General Monitoring (_fixed section_)
-2. Presets and Sound Wizards
-3. FM Receiver – Monitor Analyzer
-4. Audio Inputs and Outputs
-5. Time Graph
+1. General monitoring (_fixed section_)
+2. Presets and Sound Wizards  
+3. FM Receiver – Monitor Analyzer  
+4. Audio Inputs and Outputs  
+5. Time Graph  
 
 ### _General Monitoring_ Section
 
-The upper section is **fixed** and remains visible in all modes (MONITORING and SETUP).
+The top section is **fixed** and remains visible in all modes (MONITORING and SETUP).
 
 Includes:
-
-- Active **input level** (RMS and peaks in dBFS).
-- **Process** action indicators:
-  - Enhancers status (active/inactive).
+- **Input level** of the active signal (RMS and peaks in dBFS).
+- **Processing action** indicators:
+  - Enhancer status (active/inactive).
   - AGC action (dB).
-  - Compressors and limiters attenuation (dB).
-  - Wideband clipper and limiter status (dB).
-  - MPX clipper (dB).
-- Audio **output levels**:
+  - Compressor and limiter attenuation (dB).
+  - Clipper and broadband limiter status (dB).
+  - MPX clipper (dB).  
+- **Audio output levels**:
   - Dual peak and RMS level indicator.
-  - Loudness levels according to EBU-R128 standard.
+  - Loudness levels per EBU-R128 standard.
 
 The top row displays:
-
-- Equipment **IP** address.
-- Signal source and headphone volume.
-- Current user (for password access control).
-- Button to switch to **SETUP** mode.
+- Equipment **IP** address.  
+- Signal source and headphone volume.  
+- Current user (for password access control).  
+- Button to switch to **SETUP mode**.  
 
 ---
 
 ### _Preset and Sound Wizard_ Section
 
-Shows the **current processing preset** and simplified **Wizard** controls, which allow quick customization of the sound character.
+Displays the **current processing preset** and simplified **Wizard** controls that allow quick customization of the sound character.
 
-- The user can change presets and adjust basic parameters (brightness, bass, compression, loudness).
-- With the **CLICK HERE TO EDIT** option, you access **SETUP** mode to save changes or create new presets.
+- Users can switch presets and adjust basic parameters (brightness, bass, compression, loudness).  
+- The **CLICK HERE TO EDIT** option opens **SETUP mode** to save changes or create new presets.  
 
 ---
 
 ### _FM Receiver – Monitor Analyzer_ Section
 
-Displays the main parameters of FM transmission analysis. Advanced receiver configuration and detailed reports are available in **SETUP** mode, **FM Receiver** menu option.
+Displays key parameters of FM transmission analysis. Advanced receiver configuration and detailed reports are available in **SETUP mode** under the **FM Receiver** menu option.  
 
 ---
 
 ### _Audio Inputs and Outputs_ Section
 
-Shows level indicators for:
-
+Displays level indicators for:
+ enrolling
 - Audio inputs.
 - Audio outputs.
-- **MPX1** and **MPX2** composite outputs.
+- Composite **MPX1** and **MPX2** outputs.
 
 ---
 
 ### _Time Graph_ Section
 
-Graph showing **modulation evolution over time**.\
+Graph showing the **evolution of modulation over time**.\  
 Allows switching between:
+- MPX level.  
+- Modulation measured by the FM receiver.  
+- MPX power per **ITU BS412**.  
 
-- MPX level.
-- Modulation measured by FM receiver.
-- MPX power according to **ITU BS412**.
+## Advanced access to configuration and adjustments
 
-## Advanced Access to Configuration and Settings
+The **SETUP** button at the top of the screen allows **editing the parameters and settings** of the **542APC processor**.
 
-The **SETUP** button, located at the top of the screen, allows **editing parameters and settings** of the **542APC** processor.
-
-- Access to this mode can be **password** protected.
-- Upon entry, a **drop-down side menu** appears on the left side of the screen, from where all adjustment and configuration instances are accessed.
+- Access to this mode may be **password-protected**.
+- Upon entering, a **collapsible side menu** appears on the left, providing access to all adjustment and configuration sections.
 
 <Info>
-  - Whenever an audio processing value is modified, **SAVE PRESET** must be pressed to retain the change. The SAVE option will flash while there are unsaved changes.
-  - **System configuration** changes are saved automatically.
-  - The **active processing preset** is a system value: each time it is changed, the setting is automatically saved.
+  - Whenever modifying an audio processing value, press **SAVE PRESET** to retain changes. The SAVE option will blink while unsaved changes exist.  
+  - **System configuration** changes are saved automatically.  
+  - The **active processing preset** is a system value: each time it's changed, the setting is saved automatically.  
 </Info>

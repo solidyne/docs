@@ -2,51 +2,53 @@
 title: "Equipment with AoIP Services"
 description: "Configuration of equipment with STREAMING and DANTE AoIP services"
 keywords: ["AoIP", "streamer", "RTP", "Icecast", "Dante"]
-tags: ["processors", "542/AoIP"]
+tags: ["processors", "542", "542/AoIP"]
+
 translation:
   source_lang: "es"
-  status: "reviewed"
-  version: 1
-  reviewed_by: "Spinelli"
-  reviewed_at: "2026-03-06"
-  source_hash: "a651d3878866ce439e98a8dc8d4cd5c82da555f3623c70eab1aaa7c367efeff8"
+  target_lang: "en"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "b71fd13ca97ebdb0447e4aa2a453fd0ede022f184971d42468893caf5e1e2a71"
 
 ---
 
 import discovery from '/snippets/discovery-en.mdx';
 
-## Features Overview
+## Feature Summary
 
-The 542APC series processors support two types of network audio expansion modules.
+The 542APC series processors support two types of expansions for audio handling over networks.
 
 <Warning>
-  - These options are mutually exclusive, they cannot be installed together.
-  - They can come factory-installed or be added after purchase.
-  - They are only supported by units with **serial numbers** starting with AD or later.
+  - These options are mutually exclusive and cannot be installed together.
+  - They can be factory-installed or added after purchase.
+  - They are only supported by equipment with **serial numbers** starting with AD or later.
 </Warning>
 
 ### 1. STREAMER Option (542APC /AoIP)
 
 Features:
 
-1. Outgoing RTP streaming (studio-transmitter link).
+1. Generation of an outgoing RTP stream (studio-transmitter link).
 2. Outgoing streaming to Icecast/Shoutcast servers.
-3. Incoming stream decoding (point-to-point link with transmitter site).
+3. Decoding of an incoming stream (point-to-point link with the transmitter).
 4. Remote audio monitoring via web.
-5. Simplified direct remote access through Internet, without requiring static IP or port forwarding.
+5. Simplified direct remote access over the internet, without the need for a static IP or port forwarding.
 6. Simplified firmware updates.
 
 ### 2. DANTE/AES67 Option (542APC /A67)
 
-2x2 Dante interface, designed for AoIP network connection in studios.
+Dante 2x2 interface, designed for AoIP network connections in studios.
 
 1. Stereo output of processed signal.
 2. Stereo input.
 
 ### Module Installation
 
-Expansion modules are sold separately. Although installation is straightforward, it requires disconnecting and opening the unit, so it is recommended to be performed by qualified technical personnel.
+Expansion modules are sold separately. Although installation is straightforward, it requires disconnecting and opening the equipment, so it is recommended to be performed by qualified technical personnel.
 
 <Info>
-  Refer to the _Optional Features and Disassembly Manual_.
+  Refer to the _Optional and Disassembly Manual_.
 </Info>

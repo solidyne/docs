@@ -1,15 +1,16 @@
 ---
 title: "System Settings"
 description: "System Settings"
-keywords: ["GPIO","security","password","network","reset"]
-tags: "processors,542"
+keywords: ["GPIO", "security", "password", "network","reset"]
+tags: ["processors", "542"]
 translation:
   source_lang: "es"
-  status: "reviewed"
-  version: 1
-  reviewed_by: "Spinelli"
-  reviewed_at: "20260428"
-  source_hash: "a3a4f6e085a33b94a0a77b9584bbd0322eee2631d04517b44f4d5ede11bb0025"
+  target_lang: "en"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "5e8ebd245430732bb96d4b589e614224f4a93a07e17a9f84e630ab89ee14b5a6"
 
 ---
 
@@ -20,12 +21,12 @@ translation:
 ### GPIO CONFIG
 
 - **GPI VOICE CHANGE PRESET**:\
-  When GPI is activated, it switches the processing preset.
+  When the GPI is activated, it switches the processing preset.
   - The trigger signal is generated in the Studio when microphones are enabled.
-  - It can reach the processor via **hardware** connection or **LAN** (/AoIP option models).
+  - It can reach the processor via **hardware** connection or **LAN** (models with /AoIP option).
   - The field on the right defines the preset to apply (default: **VOICE-LOUD**).
 - **GPO TRIGGER**:\
-  List of events that can trigger the GPO output:
+  List of events that can activate the GPO output:
   1. AUDIO SILENCE
   2. INPUT FAIL BACKUP
   3. OVERMODULATION
@@ -33,57 +34,55 @@ translation:
   5. FORCE FM MONO
 
 <Info>
-  See [GPIO connection](/en/unidex/instalacion-gpio) details
+  See details on [GPIO connection](/en/unidex/instalacion-gpio)
 </Info>
 
 ---
 
 ### SECURITY
 
-Allows enabling password protection by unchecking **Disable Password Protection** (default: enabled).
+Allows enabling a password by unchecking the **Disable Password Protection** option (default: enabled).
 
-- Default password: `1234`
-- To modify it, type in the **PASSWORD** field and press **APPLY**
-- Rules: up to **8 characters**, only **UPPERCASE** letters and numbers
+- Default password: `1234`.
+- To modify it, enter the new password in the **PASSWORD** field and press **APPLY**.
+- Rules: up to **8 characters**, only **UPPERCASE** letters and numbers.
 - **FRONT PANEL CHANGES (LOCK/UNLOCK)**:\
   Locks or enables access from the front panel.\
-  If locked, password is required to modify from the front panel.
+  If locked, the password is required to make changes from the front.
 
 ---
 
 ### NETWORK
 
-- Network configuration
-- Factory default: **DHCP** mode
-- A **static IP** can be assigned by disabling DHCP
-- IP address is shown on the unit's front panel or via LAN using **Solidyne Multi-Discovery** tool
+Network configuration.
+
+- Factory default: **DHCP enabled** mode.
+- A **static IP** can be assigned by disabling DHCP.
+- The IP address is displayed on the front panel or via LAN using the **Solidyne Multi-Discovery** tool.
 
 <Info>
-  For more details see [Ethernet Connection and Access](/en/542/542-instalacion-web)
+  For more details, see [Ethernet Connection and Access](/en/542/542-instalacion-web).
 </Info>
 
 ---
+
 ### User Interface
 
-- **LOUDNESS EBU REFERENCE**: Loudness reference level for general monitoring (default: 0 dBfs)
-- **AUTO-OPEN LEFT MENU**: Automatically expands the menu when mouse approaches
-- **ENABLE TOOLTIPS**: Activates help popup messages over controls and indicators
+- **LOUDNESS EBU REFERENCE**: Loudness reference level for general monitoring (default: 0 dBfs).
+- **AUTO-OPEN LEFT MENU**: Automatically expands the menu when hovering the mouse.
+- **ENABLE TOOLTIPS**: Enables help pop-up messages for controls and indicators.
 
 ---
 
 ### TECHNICAL REPORT
 
-Generates a report with equipment operating parameters and configuration.
+Generates a report with the equipment's operating parameters and configuration.
 
-- The report is saved to the browser's downloads folder
-- Can be sent to **technical support** for diagnostics
+- Pressing "DOWNLOAD" saves the report to the browser's downloads folder.
+- It can be sent to **technical support** for diagnostics.
 
 <Warning>
   **SYSTEM SOFTWARE RESET**
 
-  Restarting the unit may cause a brief on-air signal interruption.
+  Restarting the equipment may cause a brief interruption of on-air audio.
 </Warning>
-
-
----
-

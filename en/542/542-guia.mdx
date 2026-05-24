@@ -1,23 +1,25 @@
 ---
 title: "Quick Installation Guide"
-description: "Step by step setup guide"
+description: "Step-by-step setup instructions"
+tags: ["processors", "542"]
 translation:
   source_lang: "es"
+  target_lang: "en"
   status: "draft"
   version: 0
   reviewed_by: ""
   reviewed_at: ""
-  source_hash: "03792d79d4cd7f2a46a25694bccb11aa3028822dc3cc424aed31a96bd8942da5"
+  source_hash: "79fccf7873e9c0406a590652cd652c2af4a4639adef438bdf36b3fe904af2126"
 
 ---
 
 <Steps>
-  <Step title="Power Supply and Startup" stepNumber={1} titleSize="h3">
+  <Step title="Power Supply and Power On" stepNumber={1} titleSize="h3">
     Before plugging in the unit:
 
-    - Check the **mains voltage selector** position on the rear panel (200/240V or 100/130V).
-    - Use the supplied **three-pin Interlock cable**.
-    - Ensure proper **ground connection**.
+    - Verify the position of the **mains voltage selector** (200/240V or 100/130V) on the rear panel.
+    - Use the supplied **three-pin Interlock power cable**.
+    - Ensure **proper grounding**.
     - The unit has a **power switch** on the rear panel.
 
     <Danger>
@@ -29,70 +31,70 @@ translation:
 
     The front panel includes a **control wheel**:
 
-    - Turn the wheel to select options and change values.
+    - Rotate the wheel to select options and change values.
     - Press the wheel to confirm a value or access an option.
 
     <Info>
-      The display shows status menus, active inputs, gain settings and audio presets.
+      The display shows status menus, active inputs, gain settings, and audio presets.
     </Info>
     **Remote control via WEB interface:**
 
-    - Connect the 542APC **Ethernet** port to the local network using a standard UTP cable.
-    - The unit comes with **DHCP** enabled: the router will automatically assign an IP address.
-    - The IP address appears on the processor's **home screen**.
+    - Connect the **Ethernet** port of the 542APC to the local network using a standard UTP cable.
+    - Factory setting is **DHCP**: the router will automatically assign an IP address.
+    - The IP address appears on the processor's **startup screen**.
     - From a computer on the same network, open a web browser and enter the processor's IP address.
-    - The **web remote control home screen** will be displayed.
+    - The **web remote control home screen** will appear.
     - To edit options, go to **ADJUST** mode in the top right corner of the screen.
   </Step>
   <Step title="Input Connections" stepNumber={3} titleSize="h3">
     - Balanced analog (XLR) – default input.
-    - RJ45 analog – StudioHub® compatible.
-    - Digital AES3
+    - Analog RJ45 – compatible with StudioHub®.
+    - Digital AES3.
     - Audio stream (optional AoIP module).
   </Step>
-  <Step title="Input Setup" stepNumber={4} titleSize="h3">
-    - Analog inputs calibrated to **-18 dBfs** for nominal level of **+4 dBu**.
-    - With console at 0 VU, input signal peaks should be between **-22 and -9 dBfs**.
+  <Step title="Input Adjustment" stepNumber={4} titleSize="h3">
+    - Analog inputs calibrated to **–18 dBfs** for nominal level of **+4 dBu**.
+    - With the console at 0 VU, signal peaks at the input should be between **–22 and –9 dBfs**.
 
     <Note>
-      If needed, gain can be adjusted from the front panel.
+      If necessary, gain can be adjusted from the front panel.
     </Note>
     **Selecting an input (front panel)**
 
-    1. Turn the wheel to the **INPUT (VU meters)** screen.
+    1. Rotate the wheel to the **INPUT (VU meters)** screen.
     2. Press the wheel to access **active input**.
-    3. Turn the wheel and select desired input (e.g.: _2:ANALOG2_).
+    3. Rotate the wheel and select the desired input (e.g., _2:ANALOG2_).
     4. Press to confirm.
-    5. Active input is indicated by an arrow on the INPUT screen.
+    5. The active input is indicated by an arrow on the INPUT screen.
 
     **Changing input gain (front panel)**
 
-     1. Turn the wheel to **SETUP MENU** and press to enter.
-     2. Turn to select **IN** and press to enter input **SETUP**.
+     1. Rotate the wheel to **SETUP MENU** and press to enter.
+     2. Rotate to select **IN** and press to enter **INPUT SETUP**.
      3. Press to enter **INPUT SEL**.
-     4. Turn to choose an input and confirm.
+     4. Rotate to select an input and confirm.
      5. Select **GAIN** and press.
-     6. Adjust by turning the wheel (clockwise = more gain) verifying peaks are between **-22 and -9 dBFS**.
+     6. Adjust by rotating the wheel (clockwise = more gain), ensuring peaks stay between **–22 and –9 dBFS**.
      7. Press to confirm.
-     8. Turn to select **BACK** and confirm to exit menu.
-     9. Turn again to BACK and confirm to exit SETUP menu.
-    10. Changes are stored.
+     8. Rotate to select **BACK** and confirm to exit the menu.
+     9. Rotate again to BACK and confirm to exit the SETUP menu.
+    10. Changes are saved automatically.
   </Step>
   <Step title="Outputs" stepNumber={5} titleSize="h3">
-    **MPX Baseband**
+    **Baseband MPX**
 
-    - Stereo generator with **dual MPX output** with independent level.
-    - Connect to transmitter using coaxial cable (50 or 75 Ohms).
+    - Stereo generator with **dual MPX output** with independent levels.
+    - Connect to the transmitter with coaxial cable (50 or 75 Ohms).
 
-    **Balanced Audio**
+    **Balanced audio**
 
-    - Two stereo analog outputs: XLR and RJ45
+    - Two stereo analog outputs: XLR and RJ45.
     - Can deliver:
-      - Audio with 50/75 μS pre-emphasis
-      - De-emphasized audio (for streaming or repeaters).
+      - Audio with 50/75 μS pre-emphasis.
+      - De-emphasized audio (for streaming or translators).
 
     <Info>
-      Emphasis activation is done through the **Web Control**.
+      Emphasis activation is done via **Web Control**.
     </Info>
   </Step>
   <Step title="Tuner and Transmission Monitor" stepNumber={6} titleSize="h3">
@@ -102,78 +104,78 @@ translation:
     - **Modulation meter**
     - **Calibration tone generator**
 
-    **Reception Antenna**
+    **Reception antenna**
 
     - Connect the telescopic antenna (included) to the **FM ANT (BNC)** connector.
     - Two antennas are supplied:
-      - Telescopic (recommended at transmitter site).
+      - Telescopic (recommended at transmitter sites).
       - Fixed micro-antenna (when field strength is excessive).
   </Step>
   <Step title="Modulation Level" stepNumber={7} titleSize="h3">
-    **Calibration Tone**
+    **Calibration tone**
 
     1. From a browser (preferably Chrome), enter the **unit's IP**.
     2. Click the **SETUP** button (top right).
     3. In the side menu, select **FM Output (MPX)**.
-    4. Enable the **Calibrator**. Input audio is replaced by a sine wave.
-       - Pilot: 9% – RDS: 4% (factory values).
+    4. Activate the **Calibrator**. Input audio is replaced by a sine tone.
+       - Pilot: 9% – RDS: 4% (factory defaults).
 
-    **Modulation Adjustment**
+    **Modulation adjustment**
 
     1. In Web Control, go to **FM Receiver/Analyzer**.
-    2. Tune to the station frequency.
-    3. Check level on the **modulation meter**.
+    2. Tune to the station's frequency.
+    3. Check the level on the **modulation meter**.
     4. The **RxQTY** indicator should show **GOOD**.
     5. Adjust antenna orientation or type if reception is poor.
-    6. Adjust **MPX input level at transmitter** until desired modulation is achieved (100%).
+    6. Adjust the **MPX input level at the transmitter** until desired modulation is achieved (100%).
     7. Factory MPX output level: **5 Vpp** (adjustable via Web Control).
-    8. Turn off calibrator: input audio will resume normal modulation.
+    8. Turn off the calibrator: normal input audio modulation will resume.
   </Step>
-  <Step title="Sound Settings" stepNumber={8} titleSize="h3">
-    Listen to different factory PRESETS to set the sound that fits the station's needs. Tune in on a good audio system. You can listen using the 542APC's internal tuner (use good headphones).
+  <Step title="Sound Adjustments" stepNumber={8} titleSize="h3">
+    Listen to different factory PRESETS to select the sound that best fits your station's needs. Tune using a good audio system. You can also listen using the 542APC's internal tuner (use good headphones).
 
     The unit includes **factory presets** and user memories:
 
     - 16 fixed presets (non-modifiable).
-    - 16 user memories to create custom settings (from Web Control).
+    - 16 user memories to create custom settings (via Web Control).
 
-    ### Preset Selection (front panel)
+    ### Preset selection (front panel)
 
-    1. Turn the wheel to the **PROCESS** screen.
-    2. Press to change current preset.
-    3. Turn and select a new preset.
-    4. Press to confirm. On-air sound will gradually change to new setting.
+    1. Rotate the wheel to the **PROCESS** screen.
+    2. Press to change the current preset.
+    3. Rotate and select a new preset.
+    4. Press to confirm. The on-air sound will gradually transition to the new setting.
 
-    ### Sound Wizard (Web Control)
+    ### Sound Wizard (WEB control)
 
     Allows modifying any preset with 4 basic controls:
 
-    - Bright
-    - Bass
+    - Bright (highs)
+    - Bass (lows)
     - Compression/Density
     - Loudness
 
-    Additional stages (can be enabled/disabled):
+    Additional stages (enable/disable):
 
     - Parametric EQ
     - Bass enhancer
     - Stereo enhancer
   </Step>
-  <Step title="Remote Technical Support (RTS)" stepNumber={9} titleSize="h3">
-    The unit allows remote connection for factory support. \
+  <Step title="Remote Technical Assistance (RTA)" stepNumber={9} titleSize="h3">
+    The unit enables remote connection for factory support. \
     Steps (requires prior coordination with Support Team):
 
-    1. Connect the 542APC processor to **LAN** (control Ethernet).
+    1. Connect the 542APC processor to the **LAN** (control Ethernet).
     2. Install the **reception antenna**.
-    3. Verify access from a PC by entering the **IP in web browser**.
+    3. Verify access from a PC by entering the **IP in a web browser**.
     4. Download **TeamViewer QuickSupport** from:\
        https://get.teamviewer.com/solidynequick
     5. Run the `TeamViewerQS.exe` file.
-    6. The "Allow remote control" window will appear with direct chat with Support.
+    6. The "Allow remote control" window will appear with direct chat to Support.
 
-    ### Support Contact
+    ### Support contact
 
     - 📧 [soporte@solidyne.ar](mailto:soporte@solidyne.ar)
-    - 📱 WhatsApp: +54 9 11 3119-3254
+    - 📱 WhatsApp: \+54 9 11 3119-3254
   </Step>
 </Steps>

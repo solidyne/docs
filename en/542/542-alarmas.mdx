@@ -1,24 +1,28 @@
 ---
-title: "Alarms, Status and Logs"
-description: "Alarms and alerts configuration"
-keywords: ["alarms", "alerts", "warnings"]
+title: "Alarms, Status Panel, and Logs"
+description: "Alarm and warning configuration"
+keywords: ["alarms", "warnings", "alerts"]
 tags: ["processors", "542"]
 translation:
   source_lang: "es"
+  target_lang: "en"
   status: "draft"
   version: 0
-  source_hash: "8a875e03b169249f75f0bfdb85e2686727f76300d80ea0ef1890b1bda2682d4d"
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d431a744bdd25174d391ad3e45444acd102e81c5ae969a386170a142eb5819da"
+
 ---
 
 ## Alarms
 
-Access through **SYSTEM → ALARMS tab**.
+Access via **SYSTEM → ALARMS tab**.
 
 <Danger>
-  The parameters that trigger alarms are based on the **FM tuner** signal.
+  Alarm-triggering parameters are based on the **FM tuner** signal.
 
-  - If RF Level \< 40 dB or multipath \> 10%, measurements are not valid.
-  - In this case, fields appear dimmed and no alarms are generated.
+  - If RF Level < 40 dB or multipath > 10%, measurements are invalid.
+  - In such cases, fields appear grayed out and no alarms are generated.
 </Danger>
 
 The 542APC can send email alerts for the following events:
@@ -27,36 +31,36 @@ The 542APC can send email alerts for the following events:
 2. **OVERMODULATION**
 3. **LOW RF POWER**
 
-### Alarms Configuration
+### Alarm Configuration
 
 <Frame>
-  ![542 Alarms System Pn](/images/542/542-sistema-alarmas.png)
+  ![542 System Alarms Panel](/images/542/542-sistema-alarmas.png)
 </Frame>
 
 - **E-mail Send To** → address where alerts will be sent.
   - "Send Test" sends a test email.
 
 <Note>
-  To send alerts to multiple addresses, use the **mail forwarding** feature on the configured account.
+  To send alerts to multiple addresses, use the **auto-forwarding (mail forwarding)** function in the configured email account.
 </Note>
 
-- **LOG and E-MAIL checkboxes** → enable internal memory logging and/or email sending.
+- **LOG and E-MAIL checkboxes** → enable logging to internal memory and/or email sending.
 
 ### Alarm Types
 
 - **AUDIO SILENCE**:
   - Triggers when the signal falls below the threshold defined in **Fail Backup**.
-  - The time limit (seconds) is adjusted with a slider control.
-  - Important: the **FM Receiver post-Gain** signal is analyzed, so gain affects detection.
+  - The time limit (seconds) is adjusted via slider control.
+  - Important: analyzes the **FM Receiver post-Gain** signal, so gain affects detection.
 - **OVERMODULATION**:
-  - Activates if modulation exceeds the value defined in the alarm.
+  - Activates if modulation exceeds the defined alarm value.
   - This setting **does not affect transmission**, only detection.
 - **LOW RF POWER LEVEL**:
-  - Activates when low transmission power is detected.
-  - Procedure: press **Set REF** under normal conditions. Then define the % of loss that triggers the alarm.
+  - Triggers when low transmission power is detected.
+  - Procedure: press **Set REF** under normal conditions. Then define the % loss that triggers the alarm.
   - Does not affect transmission.
 - **SYSTEM START**:
-  - Generates alarm when equipment restarts (e.g. power outage).
+  - Generates alarm when the unit restarts (e.g., after power loss).
 - **SYSTEM ERRORS**:
   - For internal use only. Events are logged in **SYSLOG**.
 
@@ -69,11 +73,11 @@ The 542APC can send email alerts for the following events:
 </Frame>
 
 - **SYSTEM STATUS**
-  - Shows the current status of the internal stages (Main Processor, Stereo Generator, FM Monitor, RDS and AoIP/Streaming).
-- **SYSTEM TIME**:
-  - If the unit has Internet access, it syncs time with an **NTP** server
-  - It can also be synchronized from PC using **SYNC FROM PC**
-  - Date and time are only used in reports and logs
+  - Shows running modules and indicates normal operation (Main Processor, Stereo Generator, FM Monitor, RDS, and AoIP/Streaming).
 - **SYSLOG**:
-  - Internal memory event log
-  - Reserved for **specialized personnel** in diagnostics and technical support
+  - Event log in internal memory.
+  - Reserved for **qualified personnel** for diagnostics and technical support.
+- **SYSTEM TIME**:
+  - If the unit has internet access, synchronizes time with an **NTP server**.
+  - Can also sync from a PC using **SYNC FROM PC**.
+  - Date and time are used only for reports and logs.

@@ -1,22 +1,22 @@
 ---
-title: "Alarmes"
+title: "Alarmas, painel de status e logs"
 description: "Configuração de alarmes e avisos"
-keywords: ["alarmes", "avisos", "alertas"]
+keywords: ["alarmas", "avisos", "alertas"]
 tags: ["processadores", "542"]
 translation:
   source_lang: "es"
   target_lang: "pt"
-  status: "reviewed"
-  version: 1
-  reviewed_by: "Spinelli"
-  reviewed_at: "20260429"
-  source_hash: "8a875e03b169249f75f0bfdb85e2686727f76300d80ea0ef1890b1bda2682d4d"
+  status: "draft"
+  version: 0
+  reviewed_by: ""
+  reviewed_at: ""
+  source_hash: "d431a744bdd25174d391ad3e45444acd102e81c5ae969a386170a142eb5819da"
 
 ---
 
-## Alarmes
+## Alarmas
 
-Acesso através de **SYSTEM → aba ALARMS**.
+Acesse em **SYSTEM → aba ALARMS**.
 
 <Danger>
   Os parâmetros que disparam alarmes são baseados no sinal do **sintonizador FM**.
@@ -33,13 +33,15 @@ O 542APC pode enviar alertas por e-mail nos seguintes eventos:
 
 ### Configuração de alarmes
 
-![542 Sistema Alarmes Pn](/images/542/542-sistema-alarmas.png)
+<Frame>
+  ![542 Sistema Alarmas Pn](/images/542/542-sistema-alarmas.png)
+</Frame>
 
-- **E-mail Send To** → endereço para o qual serão enviados os alertas.
-  - "Send Test" envia um e-mail de teste.
+- **E-mail Send To** → endereço para o qual os alertas serão enviados.
+  - “Send Test” envia um e-mail de teste.
 
 <Note>
-  Para enviar alertas para múltiplos endereços, use a função de **encaminhamento automático (mail forwarding)** na conta configurada.
+  Para enviar alertas para múltiplos endereços, use a função de **reenvio automático (mail forwarding)** na conta configurada.
 </Note>
 
 - **Caixas LOG e E-MAIL** → habilitam registro na memória interna e/ou envio por e-mail.
@@ -47,35 +49,35 @@ O 542APC pode enviar alertas por e-mail nos seguintes eventos:
 ### Tipos de alarmes
 
 - **AUDIO SILENCE**:
-  - É disparado quando o sinal cai abaixo do limiar definido em **Fail Backup**.
+  - É disparado quando o sinal cai abaixo do limite definido em **Fail Backup**.
   - O tempo limite (segundos) é ajustado com um controle deslizante.
-  - Importante: analisa-se o sinal do **FM Receiver post-Gain**, portanto o ganho afeta a detecção.
+  - Importante: o sinal do **FM Receiver pós-Gain** é analisado, portanto, o ganho afeta a detecção.
 - **OVERMODULATION**:
-  - Ativa-se se a modulação exceder o valor definido no alarme.
+  - É ativado se a modulação exceder o valor definido no alarme.
   - Este ajuste **não afeta a transmissão**, apenas a detecção.
 - **LOW RF POWER LEVEL**:
-  - Ativa-se ao detectar baixa potência de transmissão.
-  - Procedimento: pressionar **Set REF** em condições normais. Depois definir a % de perda que dispara o alarme.
+  - É ativado ao detectar baixa potência de transmissão.
+  - Procedimento: pressione **Set REF** em condições normais. Em seguida, defina a % de perda que dispara o alarme.
   - Não afeta a transmissão.
 - **SYSTEM START**:
-  - Gera alarme quando o equipamento reinicia (ex. por corte de energia).
+  - Gera alarme ao reiniciar o equipamento (ex. por corte de energia).
 - **SYSTEM ERRORS**:
-  - Apenas para uso interno. Os eventos são registrados em **SYSLOG**.
+  - Somente para uso interno. Os eventos são registrados em **SYSLOG**.
 
-  ---
+---
 
-  ### Status e Logs
+### Status e Logs
 
 <Frame>
   ![542 System Status](/images/542_system_status.png)
 </Frame>
 
 - **SYSTEM STATUS**
-  - Mostra os módulos em execução e indica se estão operando normalmente (Processador central, Gerador estéreo, Monitor de FM, RDS e AoIP/Streaming).
-- **SYSTEM TIME**:
-  - Se o equipamento tem acesso à Internet, sincroniza hora com um servidor **NTP**.
-  - Também pode ser sincronizado do PC com **SYNC FROM PC**.
-  - Data e hora são usados apenas em relatórios e registros.
+  - Mostra os módulos em execução e indica se estão funcionando normalmente (Processador central, Gerador Estéreo, Monitor de FM, RDS e AoIP/Streaming).
 - **SYSLOG**:
-  - Registro de eventos em memória interna.
+  - Registro de eventos na memória interna.
   - Uso reservado a **pessoal especializado** em diagnóstico e suporte técnico.
+- **SYSTEM TIME**:
+  - Se o equipamento tiver acesso à Internet, sincroniza a hora com um servidor **NTP**.
+  - Também pode ser sincronizado a partir do PC com **SYNC FROM PC**.
+  - Data e hora são usadas apenas em relatórios e registros.

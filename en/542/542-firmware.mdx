@@ -1,63 +1,64 @@
 ---
-title: "Firmware update"
-description: "Firmware update procedures by model"
+title: "Firmware Update"
+description: "Procedures for updating firmware by model"
 keywords: ["update", "firmware", "Discovery & Update"]
 tags: ["processors", "542"]
 translation:
   source_lang: "es"
+  target_lang: "en"
   status: "draft"
   version: 0
   reviewed_by: ""
   reviewed_at: ""
-  source_hash: "d505ee69eb2ed1eafcb8b9d28efab23cc605486f47704ee2e809415e9ba3b432"
+  source_hash: "a188a253a9d703f56a1e5f5d059a7e1214d5de138ccd965d771643e6ac8dd3c3"
 
 ---
 
-## What is modified
+## What is Modified
 
-Successive software updates for the same model can:
+Successive updates of the same software model can:
 
 - Optimize processes.
 - Add new features.
 - Improve or modify the graphical interface.
-- Add new processing presets.
+- Incorporate new processing presets.
 
 The **version and model** are displayed:
 
-- On the **front panel** startup screen.
-- In the top line of the **WEB Control** screen.
+- On the startup screen of the **front panel**.
+- On the top line of the **WEB Control** screen.
 
 The unit can be updated while in service.\
 It may cause a **brief audio interruption** on-air (less than 2 seconds).
 
 ---
 
-## Versions prior to 2.0
+## Versions Prior to 2.0
 
-For units with firmware version **1.35 or earlier**, refer to the corresponding manual at:\
-👉 [Solidyne – User Manuals (discontinued equipment)](https://www.solidyne.ar)
+For units with firmware version **1.35 or earlier**, consult the corresponding manual at:\
+👉 [Discontinued Units](/en/otros_docs/discontinued)
 
 ---
 
-## Units with STREAMER AoIP module
+## Units with STREAMER AoIP Module
 
-The **Streamer AoIP** expansion allows direct access to the unit through a link and adds a **simplified update method**.
+The **Streamer AoIP** expansion allows direct access to the unit via a link and adds a **simplified update method**.
 
 <Info>
-  See details Equipment with STREAMER AoIP option
+  See details for Units with STREAMER AoIP Option
 </Info>
 
 ---
 
-## 542 APC standard model
+## 542 APC Standard Model
 
-Units with firmware 2.0 or later, without the STREAMER AoIP expansion, are updated using the following procedure:
+Units with firmware 2.0 or later, which do not have the STREAMER AoIP expansion, are updated with the following procedure:
 
- 1. Ensure the computer accessing the processor has an **Internet connection** and is on the **same LAN** as the 542APC.
+ 1. Ensure the computer accessing the processor has **Internet connection** and is on the **same LAN** as the 542APC.
  2. Access the **WEB Control** page by entering the **control IP** in a browser.\
-    (See [**Network access and control**](/en/542/542-acceso-web)).
- 3. Enter **SETUP** mode (top right) and select **INFO** from the side menu.
- 4. The unit will automatically check for available updates and **generate a direct download link**.
+    (See [**Network Access and Control**](/en/542/542-acceso-web)).
+ 3. Enter **SETUP** mode (top right) and select the **INFO** option from the side menu.
+ 4. The unit will automatically check for an available update and **generate a direct download link**.
 
     <img
       src="/images/542/542-firm20-INFO-update.png"
@@ -67,7 +68,7 @@ Units with firmware 2.0 or later, without the STREAMER AoIP expansion, are updat
       style={{ width:"47%" }}
     />
  5. Download the firmware update from the link.
- 6. Download and install the **Solidyne Discovery & Update** Windows application (link in the INFO screen SOFTWARE section).
+ 6. Download and install the Windows application **Solidyne Discovery & Update** (link in the SOFTWARE section of the INFO screen).
     - The installer will create a _Solidyne Audio Processor_ folder in the Windows Start menu.
  7. Run the **Discovery & Update** application.
 
@@ -77,22 +78,23 @@ Units with firmware 2.0 or later, without the STREAMER AoIP expansion, are updat
       title="542 Discovery Pn"
       style={{ width:"71%" }}
     />
- 8. Click **Discover...** → Solidyne equipment on the network will be listed.
- 9. Select the **542APC** unit and click **Update firmware**.
-10. In the popup window, select the update file downloaded in _Step 5_ and click **OK**.
-11. The application will overwrite the 542APC firmware.
-12. The unit will remain operational; there will be a **brief audio interruption (less than 2 sec.)** when restarting.
+ 8. Click **Discover...** → Solidyne units on the network will be listed.
+ 9. Select the **542APC** unit and click **Update Firmware**.
+10. In the pop-up window, select the update file downloaded in _Step 5_ and click **OK**.
+11. The application will overwrite the firmware of the 542APC.
+12. The unit will remain operational; there will be a **brief audio interruption (less than 2 seconds)** upon restart.
 
 <Danger>
   **Do not power off or disconnect the unit during the update.**\
-  This could cause damage that cannot be repaired by the user.
+  It could cause irreparable user damage.
 </Danger>
 
 <Warning>
   Avoid performing updates from computers connected via Wi-Fi.
 </Warning>
 
-### Remote updates
+
+### Remote Updates
 
 <Warning>
   Do not perform updates if accessing the unit directly via **Internet (port forwarding)**.\
