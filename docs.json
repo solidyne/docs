@@ -989,7 +989,8 @@
                       "en/DX816/816-usb",
                       "en/DX816/816-monitoreo",
                       "en/DX816/816-telco",
-                      "en/DX816/816-GPIO-tally"
+                      "en/DX816/816-GPIO-tally",
+                      "en/DX816/grounding-and-protections"
                     ]
                   },
                   {
@@ -1234,7 +1235,8 @@
                       "en/542/542-instalacion-montaje",
                       "en/542/542-instalacion-cableado",
                       "en/542/542-instalacion-gpio",
-                      "en/542/542-firmware"
+                      "en/542/542-firmware",
+                      "en/542/grounding-and-protections"
                     ]
                   },
                   {
@@ -1748,7 +1750,8 @@
                       "pt/DX816/816-usb",
                       "pt/DX816/816-monitoreo",
                       "pt/DX816/816-telco",
-                      "pt/DX816/816-GPIO-tally"
+                      "pt/DX816/816-GPIO-tally",
+                      "pt/DX816/untitled-page"
                     ]
                   },
                   {
