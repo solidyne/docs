@@ -9,9 +9,23 @@ tags: ["ux24", "ux18", "UNIDEX", "UDX TEL+BT", "UDX 2BLT"]
 - Se conecta directamente al panel trasero de UNIDEX con dos cables SFTP RJ45-RJ45  (por ejemplo  Solidyne cod. SOL P50).
 - Se comanda desde la superficie de la consola o remotamente desde la interfaz de Control WEB
 
+- El adaptador UDX TEL\+BT brinda conexión para una **línea telefónica terrestre y enlace Bluetooth**  para un teléfono celular.
+- Se conecta directamente al panel trasero de UNIDEX con dos cables SFTP RJ45-RJ45  (por ejemplo  Solidyne cod. SOL P50).
+- Se comanda desde la superficie de la consola o remotamente desde la interfaz de Control WEB
+
 ---
 
 ## Conexión de UDX TEL\+BT a la consola
+
+<Frame>
+  <img
+    src="/images/UDX_TELBT-connection.png"
+    alt="UDX TELBT Connection"
+    style={{ width:"82%" }}
+  />
+</Frame>
+
+La imagen muestra un ejemplo de conexión a UNIDEX UX24.
 
 <Frame>
   <img
@@ -95,7 +109,73 @@ Una vez conectado el adaptador **UDX 2TEL** configure:
 
 ---
 
+## Configuraciones
+
+Una vez conectado el adaptador **UDX 2TEL** configure:
+
+- **Entradas**
+- **Salidas (envíos)**
+- **Canales**
+
+### Configurar entradas
+
+1. En la pantalla principal, acceder a la opción `SETTINGS`.
+2. **Girar el encoder** hasta seleccionar la entrada UNIDEX a la que se conectó UDX  TEL\+BT. Si la entrada está actualmente configurada como `MONO`, se podrán seleccioner "L" y "R" individualmente.
+3. Si está configurada como `STEREO` quedará seleccionado el par L/R. En este caso, cambie  `INPUT MODE` a `MONO`.
+   <Note>
+     La entrada "L" corresponde a Bluetooth.\
+     La entrada "R" corresponde a la línea terrestre (POTS).
+   </Note>
+4. Elegir la entrada "UDX L" En la opción `UDX TYPE` elegir `TEL+BT`
+5. Tocando la pantalla, desplegar el menú `ASSIGNED TO CHANNEL` para asignar un CANAL al Bluetooth. Si se elige un canal que ya tiene asignada una entrada, aparecerá una advertencia. Si se continúa, la entrada en ese canal es reemplazada.
+   <Tip>
+     Se recomienda asignar las líneas TELCO a canales físicos.\
+     La ganancia de la entrada se puede ajustar **durante la operación** desde la pantalla TELCO.
+   </Tip>
+6. Repetir desde el Paso 4 para la entrada "UDX R" y asignar un CANAL a la linea terrestre.
+7. Pulsar `BACK `para volver a pantalla principal.
+8. El siguiente paso será configurar la salida.
+
+### Configurar salidas
+
+1. Desde la pantalla principal, acceder a la opción `SETTINGS`.
+2. En `SETTINGS `elegir la opción `OUTPUTS`.
+3. Girarndo el encoder seleccionar la salida a la cual se conectó UDX TEL\+BT. Si la salida está actualmente en modo `MONO `se podrán seleccionar individualmente `OUT-L` y `OUT-R`.
+4. Si está configurada como `STEREO `quedará seleccionado el par L/R. En este caso, cambiar el `AUDIO MODE `a `MONO`.
+   <Note>
+     La salida "L" es el envío a Bluetooth.\
+     La salida "R" es el envío a línea telefónica.
+   </Note>
+5. Seleccionar `OUT-L` y configurar `SEND MODE` en `MIX-MINUS`. Al activar `MIX-MINUS` la salida quedará asociada a la entrada UNIDEX que le corresponde.
+6. Repetir la operación para la `OUT-R`.
+
+<Tip>
+  El **nivel de envío** a la línea (OUT GAIN) se puede ajustar **durante la operación** desde la pantalla TELCO.
+</Tip>
+
+### Configuración del canal
+
+1. En pantalla principal, pulsar `CHANNEL`. Los botones `CUE `cambian a modo `SELECT`.
+2. Pulsar el botón `CUE/SELECT` en el canal a configurar. La consola sale de modo `SELECT` y muestra la pantalla `CHANNEL `del canal seleccionado.
+3. En la opción `MODE`, desplegar el menú y elegir `TELCO`. Esto hace que los canales se muestren en la pantalla TELCO, para gestionar las llamadas.
+4. Para editar la **etiqueta**, tocar sobre el nombre. Aparecerá un teclado en pantalla para editar el texto.
+5. Verificar que la asignación de salida indique la salida correspondiente a la entrada UNIDEX utilizada, y que el modo sea MIX-MINUS.
+6. Pulsar `BACK `para volver a la pantalla principal.
+
+<Warning>
+  PARA ALMACENAR DE MANERA DEFINITIVA LOS AJUSTES, **GUARDE LA ESCENA**.
+</Warning>
+
+---
+
 ## Vincular UDX TEL\+BT a un teléfono móvil
+
+Una vez realizas las configuraciones correspondiente, el canal Bluetooth aparece en la pantalla TELCO. El paso siguiente es vincular un móvil al dispositivo.
+
+Para conocer cómo vincular y trabajar con el teléfono móvil en la consola UNIDEX, ver la sección TELCO del modelo que corresponda:
+
+[_OPERACIÓN→ TELCO - Comunicaciones_ en UX24](/es/ux24/ux24-op-telco#Operación-con-teléfonos-móviles) \
+[_OPERACIÓN→ TELCO - Comunicaciones_ en UX24](/es/ux18/ux18-op-telco#Operación-con-teléfonos-móviles)
 
 Una vez realizas las configuraciones correspondiente, el canal Bluetooth aparece en la pantalla TELCO. El paso siguiente es vincular un móvil al dispositivo.
 
@@ -107,6 +187,14 @@ Para conocer cómo vincular y trabajar con el teléfono móvil en la consola UNI
 ---
 
 ## Conexión de UDX TEL\+BT a una línea telefónica
+
+Los pasos para conectar la línea terrestre son:
+
+1. Conexión a la línea telefónica.
+2. Conexión de un teléfono asociado.
+3. Ajuste del factor de rechazo.
+
+El procedimiento se detalla para el adaptador de doble línea telefónica UDX 2TEL. [Click aquí para ir a la explicación.](/es/extensiones/UDX-2TEL#Conexión-a-líneas-telefónicas)
 
 Los pasos para conectar la línea terrestre son:
 
