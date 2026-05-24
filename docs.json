@@ -514,6 +514,12 @@
                       "es/542/542-streamer",
                       "es/542/542-dante"
                     ]
+                  },
+                  {
+                    "group": "INFO TÉCNICA",
+                    "pages": [                      
+                      "es/542/542-specs"
+                    ]
                   }
                 ]
               },
@@ -1234,7 +1240,7 @@
                       "en/542/542-guia",
                       "en/542/542-instalacion-montaje",
                       "en/542/542-instalacion-cableado",
-                      "en/542/grounding-and-protections",
+                      "en/542/542-instalacion-tierras",
                       "en/542/542-instalacion-gpio",
                       "en/542/542-firmware"
                     ]
@@ -1275,6 +1281,12 @@
                       "en/542/542-opcionAoIP",
                       "en/542/542-streamer",
                       "en/542/542-dante"
+                    ]
+                  },
+                  {
+                    "group": "TECNICAL INFO",
+                    "pages": [                      
+                      "en/542/542-specs"
                     ]
                   }
                 ]
@@ -1995,7 +2007,7 @@
                       "pt/542/542-guia",
                       "pt/542/542-instalacion-montaje",
                       "pt/542/542-instalacion-cableado",
-                      "pt/542/aterramento-e-protecoes",
+                      "pt/542/542-instalacion-tierras",
                       "pt/542/542-instalacion-gpio",
                       "pt/542/542-firmware"
                     ]
@@ -2031,11 +2043,17 @@
                     ]
                   },
                   {
-                    "group": "Serviços AoIP",
+                    "group": "SERVIÇOS AoIP",
                     "pages": [
                       "pt/542/542-opcionAoIP",
                       "pt/542/542-streamer",
                       "pt/542/542-dante"
+                    ]
+                  },
+                  {
+                    "group": "INFORMAÇÕES TÉCNICAS",
+                    "pages": [                      
+                      "pt/542/542-specs"
                     ]
                   }
                 ]

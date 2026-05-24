@@ -1,0 +1,166 @@
+---
+title: "Especificaciones Técnicas"
+keywords: ["especificaciones"]
+tags: ["procesadores", "542"]
+---
+
+
+## PROCESADOR
+
+<AccordionGroup>
+<Accordion title="Entradas de audio">
+| Parámetro | Valor |
+|---|---|
+| Entrada analógica XLR | Balanceada, 600 Ohms |
+| Nivel nominal XLR | +4 dBu |
+| Nivel máximo XLR | +24 dBu |
+| Entrada balanceada RJ45 | Compatible StudioHub |
+| Nivel entrada RJ45 | -10 dBu a +24 dBu |
+| Entrada AES3 | Balanceada con transformador |
+| Nivel referencia AES3 | -18 dBFS |
+| Ajuste AES3 | -24 a 0 dBFS |
+| Frecuencia de muestreo AES3 | 44.1 / 48 / 96 kHz |
+| Entrada RF | Receptor digital FM integrado |
+</Accordion>
+
+<Accordion title="Salidas de audio">
+| Parámetro | Valor |
+|---|---|
+| Salida XLR | Balanceada +4 dBu |
+| Impedancia salida XLR | 600 Ohms |
+| Nivel máximo salida XLR | +18 dBu |
+| Salida RJ45 | No balanceada +4 dBu |
+| Salida AES3 | Balanceada mediante transformador |
+| Referencia digital | 0VU = -12 dBFS |
+| Salidas MPX | 2 independientes |
+| Nivel MPX | 0 a 5.5 Vpp |
+| Conector MPX | BNC diferencial |
+| Impedancia MPX | 50 Ohms |
+| Salida AoIP | Disponible en versiones /AoIP |
+| Cancelación de ruido por lazos de tierra | 45 dB |
+| Protección contra sobretensión | 2 kV |
+</Accordion>
+
+<Accordion title="Servicios AoIP (opcionales)">
+| Parámetro | Valor |
+|---|---|
+| Streaming | Punto a punto RTP (modo STL). Icecast/Shoutcast (modo streamer)|
+| DANTE AoIP | 2x2 canales.|
+| Opcionales excluyentes | Solo uno puede instalarse en el equipo |
+</Accordion>
+
+<Accordion title="Procesamiento">
+| Parámetro | Valor |
+|---|---|
+| DSP | 48 kHz / 24 bits |
+| AGC | Banda ancha + AGC multibanda |
+| Expansor | 5 bandas |
+| Compresor multibanda | 5 bandas |
+| Limitadores | Incluidos por banda |
+| Clippers | Incluidos por banda |
+| Crossover | Fase lineal |
+| Presets | 16 de fábrica + 16 del usuario |
+| Ecualizador previo | Paramétrico de 4 bandas |
+| Filtro subsónico | Off / 15 Hz / 20 Hz |
+| Cancelación de asimetría | Sistema Khann-Bonello 5:1 |
+| Efectos | Super Bass y Stereo Enhancer |
+| Modos de operación | FM, AM, HD, TV y Streaming |
+</Accordion>
+
+<Accordion title="Prestaciones de audio">
+| Parámetro | Valor |
+|---|---|
+| Respuesta en frecuencia analógica | 20 Hz a 16 kHz +/-0.3 dB |
+| Respuesta en frecuencia AES3 | 20 Hz a 16 kHz +/-0.3 dB |
+| THD entrada analógica | < 0.005 % @ 1 kHz |
+| THD entrada AES3 | < 0.002 % |
+| Retardo procesamiento | 3 a 9 ms |
+| Rango dinámico analógico | > 95 dBA |
+| Rango dinámico AES3 | > 110 dBA |
+| Separación estéreo | > 80 dBA |
+| Rechazo RF | Hasta 150 dBuV |
+</Accordion>
+
+<Accordion title="GPI y Automatizaciones">
+| Parámetro | Valor |
+|---|---|
+| GPI analógico | +5 V a +15 V para conmutación Voice/Music |
+| GPI vía IP | Requiere el opcional AoIP streamer. Conmutación Voice/Music por consola IP y avanzada (tags) con Solidyne Audicom |
+| Lite Commander (scheduler) | Requiere el opcional AoIP streamer. Conmuta por pauta horaria con aplicación Windows |
+| Modo MONO/STEREO | Configurable por Voice/Music o pauta horaria. |
+</Accordion>
+
+<Accordion title="Alimentación y dimensiones">
+| Parámetro | Valor |
+|---|---|
+| Alimentación | 115 / 230 VAC |
+| Frecuencia | 50 / 60 Hz |
+| Consumo | 20 W |
+| Formato | Rack 19 pulgadas |
+| Altura | 1U (44.4 mm) |
+| Peso neto | 3 kg |
+| Peso envío | 4 kg |
+</Accordion>
+</AccordionGroup>
+
+## STEREO CODER
+
+<AccordionGroup>
+<Accordion title="Especificaciones">
+| Parámetro | Valor |
+|---|---|
+| Salidas MPX | 2 independientes |
+| Nivel MPX | 0 a 5.5 Vpp |
+| Respuesta en frecuencia | 20 Hz a 15 kHz +/-0.2 dB |
+| Filtro adicional | 16 kHz fase lineal |
+| THD | < 0.01 % |
+| Relación señal/ruido | > 85 dBA |
+| Separación estéreo | > 65 dB @ 1 kHz |
+| Supresión subportadora 38 kHz | < -80 dB |
+| Supresión SCA 57 / 76 / 95 kHz | < -80 dB |
+| Estabilidad piloto | +/-0.002 % |
+</Accordion>
+</AccordionGroup>
+
+## RDS ENCODER
+
+<AccordionGroup>
+<Accordion title="Especificaciones">
+| Parámetro | Valor |
+|---|---|
+| Norma | CENELEC EN50067 / EN62106 |
+| Interfaz | ASCII + UECP |
+| Programación | Agenda semanal integrada |
+| Banda RDS | +/-2.4 kHz |
+| Supresión espurias | > 90 dB |
+| Supresión armónicos | > 80 dB |
+| Referencia de reloj | Tono piloto |
+| PLL piloto | +/-2 Hz |
+| Ethernet | RJ45 TCP/IP |
+| Velocidad puerto | 2400 a 9600 bps |
+</Accordion>
+</AccordionGroup>
+
+## FM Modulation Monitor & Analyzer
+
+<AccordionGroup>
+<Accordion title="Monitoreo y mediciones">
+| Parámetro | Valor |
+|---|---|
+| Modulación FM | Monitoreo integrado |
+| Tono piloto | Medición integrada |
+| RDS | Medición integrada |
+| Multipath | Medición integrada |
+| THD | Medición integrada |
+| Separación estéreo | Medición integrada |
+| Registro histórico | Archivo TXT |
+</Accordion>
+
+<Accordion title="Acceso y supervisión">
+| Parámetro | Valor |
+|---|---|
+| Monitoreo remoto | PC, tablet |
+| Interfaz | Navegador WEB (HTML5 )|
+| Alarmas | Envío automático por correo |
+</Accordion>
+</AccordionGroup>
