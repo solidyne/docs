@@ -32,7 +32,7 @@ Cumple tres funciones:
 
 - **CUE:** Escucha previa (_pre-fader_). Permite escuchar la señal presente en el canal previo al atenuador y al botón ON-AIR.
 - **SELECT:** Selección del canal para ajustes y configuración.
-- \*\*TALKBACK: \*\*El modo TALK-BACK se utiliza en comunicaciones (canalales TELCO y USB asignados a software de llamadas) y para generar un segundo canal de órdenes hacia el Estudio. Manteniendo pulsado CUE, se activa el micrófono talk-back para hablar..
+- **TALKBACK:** El modo TALK-BACK se utiliza en comunicaciones (canalales TELCO y USB asignados a software de llamadas) y para generar un segundo canal de órdenes hacia el Estudio. Manteniendo pulsado CUE, se activa el micrófono talk-back para hablar..
 
 #### 3 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Botón ON-AIR
 
@@ -46,7 +46,6 @@ Muestra:
 - Nivel de señal previo al atenuador. La indicación **CLIP** indica que la señal de entrada alcanza 0 dBfs y requiere reducir la ganancia.
 - Nombre o etiqueta del canal.
 - Estado en modos especiales como SELECT o TELCO.
-
   <Note>
     **Sobre brillo de los OLED**\
     El brillo se reduce tras 5 minutos de inactividad y se apaga a los 15 minutos.\
@@ -81,7 +80,7 @@ Cada grupo puede tener asignado uno o varios **canales virtuales** (canales del 
 ### Controles y pantalla GROUPS
 
 - **Físicos**: atenuador, ON-AIR, CUE.
-- \*\*Pantalla GROUPS: \*\*Se accede pulsando el botón de acceso rápido GROUPS. Permite gestionar las asignaciones a los buses y las sub-mezclas.
+- **Pantalla GROUPS:** Se accede pulsando el botón de acceso rápido GROUPS. Permite gestionar las asignaciones a los buses y las sub-mezclas.
 
 <img
   src="/images/ux24/ux18-groups-pantalla.png"
@@ -93,10 +92,9 @@ Cada grupo puede tener asignado uno o varios **canales virtuales** (canales del 
 
 La pantalla GROUPS muestra, en primera instancia:
 
-- **Asignación a buses:** permiten la asignación a salidas de cada grupo. Todos **los canales** vinculados al grupo \*\*heredan \*\*esta asignación.
+- **Asignación a buses:** permiten la asignación a salidas de cada grupo. Todos **los canales** vinculados al grupo _heredan_ esta asignación.
 - **Información esencial:** Permiten trabajar con la pantalla GRUPOS sin perder de vista: nivel de programa, hora actual, contador de tiempo e indicación de micrófonos “en el aire”.
 - Pulsando **MIX** en la parte inferior de cada grupo se accede a la **pantalla de sub-mezcla** de los canales asignados al grupo.
-
   <img
     src="/images/ux24/ux18-GROUPS_MIX.png"
     alt="UX18 GROUPS MIX"
@@ -118,33 +116,6 @@ Los canales virtuales se pueden asignar a un grupo de dos maneras:
 
   La configuración de los grupos se guarda en la escena.
 </Note>
-
-## La función SELECT
-
-El modo **SELECT** convierte temporalmente los botones **CUE** en botones de selección de canal.\
-Cuando está activo, los botones CUE se iluminan en azul y las pantallas OLED de los canales muestran el texto SELECT.
-
-Esta función se utiliza para elegir un canal y visualizarlo o realizar ajustes sobre él. Por ejemplo, para ajustar un ecualizador, se debe seleccionar primero el canal para visualizar sus controles.
-
-En modo SELECT es posible seleccionar un grupo. En este caso, se mostrará información de los canales asignados al grupo.
-
-### Activación del modo SELECT
-
-El modo SELECT se activa en cualquiera de las siguientes situaciones:
-
-- Al pulsar **CHANNEL** en la pantalla principal.
-- Al pulsar **PROCESS** en la pantalla principal.
-- Al pulsar **SELECT** en la pantalla CHANNEL o en una pantalla de procesos (EQ, compresor, etc.).
-
-Estando activo el modo SELECT, es posible elegir un canal de dos formas:
-
-1. **MODO A**\
-   Pulsando un botón CUE/SELECT el canal se muestra en pantalla. El modo SELECT permanece activo, pudiéndose seleccionar otros canales (esto permite comparar/revisar canales fácilmente). El botón CUE/SELECT del canal actualmente seleccionado permanece destellando.
-2. **MODO B**\
-   Girando el encoder para recorrer los canales. El encoder recorre los 24 canales, sean físicos o virtuales.
-
-Para confirmar la selección de un canal, pulsar el botón SELECT en la pantalla o pulsar el encoder. También se confirma si se toca un control del canal en la pantalla.
-Al confirmar, modo SELECT se desactiva y los botones CUE/SELECT vuelven a su modo de trabajo normal (CUE).
 
 ## Canales "virtuales"
 
@@ -192,9 +163,7 @@ Incluye funciones básicas, como el ajuste de ganancia de la entrada, y opciones
 
 #### Acceso a la pantalla de canal
 
-1. **Desde la pantalla principal**, pulsar la opción **CHANNEL**.
-
-   Esto abrirá la pantalla en el último canal seleccionado y activará el **modo SELECT**.\
+1. **Desde la pantalla principal**, pulsar la opción **CHANNEL**. Esto abrirá la pantalla en el último canal seleccionado y activará el **modo SELECT**.\
    En el menú, la opción CHANNEL cambiará a SELECT para permitir activarlo o desactivarlo.
 2. **Seleccionar un canal**:\
    Con **SELECT** activo, los botones **CUE/SELECT** permiten elegir un canal. Mientras el modo de selección esté activo, se pueden ir alternando distintos canales para comparar sus ajustes.
@@ -206,7 +175,7 @@ Incluye funciones básicas, como el ajuste de ganancia de la entrada, y opciones
    El modo selección también se cancela automáticamente cuando se modifica algún parámetro en el canal seleccionado.
 
 <img
-  src="/images/ux24/ux24-channel-pantalla.png"
+  src="/images/UX18_screen_channel_refes.png"
   alt="UX18 Pantalla Channel"
   title="UX18 Pantalla Channel"
   className="mx-auto"
@@ -253,14 +222,7 @@ La activación/desactivación se hace desde la pantalla táctil y, en canales f�
 Permite asignar un nombre de hasta 10 caracteres. En canales físicos se muestra en la pantalla OLED del canal. \
 Tocando el nombre se despliega una ventana para edición del texto.
 
-#### 6 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Input Config
-
-Incluye el control de ganancia y la información de la entrada asignada.
-
-- Perfil ADMIN: acceso a configuración completa tocando SETTINGS o reasignación desde menú desplegable.
-- **Ganancia**: ajuste en decibelios mediante pantalla táctil y encoder.
-
-#### 7 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Modo
+#### 6 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Modo
 
 Define el comportamiento del canal según el tipo de señal:
 
@@ -268,7 +230,29 @@ Define el comportamiento del canal según el tipo de señal:
 - **MIC**: para señales de micrófono, sean entradas a bordo, adaptadores UDX externos o preamplificadores de terceros conectados a entradas de línea.
 - **TELCO**: para comunicaciones (líneas terrestres, VoIP, celulares Bluetooth), controlando desde pantalla TELCO adaptadores UNIDEX compatibles.
 
-#### 8 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Channel Actions
+#### 7 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Input Config
+
+Incluye el control de ganancia y la información de la entrada asignada.
+
+- Perfil ADMIN: acceso a configuración completa tocando SETTINGS o reasignación desde menú desplegable.
+- **Ganancia**: ajuste en decibelios mediante pantalla táctil y encoder.
+
+#### 8 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Process
+
+Muestra los procesadores disponibles en la entrada asignada y su estado (activo/inactivo).
+
+- Encendido/apagado tocando el nombre (excepto perfil BASIC).
+- Edición de ajustes desde EDIT (solo perfil ADMIN).
+  <Note>
+    Los procesos disponibles no son propios de cada canal, sino que dependen de la entradas que tienen asignadas.
+  </Note>
+
+#### 9 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Output Routing
+
+Indica si el canal está asociado a una salida directa (ej. adaptadores UNIDEX para líneas TELCO).\
+La configuración de ruteo es accesible en perfil ADMIN desde SETTINGS.
+
+#### 10 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Channel Actions
 
 Funciones específicas según el **MODO** del canal.
 
@@ -277,24 +261,31 @@ Funciones específicas según el **MODO** del canal.
   Si todos los canales trabajan en modo CUE SOLO, habrá un único CUE encendido. Una configuración habitual es usar el modo CUE SOLO en las líneas (computadoras y reproductores de audio) y en modo normal micrófonos y canales TELCO.
 - **CUE AUTO OFF**: apaga CUE automáticamente al poner el canal al aire.
 
-**Acciones para canales en modo MIC:**
+**Acciones para canales con modo = MIC:**
 
-- **MASTER MIC A/B**: asigna el canal a uno o ambos botones maestros.
-- **STUDIO A/B**: asocia el canal a la señalización de uno de los estudios.
+- **MASTER MIC A**: asigna el canal a uno o ambos botones maestros.
 - **CTRL ROOM MIC**: silencia los parlantes del Control (no los del Estudio) al poner el canal al aire.
 
-#### 9 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Process
+#### 11 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Activación del modo SELECT
 
-Muestra los procesadores disponibles en la entrada asignada y su estado (activo/inactivo).
+El modo **SELECT** convierte temporalmente los botones **CUE** en botones de selección de canal.\
+Cuando SELECT está activo, los botones CUE se iluminan en azul y las pantallas OLED de los canales muestran la leyenda SELECT.
 
-- Encendido/apagado tocando el nombre (excepto perfil BASIC).
-- Edición de ajustes desde EDIT (solo perfil ADMIN).
+Esta función se utiliza para elegir un canal y visualizar sus controles en pantalla. Por ejemplo, para modificar la ganancia de entrada de un canal, en la pantalla HOME se debe pulsar CHANNEL y luego el botón CUE/SELECT en el canal.
 
-  <Note>
-    Los procesos disponibles no son propios de cada canal, sino que dependen de la entradas que tienen asignadas.
-  </Note>
+En modo SELECT es posible seleccionar un grupo. En este caso, se mostrará información de los canales asignados al grupo.
 
-#### 10 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Output Routing
+El modo SELECT se activa en cualquiera de las siguientes situaciones:
 
-Indica si el canal está asociado a una salida directa (ej. adaptadores UNIDEX para líneas TELCO).\
-La configuración de ruteo es accesible en perfil ADMIN desde SETTINGS.
+- Al pulsar **CHANNEL** en la pantalla principal.
+- Al pulsar **PROCESS** en la pantalla principal.
+- Al pulsar **SELECT** en la pantalla CHANNEL o en una pantalla de procesos (EQ, compresor, etc.).
+
+Estando activo el modo SELECT, es posible elegir un canal de dos formas:
+
+1. **Pulsando un botón CUE/SELECT en el canal.**\
+   Se muestran los controles de ese canal en pantalla. El modo SELECT permanece activo, pudiéndose seleccionar otros canales (esto permite comparar/revisar canales fácilmente). El botón CUE/SELECT del canal actualmente seleccionado permanece destellando.
+2. **Girando el encoder.**\
+   Con SELECT activo el encoder recorre los 24 canales, sean físicos o virtuales.
+
+Para confirmar la selección de un canal, pulsar el botón SELECT en la pantalla o pulsar el encoder. También se confirma si se toca un control del canal en la pantalla. Al confirmar, modo SELECT se desactiva y los botones CUE/SELECT vuelven a su modo de trabajo normal (CUE).
