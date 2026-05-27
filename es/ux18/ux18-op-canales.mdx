@@ -23,7 +23,10 @@ Otros 8 canales pueden operarse desde la **pantalla táctil** o de forma remota 
 La señal en cada canal se puede asignar a 4 buses de mezcla: **PGM**, **REC**, **AUX** y **VBUS**.
 
 - Los canales 1 al 6 la asignación a PGM, REC y AUX se realiza mediante tres botones de acceso rápido. Cuando el canal está asignado, el botón se ilumina en naranja.
-- Los canales 7 al 18 se asignan a los buses de salida accediendo la pantalla CHANNEL o a VIRTUAL CHANNELS desde la pantalla principal. Cuando un canal es asignado a un grupo, toma la asignación a buses del grupo.
+- Los canales 7 al 18 se asignan a los buses de salida accediendo la pantalla CHANNEL o a VIRTUAL CHANNELS desde la pantalla principal.
+  <Info>
+    Cuando un canal viartual es asignado a un grupo, toma la asignación a buses del grupo.
+  </Info>
 - Para todos los canales, la asignación a VBUS se realiza desde la pantalla CHANNEL o desde el control web.
 
 ### 2 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Botón CUE/SELECT
@@ -58,64 +61,7 @@ Controla el nivel de la señal en los buses de mezcla.\
 Si el nivel se modifica desde la pantalla CHANNEL o remotamente vía web, el valor de atenuación real puede no coincidir con la posición física del fader (no motorizado). En ese caso, la pantalla OLED destella mostrando el valor actual.\
 Moviendo el atenuador, el valor se sincroniza progresivamente.
 
-## Grupos y submezclas
-
-La consola **UX18** presenta **4 atenuadores de GRUPOS**.\
-Cada grupo puede tener asignado uno o varios **canales virtuales** (canales del 7 al 18).
-
-**Comportamiento**
-
-- **Un solo canal asignado** → el grupo se comporta como un canal más, otorgándole al canal virtual controles físicos (atenuador, botón **ON-AIR** y **CUE**).
-- **Dos o más canales asignados** → el grupo funciona como un **sub-master**, manejando una **sub-mezcla** de esos canales virtuales.
-- Los canales de grupo se pueden vincular al botón **MASTER ON-AIR MIC** desde la pantalla **CHANNEL**.
-
-<img
-  src="/images/ux24/ux18-grupos.png"
-  alt="UX18 - Grupos"
-  title="UX18 - Grupos"
-  className="mx-auto"
-  style={{ width:"37%" }}
-/>
-
-### Controles y pantalla GROUPS
-
-- **Físicos**: atenuador, ON-AIR, CUE.
-- **Pantalla GROUPS:** Se accede pulsando el botón de acceso rápido GROUPS. Permite gestionar las asignaciones a los buses y las sub-mezclas.
-
-<img
-  src="/images/ux24/ux18-groups-pantalla.png"
-  alt="UX18 - Pantalla Grupos"
-  title="UX18 - Pantalla Grupos"
-  className="mx-auto"
-  style={{ width:"60%" }}
-/>
-
-La pantalla GROUPS muestra, en primera instancia:
-
-- **Asignación a buses:** permiten la asignación a salidas de cada grupo. Todos **los canales** vinculados al grupo _heredan_ esta asignación.
-- **Información esencial:** Permiten trabajar con la pantalla GRUPOS sin perder de vista: nivel de programa, hora actual, contador de tiempo e indicación de micrófonos “en el aire”.
-- Pulsando **MIX** en la parte inferior de cada grupo se accede a la **pantalla de sub-mezcla** de los canales asignados al grupo.
-  <img
-    src="/images/ux24/ux18-GROUPS_MIX.png"
-    alt="UX18 GROUPS MIX"
-    title="UX18 GROUPS MIX"
-    className="mx-auto"
-    style={{ width:"65%" }}
-  />
-- La sub-mezclas de grupo se **guardan en la escena**.
-
-### Asignar canales a un grupo
-
-Los canales virtuales se pueden asignar a un grupo de dos maneras:
-
-1. Desde el asistente **CHANNEL MAP**, accesible desde la pantalla **ESCENAS** o pulsando **ADD** en la vista de sub-mezcla del grupo.
-2. Desde la pantalla **CHANNEL**, accesible desde la pantalla principal.
-
-<Note>
-  Para asignar o quitar canales de un grupo se requiere acceso con perfil **ADMIN**.
-
-  La configuración de los grupos se guarda en la escena.
-</Note>
+---
 
 ## Canales "virtuales"
 
@@ -156,23 +102,16 @@ Las **asignaciones** a buses se salida quedan bloqueadas en el canal, pues los c
 
 El botón de encendido de un canal agrupado cambia de **ON AIR a ON/OFF**, dado que la puesta al aire del canal depende de la activación del grupo.
 
+---
+
 ## Pantalla de canal (CHANNEL)
 
 La **pantalla de canal** muestra todos los valores y configuraciones asociados a un canal.\
 Incluye funciones básicas, como el ajuste de ganancia de la entrada, y opciones avanzadas que requieren permisos especiales.
 
-#### Acceso a la pantalla de canal
+### Acceso a la pantalla de canal
 
-1. **Desde la pantalla principal**, pulsar la opción **CHANNEL**. Esto abrirá la pantalla en el último canal seleccionado y activará el **modo SELECT**.\
-   En el menú, la opción CHANNEL cambiará a SELECT para permitir activarlo o desactivarlo.
-2. **Seleccionar un canal**:\
-   Con **SELECT** activo, los botones **CUE/SELECT** permiten elegir un canal. Mientras el modo de selección esté activo, se pueden ir alternando distintos canales para comparar sus ajustes.
-   - Los **canales virtuales** se seleccionan girando el **encoder**, que recorre los 18 canales.
-   - En pantalla, la zona del nombre de canal se muestra en **celeste** para los canales físicos y en **violeta** para los canales virtuales.
-   - Cuando se selecciona un **GRUPO**, en pantalla se muestran un listado de los canales asignados a ese grupo. Tocando un canal de la lista, se accede a la pantalla de ese canal.
-3. **Salir del modo SELECT**:\
-   Para confirmar y salir, pulsar el botón **SELECT** en la pantalla o presionar el **encoder**.\
-   El modo selección también se cancela automáticamente cuando se modifica algún parámetro en el canal seleccionado.
+**Desde la pantalla principal**, pulsar la opción **CHANNEL**. Esto mostrará la pantalla del último canal seleccionado y activará el **modo SELECT**.
 
 <img
   src="/images/UX18_screen_channel_refes.png"
@@ -181,6 +120,29 @@ Incluye funciones básicas, como el ajuste de ganancia de la entrada, y opciones
   className="mx-auto"
   style={{ width:"68%" }}
 />
+
+### El modo SELECT
+
+El modo SELECT se activa en cualquiera de las siguientes situaciones:
+
+- Al pulsar **CHANNEL** en la pantalla principal.
+- Al pulsar **PROCESS** en la pantalla principal.
+- Al pulsar **SELECT** en la pantalla CHANNEL o en una pantalla de procesos (EQ, compresor, etc.).
+
+Cuando está activo, los botones CUE se convierten en botones de selección de canal. Cambian su color a azul y las pantallas OLED de los canales muestran la leyenda SELECT.
+
+Se utiliza para elegir un canal y visualizar sus controles en pantalla. Por ejemplo, para modificar la ganancia de entrada de un canal, en la pantalla HOME se debe pulsar CHANNEL y luego el botón CUE/SELECT en el canal.
+
+En modo SELECT es posible seleccionar un grupo. En este caso, se mostrará información de los canales asignados al grupo.
+
+Estando activo el modo SELECT, es posible elegir un canal de dos formas:
+
+1. **Pulsando un botón CUE/SELECT en el canal.**\
+   Se muestran los controles de ese canal en pantalla. El modo SELECT permanece activo, pudiéndose seleccionar otros canales (esto permite comparar/revisar canales fácilmente). El botón CUE/SELECT del canal actualmente seleccionado permanece destellando.
+2. **Girando el encoder.**\
+   Con SELECT activo el encoder recorre los 24 canales, sean físicos o virtuales. A media que se gira el encoder, los canales en pantalla iran cambiando.
+
+Para confirmar la selección de un canal, pulsar el botón SELECT en la pantalla o pulsar el encoder. También se confirma si se toca un control del canal en la pantalla. Al confirmar, modo SELECT se desactiva y los botones CUE/SELECT vuelven a su modo de trabajo normal (CUE).
 
 ### Elementos de la pantalla CHANNEL
 
@@ -266,26 +228,65 @@ Funciones específicas según el **MODO** del canal.
 - **MASTER MIC A**: asigna el canal a uno o ambos botones maestros.
 - **CTRL ROOM MIC**: silencia los parlantes del Control (no los del Estudio) al poner el canal al aire.
 
-#### 11 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Activación del modo SELECT
+#### 11 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Activa/desactiva el modo SELECT
 
-El modo **SELECT** convierte temporalmente los botones **CUE** en botones de selección de canal.\
-Cuando SELECT está activo, los botones CUE se iluminan en azul y las pantallas OLED de los canales muestran la leyenda SELECT.
+---
 
-Esta función se utiliza para elegir un canal y visualizar sus controles en pantalla. Por ejemplo, para modificar la ganancia de entrada de un canal, en la pantalla HOME se debe pulsar CHANNEL y luego el botón CUE/SELECT en el canal.
+## Grupos y submezclas
 
-En modo SELECT es posible seleccionar un grupo. En este caso, se mostrará información de los canales asignados al grupo.
+La consola **UX18** presenta **4 atenuadores de GRUPOS**.\
+Cada grupo puede tener asignado uno o varios **canales virtuales** (canales del 7 al 18).
 
-El modo SELECT se activa en cualquiera de las siguientes situaciones:
+**Comportamiento**
 
-- Al pulsar **CHANNEL** en la pantalla principal.
-- Al pulsar **PROCESS** en la pantalla principal.
-- Al pulsar **SELECT** en la pantalla CHANNEL o en una pantalla de procesos (EQ, compresor, etc.).
+- **Un solo canal asignado** → el grupo se comporta como un canal más, otorgándole al canal virtual controles físicos (atenuador, botón **ON-AIR** y **CUE**).
+- **Dos o más canales asignados** → el grupo funciona como un **sub-master**, manejando una **sub-mezcla** de esos canales virtuales.
+- Los canales de grupo se pueden vincular al botón **MASTER ON-AIR MIC** desde la pantalla **CHANNEL**.
 
-Estando activo el modo SELECT, es posible elegir un canal de dos formas:
+<img
+  src="/images/ux24/ux18-grupos.png"
+  alt="UX18 - Grupos"
+  title="UX18 - Grupos"
+  className="mx-auto"
+  style={{ width:"37%" }}
+/>
 
-1. **Pulsando un botón CUE/SELECT en el canal.**\
-   Se muestran los controles de ese canal en pantalla. El modo SELECT permanece activo, pudiéndose seleccionar otros canales (esto permite comparar/revisar canales fácilmente). El botón CUE/SELECT del canal actualmente seleccionado permanece destellando.
-2. **Girando el encoder.**\
-   Con SELECT activo el encoder recorre los 24 canales, sean físicos o virtuales.
+### Controles y pantalla GROUPS
 
-Para confirmar la selección de un canal, pulsar el botón SELECT en la pantalla o pulsar el encoder. También se confirma si se toca un control del canal en la pantalla. Al confirmar, modo SELECT se desactiva y los botones CUE/SELECT vuelven a su modo de trabajo normal (CUE).
+- **Físicos**: atenuador, ON-AIR, CUE.
+- **Pantalla GROUPS:** Se accede pulsando el botón de acceso rápido GROUPS. Permite gestionar las asignaciones a los buses y las sub-mezclas.
+
+<img
+  src="/images/ux24/ux18-groups-pantalla.png"
+  alt="UX18 - Pantalla Grupos"
+  title="UX18 - Pantalla Grupos"
+  className="mx-auto"
+  style={{ width:"60%" }}
+/>
+
+La pantalla GROUPS muestra, en primera instancia:
+
+- **Asignación a buses:** permiten la asignación a salidas de cada grupo. Todos **los canales** vinculados al grupo _heredan_ esta asignación.
+- **Información esencial:** Permiten trabajar con la pantalla GRUPOS sin perder de vista: nivel de programa, hora actual, contador de tiempo e indicación de micrófonos “en el aire”.
+- Pulsando **MIX** en la parte inferior de cada grupo se accede a la **pantalla de sub-mezcla** de los canales asignados al grupo.
+  <img
+    src="/images/ux24/ux18-GROUPS_MIX.png"
+    alt="UX18 GROUPS MIX"
+    title="UX18 GROUPS MIX"
+    className="mx-auto"
+    style={{ width:"65%" }}
+  />
+- La sub-mezclas de grupo se **guardan en la escena**.
+
+### Asignar canales a un grupo
+
+Los canales virtuales se pueden asignar a un grupo de dos maneras:
+
+1. Desde el asistente **CHANNEL MAP**, accesible desde la pantalla **ESCENAS** o pulsando **ADD** en la vista de sub-mezcla del grupo.
+2. Desde la pantalla **CHANNEL**, accesible desde la pantalla principal.
+
+<Note>
+  Para asignar o quitar canales de un grupo se requiere acceso con perfil **ADMIN**.
+
+  La configuración de los grupos se guarda en la escena.
+</Note>
