@@ -9,13 +9,13 @@ import tierras from '/snippets/snippet-tierras.mdx';
 
 ## Fuente de alimentación
 
-La DX816/822 trabaja con alimentación externa. Se incluye una fuente **conmutada 90-240 V**, que opera con cualquier red eléctrica, incluso en zonas con grandes variaciones de tensión. Entrega **28 VCC regulados**.
+La DX816/822 trabaja con alimentación externa. Se incluye una fuente **conmutada 90-240 V**, que opera con cualquier red eléctrica, incluso en zonas con grandes variaciones de tensión. Entrega **28 VCC regulados**. 
+
+En el panel trasero se ubica la entrada de alimentación **DC IN**, con conector tubular pin de **2,1 mm** positivo en el centro.
 
 <Warning>
   Se recomienda usar siempre la **fuente original suministrada por Solidyne**.
 </Warning>
-
-En el panel trasero se ubica la entrada de alimentación **DC IN**, con conector tubular pin positivo de 1,8 mm.
 
 <img
   src="/images/816/816-trasero-fuente.png"
@@ -25,19 +25,28 @@ En el panel trasero se ubica la entrada de alimentación **DC IN**, con conector
   style={{ width:"52%" }}
 />
 
+<Info>
+  El conector tubular Tally Light suministra tensión para la luz "En el Aire". El pin de este conector es de 2,5 mm lo que impide la conexión accidental de la fuente de alimentación.
+</Info>
+
+## Conexión a tierra
+
 La conexión a tierra se realiza mediante un **borne de bronce** que asegura la puesta a tierra de chasis.  Utilice cable de sección **2 mm** conectado a una **jabalina de cobre enterrada**.
 
 <tierras />
 
 ---
 
-## Diagrama general de conexiones
+## Diagrama general de conexiones (DX822)
+
+El diagrama general de conexiones muestra el panel trasero del modelo DX822. \
+El modelo DX816 es igual, con excepción de las entradas de micrófono que son cinco.
 
 ![816 Diagrama Pn](/images/816/816-diagrama.png)
 
 ---
 
-## Conectores RJ45
+## Sobre los conectores RJ45
 
 Con el advenimiento del **audio sobre IP (AoIP)**, diversos fabricantes adoptamos el uso de **conectores RJ45** y cable multipar blindado para reemplazar conectores de audio tradicionales.
 
@@ -53,5 +62,5 @@ Las entradas balanceadas de la consola **Solidyne DX816/822** utilizan **conecto
 El kit de conexiones **Solidyne MNGX816** incluye todos los cables necesarios para entradas y salidas balanceadas con RJ45, garantizando confiabilidad y evitando errores de conexión.
 
 <Note>
-  Las conexiones de audio RJ45 de Solidyne son **compatibles con el estándar StudioHub** ([www.studiohub.com](http://www.studiohub.com)).
+  Las conexiones de audio RJ45 de Solidyne son **compatibles con los provistos por StudioHub** ([www.studiohub.com](http://www.studiohub.com)).
 </Note>
