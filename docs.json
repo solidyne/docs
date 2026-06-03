@@ -28,7 +28,8 @@
                 "pages": [
                   "es/index",
                   "es/otros_docs/discontinued"
-                ]
+                ],
+                "expanded": true
               },
               {
                 "group": "Documentación accesoria",
