@@ -223,6 +223,7 @@
                     "group": "INSTALACIÓN",
                     "pages": [
                       "es/DX816/816-diagramas",
+                      "es/DX816/conexiones-rj-45",
                       "es/DX816/816-entradas",
                       "es/DX816/816-salidas",
                       "es/DX816/816-usb",
