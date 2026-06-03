@@ -1,15 +1,16 @@
 ---
 title: "UX18 Operation"
-description: "UX18 Operation - Console surface areas"
+description: "UX18 Operation - Areas on the console surface"
 keywords: ["operation","panel","main screen","groups","monitoring"]
-tags: ["IP consoles", "UNIDEX,UX18"]
+tags: ["IP consoles", "UNIDEX", "UX18"]
 translation:
   source_lang: "es"
+  target_lang: "en"
   status: "draft"
   version: 0
   reviewed_by: ""
   reviewed_at: ""
-  source_hash: "90589cf4f67448b6c0f81e2f86feac95a1156f04ac1524467d6572ce89ccd211"
+  source_hash: "20bb7429e76870aaf25df6b86c1f0d50d3f2e2ca8e98c1df650c4c10b2be31ba"
 
 ---
 
@@ -24,80 +25,80 @@ translation:
 />
 
 **A — Channel Controls**\
-Traditional controls with faders, assignment buttons, on-air and pre-fader listen (PFL).\
-They operate conventionally and allow direct control of line communications, VoIP and cellular via Bluetooth (through UDX TELCO adapters).
+Traditional controls with faders, assignment buttons, on-air, and pre-fader listen (PFL).\
+They operate conventionally and allow direct handling of line communications, VoIP, and Bluetooth cell phones (via UDX TELCO adapters).
 
 **B — Groups**\
-4 GROUPS handle channel **submixes**. Channels 7 through 18 can be assigned to groups. Each group's submixes are controlled from an on-screen mixer that appears by pressing the GROUPS shortcut.
+4 GROUPS handle **channel sub-mixes**. Channels 7 through 18 can be assigned to the groups. Each group's sub-mix is controlled from an on-screen mixer that appears by pressing the GROUPS shortcut.
 
-**C — Touch Screen**\
-7" screen used to operate multiple console functions. Includes 4 contextual shortcut buttons and a rotary encoder with push button.
+**C — Touchscreen**\
+A 7" screen used to operate multiple console functions. Includes 4 contextual quick-access buttons and a rotary encoder with push button.
 
-**D — Monitoring and Talkback**\
-Area dedicated to monitoring control and talkback circuit.
+**D — Monitoring and Intercom**\
+Area dedicated to monitoring control and the talkback circuit.
 
 ## Main Screen
 
 ### Level Meters
 
-The **PGM**, **REC**, **AUX** and **VBUS** meters display:
+The **PGM**, **REC**, **AUX**, and **VBUS** meters display:
 
 - Average level in **VU** (slow-moving blue bar).
-- Peak level in **dBfs** (floating yellow segment).
+- Peak level in **dBFS** (floating yellow segment).
 
-The scale is calibrated in dBfs, where **-20 dBfs equals 0 VU**.\
-The numerical value on the right shows the current maximum (in VU or dBfs) and toggles by touching the number.\
-The main meter remains visible on all screens and can be switched between buses by touching the bus name on the left.
+The scale is calibrated in dBFS, where **–20 dBFS corresponds to 0 VU**.\
+The numeric value on the right shows the current maximum (in VU or dBFS) and toggles by tapping on the number.\
+The main meter remains visible on all screens and the bus can be changed by tapping the bus name on the left.
 
 <Tip>
-  **Note about levels:**\
-  The meters show the **bus** level.
+  **Note on levels:**\
+  The meters display the **bus** level.
 
-  - On digital outputs, the level matches the output level if gain is at 0.
-  - On analog outputs, 0 VU = -20 dBfs, with nominal levels of **+4 dBu** (balanced) and **0 dBu** (unbalanced).\
-    If a gain level higher than nominal is set, headroom is reduced and clipping may occur before the meter shows it.
+  - On digital outputs, the level matches the output level when gain is set to 0.
+  - On analog outputs, 0 VU = –20 dBFS, with nominal levels of **+4 dBu** (balanced) and **0 dBu** (unbalanced).\
+    If a gain level higher than nominal is set, the headroom is reduced and clipping may occur before the meter indicates it.
 </Tip>
 
 ### CUE Level
 
-Shows the **CUE** bus level, after the physical level knob.
+Displays the **CUE** bus level, after the physical level knob.
 
 ### Status
 
-- **Unidex IP:** IP address for remote control. Enter in a web browser (recommended: Google Chrome) to access the control interface. Requires connecting the _Ethernet Remote Control_ port to the LAN.
-- **Stream IP:** Streaming module IP address. Enter in a browser to configure streaming services. Requires connecting the _Ethernet Streaming_ port to the LAN.
-- **SCENE:** Currently active scene name.
-- **USER:** Active user profile (ADMIN, EXPERT or BASIC).
+- **Unidex IP:** IP address for remote control. Enter it in a web browser (recommended: Google Chrome) to access the control interface. Requires connection of the _Ethernet Remote Control_ port to the LAN.
+- **Stream IP:** IP address of the streaming module. Enter it in a browser to configure streaming services. Requires connection of the _Ethernet Streaming_ port to the LAN.
+- **SCENE:** Name of the currently active scene.
+- **USER:** Active user profile (ADMIN, EXPERT, or BASIC).
 - **MSG:** System messages.
-- **"+" Advanced:** Opens maintenance options (includes internal CPU shutdown before powering off).
+- **"+" Advanced:** Opens maintenance options (includes shutting down the internal CPU before cutting power).
 
-### Central Clock
+### Main Clock
 
-Shows current time.\
-Synchronizes automatically if the console is connected to the Internet, or manually (see SETTINGS -> SYS CONFIG screen).
+Displays the current time.\
+It synchronizes automatically if the console is connected to the Internet, or manually (see SETTINGS -> SYS CONFIG screen).
 
 ### ON AIR Counter
 
-Starts an ascending count (**hh:mm:ss**) when microphones are activated. When turned off, the value remains on screen.
+Starts an ascending count (**hh:mm:ss**) when microphones are activated. When they are turned off, the value remains on screen.
 
-### Quick Access Buttons
+### Quick-Access Buttons
 
 4 buttons located to the right of the screen provide quick access to main functions.
 
 1. **HOME** Calls up the main screen.
-2. **GROUPS** Shows group assignment and submix controls.
+2. **GROUPS** Displays the group assignment and sub-mix controls.
 3. **TELCO** Interface for managing channels assigned to telephone lines and Bluetooth phones.
-4. **MONITOR** Shows audio source assignment for Studio and Control Room. Contains advanced functions related to speaker and headphone monitoring.
+4. **MONITOR** Displays the audio source assignment for the Studio and Control Room. Contains advanced functions related to speaker and headphone monitoring.
 
-### MENU on Main Screen
+### MENU on the Main Screen
 
-Direct access on main screen:
+Shortcuts on the main screen:
 
 - **SETTINGS:** Advanced and system configuration (ADMIN only).
-- **SCENE:** Scene and user profile management. Also the CHANNEL MAP wizard.
-- **PROCESS:** Access to equalization, compression, de-esser and noise gate.
-- **VIRTUAL:** Accesses virtual channel control screen. When a virtual channel is active, VIRTUAL flashes red.
-- **CHANNEL:** Selected channel information and control, including gain, panning, processors and source reassignment.
+- **SCENE:** Scene and user profile management. Also includes the CHANNEL MAP wizard.
+- **PROCESS:** Access to equalization, compression, de-esser, and noise gate.
+- **VIRTUAL:** Accesses the virtual channel control screen. When a virtual channel is active, VIRTUAL flashes in red.
+- **CHANNEL:** Information and control of the selected channel, including gain, panning, processors, and source reassignment.
 
 <Note>
   **Power saving mode** Screens turn off after 15 minutes of inactivity. They reactivate by moving a fader or pressing an Intercom button.

@@ -1,165 +1,185 @@
 ---
-title: "Technical specifications"
-description: "Technical specifications"
+title: "Technical Specifications"
+description: "Technical specifications for UNIDEX UX18"
 keywords: ["specifications"]
-tags: "ip consoles,UX18"
+tags: ["UNIDEX", "UX18"]
+mode: "wide"
 translation:
   source_lang: "es"
+  target_lang: "en"
   status: "draft"
   version: 0
   reviewed_by: ""
   reviewed_at: ""
-  source_hash: "fbf3531ac551ff5dd70b648d6f8541b600394306c3b9c92a598a6f522c6c7d8b"
+  source_hash: "9b29896b7853ded8d7a446ec7245e4532a32158c241c579293ebff378d87cb17"
 
 ---
 
 <AccordionGroup>
-  <Accordion title="General features">
-    | Item                | Specification                                                      |
-    | --------------------- | --------------------------------------------------------------------- |
-    | Channels             | 18 channels                                                          |
-    | Physical faders      | 10 on panel. 4 can work as groups (submixes)                         |
-    | Virtual faders       | 8 Operable from touchscreen, assignable to groups                    |
-    | Remote control       | Internal web interface (HTML5) via LAN                               |
-    | Routing              | Inputs assignable to all 18 channels                                 |
-    | Scenes               | 12 user scenes                                                       |
-    | Touchscreen          | 7" — 1024 × 600 px, multi-touch                                     |
-    | Channel displays     | OLED on channels 1 to 6 (name, input level, attenuation, status)    |
+  <Accordion title="General Features">
+    | Item | Specification |
+    | --- | --- |
+    | Channels | 18 channels |
+    | Physical faders | 10 on the panel. 4 can operate as groups (submixes) |
+    | Virtual faders | 8 Operable from touchscreen, assignable to groups |
+    | Remote control | Internal web interface (HTML5) via LAN |
+    | Routing | Inputs assignable to all 18 channels |
+    | Scenes | 12 user scenes |
+    | Touchscreen | 7" — 1024 × 600 px, multi-touch |
+    | Per-channel displays | OLED on channels 1 to 6 (name, input level, attenuation, status) |
   </Accordion>
+
   <Accordion title="Inputs">
     #### Analog Inputs
 
-    | Type          | Quantity | Details                                                                         |
-    | ------------- | -------: | ------------------------------------------------------------------------------- |
-    | Microphone    | 5        | +48 V phantom power switchable per channel                                      |
-    | Stereo line   | 3        | 2 balanced + 1 unbalanced                                                       |
-    | UNIDEX        | 4        | Configurable dual-mono / stereo. Supports UDX adapters (mic, Telco, USB, etc.) |
+    | Type | Quantity | Detail |
+    | --- | --: | --- |
+    | Microphone | 5 | Switchable \+48 V phantom power per channel |
+    | Stereo line | 3 | 2 balanced \+ 1 unbalanced |
+    | UNIDEX | 8 mono / 4 stereo | Balanced line-level inputs with extended capabilities for connecting Solidyne UDX adapters. Support up to 8 additional sources (microphones, TELCO lines). |
 
     #### Digital Inputs
 
-    | Type                   | Quantity    | Details                                               |
-    | ---------------------- | ----------: | ----------------------------------------------------- |
-    | AES3                   | 2 (stereo)  | AES3 inputs support 44.1 and 48 kHz                  |
-    | USB                    | 4 (stereo)  | 4 playback devices from a PC                         |
-    | Bluetooth              | 1           | Mobile device pairing (Hands Free + A2DP music input) |
-    | Dante/AES67 (optional) | 16          | Only in **UX18/A67** option                          |
+    | Type | Quantity | Detail |
+    | --- | --: | --- |
+    | AES3 | 2 (stereo) | Support sample rates of 44.1 - 48 - 96 kHz |
+    | USB Audio | 4 stereo / 8 mono | 4 playback devices from a PC (WDM).<br />ASIO compatible → supports 8-IN x 8-OUT mode |
+    | Bluetooth | 1 | Mobile device pairing (Hands Free \+ A2DP music input) |
+    | Dante/AES67 (optional) | 16 (mono) | Available in **UX18/A67** option only |
   </Accordion>
+
   <Accordion title="Outputs">
     #### Analog Outputs
 
-    | Type           | Quantity    | Details                             |
-    | -------------- | ----------: | ----------------------------------- |
-    | PGM            | 2 (stereo)  | 1 balanced + 1 unbalanced          |
-    | REC            | 1           | Balanced                            |
-    | Assignable     | 4 (stereo)  | Unbalanced                         |
-    | Control Monitor | 2 (stereo)  | Speakers + headphones              |
-    | Studio Monitor  | 2 (stereo)  | Speakers + headphones + talkback   |
+    | Type | Quantity | Detail |
+    | --- | --: | --- |
+    | PGM | 2 (stereo) | 1 balanced \+ 1 unbalanced |
+    | REC | 1 | Balanced |
+    | Assignable | 4 (stereo) | Unbalanced |
+    | Control Monitor | 2 (stereo) | Speakers \+ headphones |
+    | Studio Monitor | 2 (stereo) | Speakers \+ headphones \+ talkback |
 
     #### Digital Outputs
 
-    | Type                   | Quantity    | Details                                   |
-    | ---------------------- | ----------: | ----------------------------------------- |
-    | AES3                   | 2 (stereo)  | AES3 outputs operate at 48 kHz            |
-    | USB                    | 4 (stereo)  | 4 recording devices on a PC               |
-    | Streaming              | 2           | RTP + Icecast/Shoutcast (independent)     |
-    | Dante/AES67 (optional) | 16          | Only in **UX18/A67** option              |
+    | Type | Quantity | Detail |
+    | --- | --: | --- |
+    | AES3 | 2 (stereo) | Supports 48 kHz sample rate ONLY |
+    | USB Audio | 4 stereo / 8 mono | 4 stereo recording devices on a PC (WDM).<br />ASIO compatible → supports 8-out mono mode. |
+    | Streaming | 2 | RTP \+ Icecast/Shoutcast (independent) |
+    | Dante/AES67 (optional) | 16 (mono) | Available in **UX18/A67** option only |
   </Accordion>
-  <Accordion title="GPIO, intercom and auxiliaries">
-    | Item                              | Specification                                                |
-    | --------------------------------- | ------------------------------------------------------------ |
-    | "On Air" light                    | 12 VDC / 250 mA                                              |
-    | GPI                               | 2 inputs (active high 3.3 ~ 15 V)                            |
-    | GPO                               | 7 outputs (open collector; +24 V @ 250 mA)                   |
-    | Air monitor (external tuner)      | 1 unbalanced stereo input (also assignable to channels)      |
-    | Reverse talkback from Studio      | 1 input (Studio Box connector)                               |
-    | Talkback                          | Built-in talkback microphone                                 |
-    | TELCO intercom                    | PTT (talk/listen) on TELCO channels with CUE button          |
+
+  <Accordion title="GPIO, Intercom and Auxiliaries">
+    | Item | Specification |
+    | --- | --- |
+    | On-Air light | 12 VDC / 250 mA |
+    | GPI | 2 inputs (active high 3.3 ~ 15 V) |
+    | GPO | 7 outputs (open collector; \+24 V @ 250 mA) |
+    | Air monitor (external tuner) | 1 unbalanced stereo input (also assignable to channels) |
+    | Reverse talkback from Studio | 1 input (Studio Box connector) |
+    | Talkback | Built-in cue microphone |
+    | TELCO Intercom | PTT (talk/listen) on TELCO channels with CUE button |
   </Accordion>
-  <Accordion title="Audio architecture">
-    | Item                 | Specification                                                                |
-    | -------------------- | --------------------------------------------------------------------------- |
-    | Buses                | 4 stereo (PGM, REC, AUX, VBUS)                                             |
-    | PFL Bus              | 1 (CUE)                                                                     |
-    | Resolution / SR      | 24 bits @ 48 kHz                                                            |
-    | Processing           | DSP on all inputs (fixed per input)                                         |
-    | Processes            | 3-band parametric EQ, gate, compressor/limiter, de-esser                    |
-    | Mix-minus / talkback | Automatic feeds for TELCO                                                   |
-    | Latency             | 1.2 ms (line→analog out) / 1.4 ms (MIC→output with EQ+Dynamics+De-Esser)    |
+
+  <Accordion title="Audio Architecture and Processing">
+    | Item | Specification |
+    | --- | --- |
+    | Buses | 4 stereo (PGM, REC, AUX, VBUS) |
+    | PFL bus | 1 (CUE) |
+    | Resolution / SR | 24 bits @ 48 kHz |
+    | Processing | DSP on all inputs (fixed per input) |
+    | Processes | 3-band parametric EQ, gate, compressor/limiter, de-esser |
+    | Mix-minus / talkback | Automatic sends for TELCO |
+    | Latency | 1.2 ms (line→analog output) / 1.4 ms (MIC→output with EQ\+Dynamics\+De-Esser) |
   </Accordion>
-  <Accordion title="Values and measurements (audio)">
+
+  <Accordion title="Measurements (Noise, Distortion, Levels)">
     #### Digital (AES3, AoIP)
 
-    | Parameter              | Value                   |
-    | --------------------- | ----------------------- |
-    | Dynamic range (DR)    | 120 dBA                 |
-    | Frequency response    | 20 Hz – 20 kHz ± 0.1 dB |
-    | THD                   | < 0.002 %               |
-    | AES3 (inputs)        | 44.1 / 48 kHz           |
-    | AES3 (outputs)       | 48 kHz                  |
+    | Parameter | Value |
+    | --- | --- |
+    | Dynamic range (DR) | 120 dBA |
+    | Frequency response | 20 Hz – 20 kHz ± 0.1 dB |
+    | THD | \< 0.002 % |
+    | AES3 (inputs) | 44.1 / 48 kHz |
+    | AES3 (outputs) | 48 kHz |
 
     #### USB
 
-    | Parameter     | Value                                          |
-    | ------------ | ---------------------------------------------- |
-    | Port         | USB 2.0                                        |
-    | Channels     | 4 stereo playback/recording devices            |
-    | ASIO         | ASIO 3.0 driver (simultaneous ASIO + WDM)      |
-    | Multi-client | Yes (multiple ASIO apps in parallel)           |
-    | Windows      | 11/10 (32/64 bit)                             |
+    | Parameter | Value |
+    | --- | --- |
+    | Port | USB 2.0 |
+    | Channels | 4 stereo playback/recording devices |
+    | ASIO | ASIO 3.0 driver (simultaneous ASIO \+ WDM) |
+    | Multi-client | Yes (multiple ASIO apps in parallel) |
+    | Windows | 11/10 (32/64-bit) |
 
-    #### Analog inputs (line)
+    #### Analog Inputs (line)
 
-    | Parameter           | Value                                      |
-    | ------------------ | ------------------------------------------ |
-    | Input level        | Max +26 dBu / Min −24 dBu / Nominal +4 dBu |
-    | Dynamic range      | 112 dBA                                    |
-    | Frequency response | 20 Hz – 20 kHz ± 0.25 dB                   |
-    | THD+N             | 0.01 %                                     |
+    | Parameter | Value |
+    | --- | --- |
+    | Input level | Max \+26 dBu / Min −24 dBu / Nominal \+4 dBu |
+    | Dynamic range | 112 dBA |
+    | Frequency response | 20 Hz – 20 kHz ± 0.25 dB |
+    | THD\+N | 0.01 % |
 
-    #### Microphone inputs
+    #### Microphone Inputs
 
-    | Parameter           | Value                                               |
-    | ------------------ | --------------------------------------------------- |
-    | Input level        | Max −24 dBu / Min −75 dBu / Nominal −50 dBu @ 150 Ω |
-    | Pad                | −10 dB on MIC-1 to MIC-4                            |
-    | Noise (EIN)        | −121 dBA @ −50 dBu                                  |
-    | Frequency response | 20 Hz – 20 kHz ± 0.5 dB                             |
-    | THD+N             | 0.01 %                                              |
-    | Phantom           | +48 V individual (DIN 45596)                         |
+    | Parameter | Value |
+    | --- | --- |
+    | Input level | Max −24 dBu / Min −75 dBu / Nominal −50 dBu @ 150 Ω |
+    | Attenuation | −10 dB on MIC-1 to MIC-4 |
+    | Noise (EIN) | −121 dBA @ −50 dBu |
+    | Frequency response | 20 Hz – 20 kHz ± 0.5 dB |
+    | THD\+N | 0.01 % |
+    | Phantom | \+48 V individual (DIN 45596) |
 
-    #### Analog outputs
+    #### Analog Outputs
 
-    | Parameter           | Value                        |
-    | ------------------ | ---------------------------- |
-    | Output level       | Nominal +4 dBu / Max +24 dBu |
-    | Dynamic range      | > 110 dBA                    |
-    | Frequency response | 20 Hz – 20 kHz ± 0.5 dB      |
-    | THD               | typ 0.005 % @ 1 kHz          |
+    | Parameter | Value |
+    | --- | --- |
+    | Output level | Nominal \+4 dBu / Max \+24 dBu |
+    | Dynamic range | \> 110 dBA |
+    | Frequency response | 20 Hz – 20 kHz ± 0.5 dB |
+    | THD | typ 0.005 % @ 1 kHz |
   </Accordion>
-  <Accordion title="Dante/AES67 option (UX18/A67)">
-    | Item           | Specification                                                                        |
-    | -------------- | ------------------------------------------------------------------------------------ |
-    | Channels       | 16 × 16                                                                              |
-    | Compatibility  | Can work with existing Dante networks up to 512 × 512                                |
-    | AoIP outputs   | PGM, REC, AUX, Control headphones, Studio headphones + 3 assignable stereo           |
+
+  <Accordion title="USB">
+    | Feature | Detail |
+    | --- | --- |
+    | Port | 1 × USB 2.0 |
+    | Channels | 4 stereo playback/recording devices on a PC (Windows WDM) |
+    | Driver | ASIO 2.2 (supports simultaneous ASIO and WDM playback) |
+    | VST | Supports 32-bit and 64-bit VST hosts (ASIO) for real-time plug-ins |
+    | Multi-client | Supports more than one ASIO application in parallel |
+    | Compatibility | Windows 11/10/8/7 (32 and 64-bit) |
   </Accordion>
-  <Accordion title="Dimensions and weight">
+
+  <Accordion title="Dante AES67 Option">
+    | Item | Specification |
+    | --- | --- |
+    | Channels | 16 × 16 |
+    | Compatibility | Can operate with existing Dante networks up to 512 × 512.<br />Complies with the AES67 standard for integration with other AoIP networks, such as LiveWire/AES67. |
+    | AoIP outputs | PGM, REC, AUX, Control headphones, Studio headphones \+ 3 assignable stereo |
+  </Accordion>
+
+  <Accordion title="Dimensions and Weight">
     #### Dimensions
 
-    | Item   | Value                           |
-    | ------ | ------------------------------- |
-    | Width  | 730 mm                          |
-    | Depth  | 455 mm (550 mm with rear cover) |
-    | Height | 130 mm                          |
+    | Item | Value |
+    | --- | --- |
+    | Width | 730 mm |
+    | Depth | 455 mm (550 mm with rear cover) |
+    | Height | 130 mm |
 
-    #### Packaging and weight
+    #### Packaging and Weight
 
-    | Item                               | Value              |
-    | ---------------------------------- | ------------------ |
-    | Package                            | 850 × 610 × 270 mm |
-    | UX18 weight                        | 8 kg               |
-    | UDX adapters                       | 0.33 kg each       |
-    | RJ45 cable kit                     | 4 kg               |
-    | Total with package (UX18 + cables) | 15 kg             |
+    | Item | Value |
+    | --- | --- |
+    | Packaging | 850 × 610 × 270 mm |
+    | UX18 weight | 8 kg |
+    | UDX adapters | 0.33 kg each |
+    | RJ45 cable kit | 4 kg |
+    | Total with packaging (UX18 \+ cables) | 15 kg |
   </Accordion>
 </AccordionGroup>

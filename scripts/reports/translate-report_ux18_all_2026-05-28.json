@@ -1,0 +1,18 @@
+{
+  "model": "anthropic/claude-sonnet-4-6",
+  "duration_sec": "451.28",
+  "results": {
+    "en": {
+      "translated": 7,
+      "skipped": 4,
+      "errors": 0,
+      "total": 11
+    },
+    "pt": {
+      "translated": 3,
+      "skipped": 8,
+      "errors": 0,
+      "total": 11
+    }
+  }
+}

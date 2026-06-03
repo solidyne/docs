@@ -1,0 +1,118 @@
+language: en-US
+
+context:
+  domain: professional radio broadcasting
+  audience: broadcast engineers, radio operators, system integrators
+  style: technical documentation
+  priority: use terminology common to Telos Alliance, Axia and AEQ
+  avoid consumer, home-studio and live-sound terminology when a broadcast equivalent exists
+
+rules:
+
+  - Translate for a professional broadcast environment.
+  - Prefer broadcast-industry terminology over generic audio terminology.
+  - Preserve product names, model numbers, trademarks and protocols exactly as written.
+  - Use "console", never "mixer", unless the original explicitly refers to a mixer product.
+  - Use "fader", never "attenuator", "slider" or "level control".
+  - Never use "mechanical fader".
+  - Use "physical fader" or "hardware fader" depending on context.
+  - Use "on-air", never "air".
+  - Use "grounding", never "earth wiring".
+  - Use "shielded cable", never "screened cable".
+  - Use "FM stereo coder", never "FM stereo generator".
+  - Keep broadcast acronyms unchanged.
+
+no_translate:
+
+  - fader
+  - CUE
+  - talkback
+  - DSP
+  - GPIO
+  - USB
+  - Ethernet
+  - Bluetooth
+  - Dante
+  - Livewire
+  - AES3
+  - AES/EBU
+  - AES67
+  - SIP
+  - API
+  - firmware
+  - preset
+  - snapshot
+  - codec
+  - streaming
+  - rack
+  - multicast
+  - unicast
+  - AoIP
+  - MPX
+  - RDS
+  - VoIP
+  - LAN
+  - WAN
+  - VLAN
+
+preferred:
+
+  consola de audio: audio console
+  consola de broadcast: broadcast console
+  consola IP: IP audio console
+  
+  canal al aire: channel on-air
+  operación al aire: on-air operation
+  puesta al aire: on-air operation
+  salir al aire: go on-air
+  aire: on-air
+
+  retorno N-1: mix-minus
+  retorno de aire: off-air return
+
+  híbrido telefónico: telephone hybrid
+
+  línea fija: fixed line
+  línea telefónica: phone line
+
+  codificador estéreo: stereo encoder
+  codificador FM estéreo: FM stereo coder
+  codificador RDS: RDS encoder
+
+  procesador de audio: audio processor
+  monitor de modulación: modulation monitor
+
+  fuente: source
+  destino: destination
+  ruteo: routing
+
+  posición del fader: fader position
+  fader físico: physical fader
+  fader virtual: virtual fader
+  fader motorizado: motorized fader
+
+  puesta a tierra: grounding
+  conexión a tierra: ground connection
+
+  cable blindado: shielded cable
+  blindado contra interferencias: shielded against interference
+
+  estudio de radio: radio studio
+
+  consola principal: main console
+  consola de respaldo: backup console
+
+  motor de audio: audio engine
+
+  línea anterior: legacy product line
+  modelo anterior: previous-generation model
+  producto discontinuado: discontinued product
+  
+  salida de programa: program output
+  bus de programa: program bus
+
+notes:
+
+  - When translating documentation for Solidyne consoles, assume the equipment is intended for professional radio broadcasting unless stated otherwise.
+  - Prefer terminology commonly found in Telos Alliance, Axia and AEQ documentation.
+  - Avoid literal translations that sound correct in English but are uncommon in broadcast engineering.
