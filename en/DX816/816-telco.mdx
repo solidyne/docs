@@ -1,25 +1,23 @@
 ---
-title: "Communications"
-description: "Telephone line connection and configuration"
-keywords: ["telco", "bluetooth", "null", "mix-minus", "rejection"]
+title: "Comunicaciones"
+description: "Conexión y configuración de líneas telefónicas"
+keywords: ["telco", "Bluetooth", "null", "mix-minus", "rejection"]
 tags: ["studio consoles", "Classic line", "DX816", "DX822"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "3482d5ba6f0754f735201e29d4ee054a0c49d6f4baadbc1061fe7b3ba8de00f4"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: null
+  reviewed_at: null
 ---
 
-import tierras from '/snippets/snippet-tierras-en.mdx';
+import tierras from '/snippets/snippet-tierras.mdx';
 
-## Telephone Line Connection
+## Telephone Line Connections
 
-The hybrid channel handles **two landlines** and **one cell phone** connected via Bluetooth.
+The hybrid channel handles **two landline telephone connections** and **one mobile phone** linked via Bluetooth.
 
-The console's rear panel has **four RJ11 connectors**:
+On the rear panel of the console, there are **four RJ11 connectors**:
 
 <img
   src="/images/816/816-POTS.png"
@@ -29,110 +27,104 @@ The console's rear panel has **four RJ11 connectors**:
   style={{ width:"40%" }}
 />
 
-- Two telephone lines (to connect to public network or PBX).
-- Two associated telephone sets (labeled "SET"), typically used by production to handle calls.
+- Two telephone lines (to connect to the public network or a PBX system).
+- Two associated telephones (labeled as “SET”), typically used by production staff to handle calls.
 
 <Warning>
-  Lines are protected against overvoltage (up to 2,000 V) through internal varistors.\
-  However, it is essential to install **external gas discharge protectors** connected to a 2m ground rod for public networks. **Equipment warranty does not cover lightning damage**.
+  The lines are surge-protected (up to 2,000 V) using internal varistors.\
+  However, it is essential to **install external protectors** connected to a 2 m grounding rod for public exchanges. **Equipment warranty does not cover lightning damage**.
 </Warning>
 
 <tierras />
 
----
-
 ### Null Adjustment
 
 This adjustment applies only to **landlines**. It is performed once during installation.\
-Null rejection prevents transmitted signal from returning mixed with the interviewee's voice, improving local speaker quality.
+The null setting prevents the transmitted signal from returning mixed with the interviewee's voice, improving the local announcer's audio quality.
 
 **Procedure:**
 
-1. Assign the Telecommunications Channel to the **REC** output (to avoid adjusting on-air).
+1. Assign the Telecom Channel to the **REC** output (to avoid adjusting while on-air).
 2. Establish a call and ask the interviewee to speak.
-3. Adjust the call level with Channel 8 fader until the REC VUmeter reaches the white zone.
-4. Activate a microphone channel (on REC) and ask someone to speak from the Studio.
-5. While listening to the local voice on REC, turn the **NULL** control in both directions to find the optimal point, achieved when the local signal mixing through the hybrid is minimal.
+3. Adjust the call level with Channel 8's fader until the REC VU meter reaches the white zone.
+4. Activate a microphone channel (over REC) and have someone speak from the Studio.
+5. While monitoring the local voice on REC, rotate the **NULL** control clockwise and counterclockwise to find the optimal point, achieved when the local signal added to the microphone via hybrid is minimized.
 6. This adjustment depends on the telephone line. If the telephone line changes, repeat the adjustment.
-
----
 
 ## Pairing a Mobile Phone
 
-Any cell phone with **Bluetooth** can be paired with the DX816/822.\
-Maximum distance is 5 m, though keeping the device nearby is recommended (never on top of the console).
+Any mobile phone with **Bluetooth** can be paired to the DX816/822.\
+The maximum range is 5 m, though keeping the device nearby (never on top of the console) is recommended.
 
-The phone registers the console's unique ID code once. Subsequently, connection is automatic when Bluetooth is activated on both devices.
+The phone registers the console's unique ID code once. Subsequent connections are automatic when Bluetooth is enabled on both devices.
 
 <Warning>
   The Bluetooth module receives power from **USB-1 or USB-2** channels.\
-  If neither is connected to a PC, use an **external USB power supply** (standard charger) with the supplied cable.
+  If neither is connected to a PC, use an **external USB power supply** (a standard charger) with the provided cable.
 </Warning>
 
 ### **Pairing Procedure:**
 
 <img
   src="/images/816/816-descripción_TELCO.jpg"
-  alt="816 Description TELCO Jp"
-  title="816 Description TELCO Jp"
+  alt="816 TELCO Description Jp"
+  title="816 TELCO Description Jp"
   className="mx-auto"
   style={{ width:"77%" }}
 />
 
-1. **On the console:** verify the **CELL PHONE [3]** LED button is off.
-2. If Bluetooth is on (LED flashing blue), turn it off by holding the **Bluetooth [2]** button until flashing stops.
-3. **On the console,** activate "search" mode (only accessible when Bluetooth is off). Press and <u>hold</u> the BLUETOOTH button for about 10 seconds. While pressing, you'll notice slow blue flashing initially, then rapid <u>alternating</u> blue and red flashing (see mode C in table), indicating DX816/822 entered "search" mode for phone discovery.
-4. **On the phone:** Enable Bluetooth and search for devices.
-5. When the phone finds the console's Bluetooth, it displays as **Solidyne BTM641**.
-6. Connect the phone to the **Solidyne BTM641** device.
-7. The console's Bluetooth device is now registered in the phone; no need to repeat unless **Solidyne BTM641 is unpaired (deleted) from the phone**.
-8. On the console, the **CELL PHONE** button shows slow blue flashing (mode A) indicating connection to the phone.
+1. **On the console:** Verify that the LED on the **CELL PHONE [3]** button is off.
+2. If Bluetooth is on (LED flashing blue), turn it off by holding the **Bluetooth [2]** button until it stops flashing.
+3. **On the console,** activate "discovery mode" (this mode can only be accessed when Bluetooth is off). Press and <u>hold</u> the BLUETOOTH button for about 10 seconds. You'll observe that after a few seconds, it flashes slowly in blue, and later the flash alternates rapidly <u>between</u> blue and red (see mode C in the table), indicating that the DX816/822 has entered "discovery mode" for recognition by the mobile device.
+4. **On the mobile device:** Activate Bluetooth and search for devices.
+5. When the mobile device detects the console's Bluetooth, it appears on-screen as **Solidyne BTM641**.
+6. Connect the mobile device to **Solidyne BTM641**.
+7. The console's Bluetooth device is now registered on the phone and does not require repeating the operation (unless the **Solidyne BTM641 device is unpaired (removed) on the phone**).
+8. On the console, the **CELL PHONE** button remains lit in blue with a slow blink (mode A), indicating it is connected to the mobile device.
 
-**CELL PHONE [3] Button Lighting Modes**
+**CELL PHONE [3] Button Illumination Modes**
 
-| Mode                                        | Status / Description                                                                                                                                                                                                                               |
-| :----------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A – Mobile Connected**                    | Brief blue on (1s) with long off (2s). Indicates connected to phone with no active call.                                                                                                                                                           |
-| **B – Mobile Disconnected / Call in Progress** | Slow blue on (2s) with short off (1s). Indicates active call. Returns to mode "A" when call ends. <br />Also indicates Bluetooth on without phone connected. Switches to mode "A" when connected. |
-| **C – Search Mode (Pairing)**              | Rapid red-blue alternating flash. Allows first-time phone pairing.                                                                                                                                                                                 |
-| **D – Incoming Call**                      | Solid blue.                                                                                                                                                                                                                                        |
-| **E – On Air**                             | Solid red.                                                                                                                                                                                                                                         |
+| Mode | Status / Description |
+| :-: | --- |
+| **A – Mobile connected** | Brief (1s) blue illumination with long (2s) off period. Indicates connection to mobile device without an active call. |
+| **B – Mobile not connected / Call in progress** | Slow (2s) blue illumination with short (1s) off period. Indicates an active call is in progress. When the call ends, it returns to mode "A". <br />Also indicates Bluetooth is on without a connected mobile device. When connected, it switches to mode "A". |
+| **C – Discovery mode (Pairing)** | Rapid flashing alternating between red and blue. Allows pairing a mobile device for the first time. |
+| **D – Incoming call** | Continuous blue illumination. |
+| **E – On-air** | Continuous red illumination. |
 
 ---
 
 ### Bluetooth Volume Adjustment
 
 <Danger>
-  Adjustment must be done during an active Bluetooth call.\
-  Phone volume is independent from Bluetooth link volume.\
-  Adjusting without an active call only changes the phone's internal speaker.
+  The adjustment must be made during an active Bluetooth call.\
+  The phone volume is independent of the Bluetooth link volume.\
+  If adjusted without an active call, only the phone's internal speaker will be affected.
 </Danger>
 
-- Bluetooth volume is stored in the phone.
-- Setting to **maximum** is recommended for best signal-to-noise ratio.
+- The Bluetooth volume setting is stored in the phone.
+- It's recommended to set it to **maximum** for the best signal-to-noise ratio.
 
 ---
 
-### Turning Off Bluetooth
+### Turn Off Bluetooth
 
-To turn off, hold the **BLUETOOTH** button until the **CELL PHONE** LED stops flashing.
+To turn off, hold down the **BLUETOOTH** button until the **CELL PHONE** LED stops blinking.
 
----
+### Reconnect a Paired Device
 
-### Reconnecting a Paired Device
-
-1. **On the console:** activate Bluetooth with the **BLUETOOTH** button until the **CELL PHONE** LED flashes blue (approx. 5 secs).
-2. **On the phone:** enable Bluetooth. When connection appears, the phone is ready to operate. When making or receiving calls, audio routes to the console.
+1. **On the console:** Activate Bluetooth by pressing the **BLUETOOTH** button until the **CELL PHONE** LED flashes blue (approx. 5 seconds).
+2. **On the mobile phone:** Activate Bluetooth. When the connection appears, the phone will be ready for operation. When making or receiving a call, the audio will be sent to the console.
 
 <Note>
-  On some phones, reconnection isn't automatic and manually selecting the **Solidyne BTM641** device from a list is required.
+  On some mobile phones, reconnection is not automatic, and you must manually select the **Solidyne BTM641** device from a list.
 </Note>
 
 ---
 
 ## External Hybrid
 
-DX consoles include an **External Hybrid** connector that handles program and hybrid return through a 6.35mm (¼") TRS jack.
+The DX consoles include a connector for **External Hybrid**, which handles program and external hybrid return via a 6.35 mm (¼”) TRS jack.
 
 <img
   src="/images/816/816-HibExt.bmp"
@@ -142,7 +134,7 @@ DX consoles include an **External Hybrid** connector that handles program and hy
   style={{ width:"77%" }}
 />
 
-- **Output (Tip)**: Microphone and program return to line. This signal is a PGM copy minus telephone line audio (**MIX-MINUS**). Connect to the external hybrid's **line return input**.
-- **Input (Ring)**: Signal from external hybrid to console. Sums to PGM bus but not to MIX-MINUS. Should connect to external telephone hybrid output.
+- **Output (Tip)**: Microphone and program return to the line. This signal is a copy of PGM minus the telephone line audio (**MIX-MINUS**). Connect to the \*\*"return to lines" input\*\* of the external hybrid.
+- **Input (Ring)**: Signal from the external hybrid to the console. It is added to the PGM bus but not to the MIX-MINUS. It should be connected to the output of the external telephone hybrid.
 
-Return audio passes through the same circuit as the internal hybrid. The **Channel 8** main fader operates as with internal lines, allowing routing to air or CUE based on position.
+The return audio passes through the same circuit as the internal hybrid. The main fader of **Channel 8** operates the same as with the internal lines, allowing it to be sent on-air or to CUE depending on the position.

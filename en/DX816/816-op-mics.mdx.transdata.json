@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "0d526a0fde5983e35337b930ec648309545f91c86c2c446b9e2ea8fd9e820501",
+      "translation": "## General Features\n\nThe DX series microphone modules feature **3 channels**, though **5 microphones** can be connected via the rear panel.\n\n⟶ The **MIC-2** and **MIC-3** inputs allow for a second microphone connection (2b and 3b).\n\n⟶ Faders 2 and 3 control two microphones simultaneously when the 2b and/or 3b inputs are connected.\n\nThe **DX822** model includes two 3-microphone modules. It handles **6 microphone faders** and supports up to **10 microphones** (4 dual inputs).\n\n<img\n  src=\"/images/816/816-panel-mics.png\"\n  alt=\"816 Panel Mics Pn\"\n  title=\"816 Panel Mics Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"64%\" }}\n/>\n\n1. **Gain Preset.** Should be adjusted so the fader operates above the **OVL (–30 dB)** overload mark.\n\n   ⟶ Operating below this level causes unnecessary amplification, leading to peak clipping. ⟶ Ideally, operate with the fader within the **optimal zone (–10 to –20 dB)**.\n2. **_Phantom 48V_ power.** Activates/deactivates for all module inputs.\n\n<Note>\n  Dynamic microphones can be safely connected to 48V phantom inputs, as their internal transformer blocks the DC voltage.\n</Note>\n\n3. **EQ.** Enables/disables equalization for all microphones in the module.\n4. **EQ.** Gain controls for frequency bands.\n5. **BUSES:** Assignment to **PGM** and **REC** output buses. Microphones are assigned collectively to PGM, REC, or both. Assignment is post-EQ.\n6. **CUE:** Sends a pre-fader signal to the cue circuit. Activated per channel.\n7. **Operating zone:** This area indicates the correct working position for nominal signal level and proper input gain adjustment. \\\n   Gain should be set so the fader operates above -30 dB. The **OVL (9)** indicator signals overload, i.e., excessive input gain.\n8. **Main fader.** Adjusts the signal level in the mix. In addition to raising the faders, the MASTER MIC button located to the right of the faders must be pressed to enable microphones.\n\n---",
+      "title": "Características generales",
+      "level": 2
+    },
+    {
+      "hash": "d1775c1cae4316102151eef50a6432eb3cdd783cc06cb64c563c479b91ca4e2d",
+      "translation": "## Equalization\n\nThe equalization is global and affects all microphone channels. The purpose is to allow general equalization adjustments that respond to the room's acoustic characteristics, which are common to all microphones.\n\n**EQ Features:**\n\n- **Bands 1 and 4** (low/high frequencies): in **Shelving** mode, range ±15 dB.\n- **Band 2**: Peak EQ. Centered at 160 Hz. Can soften the \"popping\" effect.\n- **Band 3**: Centered at 6.3 kHz. Can soften the \"sibilance\" effect and sibilant sounds.\n\n<img\n  src=\"/images/816/816-eq-curvas.png\"\n  alt=\"816 Eq Curves Pn\"\n  title=\"816 Eq Curves Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"53%\" }}\n/>",
+      "title": "Ecualización",
+      "level": 2
+    },
+    {
+      "hash": "c7c8b75f12d5c352d9977397a01852f3c83ac4441b5e5ce43c60dccbcb7dce62",
+      "translation": "## Compression\n\nThe dynamic compressor reduces large level variations in microphones. \\\nThe design avoids audible artifacts and simplifies operation. Simply raise the microphone fader levels until the VU meters reach the red zone.\n\n- Acts on the microphone channel mix.\n- Cannot be disabled.\n- Engages when the signal exceeds **0 VU**.\n- Below this level, the signal <u>is unaffected</u>.\n- Compression ratio: **10:1**, with fast attack and release times.\n- The compressor will reduce gain by a value indicated on the **MIC Compressor** meter.\n- Compression values of **5 to 15 dB** are optimal when operating multiple microphones simultaneously.",
+      "title": "Compresión",
+      "level": 2
+    }
+  ]
+}

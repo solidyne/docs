@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "fe4ea98f65972afe115ba9aef5f6274b431f06dca040b52c20e89ae50a904198",
+      "translation": "## PC Connection\n\nThe DX series is designed to work with any communication software running on the computer. From videoconferencing applications like Zoom or Google Meets to SIP line receiving software such as Linphone.\n\nThe telecommunications channel allows sending a **differentiated return feed** (mix-minus) to the computer via USB-2, where the computer's own audio (USB-2 playback) is not mixed in, preventing feedback loops.\n\nThe computer can be added to conference calls managed by the Telecommunications channel.\n\n<Note>\n  While communication software typically has built-in cancellation mechanisms, these systems often become desynchronized, creating echoes and audio artifacts. A mix-minus send is essential for reliable communications.\n</Note>\n\n<Danger>\n  ****USB-2 is non-operational if USB-1 is not connected to an active port.****\\\n  If USB-1 and USB-2 are connected to **two different PCs**, USB-2 **will not** function when the **USB-1 PC** is **powered off**.\\\n  (Typically USB-1 connects to the 24/7 on-air PC).\n</Danger>",
+      "title": "Conexión a la PC",
+      "level": 2
+    },
+    {
+      "hash": "97a8bbe729de64b8678703a5b082af596f536d0ab4c17aa8261dc223b52a050a",
+      "translation": "## Basic Configuration\n\n<Steps>\n  <Step title=\"Microphones\">\n    Assign microphone channels to **PGM** and **REC**.\n  </Step>\n  <Step title=\"USB-2 Channel\">\n    Assign to **PGM** and remove from **REC**.\n  </Step>\n  <Step title=\"Telco Channel\">\n    Set PGM-REC selection to **PGM**\n  </Step>\n  <Step title=\"Computer\">\n    Configure the application with **USB-2** audio device as input/output (microphone and playback).\n  </Step>\n  <Step title=\"ON-AIR\">\n    The application audio enters the console via the USB-2 Channel and goes on-air with microphone return (via REC).\n\n    <Note>\n      The application may be handling a single call or a multi-participant chat. This does not affect console operation.\n    </Note>\n  </Step>\n</Steps>",
+      "title": "Configuración básica",
+      "level": 2
+    },
+    {
+      "hash": "a1409492506645bf42c7c037e3c2832c37ccef6d2e4d8e7349f999e1bbeac94b",
+      "translation": "## Phone/Cell Conference (Vox-IP)\n\n<Steps>\n  <Step title=\"Microphones\">\n    Assign microphone channels to **PGM** and **REC**.\n  </Step>\n  <Step title=\"USB-2 Channel\">\n    Assign to **PGM** and remove from **REC**.\n  </Step>\n  <Step title=\"Telco Channel\">\n    Set PGM-REC selection to **PGM**.\\\n    **Activate the VOX-IP button.** Phone/cell return is sent to PGM-2 via **REC** (visible on **REC** VU meter).\n  </Step>\n  <Step title=\"Conference\">\n    Raise the Telco fader to mix phone calls on-air; all participants become **interconnected**.\n  </Step>\n</Steps>\n\n<Danger>\n  For **return feed to computer (REC)**, do not assign **music beds**; only route **MICs**.\\\n  Priority/AGC systems in communication applications may **attenuate** remote voices when local audio (background music) is present.\n</Danger>",
+      "title": "Conferencia con líneas y celular (Vox-IP)",
+      "level": 2
+    }
+  ]
+}

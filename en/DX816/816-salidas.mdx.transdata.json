@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "4f56db060b120b1d239afb2ae8ce506809c7b4d65eade6da4f9fcc9f2c76d726",
+      "translation": "<img\n  src=\"/images/816/816-trasero-fuente.png\"\n  alt=\"816 Trasero Fuente Pn\"\n  title=\"816 Trasero Fuente Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"63%\" }}\n/>\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "f9e7edccc1f4534f8bee43a7373b096a39f68afe51b1087beee72def762f244a",
+      "translation": "### Program Output\n\nThe main output is called **PROGRAM (PGM)**. It is typically the signal that is sent on-air and is available in several formats:\n\n- **RJ45**: delivers **balanced PGM** signal.\\\n  Always use this connector to route analog signal to the audio processor or link.\n  <Tip>\n    [Pinout diagrams and adapter cables for cable assembly](/en/DX816/816-rj45-connections).\n  </Tip>\n  <Info>\n    Solidyne **362HD** and **542APC** processors include analog inputs with RJ45 connectors. The connection is made using a **shielded STP RJ45-RJ45** Ethernet cable.\n  </Info>\n- **Female TRS**: delivers unbalanced stereo PGM signal.\n- **USB (USB-1 Channel)**: the PGM signal is sent to the connected computer, commonly used for Internet streaming.\n- **AoIP (optional)**: in consoles with the /AoIP module, PGM is available in multiple formats (PCM, MP3) over Ethernet connection.\n\n---",
+      "title": "Salida de programa",
+      "level": 3
+    },
+    {
+      "hash": "26a5892d1653e75acc66b4ab2da374c5343f198e0b6e1806b6ee6baad263e6d7",
+      "translation": "### REC Output (Auxiliary)\n\nThe **recording (REC)** output is also available in several formats:\n\n- Balanced on **RJ45** connector.\n- Unbalanced stereo on **TRS**.\n- Digital USB via the **USB-2 Channel**.\n- Streaming over **Ethernet** on models with dual /AoIP module.\n\nThe nominal output level of the console is **+4 dBu @ 0VU**.\\\nWhen using balanced outputs in unbalanced mode, the level drops by 6 dB, therefore **0VU = –2 dBu**.\n\n<Danger>\n  **Do not use mono plugs (TS)** to connect the stereo TRS outputs.\n</Danger>\n\n<Note>\n  If you connect equipment with an **–10 dBV** input level to the console's output, the level may be excessive and cause clipping. In such cases, a **fixed attenuator (resistive divider)** should be used to reduce the level.\n</Note>\n\n---",
+      "title": "Salida REC (auxiliar)",
+      "level": 3
+    },
+    {
+      "hash": "f8430fe8f0e98389a8ade0636183c9d10aa2042e3fd629f85d89b7eb4a07a298",
+      "translation": "### Decoded Streaming Audio\n\nThe **Audio Out to Bal Line 1** output is only available on consoles with the **/AoIP** option.\\\nIt provides a balanced analog signal containing the **decoded audio from the incoming stream**, typically used to feed the decoded audio back into an analog line input.",
+      "title": "Audio del streaming decodificado",
+      "level": 3
+    }
+  ]
+}

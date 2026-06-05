@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "59a83b17a8d84647260608d3981223e72ef0487d279900ea4d073a5c756081b3",
+      "translation": "## On-Air Light (Tally Light)\n\nThe **Tally Light** output delivers **12 VDC / 150 mA** when the **Microphone Master Button** is enabled.\\\nIt allows connecting up to **two Solidyne LA100 signaling modules**.\n\nAdditionally, the console includes a **built-in on-air light in the chassis**.\n\n<Danger>\n  The **Tally Light** output automatically turns off if the load exceeds **150 mA**.\n</Danger>",
+      "title": "Luz de Aire (Tally Light)",
+      "level": 2
+    },
+    {
+      "hash": "58780f4d7bcbc7c36f8f75146c0d4065044aae69da29b02d92e712925810e699",
+      "translation": "## GPIO\n\nThe 3.5mm jacks labeled \\*\\*GPIO\\*\\* are general-purpose outputs (**GPO**, _General Purpose Output_) that allow controlling external devices by enabling specific console channels.\n\n- On **DX816**: they generate signals for microphone channels **MIC-1, MIC-2, MIC-3** and line channels **USB-1** and **USB-2**.\n- On **DX822**: in addition to the above, there are also GPO outputs for **MIC-4, MIC-5 and MIC-6**.\n\n<Note>\n  The control outputs are **open-collector** type, functioning as a switch:\n\n  - Inactive state → high impedance.\n  - When enabling a channel → the output connects to ground.\n</Note>\n\n**Electrical specifications:**\n\n- Maximum: **+24 V - 0.1 A**.\n\n**Connectors:**\n\n- **3.5mm TRS jack** type, located on the rear panel.\n- On DX816: \"MIC 1&2\", \"MIC-3\" and \"LIN USB 6&7\".\n- On DX822: additional \"MIC 4&5\" and \"MIC-6\" connectors are included.\n\n---\n\n**GPO MIC 1&2** _(same for MIC 4&5 on DX822)_\n\n| Connector | Signal |\n| -------- | ----- |\n| Sleeve   | GND   |\n| Ring     | MIC-1 |\n| Tip      | MIC-2 |\n\n**GPO MIC-3** _(same as MIC-6 on DX822)_\n\n| Connector | Signal        |\n| -------- | ------------ |\n| Sleeve   | GND          |\n| Ring     | MIC-3        |\n| Tip      | Not connected |\n\n**GPO USB**\n\n| Connector | Signal |\n| -------- | ----- |\n| Sleeve   | GND   |\n| Ring     | USB-1 |\n| Tip      | USB-2 |",
+      "title": "GPIO",
+      "level": 2
+    }
+  ]
+}

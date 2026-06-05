@@ -1,0 +1,59 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ee2b9996a90776ae9a7a1c132c01afc7083c913b1bcce8d8598373db9f1a3487",
+      "translation": "## Hybrid Channel Operations\n\nThe TELCO channel centralizes telephone communications. It includes a **2-line telephone hybrid**, a **Bluetooth link** to pair a mobile device, and can add **VoIP communication** from a computer via **USB-2**. All three (or four, including VoIP) can be **conferenced together**.\n\nAdditionally, more lines can be added using an external hybrid. These lines do not consume extra console channels, as they feed directly into the TELCO channel, which acts as a MASTER control for putting external lines on-air.\n\n<img\n  src=\"/images/816/816-panel-hib.png\"\n  alt=\"816 Panel Hib Pn\"\n  title=\"816 Panel Hib Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"31%\" }}\n/>",
+      "title": "Canal de híbrido: operaciones",
+      "level": 2
+    },
+    {
+      "hash": "8228d8c451b365b794f5d0a2e2dd22e17e3b2bb96b982538eb35af60aa43314c",
+      "translation": "### Panel Controls\n\n1. **PGM-REC.** Assigns the TELCO channel to PGM or REC outputs. REC enables call recording (assigning microphones to REC) while another source is being broadcast on-air.\n\n    <Warning>\n      Simultaneously assigning TELCO to both buses is not supported. \\\n      If there's no hybrid audio on-air, verify **PGM-REC** is set to **PGM**.\n    </Warning>\n2. **VOX-IP.** Sends **telephone line returns** to the **USB-2** port (REC bus). This configures a mix-minus for communication applications running on the computer, which receives returns from active sources in TELCO (landlines, Bluetooth mobile, external hybrid).\n3. **Bluetooth Channel.** On-air button for the Bluetooth device.\n4. **Bluetooth Control.** Activation button and mode selector for the Bluetooth interface.\n5. **Hybrid Channels.** Control buttons for the telephone hybrid's landlines.\n6. **NULL.** Adjusts rejection for landlines.\n7. **CUE Level.** Adjusts the level for cue monitoring. This is an installation setting and typically shouldn't be modified during normal operation.\n8. **TALK.** Enables the Talk-Back microphone to speak to telephone lines. It's latching; press again to turn off.\n9. The **OVL** indicator marks the beginning of the proper operating range. Gain adjustment for landlines is automatic. For Bluetooth, it depends on the phone's level setting, which should be adjusted so the attenuator operates above -30 dB.\n10. **Main Attenuator:** Adjusts call levels in the mix.\n11. **HOLD-CUE:** Automatic system that changes call mode based on fader position.\n    - **a)** When the fader is closed, the call routes to the CUE circuit. The operator can speak to the line by pressing TALK [8] and monitors through the CUE channel.\n    - **b)** When the fader is in the dotted HOLD zone, the call is HELD. PGM audio (or REC depending on assignment) is sent to the line, but the line isn't broadcast on-air.\n    - **c)** Above the HOLD zone, the call is broadcast on-air at the level determined by the fader.\n\n---",
+      "title": "Controles en el panel",
+      "level": 3
+    },
+    {
+      "hash": "bd5c33d5c39725b87ebdca79570647a78389533339ce5990ac01aee1cc2106b8",
+      "translation": "## Operating Modes\n\n- **A) Operator-Presenter**: The host simultaneously operates the console and takes/manages on-air calls.\n- **B) Production**: Producers/phone operators receive/generate calls and transfer them to the control room.",
+      "title": "Modos de trabajo",
+      "level": 2
+    },
+    {
+      "hash": "3c2a3512b707397ea1209da3bcd432619b96a5a557dc9c1b53d1b402658e8630",
+      "translation": "### Case A – Host-Operator (Step by Step)\n\n1. **Call Incoming**: The line button flashes blue when ringing.\n2. **Answer**: Press the line button → turns **red**. For mobile, press **CELL PHONE [3]** (requires prior Bluetooth pairing).\n3. **Pre-listen and Private Talk**:\n   - Keep the **fader closed** in **CUE [11]** position.\n   - The caller hears **program** (or REC, as assigned); the **line** is heard in **CUE**.\n   - Press and hold the **TALK [8]** button to speak (control room speakers mute; headphones remain active). Uses the Talk-Back microphone.\n4. **Hold**: Move the fader to the **HOLD zone** → the call is held listening to program; disconnects from CUE.\n5. **On-Air / Conference**: Raise the **TELECOM fader** to appropriate level on VU meters.\n   - All lines with their buttons **in red** go **on-air in conference**.\n   - For individual interviews, keep **only one** in red.\n6. **End Call**: Lower fader and **release** (turn off red) the lines.\n   - For mobile: Press **CELL PHONE [3]** to remove audio from the channel. To disconnect completely, tap **briefly** on **BLUETOOTH [4]**. You may also disable Bluetooth on the mobile device if you wish to continue the call from the phone.",
+      "title": "Caso A – Conductor-operador (paso a paso)",
+      "level": 3
+    },
+    {
+      "hash": "185ca748b96867df4c570be31e75df6506ae1073a53d84dacb05d7a82dd45fdc",
+      "translation": "### Case B – Production (step by step)\n\n1. **Phones in Production**: Phone-1, Phone-2, and the **mobile phone** (see connections in [Telephone Line Connections](/en-US/DX816/816-telco)).\n2. **Transfer to Control**: when handling/managing in Production, notify the operator to **take** the line from the console (press button). Then **hang up** in Production.\n3. **Mobile Phone**: switch the mobile phone to **headset mode (Bluetooth)** and notify Control to press **CELL PHONE [3]**. With the fader in HOLD position, the line remains on hold listening to the program.\n4. **On-air**: raise the main fader.\n5. **Cut**: lower the fader and turn off the line buttons. On the mobile phone, end the call with a **short tap on BLUETOOTH**.\n6. **Return to Production**: hang up the phone on that line in Production, and then the operator **releases** the button on the console. On the mobile phone, exit **Headset** mode on the phone to remove the call from Bluetooth.",
+      "title": "Caso B – Producción (paso a paso)",
+      "level": 3
+    },
+    {
+      "hash": "80c82bf88377e6247faa837edadb86ebb73247c335289cb64b08826596651a4e",
+      "translation": "### Adding a Line to an On-Air Communication\n\nThe built-in hybrid system in the DX series is designed to handle one call at a time. **If a call is currently on-air, it is not possible to hold a second call** on console.\n\nHowever, the system supports establishing conferences between all three lines. When enabling a second line, it immediately joins on-air in conference mode.\n\n<Info>\n  To work with call waiting functionality, supplement the system by installing an external hybrid connected to the EXTERNAL HYBRID input/output. \\\n  The **Solidyne HL240** module handles 2 landlines and two Bluetooth cellular lines with independent call waiting and mixing levels.\n</Info>\n\nIf equipped with a local PBX, calls can be held and transferred to console using the PBX system. However, calls held this way will not receive on-air program return.\n\n**Procedure:**\n\n- To add a line to conference (when a call is already on-air): Production informs the caller they will be joining an on-air conference momentarily\n- If the local PBX allows: place the call on hold, notify the operator, and transfer the call to the appropriate extension (recommended)\n- The extension rings showing RING on console, operator answers and the call goes on-air\n- Without a local PBX: keep the phone off-hook, notify the operator, and once the operator takes the line on console, hang up. This alternative is not recommended as it may produce on-air pops when hanging up in production\n\n<Note>\n  For regular call waiting functionality, we recommend adding an external hybrid system to the console or at least configuring an internal PBX to manage calls.\n</Note>",
+      "title": "Sumar una línea a una comunicación que ya está al aire",
+      "level": 3
+    },
+    {
+      "hash": "8c37b9c08fbb035ceb20fdcfcc372bfb1b6ff83b28e5ab3d67d320006723fb17",
+      "translation": "### Adding a mobile phone to an on-air communication\n\n- In this case, Production informs the person communicating via mobile phone that they will be going on-air in conference mode momentarily.\n- Next, they activate the \"Bluetooth hands-free\" mode on the screen and notify the operator.\n- When the operator presses the CELLULAR button, the mobile line is added to the conference.\n\n---\n\n<Danger>\n  For conferencing between **two landlines**, they must belong to the **same public exchange** or the **same PBX**. It is not possible to do this between **different exchanges** or with **different IP converters**.\n</Danger>\n\n---",
+      "title": "Sumar un celular a una comunicación que ya está al aire",
+      "level": 3
+    },
+    {
+      "hash": "868238a0dcf5d3f052f2d7b0f4c425f61ba0aad303c3dea2bc0cd815a8697d4b",
+      "translation": "## On-Air Call Levels\n\n- When working with landlines, take care not to exceed the TELCO on-air level. Analog hybrids don't provide 100% cancellation and some PGM signal returns; excessive levels can \"smear\" studio voices.\n- A call **doesn't always need** to reach **0 VU** to match **loudness**: telephone signals lack bass frequencies (which make VU meters \"peak\" more) and loudness is defined by the **midrange**; the on-air processor will balance levels.\n\n<Warning>\n  If the announcer's voice **gets colored** when going on-air with a landline, check **Null Adjustment (Null)**.\\\n  If the **CUE** monitor distorts or has excessive noise, reduce **CUE LEVEL [7]**.\n</Warning>\n\n---",
+      "title": "Nivel de la llamadas al aire",
+      "level": 2
+    },
+    {
+      "hash": "ca2231aae39c74c5473343d06a1d54fbad6a4d84473ed8907a556c25eab2d92b",
+      "translation": "## Telephone Line Return\n\nThe Solidyne hybrids integrated in the DX series **do not have manual send level control** to the line. They include **return processing** with **AGC** and **limiter** + **filtering** (**400–2,200 Hz** band):\n\n- The return **automatically adjusts** to the maximum level supported by digital exchanges (2 Vpp on the line).\n- Simplifies hybrid operation on the console.\n- Prevents distortion, intermodulation, and degradation of the rejection factor.\n\n<Note>\n  For proper operation, the automatic send level control requires that **microphone levels be maintained at 0VU** on average (peaks above 0 VU).\n</Note>",
+      "title": "Retorno a línea telefónica",
+      "level": 2
+    }
+  ]
+}

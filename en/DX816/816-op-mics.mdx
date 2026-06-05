@@ -1,28 +1,25 @@
 ---
-title: "Microphone Channels"
-description: "Operation of microphone channels"
+title: "Canales de micrófono"
+description: "Operación de los canales de micrófonos"
 keywords: ["microphones", "EQ", "compressor", "compression"]
-tags: ["studio consoles", "Classic line", "DX816", "DX822"]
-
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "ceaf8876ff1b91b2c245b47b934a8ac00202a08c5875581edf8298c07ecff292"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: null
+  reviewed_at: null
 ---
 
 ## General Features
 
-The microphone modules of the DX series have **3 channels**, although they allow connecting up to **5 microphones** on their rear panel.
+The DX series microphone modules feature **3 channels**, though **5 microphones** can be connected via the rear panel.
 
-⟶ The **MIC-2** and **MIC-3** inputs allow connecting a second microphone (2b and 3b).
+⟶ The **MIC-2** and **MIC-3** inputs allow for a second microphone connection (2b and 3b).
 
-⟶ Faders 2 and 3 control two microphones simultaneously when inputs 2b and/or 3b are connected.
+⟶ Faders 2 and 3 control two microphones simultaneously when the 2b and/or 3b inputs are connected.
 
-The **DX822** model has two 3-microphone modules. It handles **6 microphone faders** and supports up to **10 microphones** (4 dual inputs).
+The **DX822** model includes two 3-microphone modules. It handles **6 microphone faders** and supports up to **10 microphones** (4 dual inputs).
 
 <img
   src="/images/816/816-panel-mics.png"
@@ -32,54 +29,52 @@ The **DX822** model has two 3-microphone modules. It handles **6 microphone fade
   style={{ width:"64%" }}
 />
 
-1. **Gain preset.** Must be adjusted so the fader works above the overload mark **OVL (-30 dB)**.
+1. **Gain Preset.** Should be adjusted so the fader operates above the **OVL (–30 dB)** overload mark.
 
-   ⟶ Working below this level amplifies unnecessarily, causing peak clipping. ⟶ Ideally, work with the fader within the **optimal zone (-10 to -20 dB)**.
-2. **Phantom power 48V.** Enables/disables for all inputs in the module.
+   ⟶ Operating below this level causes unnecessary amplification, leading to peak clipping. ⟶ Ideally, operate with the fader within the **optimal zone (–10 to –20 dB)**.
+2. **_Phantom 48V_ power.** Activates/deactivates for all module inputs.
 
 <Note>
-  Dynamic microphones can be safely connected to inputs with phantom 48V, as their internal transformer decouples the DC voltage.
+  Dynamic microphones can be safely connected to 48V phantom inputs, as their internal transformer blocks the DC voltage.
 </Note>
 
-3. **EQ**. Enables/disables equalization for all microphones in the module.
+3. **EQ.** Enables/disables equalization for all microphones in the module.
 4. **EQ.** Gain controls for frequency bands.
-5. **BUSES:** Assignment to output buses **PGM** and **REC**. Microphones are assigned together to PGM, REC or both. Assignment is post-EQ.
-6. **CUE:** sends the pre-fader signal to the preview circuit. Activated on each channel.
-7. **Working zone:** This area indicates the correct working position for nominal signal level and proper input gain adjustment. \
-   Gain should be adjusted so the fader works above -30 dB. The **OVL (9)** indication shows overload, meaning excessive input gain.
-8. **Main fader**. Adjusts the signal level in the mix. Besides raising the faders, to enable the microphones you must press the MASTER MIC button located to the right of the faders.
+5. **BUSES:** Assignment to **PGM** and **REC** output buses. Microphones are assigned collectively to PGM, REC, or both. Assignment is post-EQ.
+6. **CUE:** Sends a pre-fader signal to the cue circuit. Activated per channel.
+7. **Operating zone:** This area indicates the correct working position for nominal signal level and proper input gain adjustment. \
+   Gain should be set so the fader operates above -30 dB. The **OVL (9)** indicator signals overload, i.e., excessive input gain.
+8. **Main fader.** Adjusts the signal level in the mix. In addition to raising the faders, the MASTER MIC button located to the right of the faders must be pressed to enable microphones.
 
 ---
 
 ## Equalization
 
-The equalization is global and affects all microphone channels. The goal is to allow general EQ adjustments that respond to room acoustics characteristics, which are common to all microphones.
+The equalization is global and affects all microphone channels. The purpose is to allow general equalization adjustments that respond to the room's acoustic characteristics, which are common to all microphones.
 
 **EQ Features:**
 
-- **Bands 1 and 4** (low/high): in **Shelving** mode, range ±15 dB.
+- **Bands 1 and 4** (low/high frequencies): in **Shelving** mode, range ±15 dB.
 - **Band 2**: Peak EQ. Centered at 160 Hz. Can soften the "popping" effect.
-- **Band 3**: Centered at 6.3 kHz. Can soften "hissing" and sibilant sounds.
+- **Band 3**: Centered at 6.3 kHz. Can soften the "sibilance" effect and sibilant sounds.
 
 <img
   src="/images/816/816-eq-curvas.png"
-  alt="816 Eq Curvas Pn"
-  title="816 Eq Curvas Pn"
+  alt="816 Eq Curves Pn"
+  title="816 Eq Curves Pn"
   className="mx-auto"
   style={{ width:"53%" }}
 />
-
----
 
 ## Compression
 
 The dynamic compressor reduces large level variations in microphones. \
 The design avoids audible artifacts and simplifies operation. Simply raise the microphone fader levels until the VU meters reach the red zone.
 
-- Acts on the mix of microphone channels.
+- Acts on the microphone channel mix.
 - Cannot be disabled.
-- Activates when signal exceeds **0 VU**.
-- Below that level, the signal is <u>not affected</u>.
+- Engages when the signal exceeds **0 VU**.
+- Below this level, the signal <u>is unaffected</u>.
 - Compression ratio: **10:1**, with fast attack and release times.
-- The compressor will reduce gain by a value shown on the **MIC Compressor** meter.
+- The compressor will reduce gain by a value indicated on the **MIC Compressor** meter.
 - Compression values of **5 to 15 dB** are optimal when operating multiple microphones simultaneously.

@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "4cdb2d2e26d679619f4b0906ee1d5f40db279b2b5ea436817ec87a50c3519344",
+      "translation": "## Introduction\n\nThe console consists of several main sections:\n\n- Input channels.\n- Telecommunications channel.\n- Monitor and studio command routing.\n- Pre-fade listen (**CUE**).\n- Level meters.\n\nThe various audio sources (microphones, computers, audio interfaces, links, telephone lines, etc.) enter the console through the **input channels**, which amplify them.\n\nThe console mixes all signals to generate two main outputs:\n\n- **PGM**: signal sent to the audio processor and then to the transmitter or streaming.\n- **REC**: independent or auxiliary recording signal.\n\nThe operator controls each signal's level using the **main faders**.\\\nVia the routing buttons (**PGM / REC**), signals are sent to their corresponding outputs.\n\nThe **CUE** buttons allow listening to these signals before sending them on-air.\n\n- Line channels go on-air when opening the fader.\n- Microphone channels additionally require pressing the **MASTER MIC** button.\n- The **BAL-1** and **BAL-2** line channels feature dual inputs (balanced and unbalanced), selectable from the front panel.\n\n---",
+      "title": "Introducción",
+      "level": 2
+    },
+    {
+      "hash": "6ca1b81d00b0c4000f0843e3243db0835a141f5a6aece3215168d8e2b1d3621b",
+      "translation": "## Microphone Inputs\n\n- **DX816**: features 3 microphone faders, but the MIC-2 and MIC-3 inputs include a second connector (MIC-2b and MIC-3b) that shares a preamplifier. This allows channels 2 and 3 to handle two microphones simultaneously, supporting up to **5 microphones**.\n- **DX822**: the same applies to MIC-4 and MIC-5 channels (with twin inputs MIC-4b and MIC-5b). In total, it supports **10 microphones across 6 faders**.\n\n<Warning>\n  It is recommended that microphones on twin inputs be of the **same brand and model** to maintain signal uniformity.\n</Warning>\n\n- All microphone inputs support **48V phantom power**, switchable in groups.\n- On the DX816, **equalization** is global for all microphones.\n- On the DX822, a second equalizer affects MIC-4, MIC-5, and MIC-6 (and their twin inputs).\n\n**Compression** applies only to microphone channels. Its action depends on the program level. The **gain reduction indicator** shows the compressor's work.\\\nIf two microphones share a channel, the compressor balances their levels, smoothing differences due to proximity or voice intensity.\n\n<Note>\n  Dynamic microphones are designed to handle **48V phantom**, so they can be mixed with condenser microphones without risk.\n</Note>\n\n---",
+      "title": "Entradas de micrófono",
+      "level": 2
+    },
+    {
+      "hash": "e3d5f3ad8d4826352128b26c9292d9e357b59cc88fb87662386d43b539d9aacd",
+      "translation": "## Line Inputs and Digital Modules\n\n- **BAL-1 and BAL-2** channels handle balanced and unbalanced auxiliary inputs, selectable from the front panel.\n- The **USB** modules manage two stereo signals via USB.\n- The USB connection sends **PGM (USB-1)** and **REC (USB-2)** signals to the computer.\n- In models with **AoIP** option, up to two Ethernet modules can be installed for streaming transmission/reception.\n  - Available signals: PGM and REC.\n  - Each AoIP module also receives a streaming signal, which is assigned to a line channel.",
+      "title": "Entradas de línea y módulos digitales",
+      "level": 2
+    },
+    {
+      "hash": "07ec69f8d06842ff3382fc4bb466ee77be4ce4825dd519f0cfec4fc67ea5eadd",
+      "translation": "## Indicators\n\nThe console's meter bridge includes:\n\n- **LED VU meters** for program and record (peak-average level).\n- **Microphone compressor indicator**.",
+      "title": "Indicadores",
+      "level": 2
+    }
+  ]
+}

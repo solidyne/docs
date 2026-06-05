@@ -1,21 +1,19 @@
 ---
 title: "USB audio"
-description: "USB connections and configuration"
+description: "Conexión y configuración de las conexiones USB"
 keywords: ["USB"]
 tags: ["studio consoles", "Classic line", "DX816", "DX822"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "d3bd87f24dc79be01495725c33fedd94c2c76b14ef627fc3927beb332f70a09e"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: null
+  reviewed_at: null
 ---
 
-## USB Ports Connection
+## USB Port Connection
 
-The **USB-1** and **USB-2** ports allow direct computer connection using standard **USB A/B cables**. They support 1.1, 2.0 or 3.0 ports.
+The **USB-1** and **USB-2** ports allow direct connection to the computer using **standard USB A/B cables**. They support USB 1.1, 2.0, or 3.0 ports.
 
 <img
   src="/images/image.png"
@@ -25,53 +23,55 @@ The **USB-1** and **USB-2** ports allow direct computer connection using standar
   style={{ width:"10%" }}
 />
 
-Make sure to use **high-quality cables**. Poor cables can cause USB connection drops during audio playback or intermittent failures.
+Ensure you use **high-quality cables**. Poor-quality cables can cause USB connection drops during audio playback or intermittent failures.
 
-It is recommended to place the computer close to the console, using 2-3 meter cables. If extensions are used, do not exceed 4 meters.
+It is recommended to place the computer close to the console, using cables of 2 to 3 meters in length. If extensions are used, do not exceed 4 meters.
 
 <Warning>
-  Before connecting USB to the computer, ensure both devices have **effective grounding** through their three-pin plugs. **Quick check:**
+  Before connecting USB to the computer, ensure both devices have **effective grounding** through their three-prong plugs. **Quick verification:**
 
-  - Using a multimeter set to 25V AC, measure between the PC and console chassis. Reading should be **zero volts**.
+  - Using a tester set to 25 V AC, measure between the PC chassis and the console chassis. The value should be **zero volts**.
   - Only then connect the USB plug.
-  - Without proper grounding, the USB port may be damaged.
+  - If there is no grounding, the USB port may be damaged.
 </Warning>
 
-- USB ports are compatible with **Windows© and Linux**.
+- The USB ports are compatible with **Windows© and Linux**.
 - If both are connected to the same computer, **connect USB-1 first**.
 - To use a single channel, always connect **USB-1**.
 
   <Danger>
     The **USB-2 port only works if USB-1 is connected and active**.
   </Danger>
-- When connecting two different computers, note that USB-2 will not work when the PC connected to USB-1 is powered off. Therefore, USB-1 is assigned to the on-air PC, which remains active 24/7.
+- If two separate computers are connected, note that USB-2 will not function when the PC connected to USB-1 is powered off. For this reason, USB-1 is assigned to the on-air PC, which remains active 24 hours a day.
 
 ## Windows<sup>©</sup> Installation
 
 <Steps>
   <Step>
-    Connection in Windows is Plug&Play. The system automatically recognizes and installs the drivers. The port appears as **"USB 1 playback device"** and **"USB 1 recording device"**.
+    On Windows, the connection is Plug&Play. The system automatically recognizes and installs the drivers. The port appears as **"USB Audio Device 1"** for both playback and recording.
   </Step>
   <Step>
-    On the VU tower, the **Digital IN/Out** indicator will show "4" (recognized stereo input + output).
+    On the VU meter bridge, the **Digital IN/Out** indicator will show "4" (stereo input + output recognized).
   </Step>
   <Step>
     When connecting the second channel (USB-2), the indicator changes to "8" and the PC shows a second playback and recording device.
   </Step>
   <Step>
-    The ports can be connected to the same computer or to two different machines.
+    The ports can be connected to the same computer or to two separate machines.
   </Step>
 </Steps>
 
 ---
 
-## PGM and REC Buses over USB
+```mdx
+## PGM and REC Buses via USB
 
 The USB connection allows sending two signal buses directly to the computer:
 
-- **USB-1 / PGM**: appears in Windows© as "USB 1 Recording Device".
-- **USB-2 / REC**: appears in Windows© as "USB 2 Recording Device".
+- **USB-1 / PGM**: Appears in Windows© as "USB Recording Device 1".
+- **USB-2 / REC**: Appears in Windows© as "USB Recording Device 2".
 
-No additional installation required. The devices appear automatically when connecting the USB input channels to the computer (or to two different computers).
+No additional installation required. The devices automatically appear when connecting the USB input channels to the computer (or to two separate computers).
 
 For recording usage details, see **Program Recording**.
+```

@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "4701fb84c4d9074526cc982052869bfdb4b4e19bbeaf0da8cb1d28d3e6714f6f",
+      "translation": "import icecast from '/snippets/snippet-icecast.mdx';\n\nLos módulos **/AoIP** vienen de fábrica con firmware modelo **STL**, diseñado para **enlace estudio–planta**.\n\nEs posible actualizar el firmware para:\n\n- Instalar una **nueva versión STL**.\n- Cambiar de **STL** a **Upstreamer**, para conexión directa a Internet con servidores de streaming tipo **Shoutcast/Icecast**.\n\n<icecast />\n\n",
+      "title": "Whole file",
+      "level": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "bba168ecf5e16db687e2a27f6a7cf0a08082cd6cb11e6e4b54ca5864de78106b",
+      "translation": "## Console Operational Verification\n\nBasic procedure to confirm connection:\n\n1. Use a signal source (microphone, playback device, etc.).\n   - On channels 4 or 5, correctly select the input (BAL/LIN).\n   - Common error: no signal due to incorrect input assignment.\n2. Press the **CUE** button on the input channel.\n3. Select **CUE** as monitoring source and adjust CUE level.\n   - Audio should be heard in headphones (and monitors if assigned).\n\n**To send signal on-air:**\n\n1. Press **PGM** on the channel to route it to main output.\n2. Open the channel fader to desired level.\n   - Signal will be transmitted on-air and displayed on program VU meters.\n\n<Warning>\n  Gain must be adjusted on each channel (except USB) using panel gain presets, so that the normal working position of the master fader is **–15 dB (gray zone)**.\n</Warning>\n\n---",
+      "title": "Verificación operativa de la consola",
+      "level": 2
+    },
+    {
+      "hash": "caa5dd2d67db6fc71eb26033be681e75f952450e0b908d89fc15a22096b3faf2",
+      "translation": "## Program Recording\n\nSolidyne DX series consoles feature two stereo output buses:\n\n- **PGM (Program)**: Signal sent on-air.\n- **REC (Recording)**: Auxiliary signal, typically used for recording.\n\nEach channel can be assigned to **PGM** or **REC** using assignment buttons, enabling recording while broadcasting different signals.",
+      "title": "Grabación de programas",
+      "level": 2
+    },
+    {
+      "hash": "c23b18c9200773364b565625dad567b1c9427446d5f5267e9add98e62f1a3219",
+      "translation": "### USB Recording\n\nThe PGM and REC signals are available on the computer via **USB**.\n\nOn **<sup>Windows©</sup>**:\n\n- **USB Recording Device 1** → corresponds to **USB-1**, PGM signal.\n- **USB Recording Device 2** → corresponds to **USB-2**, REC signal.\n\nOn the **computer**:\n\n- Configure the recording application to use the appropriate device.\n\nOn the **console**:\n\n- In monitoring, assign **REC** to the Control Room or Studio speakers if you want the announcers to hear the recording.\n- Remove from **PGM** and assign to **REC** the channels to be recorded (e.g., microphones).\n\n  → These channels will NOT go on-air.\n- The station remains on-air with another channel (e.g., Line-1 on PGM).\n\n**Level Adjustment:**\n\n- Check levels on the console's REC VU meters and in the software.\n- Adjust from the console using the channel fader → **0 VU = –15 dBfs**.\n\n<Danger>\n  The **USB-1 and USB-2 recording devices have no software input level control**.\\  \n  Adjustment must always be done at the console.\n</Danger>\n\n**Monitoring:**\n\n- Announcers can monitor via headphones or speakers.\n- To play back the recording: assign to **REC** the channel corresponding to that PC.\n\n<Warning>\n  Avoid feedback loops on the PC. Mute in the recording software (or in Windows) any possible returns from the USB-2 (REC) input.\n</Warning>\n\nWhen finished, reset all controls to their original positions.\n\n---",
+      "title": "Grabación vía USB",
+      "level": 3
+    },
+    {
+      "hash": "1d5d69c1b947efa9b63db4584dd0341c766c37f12af412f716aaf90558159363",
+      "translation": "### Telephone Line Recording\n\nThe **TELCO** channel can be assigned to any of the outputs using the **PGM/REC** button.\n\nExample: recording a telephone report while music is playing on-air.\n\n- Assign the **hybrid** and a **microphone** to the **REC** output.\n- Proceed with communication as in _Hybrid Channel_.\n- Assign monitoring to **REC** to listen to the conversation.",
+      "title": "Grabación de líneas telefónicas",
+      "level": 3
+    }
+  ]
+}

@@ -1,32 +1,30 @@
 ---
 title: "Monitoring"
-description: "Speaker and headphone connections in Studio and Control Room"
+description: "Speaker and Headphone Connections in Studio and Control Room"
 keywords: ["monitoring", "studiobox", "headphones", "installation", "connections"]
-tags: ["studio consoles", "Classic line", "DX816", "DX822"]
+tags: ["consolas de estudio", "línea Classic", "DX816", "DX822"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "1d1d29f9c069e2d5597dc7a57a046237b6b477690dfc3554c2c5e46fc2e074b3"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: null
+  reviewed_at: null
 ---
 
 ## Control Room Monitoring
 
-The **CONTROL** outputs feature **1/8" (mini-jack) female TRS** connectors for speakers and headphones. The speaker output operates at a nominal level of **0 dBu**, designed for connecting active monitors.\
-The console's MONITOR section contains the signal assignment and level controls for both speakers and headphones.
+The \*\*CONTROL \*\*outputs feature **1/8" female TRS (mini-jack)** connectors for speakers and headphones. The speaker output operates at nominal **0 dBu** level, designed for active monitor connection.\
+In the console's MONITOR section panel, you'll find the controls for signal routing and level adjustment for both speakers and headphones.
 
 <Note>
-  The **Control Speaker** output automatically mutes when **Talk-back** is activated, preventing feedback with the talkback microphone.
+  The **Control Speaker** output is automatically muted when **Talk-back** is activated, preventing feedback with the command microphone.
 </Note>
 
 ---
 
-## Studio Monitoring
+## Monitoring in the Studio
 
-The console provides monitoring signals to the Studio through **STUDIO MONITOR OUT**, with RJ45 connector. Connection is made using **STP RJ45-RJ45 (pin-to-pin)** cable to the optional **Solidyne Studiobox HD3/HD5** monitoring boxes.
+The console delivers monitoring signals to the Studio via **STUDIO MONITOR OUT**, with an RJ45 connector. The connection is made using **STP RJ45-RJ45 (pin-to-pin)** cable to the optional **Solidyne Studiobox HD3/HD5** monitoring units.
 
 <Danger>
   This output **must not be connected** with RJ45 cables used for audio outputs.\
@@ -43,30 +41,30 @@ The console provides monitoring signals to the Studio through **STUDIO MONITOR O
 
 Features:
 
-- Studio speakers **automatically mute** when microphones are opened.
-- The headphone signal **never mutes**. They always receive the signal assigned at the console and the talkback audio.
+- Studio speakers are **automatically muted** when microphones are opened.
+- The headphone signal **is never muted**. It always receives the signal assigned on the console and the talk-back microphone audio.
 
-For more details, see section **Studiobox HD3 / HD5 Monitoring Modules**.
+For more details, see the **Studiobox HD3 / HD5 Monitoring Modules** section.
 
 ---
 
-## Single Room Monitoring
+## Single Booth Monitoring
 
-When the console is used in an integrated studio or single room setup, it is recommended to connect the speakers to the **STUDIO MONITOR** output.
+When the console is used in an integrated or single booth studio, it is recommended to connect the speakers to the **STUDIO MONITOR** output.
 
 <Warning>
-  The CONTROL speaker output **does not mute when microphones are turned on**, so there is a risk of feedback if microphones and speakers are in the same room.
+  The CONTROL speaker output **is not muted when microphones are turned on**, so there is a risk of feedback if the microphones and speakers are in the same room.
 </Warning>
 
 ---
 
-## Connection without optional Studiobox
+## Connection Without Studiobox Option
 
-The console comes with a "Y" **adapter cable** (RJ45 to dual TRS jack) for connecting generic headphone distributors and powered speakers.
+The console comes with a **Y adapter cable** (RJ45 to dual TRS jack) for connecting generic headphone distribution units and powered speakers.
 
-- The **STUDIO MONITOR** output delivers fixed-level signals.
-- Without Studiobox, speaker level is adjusted from the monitors' own controls.
-- A headphone distributor/amplifier with dual input can be used to control speaker volume from the desk.
+- The **STUDIO MONITOR** output delivers signals at a fixed level.
+- If Studiobox is not used, the speaker level is adjusted from the monitor's own controls.
+- A dual-input headphone distribution/amplifier unit can be used to control the speaker volume from the console.
   - Input A → headphone signal.
   - Input B → speaker signal.
 
@@ -78,7 +76,7 @@ The console comes with a "Y" **adapter cable** (RJ45 to dual TRS jack) for conne
   style={{ width:"46%" }}
 />
 
-The speaker volume control is assigned to input B. This way, a single unit controls both Studio headphones and monitors.
+The speaker volume control is assigned to input B. This way, a single unit controls both headphones and studio monitors.
 
 ### Studio Monitor Out
 
@@ -89,16 +87,16 @@ The speaker volume control is assigned to input B. This way, a single unit contr
   style={{ width:"10%" }}
 />
 
-| # | Signal                        |
-|:-:|-------------------------------|
-| 1 | Headphones Left (+4 dBu)     |
-| 2 | Headphones Right             |
-| 3 | GND                          |
-| 4 | ON-AIR (+14 V)              |
-| 5 | Talkback to Control Room     |
-| 6 | VCC + 14 V                   |
-| 7 | Speakers Left (+4 dBu)       |
-| 8 | Speakers Right               |
+| # | Signal                          |
+| :-: | ------------------------------- |
+| 1 | Headphones Left (\+4 dBu)       |
+| 2 | Headphones Right                |
+| 3 | GND                             |
+| 4 | ON-AIR (\+14 V)                 |
+| 5 | Control Room Talkback           |
+| 6 | VCC \+ 14 V                     |
+| 7 | Monitor Left (\+4 dBu)          |
+| 8 | Monitor Right                   |
 
 <Note>
   Chassis = GND

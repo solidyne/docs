@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "c99f3c0414c8e1b472297bcd191f99f74f0a66038cf30d55909696fc4fe27020",
+      "translation": "## Line Inputs\n\nThe DX816/822 consoles feature various types of inputs, which are combined in the console's different channels:\n\n- **2 BAL-LINE**: Balanced inputs.\n- **4 AUX LINE**: Unbalanced inputs.\n  - **2 RCA** on LINE channels, switchable from the front panel.\n  - **2 miniplug** on USB channels, with **automatic switching**: when inserting a TRS plug, the USB audio is muted.\n\n<Info>\n  The unbalanced line inputs have a nominal level of **–10 dBV** into **10 KΩ** .\n\n  The gain adjustment is common for both (main/auxiliary). It may require readjustment depending on the connected equipment.\n</Info>",
+      "title": "Entradas de línea",
+      "level": 2
+    },
+    {
+      "hash": "3898760be6c1159ef0fee91616dce8edcb5d8b09c4c08d943a5ef69b0d721246",
+      "translation": "### Balanced Input Connections\n\nThe balanced inputs use shielded **RJ45** connectors and require shielded Category 5 multi-pair cable. The **MNGDX822** pre-made cable kit is available, which includes all necessary connection cables.\n\n<Tip>\n  [Pinout diagrams and adapter cables for custom cable assembly](/es/DX816/816-conexiones-rj45).\n</Tip>\n\n---",
+      "title": "Conexión de las entradas balanceadas",
+      "level": 3
+    },
+    {
+      "hash": "5f4f35dce4ebc393a9946eebc068d6d60be39232e985f367ae6b5be85de8a1e6",
+      "translation": "## Microphone Inputs\n\nThe microphone inputs are electronically balanced and use standard **XLR connectors**.\n\n<Tabs>\n  <Tab title=\"Microphones on DX 816\">\n    <Frame>\n      ![DX 816 Rear Panel - Mics](/images/816-trasero-mics-1.jpg)\n    </Frame>\n\n    - 5 XLR inputs, labeled MIC 1 through MIC 5\n    - MIC 4 shares preamp with MIC 2\n    - MIC 5 shares preamp with MIC 3\n\n    <Info>\n      **CHANNELS**\n\n      Channel 1 ⟶ MIC-1 Inputs\\\n      Channel 2 ⟶ MIC-2 and MIC-4 Inputs\\\n      Channel 3 ⟶ MIC-3 and MIC-5 Inputs\n    </Info>\n  </Tab>\n  <Tab title=\"Microphones on DX 822\">\n    <Frame>\n      ![DX 816 Rear Panel - Mics](/images/822_MICS.png)\n    </Frame>\n\n    - 10 XLR inputs, labeled MIC 1, 2, 3, 2b, 3b, 4, 5, 6, 5b and 6b\n    - MIC-2b shares preamp with MIC-2\n    - MIC-3b shares preamp with MIC-3\n    - MIC-5b shares preamp with MIC-5\n    - MIC-6b shares preamp with MIC-6\n\n    <Info>\n      **CHANNELS**\n\n      Channel 1 ⟶ MIC-1 Inputs\\\n      Channel 2 ⟶ MIC-2 and MIC-2b Inputs\\\n      Channel 3 ⟶ MIC-3 and MIC-3b Inputs\\\n      Channel 4 ⟶ MIC-4 Inputs\\\n      Channel 5 ⟶ MIC-5 and MIC-5b Inputs\\\n      Channel 6 ⟶ MIC-6 and MIC-6b Inputs\n    </Info>\n  </Tab>\n</Tabs>\n\n<Warning>\n  When using two microphones on the same channel, they must be of the **same make and model** to ensure signal uniformity.\n</Warning>\n\n---",
+      "title": "Entradas para micrófonos",
+      "level": 2
+    },
+    {
+      "hash": "8e751ec48964e86470ad3fa8c1cfcbbb087954236abb988d7930b0a648e855df",
+      "translation": "### 48V Phantom Power\n\nThe **48V** button on the front panel activates floating phantom power for **all microphones**. \n\nIn the **DX 822** model, there is a second switch that toggles 48V power for the second group of five inputs.\n\n<Info>\n  Dynamic microphones tolerate 48V phantom power, allowing safe mixing of dynamic and condenser microphones without risk.\n</Info>",
+      "title": "Alimentación \"Phantom\" 48V",
+      "level": 3
+    }
+  ]
+}

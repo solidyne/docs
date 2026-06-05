@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "d2f7f661e8de56f9e1b6efe471148ac93cd2f71b1b84eed2c60b618b3358a5ea",
+      "translation": "### Description\n\nThe **DX line** features **four stereo line channels**. Each channel has dual inputs, switchable from the front panel [2].\n\n- **LIN-1 and LIN-2 Channels**:\n  - Balanced stereo input (**RJ45** connector).\n  - Unbalanced stereo input (**RCA** connector).\n- **USB-1 and USB-2 Channels**:\n  - Direct computer connection (equivalent to two external interfaces).\n  - Provide **PGM** and **REC** signal routing to the computer.\n\n<img\n  src=\"/images/816/816-panel-linea.png\"\n  alt=\"816 Panel Linea Pn\"\n  title=\"816 Panel Linea Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"37%\" }}\n/>\n\n1. **Gain control.** Adjusts the input gain. On LIN-1 and LIN-2 channels, the gain adjustment is unified for inputs A/B. On USB channels, gain only affects the analog input.  \n   Should be adjusted so the signal remains around **0 VU** with the fader operating in the **–10 to –20 dB range**.\n\n<Note>\n  The digital level on the USB channel is adjusted from Windows<sup>©</sup>.\n</Note>\n\n2. **A/B switching.** Switches between the main and auxiliary input.\n3. **BUS.** Assignment to PGM (on-air) and REC mix buses.\n4. **CUE.** Activates pre-fader monitoring.\n5. **Operating range.** This section indicates the correct operational position for nominal signal level and proper input gain adjustment.  \n   Gain should be adjusted so the fader operates above -30 dB. The **OVL (7)** indicator signals overload, i.e., excessive input gain.\n6. **Main level control (fader):** Adjusts the signal level in the mix.",
+      "title": "Descripción",
+      "level": 3
+    },
+    {
+      "hash": "1bdeb5ffafdc0e0a603506b51127e6a41b3b3170fa4c6e5f8372b27adef5bbe2",
+      "translation": "### On-Air\n\nTo send the signal on-air:\n\n1. Assign the channel to **PGM**.\n2. Raise the fader.\n\n   The correct level is achieved when peaks reach **0 VU**.",
+      "title": "Puesta al aire",
+      "level": 3
+    }
+  ]
+}

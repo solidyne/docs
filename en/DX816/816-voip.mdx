@@ -1,44 +1,42 @@
 ---
-title: "VoIP Software"
-description: "Using communication software on the computer"
+title: "Software VoIP"
+description: "Using communications software on the computer"
 keywords: ["VoIP", "USB"]
-tags: ["studio consoles", "Classic line", "DX816", "DX822"]
+tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "ee5578d8de17981ca4e8e4afe170959213eb4bd488d74bcd6e66822567113819"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: null
+  reviewed_at: null
 ---
 
 ## PC Connection
 
-The DX series is designed to work with any communication software running on the computer, from video calling applications like Zoom or Google Meets, to SIP line reception software like Linphone.
+The DX series is designed to work with any communication software running on the computer. From videoconferencing applications like Zoom or Google Meets to SIP line receiving software such as Linphone.
 
-The telecommunications channel allows sending a **differentiated return** (mix-minus) to the computer via USB-2, where the computer's own audio (USB-2 playback) is not mixed in, avoiding feedback loops.
+The telecommunications channel allows sending a **differentiated return feed** (mix-minus) to the computer via USB-2, where the computer's own audio (USB-2 playback) is not mixed in, preventing feedback loops.
 
-The computer can be added in conference with the lines managed by the Telecommunications channel.
+The computer can be added to conference calls managed by the Telecommunications channel.
 
 <Note>
-  All communication software usually has internal cancellation mechanisms, but these systems frequently decouple causing echoes and audio artifacts. A mix-minus send is necessary to achieve reliable communications.
+  While communication software typically has built-in cancellation mechanisms, these systems often become desynchronized, creating echoes and audio artifacts. A mix-minus send is essential for reliable communications.
 </Note>
 
 <Danger>
-  ****USB-2 is not operational if USB-1 is not connected to an active port.****\
-  If USB-1 and USB-2 go to **two different PCs**, USB-2 will **not** work if the **USB-1** PC is **turned off**.\
-  (Usually USB-1 is the 24/7 On-Air PC).
+  ****USB-2 is non-operational if USB-1 is not connected to an active port.****\
+  If USB-1 and USB-2 are connected to **two different PCs**, USB-2 **will not** function when the **USB-1 PC** is **powered off**.\
+  (Typically USB-1 connects to the 24/7 on-air PC).
 </Danger>
 
-## Basic Setup
+## Basic Configuration
 
 <Steps>
   <Step title="Microphones">
     Assign microphone channels to **PGM** and **REC**.
   </Step>
   <Step title="USB-2 Channel">
-    Assign to **PGM** and **remove from REC**.
+    Assign to **PGM** and remove from **REC**.
   </Step>
   <Step title="Telco Channel">
     Set PGM-REC selection to **PGM**
@@ -46,34 +44,34 @@ The computer can be added in conference with the lines managed by the Telecommun
   <Step title="Computer">
     Configure the application with **USB-2** audio device as input/output (microphone and playback).
   </Step>
-  <Step title="ON AIR">
-    The application audio enters the console through the USB-2 Channel and goes on air with microphone return (via REC).
+  <Step title="ON-AIR">
+    The application audio enters the console via the USB-2 Channel and goes on-air with microphone return (via REC).
 
     <Note>
-      The application may be handling a single communication or a multi-participant chat. This does not affect console operation.
+      The application may be handling a single call or a multi-participant chat. This does not affect console operation.
     </Note>
   </Step>
 </Steps>
 
-## Conference with Phone Lines and Mobile (Vox-IP)
+## Phone/Cell Conference (Vox-IP)
 
 <Steps>
   <Step title="Microphones">
     Assign microphone channels to **PGM** and **REC**.
   </Step>
   <Step title="USB-2 Channel">
-    Assign to **PGM** and **remove from REC**.
+    Assign to **PGM** and remove from **REC**.
   </Step>
   <Step title="Telco Channel">
-    Set PGM-REC selection to **PGM.**\
-    **Activate the VOX-IP button.** The phone lines/mobile return is sent to PGM-2 via **REC** (you'll see it on the **REC** VU).
+    Set PGM-REC selection to **PGM**.\
+    **Activate the VOX-IP button.** Phone/cell return is sent to PGM-2 via **REC** (visible on **REC** VU meter).
   </Step>
   <Step title="Conference">
-    Raise the Telco fader to add phones on air; all become **interconnected**.
+    Raise the Telco fader to mix phone calls on-air; all participants become **interconnected**.
   </Step>
 </Steps>
 
 <Danger>
-  In the **return to the computer (REC)** do not assign **music beds**; only **MICs**.\
-  The priority/AGC systems of communication applications may **attenuate** the remote voice if there is local audio (background music).
+  For **return feed to computer (REC)**, do not assign **music beds**; only route **MICs**.\
+  Priority/AGC systems in communication applications may **attenuate** remote voices when local audio (background music) is present.
 </Danger>

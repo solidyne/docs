@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "cd1d2e19def773d2d8b8a2a148a9f5eaa24d7ecb587db3611147b09f2c7181d8",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx';\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "f029fb9966f5ee417b226ec0c65e5d918857660d69ace12d311eda62427db1c5",
+      "translation": "## Power Supply\n\nThe DX816/822 operates with external power. It includes a **switching power supply 90-240 V** that works with any electrical network, even in areas with significant voltage variations. It delivers **regulated 28 VDC**.\n\nThe rear panel houses the **DC IN** power input with a **2.1 mm** barrel connector, positive on the center pin.\n\n<Warning>\n  It is recommended to always use the **original power supply provided by Solidyne**.\n</Warning>\n\n<img\n  src=\"/images/816/816-trasero-fuente.png\"\n  alt=\"816 Rear Panel Power Supply\"\n  title=\"816 Rear Panel Power Supply\"\n  className=\"mx-auto\"\n  style={{ width:\"52%\" }}\n/>\n\n<Info>\n  The Tally Light barrel connector provides voltage for the \"On-Air\" light. This connector uses a 2.5 mm pin to prevent accidental connection of the power supply.\n</Info>",
+      "title": "Fuente de alimentación",
+      "level": 2
+    },
+    {
+      "hash": "c3bdf9f07757ea253de1003c6daceb6efa2efb69e6383a97ff64e11d163bbb0f",
+      "translation": "## Grounding\n\nGrounding is accomplished via a **bronze terminal** that ensures chassis grounding. Use **2 mm gauge** cable connected to a **buried copper grounding rod**.\n\n<tierras />",
+      "title": "Conexión a tierra",
+      "level": 2
+    },
+    {
+      "hash": "5816f06df05ebd6b8241d7f6df34f734ee49410fe943ec614c4a405d5a8ab55a",
+      "translation": "## General Connection Diagram (DX822)\n\nThe general connection diagram shows the rear panel of the DX822 model. \\\nThe DX816 model is identical, except for the microphone inputs which are five.\n\n![816 Diagrama Pn](/images/816/816-diagrama.png)\n\n---",
+      "title": "Diagrama general de conexiones (DX822)",
+      "level": 2
+    },
+    {
+      "hash": "0310115a36a0bcbe891c215fb9f4302adfd64dcb4a7bb7f2153f5f04532bd93f",
+      "translation": "## About RJ45 Connectors\n\nWith the advent of **Audio over IP (AoIP)**, various manufacturers have adopted the use of **RJ45 connectors** and shielded multipair cable to replace traditional audio connectors.\n\n- A single RJ45 connector contains **two balanced lines**, reducing the size of the rear panel and the number of connectors.\n- The use of **structured cable** simplifies installation between distant equipment anywhere in the world, thanks to the wide availability of components and assembly tools used in data networks.\n- Soldering is eliminated, simplifying and speeding up wiring.\n\nAt the end of the multipair cable, the connection to audio devices (microphones, speakers, interfaces) is still made with **standard audio connectors**.\\\nFor this purpose, RJ45 runs terminate in balanced connectors suitable for the target equipment.\n\nThe balanced inputs of the **Solidyne DX816/822** console use **RJ45 connectors** and are wired with **shielded CAT-5 (STP)** multipair cable.\n\nThe **Solidyne MNGX816** connection kit includes all necessary cables for balanced inputs and outputs with RJ45, ensuring reliability and preventing connection errors.\n\n<Note>\n  Solidyne's RJ45 audio connections are **compatible with those provided by StudioHub** ([www.studiohub.com](http://www.studiohub.com)).\n</Note>",
+      "title": "Sobre los conectores RJ45",
+      "level": 2
+    }
+  ]
+}

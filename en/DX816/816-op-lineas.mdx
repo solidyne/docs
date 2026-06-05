@@ -1,56 +1,54 @@
 ---
-title: "Line Channels"
-description: "Line channels operation"
+title: "Canales de línea"
+description: "Line Channel Operation"
 keywords: ["operation", "gain"]
 tags: ["studio consoles", "Classic line", "DX816", "DX822"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "332e5b0851825101e51cf75ae0491656ec4fba0654d216103ac561641584615a"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: null
+  reviewed_at: null
 ---
 
 ### Description
 
-The **DX** line features **four stereo line channels**. Each channel has dual inputs, switchable from the front panel [2].
+The **DX line** features **four stereo line channels**. Each channel has dual inputs, switchable from the front panel [2].
 
-- **Channels LIN-1 and LIN-2**:
+- **LIN-1 and LIN-2 Channels**:
   - Balanced stereo input (**RJ45** connector).
   - Unbalanced stereo input (**RCA** connector).
-- **Channels USB-1 and USB-2**:
+- **USB-1 and USB-2 Channels**:
   - Direct computer connection (equivalent to two external interfaces).
   - Provide **PGM** and **REC** signal routing to the computer.
 
 <img
   src="/images/816/816-panel-linea.png"
-  alt="816 Line Panel Pn"
-  title="816 Line Panel Pn"
+  alt="816 Panel Linea Pn"
+  title="816 Panel Linea Pn"
   className="mx-auto"
   style={{ width:"37%" }}
 />
 
-1. **Gain control.** Adjusts the input gain. For LIN-1 and LIN-2 channels, gain adjustment affects both A/B inputs. On USB channels, gain only affects the analog input. \
-   It should be adjusted to maintain the signal around **0 VU** with the fader operating in the **-10 to -20 dB zone**.
+1. **Gain control.** Adjusts the input gain. On LIN-1 and LIN-2 channels, the gain adjustment is unified for inputs A/B. On USB channels, gain only affects the analog input.  
+   Should be adjusted so the signal remains around **0 VU** with the fader operating in the **–10 to –20 dB range**.
 
 <Note>
-  Digital level on USB channel is adjusted from Windows<sup>©</sup>.
+  The digital level on the USB channel is adjusted from Windows<sup>©</sup>.
 </Note>
 
-2. **A/B switching.** Toggles between main and auxiliary input.
-3. **BUS.** Assignment to PGM (transmission) and REC mixing buses.
-4. **CUE.** Activates pre-fader listening.
-5. **Working zone.** This area indicates the correct working position for nominal signal level and proper input gain adjustment. \
-   Gain should be adjusted so the attenuator works above -30 dB. The **OVL (7)** indication shows overload, meaning excessive input gain.
-6. **Main attenuator (fader):** Adjusts the signal level in the mix.
+2. **A/B switching.** Switches between the main and auxiliary input.
+3. **BUS.** Assignment to PGM (on-air) and REC mix buses.
+4. **CUE.** Activates pre-fader monitoring.
+5. **Operating range.** This section indicates the correct operational position for nominal signal level and proper input gain adjustment.  
+   Gain should be adjusted so the fader operates above -30 dB. The **OVL (7)** indicator signals overload, i.e., excessive input gain.
+6. **Main level control (fader):** Adjusts the signal level in the mix.
 
-### On-air Operation
+### On-Air
 
 To send the signal on-air:
 
 1. Assign the channel to **PGM**.
-2. Raise the attenuator.
+2. Raise the fader.
 
    The correct level is achieved when peaks reach **0 VU**.

@@ -1,0 +1,53 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ff7766dcf327f58ba311ab231bffdfb58884bbbfdd0bc44cfa4608280474332a",
+      "translation": "## Studio–Transmitter Link\n\n- In studios, the console with **/AoIP** option operates as an **encoder** and generates an audio stream to the transmitter site.\n- At the transmitter site, a **decoder** receives the stream and sends it to the **audio processor** (for example Solidyne **ADA102**).\n\n  Some FM processors can receive and decode the audio stream (for example Solidyne 542APC /AoIP)\n\n**Network requirements:**\n\n- Studio and Transmitter on the **same LAN** with a point-to-point link (physical or wireless), or\n- **VPN** over high-performance Internet (consult with network technician).\n\n---",
+      "title": "Enlace Estudio–Planta",
+      "level": 2
+    },
+    {
+      "hash": "75a5bc423d9e8ab951712d2d7e9d07827a110b62196c47c907fc4d78754a4ca2",
+      "translation": "## Connection and Access\n\n**Procedure:**\n\n1. Connect the console to the network using an **Ethernet** cable.\n2. Check the **LEDs** on the Ethernet connector: they indicate that the AoIP modules are **powered by USB** (at least one USB to PC powered on or an external USB source). The LEDs should blink.\n3. The network assigns an **IP via DHCP**. With the obtained IP, the green RJ45 LED will blink.\\\n   If there is no DHCP, the module will search for a **free IP** (this may take a few minutes).\n4. Obtain the IP using **Solidyne Multi-Discovery**.\n\n  <Note>\n     **Solidyne Multi-Discovery**\n\n     If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/en-US/DX816/816-discovery) which detects Solidyne devices connected to the network.\n</Note>\n\n5. Open a browser (Firefox/Chrome) and enter the **IP** found. The **IP Control Panel** will appear.\n\n---",
+      "title": "Conexión y acceso",
+      "level": 2
+    },
+    {
+      "hash": "7fce615c270333726f5828e4d16a3ed0a365826937420da9f7a75df54695a74c",
+      "translation": "## Streaming Configuration",
+      "title": "Configuración de streaming",
+      "level": 2
+    },
+    {
+      "hash": "1390eacd5b975dad3b0f462029d0a1d798a052f945d5f24b883b0e21ed589486",
+      "translation": "### **Destination IP (Basic settings)**\n\nThe initial status screen shows the IP port configuration. The factory default setting is _Encoder: Studio Encoder_ (option \"Location\" → 'Studio Encoder').\n\nTo verify the configuration, access the **\"Configuration\"** option and select **\"Basic settings\"** from the left menu.\n\n<img\n  src=\"/images/816/816-stream-basic-settings.png\"\n  alt=\"image.png\"\n  title=\"image.png\"\n  className=\"mr-auto\"\n  style={{ width:\"51%\" }}\n/>\n\n| Parameter           | Configuration / Description                             |\n| ------------------- | ------------------------------------------------------ |\n| Location (Site type) | Factory default set to **Studio Encoder** (studio encoder). |\n| Stream method       | **Push (RTP)**                                         |\n| URL                 | Enter **destination IP or DNS** and **streaming port**. |\n| Apply               | Press to confirm values.                               |",
+      "title": "**IP destino (Basic settings)**",
+      "level": 3
+    },
+    {
+      "hash": "03166b2884df61cb1ad136eece0296afb58ac17794d0314f4b3a9429d857569f",
+      "translation": "### Audio Options\n\nAccess: **Configuration → Audio**.\n\n<img\n  src=\"/images/816/816-streamer-audio.png\"\n  alt=\"image.png\"\n  title=\"image.png\"\n  className=\"mr-auto\"\n  style={{ width:\"66%\" }}\n/>\n\n| Parameter     | Factory Default / Recommended | Notes                              |\n| ------------- | ----------------------------- | ---------------------------------- |\n| Input source  | Line Stereo                   | Do not modify.                    |\n| Format        | PCM 16-bit stereo             | Default.                          |\n| Sample rate   | 44.1 kHz                      | Default. 48 kHz not supported.    |\n| Bitrate (PCM) | ~1.6 Mbit/s                   | For PCM16@48 kHz stereo.          |",
+      "title": "Opciones de audio",
+      "level": 3
+    },
+    {
+      "hash": "a2ad301208fa0cd7f1e98f7c31bb7af198513515d03005562e14b295a7a4923d",
+      "translation": "### Status Screen\n\n| Field                   | Description                                                                        |\n| ----------------------- | ---------------------------------------------------------------------------------- |\n| Site type               | Operation mode (e.g., **Studio Encoder** for Studio).                              |\n| Stream mode             | Event/method configured to initiate transmission to remote.                        |\n| Keep-alive              | Active connection maintenance strategy.                                            |\n| Connection status       | Link status. **Green** = OK with destination IP; **Red** = connection issue.       |\n| Incoming Stream         | Status of incoming stream (inactive in unidirectional encoder).                    |\n| Outgoing Stream         | Status of outgoing stream (active in encoder).                                     |\n| Audio input             | Audio source used (analog).                                                       |\n| Audio format            | Format applied to transmitted audio (e.g., PCM16/48k).                            |\n| Input/Output audio level | Actual audio levels (dBFS) for input/output.                                       |\n| Relay 1 .. 4            | Not implemented.                                                                  |\n| Remote inputs           | Not implemented.                                                                  |\n| Local inputs            | Status of local inputs.                                                           |\n| Local relays            | Not implemented.                                                                  |",
+      "title": "Pantalla de estado",
+      "level": 3
+    },
+    {
+      "hash": "18785a1d08c85962cc2016ebe40bf7ef40385e22dd9e346e4cc42b38272f9499",
+      "translation": "## Microwave Digital Link\n\nFor distances of **up to 45 km**, a point-to-point data link in **5.8 GHz** (or **2.4 GHz** depending on the country), **802.11.x** standard, can be used:\n\n- **License-free** band, no special authorizations required.\n- Allows transport of **PCM 16-bit / 44.1 kHz** audio (uncompressed) or **encoded** audio.\n- Supports **bidirectional connection** for special applications.\n\n<Info>\n  For more details: [**info@solidynepro.com**](mailto:info@solidynepro.com)\n</Info>\n\n---",
+      "title": "Enlace digital de microondas",
+      "level": 2
+    },
+    {
+      "hash": "41d805a12dbcb106138fb6661036ac4b66c63a78fbb79f1106300d46cf080435",
+      "translation": "## AoIP Module Power Supply\n\n- AoIP modules are powered via **USB**; they require at least **one USB** connection to a **powered-on PC**.\n- Without a USB-connected PC, or with the PC turned off, the IP service **will not be available**.\n\n<Note>\n  If no PC is connected, you may use a **standard USB power supply (5 V)** to power the AoIP modules.\n</Note>",
+      "title": "Alimentación de módulos AoIP",
+      "level": 2
+    }
+  ]
+}

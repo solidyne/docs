@@ -1,0 +1,59 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "cd1d2e19def773d2d8b8a2a148a9f5eaa24d7ecb587db3611147b09f2c7181d8",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx';\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "28295de4b7a66c91a9690e8488cfa512a9c45bc8de1cc65a2858dbcbb451eb75",
+      "translation": "## Telephone Line Connections\n\nThe hybrid channel handles **two landline telephone connections** and **one mobile phone** linked via Bluetooth.\n\nOn the rear panel of the console, there are **four RJ11 connectors**:\n\n<img\n  src=\"/images/816/816-POTS.png\"\n  alt=\"RJ11 Connectors\"\n  title=\"816816 POTS Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"40%\" }}\n/>\n\n- Two telephone lines (to connect to the public network or a PBX system).\n- Two associated telephones (labeled as “SET”), typically used by production staff to handle calls.\n\n<Warning>\n  The lines are surge-protected (up to 2,000 V) using internal varistors.\\\n  However, it is essential to **install external protectors** connected to a 2 m grounding rod for public exchanges. **Equipment warranty does not cover lightning damage**.\n</Warning>\n\n<tierras />",
+      "title": "Conexión de líneas telefónicas",
+      "level": 2
+    },
+    {
+      "hash": "9b13deae56eb000b629465f65be530327bf4af74d0e9dd0a4c9864964d703c46",
+      "translation": "### Null Adjustment\n\nThis adjustment applies only to **landlines**. It is performed once during installation.\\\nThe null setting prevents the transmitted signal from returning mixed with the interviewee's voice, improving the local announcer's audio quality.\n\n**Procedure:**\n\n1. Assign the Telecom Channel to the **REC** output (to avoid adjusting while on-air).\n2. Establish a call and ask the interviewee to speak.\n3. Adjust the call level with Channel 8's fader until the REC VU meter reaches the white zone.\n4. Activate a microphone channel (over REC) and have someone speak from the Studio.\n5. While monitoring the local voice on REC, rotate the **NULL** control clockwise and counterclockwise to find the optimal point, achieved when the local signal added to the microphone via hybrid is minimized.\n6. This adjustment depends on the telephone line. If the telephone line changes, repeat the adjustment.",
+      "title": "Ajuste de rechazo (Null)",
+      "level": 3
+    },
+    {
+      "hash": "be983f334e8a1ac97efced76da497ddc95ea38f23aa179706a6b82acca255056",
+      "translation": "## Pairing a Mobile Phone\n\nAny mobile phone with **Bluetooth** can be paired to the DX816/822.\\\nThe maximum range is 5 m, though keeping the device nearby (never on top of the console) is recommended.\n\nThe phone registers the console's unique ID code once. Subsequent connections are automatic when Bluetooth is enabled on both devices.\n\n<Warning>\n  The Bluetooth module receives power from **USB-1 or USB-2** channels.\\\n  If neither is connected to a PC, use an **external USB power supply** (a standard charger) with the provided cable.\n</Warning>",
+      "title": "Vincular un teléfono móvil",
+      "level": 2
+    },
+    {
+      "hash": "d5e1fdd09ec71744544bc80e4064d12630d1edb9fadfa350cfe16fab146993bb",
+      "translation": "### **Pairing Procedure:**\n\n<img\n  src=\"/images/816/816-descripción_TELCO.jpg\"\n  alt=\"816 TELCO Description Jp\"\n  title=\"816 TELCO Description Jp\"\n  className=\"mx-auto\"\n  style={{ width:\"77%\" }}\n/>\n\n1. **On the console:** Verify that the LED on the **CELL PHONE [3]** button is off.\n2. If Bluetooth is on (LED flashing blue), turn it off by holding the **Bluetooth [2]** button until it stops flashing.\n3. **On the console,** activate \"discovery mode\" (this mode can only be accessed when Bluetooth is off). Press and <u>hold</u> the BLUETOOTH button for about 10 seconds. You'll observe that after a few seconds, it flashes slowly in blue, and later the flash alternates rapidly <u>between</u> blue and red (see mode C in the table), indicating that the DX816/822 has entered \"discovery mode\" for recognition by the mobile device.\n4. **On the mobile device:** Activate Bluetooth and search for devices.\n5. When the mobile device detects the console's Bluetooth, it appears on-screen as **Solidyne BTM641**.\n6. Connect the mobile device to **Solidyne BTM641**.\n7. The console's Bluetooth device is now registered on the phone and does not require repeating the operation (unless the **Solidyne BTM641 device is unpaired (removed) on the phone**).\n8. On the console, the **CELL PHONE** button remains lit in blue with a slow blink (mode A), indicating it is connected to the mobile device.\n\n**CELL PHONE [3] Button Illumination Modes**\n\n| Mode | Status / Description |\n| :-: | --- |\n| **A – Mobile connected** | Brief (1s) blue illumination with long (2s) off period. Indicates connection to mobile device without an active call. |\n| **B – Mobile not connected / Call in progress** | Slow (2s) blue illumination with short (1s) off period. Indicates an active call is in progress. When the call ends, it returns to mode \"A\". <br />Also indicates Bluetooth is on without a connected mobile device. When connected, it switches to mode \"A\". |\n| **C – Discovery mode (Pairing)** | Rapid flashing alternating between red and blue. Allows pairing a mobile device for the first time. |\n| **D – Incoming call** | Continuous blue illumination. |\n| **E – On-air** | Continuous red illumination. |\n\n---",
+      "title": "**Procedimiento de vinculación:**",
+      "level": 3
+    },
+    {
+      "hash": "0537a973971650edc4255c4732ec1a912937dae03debb751c247bc657d8d23e7",
+      "translation": "### Bluetooth Volume Adjustment\n\n<Danger>\n  The adjustment must be made during an active Bluetooth call.\\\n  The phone volume is independent of the Bluetooth link volume.\\\n  If adjusted without an active call, only the phone's internal speaker will be affected.\n</Danger>\n\n- The Bluetooth volume setting is stored in the phone.\n- It's recommended to set it to **maximum** for the best signal-to-noise ratio.\n\n---",
+      "title": "Ajuste del volumen Bluetooth",
+      "level": 3
+    },
+    {
+      "hash": "88193d79707cf952c83bc98ae00cace05db0c7f6b4c56a6edfdc2b44923ed3b0",
+      "translation": "### Turn Off Bluetooth\n\nTo turn off, hold down the **BLUETOOTH** button until the **CELL PHONE** LED stops blinking.",
+      "title": "Apagar Bluetooth",
+      "level": 3
+    },
+    {
+      "hash": "fde4a9163b3bcf3d1abd24b644ccc865361cf3e9d34e00b4db7895a7f82055aa",
+      "translation": "### Reconnect a Paired Device\n\n1. **On the console:** Activate Bluetooth by pressing the **BLUETOOTH** button until the **CELL PHONE** LED flashes blue (approx. 5 seconds).\n2. **On the mobile phone:** Activate Bluetooth. When the connection appears, the phone will be ready for operation. When making or receiving a call, the audio will be sent to the console.\n\n<Note>\n  On some mobile phones, reconnection is not automatic, and you must manually select the **Solidyne BTM641** device from a list.\n</Note>\n\n---",
+      "title": "Re-conectar un dispositivo vinculado",
+      "level": 3
+    },
+    {
+      "hash": "9db8ec45e9c7653c2445de812476db559c69cd5cd38ac8273901e9783fb059f9",
+      "translation": "## External Hybrid\n\nThe DX consoles include a connector for **External Hybrid**, which handles program and external hybrid return via a 6.35 mm (¼”) TRS jack.\n\n<img\n  src=\"/images/816/816-HibExt.bmp\"\n  alt=\"816 Hib Ext Bm\"\n  title=\"816 Hib Ext Bm\"\n  className=\"mx-auto\"\n  style={{ width:\"77%\" }}\n/>\n\n- **Output (Tip)**: Microphone and program return to the line. This signal is a copy of PGM minus the telephone line audio (**MIX-MINUS**). Connect to the \\*\\*\"return to lines\" input\\*\\* of the external hybrid.\n- **Input (Ring)**: Signal from the external hybrid to the console. It is added to the PGM bus but not to the MIX-MINUS. It should be connected to the output of the external telephone hybrid.\n\nThe return audio passes through the same circuit as the internal hybrid. The main fader of **Channel 8** operates the same as with the internal lines, allowing it to be sent on-air or to CUE depending on the position.",
+      "title": "Híbrido externo",
+      "level": 2
+    }
+  ]
+}

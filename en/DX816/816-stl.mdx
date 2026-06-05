@@ -1,57 +1,55 @@
 ---
-title: "Studio-Transmitter Link"
-description: "Connection and configuration of the streamer module as STL link."
-keywords: ["streamer", "stl", "link", "streaming"]
+title: "Enlace Estudio-Planta"
+description: "Conexión y configuración del módulo streamer como enlace STL."
+keywords: ["streamer", "stl", "enlace", "streaming"]
 tags: ["studio consoles", "Classic line", "DX816/AoIP", "DX822/AoIP"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "a45b2617a29851f592f0d59720b0c456692ba14bbe2a9b9f75cea533c0cc33a1"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: null
+  reviewed_at: null
 ---
 
-## Studio-Transmitter Link
+## Studio–Transmitter Link
 
-- At the studio, the console with **/AoIP** option works as an **encoder** and generates an audio stream to the transmitter site.
+- In studios, the console with **/AoIP** option operates as an **encoder** and generates an audio stream to the transmitter site.
 - At the transmitter site, a **decoder** receives the stream and sends it to the **audio processor** (for example Solidyne **ADA102**).
 
   Some FM processors can receive and decode the audio stream (for example Solidyne 542APC /AoIP)
 
 **Network requirements:**
 
-- Studio and Transmitter site on the **same LAN** with point-to-point link (wired or wireless), or
+- Studio and Transmitter on the **same LAN** with a point-to-point link (physical or wireless), or
 - **VPN** over high-performance Internet (consult with network technician).
 
 ---
 
-## Connection and access
+## Connection and Access
 
 **Procedure:**
 
 1. Connect the console to the network using an **Ethernet** cable.
-2. Check **LEDs** on the Ethernet connector: they indicate that AoIP modules are **powered via USB** (at least one USB to powered PC or external USB power supply). LEDs should blink.
-3. The network assigns **IP via DHCP**. Once IP is obtained, the green RJ45 LED keeps blinking.\
-   If there's no DHCP, the module will search for a **free IP** (may take a few minutes).
-4. Get the IP using **Solidyne Multi-Discovery**.
+2. Check the **LEDs** on the Ethernet connector: they indicate that the AoIP modules are **powered by USB** (at least one USB to PC powered on or an external USB source). The LEDs should blink.
+3. The network assigns an **IP via DHCP**. With the obtained IP, the green RJ45 LED will blink.\
+   If there is no DHCP, the module will search for a **free IP** (this may take a few minutes).
+4. Obtain the IP using **Solidyne Multi-Discovery**.
 
   <Note>
      **Solidyne Multi-Discovery**
 
-     If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/en/DX816/816-discovery) that detects Solidyne devices connected to the network.
+     If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/en-US/DX816/816-discovery) which detects Solidyne devices connected to the network.
 </Note>
 
-5. Open a browser (Firefox/Chrome) and enter the found **IP**. The **IP Control Panel** will appear.
+5. Open a browser (Firefox/Chrome) and enter the **IP** found. The **IP Control Panel** will appear.
 
 ---
 
-## Streaming configuration
+## Streaming Configuration
 
 ### **Destination IP (Basic settings)**
 
-The initial status screen shows the IP port configuration. The factory module comes configured as _Encoder: Studio Encoder_ (option "Location" → 'Studio Encoder').
+The initial status screen shows the IP port configuration. The factory default setting is _Encoder: Studio Encoder_ (option "Location" → 'Studio Encoder').
 
 To verify the configuration, access the **"Configuration"** option and select **"Basic settings"** from the left menu.
 
@@ -63,14 +61,14 @@ To verify the configuration, access the **"Configuration"** option and select **
   style={{ width:"51%" }}
 />
 
-| Parameter            | Configuration / Description                                |
-| ------------------- | --------------------------------------------------------- |
-| Location (Site type) | Factory set to **Studio Encoder** (encoder at Studio).    |
-| Stream method       | **Push (RTP)**                                            |
-| URL                 | Enter streaming **destination IP or DNS** and **port**.    |
-| Apply               | Press to confirm values.                                   |
+| Parameter           | Configuration / Description                             |
+| ------------------- | ------------------------------------------------------ |
+| Location (Site type) | Factory default set to **Studio Encoder** (studio encoder). |
+| Stream method       | **Push (RTP)**                                         |
+| URL                 | Enter **destination IP or DNS** and **streaming port**. |
+| Apply               | Press to confirm values.                               |
 
-### Audio options
+### Audio Options
 
 Access: **Configuration → Audio**.
 
@@ -82,39 +80,37 @@ Access: **Configuration → Audio**.
   style={{ width:"66%" }}
 />
 
-| Parameter     | Factory value / Recommendation | Notes                              |
+| Parameter     | Factory Default / Recommended | Notes                              |
 | ------------- | ----------------------------- | ---------------------------------- |
-| Input source  | Line Stereo                   | Do not modify.                     |
-| Format        | PCM 16 bits stereo            | Default.                           |
-| Sample rate   | 44.1 kHz                      | Default. 48 kHz not supported      |
+| Input source  | Line Stereo                   | Do not modify.                    |
+| Format        | PCM 16-bit stereo             | Default.                          |
+| Sample rate   | 44.1 kHz                      | Default. 48 kHz not supported.    |
 | Bitrate (PCM) | ~1.6 Mbit/s                   | For PCM16@48 kHz stereo.          |
 
-### Status screen
+### Status Screen
 
-| Field                    | Description                                                                        |
+| Field                   | Description                                                                        |
 | ----------------------- | ---------------------------------------------------------------------------------- |
-| Site type               | Working mode (e.g., **Studio Encoder** at Studio).                                 |
-| Stream mode             | Event/method configured to start remote transmission.                               |
-| Keep-alive              | Connection keep-alive strategy.                                                     |
+| Site type               | Operation mode (e.g., **Studio Encoder** for Studio).                              |
+| Stream mode             | Event/method configured to initiate transmission to remote.                        |
+| Keep-alive              | Active connection maintenance strategy.                                            |
 | Connection status       | Link status. **Green** = OK with destination IP; **Red** = connection issue.       |
-| Incoming Stream         | Incoming stream status (inactive in unidirectional encoder).                       |
-| Outgoing Stream         | Outgoing stream status (active in encoder).                                        |
-| Audio input             | Audio source used (analog).                                                        |
-| Audio format            | Format applied to transmitted audio (e.g.: PCM16/48k).                            |
-| Input/Output audio level| Actual audio levels (dBFS) input/output.                                          |
-| Relay 1 .. 4           | Not implemented.                                                                    |
-| Remote inputs           | Not implemented.                                                                    |
-| Local inputs            | Local inputs status.                                                               |
-| Local relays            | Not implemented.                                                                    |
+| Incoming Stream         | Status of incoming stream (inactive in unidirectional encoder).                    |
+| Outgoing Stream         | Status of outgoing stream (active in encoder).                                     |
+| Audio input             | Audio source used (analog).                                                       |
+| Audio format            | Format applied to transmitted audio (e.g., PCM16/48k).                            |
+| Input/Output audio level | Actual audio levels (dBFS) for input/output.                                       |
+| Relay 1 .. 4            | Not implemented.                                                                  |
+| Remote inputs           | Not implemented.                                                                  |
+| Local inputs            | Status of local inputs.                                                           |
+| Local relays            | Not implemented.                                                                  |
 
----
+## Microwave Digital Link
 
-## Digital microwave link
-
-For distances **up to 45 km**, a point-to-point data link in **5.8 GHz** (or **2.4 GHz** depending on country), standard **802.11.x** can be used:
+For distances of **up to 45 km**, a point-to-point data link in **5.8 GHz** (or **2.4 GHz** depending on the country), **802.11.x** standard, can be used:
 
 - **License-free** band, no special authorizations required.
-- Allows transport of **PCM 16 bits / 44.1 kHz** audio (uncompressed) or **encoded** audio.
+- Allows transport of **PCM 16-bit / 44.1 kHz** audio (uncompressed) or **encoded** audio.
 - Supports **bidirectional connection** for special applications.
 
 <Info>
@@ -123,11 +119,11 @@ For distances **up to 45 km**, a point-to-point data link in **5.8 GHz** (or **2
 
 ---
 
-## AoIP modules power supply
+## AoIP Module Power Supply
 
-- AoIP modules are powered via **USB**; they require at least **one USB** connected to a **powered PC**.
-- Without PC via USB, or with PC turned off, IP service **will not be available**.
+- AoIP modules are powered via **USB**; they require at least **one USB** connection to a **powered-on PC**.
+- Without a USB-connected PC, or with the PC turned off, the IP service **will not be available**.
 
 <Note>
-  If no PC is connected, a **standard USB power supply (5V)** can be used to power the AoIP modules.
+  If no PC is connected, you may use a **standard USB power supply (5 V)** to power the AoIP modules.
 </Note>

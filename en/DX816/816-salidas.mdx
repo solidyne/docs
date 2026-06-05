@@ -1,68 +1,65 @@
 ---
 title: "Audio outputs"
-description: "Description and connection of audio outputs"
+description: "Descripción y conexionado de las salidas de audio"
 keywords: ["outputs"]
-tags: "studio consoles,Classic line,DX816,DX822"
+tags: ["studio consoles", "Classic line", "DX816", "DX822"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "4f6af6fb9a94f99c28e2dbc4d6e93b3a40bd52d6183f4f7e8982cb634858068d"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: null
+  reviewed_at: null
 ---
 
 <img
   src="/images/816/816-trasero-fuente.png"
-  alt="816 Rear Power Supply"
-  title="816 Rear Power Supply"
+  alt="816 Trasero Fuente Pn"
+  title="816 Trasero Fuente Pn"
   className="mx-auto"
   style={{ width:"63%" }}
 />
 
-### Program output
+### Program Output
 
-The main output is called **PROGRAM (PGM)**. It is typically the signal sent to air and is available in several formats:
+The main output is called **PROGRAM (PGM)**. It is typically the signal that is sent on-air and is available in several formats:
 
-- **RJ45**: delivers **balanced PGM signal**.\
-  Always use this connector to send analog signal to the audio processor or STL link.
-
+- **RJ45**: delivers **balanced PGM** signal.\
+  Always use this connector to route analog signal to the audio processor or link.
   <Tip>
-    [Pin diagrams and adapter cables for cable assembly](/en/diagramas/RJ45-pinout).
+    [Pinout diagrams and adapter cables for cable assembly](/en/DX816/816-rj45-connections).
   </Tip>
   <Info>
-    Solidyne **362HD** and **542APC** processors include analog inputs with RJ45 connectors. Connection is made using a **shielded STP RJ45-RJ45** Ethernet cable.
+    Solidyne **362HD** and **542APC** processors include analog inputs with RJ45 connectors. The connection is made using a **shielded STP RJ45-RJ45** Ethernet cable.
   </Info>
-- **TRS female**: delivers unbalanced stereo PGM signal.
-- **USB (USB-1 Channel)**: PGM signal is sent to the connected computer, typically used for Internet streaming.
-- **AoIP (optional)**: on consoles with /AoIP module, PGM is available in multiple formats (PCM, MP3) over Ethernet connection.
+- **Female TRS**: delivers unbalanced stereo PGM signal.
+- **USB (USB-1 Channel)**: the PGM signal is sent to the connected computer, commonly used for Internet streaming.
+- **AoIP (optional)**: in consoles with the /AoIP module, PGM is available in multiple formats (PCM, MP3) over Ethernet connection.
 
 ---
 
-### REC output (auxiliary)
+### REC Output (Auxiliary)
 
-The **recording (REC)** output is also offered in several formats:
+The **recording (REC)** output is also available in several formats:
 
 - Balanced on **RJ45** connector.
 - Unbalanced stereo on **TRS**.
-- Digital USB through **USB-2 Channel**.
+- Digital USB via the **USB-2 Channel**.
 - Streaming over **Ethernet** on models with dual /AoIP module.
 
 The nominal output level of the console is **+4 dBu @ 0VU**.\
-When using balanced outputs in unbalanced mode, the level drops 6 dB, therefore **0VU = -2 dBu**.
+When using balanced outputs in unbalanced mode, the level drops by 6 dB, therefore **0VU = –2 dBu**.
 
 <Danger>
-  **Do not use mono (TS) plugs** to connect stereo TRS outputs.
+  **Do not use mono plugs (TS)** to connect the stereo TRS outputs.
 </Danger>
 
 <Note>
-  If you connect equipment with **-10 dBV** input level to the console output, the level may be excessive and cause saturation. In these cases, a **fixed attenuator (resistive divider)** must be used to reduce the level.
+  If you connect equipment with an **–10 dBV** input level to the console's output, the level may be excessive and cause clipping. In such cases, a **fixed attenuator (resistive divider)** should be used to reduce the level.
 </Note>
 
 ---
 
-### Decoded streaming audio
+### Decoded Streaming Audio
 
-The **Audio Out to Bal Line 1** output is only available on consoles with **/AoIP** option.\
-It delivers a balanced analog signal with the **decoded audio from incoming streaming** and is used to re-inject the decoded audio to an analog line input.
+The **Audio Out to Bal Line 1** output is only available on consoles with the **/AoIP** option.\
+It provides a balanced analog signal containing the **decoded audio from the incoming stream**, typically used to feed the decoded audio back into an analog line input.

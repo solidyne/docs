@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "2a36ab0ff8ae30afae155b6b22876db044b4e052da51b1d65828399754933da9",
+      "translation": "To achieve optimal long-term performance from this console, follow the procedures outlined in this manual.",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "f33e83d3e7d231e2cb900c47431f14c7a2f7fde07c10e0d8962b69c5409955e4",
+      "translation": "### Console Maintenance\n\n- Keep the room clean and dust-free.\n- Clean the front panel and cabinet with a slightly damp cloth or sponge.\n- If dirt is stubborn, use mild detergent (for painted or wallpapered surfaces).\n\n<Danger>\n  Do not use alcohol, benzene, petroleum derivatives, or furniture cleaners.\n</Danger>\n\n<Warning>\n  **Smoking is prohibited in the control room.**\\\n  Ash and dust are lethal to faders and buttons.\\\n  Food and drinks should also be restricted in the operation area.\n</Warning>\n\nThe DX consoles use next-generation **conductive ceramic** faders:\n\n- Lifespan \\> **10 million operations** (~15 years of use) under normal operating conditions.\n- No maintenance required.\n- More information at [www.SolidynePro.com](http://www.SolidynePro.com).\n\n---",
+      "title": "Cuidado de la consola",
+      "level": 3
+    },
+    {
+      "hash": "9787f970b3df28f46b4bfed433c125d9c6e11a1d857783cfd00c9ea444ceb06e",
+      "translation": "### Preventive Maintenance\n\nThe DX816 and DX822 consoles use high-quality electronic components, eliminating the need for preventive maintenance routines.\n\n- Handle the console with care.\n- The rear connectors are not designed for daily connection/disconnection.\n- Avoid connecting headphones directly to the console.\n\n<Tip>\n  If headphones are frequently changed, install an **external connection panel** to prevent connector wear.\n</Tip>\n\n---",
+      "title": "Mantenimiento preventivo",
+      "level": 3
+    },
+    {
+      "hash": "879fc032a6da89330b45f033d2e56e639ea294bde17d4a1af23d7955abab5646",
+      "translation": "### Replacement Parts\n\n- All channel faders include connectors.\n- Main faders are easy to replace:\n  - Secured to the chassis with two screws.\n  - Polarized connector for quick connection.\n\nOnce removed, any module can be repaired as all components are identified in the **Service Manual**.\n\n<Info>\n  We recommend purchasing the **complete module** and replacing it, given the low cost compared to repair time.\n</Info>\n\n---",
+      "title": "Repuestos",
+      "level": 3
+    },
+    {
+      "hash": "8f740ec47f6e3f10585bd72906c14a0c4c4a069389298b88987f025daa2e89b6",
+      "translation": "### Service Manuals\n\nCircuit schematics and full **service manuals** are available at no charge.\n\nSee the [Schematics and Diagrams](/es/otros_docs/schematics) section in the Main Index.",
+      "title": "Manuales de servicio",
+      "level": 3
+    }
+  ]
+}

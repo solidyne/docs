@@ -223,7 +223,7 @@
                     "group": "INSTALACIÓN",
                     "pages": [
                       "es/DX816/816-diagramas",
-                      "es/DX816/conexiones-rj-45",
+                      "es/DX816/816-conexiones-rj45",
                       "es/DX816/816-entradas",
                       "es/DX816/816-salidas",
                       "es/DX816/816-usb",
@@ -992,13 +992,14 @@
                     "group": "INSTALLATION",
                     "pages": [
                       "en/DX816/816-diagramas",
+                      "en/DX816/816-conexiones-rj45",
                       "en/DX816/816-entradas",
                       "en/DX816/816-salidas",
                       "en/DX816/816-usb",
                       "en/DX816/816-monitoreo",
                       "en/DX816/816-telco",
                       "en/DX816/816-GPIO-tally",
-                      "en/DX816/grounding-and-protections"
+                      "en/DX816/816-instalacion-tierras"
                     ]
                   },
                   {
