@@ -1,0 +1,87 @@
+language: pt-BR
+
+context:
+  domain: professional radio broadcasting
+  audience: broadcast engineers, radio operators, system integrators
+  style: technical documentation
+  priority: use terminology common to Brazilian broadcast manufacturers and professional radio environments
+
+rules:
+
+  - Translate for a professional broadcast environment.
+  - Prefer terminology commonly used in Brazilian radio broadcasting.
+  - Preserve product names, model numbers, trademarks and protocols exactly as written.
+  - Use "console", never "mixer", unless the original explicitly refers to a mixer product.
+  - Keep the term "fader".
+  - Never translate "fader" as "atenuador", "controle de nível" or similar variants.
+  - Never use "fader mecânico".
+  - Use "fader físico" when referring to hardware controls.
+  - Use "no ar" for broadcast/on-air contexts.
+  - Keep broadcast acronyms unchanged.
+  - Prefer terminology used by professional broadcast manufacturers over generic AV terminology.
+
+no_translate:
+
+  - fader
+  - Fader
+  - TELCO
+  - Telco
+  - CUE
+  - talkback
+  - DSP
+  - GPIO
+  - USB
+  - Dante
+  - Livewire
+  - streaming
+  - MPX
+  - RDS
+  - VoIP
+  - AoIP
+  - mix-minus
+  - on-air
+  - on air
+
+preferred:
+
+  consola IP: console IP
+  consola autónoma: console autônoma
+
+  canal al aire: canal no ar
+  operación al aire: operação no ar
+  puesta al aire: operação no ar
+  retorno N-1: mix-minus
+
+  híbrido telefónico: híbrido telefônico
+
+  línea fija: linha telefônica analógica (POTS)
+  línea telefónica: linha telefônica
+  celular: telefone celular
+
+  generador estéreo: gerador estéreo
+  codificador FM estéreo: codificador FM estéreo
+  sub-portadora piloto: piloto estéreo de 19 kHz
+
+  procesador de audio: processador de áudio
+  monitor de modulación: monitor de modulação
+
+  fader físico: fader físico
+  canal físico: canal físico
+  fader virtual: fader virtual
+  canal virtual: canal virtual
+
+  preescucha: preview (cue)
+  escucha previa: preview (cue)
+
+  puesta a tierra: aterramento
+  conexión a tierra: conexão de aterramento
+
+  cable blindado: cabo blindado
+
+notes:
+
+  - Assume all documentation refers to professional radio broadcasting equipment unless stated otherwise.
+  - Prefer terminology commonly used in Brazilian broadcast engineering environments.
+  - "monitoramento" and "monitoração" are both accepted in Brazilian Portuguese; preserve whichever is already used consistently within a document.
+  - Avoid literal translations that sound correct in Portuguese but are uncommon in broadcast engineering.
+  - Avoid consumer, home-studio and live-sound terminology when a broadcast equivalent exists.

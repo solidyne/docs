@@ -1,0 +1,79 @@
+language: en-US
+
+context:
+  domain: professional radio broadcasting
+  audience: broadcast engineers, radio operators, system integrators
+  style: technical documentation
+  priority: use terminology common to Telos Alliance, Axia and AEQ
+  
+
+rules:
+
+  - Translate for a professional broadcast environment.
+  - Prefer broadcast-industry terminology over generic audio terminology.
+  - Preserve product names, model numbers, trademarks and protocols exactly as written.
+  - Use "console", never "mixer", unless the original explicitly refers to a mixer product.
+  - Use "fader", never "attenuator", "slider" or "level control".
+  - Never use "mechanical fader".
+  - Use "physical fader" or "hardware fader" depending on context.
+  - Use "on-air", never "air".
+  - Use "grounding", never "earth wiring".
+  - Use "shielded cable", never "screened cable".
+  - Use "FM stereo coder", never "FM stereo generator".
+  - Keep broadcast acronyms unchanged.
+
+no_translate:
+
+  - fader
+  - TELCO
+  - CUE
+  - talkback
+  - DSP
+  - GPIO
+  - USB
+  - Dante
+  - Livewire
+  - streaming
+  - MPX
+  - RDS
+  - VoIP
+  - mix-minus
+
+preferred:
+
+  consola IP: IP audio console
+  consola autónoma: standalone console
+  procesador de audio: audio processor
+
+  canal al aire: channel on-air
+  operación al aire: on-air operation
+  puesta al aire: on-air operation
+    
+  híbrido telefónico: telephone hybrid
+  línea fija: land line (POTS)
+  línea telefónica: phone line
+  celular: mobile phone
+
+  generador estéreo: stereo coder
+  codificador FM estéreo: FM stereo coder
+  portadora piloto: 19 kHz stereo pilot
+  
+  fader físico: physical fader
+  canal físico: hardware channel
+  fader virtual: virtual fader
+  canal virtual: virtual channel
+  
+  puesta a tierra: grounding
+  conexión a tierra: ground connection
+
+  cable blindado: shielded cable
+
+  aire: on-air
+
+  
+notes:
+
+  - When translating documentation for Solidyne consoles, assume the equipment is intended for professional radio broadcasting unless stated otherwise.
+  - Prefer terminology commonly found in Telos Alliance, Axia and AEQ documentation.
+  - Avoid literal translations that sound correct in English but are uncommon in broadcast engineering.
+  - Avoid consumer, home-studio and live-sound terminology when a broadcast equivalent exists
