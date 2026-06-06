@@ -1,5 +1,5 @@
 ---
-title: "Connection diagrams"
+title: "Connection Diagrams"
 description: "Rear Panel Description and Connection Diagrams"
 keywords: ["diagrams", "installation", "connections"]
 tags: ["consolas de estudio", "línea Classic", "DX816", "DX822"]
@@ -7,17 +7,17 @@ translation:
   source_lang: "es"
   target_lang: "en"
   human_revision: 0
-  reviewed_by: null
-  reviewed_at: null
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-import tierras from '/snippets/snippet-tierras-en.mdx';
+import tierras from '/snippets/snippet-tierras.mdx';
 
 ## Power Supply
 
-The DX816/822 operates with external power. It includes a **switching power supply 90-240 V** that works with any electrical network, even in areas with significant voltage variations. It delivers **regulated 28 VDC**.
+The DX816/822 operates with an external power supply. It includes a **switching power supply 90-240 V**, which works with any electrical grid, even in areas with significant voltage fluctuations. It delivers **regulated 28 VDC**.
 
-The rear panel houses the **DC IN** power input with a **2.1 mm** barrel connector, positive on the center pin.
+The rear panel features the **DC IN** power input, with a **2.1 mm** center-positive barrel connector.
 
 <Warning>
   It is recommended to always use the **original power supply provided by Solidyne**.
@@ -32,12 +32,12 @@ The rear panel houses the **DC IN** power input with a **2.1 mm** barrel connect
 />
 
 <Info>
-  The Tally Light barrel connector provides voltage for the "On-Air" light. This connector uses a 2.5 mm pin to prevent accidental connection of the power supply.
+  The Tally Light barrel connector supplies voltage for the "On-Air" light. This connector uses a 2.5 mm pin to prevent accidental connection of the power supply.
 </Info>
 
 ## Grounding
 
-Grounding is accomplished via a **bronze terminal** that ensures chassis grounding. Use **2 mm gauge** cable connected to a **buried copper grounding rod**.
+Grounding is accomplished through a **bronze terminal** that ensures chassis grounding. Use **2 mm gauge** wire connected to a **buried copper ground rod**.
 
 <tierras />
 
@@ -52,16 +52,16 @@ The DX816 model is identical, except for the microphone inputs which are five.
 
 ## About RJ45 Connectors
 
-With the advent of **Audio over IP (AoIP)**, various manufacturers have adopted the use of **RJ45 connectors** and shielded multipair cable to replace traditional audio connectors.
+With the advent of **audio over IP (AoIP)**, various manufacturers including us have adopted the use of **RJ45 connectors** and shielded multipair cable to replace traditional audio connectors.
 
 - A single RJ45 connector contains **two balanced lines**, reducing the size of the rear panel and the number of connectors.
-- The use of **structured cable** simplifies installation between distant equipment anywhere in the world, thanks to the wide availability of components and assembly tools used in data networks.
+- The use of **structured cabling** simplifies installation between distant equipment anywhere in the world, thanks to the wide availability of components and assembly tools used in data networks.
 - Soldering is eliminated, simplifying and speeding up wiring.
 
-At the end of the multipair cable, the connection to audio devices (microphones, speakers, interfaces) is still made with **standard audio connectors**.\
-For this purpose, RJ45 runs terminate in balanced connectors suitable for the target equipment.
+At the multipair cable end, the connection to audio devices (microphones, speakers, interfaces) still uses **standard audio connectors**.\
+For this purpose, RJ45 runs terminate in balanced connectors appropriate for the destination equipment.
 
-The balanced inputs of the **Solidyne DX816/822** console use **RJ45 connectors** and are wired with **shielded CAT-5 (STP)** multipair cable.
+The balanced inputs on the **Solidyne DX816/822** console use **RJ45 connectors** and are wired with shielded **CAT-5 (STP)** multipair cable.
 
 The **Solidyne MNGX816** connection kit includes all necessary cables for balanced inputs and outputs with RJ45, ensuring reliability and preventing connection errors.
 

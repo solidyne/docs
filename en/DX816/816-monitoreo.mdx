@@ -1,72 +1,70 @@
 ---
 title: "Monitoring"
 description: "Speaker and Headphone Connections in Studio and Control Room"
-keywords: ["monitoring", "studiobox", "headphones", "installation", "connections"]
+keywords: ["monitoreo", "studiobox", "auriculares", "instalación", "conexiones"]
 tags: ["consolas de estudio", "línea Classic", "DX816", "DX822"]
 translation:
   source_lang: "es"
   target_lang: "en"
   human_revision: 0
-  reviewed_by: null
-  reviewed_at: null
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Control Room Monitoring
 
-The \*\*CONTROL \*\*outputs feature **1/8" female TRS (mini-jack)** connectors for speakers and headphones. The speaker output operates at nominal **0 dBu** level, designed for active monitor connection.\
-In the console's MONITOR section panel, you'll find the controls for signal routing and level adjustment for both speakers and headphones.
+The **CONTROL** outputs feature **1/8" female TRS (mini-jack)** connectors for speakers and headphones. The speaker output operates at a nominal level of **0 dBu**, designed for connection to active monitors.\
+In the console's MONITOR section, you'll find the controls for signal routing and level adjustment for both speakers and headphones.
 
 <Note>
-  The **Control Speaker** output is automatically muted when **Talk-back** is activated, preventing feedback with the command microphone.
+  The **Control Speaker** output is automatically muted when **Talk-back** is engaged, preventing feedback with the announcer microphone.
 </Note>
 
 ---
 
-## Monitoring in the Studio
+## Studio Monitoring
 
-The console delivers monitoring signals to the Studio via **STUDIO MONITOR OUT**, with an RJ45 connector. The connection is made using **STP RJ45-RJ45 (pin-to-pin)** cable to the optional **Solidyne Studiobox HD3/HD5** monitoring units.
+The console delivers monitoring signals to the Studio via **STUDIO MONITOR OUT**, with an RJ45 connector. The connection is made using **straight-through STP RJ45-RJ45 cable** to the optional **Solidyne Studiobox HD3/HD5** monitor units.
 
 <Danger>
-  This output **must not be connected** with RJ45 cables used for audio outputs.\
-  It is not compatible with the **StudioHub** standard.
+  This output **must not be connected** using standard audio output RJ45 cables.\
+  It is **not compatible** with the **StudioHub** standard.
 </Danger>
 
 <img
   src="/images/816/816-monitoreo-studiobox.png"
-  alt="816 Monitoring Studiobox Pn"
-  title="816 Monitoring Studiobox Pn"
+  alt="816 Studiobox Monitoring Connections"
+  title="816 Studiobox Monitoring Connections"
   className="mx-auto"
   style={{ width:"56%" }}
 />
 
 Features:
 
-- Studio speakers are **automatically muted** when microphones are opened.
-- The headphone signal **is never muted**. It always receives the signal assigned on the console and the talk-back microphone audio.
+- Studio speakers **automatically mute** when microphones are opened.
+- The headphone signal **is never muted**. It always receives the console-assigned signal and the talkback microphone audio.
 
-For more details, see the **Studiobox HD3 / HD5 Monitoring Modules** section.
+For details, see the **Studiobox HD3 / HD5 Monitoring Modules** section.
 
----
+## Single-Booth Monitoring
 
-## Single Booth Monitoring
-
-When the console is used in an integrated or single booth studio, it is recommended to connect the speakers to the **STUDIO MONITOR** output.
+When the console is used in an integrated or single-booth studio, it is advisable to connect the speakers to the **STUDIO MONITOR** output.
 
 <Warning>
-  The CONTROL speaker output **is not muted when microphones are turned on**, so there is a risk of feedback if the microphones and speakers are in the same room.
+  The CONTROL speaker output **is not muted when microphones are activated**, creating a risk of feedback if microphones and speakers are in the same room.
 </Warning>
 
 ---
 
-## Connection Without Studiobox Option
+## Optional Studiobox Connection
 
-The console comes with a **Y adapter cable** (RJ45 to dual TRS jack) for connecting generic headphone distribution units and powered speakers.
+The console includes a **Y-cable adapter** (RJ45 to dual TRS jack) for connecting generic headphone distribution amplifiers and powered monitors.
 
-- The **STUDIO MONITOR** output delivers signals at a fixed level.
-- If Studiobox is not used, the speaker level is adjusted from the monitor's own controls.
-- A dual-input headphone distribution/amplifier unit can be used to control the speaker volume from the console.
-  - Input A → headphone signal.
-  - Input B → speaker signal.
+- The **STUDIO MONITOR** output delivers fixed-level signals
+- When not using Studiobox, speaker level is adjusted from the monitors' own controls
+- A dual-input headphone distribution amplifier may be used to control monitor volume from the console
+  - Input A → headphone signal
+  - Input B → speaker signal
 
 <img
   src="/images/816/816-monitores-sin_studiobox.png"
@@ -76,7 +74,7 @@ The console comes with a **Y adapter cable** (RJ45 to dual TRS jack) for connect
   style={{ width:"46%" }}
 />
 
-The speaker volume control is assigned to input B. This way, a single unit controls both headphones and studio monitors.
+Speaker volume control is assigned to Input B, allowing a single unit to control both studio headphones and monitors.
 
 ### Studio Monitor Out
 
@@ -89,14 +87,14 @@ The speaker volume control is assigned to input B. This way, a single unit contr
 
 | # | Signal                          |
 | :-: | ------------------------------- |
-| 1 | Headphones Left (\+4 dBu)       |
+| 1 | Headphones Left (\+4 dBu)      |
 | 2 | Headphones Right                |
 | 3 | GND                             |
 | 4 | ON-AIR (\+14 V)                 |
-| 5 | Control Room Talkback           |
+| 5 | Talkback to Control Room       |
 | 6 | VCC \+ 14 V                     |
-| 7 | Monitor Left (\+4 dBu)          |
-| 8 | Monitor Right                   |
+| 7 | Speakers Left (\+4 dBu)         |
+| 8 | Speakers Right                  |
 
 <Note>
   Chassis = GND

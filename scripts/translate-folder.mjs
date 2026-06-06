@@ -234,20 +234,25 @@ async function processLanguage(sourceFolder, lang) {
   console.log(`\n🌍 Language: ${lang}`);
   console.log(`📂 Files found: ${files.length}\n`);
 
-        // Utilidad para obtener versión del frontmatter del destino
-    function getDestVersion(mdFile) {
+            // Mejor función: obtiene human_revision del frontmatter destino
+    function getDestRevision(mdFile) {
       if (!fs.existsSync(mdFile)) return 0;
       const content = fs.readFileSync(mdFile, "utf8");
       const match = content.match(/^---\s*([\s\S]*?)\s*---/m);
       if (!match) return 0;
       try {
         const obj = yaml.load(match[1]) || {};
-        return Number(obj.version) || 0;
+        if (obj.translation && typeof obj.translation === 'object') {
+          return Number(obj.translation.human_revision || 0);
+        }
+        return Number(obj.human_revision || 0);
       } catch (err) {
         return 0;
       }
     }
 
+    let skippedReviewed = 0;
+    let forcedUpdates = 0;
     for (const file of files) {
       const relativePath = path.relative(sourceFolder, file);
       const targetPath = path.join(targetFolder, relativePath);
@@ -255,14 +260,19 @@ async function processLanguage(sourceFolder, lang) {
 
       console.log("→ Processing:", relativePath);
 
-      if (fs.existsSync(targetPath)) {
-        const destVer = getDestVersion(targetPath);
-        if (destVer > 0 && !FORCE_REVIEWED) {
-          console.warn(`⚠️ Archivo ${relativePath} tiene version manual (${destVer}) y NO será sobrescrito. Usa --force-reviewed para forzar.`);
+            if (fs.existsSync(targetPath)) {
+        const destRev = getDestRevision(targetPath);
+        if (destRev > 0 && !FORCE_REVIEWED) {
+          console.warn(`⚠️ Archivo ${relativePath} revisado manualmente (human_revision=${destRev}). Usa --force-reviewed para forzar actualización.`);
+          skippedReviewed++;
           skipped++;
           continue;
         }
+        if (destRev > 0 && FORCE_REVIEWED) {
+          forcedUpdates++;
+        }
       }
+
 
       if (DRY_RUN) {
         translated++;
@@ -333,16 +343,17 @@ async function processFileGranular(esFilePath, targetFilePath, metaPath, targetL
     return `[${arrClean.join(", ")}]`;
   }
 
-  function buildTranslationBlock(targetLang) {
+    function buildTranslationBlock(targetLang) {
   return `
 translation:
   source_lang: "es"
   target_lang: "${targetLang}"
   human_revision: 0
   reviewed_by: null
-  reviewed_at: null
+  reviewed_at: "AAAAMMDD"
 `.trim();
   }
+
 
   function updateFrontmatterString(fmStr, newVals, translationBlock) {
     let result = fmStr;
@@ -374,17 +385,58 @@ translation:
 
   const { frontmatterStr, frontmatter: esFrontmatter, body: esBody } = extractFrontmatterWithString(esContent);
 
-  let translatedTitle = esFrontmatter && esFrontmatter.title
-    ? (await translateContent(rules, glossary, esFrontmatter.title, targetLang)).trim().replace(/^"+|"+$/g, '')
+        function normalizeString(str) {
+      if (!str) return "";
+      return String(str).trim().replace(/^"+|"+$/g, '').replace(/[`']/g,'').replace(/\s+/g,' ').toLowerCase();
+    }
+    async function safeTranslateField(value, rules, glossary, targetLang, fieldName = "") {
+      if (!value || typeof value !== "string" || value.trim().length === 0) {
+        return undefined;
+      }
+      let translated = value;
+      for (let attempts = 0; attempts < 3; attempts++) {
+        try {
+          // Contexto especial para título/desc
+          let isShort = (fieldName === "title" || fieldName === "description");
+          let customPrompt = isShort
+            ? `${rules}\nTranslate only this field (\"${fieldName}\") from Spanish to ${targetLang}.\nField content:\n\"${value}\"\nReturn ONLY the translated text, no extra formatting.`
+            : rules;
+
+          const result = await translateContent(customPrompt, glossary, value, targetLang);
+          console.log(`Frontmatter [${fieldName}] | orig: '${value}' | LLM: '${result}'`);
+          if (
+            result &&
+            normalizeString(result) &&
+            normalizeString(result) !== normalizeString(value)
+          ) {
+            translated = result.trim().replace(/^"+|"+$/g, '');
+            break;
+          }
+        } catch (error) {
+          console.warn(`⚠️ Fallo en traducción de campo [${fieldName}] (intento ${attempts + 1})`);
+        }
+      }
+      // Si nunca cambió, o es vacío, devuelve undefined para que no reemplace
+      if (!translated.trim() || normalizeString(translated) === normalizeString(value)) {
+        console.warn(`⚠️ Campo frontmatter [${fieldName}] no traducido o igual al original (posible fallo en LLM), dejando original.`);
+        return undefined;
+      }
+      return translated;
+    }
+
+    let translatedTitle = esFrontmatter && esFrontmatter.title
+    ? await safeTranslateField(esFrontmatter.title, rules, glossary, targetLang, "title")
     : undefined;
   let translatedDesc = esFrontmatter && esFrontmatter.description
-    ? (await translateContent(rules, glossary, esFrontmatter.description, targetLang)).trim().replace(/^"+|"+$/g, '')
+    ? await safeTranslateField(esFrontmatter.description, rules, glossary, targetLang, "description")
     : undefined;
   let translatedKeywords = esFrontmatter && esFrontmatter.keywords
     ? await translateList(esFrontmatter.keywords)
     : undefined;
   let translatedTags = esFrontmatter && esFrontmatter.tags
-    ? await translateList(esFrontmatter.tags)
+  ? Array.isArray(esFrontmatter.tags)
+    ? esFrontmatter.tags.map(e => typeof e === "string" ? e.trim() : e).filter(Boolean)
+    : esFrontmatter.tags
     : undefined;
 
   let outFrontmatterBlock = frontmatterStr;
@@ -426,6 +478,19 @@ translation:
         level: section.level
       });
       continue;
+
+    }
+      // Verificar si la sección fue modificada
+  if (!FORCE && prevSections[sectionHash]) {
+    console.log("      ↪️ Sección sin cambios, reusando traducción existente");
+    newContentArr.push(prevSections[sectionHash].translation);
+    newSectionMeta.push({
+      hash: sectionHash,
+      translation: prevSections[sectionHash].translation,
+      title: section.title,
+      level: section.level
+    });
+    continue;
     }
 
     // Robustez: reintentos y filtrado
@@ -507,7 +572,7 @@ async function main() {
     results[lang] = r;
   }
 
-    const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+        const duration = ((Date.now() - startTime) / 1000).toFixed(2);
   const date = new Date().toISOString().slice(0, 10);
   const folderName = path.basename(sourceFolder);
   const reportFile = `translate-report_${folderName}_${langArg}_${date}.json`;
@@ -516,9 +581,8 @@ async function main() {
 
   fs.writeFileSync(
     path.join(__dirname, "reports", reportFile),
-    JSON.stringify({ model: MODEL, duration_sec: duration, results }, null, 2)
+    JSON.stringify({ model: MODEL, duration_sec: duration, results, skipped_reviewed: skippedReviewed, forced_updates: forcedUpdates }, null, 2)
   );
-
 
   console.log("\n🎉 Translation complete.");
 }

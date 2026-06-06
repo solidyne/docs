@@ -3,37 +3,37 @@
   "sections": [
     {
       "hash": "96edae3257e1eec9bbe78ff9bae21b9584e550e2e7a6009a093e452194c0e03a",
-      "translation": "## Using a Mobile Phone (Bluetooth)\n\nTo operate a phone through the console, the device must be [paired with the TELCO Bluetooth unit](/es/DX816/816-telco).",
+      "translation": "## Using with Mobile Phones (Bluetooth)\n\nTo operate a phone on the console, it must be [paired with the Bluetooth device](/es/DX816/816-telco) TELCO.",
       "title": "Uso con teléfono celular (Bluetooth)",
       "level": 2
     },
     {
       "hash": "4920e3368fa3313dc16f91317a5d5f137f65c71cbba61d754d5358bf4cf9ee8e",
-      "translation": "### Quick Reconnection\n\n1. Ensure the **TELCO** fader is in **CUE** (closed).\n2. **Enable Bluetooth on the console:** press and hold **BLUETOOTH for approximately 5 seconds** and release as soon as **CELL PHONE** lights up in blue. The button will continue to flash with a slow blink.\n  <Warning>\n  The Bluetooth module is powered by the **USB-1 or USB-2** channels.\\\n  If neither is connected to a PC, use an **external USB power source** (a standard charger) with the supplied cable.\n</Warning>\n3. Enable Bluetooth on the mobile phone → the connection will be restored.\n4. Incoming calls can be answered from the mobile phone or with **BLUETOOTH** on the console.",
+      "translation": "### Quick Reconnection\n\n1. Ensure the **TELCO** fader is in **CUE** (closed) position.\n2. **Enable Bluetooth on console:** Hold **BLUETOOTH for 5 seconds** until **CELL PHONE** lights blue. The button will blink with slow pulse.\n  <Warning>\n  The Bluetooth module receives power from **USB-1 or USB-2** channels.\\\n  If neither is connected to a PC, use an **external USB power source** (standard charger) with the supplied cable.\n</Warning>\n3. Activate Bluetooth on mobile device → connection restores automatically.\n4. Incoming calls may be answered either from the mobile or via **BLUETOOTH** on the console.",
       "title": "Re-conexión rápida",
       "level": 3
     },
     {
       "hash": "53f4a49ecf7ac0d958a23323bddfddd004142a856e4cf5d44f9aefd2d20069af",
-      "translation": "### Incoming Call (Mobile)\n\n- Rings on the mobile phone and in **CUE** (TELCO closed). **CELL PHONE** flashes blue.\n- Answer with **short press on BLUETOOTH** (or from the mobile screen).\n- **Monitor conversation:** With fader at **CUE**, the call is heard through **CUE**.\n- **Press TALK** to speak. The button is latched - press again when finished talking.\n- **HOLD**: Move the fader to the HOLD zone, caller hears program but is not on-air.\n- **ON-AIR**: Raise the fader to reach appropriate level.\n\n<Info>\n  In conferences between **mobile** and **landline/VoIP**, there may be some **echo** in the remote journalist's return feed. This does **not** go on-air.\n</Info>",
+      "translation": "### Incoming Call (Mobile)\n\n- Rings on cellphone and **CUE** (TELCO closed). **CELL PHONE** flashes blue.\n- Answer with **short press on BLUETOOTH** (or from mobile screen).\n- **Monitor conversation:** With fader at **CUE**, call is heard through **CUE**.\n- **Press TALK** to speak. Button latches; press again to stop talking.\n- **HOLD**: Move fader to HOLD zone, caller hears program but isn't broadcast.\n- **ON-AIR**: Raise fader to achieve proper level.\n\n<Info>\n  During conferences between **cellphone** and **landline/VoIP**, some **echo** may occur in the remote journalist's return feed. **Does not** go on-air.\n</Info>",
       "title": "Llamada entrante (móvil)",
       "level": 3
     },
     {
       "hash": "f097bdb22b4b4a56dfc61e9c1b61ff28398e66fbd438649bcf8d583b03220fe3",
-      "translation": "### Terminate the connection\n\n- **Brief BLUETOOTH tap** on the console, or disconnect from the phone.",
+      "translation": "### Ending the Communication\n\n- **Short press BLUETOOTH** on the console, or disconnect from the phone.",
       "title": "Finalizar la comunicación",
       "level": 3
     },
     {
       "hash": "dc5f37455a5b3829443381a254088c7fcf622151a8538bf90facf09f2477d7fa",
-      "translation": "### Resuming on Mobile\n\n- On mobile: exit **Headset/Bluetooth** mode by switching to **Speaker**.\n- To return to console: switch back to **Headset** mode (varies by phone model).",
+      "translation": "### Return to Mobile\n\n- On the mobile phone: exit **Headset/Bluetooth** mode by switching to **Speaker**.\n- To return to the console: switch back to **Headset** mode (varies by phone model).",
       "title": "Retomar en el móvil",
       "level": 3
     },
     {
       "hash": "565d6650660633a18aba7feef252571b14199b65a1e0d3496fef223c5322e9e7",
-      "translation": "### Initiate Call from Mobile Phone\n\n1. On the mobile device, disable Bluetooth to enable speaking directly from the phone.\n2. Establish the call.\n3. To transfer to the console, switch to **Bluetooth/Headset** mode.\n4. With the fader in the **HOLD** position, the mobile device receives return audio from the console but does not go on-air.\n5. Raise the fader to go on-air.\n6. To end the call: **short press the BLUETOOTH button** or disconnect from the mobile device.\n\n<Note>\n  The call can also be established **without exiting** Bluetooth mode on the mobile device, with the fader in the **CUE** position and using **TALK** to communicate from the console.\n</Note>",
+      "translation": "### Initiate Call from Mobile Phone\n\n1. On the mobile device, disable Bluetooth to speak directly through the phone.\n2. Establish the call.\n3. To transfer to the console, switch to **Bluetooth/Headset** mode.\n4. With the fader in the **HOLD** position, the mobile receives return feed from the console but remains off-air.\n5. Raise the fader to bring the call on-air.\n6. To terminate: **brief press of the BLUETOOTH button** or disconnect from the mobile.\n\n<Note>\n  The call can also be established **without exiting** Bluetooth mode on the mobile, with the fader in **CUE** position and using **TALK** to converse from the console.\n</Note>",
       "title": "Generar llamada desde celular",
       "level": 3
     }

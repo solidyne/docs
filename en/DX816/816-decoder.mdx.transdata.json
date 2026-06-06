@@ -3,31 +3,31 @@
   "sections": [
     {
       "hash": "390632fba60cf8597ad5c4074d3986f04b902365de1baa4c1c7b1252b09b5007",
-      "translation": "## Audio stream from another console\n\nThe AoIP module can be configured to **receive an RTP stream** generated from another Solidyne console with streaming support (e.g.: **D612**, **2600 series**, **Unidex series**, coder/link **ADA102**).\\\nThe encoding device must have the **same firmware (STL)**.\n\nBy default, the console comes in **CODER (Studio Encoder)** mode. To receive streams, it must be configured as **DECODER**.",
+      "translation": "## Audio Stream Generated from Another Console\n\nThe AoIP module can be configured to **receive an RTP stream** generated from another Solidyne console with streaming support (e.g., **D612**, **2600** series, **Unidex** series, coder/link **ADA102**).\\\nThe encoding equipment must have the **same firmware (STL)**.\n\nBy default, the console comes in **CODER (Studio Encoder)** mode. To receive, it must be configured as **DECODER**.",
       "title": "Audio stream generado desde otra consola",
       "level": 2
     },
     {
       "hash": "d5cfab439b9dc2689ac8e0ab835f1deedcbe9f23b67609798155b1efabaa3e64",
-      "translation": "### Receiver Configuration (Decoder)\n\n1. Access the IP module from a web browser (see [IP Module Access](/en/DX816/816-stl)).\n2. In the top menu, click **Location**.\n3. **Change** the mode to **→** **Transmitter Decoder**.\n   - Factory default: **Studio Encoder**, generates unidirectional streaming.\n   - As **Decoder**, default values are adopted (only modify IP and ports).\n4. Go to **Configuration → Streaming**.\n5. In **Port**, enter the port used by the encoder (the transmitting equipment).\n6. In **URL**, leave **0.0.0.0**.\n7. Click **Apply** to confirm.",
+      "translation": "### Receiver Configuration (Decoder)\n\n1. Access the IP module from a web browser (see [IP Module Access](/es/DX816/816-stl)).\n2. In the top menu, click **Location**.\n3. \\*\\*Change \\*\\*the mode to **→** **Transmitter Decoder**.\n   - Factory setting: **Studio Encoder**, generates a unidirectional streaming.\n   - As **Decoder**, default values are adopted (only modify IP and ports).\n4. Go to **Configuration → Streaming**.\n5. In **Port**, enter the port used on the encoder (the transmitting equipment).\n6. In **URL**, keep **0.0.0.0**.\n7. Click **Apply** to confirm.",
       "title": "Configuración de recepción (Decoder)",
       "level": 3
     },
     {
       "hash": "4c7292e9af7d0498c3c025820fef7500dc290c9057cd5dc042257bb66395e002",
-      "translation": "### Buffer Adjustment (RTP Latency)\n\nThe **input buffer** (expressed in milliseconds) prevents audio dropouts when bandwidth is insufficient:\n\n| Audio Format        | Recommended Buffer                          |\n| ------------------- | ------------------------------------------- |\n| PCM                 | 40–80 ms                                    |\n| Compressed (e.g. MP3) | >80 ms (depends on codec and decoding)      |\n\n<Tip>\n  Larger buffer → fewer dropouts, but higher **audio latency**.\\  \n  Optimal value depends on **bandwidth** and **format** used.\n</Tip>\n\nThe audio format is always determined by the **transmitter equipment**.",
+      "translation": "### Buffer Adjustment (RTP Delay)\n\nThe **input buffer** (expressed in milliseconds) prevents audio interruptions when bandwidth is insufficient:\n\n| Audio Format         | Recommended Buffer                           |\n| -------------------- | -------------------------------------------- |\n| PCM                  | 40–80 ms                                     |\n| Compressed (e.g. MP3) | \\>80 ms (depends on codec and decoding)      |\n\n<Tip>\n  Higher buffer → fewer dropouts, but greater **audio delay**.\\\n  The optimal value depends on **bandwidth** and the **format** used.\n</Tip>\n\nThe audio format is always defined by the **transmitting equipment**.",
       "title": "Ajuste del buffer (RTP delay)",
       "level": 3
     },
     {
       "hash": "110644efee9f81bde4054069fa4890a3ad6851cb1d7f5043d2ff85bcbd90ce62",
-      "translation": "### Decoded Audio Connection\n\n- Audio received via Ethernet is sent to **balanced inputs** using an external cable (RJ45 to RJ45, supplied).\n- Connection: **AoIP Output Option → BAL-1 or BAL-2**.\n- On DX822 with dual AoIP modules: output branched to both inputs (BAL-1 and BAL-2) using a special \"Y\" cable (supplied).  \n\n---",
+      "translation": "### Decoded Audio Connection\n\n- Audio received via Ethernet is routed to **balanced inputs** using the external cable (RJ45 to RJ45, provided).\n- Connection: **AoIP Output Option → BAL-1 or BAL-2**.\n- For DX822 with two AoIP modules: branched output to both inputs (BAL-1 and BAL-2) using a special \"Y\" cable (supplied).\n\n---",
       "title": "Conexión del audio decodificado",
       "level": 3
     },
     {
       "hash": "526d66dc713e181cbecaf914ee2f61579c72c8216b8418d6a4a57f3b0ef4151b",
-      "translation": "## Receiving Broadcasts Using a Computer\n\nIt is possible to receive DX/AoIP transmissions on a computer using RTP-compatible software.\\\nRecommended: **VLC Player** (free – [videolan.org/vlc](http://www.videolan.org/vlc/)).\n\n**VLC Format Configuration:**\n\n- **PCM16 @ 44.1 kHz**, or\n- **MP3** in one of its modes.\n\nOther formats may require an **SDP** payload file.\n\n**Procedure in VLC:**\n\n- Menu: **Media → Open Network Stream**.\n- In URL field enter:\n\n  `[protocol]://[source_IP]:[port]`\n\n<img\n  src=\"/images/816/816-vlc-decoding.jpg\"\n  alt=\"816 Vlc Decoding Jp\"\n  title=\"816 Vlc Decoding Jp\"\n  style={{ width:\"54%\" }}\n/>\n\nFor example:\n\nRTP://0.0.0.0:3030\n\n- `RTP` → protocol.\n- `0.0.0.0` → any incoming IP.\n- `3030` → port used.\n\n<Note>\n  Some VLC versions accept: `RTP://@:3030`\n</Note>",
+      "translation": "## Reception Using a Computer\n\nIt is possible to receive transmission from a DX/AoIP on a computer with compatible RTP software.\\\nRecommended: **VLC Player** (free – [videolan.org/vlc](http://www.videolan.org/vlc/)).\n\n**Format Configuration in VLC:**\n\n- **PCM16 @ 44.1 kHz**, or\n- **MP3** in one of its modes.\n\nOther formats may require a **SDP** payload file.\n\n**Procedure in VLC:**\n\n- Menu: **Media → Open Network Stream**.\n- In the URL field, enter:\n\n  `[protocol]://[source_IP]:[port]`\n\n<img\n  src=\"/images/816/816-vlc-decoding.jpg\"\n  alt=\"816 Vlc Decoding Jp\"\n  title=\"816 Vlc Decoding Jp\"\n  style={{ width:\"54%\" }}\n/>\n\nFor example:\n\nRTP://0.0.0.0:3030\n\n- `RTP` → protocol.\n- `0.0.0.0` → any incoming IP.\n- `3030` → port used.\n\n<Note>\n  Some versions of VLC accept: `RTP://@:3030`\n</Note>",
       "title": "Recepción usando un computador",
       "level": 2
     }
