@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "2a36ab0ff8ae30afae155b6b22876db044b4e052da51b1d65828399754933da9",
+      "translation": "Para obter desta console resultados ótimos por muito tempo, recomenda-se seguir os procedimentos indicados neste manual.",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "f33e83d3e7d231e2cb900c47431f14c7a2f7fde07c10e0d8962b69c5409955e4",
+      "translation": "### Cuidados com a console\n\n- Mantenha a sala limpa e livre de poeira.\n- Limpe o painel frontal e gabinete com pano ou esponja levemente umedecido.\n- Se a sujeira for resistente, use detergente suave (para paredes pintadas ou com papel de parede).\n\n<Danger>\n  Não use álcool, gasolina, derivados de petróleo ou produtos de limpeza para móveis.\n</Danger>\n\n<Warning>\n  **É proibido fumar na sala de controle.**\\\n  Cinzas e poeira são letais para faders e botões.\\\n  Bebidas e alimentos também devem ser restritos na área de operação.\n</Warning>\n\nAs consoles DX utilizam faders de **cerâmica condutiva** de nova geração:\n\n- Vida útil \\> **10 milhões de operações** (~15 anos de uso) em condições normais.\n- Não requerem manutenção.\n- Mais informações em [www.SolidynePro.com](http://www.SolidynePro.com).\n\n---",
+      "title": "Cuidado de la consola",
+      "level": 3
+    },
+    {
+      "hash": "9787f970b3df28f46b4bfed433c125d9c6e11a1d857783cfd00c9ea444ceb06e",
+      "translation": "### Manutenção preventiva\n\nAs consoles DX816 e DX822 utilizam componentes eletrônicos de alta qualidade, eliminando a necessidade de rotinas de manutenção preventiva.\n\n- Manusear a console com cuidado.\n- Os conectores traseiros não foram projetados para conexão/desconexão diária.\n- Evitar conectar fones de ouvido diretamente à console.\n\n<Tip>\n  Se houver troca frequente de fones de ouvido, instale um **painel de conexão externa** para evitar desgaste nos conectores.\n</Tip>\n\n---",
+      "title": "Mantenimiento preventivo",
+      "level": 3
+    },
+    {
+      "hash": "879fc032a6da89330b45f033d2e56e639ea294bde17d4a1af23d7955abab5646",
+      "translation": "### Peças de Reposição\n\n- Todos os faders dos canais incluem conectores.\n- Os faders principais são fáceis de substituir:\n  - Fixados ao chassi com dois parafusos.\n  - Conector polarizado para conexão rápida.\n\nUma vez removido, qualquer módulo pode ser reparado, pois todos os componentes estão identificados no **Manual de Serviço**.\n\n<Info>\n  Recomenda-se adquirir o **módulo completo** e substituí-lo, considerando o baixo custo em relação ao tempo de reparo.\n</Info>\n\n---",
+      "title": "Repuestos",
+      "level": 3
+    },
+    {
+      "hash": "8f740ec47f6e3f10585bd72906c14a0c4c4a069389298b88987f025daa2e89b6",
+      "translation": "### Manuais de serviço\n\nÉ possível obter sem custo um **manual de serviço com diagramas de circuito**.\n\nConsulte a seção [Circuitos e Diagramas](/es/otros_docs/schematics) no Índice Principal.",
+      "title": "Manuales de servicio",
+      "level": 3
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "cd1d2e19def773d2d8b8a2a148a9f5eaa24d7ecb587db3611147b09f2c7181d8",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx';\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "f029fb9966f5ee417b226ec0c65e5d918857660d69ace12d311eda62427db1c5",
+      "translation": "## Fonte de alimentação\n\nA DX816/822 funciona com alimentação externa. É incluída uma fonte **chaveada 90-240 V**, que opera com qualquer rede elétrica, mesmo em áreas com grandes variações de tensão. Fornece **28 VCC regulados**.\n\nNo painel traseiro está localizada a entrada de alimentação **DC IN**, com conector tubular de pino de **2,1 mm** positivo no centro.\n\n<Warning>\n  Recomenda-se usar sempre a **fonte original fornecida pela Solidyne**.\n</Warning>\n\n<img\n  src=\"/images/816/816-trasero-fuente.png\"\n  alt=\"816 Trasero Fonte Pn\"\n  title=\"816 Trasero Fonte Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"52%\" }}\n/>\n\n<Info>\n  O conector tubular Tally Light fornece tensão para a luz \"No Ar\". O pino deste conector é de 2,5 mm, o que impede a conexão acidental da fonte de alimentação.\n</Info>",
+      "title": "Fuente de alimentación",
+      "level": 2
+    },
+    {
+      "hash": "c3bdf9f07757ea253de1003c6daceb6efa2efb69e6383a97ff64e11d163bbb0f",
+      "translation": "## Aterramento\n\nA conexão de aterramento é feita por meio de um **terminal de bronze** que garante o aterramento do chassi. Utilize cabo de seção **2 mm** conectado a uma **haste de cobre enterrada**.\n\n<tierras />",
+      "title": "Conexión a tierra",
+      "level": 2
+    },
+    {
+      "hash": "5816f06df05ebd6b8241d7f6df34f734ee49410fe943ec614c4a405d5a8ab55a",
+      "translation": "## Diagrama geral de conexões (DX822)\n\nO diagrama geral de conexões mostra o painel traseiro do modelo DX822. \\\nO modelo DX816 é idêntico, com exceção das entradas de microfone que são cinco.\n\n![816 Diagrama Pn](/images/816/816-diagrama.png)",
+      "title": "Diagrama general de conexiones (DX822)",
+      "level": 2
+    },
+    {
+      "hash": "0310115a36a0bcbe891c215fb9f4302adfd64dcb4a7bb7f2153f5f04532bd93f",
+      "translation": "## Sobre os conectores RJ45\n\nCom o advento do **áudio sobre IP (AoIP)**, diversos fabricantes adotamos o uso de **conectores RJ45** e cabo multipar blindado para substituir conectores de áudio tradicionais.\n\n- Um único conector RJ45 contém **duas linhas balanceadas**, reduzindo o tamanho do painel traseiro e a quantidade de conectores.\n- O uso de **cabo estruturado** facilita a instalação entre equipamentos distantes em qualquer parte do mundo, graças à ampla disponibilidade de componentes e ferramentas de montagem utilizadas em redes de dados.\n- Eliminam-se soldas, simplificando e acelerando a instalação de cabos.\n\nNa extremidade do cabo multipar, a conexão aos dispositivos de áudio (microfones, alto-falantes, interfaces) continua sendo realizada com **conectores de áudio padrão**.\\\nPara isso, os trechos RJ45 terminam em conectores balanceados adequados ao equipamento de destino.\n\nAs entradas balanceadas da console **Solidyne DX816/822** utilizam **conectores RJ45** e são cabeadas com multipar **CAT-5 blindado (STP)**.\n\nO kit de conexões **Solidyne MNGX816** inclui todos os cabos necessários para entradas e saídas balanceadas com RJ45, garantindo confiabilidade e evitando erros de conexão.\n\n<Note>\n  As conexões de áudio RJ45 da Solidyne são **compatíveis com as fornecidas pela StudioHub** ([www.studiohub.com](http://www.studiohub.com)).\n</Note>",
+      "title": "Sobre los conectores RJ45",
+      "level": 2
+    }
+  ]
+}

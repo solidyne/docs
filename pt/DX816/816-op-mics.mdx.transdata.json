@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "19150c805114539951ad7d6b860c2577ed77ca42089d397c24f6f1ccf6d8ca44",
+      "translation": "## Características gerais\n\nOs módulos de microfone da série DX possuem **3 canais**, mas permitem conectar até **5 microfones** em seu painel traseiro.\n\n⟶ Os canais MIC-2 e MIC-3 podem gerenciar dois microfones cada um, pois possuem entradas duplas (MIC-2/MIC-4 e MIC-3/MIC-5 respectivamente).\n\n⟶ Quando dois microfones são usados em um mesmo fader, o nível e o ganho são iguais para ambos.\n\n⟶ A ação do compressor pode compensar diferenças de nível de até 12/15 dB entre microfones.\n\nO modelo **DX822** possui dois módulos de 3 microfones. Gerencia **6 faders de microfone** e suporta até **10 microfones** (4 entradas duplas).\n\n<img\n  src=\"/images/816/816-panel-mics.png\"\n  alt=\"816 Panel Mics Pn\"\n  title=\"816 Panel Mics Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"64%\" }}\n/>\n\n1. **Preset de ganho.** Deve ser ajustado para que o fader trabalhe acima da marca de sobrecarga **OVL (–30 dB)**.\n\n   ⟶ Trabalhar abaixo desse nível amplifica desnecessariamente, causando cortes nos picos. ⟶ O ideal é trabalhar com o fader dentro da **zona ótima (–10 a –20 dB)**.\n2. **Alimentação phantom 48V.** Ativada/desativada para todas as entradas do módulo.\n\n<Note>\n  Os microfones dinâmicos podem ser conectados sem risco a entradas com phantom 48V, pois seu transformador interno desacopla a tensão contínua.\n</Note>\n\n3. **EQ.** Ativa/desativa a equalização para todos os microfones do módulo.\n4. **EQ.** Controles de ganho das bandas de frequência.\n5. **BUSES:** Atribuição aos buses de saída **PGM** e **REC.** Os microfones são atribuídos em conjunto a PGM, REC ou a ambos. A atribuição é pós-EQ.\n6. **CUE:** envia o sinal pré-fader para o circuito de escuta prévia. Ativado em cada canal.\n7. **Zona de trabalho:** Esta zona indica a posição correta de trabalho, para um nível de sinal nominal e ajuste correto do ganho de entrada. \\\n   O ganho deve ser ajustado para que o fader trabalhe acima de -30 dB. A indicação **OVL (9)** indica sobrecarga (overload), ou seja, ganho excessivo na entrada.\n8. **Fader principal.** Ajusta o nível do sinal na mixagem. Além de levantar os faders, para habilitar os microfones é necessário pressionar o botão MASTER MIC localizado à direita dos faders.\n\n---",
+      "title": "Características generales",
+      "level": 2
+    },
+    {
+      "hash": "d1775c1cae4316102151eef50a6432eb3cdd783cc06cb64c563c479b91ca4e2d",
+      "translation": "## Equalização\n\nA equalização é global e tem efeito sobre todos os canais de microfone. O objetivo é permitir ajustes gerais na equalização que respondam às características acústicas da sala, que é comum a todos os microfones.\n\n**Características da EQ:**\n\n- **Bandas 1 e 4** (graves/agudos): em modo **Shelving**, faixa de ±15 dB.\n- **Banda 2**: Peak EQ. Centralizada em 160 Hz. Pode suavizar o efeito de \"poping\" ou \"popeo\".\n- **Banda 3**: Centralizada em 6,3 kHz. Pode suavizar o efeito de \"sibilância\" e sons sibilantes.\n\n<img\n  src=\"/images/816/816-eq-curvas.png\"\n  alt=\"816 Eq Curvas Pn\"\n  title=\"816 Eq Curvas Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"53%\" }}\n/>",
+      "title": "Ecualización",
+      "level": 2
+    },
+    {
+      "hash": "c7c8b75f12d5c352d9977397a01852f3c83ac4441b5e5ce43c60dccbcb7dce62",
+      "translation": "## Compressão\n\nO compressor dinâmico reduz as grandes variações de nível nos microfones. \\\nO design evita artefatos audíveis e simplifica a operação. Basta elevar o nível dos faders de microfone até que os vúmetros alcancem a zona vermelha.\n\n- Atua sobre a mixagem dos canais de microfone.\n- Não pode ser desabilitado.\n- Atua quando o sinal ultrapassa **0 VU**.\n- Abaixo desse nível, o sinal <u>não é afetado</u>.\n- Relação de compressão: **10:1**, com tempos de ataque e recuperação rápidos.\n- O compressor reduzirá o ganho em um valor indicado pelo medidor **MIC Compressor**.\n- Valores de compressão de **5 a 15 dB** são ótimos quando se operam vários microfones simultaneamente.",
+      "title": "Compresión",
+      "level": 2
+    }
+  ]
+}

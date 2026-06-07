@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "5c10e88f1e46db08a454cbcb40a4e060ff53550d1a9d0ab41df55f073813a1de",
+      "translation": "## Conexão das portas USB\n\nAs portas **USB-1** e **USB-2** permitem conexão direta ao computador, utilizando cabos **USB A/B padrão**. Suportam portas 1.1, 2.0 ou 3.0.\n\n<img\n  src=\"/images/image.png\"\n  alt=\"image.png\"\n  title=\"image.png\"\n  className=\"mx-auto\"\n  style={{ width:\"10%\" }}\n/>\n\nCertifique-se de utilizar **cabos de boa qualidade**. Cabos de baixa qualidade podem causar a queda da conexão USB durante a reprodução de áudio ou falhas intermitentes.\n\nRecomenda-se posicionar o computador próximo ao console, utilizando cabos de 2 a 3 metros. Se forem utilizadas extensões, não ultrapassar 4 metros.\n\n<Warning>\n  Antes de conectar o USB ao computador, certifique-se de que ambos os equipamentos tenham um **aterramento efetivo** por meio de seus plugs de três contatos. **Verificação rápida:**\n\n  - Com um multímetro na escala de 25 VCA, meça entre os chassis do PC e do console. O valor deve ser **zero volt**.\n  - Só então conecte o plug USB.\n  - Caso não exista aterramento, a porta USB pode ser danificada.\n</Warning>\n\n- As portas USB são compatíveis com **Windows© e Linux**.\n- Se ambas forem conectadas a um mesmo computador, **conecte primeiro a USB-1**.\n- Para usar um único canal, conecte sempre na **USB-1**.\n\n  <Danger>\n    A porta **USB-2 só funciona se a USB-1 estiver conectada e ativa**.\n  </Danger>\n- Se forem conectados dois computadores distintos, observe que a USB-2 não funcionará quando o PC conectado à USB-1 estiver desligado. Por isso, a USB-1 deve ser atribuída ao PC de transmissão no ar, que permanece ativo 24 horas.",
+      "title": "Conexión de los puertos USB",
+      "level": 2
+    },
+    {
+      "hash": "c53b0e838beeb1d8c2c0dd2b73b5ef8888a32b88b0f846cf9c9c914111d92f01",
+      "translation": "## Instalação no Windows<sup>©</sup>\n\n<Steps>\n  <Step>\n    No Windows a conexão é Plug&Play. O sistema reconhece e instala automaticamente os drivers. A porta aparece como **\"dispositivo de reprodução USB 1\"** e **\"dispositivo de gravação USB 1\"**.\n  </Step>\n  <Step>\n    No painel de VU, o indicador **Digital IN/Out** mostrará \"4\" (entrada + saída estéreo reconhecidas).\n  </Step>\n  <Step>\n    Ao conectar o segundo canal (USB-2), o indicador muda para \"8\" e o PC mostra um segundo dispositivo de reprodução e gravação.\n  </Step>\n  <Step>\n    As portas podem ser conectadas a um mesmo computador ou a dois equipamentos diferentes.\n  </Step>\n</Steps>",
+      "title": "Instalación en Windows<sup>©</sup>",
+      "level": 2
+    },
+    {
+      "hash": "a6081d30d763466efe3c5adca761b003f56c834ad622ed817a97f3432cb44fdf",
+      "translation": "## Buses PGM e REC via USB\n\nA conexão USB permite enviar diretamente dois buses de sinal para o computador:\n\n- **USB-1 / PGM**: aparece no Windows© como \"Dispositivo de gravação USB 1\".\n- **USB-2 / REC**: aparece no Windows© como \"Dispositivo de gravação USB 2\".\n\nNão requer instalação adicional. Os dispositivos aparecem automaticamente ao conectar os canais de entrada USB ao computador (ou a dois computadores distintos).\n\nPara detalhes de uso em gravação, consulte **Gravação de programas**.",
+      "title": "Buses PGM y REC sobre USB",
+      "level": 2
+    }
+  ]
+}

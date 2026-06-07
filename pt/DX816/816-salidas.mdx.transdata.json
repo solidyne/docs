@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "4f56db060b120b1d239afb2ae8ce506809c7b4d65eade6da4f9fcc9f2c76d726",
+      "translation": "<img\n  src=\"/images/816/816-trasero-fuente.png\"\n  alt=\"816 Trasero Fuente Pn\"\n  title=\"816 Trasero Fuente Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"63%\" }}\n/>\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "f9e7edccc1f4534f8bee43a7373b096a39f68afe51b1087beee72def762f244a",
+      "translation": "### Saída de programa\n\nA saída principal é denominada **PROGRAMA (PGM)**. Normalmente é o sinal que é enviado para o ar e está disponível em várias formas:\n\n- **RJ45**: entrega sinal **PGM balanceado**.\n  Utilize sempre este conector para levar sinal analógico ao processador de áudio ou ao enlace.\n  <Tip>\n    [Diagramas de pinos e cabos adaptadores para montagem de cabos](/es/DX816/816-conexiones-rj45).\n  </Tip>\n  <Info>\n    Os processadores Solidyne **362HD** e **542APC** incluem entradas analógicas conectorizadas com RJ45. A conexão é realizada com um cabo tipo Ethernet **STP blindado RJ45-RJ45**.\n  </Info>\n- **TRS fêmea**: entrega sinal PGM não balanceado estéreo.\n- **USB (Canal USB-1)**: o sinal PGM é enviado para o computador conectado, utilizado habitualmente para streaming por Internet.\n- **AoIP (opcional)**: em consoles com módulo /AoIP, PGM está disponível em múltiplos formatos (PCM, MP3) sobre conexão Ethernet.",
+      "title": "Salida de programa",
+      "level": 3
+    },
+    {
+      "hash": "26a5892d1653e75acc66b4ab2da374c5343f198e0b6e1806b6ee6baad263e6d7",
+      "translation": "### Saída REC (auxiliar)\n\nA saída de **gravação (REC)** também está disponível em vários formatos:\n\n- Balanceada em conector **RJ45**.\n- Estéreo desbalanceada em **TRS**.\n- Digital USB através do **Canal USB-2**.\n- Streaming via **Ethernet** em modelos com módulo duplo /AoIP.\n\nO nível nominal de saída do console é **+4 dBu @ 0VU**.\\\nAo utilizar saídas balanceadas em modo desbalanceado, o nível cai 6 dB, portanto **0VU = –2 dBu**.\n\n<Danger>\n  **Não utilize plugs mono (TS)** para conectar às saídas TRS estéreo.\n</Danger>\n\n<Note>\n  Se conectar um equipamento com nível de entrada **–10 dBV** à saída do console, o nível pode ser excessivo e causar saturação. Nesses casos, deve-se utilizar um **atenuador fixo (divisor resistivo)** para reduzir o nível.\n</Note>\n\n---",
+      "title": "Salida REC (auxiliar)",
+      "level": 3
+    },
+    {
+      "hash": "f8430fe8f0e98389a8ade0636183c9d10aa2042e3fd629f85d89b7eb4a07a298",
+      "translation": "### Áudio do streaming decodificado\n\nA saída **Audio Out to Bal Line 1** está disponível apenas em consoles com a opção **/AoIP**.\\\nFornece um sinal analógico balanceado com o **áudio decodificado do streaming de entrada** e é utilizado para reinjetar o áudio decodificado em uma entrada de linha analógica.",
+      "title": "Audio del streaming decodificado",
+      "level": 3
+    }
+  ]
+}

@@ -288,7 +288,7 @@ async function processLanguage(sourceFolder, lang) {
         console.log("   ❌ Error:", err.message, "\n");
       }
     }
-    return { translated, skipped, errors, total: files.length };
+        return { translated, skipped, errors, total: files.length, skippedReviewed, forcedUpdates };
 }
 async function processFileGranular(esFilePath, targetFilePath, metaPath, targetLang, rules, glossary) {
   const esContent = fs.readFileSync(esFilePath, "utf8");
@@ -349,7 +349,7 @@ translation:
   source_lang: "es"
   target_lang: "${targetLang}"
   human_revision: 0
-  reviewed_by: null
+  reviewed_by: "the holy spirit"
   reviewed_at: "AAAAMMDD"
 `.trim();
   }
@@ -565,14 +565,16 @@ async function main() {
 
   const results = {};
 
+    let totalSkippedReviewed = 0;
+  let totalForcedUpdates = 0;
   for (const lang of langs) {
-
     const r = await processLanguage(sourceFolder, lang);
-
     results[lang] = r;
+    totalSkippedReviewed += r.skippedReviewed || 0;
+    totalForcedUpdates += r.forcedUpdates || 0;
   }
 
-        const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+  const duration = ((Date.now() - startTime) / 1000).toFixed(2);
   const date = new Date().toISOString().slice(0, 10);
   const folderName = path.basename(sourceFolder);
   const reportFile = `translate-report_${folderName}_${langArg}_${date}.json`;
@@ -581,10 +583,13 @@ async function main() {
 
   fs.writeFileSync(
     path.join(__dirname, "reports", reportFile),
-    JSON.stringify({ model: MODEL, duration_sec: duration, results, skipped_reviewed: skippedReviewed, forced_updates: forcedUpdates }, null, 2)
+    JSON.stringify({ model: MODEL, duration_sec: duration, results, skipped_reviewed: totalSkippedReviewed, forced_updates: totalForcedUpdates }, null, 2)
   );
 
   console.log("\n🎉 Translation complete.");
+  console.log(`📊 Stats:`);
+  console.log(`- Skipped reviewed files: ${totalSkippedReviewed}`);
+  console.log(`- Forced updates: ${totalForcedUpdates}`);
 }
 
 main();

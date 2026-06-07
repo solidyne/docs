@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "92226464094c582a75aedd6eb7bc8459ed64636bc8bd0021c65eb6f26516a983",
+      "translation": "## Seção de Monitoração\n\nEsta seção contém os controles:\n\n- **Monitor de Estúdio**: determina qual sinal será ouvido nos monitores e fones de ouvido do Estúdio.\n- **Monitor de Controle**: atribui o sinal aos monitores e fones de ouvido da Cabine de Controle.\n- Controle de **volume CUE**.\n- Botão e microfone de **Talk-Back** para o Estúdio.\n- Botão Mestre \"**ON-AIR Mics**\". Ativa os canais de microfone e os sinais \"No ar\".\n\n<img\n  src=\"/images/816/816-panel-monitores.png\"\n  alt=\"816 Op Monitoreo Pn\"\n  title=\"816 Op Monitoreo Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"66%\" }}\n/>\n\n 1. Controle de nível dos alto-falantes da Cabine de Controle.\n 2. Adiciona o áudio de CUE aos alto-falantes da Cabine de Controle.\n 3. Controle de nível dos fones de ouvido do operador ou operadora.\n 4. Atribuição de sinal à saída de monitoração (fones de ouvido e alto-falantes) no Estúdio.\n 5. Atribuição de sinal à saída de monitoração (fones de ouvido e alto-falantes) na Cabine de Controle.\n 6. Nível com que o sinal CUE é adicionado aos fones de ouvido e alto-falantes da Cabine de Controle.\n 7. Microfone de Talk-Back (diálogo com o estúdio e comunicações).\n 8. Botão de Talk-Back.\n 9. Sensibilidade do microfone Talk-Back.\n10. Botão Mestre de microfones.",
+      "title": "Monitor Section",
+      "level": 2
+    },
+    {
+      "hash": "502179010bf259872341dbf9505aeb27d3f12d74faa3869c6cfae570a561e672",
+      "translation": "### **Monitor de Estúdio**\n\n- Oferece quatro fontes de sinal: CUE, PGM, REC e ON-AIR [4].\n- A console envia sinais com nível fixo tanto para fones de ouvido quanto para alto-falantes.\n- Para a distribuição e controle de nível no Estúdio, é necessário um **distribuidor de fones de ouvido**, como os módulos opcionais Solidyne HD3 e HD5.\n\n<Info>\n  Ver conexionamento em Instalação ⟶ [Monitoração](/pt-BR/DX816/816-monitoracao)\n</Info>",
+      "title": "**Studio Monitor**",
+      "level": 3
+    },
+    {
+      "hash": "4df056dd61e09f1022001cd5bf7fa895a254bc2a3a03f4f93633635f8c1290fd",
+      "translation": "### **Monitor de Controle**\n\n- O nível dos fones de ouvido [3] e alto-falantes [1] é controlado de forma independente.\n- Os botões de seleção [5] permitem escolher o sinal a ser monitorado no controle:\n  - **PGM**: sinal enviado ao ar.\n  - **REC**: sinal do barramento auxiliar REC.\n  - **ON-AIR**: sinal proveniente de um sintonizador externo, recomendado para monitoração do ar.\n\n<Note>\n  Ajuste o volume dos alto-falantes de monitoração para um nível confortável com o controle **SPEAKERS** na posição central.\n</Note>\n\n<Info>\n  Se o enlace Estúdio–Transmissor ou o processador de áudio causarem um atraso audível, recomenda-se processar o sinal de monitoração **ON-AIR** com um processador sem atraso, conectado diretamente a uma saída PGM da console.\n</Info>\n\n---",
+      "title": "**Control Monitor**",
+      "level": 3
+    },
+    {
+      "hash": "cf34bc84eedf1e64b1f04fc49e4f15e2bccdf51c288699f148ea79f943e126df",
+      "translation": "## Pré-escuta (CUE)\n\nCada canal possui um botão **CUE** que permite monitorar o sinal antes do fader (fora do ar). Quando múltiplos CUEs são ativados, os sinais são somados.\n\nO sinal CUE pode ser enviado para:\n\n- os alto-falantes da Sala de Controle: pressionar o botão **MIX** [2].\n- os fones de ouvido da Sala de Controle. Este envio é fixo. O CUE se soma ao sinal atribuído pela seleção de monitoramento.\n- o monitoramento do Estúdio. Está disponível como fonte de sinal em STUDIO MONITOR.\n\nO volume do CUE é controlado exclusivamente pelo potenciômetro **CUE** [6], tanto nos fones de ouvido quanto nos alto-falantes.\n\n<Warning>\n  Se o potenciômetro **CUE [6]** estiver fechado, o sinal CUE não será ouvido mesmo que os potenciômetros de fones e alto-falantes estejam abertos.\\\n  Por outro lado, se **SPEAKERS [1]** e **HEADPHONES [3]** estiverem fechados, o CUE continuará sendo reproduzido se o potenciômetro CUE estiver aberto.\n</Warning>\n\nOutras características:\n\n- O envio CUE é **monofônico**.\n- Para monitorar o CUE de forma isolada:\n  - Reduza o nível de **SPEAKERS** ou **HEADPHONES** conforme necessário.\n  - Libere os botões PGM, REC e ON-AIR.\n\n<Tip>\n  Recomendamos monitorar o sinal no ar em volume moderado e o CUE em nível mais alto, para distingui-los claramente.\n</Tip>",
+      "title": "Escucha previa (CUE)",
+      "level": 2
+    },
+    {
+      "hash": "d751100319d522ba6d87fa74af0107af98826e597ba200b63088f8b2c1640685",
+      "translation": "## Ordem ao Estúdio (Talk-Back)\n\nO canal de ordem permite ao operador se comunicar com o locutor no Estúdio.\n\n- Pressione o botão **TALK-BACK**.\n- O áudio do programa nos monitores de Controle é interrompido para evitar microfonia.\n- O operador é ouvido no **canal esquerdo** do Estúdio.\n- O **canal direito** mantém o sinal no ar, como referência para locutores e jornalistas.\n- Também é possível ativar **CUE** no canal do microfone para dialogar com o locutor.\n\n<Note>\n  O nível do microfone de ordem é calibrado de fábrica.\\\n  Ajustes só devem ser feitos se estritamente necessário, usando o preset **LEVEL**.\n</Note>",
+      "title": "Órdenes al Estudio (Talk-Back)",
+      "level": 2
+    }
+  ]
+}

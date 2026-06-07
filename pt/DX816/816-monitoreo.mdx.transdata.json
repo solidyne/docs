@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "fa0169e0746ba3e1e4c3c10ce917329d45ffde4539335eb39cb75b465eb31c51",
+      "translation": "## Monitoramento em Cabine de Controle\n\nAs saídas **CONTROL** apresentam conectores **TRS fêmea de 1/8” (mini-jack)** para alto-falantes e fones de ouvido. A saída de alto-falantes trabalha com nível nominal de **0 dBu**, projetada para conexão de monitores ativos.\\\nNa seção MONITOR do painel da console encontram-se os controles para atribuição de sinais e nível, para os alto-falantes e os fones de ouvido.\n\n<Note>\n  A saída **Control Speaker** é silenciada automaticamente ao ativar **Talk-back**, evitando realimentação com o microfone de comando.\n</Note>\n\n---",
+      "title": "Monitoreo en Cabina de Control",
+      "level": 2
+    },
+    {
+      "hash": "78e6e346ab2429e2fc16018427383252f5c87074a7a07b3610134fe71d664ef3",
+      "translation": "## Monitoramento no Estúdio\n\nA console envia sinais de monitoramento para o Estúdio através da saída **STUDIO MONITOR OUT**, com conector RJ45. A conexão é feita com cabo **STP RJ45-RJ45 (pino a pino)** para as caixas de monitoramento opcionais **Solidyne Studiobox HD3/HD5**.\n\n<Danger>\n  Esta saída **não deve ser conectada** com cabos RJ45 usados para saídas de áudio.\\\n  Não é compatível com o padrão **StudioHub**.\n</Danger>\n\n<img\n  src=\"/images/816/816-monitoreo-studiobox.png\"\n  alt=\"816 Monitoreo Studiobox Pn\"\n  title=\"816 Monitoreo Studiobox Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"56%\" }}\n/>\n\nCaracterísticas:\n\n- Os alto-falantes do Estúdio são **silenciados automaticamente** ao abrir microfones.\n- O sinal para fones de ouvido **nunca é silenciado**. Eles recebem sempre o sinal atribuído na console e o áudio do microfone de comando (talk-back).\n\nPara mais detalhes, ver a seção **Módulos de monitoramento Studiobox HD3 / HD5**.\n\n---",
+      "title": "Monitoreo en el Estudio",
+      "level": 2
+    },
+    {
+      "hash": "aa61e57a7311052b3278cb2c5df124ebeeb35987197e053b62d90c5132d22ae6",
+      "translation": "## Monitoração em cabine única\n\nQuando a console for usada em um estúdio integrado ou de cabine única, recomenda-se conectar os alto-falantes à saída **STUDIO MONITOR**.\n\n<Warning>\n  A saída de alto-falantes CONTROL **não é silenciada ao ativar os microfones**, portanto há risco de feedback se os microfones e os alto-falantes estiverem no mesmo ambiente.\n</Warning>\n\n---",
+      "title": "Monitoreo en cabina única",
+      "level": 2
+    },
+    {
+      "hash": "7c854fc85eda8885d0e820d5c36577ed8793e29c80474d3ff758166c9f32d1bb",
+      "translation": "## Conexão sem Studiobox opcional\n\nA console é fornecida com um **cabo adaptador** em \"Y\" (RJ45 para dois jacks TRS) para conexão de distribuidores de fones genéricos e alto-falantes amplificados.\n\n- A saída **STUDIO MONITOR** fornece sinais em nível fixo.\n- Se o Studiobox não for utilizado, o nível dos alto-falantes é ajustado pelos controles próprios dos monitores.\n- Pode ser usado um distribuidor/amplificador de fones com entrada dupla para controlar o volume dos alto-falantes a partir da mesa.\n  - Entrada A → sinal para fones.\n  - Entrada B → sinal para alto-falantes.\n\n<img\n  src=\"/images/816/816-monitores-sin_studiobox.png\"\n  alt=\"816 Monitores Sem Studiobox Pn\"\n  title=\"816 Monitores Sem Studiobox Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"46%\" }}\n/>\n\nO controle de volume dos alto-falantes é atribuído à entrada B. Dessa forma, uma única unidade controla fones e monitores do Estúdio.",
+      "title": "Conexión sin opcional Studiobox",
+      "level": 2
+    },
+    {
+      "hash": "26f56d209f4436a6d9cdb0ecd7b8f2b53ef3a0788f4520204fe37f5eeb84427f",
+      "translation": "### Saída de Monitor de Estúdio\n\n<img\n  src=\"/images/image.png\"\n  alt=\"image.png\"\n  title=\"image.png\"\n  style={{ width:\"10%\" }}\n/>\n\n| # | Sinal                           |\n| :-: | ------------------------------- |\n| 1 | Fone de Ouvido Esquerdo (\\+4 dBu) |\n| 2 | Fone de Ouvido Direito             |\n| 3 | GND                             |\n| 4 | ON-AIR (\\+14 V)                 |\n| 5 | Talkback para Cabine de Controle    |\n| 6 | VCC \\+ 14 V                     |\n| 7 | Alto-falante Esquerdo (\\+4 dBu)   |\n| 8 | Alto-falante Direito               |\n\n<Note>\n  Chassi = GND\n</Note>",
+      "title": "Studio Monitor Out",
+      "level": 3
+    }
+  ]
+}

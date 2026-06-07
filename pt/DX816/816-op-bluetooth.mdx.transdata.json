@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "96edae3257e1eec9bbe78ff9bae21b9584e550e2e7a6009a093e452194c0e03a",
+      "translation": "## Uso com telefone celular (Bluetooth)\n\nPara operar um telefone na console, o mesmo deve estar [pareado com o dispositivo Bluetooth](/pt-BR/DX816/816-telco) TELCO.",
+      "title": "Uso con teléfono celular (Bluetooth)",
+      "level": 2
+    },
+    {
+      "hash": "4920e3368fa3313dc16f91317a5d5f137f65c71cbba61d754d5358bf4cf9ee8e",
+      "translation": "### Reconexão rápida\n\n1. Certifique-se de que o fader **TELCO** esteja em **CUE** (fechado).\n2. **Ativar Bluetooth na console:** mantenha pressionado **BLUETOOTH por aproximadamente 5 segundos** e solte assim que **CELL PHONE** acender em azul. O botão permanece piscando lentamente.\n  <Warning>\n  O módulo Bluetooth recebe alimentação dos canais **USB-1 ou USB-2**.\\\n  Se nenhum estiver conectado a um PC, utilize uma **fonte USB externa** (um carregador padrão) com o cabo fornecido.\n</Warning>\n3. Ativar Bluetooth no celular → o vínculo será restabelecido.\n4. As chamadas recebidas podem ser atendidas pelo celular ou com **BLUETOOTH** na console.",
+      "title": "Re-conexión rápida",
+      "level": 3
+    },
+    {
+      "hash": "53f4a49ecf7ac0d958a23323bddfddd004142a856e4cf5d44f9aefd2d20069af",
+      "translation": "### Chamada recebida (celular)\n\n- Toca no celular e em **CUE** (TELCO fechado). **CELL PHONE** pisca em azul.\n- Atender com **toque curto em BLUETOOTH** (ou pela tela do celular).\n- **Dialogar em prévio:** Com fader em **CUE** escuta-se a chamada por **CUE**.\n- **Pressionar TALK** para dialogar. O botão é retido, pressionar novamente ao parar de falar.\n- **HOLD**: levar o fader para a zona HOLD, a pessoa chamada escuta o programa, não sai no ar.\n- **No AR**: subir o fader até alcançar o nível apropriado.\n\n<Info>\n  Em conferências entre **celular** e **linha fixa/VoIP** pode haver algum **eco** no retorno do jornalista remoto. **Não** sai no ar.\n</Info>",
+      "title": "Llamada entrante (móvil)",
+      "level": 3
+    },
+    {
+      "hash": "f097bdb22b4b4a56dfc61e9c1b61ff28398e66fbd438649bcf8d583b03220fe3",
+      "translation": "### Finalizar a comunicação\n\n- **Toque curto BLUETOOTH** na console, ou encerre pelo telefone.",
+      "title": "Finalizar la comunicación",
+      "level": 3
+    },
+    {
+      "hash": "dc5f37455a5b3829443381a254088c7fcf622151a8538bf90facf09f2477d7fa",
+      "translation": "### Retorno em móvel\n\n- No celular: sair do modo **Headset/Bluetooth** passando para **Speaker** (Alto-falante).\n- Para retornar à console: voltar ao modo **Headset** (varia conforme modelo do telefone).",
+      "title": "Retomar en el móvil",
+      "level": 3
+    },
+    {
+      "hash": "565d6650660633a18aba7feef252571b14199b65a1e0d3496fef223c5322e9e7",
+      "translation": "### Receber chamada de celular\n\n1. No celular, desativar o Bluetooth para falar diretamente pelo telefone.\n2. Estabelecer a chamada.\n3. Para transferir para a console, mudar para o modo **Bluetooth/Headset**.\n4. Com o fader na posição **HOLD**, o celular recebe retorno da console, mas não vai para o ar.\n5. Subir o fader para colocar no ar.\n6. Para desligar: **toque rápido no botão BLUETOOTH** ou desligar pelo celular.\n\n<Note>\n  Também é possível estabelecer a chamada **sem sair** do modo Bluetooth no celular, com o fader na posição **CUE** e usando **TALK** para dialogar da console.\n</Note>",
+      "title": "Generar llamada desde celular",
+      "level": 3
+    }
+  ]
+}

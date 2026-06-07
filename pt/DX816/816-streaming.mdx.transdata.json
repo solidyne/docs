@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "4f05f986e19002803736fa22248cc2ee5a689ec09a6d4c81518c41ab457d64b7",
+      "translation": "## Módulo de streaming AoIP\n\nAs consolas equipadas com o opcional **/AoIP** podem incluir até **dois módulos para serviços de streaming de áudio**:\n\n- Com **1 módulo**: enviam sinal de **PGM**.\n- Com **2 módulos**: enviam **PGM e REC**.\n\n**Aplicações de AoIP:**\n\n- **Enlace com planta transmissora** (STL) utilizando receptores dedicados (Solidyne **ADA102**,\n\n  processadores Solidyne **542 APC /AoIP**).\n- Enlace direto com outra consola /AoIP (Solidyne **2600**, séries **DX** ou **UNIDEX**).\n- Envio do sinal PGM/REC para um computador remoto na rede, decodificado com software padrão de streaming (ex: **VLC Player**).",
+      "title": "Módulo streaming AoIP",
+      "level": 2
+    },
+    {
+      "hash": "9960f78d801ec789603b6a76557ef3bad6af42abda781531e4cf5278f703ae17",
+      "translation": "### Alimentação de módulos AoIP\n\nOs módulos AoIP são alimentados pelas conexões **USB**. Eles exigem que pelo menos um USB esteja conectado a um computador **ligado**.\n\n<Warning>\n  Se o console não estiver conectado a um computador USB, ou se este estiver desligado, o serviço IP **não estará disponível**.\n</Warning>\n\n<Note>\n  Na ausência de um computador, é possível conectar uma **fonte de alimentação USB padrão (5V)** para energizar os módulos AoIP.\n</Note>",
+      "title": "Alimentación de módulos AoIP",
+      "level": 3
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "c99f3c0414c8e1b472297bcd191f99f74f0a66038cf30d55909696fc4fe27020",
+      "translation": "## Entradas de linha\n\nAs consoles DX816/822 apresentam diversos tipos de entradas, que são combinados nos diferentes canais da console:\n\n- **2 BAL-LINE**: entradas balanceadas.\n- **4 AUX LINE**: entradas não balanceadas.\n  - **2 RCA** em canais LINE, comutáveis pelo painel frontal.\n  - **2 miniplug** em canais USB, onde a **comutação é automática**: ao inserir um plug TRS, o áudio USB é silenciado.\n\n<Info>\n  As entradas de linha não balanceadas têm nível nominal **–10 dBV** sobre **10 KΩ**.\n\n  O ajuste de ganho é comum para ambas (principal/auxiliar). Pode ser necessário reajustá-lo de acordo com o equipamento conectado.\n</Info>",
+      "title": "Entradas de línea",
+      "level": 2
+    },
+    {
+      "hash": "3898760be6c1159ef0fee91616dce8edcb5d8b09c4c08d943a5ef69b0d721246",
+      "translation": "### Conexão das entradas balanceadas\n\nAs entradas balanceadas utilizam conectores **RJ45** blindados e requerem cabo multipar blindado categoria 5. Pode ser adquirido o kit de cabos pré-montados **MNGDX822**, que inclui os cabos necessários para a conexão.\n\n<Tip>\n  [Diagramas de pinos e cabos adaptadores para montagem de cabos](/es/DX816/816-conexiones-rj45).\n</Tip>\n\n---",
+      "title": "Conexión de las entradas balanceadas",
+      "level": 3
+    },
+    {
+      "hash": "5f4f35dce4ebc393a9946eebc068d6d60be39232e985f367ae6b5be85de8a1e6",
+      "translation": "## Entradas para microfones\n\nAs entradas de microfone são balanceadas eletronicamente e utilizam conectores **XLR padrão**.\n\n<Tabs>\n  <Tab title=\"Microfones no DX 816\">\n    <Frame>\n      ![Painel traseiro DX 816 - mics](/images/816-trasero-mics-1.jpg)\n    </Frame>\n\n    - 5 entradas XLR, nomeadas MIC 1 a MIC 5.\n    - MIC 4 compartilha pré-amplificador com MIC 2.\n    - MIC 5 compartilha pré-amplificador com MIC 3.\n\n    <Info>\n      **CANAIS**\n\n      Canal 1 ⟶ Entradas MIC-1\\\n      Canal 2 ⟶ Entradas MIC-2 e MIC-4\\\n      Canal 3 ⟶ Entradas MIC-3 e MIC-5\n    </Info>\n  </Tab>\n  <Tab title=\"Microfones no DX 822\">\n    <Frame>\n      ![Painel traseiro DX 816 - mics](/images/822_MICS.png)\n    </Frame>\n\n    - 10 entradas XLR, nomeadas MIC 1, 2, 3, 2b, 3b, 4, 5, 6, 5b e 6b.\n    - MIC-2b compartilha pré-amplificador com MIC-2\n    - MIC-3b compartilha pré-amplificador com MIC-3\n    - MIC-5b compartilha pré-amplificador com MIC-5\n    - MIC-6b compartilha pré-amplificador com MIC-6\n\n    <Info>\n      **CANAIS**\n\n      Canal 1 ⟶ Entradas MIC-1\\\n      Canal 2 ⟶ Entradas MIC-2 e MIC-2b\\\n      Canal 3 ⟶ Entradas MIC-3 e MIC-3b\\\n      Canal 4 ⟶ Entradas MIC-4\\\n      Canal 5 ⟶ Entradas MIC-5 e MIC-5b\\\n      Canal 6 ⟶ Entradas MIC-6 e MIC-6b\n    </Info>\n  </Tab>\n</Tabs>\n\n<Warning>\n  Quando são utilizados dois microfones em um mesmo canal, devem ser de **mesma marca e modelo** para garantir homogeneidade no sinal.\n</Warning>\n\n---",
+      "title": "Entradas para micrófonos",
+      "level": 2
+    },
+    {
+      "hash": "8e751ec48964e86470ad3fa8c1cfcbbb087954236abb988d7930b0a648e855df",
+      "translation": "### Alimentação \"Phantom\" 48V\n\nO botão **48V** na frente do módulo ativa a alimentação phantom flutuante para **todos os microfones**.\n\nNo modelo **DX 822** há um segundo interruptor que comuta os 48V para o segundo grupo de cinco entradas.\n\n<Info>\n  Os microfones dinâmicos suportam alimentação phantom de 48V, portanto é possível misturar microfones dinâmicos e de condensador sem risco.\n</Info>",
+      "title": "Alimentación \"Phantom\" 48V",
+      "level": 3
+    }
+  ]
+}

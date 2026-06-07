@@ -1,0 +1,59 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "cd1d2e19def773d2d8b8a2a148a9f5eaa24d7ecb587db3611147b09f2c7181d8",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx';\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "28295de4b7a66c91a9690e8488cfa512a9c45bc8de1cc65a2858dbcbb451eb75",
+      "translation": "## Conexão de linhas telefônicas\n\nO canal de híbrido gerencia **duas linhas telefônicas fixas** e **um telefone celular** vinculado por Bluetooth.\n\nNo painel traseiro do console há **quatro conectores RJ11**:\n\n<img\n  src=\"/images/816/816-POTS.png\"\n  alt=\"Conectores RJ11\"\n  title=\"816816 POTS Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"40%\" }}\n/>\n\n- Duas linhas telefônicas (para conectar à rede pública ou a uma central PBX).\n- Dois telefones associados (rotulados como \"SET\"), geralmente usados pela produção para atender chamadas.\n\n<Warning>\n  As linhas estão protegidas contra sobretensões (até 2.000 V) por meio de varistores internos.\\\n  No entanto, é essencial **instalar protetores externos** conectados a aterramento de jabalina de 2 m para centrais públicas. **A garantia do equipamento não cobre danos por raios**.\n</Warning>\n\n<tierras />",
+      "title": "Conexión de líneas telefónicas",
+      "level": 2
+    },
+    {
+      "hash": "9b13deae56eb000b629465f65be530327bf4af74d0e9dd0a4c9864964d703c46",
+      "translation": "### Ajuste de rejeição (Null)\n\nEste ajuste aplica-se exclusivamente às **linhas terrestres**. É realizado uma única vez durante a instalação.\\\nA rejeição evita que o sinal transmitido retorne misturado à voz do entrevistado, melhorando a qualidade do locutor local.\n\n**Procedimento:**\n\n1. Atribua o Canal de Telecomunicações à saída **REC** (para não ajustar no ar).\n2. Estabeleça uma chamada e peça ao entrevistado que fale.\n3. Ajuste o nível da chamada com o fader do Canal 8, até que o VUmetro REC alcance a zona branca.\n4. Ative um canal de microfone (sobre REC) e peça a alguém que fale do Estúdio.\n5. Ouvindo a voz local em REC, gire o controle **NULL** em um sentido e em outro até encontrar o ponto óptimo, que é obtido quando o sinal local que se soma ao microfone via híbrido é mínimo.\n6. Este ajuste depende da linha telefônica. Se a linha telefônica for alterada, repita o ajuste.\n\n---",
+      "title": "Ajuste de rechazo (Null)",
+      "level": 3
+    },
+    {
+      "hash": "be983f334e8a1ac97efced76da497ddc95ea38f23aa179706a6b82acca255056",
+      "translation": "## Parear um telefone móvel\n\nQualquer celular com **Bluetooth** pode ser pareado com a DX816/822.\\\nA distância máxima é de 5 m, embora seja recomendado manter o equipamento próximo (nunca sobre o console).\n\nO telefone registra apenas uma vez o código único do console (ID). Posteriormente, a conexão é automática ao ativar o Bluetooth em ambos os equipamentos.\n\n<Warning>\n  O módulo Bluetooth recebe alimentação pelos canais **USB-1 ou USB-2**.\\\n  Se nenhum estiver conectado a um PC, utilize uma **fonte USB externa** (um carregador padrão) com o cabo fornecido.\n</Warning>",
+      "title": "Vincular un teléfono móvil",
+      "level": 2
+    },
+    {
+      "hash": "d5e1fdd09ec71744544bc80e4064d12630d1edb9fadfa350cfe16fab146993bb",
+      "translation": "### **Procedimento de vinculação:**\n\n<img\n  src=\"/images/816/816-descripción_TELCO.jpg\"\n  alt=\"816 Descrição TELCO Jp\"\n  title=\"816 Descrição TELCO Jp\"\n  className=\"mx-auto\"\n  style={{ width:\"77%\" }}\n/>\n\n1. **Na console:** verifique se o LED do botão **CELL PHONE \\[3\\]** está apagado.\n2. Se o Bluetooth estiver ligado (LED piscando em azul), desligue-o mantendo pressionado o botão **Bluetooth \\[2\\]** até que ele pare de piscar.\n3. **Na console,** ativar o modo “busca” (este modo só pode ser acessado se o Bluetooth estiver desligado). Pressionar e <u>manter pressionado</u> o botão BLUETOOTH por cerca de 10 segundos. Você observará que, enquanto pressiona o botão, após alguns segundos ele pisca lentamente em azul e, mais tarde, a pulsação se torna rápida, <u>alternando</u> entre azul e vermelho (ver modo C na tabela), indicando que o DX816/822 entrou no modo “busca” para ser reconhecido no celular.\n4. **No celular:** Ativar o Bluetooth e realizar uma busca por dispositivos.\n5. Quando o celular encontra o Bluetooth da console, ele é exibido na tela como **Solidyne BTM641**.\n6. Conectar o celular ao dispositivo **Solidyne BTM641**.\n7. O dispositivo Bluetooth da console já está registrado no telefone; não sendo necessário repetir a operação (exceto se o dispositivo **Solidyne BTM641 for desvinculado (excluído) no telefone**).\n8. Na console, o botão **CELL PHONE** fica iluminado em azul com intermitência lenta (modo A) indicando que está conectado ao celular.\n\n**Modos de iluminação do botão CELL PHONE \\[3\\]**\n\n| Modo | Estado / Descrição |\n| :-: | --- |\n| **A – Celular conectado** | Aceso breve (1s) em azul com apagado longo (2s). Indica que está conectado ao celular sem chamada em curso. |\n| **B – Celular não conectado / Chamada em curso** | Aceso lento (2s) em azul com apagado curto (1s). Indica que uma chamada está em andamento. Ao encerrar a comunicação, retorna ao modo “A”. <br />Também indica Bluetooth ligado sem celular conectado. Quando conectado, passa para o modo “A”. |\n| **C – Modo busca (Pairing)** | Piscada rápida alternando entre vermelho e azul. Permite vincular um celular pela primeira vez. |\n| **D – Chamada recebida** | Aceso permanente na cor azul. |\n| **E – No ar** | Aceso permanente na cor vermelha. |\n\n---",
+      "title": "**Procedimiento de vinculación:**",
+      "level": 3
+    },
+    {
+      "hash": "0537a973971650edc4255c4732ec1a912937dae03debb751c247bc657d8d23e7",
+      "translation": "### Ajuste do volume Bluetooth\n\n<Danger>\n  O ajuste deve ser feito durante uma chamada ativa por Bluetooth.\\\n  O volume do celular é independente do volume do link Bluetooth.\\\n  Se ajustar sem chamada ativa, somente alterará o alto-falante interno do telefone.\n</Danger>\n\n- O volume Bluetooth fica armazenado no telefone.\n- Recomenda-se fixá-lo no **máximo** para obter a melhor relação sinal-ruído.\n\n---",
+      "title": "Ajuste del volumen Bluetooth",
+      "level": 3
+    },
+    {
+      "hash": "88193d79707cf952c83bc98ae00cace05db0c7f6b4c56a6edfdc2b44923ed3b0",
+      "translation": "### Desligar Bluetooth\n\nPara desligar, mantenha pressionado o botão **BLUETOOTH** até que o LED **CELL PHONE** pare de piscar.",
+      "title": "Apagar Bluetooth",
+      "level": 3
+    },
+    {
+      "hash": "fde4a9163b3bcf3d1abd24b644ccc865361cf3e9d34e00b4db7895a7f82055aa",
+      "translation": "### Reconectar um dispositivo vinculado\n\n1. **No console:** ative o Bluetooth com o botão **BLUETOOTH** até que o LED **CELL PHONE** pisque em azul (aproximadamente 5 segundos).\n2. **No celular:** ative o Bluetooth. Quando a conexão aparecer, o celular estará pronto para operar. Ao fazer ou receber uma chamada, o áudio será enviado para o console.\n\n<Note>\n  Em alguns celulares, a reconexão não é automática e é necessário selecionar manualmente o dispositivo **Solidyne BTM641** em uma lista.\n</Note>\n\n---",
+      "title": "Re-conectar un dispositivo vinculado",
+      "level": 3
+    },
+    {
+      "hash": "9db8ec45e9c7653c2445de812476db559c69cd5cd38ac8273901e9783fb059f9",
+      "translation": "## Híbrido externo\n\nAs consoles DX incluem um conector para **Híbrido Externo**, que trata programa e retorno de híbrido externo através de um jack TRS de 6,35 mm (¼\").\n\n<img\n  src=\"/images/816/816-HibExt.bmp\"\n  alt=\"816 Hib Ext Bm\"\n  title=\"816 Hib Ext Bm\"\n  className=\"mx-auto\"\n  style={{ width:\"77%\" }}\n/>\n\n- **Saída (Tip)**: Retorno de microfones e programa para a linha. Este sinal é uma cópia de PGM menos o áudio de linhas telefônicas (**MIX-MINUS**). Conectar à \\*\\*entrada \"retorno para linhas\" \\*\\*do híbrido externo.\n- **Entrada (Ring)**: Sinal proveniente do híbrido externo para a console. É somado ao barramento de PGM, mas não ao MIX-MINUS. Deverá ser conectado à saída do híbrido telefônico externo.\n\nO áudio de retorno passa pelo mesmo circuito que o híbrido interno. O fader principal do **Canal 8** opera da mesma forma que com as linhas internas, permitindo enviar para o ar ou para CUE conforme a posição.",
+      "title": "Híbrido externo",
+      "level": 2
+    }
+  ]
+}

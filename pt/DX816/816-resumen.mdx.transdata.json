@@ -1,0 +1,65 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "fdbc1688bcf679ee3ef865a77696086973eda199cdcbdafeca3b815aaca093b6",
+      "translation": "![Linea Classic Pn](/images/thumbnails/linea_classic.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "c833347ee4826a2a18887b750220f13ff1e1c9baa67c2f1c21d969dc86e05061",
+      "translation": "## Canais de entrada",
+      "title": "Canales de entrada",
+      "level": 2
+    },
+    {
+      "hash": "a6a9d88554bd20ccfe809a3271b630c4482d80fa225b3eaa546067f217abd46d",
+      "translation": "### Microfones\n\nA série DX da linha Broadcast Classic conta com os modelos: **DX816** e **DX822**.\n\n- **DX816** possui 5 entradas para microfone. O uso de pré-amplificadores duplos e compressor de áudio permite gerenciar 5 canais de MIC a partir de 3 faders. O Canal 2 controla simultaneamente as entradas MIC-2 e 2b, enquanto o Canal 3 gerencia MIC-3 e 3b.\n- **DX822** oferece 10 entradas para microfone, distribuídas em 6 faders. Os canais com entrada dupla são MIC-2, MIC-3, MIC-5 e MIC-6.\n\nTodas as entradas suportam tensão **\"phantom\" 48V**.\n\nConta com um equalizador de 4 bandas global (duplo no DX822) para os microfones. Seu uso está orientado para correções de equalização gerais por características dos microfones ou da sala.\n\nA mixagem de microfones é processada por **compressão/limitador** dinâmico, que é essencial quando se utilizam dois microfones sobre um mesmo fader, para compensar diferenças de nível entre microfones ou variações na intensidade das vozes.",
+      "title": "Micrófonos",
+      "level": 3
+    },
+    {
+      "hash": "0e32a85fda98095caf513307ce87eb8ae1843ebb25ee45932c223f6661c3b989",
+      "translation": "### Linhas\n\nOs quatro canais de linha permitem conectar até 6 fontes de áudio.\n\n- **LIN-1 e LIN-2**: entradas estéreo balanceadas e não balanceadas, comutáveis pelo painel.\n- Aceitam sinal proveniente do streaming de entrada via Ethernet, em consoles com módulos opcionais de AoIP (modelos DX816/AoIP e DX822/AoIP).\n\nOs canais **USB-1 e USB-2** fornecem conexão direta ao computador.\n\nO canal **Telecom** gerencia duas linhas telefônicas terrestres (2 fios) e um telefone celular vinculado por Bluetooth. Os três podem estar no ar em conferência, com operação simplificada graças a automações internas. \\\nAlém disso, o console dispõe de envio e retorno para conexão de híbridos externos.\n\nEm modelos com **opção AoIP** é possível receber até dois streams de áudio via Ethernet, que se somam às mixagens de PGM e REC.",
+      "title": "Líneas",
+      "level": 3
+    },
+    {
+      "hash": "7d9c54f2c01b62c304b85753e8766e75e0fa7449b914598af4fb3396328a9e80",
+      "translation": "### Resumo de entradas disponíveis\n\n| Entrada             | Detalhe                                                                                                                                     |\n| :-----------------: | ------------------------------------------------------------------------------------------------------------------------------------------- |\n| **MICS** (DX816)    | 5 entradas distribuídas em 3 canais. Canal 2 controla MIC-2/2b e Canal 3 controla MIC-3/3b.                                                 |\n| **MICS** (DX822)    | 10 entradas distribuídas em 6 canais. Canal 2 controla MIC-2/2b; Canal 3 controla MIC-3/3b; Canal 5 controla MIC-5/5b; Canal 6 controla MIC-6/6b. |\n| **USB**             | 2 entradas: USB-1 e USB-2.                                                                                                                  |\n| **Balanceadas**     | 2 entradas balanceadas (BAL-1 e BAL-2).                                                                                                     |\n| **Não balanceadas** | 2 entradas não balanceadas (LIN-1 e LIN-2).                                                                                                 |\n| **Híbrido**         | 2 linhas telefônicas terrestres.                                                                                                            |\n| **Bluetooth**       | Entrada para conexão de telefones móveis.                                                                                                   |\n| **Híbrido externo** | Conexão adicional para híbrido externo (não ocupa canais de linha na console).                                                              |\n| **Audio stream**    | **(somente em modelos /AoIP)** Recepção de até dois fluxos de áudio via Ethernet.                                                           |",
+      "title": "Resumen de entradas disponibles",
+      "level": 3
+    },
+    {
+      "hash": "ad138980aeee4cf67f003c05bf1cd24413b8bb2658cfc76be611915939c22e2c",
+      "translation": "## Saídas\n\n**Analógicas**\\\nAs consoles DX816/822 oferecem duas saídas principais. Os canais de linha, microfone e telecomunicações contam com dois envios atribuíveis: **PGM (programa)** e **REC (gravação)**.\n\n**Digitais**\\\nDisponibiliza dois envios digitais via USB, que permitem conexão direta aos computadores. \\\nO sistema operacional reconhece as interfaces DX816/822 como dispositivos de gravação USB, que transmitem os sinais de PGM (USB-1) e REC (USB-2).\n\n**Streaming (AoIP, opcional)**\\\nCom até dois módulos de expansão AoIP, a console pode enviar PGM e REC como streams RTP por Ethernet, além de receber até dois fluxos de áudio remotos. Isso habilita o enlace direto com planta transmissora, estúdios remotos ou jornalistas externos via Internet.\n\n**AES-3 (opcional)**\\\nCom um módulo adicional, a console oferece saídas digitais AES para PGM e REC. Pode ser usado em paralelo com um módulo AoIP.",
+      "title": "Salidas",
+      "level": 2
+    },
+    {
+      "hash": "0e920fef25c997b1c0a35a28cfadffdbc991d42e77feda79a2286a407d19c21c",
+      "translation": "### **Resumo de saídas disponíveis**\n\n| Saída              | Descrição                                                                                                                          |\n| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |\n| **PGM balanceada**  | Sinal principal utilizado para transmissão no ar.                                                                                  |\n| **REC balanceada**  | Sinal destinado a gravações. Permite monitoramento sem sair no ar.                                                                  |\n| **REC-USB**         | Saída REC disponível via USB (canal Digital USB-2).                                                                                 |\n| **PGM-USB**         | Saída PGM disponível via USB.                                                                                                       |\n| **AES-3**           | \\*\\*(opcional) \\*\\*Saídas digitais AES de PGM e REC mediante módulo de expansão.                                                  |\n| **Híbrido externo** | Envio e retorno adicionais para híbrido externo, operável igual aos híbridos internos.                                          |\n| **Audio stream**    | \\*\\*(somente em modelos /AoIP) \\*\\*Permite enviar PGM e REC por Ethernet, para enlace com planta transmissora ou conexão entre estúdios. |",
+      "title": "**Resumen de salidas disponibles**",
+      "level": 3
+    },
+    {
+      "hash": "ccab4b477615f513134426db2cfe7d2bb491006110aeb11ca3887d6864c9baf4",
+      "translation": "## Monitoramento\n\nA seção de monitoramento distribui os sinais para os alto-falantes e fones de ouvido do Estúdio e da Cabine de Controle.\n\nInclui:\n\n- Escuta prévia (CUE, PFL).\n- Ordens para o Estúdio (talk-back).\n- Botão Mestre de microfones.\n\n**Monitoramento no Estúdio**: permite selecionar ON-AIR, PGM, REC ou CUE. O sinal é distribuído para alto-falantes e fones de ouvido através de módulos opcionais **Solidyne HD3 e HD5**.\n\n**Monitoramento na Cabine de Controle**: ajustes de nível independentes para fones de ouvido e alto-falantes, com opções de AIRE (entrada sintonizador externo), PGM, REC ou CUE.\n\n**Escuta prévia (CUE)**: o sinal antes do fader é ouvido em fones de ouvido ou alto-falantes de controle. Também pode ser enviado para monitores do Estúdio. O microfone de ordens também funciona em combinação com CUE para dialogar em privado com uma chamada retida em espera.\n\n**LUZ DE AIRE (Tally Light):** Saída 12V. É ativada com o botão Mestre de microfones. Além disso, incorpora um LED de grande tamanho no chassi que atua como Luz de Aire.",
+      "title": "Monitoreo",
+      "level": 2
+    },
+    {
+      "hash": "0da7c62363c36d5648971cc5bb6c765e7bb2fdf21428e7575b406e1aa6cbc3dd",
+      "translation": "## GPIO\n\nA DX816/822 permite acionar dispositivos externos ao abrir um fader, nos canais:\n\n- MIC-1, MIC-2, MIC-3 (mais MIC-4, MIC-5 e MIC-6 na DX822).\n- USB-1 e USB-2.\n\nEstes GPIO podem controlar:\n\n- Computadores de gestão de áudio.\n- Processadores digitais (ex. Solidyne 462dsp, 562dsp, 542 APC).\n- Dispositivos especiais (ex. comutador de vídeo Solidyne SmartCam).\n\nEm modelos com opção AoIP, o console também envia sinal \"MIC no ar\" por rede, para permitir ao processador de áudio mudar automaticamente para um preset ajustado para voz humana.",
+      "title": "GPIO",
+      "level": 2
+    },
+    {
+      "hash": "d5bd3cc5ef9c66d14dc583715c57d476bd306718b18fe0fd6b81db068e8df1e1",
+      "translation": "## Atenuadores ETM-VCA\n\nAs consoles DX816/822 utilizam atenuadores de cerâmica condutiva **\"toque de pena\"**, com mais de 20 anos de vida útil em condições normais.\n\nCaracterísticas:\n\n- Construção robusta, deslocamento sobre barras de aço-prata com buchas de teflon.\n- Controle ETM-VCA (Electrometric Voltage Controlled Amplifier): os sinais de áudio não passam pelos atenuadores, mas sim por amplificadores de baixo ruído e alta estabilidade. Os faders apenas enviam sinais de controle.\n\n**Vantagens do sistema ETM-VCA:**\n\n- Elimina totalmente ruídos por desgaste de faders.\n- Estende a vida útil e elimina manutenção.\n- Correlação estéreo excepcional (menos de 0,1 dB de erro).\n- Uso de faders de cerâmica condutiva com garantia de 10 milhões de operações.",
+      "title": "Atenuadores ETM-VCA",
+      "level": 2
+    }
+  ]
+}

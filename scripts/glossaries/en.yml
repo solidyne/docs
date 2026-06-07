@@ -53,9 +53,24 @@ preferred:
   línea fija: land line (POTS)
   línea telefónica: phone line
   celular: mobile phone
+  teléfono celular: mobile phone
+  línea terrestre: land line (POTS)
+  líneas terrestres: land lines (POTS)
+
+  vincular bluetooth: pair
+  vincular un teléfono: pair a phone
+
+  jabalina: grounding rod
+  jabalina de tierra: grounding rod
+
+  planta transmisora: transmitter site
+  planta: transmitter site
 
   generador estéreo: stereo coder
-  codificador FM estéreo: FM stereo coder
+  generador FM estéreo: FM stereo coder
+
+  generador estéreo: stereo encoder
+  codificador FM estéreo: FM stereo encoder
   portadora piloto: 19 kHz stereo pilot
   
   fader físico: physical fader

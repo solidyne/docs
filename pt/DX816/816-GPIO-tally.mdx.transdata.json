@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "59a83b17a8d84647260608d3981223e72ef0487d279900ea4d073a5c756081b3",
+      "translation": "## Luz de Ar (Tally Light)\n\nA saída **Tally Light** fornece **12 VCC / 150 mA** ao ativar o **Botão Mestre de microfones**.\\\nPermite conectar até **dois módulos de sinalização Solidyne LA100**.\n\nAlém disso, o console inclui uma **luz de ar integrada no gabinete**.\n\n<Danger>\n  A saída **Tally Light** desliga automaticamente se a carga exceder **150 mA**.\n</Danger>",
+      "title": "Luz de Aire (Tally Light)",
+      "level": 2
+    },
+    {
+      "hash": "58780f4d7bcbc7c36f8f75146c0d4065044aae69da29b02d92e712925810e699",
+      "translation": "## GPIO\n\nOs minijacks marcados como \\*\\*GPIO \\*\\*são saídas de propósito geral (**GPO**, _General Purpose Output_), que permitem comandar dispositivos externos ao habilitar determinados canais da console.\n\n- No **DX816**: geram sinais para os canais de microfone **MIC-1, MIC-2, MIC-3** e as linhas **USB-1** e **USB-2**.\n- No **DX822**: além dos anteriores, também possuem GPO para **MIC-4, MIC-5 e MIC-6**.\n\n<Note>\n  As saídas de controle são do tipo **coletor aberto**, funcionando como um interruptor:\n\n  - Em estado inativo → alta impedância.\n  - Ao habilitar um canal → a saída é conectada ao terra.\n</Note>\n\n**Especificações elétricas:**\n\n- Máximo: **\\+24 V - 0,1 A**.\n\n**Conectores:**\n\n- Tipo **jack TRS de 3,5 mm**, localizados no painel traseiro.\n- No DX816: “MIC 1&2”, “MIC-3” e “LIN USB 6&7”.\n- No DX822: são adicionados “MIC 4&5” e “MIC-6”.\n\n---\n\n**GPO MIC 1&2** _(idem para MIC 4&5 no DX822)_\n\n| Conector | Sinal |\n| -------- | ----- |\n| Corpo    | GND   |\n| Anel     | MIC-1 |\n| Ponta    | MIC-2 |\n\n**GPO MIC-3** _(idem MIC-6 no DX822)_\n\n| Conector | Sinal        |\n| -------- | ------------ |\n| Corpo    | GND          |\n| Anel     | MIC-3        |\n| Ponta    | Não conectado |\n\n**GPO USB**\n\n| Conector | Sinal |\n| -------- | ----- |\n| Corpo    | GND   |\n| Anel     | USB-1 |\n| Ponta    | USB-2 |",
+      "title": "GPIO",
+      "level": 2
+    }
+  ]
+}

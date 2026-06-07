@@ -54,34 +54,36 @@ preferred:
 
   híbrido telefónico: híbrido telefônico
 
-  línea fija: linha telefônica analógica (POTS)
+  línea fija: linha telefônica fixa (POTS)
   línea telefónica: linha telefônica
+  líneas terrestres: linhas telefônicas fixas (POTS)
   celular: telefone celular
+  teléfono móvil: telefone celular
+  vincular bluetooth: emparelhar Bluetooth
 
-  generador estéreo: gerador estéreo
-  codificador FM estéreo: codificador FM estéreo
+  generador estéreo: codificador estéreo
+  generador FM estéreo: codificador FM estéreo
   sub-portadora piloto: piloto estéreo de 19 kHz
+  Enlace Estudio–Planta: Enlace Estúdio–Planta (STL)
+  Enlace punto a punto: Enlace ponto a ponto (PTP)
 
-  procesador de audio: processador de áudio
-  monitor de modulación: monitor de modulação
-
-  fader físico: fader físico
-  canal físico: canal físico
-  fader virtual: fader virtual
-  canal virtual: canal virtual
-
-  preescucha: preview (cue)
-  escucha previa: preview (cue)
+  preescucha: pré-escuta (CUE)
+  escucha previa: pré-escuta (CUE)
+  monitoreo: monitoração
+  monitor de estudio: monitoração de estúdio
+  monitor de control: monitoração de controle
+  micrófono de órdenes:: microfone de talkback
 
   puesta a tierra: aterramento
   conexión a tierra: conexão de aterramento
+  jabalina: haste de aterramento
 
-  cable blindado: cabo blindado
+  óptimo: ótimo
+  
 
 notes:
 
   - Assume all documentation refers to professional radio broadcasting equipment unless stated otherwise.
   - Prefer terminology commonly used in Brazilian broadcast engineering environments.
-  - "monitoramento" and "monitoração" are both accepted in Brazilian Portuguese; preserve whichever is already used consistently within a document.
   - Avoid literal translations that sound correct in Portuguese but are uncommon in broadcast engineering.
   - Avoid consumer, home-studio and live-sound terminology when a broadcast equivalent exists.

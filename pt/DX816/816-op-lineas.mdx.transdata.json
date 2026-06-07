@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "d2f7f661e8de56f9e1b6efe471148ac93cd2f71b1b84eed2c60b618b3358a5ea",
+      "translation": "### Descrição\n\nA linha **DX** conta com **quatro canais de linha estéreo**. Cada canal possui dupla entrada, comutável a partir do painel frontal [2].\n\n- **Canais LIN-1 e LIN-2**:\n  - Entrada estéreo balanceada (conector **RJ45**).\n  - Entrada estéreo não balanceada (conector **RCA**).\n- **Canais USB-1 e USB-2**:\n  - Conexão direta ao computador (equivalem a duas interfaces externas).\n  - Provêm o envio dos sinais **PGM** e **REC** para o computador.\n\n<img\n  src=\"/images/816/816-panel-linea.png\"\n  alt=\"816 Panel Linea Pn\"\n  title=\"816 Panel Linea Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"37%\" }}\n/>\n\n1. **Controle de ganho.** Ajusta o ganho da entrada. Nos canais LIN-1 e LIN-2 o ajuste de ganho é único para as entradas A/B. Nos canais USB o ganho afeta apenas a entrada analógica. \\\n   Deve ser ajustado para que o sinal se mantenha em torno de **0 VU** com o fader operando na **zona –10 a –20 dB**.\n\n<Note>\n  O nível digital no canal USB é ajustado a partir do Windows<sup>©</sup>.\n</Note>\n\n2. **Comutação A/B.** Alterna entre a entrada principal e a entrada auxiliar.\n3. **BUS.** Atribuição aos buses de mixagem PGM (transmissão) e REC.\n4. **CUE.** Ativa a escuta pré-fader.\n5. **Zona de trabalho.** Esta zona indica a posição correta de operação, para um nível de sinal nominal e ajuste correto do ganho de entrada. \\\n   O ganho deve ser ajustado para que o atenuador opere acima de -30 dB. A indicação **OVL (7)** sinaliza sobrecarga (overload), ou seja, ganho excessivo na entrada.\n6. **Atenuador principal (fader):** Ajusta o nível do sinal na mixagem.",
+      "title": "Descripción",
+      "level": 3
+    },
+    {
+      "hash": "1bdeb5ffafdc0e0a603506b51127e6a41b3b3170fa4c6e5f8372b27adef5bbe2",
+      "translation": "### No ar\n\nPara enviar o sinal ao ar:\n\n1. Atribua o canal a **PGM**.\n2. Levante o fader.\n\n   O nível correto é alcançado quando os picos atingem **0 VU**.",
+      "title": "Puesta al aire",
+      "level": 3
+    }
+  ]
+}

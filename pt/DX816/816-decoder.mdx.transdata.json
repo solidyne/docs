@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "390632fba60cf8597ad5c4074d3986f04b902365de1baa4c1c7b1252b09b5007",
+      "translation": "## Audio stream gerado a partir de outra console\n\nO módulo AoIP pode ser configurado para **receber um streaming RTP** gerado a partir de outra console Solidyne com suporte a streaming (ex.: **D612**, série **2600**, série **Unidex**, coder/link **ADA102**).\\\nO equipamento codificador deve ter o **mesmo firmware (STL)**.\n\nDe fábrica, a console vem no modo **CODER (Studio Encoder)**. Para receber, deve ser configurada como **DECODER**.",
+      "title": "Audio stream generado desde otra consola",
+      "level": 2
+    },
+    {
+      "hash": "d5cfab439b9dc2689ac8e0ab835f1deedcbe9f23b67609798155b1efabaa3e64",
+      "translation": "### Configuração de recepção (Decoder)\n\n1. Acessar o módulo IP através de um navegador web (consulte [Acesso ao módulo IP](/es/DX816/816-stl)).\n2. No menu superior, clique em **Location**.\n3. **Alterar** o modo para **→** **Transmitter Decoder**.\n   - De fábrica: **Studio Encoder**, gerando um streaming unidirecional.\n   - Como **Decoder**, são adotados valores padrão (modificar apenas IP e portas).\n4. Ir para **Configuration → Streaming**.\n5. Em **Port**, inserir a porta utilizada no codificador (o equipamento que transmite).\n6. Em **URL**, manter **0.0.0.0**.\n7. Pressionar **Apply** para confirmar.",
+      "title": "Configuración de recepción (Decoder)",
+      "level": 3
+    },
+    {
+      "hash": "4c7292e9af7d0498c3c025820fef7500dc290c9057cd5dc042257bb66395e002",
+      "translation": "### Ajuste do buffer (RTP delay)\n\nO **buffer de entrada** (expresso em milissegundos) evita interrupções de áudio quando a largura de banda é insuficiente:\n\n| Formato de áudio     | Buffer recomendado                           |\n| -------------------- | -------------------------------------------- |\n| PCM                  | 40–80 ms                                     |\n| Comprimido (ex. MP3) | \\>80 ms (depende do codec e decodificação)   |\n\n<Tip>\n  Quanto maior o buffer → menos cortes, mas maior o **retardo de áudio**.\\\n  O valor ideal depende da **largura de banda** e do **formato** utilizado.\n</Tip>\n\nO formato de áudio é sempre definido pelo **equipamento transmissor**.",
+      "title": "Ajuste del buffer (RTP delay)",
+      "level": 3
+    },
+    {
+      "hash": "110644efee9f81bde4054069fa4890a3ad6851cb1d7f5043d2ff85bcbd90ce62",
+      "translation": "### Conexão do áudio decodificado\n\n- O áudio recebido por Ethernet é enviado para **entradas balanceadas** através de cabo externo (RJ45 para RJ45, fornecido).\n- Conexão: **AoIP Output Option → BAL-1 ou BAL-2**.\n- No DX822 com dois módulos AoIP: saída derivada para ambas as entradas (BAL-1 e BAL-2) através de cabo especial \"Y\" (fornecido).",
+      "title": "Conexión del audio decodificado",
+      "level": 3
+    },
+    {
+      "hash": "526d66dc713e181cbecaf914ee2f61579c72c8216b8418d6a4a57f3b0ef4151b",
+      "translation": "## Recepção usando um computador\n\nÉ possível receber transmissão de uma DX/AoIP em um computador com software compatível com RTP.\\\nRecomendado: **VLC Player** (gratuito – [videolan.org/vlc](http://www.videolan.org/vlc/)).\n\n**Configuração de formato no VLC:**\n\n- **PCM16 @ 44.1 kHz**, ou\n- **MP3** em algum de seus modos.\n\nOutros formatos podem requerer um arquivo **SDP** de carga (payload).\n\n**Procedimento no VLC:**\n\n- Menu: **Mídia → Abrir localização de rede**.\n- No campo URL, inserir:\n\n  `[protocolo]://[IP_fonte]:[porta]`\n\n<img\n  src=\"/images/816/816-vlc-decoding.jpg\"\n  alt=\"816 Vlc Decoding Jp\"\n  title=\"816 Vlc Decoding Jp\"\n  style={{ width:\"54%\" }}\n/>\n\nPor exemplo:\n\nRTP://0.0.0.0:3030\n\n- `RTP` → protocolo.\n- `0.0.0.0` → qualquer IP de entrada.\n- `3030` → porta utilizada.\n\n<Note>\n  Algumas versões do VLC aceitam: `RTP://@:3030`\n</Note>",
+      "title": "Recepción usando un computador",
+      "level": 2
+    }
+  ]
+}
