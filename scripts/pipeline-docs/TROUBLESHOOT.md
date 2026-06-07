@@ -1,29 +1,41 @@
-# Problemas Comunes y Soluciones
+# Troubleshooting Guide
 
-## Errores de permisos
-- Asegúrate de ejecutar con permisos de usuario o admin según la carpeta.
+## Common Issues
+### 1. Translations Skipped
+**Symptom**: Files show as skipped in report  
+**Fix**:
+```bash
+# Check protection status
+grep -r "human_revision: [1-9]" docs/es/
 
-## El script no traduce algunas secciones
-- ¿Se modificó realmente el texto en español? Si no, reutiliza traducción por hash.
+# Force-retranslate
+node translate-folder.mjs docs/es/team en --force-reviewed
+```
 
-## El LLM corta o trunca secciones
-- El pipeline intenta hasta 3 partes. Si sigue incompleto, revisa tamaño de sección o reduce longitud.
+### 2. YAML Errors
+**Symptom**: `Error: bad indentation`  
+**Solution**:
+```bash
+yamllint glossaries/pt.yml  # Verify 2-space indents
+```
 
-## "tags" aparecen traducidos incorrectamente
-- Confirma que el script esté actualizado. Desde v1.1 los tags NO se traducen.
+### 3. API Failures
+```bash
+# Test API access
+curl -H "Authorization: Bearer $OPENROUTER_API_KEY" \
+  https://openrouter.ai/api/v1/models
+```
 
-## Error: API KEY
-- Verifica variable OPENROUTER_API_KEY y que el modelo esté habilitado en OpenRouter.ai
+## Diagnostic Commands
+```bash
+# Count translated files
+find docs/en -name "*.mdx" | wc -l
 
-## Archivos mal ubicados o estructura rota
-- Asegúrate de que trabajas siempre bajo una carpeta raíz `/docs/es/`.
+# Verify hashes
+sha256sum docs/es/team/doc.mdx
+```
 
----
-
-## Diagnóstico avanzado
-
-- Para debug de perms usa:  
-  `icacls <ruta>`  
-- Logs extendidos en `reports/`
+> 🛠 **Advanced**: See [OPERATION.md](OPERATION.md#debugging)
+```
 
 ---

@@ -1,53 +1,40 @@
-# Guía Operativa
+# Operational Guide
 
-## Requisitos previos
-- Node.js >= 18
-- API Key de OpenRouter (`OPENROUTER_API_KEY`)
-- Yarn/npm para instalar dependencias
-
-## Instalación
+## Basic Usage
 ```bash
-npm install
+node scripts/translate-folder.mjs <source-path> <target-lang> [flags]
 ```
 
-## Ejecución básica
+Example translating a team's docs:
 ```bash
-node translate-folder.mjs <carpeta-es> <idioma-dest>
-```
-Ejemplo:
-```bash
-node translate-folder.mjs docs/es/unidex en --dry-run
+node scripts/translate-folder.mjs docs/es/unidex en
 ```
 
-## Todos los flags disponibles
-| Flag               | Acción                                                          |
-|--------------------|-----------------------------------------------------------------|
-| `--dry-run`        | Simula el proceso, no traduce ni sobrescribe archivos           |
-| `--force`          | Fuerza retraducción de todo, ignora hashes previos              |
-| `--force-reviewed` | Pisa traducciones marcadas como revisadas por humano (`human_revision > 0`) |
-| `--only-new`       | *Placeholder, aún no implementado*                              |
-| `--only-changed`   | *Placeholder, aún no implementado*                              |
+## Key Features
+1. **Human Review Protection**  
+   Files with `human_revision > 0` won't be overwritten unless using `--force-reviewed`.
+   
+2. **Partial Translation**  
+   Only changed sections (detected via SHA-256 hashes) are retranslated.
 
-## Revisión manual y control de sobrescritura
+3. **Glossary Support**  
+   Uses `glossaries/[lang].yml` for preferred/prohibited terms.
 
-- Los archivos con frontmatter que tengan `human_revision > 0` no serán actualizados por el pipeline a menos que ejecutes con el flag `--force-reviewed`.
-- Si usas `--force-reviewed`, se actualizarán y esto será registrado en el reporte JSON.
+## Available Flags
+| Flag | Description |
+|------|-------------|
+| `--dry-run` | Simulation mode (no files changed) |
+| `--force` | Retranslate everything (ignore hashes) |
+| `--force-reviewed` | Override human-reviewed files |
+| `--only-new` | *Future feature* |
+| `--only-changed` | *Future feature* |
 
-## Ejemplo de input/output
-
-- **Input MDX**: muestra un extracto de /docs/es/demo.mdx
-- **Output traducido**: igual archivo en `/docs/en/demo.mdx`
-- **Reporte JSON**: resumen en `/scripts/reports/`
-
----
-
-## Primeros pasos recomendados
-
-1. Configura tu API Key OpenRouter.
-2. Crea/edita reglas en `translation_rules.txt` y glosario en `/glossaries/<lang>.yml`.
-3. Lanza un dry-run:  
-   ```
-   node translate-folder.mjs docs/es/tuarea en --dry-run
+## Recommended First Steps
+1. Set up your OpenRouter API key
+2. Configure `translation_rules.txt` and glossaries
+3. Run initial test:  
+   ```bash
+   node scripts/translate-folder.mjs docs/es/sample en --dry-run
    ```
 
----
+> For technical details see [FLOW.md](FLOW.md) or debug with [TROUBLESHOOT.md](TROUBLESHOOT.md)

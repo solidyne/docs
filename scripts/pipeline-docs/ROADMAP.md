@@ -1,10 +1,18 @@
-# Roadmap y Mejoras Futuras
+# Development Roadmap
 
-- Implementar flag real --only-changed
-- Añadir verificación automática de glosarios y sintaxis rules
-- Dashboard de progreso batch y cobertura por idioma
-- Soporte para nuevos idiomas (pt-PT, fr, de)
-- Lógica CI/CD con triggers en PR/merge
-- Feedback loop para revisor humano via UI
+## Q3 2026
+### High Priority
+- [ ] `--only-changed` flag (delta translations)
+- [ ] GitHub Actions integration
+- [ ] pt-PT locale support
 
----
+## Future
+- [ ] Reviewer dashboard
+- [ ] Slack/Teams notifications
+- [ ] Auto-glossary generation
+
+## Known Limits
+- Max 3 retries per section
+- No CI/CD pipeline (manual runs)
+
+> ✍️ **Contributing**: Edit in [CHANGELOG.md](CHANGELOG.md)
