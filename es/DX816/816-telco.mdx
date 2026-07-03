@@ -5,50 +5,6 @@ keywords: ["telco", "bluetooth", "null", "mix-minus", "rechazo"]
 tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
 ---
 
-import tierras from '/snippets/snippet-tierras.mdx';
-
-## Conexión de líneas telefónicas
-
-El canal de híbrido maneja **dos líneas telefónicas fijas** y **un teléfono celular** vinculado por Bluetooth.
-
-En el panel posterior de la consola hay **cuatro conectores RJ11**:
-
-<img
-  src="/images/816/816-POTS.png"
-  alt="Conectores RJ11"
-  title="816816 POTS Pn"
-  className="mx-auto"
-  style={{ width:"40%" }}
-/>
-
-- Dos líneas telefónicas (a conectar a la red pública o a una central PBX).
-- Dos teléfonos asociados (etiquetados como “SET”), generalmente usados por producción para atender llamadas.
-
-<Warning>
-  Las líneas están protegidas contra sobretensiones (hasta 2.000 V) mediante varistores internos.\
-  Sin embargo, es imprescindible **instalar protectores externos** conectados a tierra de jabalina de 2 m para centrales públicas. **La garantía del equipo no cubre daños por rayos**.
-</Warning>
-
-<tierras />
-
----
-
-### Ajuste de rechazo (Null)
-
-Este ajuste aplica únicamente a las **líneas terrestres**. Se realiza una sola vez durante la instalación.\
-El rechazo evita que la señal transmitida retorne mezclada a la voz del entrevistado, mejorando la calidad del locutor local.
-
-**Procedimiento:**
-
-1. Asigne el Canal de Telecomunicaciones a la salida **REC** (para no ajustar al aire).
-2. Establezca una llamada y pida al entrevistado que hable.
-3. Ajuste el nivel de la lamada con el fader del Canal 8, hasta que el VUmetro REC alcanze la zona blanca.
-4. Active un canal de micrófono (sobre REC) y pida a alguien que hable desde el Estudio.
-5. Escuchando la voz local en REC gire el ajuste el control **NULL** en un sentido y en otro hasta encontrar el punto óptimo, que se obtiene cuando la señal local que se suma al micrófono vía híbrido es mínima.
-6. Este ajuste depende de la línea telefónica. Si cambia la línea telefónica, repita el ajuste.
-
----
-
 ## Vincular un teléfono móvil
 
 Cualquier celular con **Bluetooth** puede vincularse a la DX816/822.\
@@ -90,8 +46,6 @@ El teléfono registra una sola vez el código único de la consola (ID). Posteri
 | **D – Llamada entrante** | Encendido permanente en color azul. |
 | **E – En el aire** | Encendido permanente en color rojo. |
 
----
-
 ### Ajuste del volumen Bluetooth
 
 <Danger>
@@ -120,11 +74,67 @@ Para apagar, mantenga presionado el botón **BLUETOOTH** hasta que el LED **CELL
   En algunos celulares, la re-conexión no es automática y es necesario elegir manualmente el dispositivo **Solidyne BTM641** en una lista.
 </Note>
 
+import tierras from '/snippets/snippet-tierras.mdx';
+
+## Conexión de líneas telefónicas
+
+El canal de híbrido maneja **dos líneas telefónicas fijas** y **un teléfono celular** vinculado por Bluetooth.
+
+En el panel posterior de la consola hay **cuatro conectores RJ11**:
+
+<img
+  src="/images/816/816-POTS.png"
+  alt="Conectores RJ11"
+  title="816816 POTS Pn"
+  className="mx-auto"
+  style={{ width:"40%" }}
+/>
+
+<img
+  src="/images/816/816-POTS.png"
+  alt="Conectores RJ11"
+  title="816816 POTS Pn"
+  className="mx-auto"
+  style={{ width:"40%" }}
+/>
+
+- Dos líneas telefónicas (a conectar a la red pública o a una central PBX).
+- Dos teléfonos asociados (etiquetados como “SET”), generalmente usados por producción para atender llamadas.
+
+<Warning>
+  Las líneas están protegidas contra sobretensiones (hasta 2.000 V) mediante varistores internos.\
+  Sin embargo, es imprescindible **instalar protectores externos** conectados a tierra de jabalina de 2 m para centrales públicas. **La garantía del equipo no cubre daños por rayos**.
+</Warning>
+
+---
+
+### Ajuste de rechazo (Null)
+
+Este ajuste aplica únicamente a las **líneas terrestres**. Se realiza una sola vez durante la instalación.\
+El rechazo evita que la señal transmitida retorne mezclada a la voz del entrevistado, mejorando la calidad del locutor local.
+
+**Procedimiento:**
+
+1. Asigne el Canal de Telecomunicaciones a la salida **REC** (para no ajustar al aire).
+2. Establezca una llamada y pida al entrevistado que hable.
+3. Ajuste el nivel de la lamada con el fader del Canal 8, hasta que el VUmetro REC alcanze la zona blanca.
+4. Active un canal de micrófono (sobre REC) y pida a alguien que hable desde el Estudio.
+5. Escuchando la voz local en REC gire el ajuste el control **NULL** en un sentido y en otro hasta encontrar el punto óptimo, que se obtiene cuando la señal local que se suma al micrófono vía híbrido es mínima.
+6. Este ajuste depende de la línea telefónica. Si cambia la línea telefónica, repita el ajuste.
+
 ---
 
 ## Híbrido externo
 
 Las consolas DX incluyen un conector para **External Hybrid**, que maneja programa y retorno de híbrido externo mediante un jack TRS de 6,35 mm (¼”).
+
+<img
+  src="/images/816/816-HibExt.bmp"
+  alt="816 Hib Ext Bm"
+  title="816 Hib Ext Bm"
+  className="mx-auto"
+  style={{ width:"77%" }}
+/>
 
 <img
   src="/images/816/816-HibExt.bmp"

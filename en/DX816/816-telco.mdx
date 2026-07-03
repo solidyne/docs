@@ -13,6 +13,78 @@ translation:
 
 import tierras from '/snippets/snippet-tierras-en.mdx';
 
+## Pairing a Mobile Phone
+
+Any mobile phone with **Bluetooth** can be paired to the DX816/822.
+
+The maximum range is 5 m, though keeping the device nearby (never on top of the console) is recommended.
+
+The phone registers the console's unique ID code once. Subsequent connections are automatic when Bluetooth is enabled on both devices.
+
+<Warning>
+  The Bluetooth module receives power from **USB-1 or USB-2** channels.\
+  If neither is connected to a PC, use an **external USB power supply** (a standard charger) with the provided cable.
+</Warning>
+
+### **Pairing Procedure:**
+
+<img
+  src="/images/816/816-descripción_TELCO.jpg"
+  alt="816 TELCO Description Jp"
+  title="816 TELCO Description Jp"
+  className="mx-auto"
+  style={{ width:"77%" }}
+/>
+
+1. **On the console:** Verify that the LED on the **CELL PHONE \[3\]** button is off.
+2. If Bluetooth is on (LED flashing blue), turn it off by holding the **Bluetooth \[2\]** button until it stops flashing.
+3. **On the console,** activate "discovery mode" (this mode can only be accessed when Bluetooth is off). Press and <u>hold</u> the BLUETOOTH button for about 10 seconds. You'll observe that after a few seconds, it flashes slowly in blue, and later the flash alternates rapidly <u>between</u> blue and red (see mode C in the table), indicating that the DX816/822 has entered "discovery mode" for recognition by the mobile device.
+4. **On the mobile device:** Activate Bluetooth and search for devices.
+5. When the mobile device detects the console's Bluetooth, it appears on-screen as **Solidyne BTM641**.
+6. Connect the mobile device to **Solidyne BTM641**.
+7. The console's Bluetooth device is now registered on the phone and does not require repeating the operation (unless the **Solidyne BTM641 device is unpaired (removed) on the phone**).
+8. On the console, the **CELL PHONE** button remains lit in blue with a slow blink (mode A), indicating it is connected to the mobile device.
+
+**CELL PHONE \[3\] Button Illumination Modes**
+
+| Mode | Status / Description |
+| :-: | --- |
+| **A – Mobile connected** | Brief (1s) blue illumination with long (2s) off period. Indicates connection to mobile device without an active call. |
+| **B – Mobile not connected / Call in progress** | Slow (2s) blue illumination with short (1s) off period. Indicates an active call is in progress. When the call ends, it returns to mode "A". <br />Also indicates Bluetooth is on without a connected mobile device. When connected, it switches to mode "A". |
+| **C – Discovery mode (Pairing)** | Rapid flashing alternating between red and blue. Allows pairing a mobile device for the first time. |
+| **D – Incoming call** | Continuous blue illumination. |
+| **E – On-air** | Continuous red illumination. |
+
+---
+
+### Bluetooth Volume Adjustment
+
+<Danger>
+  The adjustment must be made during an active Bluetooth call.\
+  The phone volume is independent of the Bluetooth link volume.\
+  If adjusted without an active call, only the phone's internal speaker will be affected.
+</Danger>
+
+- The Bluetooth volume setting is stored in the phone.
+- It's recommended to set it to **maximum** for the best signal-to-noise ratio.
+
+---
+
+### Turn Off Bluetooth
+
+To turn off, hold down the **BLUETOOTH** button until the **CELL PHONE** LED stops blinking.
+
+### Reconnect a Paired Device
+
+1. **On the console:** Activate Bluetooth by pressing the **BLUETOOTH** button until the **CELL PHONE** LED flashes blue (approx. 5 seconds).
+2. **On the mobile phone:** Activate Bluetooth. When the connection appears, the phone will be ready for operation. When making or receiving a call, the audio will be sent to the console.
+
+<Note>
+  On some mobile phones, reconnection is not automatic, and you must manually select the **Solidyne BTM641** device from a list.
+</Note>
+
+---
+
 ## Telephone Line Connections
 
 The hybrid channel handles **two landline telephone connections** and **one mobile phone** linked via Bluetooth.
@@ -50,75 +122,6 @@ The null setting prevents the transmitted signal from returning mixed with the i
 4. Activate a microphone channel (over REC) and have someone speak from the Studio.
 5. While monitoring the local voice on REC, rotate the **NULL** control clockwise and counterclockwise to find the optimal point, achieved when the local signal added to the microphone via hybrid is minimized.
 6. This adjustment depends on the telephone line. If the telephone line changes, repeat the adjustment.
-
-## Pairing a Mobile Phone
-
-Any mobile phone with **Bluetooth** can be paired to the DX816/822.\
-The maximum range is 5 m, though keeping the device nearby (never on top of the console) is recommended.
-
-The phone registers the console's unique ID code once. Subsequent connections are automatic when Bluetooth is enabled on both devices.
-
-<Warning>
-  The Bluetooth module receives power from **USB-1 or USB-2** channels.\
-  If neither is connected to a PC, use an **external USB power supply** (a standard charger) with the provided cable.
-</Warning>
-
-### **Pairing Procedure:**
-
-<img
-  src="/images/816/816-descripción_TELCO.jpg"
-  alt="816 TELCO Description Jp"
-  title="816 TELCO Description Jp"
-  className="mx-auto"
-  style={{ width:"77%" }}
-/>
-
-1. **On the console:** Verify that the LED on the **CELL PHONE [3]** button is off.
-2. If Bluetooth is on (LED flashing blue), turn it off by holding the **Bluetooth [2]** button until it stops flashing.
-3. **On the console,** activate "discovery mode" (this mode can only be accessed when Bluetooth is off). Press and <u>hold</u> the BLUETOOTH button for about 10 seconds. You'll observe that after a few seconds, it flashes slowly in blue, and later the flash alternates rapidly <u>between</u> blue and red (see mode C in the table), indicating that the DX816/822 has entered "discovery mode" for recognition by the mobile device.
-4. **On the mobile device:** Activate Bluetooth and search for devices.
-5. When the mobile device detects the console's Bluetooth, it appears on-screen as **Solidyne BTM641**.
-6. Connect the mobile device to **Solidyne BTM641**.
-7. The console's Bluetooth device is now registered on the phone and does not require repeating the operation (unless the **Solidyne BTM641 device is unpaired (removed) on the phone**).
-8. On the console, the **CELL PHONE** button remains lit in blue with a slow blink (mode A), indicating it is connected to the mobile device.
-
-**CELL PHONE [3] Button Illumination Modes**
-
-| Mode | Status / Description |
-| :-: | --- |
-| **A – Mobile connected** | Brief (1s) blue illumination with long (2s) off period. Indicates connection to mobile device without an active call. |
-| **B – Mobile not connected / Call in progress** | Slow (2s) blue illumination with short (1s) off period. Indicates an active call is in progress. When the call ends, it returns to mode "A". <br />Also indicates Bluetooth is on without a connected mobile device. When connected, it switches to mode "A". |
-| **C – Discovery mode (Pairing)** | Rapid flashing alternating between red and blue. Allows pairing a mobile device for the first time. |
-| **D – Incoming call** | Continuous blue illumination. |
-| **E – On-air** | Continuous red illumination. |
-
----
-
-### Bluetooth Volume Adjustment
-
-<Danger>
-  The adjustment must be made during an active Bluetooth call.\
-  The phone volume is independent of the Bluetooth link volume.\
-  If adjusted without an active call, only the phone's internal speaker will be affected.
-</Danger>
-
-- The Bluetooth volume setting is stored in the phone.
-- It's recommended to set it to **maximum** for the best signal-to-noise ratio.
-
----
-
-### Turn Off Bluetooth
-
-To turn off, hold down the **BLUETOOTH** button until the **CELL PHONE** LED stops blinking.
-
-### Reconnect a Paired Device
-
-1. **On the console:** Activate Bluetooth by pressing the **BLUETOOTH** button until the **CELL PHONE** LED flashes blue (approx. 5 seconds).
-2. **On the mobile phone:** Activate Bluetooth. When the connection appears, the phone will be ready for operation. When making or receiving a call, the audio will be sent to the console.
-
-<Note>
-  On some mobile phones, reconnection is not automatic, and you must manually select the **Solidyne BTM641** device from a list.
-</Note>
 
 ---
 
