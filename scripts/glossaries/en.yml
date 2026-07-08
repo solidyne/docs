@@ -68,8 +68,6 @@ preferred:
 
   generador estéreo: stereo coder
   generador FM estéreo: FM stereo coder
-
-  generador estéreo: stereo encoder
   codificador FM estéreo: FM stereo encoder
   portadora piloto: 19 kHz stereo pilot
   
