@@ -8,8 +8,8 @@
       "level": 2
     },
     {
-      "hash": "4920e3368fa3313dc16f91317a5d5f137f65c71cbba61d754d5358bf4cf9ee8e",
-      "translation": "### Reconexão rápida\n\n1. Certifique-se de que o fader **TELCO** esteja em **CUE** (fechado).\n2. **Ativar Bluetooth na console:** mantenha pressionado **BLUETOOTH por aproximadamente 5 segundos** e solte assim que **CELL PHONE** acender em azul. O botão permanece piscando lentamente.\n  <Warning>\n  O módulo Bluetooth recebe alimentação dos canais **USB-1 ou USB-2**.\\\n  Se nenhum estiver conectado a um PC, utilize uma **fonte USB externa** (um carregador padrão) com o cabo fornecido.\n</Warning>\n3. Ativar Bluetooth no celular → o vínculo será restabelecido.\n4. As chamadas recebidas podem ser atendidas pelo celular ou com **BLUETOOTH** na console.",
+      "hash": "9cd1083ca137816941ad9ba96d3e33f9d58334a47ffbffd32506ec77803cd8b3",
+      "translation": "### Reconexão rápida\n\n1. Garantir que o fader **TELCO** esteja em **CUE** (fechado).\n2. **Ativar Bluetooth na console:** mantenha pressionado **BLUETOOTH por aproximadamente 5 segundos** e solte assim que **CELL PHONE** acender em azul. O botão continua piscando com intermitência lenta.\n\n<Warning>\n  O módulo Bluetooth recebe alimentação pelos canais **USB-1 ou USB-2**.\\\n  Se nenhum estiver conectado a um PC, use uma **fonte USB externa** (um carregador padrão) com o cabo fornecido.\n</Warning>\n\n3. Ativar Bluetooth no celular → a conexão será reestabelecida.\n4. Chamadas recebidas podem ser atendidas pelo celular ou com **BLUETOOTH** na console.",
       "title": "Re-conexión rápida",
       "level": 3
     },
@@ -32,8 +32,8 @@
       "level": 3
     },
     {
-      "hash": "565d6650660633a18aba7feef252571b14199b65a1e0d3496fef223c5322e9e7",
-      "translation": "### Receber chamada de celular\n\n1. No celular, desativar o Bluetooth para falar diretamente pelo telefone.\n2. Estabelecer a chamada.\n3. Para transferir para a console, mudar para o modo **Bluetooth/Headset**.\n4. Com o fader na posição **HOLD**, o celular recebe retorno da console, mas não vai para o ar.\n5. Subir o fader para colocar no ar.\n6. Para desligar: **toque rápido no botão BLUETOOTH** ou desligar pelo celular.\n\n<Note>\n  Também é possível estabelecer a chamada **sem sair** do modo Bluetooth no celular, com o fader na posição **CUE** e usando **TALK** para dialogar da console.\n</Note>",
+      "hash": "79f37f490cc6b96afa31c012b3b2cf942c91af3b26e2c7e2af012f15de3bf8d4",
+      "translation": "### Gerar chamada a partir do celular\n\n1. No celular, desativar o Bluetooth para poder falar diretamente pelo telefone.\n2. Estabelecer a chamada.\n3. Para transferir para a console, mudar para o modo **Bluetooth/Headset**.\n4. Com o fader na posição **HOLD**, o celular recebe retorno da console, mas não vai no ar.\n5. Subir o fader para colocar no ar.\n6. Para encerrar: **toque rápido no botão BLUETOOTH** ou encerrar a chamada pelo celular.\n\n<Note>\n  Também é possível estabelecer a chamada **sem sair** do modo Bluetooth no celular, com o fader na posição **CUE** e usando **TALK** para dialogar a partir da console.\n</Note>",
       "title": "Generar llamada desde celular",
       "level": 3
     }

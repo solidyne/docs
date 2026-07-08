@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-chat",
+  "duration_sec": "161.91",
+  "results": {
+    "pt": {
+      "translated": 25,
+      "skipped": 0,
+      "errors": 0,
+      "total": 25,
+      "skippedReviewed": 0,
+      "forcedUpdates": 0
+    }
+  },
+  "skipped_reviewed": 0,
+  "forced_updates": 0
+}

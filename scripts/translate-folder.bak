@@ -460,117 +460,72 @@ translation:
   let newSectionMeta = [];
   let newContentArr = [];
 
-        function isAccordionBlock(content) {
-      // Detecta el bloque <Accordion ...>...</Accordion> multilínea, aunque haya atributos
-      const trimmed = content.trim();
-      return /^<Accordion(\s|>|$)/.test(trimmed);
-    }
-
-    async function translateAccordionBlock(block, rules, glossary, targetLang) {
-      // Traduce el atributo title (puede tener comillas simples o dobles, o sin nada)
-      let translated = await replaceAsync(
-        block,
-        /<Accordion([^>]*)title\s*=\s*["']?([^"'>]+)["']?([^>]*)>([\s\S]*?)<\/Accordion>/gi,
-        async (_, preAttrs, title, postAttrs, innerContent) => {
-          // Traduce el título del acordeón
-          const translatedTitle = await safeTranslateField(title, rules, glossary, targetLang, "title");
-          // Traduce el contenido interno (tablas + markdown)
-          const translatedContent = await safeTranslateField(innerContent, rules, glossary, targetLang, "mdx");
-          return `<Accordion${preAttrs}title=\"${translatedTitle}\"${postAttrs}>\n${translatedContent}\n</Accordion>`;
-        }
-      );
-      return translated;
-    }
-
-    async function replaceAsync(str, regex, asyncFn) {
-      const promises = [];
-      str.replace(regex, (...args) => {
-        promises.push(asyncFn(...args));
-        return '';
-      });
-      const data = await Promise.all(promises);
-      let i = 0;
-      return str.replace(regex, () => data[i++]);
-    }
-
     for (const section of sections) {
-      const sectionHash = sha256(section.content);
-      console.log("    → Sección:", section.title || "sin título");
+    const sectionHash = sha256(section.content);
+    console.log("    → Sección:", section.title || "sin título");
 
-      // No traducir imports
-      if (section.content.trim().startsWith('import ')) {
-        console.log("      ↪️ Sección preservada literal (import)");
-        newContentArr.push(section.content);
-        newSectionMeta.push({
-          hash: sectionHash,
-          translation: section.content,
-          title: section.title,
-          level: section.level
-        });
-        continue;
-      }
-
-      // Nuevo: traducir Accordions multilínea
-      if (isAccordionBlock(section.content)) {
-        console.log("      ↪️ Traduciendo bloque Accordion (multilínea)");
-        const translatedAccordion = await translateAccordionBlock(section.content, rules, glossary, targetLang);
-        newContentArr.push(translatedAccordion);
-        newSectionMeta.push({
-          hash: sectionHash,
-          translation: translatedAccordion,
-          title: section.title,
-          level: section.level
-        });
-        continue;
-      }
-
-      // Verificar si la sección fue modificada
-      if (!FORCE && prevSections[sectionHash]) {
-        console.log("      ↪️ Sección sin cambios, reusando traducción existente");
-        newContentArr.push(prevSections[sectionHash].translation);
-        newSectionMeta.push({
-          hash: sectionHash,
-          translation: prevSections[sectionHash].translation,
-          title: section.title,
-          level: section.level
-        });
-        continue;
-      }
-
-      // Robustez: reintentos y filtrado
-      let translation = null;
-      let attempts = 0;
-      const MAX_ATTEMPTS = 3;
-      while (attempts < MAX_ATTEMPTS) {
-        try {
-          translation = await translateContent(rules, glossary, section.content, targetLang);
-          if (
-            !translation || translation.trim() === "" ||
-            /```mdx|no visible text|no hay contenido visible|```/i.test(translation) ||
-            looksTruncated(translation)
-          ) {
-            attempts++;
-            console.warn("      🔄 Reintento de traducción por texto inválido o truncado...");
-            continue;
-          }
-          break; // traducción válida
-        } catch {
-          attempts++;
-        }
-      }
-      if (!translation || translation === section.content) {
-        translation = section.content;
-        console.warn("      ⚠️ Usando texto original por falla persistente de traducción.");
-      }
-      newContentArr.push(translation);
+    // No traducir imports o JSX, solo preservar literal
+    if (
+      section.content.trim().startsWith('import ') ||
+      section.content.trim().startsWith('<')
+    ) {
+      console.log("      ↪️ Sección preservada literal (import/JSX)");
+      newContentArr.push(section.content);
       newSectionMeta.push({
         hash: sectionHash,
-        translation,
+        translation: section.content,
         title: section.title,
         level: section.level
       });
+      continue;
+
+    }
+      // Verificar si la sección fue modificada
+  if (!FORCE && prevSections[sectionHash]) {
+    console.log("      ↪️ Sección sin cambios, reusando traducción existente");
+    newContentArr.push(prevSections[sectionHash].translation);
+    newSectionMeta.push({
+      hash: sectionHash,
+      translation: prevSections[sectionHash].translation,
+      title: section.title,
+      level: section.level
+    });
+    continue;
     }
 
+    // Robustez: reintentos y filtrado
+    let translation = null;
+    let attempts = 0;
+    const MAX_ATTEMPTS = 3;
+    while (attempts < MAX_ATTEMPTS) {
+      try {
+        translation = await translateContent(rules, glossary, section.content, targetLang);
+        if (
+          !translation || translation.trim() === "" ||
+          /```mdx|no visible text|no hay contenido visible|```/i.test(translation) ||
+          looksTruncated(translation)
+        ) {
+          attempts++;
+          console.warn("      🔄 Reintento de traducción por texto inválido o truncado...");
+          continue;
+        }
+        break; // traducción válida
+      } catch {
+        attempts++;
+      }
+    }
+    if (!translation || translation === section.content) {
+      translation = section.content;
+      console.warn("      ⚠️ Usando texto original por falla persistente de traducción.");
+    }
+    newContentArr.push(translation);
+    newSectionMeta.push({
+      hash: sectionHash,
+      translation,
+      title: section.title,
+      level: section.level
+    });
+  }
 
 
   // ====== ARMADO FINAL DEL ARCHIVO MDX TRADUCIDO CON FRONTMATTER =====
