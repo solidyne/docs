@@ -9,11 +9,11 @@
   },
   "contextual": {
     "options": [
-      "download-pdf",
       "copy",
       "aistudio",
       "chatgpt"
-    ]
+    ],
+    "display": "toc"
   },
   "favicon": "/favicon.svg",
   "navigation": {
