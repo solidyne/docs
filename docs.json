@@ -1337,7 +1337,10 @@
             ]
           },
           {
-            "tab": "CODECS"
+            "tab": "CODECS",
+            "pages": [
+              "en/ada-102"
+            ]
           },
           {
             "tab": "Telco",
