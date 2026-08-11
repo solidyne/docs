@@ -563,8 +563,13 @@
           },
           {
             "tab": "CODECS",
-            "pages": [
-              "es/ada-102"
+            "anchors": [
+              {
+                "anchor": "Coder-Decoder",
+                "pages": [
+                  "es/ada-102"
+                ]
+              }
             ]
           },
           {
@@ -2108,9 +2113,6 @@
                 ]
               }
             ]
-          },
-          {
-            "tab": "CODECS"
           },
           {
             "tab": "Telco",
