@@ -9,9 +9,10 @@
   },
   "contextual": {
     "options": [
+      "download-pdf",
       "copy",
-      "chatgpt",
-      "claude"
+      "aistudio",
+      "chatgpt"
     ]
   },
   "favicon": "/favicon.svg",
@@ -558,6 +559,12 @@
                   }
                 ]
               }
+            ]
+          },
+          {
+            "tab": "CODECS",
+            "pages": [
+              "es/ada-102"
             ]
           },
           {
@@ -1330,6 +1337,9 @@
             ]
           },
           {
+            "tab": "CODECS"
+          },
+          {
             "tab": "Telco",
             "anchors": [
               {
@@ -2095,6 +2105,9 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "CODECS"
           },
           {
             "tab": "Telco",
