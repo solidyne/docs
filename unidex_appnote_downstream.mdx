@@ -1,0 +1,186 @@
+---
+title: "Streaming entrante en UNIDEX"
+description: "Configuración del módulo Down-Stream RX para recibir audio desde una red LAN o desde un servidor de streaming por Internet."
+keywords: ["streaming entrante", "down-stream rx", "streaming out", "rtp", "icecast", "shoutcast", "mms"]
+tags: ["consolas IP", "UNIDEX", "UX24", "UX18"]
+sidebarTitle: "Recibir un streaming"
+---
+
+## Streaming entrante
+
+El módulo de streaming de UNIDEX permite reproducir un stream de audio entrante. La fuente puede ser otro equipo dentro de la red LAN o un servidor de streaming accesible por Internet.
+
+En la interfaz del equipo, esta función aparece identificada como **DOWN-STREAM (RX)**. Este apéndice describe la conexión de red, la configuración del stream entrante, la asignación de la entrada `STREAM-1` y los ajustes básicos del canal.
+
+## Conexión LAN
+
+La recepción de audio por streaming se realiza mediante el puerto Ethernet identificado como **Streaming Out**.
+
+<Warning>
+  En el panel trasero de UNIDEX UX24 hay dos puertos Ethernet. **REMOTE CONTROL** se usa para acceder a la interfaz web de control. **STREAMING** se usa para enviar y recibir streams de audio. Para configurar streaming entrante, use el puerto Ethernet de streaming.
+</Warning>
+
+<Steps>
+  <Step title="Conectar el puerto de streaming">
+    Conecte el puerto Ethernet **Streaming Out** al router usando un cable UTP estándar.
+  </Step>
+  <Step title="Verificar la dirección IP del módulo de streaming">
+    El router asignará una dirección IP al módulo de streaming mediante DHCP. Esta dirección aparece en la pantalla principal como `Stream IP`.
+
+    <img
+      src="/images/image-1.png"
+      alt="Image"
+      title="Image"
+      style={{ width:"45%" }}
+    />
+  </Step>
+  <Step title="Elegir el método de configuración">
+    Los ajustes pueden realizarse desde la pantalla táctil de UNIDEX UX24. También pueden configurarse desde un navegador web accediendo a la dirección `Unidex IP`. El apéndice original recomienda Google Chrome.
+  </Step>
+</Steps>
+
+<Note>
+  `Stream IP` identifica la dirección IP del módulo de streaming. `Unidex IP` identifica la dirección IP usada para acceder a la interfaz web de control.
+</Note>
+
+## Configuración del streaming entrante
+
+<Steps>
+  <Step title="Abrir SETTINGS">
+    Desde la pantalla principal, toque **SETTINGS**.
+  </Step>
+  <Step title="Abrir STREAMING">
+    En la pantalla **SETTINGS**, toque la opción **STREAMING**.
+  </Step>
+  <Step title="Seleccionar DOWN-STREAM RX">
+    Toque la pestaña **DOWN-STREAM (RX)**.
+  </Step>
+  <Step title="Habilitar el módulo">
+    Cambie el control **ENABLE/DISABLED** a **ENABLED**.
+  </Step>
+  <Step title="Seleccionar el protocolo">
+    En el campo **PROTOCOL**, seleccione el protocolo según el tipo de streaming y el protocolo usado por el equipo encoder o por la fuente de streaming.
+  </Step>
+  <Step title="Ingresar la fuente de streaming">
+    En **SERVER URL**, ingrese la URL o la dirección IP de la fuente de streaming. Cuando el protocolo seleccionado es HTTP, aparece el campo `PATH/MOUNT`, requerido por servidores Icecast. 
+
+    Para enlaces de straming públicos bajo protocolo http o mms; en enalce deberá interpretearse para cargar cada sección de información en el campo correspondiente. Por ejemplo, el enlace de streaming https://server1.stweb.tv/rcvos/live/playlist.m3u8 se ingresa:<br /><br />PROTOCOL: http<br />SERVER URL: [server1.stweb.tv](http://server1.stweb.tv)<br />PATH MOUNT: /rcvos/live/playlist.m3u8
+  </Step>
+  <Step title="Ingresar el puerto ">
+    En **PORT**, ingrese el mismo número de puerto definido en el encoder o en la fuente de streaming.<br />Para streamings públicos (http; mms) ingresar puerto 0.
+  </Step>
+  <Step title="Aplicar la configuración">
+    Toque **APPLY** para confirmar los valores.
+  </Step>
+</Steps>
+
+## Protocolos y formatos de audio
+
+UNIDEX soporta los siguientes protocolos para streaming entrante:
+
+- **RTP** (PCM 44.1 kHz y MP3)
+- **HTTP**, para servidores Icecast y Shoutcast
+- **MMS**
+
+## Redirección de puertos
+
+Según la arquitectura de red, puede ser necesario configurar redirección de puertos, también llamada **port forwarding**, para que el stream entrante alcance a UNIDEX UX24.
+
+Esto aplica, por ejemplo, cuando un stream RTP proviene desde fuera de la red LAN.
+
+<Note>
+  Cuando la fuente de streaming y UNIDEX UX24 se encuentran dentro de la misma LAN, no es necesario configurar port forwarding.
+</Note>
+
+## Asignación de la entrada STREAM-1
+
+Cuando el módulo **DOWN-STREAM (RX)** está habilitado, la señal de audio entrante reemplaza automáticamente a la entrada estéreo`AES3 1`. La etiqueta de esa entrada cambia a `STREAM-1`.
+
+Para asignar `STREAM-1` a uno canal de la consola, siga este procedimiento.
+
+<Steps>
+  <Step title="Abrir PANTALLA SETTINGS">
+    Desde la pantalla principal, toque **SETTINGS**. Se mostrará la opción INPUTS.
+  </Step>
+  <Step title="Abrir la configuración de entradas">
+    Localice las entradas `STREAM-1 L` y `STREAM-1 R`. Si es necesario, use el encoder rotativo.
+  </Step>
+  <Step title="Confirmar el modo estéreo">
+    Toque el control de modo y configure la entrada como **STEREO**. Este es el modo predeterminado para `STREAM-1`.
+  </Step>
+  <Step title="Asignar la entrada a un canal">
+    Toque el menú desplegable **ASSIGNED TO CHANNEL** y seleccione el canal al que desea asignar la entrada `STREAM-1`.
+  </Step>
+  <Step title="Volver a la pantalla principal">
+    Presione **BACK** para regresar a la pantalla principal.
+  </Step>
+</Steps>
+
+## Configuración del canal
+
+Después de asignar `STREAM-1` a un canal, configure los parámetros básicos del canal: modo, etiqueta, ganancia y comportamiento del botón **CUE**.
+
+<Steps>
+  <Step title="Entrar en modo de selección de canal">
+    En la pantalla principal, presione **CHANNEL**. Los botones **CUE** pasan temporalmente al modo **SELECT**.
+  </Step>
+  <Step title="Seleccionar el canal">
+    Presione el botón **SELECT** del canal que desea configurar. La consola vuelve al modo normal y muestra la pantalla **CHANNEL** correspondiente al canal seleccionado.
+  </Step>
+  <Step title="Seleccionar un canal virtual">
+    Para seleccionar canales virtuales, gire el encoder hasta ubicar el canal deseado y presione el encoder para confirmar.
+  </Step>
+  <Step title="Configurar el modo del canal">
+    Configure **CHANNEL MODE** como **LINE**.
+  </Step>
+  <Step title="Editar la etiqueta">
+    Para editar **LABEL**, toque el nombre del canal. Aparecerá un teclado táctil para ingresar la nueva etiqueta.
+  </Step>
+  <Step title="Ajustar la ganancia">
+    Gire el encoder hasta enfocar el control **GAIN**. Presione el encoder y luego gírelo para modificar el valor.
+  </Step>
+  <Step title="Definir el nivel operativo">
+    Ajuste **GAIN** para que los picos de señal alcancen aproximadamente `-9 dBFS` en el medidor de nivel.
+  </Step>
+  <Step title="Configurar el comportamiento de CUE">
+    En la sección **ACTIONS**, defina el comportamiento del botón **CUE** para ese canal. El apéndice original muestra las opciones `CUE SOLO` y `CUE AUTO-OFF`.
+  </Step>
+</Steps>
+
+## Diagrama de referencia
+
+El diagrama muestra una aplicación típica con una estación principal y un sitio remoto.
+
+![Recurso 1entradas](/images/Recurso-1entradas.png "Recurso 1entradas")
+
+En la estación principal, un streamer entrega audio PCM o MP3 hacia una dirección IP externa y un puerto definido. La señal atraviesa la red WAN y llega al router del sitio remoto.
+
+En el sitio remoto, el router debe reenviar el puerto externo hacia la dirección `Stream IP` de UNIDEX y hacia el puerto configurado en el módulo **DOWN-STREAM (RX)**.
+
+<Note>
+  En una conexión dentro de la misma LAN, la fuente de streaming puede llegar directamente a UNIDEX sin redirección de puertos.
+</Note>
+
+El diagrama menciona decodificadores alternativos que podrían recibir el stream en otras configuraciones, entre ellos:
+
+- Solidyne DX816 On-Air Mixer
+- Solidyne ADA102 Decoder
+- Solidyne 542 APC FM Processor
+- Equipos de otras marcas
+
+## Glosario de etiquetas de interfaz
+
+| Etiqueta | Uso en esta documentación |
+| --- | --- |
+| `DOWN-STREAM (RX)` | Módulo de streaming entrante de UNIDEX UX24. |
+| `Streaming Out` | Puerto Ethernet usado por el módulo de streaming para enviar y recibir audio. |
+| `REMOTE CONTROL` | Puerto Ethernet usado para acceder a la interfaz web de control. |
+| `STREAMING` | Puerto Ethernet dedicado a streams de audio. |
+| `Stream IP` | Dirección IP asignada por DHCP al módulo de streaming. |
+| `Unidex IP` | Dirección IP usada para acceder a la interfaz web de la consola. |
+| `SERVER URL` | URL o dirección IP de la fuente de streaming. |
+| `PATH/MOUNT` | Ruta o mount point usado por servidores HTTP, especialmente Icecast. |
+| `PORT` | Puerto de red definido en la fuente de streaming. |
+| `STREAM-1` | Etiqueta asignada a la entrada de audio entrante cuando se habilita `DOWN-STREAM (RX)`. |
+| `AES3 1` | Entrada estéreo reemplazada automáticamente por `STREAM-1`. |
+| `CUE` | Botón de preescucha del canal; también se usa temporalmente como `SELECT` al configurar canales. |

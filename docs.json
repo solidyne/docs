@@ -192,6 +192,17 @@
                     ]
                   }
                 ]
+              },
+              {
+                "anchor": "Documentos relacionados",
+                "groups": [
+                  {
+                    "group": "Notas de aplicación",
+                    "pages": [
+                      "unidex_appnote_downstream"
+                    ]
+                  }
+                ]
               }
             ]
           },
