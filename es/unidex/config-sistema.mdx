@@ -8,7 +8,7 @@ tags: ["consolas IP","UNIDEX","ux18","ux24"]
 
 ## Configuraciones de sistema
 
-La opción SYS CONFIG de la pantalla SETTINGS permite configurar distintas funciones de sistema.
+La opción **SYS CONFIG** de la pantalla SETTINGS permite configurar distintas funciones de sistema.
 
 <img
   src="/images/ux24/unidex-config-sysconfig.jpg"
@@ -59,15 +59,20 @@ Defina el huso horario correspondiente en el campo `Time Zone`.
 ## Usuarios y niveles de acceso
 
 Se acceden desde la pantalla **SETTINGS**, en la opción **USERS**.\
-UNIDEX dispone de tres niveles de usuario:
+UNIDEX dispone de varios niveles de usuario con restricciones predefinidas:
 
 - **ADMIN**
 - **EXPERT**
 - **BASIC**
+- **GUEST** (solo en UX24)
 
-Los perfiles **ADMIN** y **EXPERT** están protegidos por contraseña, definida desde esta pantalla.\
-Solo el usuario **ADMIN** puede modificar contraseñas.\
-Las contraseñas predeterminadas son los nombres de usuario en minúsculas: `admin` y `expert`.
+Los perfiles **ADMIN,** **EXPERT** (y BASIC en UX24) están protegidos por contraseña, definida desde esta pantalla.
+
+<Warning>
+  **Solo el usuario ADMIN puede modificar contraseñas.**
+</Warning>
+
+La contraseña predeterminada es el nombre de usuario en minúsculas: admin,  expert, basic (en UX18 Basic no requiere contraseña).
 
 #### Cómo iniciar con acceso restringido
 
