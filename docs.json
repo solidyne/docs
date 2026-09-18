@@ -199,7 +199,7 @@
                   {
                     "group": "Notas de aplicación",
                     "pages": [
-                      "unidex_appnote_downstream"
+                      "es/unidex/unidex_appnote_downstream"
                     ]
                   }
                 ]
