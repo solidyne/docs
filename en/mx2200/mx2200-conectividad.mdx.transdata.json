@@ -1,0 +1,77 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "6d7bfabb250bd411f9e81e1610db2e63279e73bd3c98719ca98ece0dda9d7076",
+      "translation": "## Rear Panel Connectors\n\n<img\n  src=\"/images/mx2200/mx2200-trasero.png\"\n  alt=\"Mx2200 Rear Panel\"\n  title=\"Mx2200 Rear Panel\"\n  className=\"mx-auto\"\n  style={{ width:\"92%\" }}\n/>",
+      "title": "Conectores en el panel trasero",
+      "level": 2
+    },
+    {
+      "hash": "61ccd06e6a53f7620c257a9f2eff558db3141a62546e5e77c1e4de4044dd0d29",
+      "translation": "### Power Supply (1)\n\n1. **External power input**: 2 mm barrel connector (pin \\+).\n   - 90/240 V switching power supply → output **12 V / 1.5 A**.\n   - Also accepts an external 12 V battery (observe polarity).\n2. **Internal battery**: approx. **4 hours** of autonomy (SIP call via Ethernet, without Wi-Fi or Bluetooth).\n3. **Recharging**: performed with the unit **powered on and connected** to the external power supply.\n   - Full charge time (from a fully depleted battery): **10 hours**.\n\n<Warning>\n  The use of **external power supplies not provided by the factory** will result in **voiding the warranty**.\n</Warning>\n\n---",
+      "title": "Alimentación (1)",
+      "level": 3
+    },
+    {
+      "hash": "1cf7e15633250164ffaf93c0b6bb6292ef2693eaa4a43f17c8e5dfa9196a0d11",
+      "translation": "### On-air Light (2)\n\n- 2.5 mm barrel connector (pin +).\n- Provides **12 VDC**, supports up to **200 mA**.\n- When an on-air light is connected:\n  - The **headphones #1** output switches to behave as a **monitor** output.\n  - It is automatically muted when the microphones are activated, to avoid feedback.",
+      "title": "Luz de aire (2)",
+      "level": 3
+    },
+    {
+      "hash": "761b4647ad0067a105c7ae39f25e582677e30c42c84a42842dbf39e79f3270de",
+      "translation": "### USB Audio (3)\n\n- Digital connection to the computer via USB A/B cable (use the provided cable).\n- Recommendation: do not exceed **4 m** in length.\n\n  <Warning>\n    Ensure the computer is properly **grounded**.\\\n    If it is not, the USB input on the console or the computer could be damaged.\n  </Warning>\n- Compatible with Windows 7 through 11, Linux Ubuntu, and macOS (automatic recognition).\n- The system detects:\n  - **USB playback device** → LINE USB input on the console.\n  - **USB recording device** → audio output from PGM.\n\n  <Note>\n    In Windows, this can be managed in: **Control Panel → Sound → Audio** → selection of playback and recording devices.\n  </Note>\n\n---",
+      "title": "USB Audio (3)",
+      "level": 3
+    },
+    {
+      "hash": "ca29094590c52e26c414d99842b40c6d458e5144c83857d1529a155054fb1741",
+      "translation": "### Microphones (4)\n\n- Four balanced (XLR) inputs for dynamic microphones.\n- **MIC 3 and MIC 4** share the same fader.\n- Recommendation: use microphones of the same brand and model on shared inputs.\n\n---",
+      "title": "Micrófonos (4)",
+      "level": 3
+    },
+    {
+      "hash": "10fc2cbb9f038884774d4026ad4d8e484e898657dfcde4353b5a8943906382eb",
+      "translation": "### Headphones (5)\n\n- Four 1/8\" (minijack) TRS outputs.\n- All deliver the same level, controlled by the **CUE MONITOR** knob.\n- Output #1 can be used as a **monitor speaker** output:\n  - It is automatically muted when an **on-air light** is connected and activates when microphones are sent to PGM.",
+      "title": "Auriculares (5)",
+      "level": 3
+    },
+    {
+      "hash": "d2da3d1c1f5aca6a5f638b409612ad00f26000182c782ec68020a608f1c38baf",
+      "translation": "### Land line (POTS) (6)\n\n- RJ11 connector for POTS line connection.\n- Can be connected directly to the public telephone exchange or to a PBX (private branch exchange).\n- Internal surge protection with varistors.\n\n  <Warning>\n    Additional protection is recommended in storm-prone areas.\\\n    Damage caused by lightning **is not covered by the warranty**.\n  </Warning>\n- **NULL preset** allows adjustment of the hybrid's rejection.\n\n  <Accordion title=\"Rejection (NULL) Adjustment\" icon=\"gear\">\n    It is performed when connecting the console to the line. If the console is disconnected and later reconnected to the same phone line, it is not necessary to repeat the adjustment.\\\n    However, it should be readjusted each time it is connected to a different line.\n\n    <Steps>\n      <Step title=\"Prepare the signal\">\n        Send spoken content to PGM from the computer. If no spoken content is available, you can speak live using the microphones.\n      </Step>\n      <Step title=\"Establish a call\">\n        Make a call using the land line (PHONE).\n      </Step>\n      <Step title=\"Mute the other party\">\n        Ask the other end to activate **mute** or remain silent.\\\n        You can call your own mobile phone and mute its microphone.\n      </Step>\n      <Step title=\"Listen in CUE\">\n        Remove PGM from headphones (PGM button in CUE released).\n        Listen to the line in CUE.\n      </Step>\n      <Step title=\"Adjust the NULL preset\">\n        Turn the NULL preset until you find the point of **minimum return**.\n      </Step>\n      <Step title=\"Finish\">\n        End the communication.\n      </Step>\n    </Steps>\n  </Accordion>\n\n---",
+      "title": "Línea telefónica terrestre (6)",
+      "level": 3
+    },
+    {
+      "hash": "4893c6ab24d28d23645f950c4654fe70c382b6eb126e64fbc40c845b8ceddfac",
+      "translation": "### Stereo line input (7)\n\n- Unbalanced 1/4” TRS connector.\n  - Controlled by the LINE fader when **USB is not connected**.\n  - If USB is active, LINE becomes a secondary input (from the PHONE section).\n\n<Warning>\n  If the link is via Bluetooth, **LINE IN cannot be summed** from the PHONE section.\\\n  It will only be available from the LINE fader if USB Audio is not connected.\n</Warning>\n\n---",
+      "title": "Entrada de línea estéreo (7)",
+      "level": 3
+    },
+    {
+      "hash": "e3b3680e967f42ab065f094c78e27e359023729c11f44defaf86c94faa495ab5",
+      "translation": "### Program Insert (8)\n\n- **Stream-In** input TRS 1/4” with break contact.\n- When connected, **replaces the internal mix** of PGM on **streaming and USB**.\n- Allows the use of external processors:  _PGM Out → Processor → Stream-In_.",
+      "title": "Inserción de programa (8)",
+      "level": 3
+    },
+    {
+      "hash": "12e5eb105d2c1cd9e090c498247062b3eea0e50102db8e743de6c08685a5b6b1",
+      "translation": "### Program Output (9)\n\n- **Stereo PGM Out** (TRS 1/4”).\n- Sends the complete mix: microphones, USB, auxiliary line, and phone lines.\n\n---",
+      "title": "Salida de programa (9)",
+      "level": 3
+    },
+    {
+      "hash": "e35b4df6f09d310b9af803f442726c21cbed88dca9c182ebd48a4d8ad7ce0c4a",
+      "translation": "### Ethernet (Wired Network)  (10)\n\n- RJ45 port for connection to local network.\n- Uses:\n  - Web access for CODEC configuration.\n  - Internet connection for SIP and streaming.\n  - Web access to recordings.\n- Factory default setting: **DHCP enabled**.\n\n---",
+      "title": "Ethernet (red por cable)  (10)",
+      "level": 3
+    },
+    {
+      "hash": "d1ba1d206df66f8892f1c4841f931362e5baa780b5c3948e5906becb9b6c7c89",
+      "translation": "### USB Ports (Wi-Fi and Modem)  (11)\n\n- USB 2.0 Type A ports.\n- Allow connection of:\n  - **Wi-Fi antenna**.\n  - **4G modem** (requires a 1 m extension cable).\n\n<Warning>\n  **Do not connect a USB modem directly to the port**. It can cause **audible interference**.\\\n  Always use an extension cable to separate the modem from the console.\\\n  This will also allow you to reposition the modem if you get a weak signal indication.\n</Warning>",
+      "title": "Puertos USB (Wi-Fi y Módem)  (11)",
+      "level": 3
+    }
+  ]
+}

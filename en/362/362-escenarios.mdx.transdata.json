@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "bbf161288079de859cd96b287fd22cc1cdab82323e7d5db3dadb439e3db36453",
+      "translation": "## FM Stereo Processor and Coder\n\nThis is the typical use as an **FM audio processor**.\\\nThe unit is located at the **transmitter site** and is connected, via the **MPX output**, to the main transmitter.\n\n- The **secondary MPX output** allows connection to a backup transmitter.\n- The program signal enters through the **analog inputs**.\n\n<Warning>\n  Always use the appropriate input (**balanced or unbalanced**) according to the on-air console.\n</Warning>\n\nWhen the transmitter site is remote from the studio, the processor is installed at the transmitter site and receives the program audio (PGM) via a point-to-point link, which can be:\n\n- RF audio.\n- Digital audio via fiber optic or UHF.",
+      "title": "Procesador y codificador estéreo en FM",
+      "level": 2
+    },
+    {
+      "hash": "99056cadf46d996d4a97905b5b5a34aa72a75fa7d4f869b401c8f3a35134675e",
+      "translation": "### USB Output for External Streaming\n\nRequires the **Audimax 362HD/USB** model.\\\nThe **USB connection operates independently from MPX**, allowing the same on-air processing to be used for Internet streaming.\n\n- The processor receives the program signal through analog inputs.\n- Sends the processed audio to both the **digital USB output** and **MPX outputs**.\n- A computer receives the audio via USB for streaming purposes.\n\nThis configuration provides:\n\n- **MPX** → FM transmitter.\n- **USB** → streaming computer.\n\n<Note>\n  It's recommended to install **remote access software** on the computer to facilitate monitoring of the streaming system.\n</Note>\n\n---",
+      "title": "Envío USB para streaming externo",
+      "level": 3
+    },
+    {
+      "hash": "bfe1836427c562d59c962510314cb313aca08df5b0a0239d8c1aeb1c4b9ab754",
+      "translation": "## Incoming Streaming Rebroadcast on FM\n\nThis setup also requires the **Audimax 362HD/USB** model and an external computer.\\\nIt is used, for example, in **signal repeater stations**.\n\n- An external computer receives the streaming from the main station (via Internet or LAN).\n- It decodes it and sends it in **PCM** to the processor through the USB connection.\n- The Audimax 362 processes the audio and delivers it to the **MPX outputs**, which feed the FM transmitter.\n\n<Note>\n  It is recommended to install **remote access** software on the computer for monitoring the streaming encoder.\n</Note>\n\n---",
+      "title": "Retransmisión de streaming entrante en FM",
+      "level": 2
+    },
+    {
+      "hash": "7026921e6a3a829c6ba7599cded2d991dc6769da47bf475b15f54f1e62e7e0ed",
+      "translation": "## Uses as an Audio Processor (HD Mode)\n\nIn **HD mode (High Definition)**, the Audimax 362HD can be used in applications requiring dynamic control or loudness enhancement **without FM transmission** (MPX disabled; see [HD Mode](/es/362/362-instalacion-audio)).",
+      "title": "Usos como procesador de audio (modo HD)",
+      "level": 2
+    },
+    {
+      "hash": "4193f0176c1b490208c13b9dd2c2e11fb734ddbfa8896d0fd233201ae4a5dfa0",
+      "translation": "### Application Examples:\n\n- Radio stations with digital broadcasting (HD Radio).\n- High-quality streaming transmission.\n- Audio pre-processing in mobile field units.\n- Sound reinforcement in small shows or rehearsal rooms.\n- Venues, auditoriums, conferences, and functional music systems.\n\nIn this mode:\n\n- Peak control allows for maximum utilization of the digital range, with a minimal safety margin (2–3 dB) to avoid clipping on encoding overshoots.\n- A **soft clipper** is coupled to the audio outputs, which limits peaks after the multiband compressor and protects the PA power stages.\n- The combination of **AGC** and **multiband compression** maintains a uniform and clear sound, independent of input signal variations.",
+      "title": "Ejemplos de aplicación:",
+      "level": 3
+    }
+  ]
+}

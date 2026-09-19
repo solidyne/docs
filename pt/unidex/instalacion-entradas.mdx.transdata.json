@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "5aedac7f8bbafd17cada3b42a88bebc74714803b3e8c54925ae5b735ba645385",
+      "translation": "<Tip>\n  Cada entrada pode ser atribuída a qualquer um dos canais físicos ou virtuais.\n</Tip>",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "7453cd8a9ae90f9807fdd4fbd2dcaf41126680047e9945b49139be48b30459a2",
+      "translation": "## <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas para microfones\n\nAs entradas balanceadas para microfones suportam alimentação *phantom* **48 V.** A tensão é ativada/desativada para cada canal a partir da tela.\n\nCada entrada possui um **microinterruptor que permite reduzir o ganho do pré-amplificador em –12 dB.** O interruptor na posição para baixo **ativa a atenuação**.\n\n<Info>\n  Na UX18, a entrada MIC-5 é de nível fixo.\n</Info>",
+      "title": "<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas para micrófonos",
+      "level": 2
+    },
+    {
+      "hash": "7fe7a5cf21db1b68c6085ee768db12d401def0efc9db83912cde37f0442bfbf7",
+      "translation": "## <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#6f07ab\" size=\"22\" />  Entradas tipo UNIDEX\n\nAs entradas tipo **UNIDEX** são entradas especiais que, além de áudio, transportam **alimentação PoE** e canais de **comunicação de controle** para operar os **adaptadores externos** Solidyne **UDX**.\n\nNormalmente são utilizadas para conectar **adaptadores UDX** que permitem adicionar microfones, linhas telefônicas ou telefones celulares.\n\nAs entradas UNIDEX também **podem ser usadas como entradas balanceadas** convencionais. Cada conector de entrada UNIDEX contém os sinais balanceados esquerdo e direito.",
+      "title": "<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#6f07ab\" size=\"22\" />  Entradas tipo UNIDEX",
+      "level": 2
+    },
+    {
+      "hash": "85ab45adf67499cc8638b464bf62a6aaee66dbaaab22b3dcf7bb1c02eacc8be2",
+      "translation": "## <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas analógicas balanceadas\n\n- Cada entrada utiliza um **único cabo** STP que transporta os sinais balanceados **esquerdo e direito**.\n- Na extremidade, o RJ45 é adaptado para o tipo de conector de áudio necessário (XLR, TRS, RCA).\n\nPara conectar uma fonte em **modo desbalanceado**, deve-se utilizar um **cabo adaptador adequado**, conectando:\n\n- O terminal de sinal **(–)** à **malha** do cabo.\n- O terminal de sinal **(\\+)** como o **vivo** do sinal.",
+      "title": "<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas analógicas balanceadas",
+      "level": 2
+    },
+    {
+      "hash": "88821bbf8f96ff4c1c48be049766f5a3bf86cff11db210875a0fc0fc0adce93d",
+      "translation": "## <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas digitais AES3\n\n- São conectadas por cabo **RJ45–RJ45 CAT5**, utilizando o adaptador **SOL-F3/XLRF**.\n- Para facilitar a compatibilidade da fiação, utilizam o **mesmo pin-out** das entradas balanceadas estéreo, embora o cabo **utilize apenas o canal esquerdo** para o sinal AES3.\n- Suportam sinais **S/PDIF**.\n\n<Note>\n  Quando a função de downlink de streaming é habilitada, o áudio decodificado substitui internamente a entrada **AES1**. O conector **AES-1** no painel traseiro é internamente desconectado.\n</Note>",
+      "title": "<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas digitales AES3",
+      "level": 2
+    },
+    {
+      "hash": "8bc3540b59630a6ed01662385f2428176c8021fc0da2dd35f680d547742729a4",
+      "translation": "## Entrada para sintonizador externo\n\nA console possui uma **entrada estéreo para sintonizador externo** (ON AIR MONITOR) através de um conector TRS de 1/4” (não balanceado). Esta entrada está disponível na atribuição de monitoração para o Estúdio e o Controle, permitindo ouvir diretamente o sintonizado.\n\n<Tip>\n  Em FM, é importante que tanto nos estúdios quanto na cabine de controle, a monitoração seja realizada com o sinal **no ar processado**, não a partir do barramento PGM direto. Isso permite detectar erros reais de emissão e oferece uma escuta mais confortável, sem saltos de volume que podem ocorrer no sinal direto.\n</Tip>\n\n<Note>\n  Na **UX18**, a entrada **ON AIR MONITOR** também pode ser atribuída a um canal; de modo que opera como uma entrada auxiliar adicional quando não é usada para monitoração de emissão no ar.\n\n  Quando atribuída a um canal, ela permanece disponível como fonte elegível na seção de monitoração.\n</Note>",
+      "title": "Entrada para sintonizador externo",
+      "level": 2
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "b1c97db0c7cd6cd24c7ff6ee7d3b75afd855f5877e68597aa87eee1711c124fe",
+      "translation": "![AUDICOM MONITORES Pn](/images/thumbnails/AUDICOM-MONITORES.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "d9fc92d0ee09e284a311c65073564574ec1f989be77788dd357a59958732572e",
+      "translation": "## Introduction\n\n**AUDICOM-14 Black Edition** is a suite of tools designed for the management and automation of radio stations and audiovisual media.\\\nIts modular and flexible design allows it to adapt to workflows ranging from small stations to large media operations with multiple studios.",
+      "title": "Introducción",
+      "level": 2
+    },
+    {
+      "hash": "ee0f943b66623506857c0abae66117c3328033064b93652e9cce3b446ca85f44",
+      "translation": "## Models",
+      "title": "Modelos",
+      "level": 2
+    },
+    {
+      "hash": "72de89098fb51bcef49a56a992543723d7894b46e7d203c4b5d83a14448fa632",
+      "translation": "### Audicom Black\n\nVersion designed for traditional radio stations (without video content).\n\n- Integrates the **Admicom** commercial scheduling module, which manages advertising orders, schedule certification, and live mention auditing (PNT).\n- Enables centralized management of station networks, linking remote stations via streaming and synchronizing materials over the Internet.\n- Publishes content across multiple platforms: on-air broadcast, web streaming, podcasts, and streaming links with smart metadata.\n- The metadata allows linking remote stations via Internet or VPN, generating differentiated commercial blocks and local identifications.",
+      "title": "Audicom Black",
+      "level": 3
+    },
+    {
+      "hash": "aea3931ea9a23ea1f93e56432a1e6e581275bb93ac71127258fb4df6b7b48dbc",
+      "translation": "### Audicom Black Video\n\nDesigned for audiovisual media and Internet broadcasting.\n\n- Features **Audicom Video Composer**, a video switcher with integrated graphics generator for studio camera management.\n- Supports HD video playback across all modules, combining sources such as cameras, Skype, Zoom, and graphics.\n- The **AutoVJ** module automates camera direction based on microphone signals received from the on-air console, freeing the operator from this task.\n- **AV Composer** encodes and generates audio and video streaming, transmitting it to servers for distribution across various platforms.\n- This technology allows media outlets to expand and compete in the digital environment without requiring major structural changes or increased costs.",
+      "title": "Audicom Black Video",
+      "level": 3
+    },
+    {
+      "hash": "035149e84fab390102efed6c01c03865898b64ab28037acd35fcae30208c1923",
+      "translation": "## Integrated Management\n\nAudicom is not just an audio and video playout system, but encompasses all levels of production and operation within a radio station's studios.",
+      "title": "Gestión integrada",
+      "level": 2
+    },
+    {
+      "hash": "9375312cceffcab8bd43fa8cd9155edaa85408e3259bc109fd5bbcf580445991",
+      "translation": "### On-air Management of Audio and Video\n\n**24-hour Timeline View**\n\n- The main on-air operation screen (**CyberPlay**) organizes daily programming from 00:00 to 24:00.\n- It integrates commercials, live segments, automated content, news, prerecorded material, remote links, and special events.\n- It can also operate in \"cart machine\" mode to handle only commercial scheduling.\n\n**Live Content**\n\n- The operator has access to 4 auxiliary playback lists (**Playlist Manager**).\n- Features two quick-access button panels (**Live Assist**), a one-touch recorder (**Instant Rec**), and an SQL database search engine.\n- Includes dedicated monitoring channels.\n- All modules handle both audio and video, except **iRec**, which records only audio.\n\n**Automated Programming**\n\n- **AutoDJ** automates music sessions in real time using AI.\n- **BotNews** generates and reads breaking news on-air using generative AI voices.\n- Also integrates remote content (streaming and communications), prerecorded material, and commercial blocks.\n- The operator can create assisted music blocks at any time and maintains control over AutoDJ-generated content.\n\n**Automated Camera Switching**\n\n- For stations broadcasting video from studios, **Audicom Video Composer** automates camera cuts based on console signals.\n- Can operate without a camera operator or allow manual direction like in a TV studio.",
+      "title": "Gestión al aire de audio y video",
+      "level": 3
+    },
+    {
+      "hash": "9ba23375eb4b301c5d3816a13d5fb45f878c3a88ed05a62ffb48a1eeba4c3f12",
+      "translation": "## Production",
+      "title": "Producción",
+      "level": 2
+    },
+    {
+      "hash": "d1482cea3f62b6188ab810bd4ec2c2702fe045fdbbdd1f50b6bd2a44d581fc3a",
+      "translation": "### Commercial Management\n\n- The **Admicom** Traffic and Billing module manages the customer and agency database, contracts, commercial spot distribution, and daily log generation.\n- It allows auditing aired spots, generating client reports, and exporting spreadsheets for external management systems.\n- In stations with lighter commercial loads, the log can be managed manually using playlists.",
+      "title": "Gestión comercial",
+      "level": 3
+    },
+    {
+      "hash": "ab8ee6526799e0d43bf260e136d79a0be502b5f9c5a1b50e97d8cad42c02975b",
+      "translation": "### Comprehensive Content Management\n\n- Daily programming from 00:00 to 24:00 is organized in **CyberPlay Editor**, which handles all events: commercial blocks, PNT mentions, live segments, breaking news, or remote content.\n- The system operates continuously, even without on-site supervision.",
+      "title": "Gestión integral de contenidos",
+      "level": 3
+    },
+    {
+      "hash": "ae8f61740559b2ae998d34f4e3ea5aba432bc582316fda71c1a5d92f5a0c1db2",
+      "translation": "### Automated Music Programming\n\n- **AutoDJ** provides an advanced AI-based music programming system.\n- Unlike systems that generate random playlists, it analyzes the characteristics of each track to select music in real time, adapting to commercial breaks, news, or other priority events.\n- Allows defining time segments with customized music selection criteria.\n- Music can be presented with pre-recorded voiceovers inserted at song intros, outros, or intermediate points.\n- In future versions, it will be possible to generate these voiceovers directly using AI voices without requiring prior recordings.",
+      "title": "Programación musical automatizada",
+      "level": 3
+    },
+    {
+      "hash": "053d874b83e1cf45f777bf66ef9b93524df41dc14e25be7c02560a1c40e51c9c",
+      "translation": "## Expansions",
+      "title": "Expansiones",
+      "level": 2
+    },
+    {
+      "hash": "6a7dff04a5b3954d5e647994a51331b37bd9bdbab1d5443d2cac7916f5fc1283",
+      "translation": "### Web Tools\n\nAnnual subscription service package that extends system capabilities:\n\n- **Live presenter assistance**: Web access to a desktop with on-air title information, upcoming events, PNTs, RSS feeds, and internal chat between Audicom workstations.\n- **AI news and voices**: Enables the use of voice libraries and RSS feeds for **BotNews** to generate and read news segments.\n- **Weather data**: Automatically updated for audio announcements or video overlays in AV Composer.\n- **Remote technical support**: Enabled for all Audicom instances.",
+      "title": "Web Tools",
+      "level": 3
+    }
+  ]
+}

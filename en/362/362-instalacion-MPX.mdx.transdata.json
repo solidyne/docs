@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "a127cda044ae3ed96ea0aee2dafffb2f833c5592a1268a99a4964377c85ead6d",
+      "translation": "The **Audimax 362HD** features dual MPX output with independent level adjustments.\\\nThis allows connection to a second transmitter operating as a backup, or alternatively, to a transmitter used during nighttime.\n\n<img\n  src=\"/images/362/362-trasero-mpx.png\"\n  alt=\"362 Rear MPX Panel\"\n  title=\"362 Rear MPX Panel\"\n  className=\"mx-auto\"\n  style={{ width:\"32%\" }}\n/>\n\n- The output connectors are of the **BNC** type.\n- For MPX connection, **75 Ohm** coaxial cable (CCTV standard) must be used.\n- The cable length should not exceed **25 meters**.\n\n<Warning>\n  It is essential to maintain proper grounding distribution.\n</Warning>\n\n<Note>\n  When connecting to the transmitter via the MPX input, ensure that the transmitter's internal pre-emphasis network is disabled (flat response 20 – 100 kHz).\n  The pre-emphasis in the Audimax 362HD is factory-set, with the option to choose between 50 µs or 75 µs.\n</Note>",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "7e30fe33939e2ac52866de5271af44be46217bdc67456f8895225b8ff661310f",
+      "translation": "## Modulation Adjustment to 100%\n\nModulation is adjusted by varying the MPX output level of the unit.\\\nIt's recommended to use program material with **loud voice and music** (example: contemporary pop).\n\n<Steps>\n  <Step title=\"Prepare the input signal\">\n    - Ensure you're using the appropriate inputs (BAL/UNBAL) according to the console.\n    - Adjust the audio level on the console to reach **0 VU on peaks**.\n    - This way, the AGC stage operates at its equilibrium point.\n  </Step>\n  <Step title=\"Configure the processor and transmitter\">\n    - Set all processor controls to **center position**.\n    - If the transmitter has modulation level control, set it to maximum.\n  </Step>\n  <Step title=\"Adjust MPX output\">\n    - Vary the 362HD's MPX output level until achieving **75 kHz deviation (100%)**, measured with an **FM modulation monitor** or the transmitter's indicator instrument.\n  </Step>\n</Steps>\n\n<Note>\n  Some countries permit occasional peaks up to **110% modulation** (example: FCC regulations in the USA).\\\n  Needle-type modulation indicators may show peaks above 100% due to ballistic overshoot or average sine wave readings. This doesn't indicate actual over-modulation in the system.\n</Note>\n\nOnce the modulation level is adjusted, proceed to **customize the station's sound** by adjusting the Audimax 362HD controls.\\\nThis process doesn't affect the modulation level, as the processor delivers constant peak level.",
+      "title": "Ajuste de la modulación al 100 %",
+      "level": 2
+    }
+  ]
+}

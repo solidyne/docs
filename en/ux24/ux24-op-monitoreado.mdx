@@ -1,22 +1,20 @@
 ---
 title: "Monitoring and Communication"
 description: "UX24 Operation - Monitoring and Internal Communication (Intercom)"
-keywords: ["monitoring","cue","talkback","intercom"]
-tags: "IP consoles,UNIDEX,UX24,studiobox"
+keywords: ["monitoring", "CUE", "talkback", "intercom"]
+tags: ["consolas IP", "UNIDEX", "UX24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "1a105d9b0aed66cd56b75db7c84127abd242686ae180d336c16fe49f3474b85b"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Monitoring Section
 
-This section of the console assigns the signals to be heard through the monitor speakers and headphones in both the Studio and Control Room.\
-Here you'll also find the **A** and **B** master microphone buttons, **CUE** level control, talkback microphone, and intercom groups.
+This section of the console assigns the signals that will be heard through the studio monitor speakers and control room headphones.\
+Also located here are the master microphone buttons **A** and **B**, the **CUE** level control, the talk-back microphone, and the intercom groups.
 
 <img
   src="/images/ux24/ux24-superficie-monitoreo.jpg"
@@ -26,60 +24,60 @@ Here you'll also find the **A** and **B** master microphone buttons, **CUE** lev
   className="mx-auto"
 />
 
-The **selection controls** 1 and 2 are push-turn encoders.\
+The **selection controls** 1 and 2 are encoders with rotation and push functions.\
 To select a signal source:
 
-1. Turn the encoder: options will rotate on screen, flashing until confirmed.
-2. Push the encoder to confirm: audio switching occurs at this moment.
+1. Rotate the encoder: the options will cycle on the display, flashing until confirmed.
+2. Press the encoder to confirm: the audio switches at that moment.
 
-If you turn the knob without confirming, after 10 seconds the change is canceled and display returns to previous source.
+If the knob is rotated but not pressed to confirm, after 10 seconds the change is canceled and the display returns to the previous source.
 
 <Tip>
-  Pushing the encoder without turning returns to the previous source (shown below current one in small text), allowing quick **toggling between two sources**.
+  If the encoder is pressed without rotating, it returns to the previous source (indicated below the current one in small text), allowing **quick switching** between two sources.
 </Tip>
 
-#### 1 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} />  Studio Monitor
+#### 1 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Studio Monitor
 
-Selects the source sent to **STUDIO MONITOR** output.\
+Selects the source sent to the **STUDIO MONITOR** output.\
 Options: `AIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`, `CUE`.
 
-- Studio speakers and headphones level is adjusted from the touchscreen under **MONITOR**.
+- The level for studio speakers and headphones is adjusted from the touchscreen under the **MONITOR** option.
 
-  Usually this level remains fixed and each participant adjusts their own level from a headphone distributor.
-- In single-booth stations, monitor speakers can connect to **Control Room** output to use the physical volume knob.
+  This level is typically left fixed, with each participant adjusting their own level from a headphone distribution unit.
+- In single-booth radio stations, monitor speakers may be connected to the **Control Room** output to utilize the physical volume knob.
 
-#### 2 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Control Room
+#### 2 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Control Room (Control Room Monitoring)
 
-Selects the source sent to **CONTROL ROOM** outputs.\
+Allows selecting the source sent to the **CONTROL ROOM** outputs.\
 Options: `AIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`.
 
 <Note>
-  **Control Room Speaker Muting:**\
-  When using a microphone in the Control Room, you can configure the control speakers output to mute when activated (see _Channel Screen_).\
-  This is also used in single-studio or "hot booth" stations by connecting monitoring speakers to the **Control Room** output and setting all microphones as "located in Control Room" to enable automatic muting.
+  **Control Room Speaker Mute:**\
+  When using a microphone in the Control Room, it can be configured to mute the control room speaker output upon activation (see _Channel Display_).\
+  This is also used in single-studio or "hot studio" setups, connecting monitoring speakers to the **Control Room** output and configuring all microphones as "located in Control Room" to enable automatic muting.
 </Note>
 
-#### 3 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Control Monitor Level
+#### 3 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Control Room Monitor Level
 
-Rotary attenuator adjusting the level of speakers connected to **Control Room** output.\
-The output is line-level for active or powered speakers. Maximum level achieved will also depend on the monitors' own settings.
+Rotary fader that adjusts the level of the speakers connected to the **Control Room** output.\
+The output is line level for active or amplified speakers. The maximum level achieved will also depend on the adjustment of the monitors themselves.
 
-#### 4 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Control Headphones Level
+#### 4 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Control Room Headphones Level
 
-Rotary attenuator for operator's headphones level (connected to **Control Room Headphones**).
+Rotary fader for the operator's headphones level (connected to **Control Room Headphones**).
 
 #### 5 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> CUE Level
 
-Rotary attenuator for **CUE** bus level.\
-The main screen shows a dBfs-calibrated meter reflecting the level after CUE control. If attenuator is closed, there will be no indication.
+Rotary fader for the **CUE** bus level.\
+The main display shows a calibrated dBfs meter that reflects the level after the CUE control. If the fader is closed, there will be no indication.
 
-**SPEAKER** and **PHONES** buttons inject the CUE signal into Control Room speakers and/or headphones.
+The **SPEAKER** and **PHONES** buttons allow injecting the CUE signal into the Control Room speakers and/or headphones.
 
-- When active, CUE signal is summed to the monitored signal (shown on SOURCE display).
-- Main signal is automatically attenuated when CUE signal is present.
-- Attenuation level is configured in **MONITOR → ADVANCED** screen.
+- When active, the CUE signal is summed with the monitored signal (shown on the SOURCE display).
+- The main signal is automatically attenuated when a CUE signal is present.
+- The attenuation level is configured in the **MONITOR → ADVANCED** screen.
 
-CUE bus can be assigned to any output for auxiliary speakers connection. By default, it's assigned to **UNBAL 8**.
+The CUE bus can be assigned to any output for connecting auxiliary speakers. By default, it is assigned to **UNBAL 8**.
 
 ---
 
@@ -87,47 +85,43 @@ CUE bus can be assigned to any output for auxiliary speakers connection. By defa
 
 ### **INTERCOM**
 
-Intercom buttons (see item 6 in image) link to console audio outputs to configure advanced talkback circuits. When pressing an Intercom button, talkback microphone audio interrupts the audio on that Intercom's associated output.
+The Intercom buttons (see item 6 in the image) are linked to audio outputs from the console to configure advanced talkback circuits. When an Intercom button is pressed, the talkback microphone audio interrupts the audio on the output associated with that Intercom.
 
 <Tip>
-  **Application Cases:**
+  **Use cases:**
 
-  - Create differentiated headphone groups to talk to everyone (with Talk-Back) or specific group (with Intercom).
-  - Set up a Talk-Back button for Studio B.
+  - Set up differentiated headphone groups to speak to everyone (with Talk-Back) or to a specific group (with Intercom).
+  - Set up a Talk-Back button for a Studio B.
 </Tip>
 
 <Note>
   **Using HD3 as Intercom**
 
-  Download guide to install [Solidyne StudioBox HD3 as Intercom](http://www.solidyne.dx.com.ar/wordpress-files/DW/doc-guides/Studiobox-HD3_as_UX24s_Intercom_set.pdf).
+  Download a guide to install a [Solidyne StudioBox HD3 as Intercom](http://solidyne.dx.com.ar/DW/doc-guides/Studiobox-HD3_as_UX24s_Intercom_set.pdf).
 </Note>
 
 ### **TALK-BACK**
 
-When pressed, Talk-Back microphone is sent to STUDIO output (speakers and headphones). In headphones, Talk-Back plays through left channel while program signal (or other assigned signal) remains in right channel.
-
----
+When this button is pressed, the Talk-Back microphone is sent to the STUDIO output (speakers and headphones). In headphones, Talk-Back is played on the left channel while maintaining the program signal (or other assigned signal) on the right channel.
 
 ## MASTER-MIC Buttons
 
-Simultaneously activate all microphone channels associated with button (A or B).\
-Also activates Tally A or B signaling accordingly; and speaker muting on STUDIO output (MASTER MIC A) or audio output assigned to Studio B (MASTER MIC B).
-
----
+Simultaneously activate all microphone channels associated with the button (A or B). \
+Also triggers the corresponding Tally A or B signaling, and mutes the speakers on the STUDIO output (MASTER MIC A) or the audio output assigned to Studio B (MASTER MIC B).
 
 ## MONITOR Screen
 
-Access by pressing **MONITOR** in main screen shortcuts.
+Access by pressing \*\*MONITOR \*\*on the main screen shortcuts.
 
 <img
   src="/images/ux24/ux24-funciones-monitor.png"
-  alt="Ux24 Monitor Functions Pn"
-  title="Ux24 Monitor Functions Pn"
+  alt="Ux24 Funciones Monitor Pn"
+  title="Ux24 Funciones Monitor Pn"
   className="mx-auto"
   style={{ width:"39%" }}
 />
 
-Replicates signal assignment for Studio and Control Room, displaying options on screen in traditional button layout with "touch buttons". To change assignment, touch desired option.
+Replicates the signal assignment for the Studio and Control Room, displaying the options on screen in a traditional button layout, but with "_touch buttons_". To change an assignment, touch the option.
 
 <img
   src="/images/ux24/ux24-monitor-basic.jpg"
@@ -137,13 +131,13 @@ Replicates signal assignment for Studio and Control Room, displaying options on 
   style={{ width:"60%" }}
 />
 
-CUE level meter shown in dBfs. Displayed level is post-CUE level knob. No level indication if knob is closed.
+There is a CUE level indicator, in dBfs. The displayed level is post CUE level knob. There will be no level indication if the knob is closed.
 
 **CUE Reset**\
 Turns off all active CUE buttons.
 
 **ADVANCED**\
-Shows level controls and advanced settings for monitoring signals.
+Displays level controls and advanced settings for monitoring signals.
 
 <img
   src="/images/ux24/monitoring-adv.png"
@@ -154,56 +148,56 @@ Shows level controls and advanced settings for monitoring signals.
 />
 
 <Note>
-  To change a value, touch control and turn encoder. Push encoder to confirm.
+  To change a value, touch the control and rotate the encoder. Press the encoder to confirm.
 </Note>
 
 ### Studio Speaker
 
-Adjusts signal level for speakers connected to **Studio Monitor** output.\
-Output is line-level, designed for active speakers.
+Adjusts the signal level for speakers connected to the **Studio Monitor** output.\
+The output is line level, designed for active speakers.
 
 ### Studio Headphones
 
-Adjusts signal level for headphones connected to **Studio Monitor** output.\
-Intended to feed a headphone distributor.
+Adjust the signal level for headphones connected to the **Studio Monitor** output.\
+It is designed to feed a headphone distribution amplifier.
 
 <Warning>
-  **Note on monitoring levels:**\
-  Studio speakers and headphones output levels should be adjusted to avoid excessive amplification in active monitors or headphone distributor.\
-  If console signal is too low and amplified later, signal-to-noise ratio degrades.
+  **Monitoring Level Note:**\
+  The level of the studio's speaker and headphone outputs should be adjusted to prevent excessive amplification in active monitors or the headphone distribution amplifier.\
+  If the console's signal is too low and subsequently amplified, the signal-to-noise ratio will degrade.
 </Warning>
 
 ### On-Air Input Gain
 
-Controls gain of **Air Monitor Input** (external tuner).
+Controls the gain of the **Air Monitor Input** (external tuner).
 
 ### Ring Level
 
-Level of "ring" tone in **CUE**, generated by console when call comes in through landline or Bluetooth.
+Level of the "ring" tone in **CUE**, generated by the console when a call is received via landline or Bluetooth.
 
 ### Talkback Mic Level
 
-Adjusts talkback microphone level to Studio monitoring, Intercom and telephone lines.
+Adjusts the talkback microphone level to Studio monitoring, Intercom, and telephone lines.
 
 ### Talkback Mic Source
 
-Defines microphone input used for talkback (Studios, TELCO and Intercom).\
+Defines the microphone input used for talkback (Studios, TELCO, and Intercom).\
 Options:
 
-- Built-in ambient microphone
-- Microphone inputs 1 to 4
-- UNIDEX-4 L and UNIDEX-4 R
+- Built-in ambient microphone.
+- Microphone inputs 1 to 4.
+- UNIDEX-4 L and UNIDEX-4 R.
 - DANTE #1 (when available)
 
-Input assigned to talkback can also be assigned to a channel, for example, to put that microphone on-air.
+The input assigned to talkback can also be assigned to a channel, for example, to put that microphone on-air.
 
 ### Control Room CUE Sum Audio Att
 
-Sets attenuation of monitored signal in Control Room when CUE signal overlaps in speakers and/or headphones.\
-This attenuation also applies when activating talkback button (to studios or telephone line) or Intercom.
+Sets the attenuation of the signal being monitored in the Control Room when a CUE signal is mixed into speakers and/or headphones.\
+This attenuation is also applied when activating a talk-back button (to studios or TELCO line) or an Intercom.
 
 #### Intercom Input
 
-Adjusts **CUE** signal level from **StudioBox** accessories (reverse talkback).
+Adjusts the signal level in **CUE** coming from **StudioBox** accessories (_reverse talkback_).
 
-**Intercom to CUE:** enables or disables Intercom return into CUE bus.
+**Intercom to CUE:** enables or disables the Intercom return input to the CUE bus.

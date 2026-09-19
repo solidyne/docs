@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ecd793f254a76fe5acc86da160f9eb7c85a3c649b3cb17c6972e86e00313f17d",
+      "translation": "## General Considerations\n\nUNIDEX consoles use **RJ45** connectors for many of their inputs and outputs, employing **shielded CAT-5** multipair cable.\n\nWith the adoption of audio over IP (AoIP), the use of RJ45 connectors became standard, allowing multiple types of analog and digital connectors to be replaced by a single format. This simplifies installations and reduces the physical size of the consoles.\n\nStructured cabling offers several advantages:\n\n- A single type of cable is used for the entire installation.\n- No soldering is required.\n- It can carry analog signals, digital audio, or data.\n\nTo connect conventional audio devices (microphones, speakers, players, interfaces), **adapter cables** are used, going from a female RJ45 to the corresponding audio connector (XLR, TRS, RCA, etc.).\n\n<Warning>\n  RJ45 connectors are reliable and durable **only if the installation is done correctly**.\n\n  - It is essential to avoid hanging cables that exert tension on the connectors.\n  - **UDX adapters must be properly secured** and not left loose inside the rack or on the table.\n  - It is recommended to use **cable channels or conduits** to organize the cabling.\n  - For long runs, use RJ45-to-RJ45 cable and a short adapter from female RJ45 to the required audio connector.\n  - Use good quality STP or SFTP structured cable.\n</Warning>\n\n<Warning>\n  **Avoid mixing audio cables** with AC power cables. To prevent interference and hum, they must run on separate paths.\n</Warning>\n\n<Warning>\n  If there is persistent hum and the grounding connections are correct, it may be due to **RF standing waves** induced by the FM antenna. In these cases, it is recommended to place **ferrite beads** on all cables entering the console.\n</Warning>",
+      "title": "Consideraciones generales",
+      "level": 2
+    }
+  ]
+}

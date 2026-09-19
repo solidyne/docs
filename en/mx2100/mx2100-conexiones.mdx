@@ -1,33 +1,31 @@
 ---
 title: "Connections"
-description: "Description of MX2100 connections"
+description: "MX2100 Connection Description"
 keywords: ["connectivity", "connectors"]
-tags: ["portable consoles", "MX2100"]
+tags: ["consolas portátiles", "exteriores", "MX2100"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "d670034cefd8509c93dc9562bb7fe2da36fc187275f55ae05c1acb4fabdefa62"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Microphone Inputs
 
-The MX2100 has 3 microphone inputs (MIC-1, MIC-2 and MIC-3) with **TRS 1/4" (6.25 mm)** connectors.
+The MX2100 has 3 microphone inputs (MIC-1, MIC-2, and MIC-3) with **1/4" (6.25 mm) TRS** connectors.
 
-The preamplifiers use _local feedback_ technique, which prevents saturation at high sound pressure levels (for example, a reporter shouting a goal).
+The preamplifiers use the *local feedback* technique, which prevents saturation in the presence of high sound pressure levels (for example, a commentator shouting a goal).
 
 ### Built-in Microphone
 
-- Built-in electret microphone on the front panel (MIC-4).
-- Allows broadcasting even without external microphones.
-- Shares level control with line input and Bluetooth return.
+- Electret microphone built into the front of the unit (MIC-4).
+- Allows going on-air even without external microphones.
+- Shares the level control with the line input and Bluetooth return.
 
 <Warning>
-  MIC-4 is disabled when using USB connection (to computer or charger) or when line input is connected.\
-  The **MIC-4/LIN/Bluetooth** control presents different signals depending on the working scenario (see _Console Operation_).
+  MIC-4 is disabled if the USB connection (to a computer or charger) is used or if the line input is connected.\
+  The **MIC-4/LIN/Bluetooth** control presents different signals depending on the operating scenario (see *Console Operation*).
 </Warning>
 
 ---
@@ -35,84 +33,84 @@ The preamplifiers use _local feedback_ technique, which prevents saturation at h
 ## Line Input
 
 - **LIN-4:** mono line input.
-- Accepts direct connection from headphone outputs of portable recorders, mobile phones, laptops, tablets, etc.
-- A 1/8" stereo miniplug cable can be used, although the ring (right channel) remains unconnected in the console.
-- Shares level control with built-in microphone (MIC-4) and Bluetooth return.
+- Accepts direct connection from headphone outputs of portable recorders, mobile phones, notebooks, tablets, etc.
+- A 1/8" stereo miniplug cable can be used, although in the console the ring (right channel) remains unconnected.
+- Shares level control with the built-in microphone (MIC-4) and the Bluetooth return.
 
 <Warning>
-  If connecting stereo equipment, the input will use only one channel. The plug's ring (right channel) remains unconnected in the console.
+  If stereo equipment is connected, the input will use only one channel. The plug's ring (right channel) remains unconnected in the console.
 </Warning>
+
+---
 
 ---
 
 ## Program Output (Bal Out)
 
-- Balanced, monaural output with **TRS 1/8"** connector.
-- Signal mix: MIC-1, MIC-2, MIC-3/USB and MIC-4/LINE/Bluetooth.
+- Balanced, mono output with **TRS 1/8"** connector.
+- Mix of signals: MIC-1, MIC-2, MIC-3/USB and MIC-4/LINE/Bluetooth.
 
 ### Dynamic Processing
 
-The PGM signal goes through a dynamic range compressor designed for human voice:
+The PGM signal passes through a dynamic range compressor designed for human voice:
 
 - Controls peaks and prevents level differences.
-- Free from distortion and without background noise increase.
-- Compression indication through two front LEDs.
+- Distortion‑free with no increase in background noise.
+- Compression indicated by two front‑panel LEDs.
 
-This system allows conducting interviews with consistent levels, without requiring an audio operator.
+This system allows interviews to be conducted with consistent levels, without requiring an audio operator.
 
 The PGM output can be used to:
 
-- Connect to portable digital recorders to obtain quality recordings.
-- Send signal to Studios via VHF/UHF radio link in high quality (30-15,000 Hz).
+- Connect to portable digital recorders and obtain high‑quality recordings.
+- Send signal to studios via VHF/UHF radio link in high quality (30–15,000 Hz).
 
 ---
 
 ## Headphone Outputs
 
-- Internal signal distributor for headphones.
-- 3 outputs with 3.5mm minijack connectors.
-- The mix sent to headphones depends on connection mode and working scenario (see _Console Operation_).
+- Internal headphone signal distribution.
+- 3 outputs with 3.5 mm minijack connectors.
+- The mix sent to the headphones depends on the connection mode and work scenario (see _Console Operation_).
 
----
+## Audio USB
 
-## USB Audio
+The **MX2100** console was designed to simplify connection with laptops, enabling Internet streaming transmissions.
 
-The **MX2100** console was designed to simplify connection with laptops, enabling Internet streaming broadcasts.
-
-- The **USB** connection handles both **sends** and **returns** of signal with Studios.
-- Uses a standard **mini-USB to USB-A male** cable.
+- The **USB** connection handles both **sends** and **returns** of the signal with Studios.
+- A standard **mini-USB to USB-A male** cable is used.
 
 ### Automatic Operating System Detection
 
-When connecting the MX2100 to a computer with **Windows 7/8/10**, **Linux** or **OS-X**:
+When connecting the MX2100 to a computer running **Windows 7/8/10**, **Linux**, or **OS-X**:
 
 - The operating system detects the console and automatically installs the necessary drivers.
-- No additional drivers required.
+- No additional drivers are required.
 
 <Info>
-  In Windows, the USB device is automatically configured as the **default device**.
+  On Windows, the USB device is automatically configured as the **default device**.
 </Info>
 
 ### Detected Devices
 
-The console identifies as:
+The console is identified as:
 
-- **USB playback device (stereo out):** computer sends audio to MX2100.
-- **USB recording device (stereo in):** computer receives audio from MX2100.
+- **USB playback device (stereo out):** the computer sends audio to the MX2100.
+- **USB recording device (stereo in):** the computer receives audio from the MX2100.
 
 ---
 
-## USB Power
+## USB Power Supply
 
 - Internal rechargeable Ni-Cd battery.
-- Runtime: 16 hours of continuous use thanks to CMOS technology.
-- Included automatic multi-voltage USB external charger (100-240 VAC).
+- Battery life: 16 hours of continuous use thanks to CMOS technology.
+- Automatic multi-voltage external USB charger (100–240 VAC) included.
 - Connection via USB-A to mini-USB cable.
 
 ### Charging Time and Method
 
 - Time for full charge: ~12 hours.
-- Above that value, charging current decreases and it can remain connected without risk.
+- Above that value, the charging current decreases and it can be left connected without risk.
 - Red LED (CHG) indicates charging in progress.
-- LED remains on while unit is connected to charger, even when turned off.
-- Also charges when connected via USB to a computer.
+- The LED remains lit while the unit is connected to the charger, even when powered off.
+- It can also be recharged by connecting it via USB to a computer.

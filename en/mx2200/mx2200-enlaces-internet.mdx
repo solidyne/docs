@@ -1,38 +1,36 @@
 ---
 title: "Studio Link"
-description: "Internet connection and transmission methods."
-keywords: ["Internet","Wi-Fi","Ethernet","4G"]
-tags: ["portable consoles","CODEC","MX2200"]
+description: "Internet Connection and Transmission Methods."
+keywords: ["Internet", "Wi-Fi", "Ethernet", "4G"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "dd6256f073832f062901a19ae4c6af8e9bdef207fe2477178a04f60eee25c786"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Introduction
 
-Broadcasting to the studio can be established in different ways:
+The broadcast to the studios can be established in different ways:
 
-1. **Digital audio via Internet**
-   - SIP call (full-duplex with minimal delay).
-   - RTP streaming (transmission only).
-   - Shoutcast/Icecast server.
-2. **Mobile phone call** (Bluetooth).
-3. **Landline phone call** (POTS).
+1.  **Digital audio via Internet**
+    -   SIP call (full-duplex with minimal latency).
+    -   RTP streaming (transmission only).
+    -   Shoutcast/Icecast server.
+2.  **Mobile phone call** (Bluetooth).
+3.  **Land line phone call** (POTS).
 
-In practice, once the Internet broadcasting options are configured, the user only needs to **connect the MX2200 to the Internet** and start the desired transmission, without additional configuration.
+In practice, once the Internet broadcast options are configured, the user only needs to **connect the MX2200 to the Internet** and start the desired transmission, without requiring additional configurations.
 
-Broadcasting methods can be combined, either to have a **backup** (e.g. SIP + mobile) or as a **complement** (RTP streaming + private telephone communication with the studio).
+The broadcast methods can be combined, either to have a **backup** (e.g., SIP + mobile phone) or as a **complement** (RTP streaming + private telephone communication with the studio).
 
 ---
 
 ## Internet Connection
 
-The MX2200 CODEC-MIXER can connect to the Internet in three ways. Only **one connection** can be active at a time, although it's possible to configure more than one so that if one fails, the console automatically reestablishes the connection through another route.
+The CODEC-MIXER MX2200 can connect to the Internet in three ways. Only **one connection** can be active at a time, although it is possible to configure more than one so that if one fails, the console re-establishes the connection automatically via another route.
 
 <Tabs>
   <Tab title="Wi-Fi Connection">
@@ -40,8 +38,8 @@ The MX2200 CODEC-MIXER can connect to the Internet in three ways. Only **one con
       <Step title="Connect antenna">
         <img
           src="/images/mx2200/mx2200-antena.png"
-          alt="Mx2200 Antena Pn"
-          title="Mx2200 Antena Pn"
+          alt="Mx2200 Antenna Pn"
+          title="Mx2200 Antenna Pn"
           style={{ width:"15%" }}
         />
 
@@ -52,10 +50,10 @@ The MX2200 CODEC-MIXER can connect to the Internet in three ways. Only **one con
         </Tip>
       </Step>
       <Step title="Verify connection">
-        The Wi-Fi icon will appear at the top of the HOME screen. Initially, it will be shown in gray (no signal).
+        The Wi-Fi icon will appear at the top of the HOME screen. Initially it will be displayed in gray (no signal).
       </Step>
       <Step title="Access available networks">
-        Turn the encoder to **SETUP**, press to access, then select **Wi-Fi**.\
+        Turn the encoder to **SETUP**, press to access, and then select **Wi-Fi**.\
         A list of available networks will be displayed.
 
         <img
@@ -66,7 +64,7 @@ The MX2200 CODEC-MIXER can connect to the Internet in three ways. Only **one con
         />
       </Step>
       <Step title="Select and connect">
-        Choose the desired network and enter the password using the **DATA ENTRY** keypad.
+        Choose the desired network and enter the password using the **DATA ENTRY** keyboard.
 
         <img
           src="/images/mx2200/mx2200-display-wifi.pass.png"
@@ -76,20 +74,20 @@ The MX2200 CODEC-MIXER can connect to the Internet in three ways. Only **one con
         />
 
         - If the password is valid, the network assigns an IP address (visible in **SETUP/Wi-Fi**). This may take a few seconds.
-        - If incorrect, the IP will remain at **0.0.0.0** and you must repeat the procedure.
+        - If it is incorrect, the IP will remain **0.0.0.0** and you must repeat the procedure.
       </Step>
       <Step title="Confirm connection">
         Once connected, the Wi-Fi icon on the main screen will show the **signal strength**.\
-        The equipment is ready for SIP calls, RTP streaming, or web server connection.
+        The unit is ready for SIP calls, RTP streaming, or web server connection.
       </Step>
     </Steps>
     <Note>
-      You can verify Internet access by connecting a mobile phone or laptop to the same Wi-Fi network and browsing the web.\
-      It's also possible to use a **mobile phone in Hotspot mode**, creating a Wi-Fi node to which the MX2200 will connect.
+      You can check Internet access by connecting a mobile phone or notebook to the same Wi-Fi network and browsing the web.\
+      It is also possible to use a **mobile phone in Hotspot mode**, creating a Wi-Fi node to which the MX2200 will connect.
     </Note>
     <Warning>
-      **Public open networks**\
-      Always verify the network being used. On open networks with web login, the MX2200 may indicate "connection OK" even when there is no actual Internet access.
+      **Open public networks**\
+      Always verify the network being used. On open networks with a web login, the MX2200 may indicate "connection OK" even if there is no real Internet access.
     </Warning>
   </Tab>
   <Tab title="Ethernet Connection">
@@ -98,14 +96,14 @@ The MX2200 CODEC-MIXER can connect to the Internet in three ways. Only **one con
         Using a standard UTP cable, connect the MX2200's **Ethernet** port to the local network.
       </Step>
       <Step title="IP assignment">
-        By default, the console has **DHCP enabled**, so the router/switch will automatically assign an IP address.
+        From the factory, the console has **DHCP enabled**, so the router/switch will automatically assign an IP address.
       </Step>
       <Step title="Verify IP">
-        On the **SETUP** screen, confirm that a valid address has been assigned (different from **0.0.0.0**).
+        On the **SETUP** screen, confirm that a valid address (different from **0.0.0.0**) has been assigned.
       </Step>
     </Steps>
     <Note>
-      To verify Internet access, connect a laptop to the same network and open a web browser.
+      To check Internet access, connect a notebook to the same network and open a web browser.
     </Note>
   </Tab>
   <Tab title="4G/5G Connection">
@@ -122,10 +120,10 @@ The MX2200 CODEC-MIXER can connect to the Internet in three ways. Only **one con
         />
       </Step>
       <Step title="Verify icon">
-        Once detected, the **4G** icon will appear on the main screen.
+        Once detected, the **4G** icon will be displayed on the main screen.
       </Step>
       <Step title="Confirm operation">
-        The equipment is ready to initiate SIP calls, RTP streaming, or web server connection.
+        The unit is ready to initiate SIP calls, RTP streaming, or web server connection.
       </Step>
     </Steps>
     <Warning>

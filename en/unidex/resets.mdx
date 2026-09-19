@@ -1,61 +1,57 @@
 ---
 title: "Power On, Off and Resets"
-description: "Startup and shutdown. System module resets"
-keywords: ["power", "resets", "restart"]
-tags: ["IP consoles", "UNIDEX"]
+description: "Power on and off. Restarting system modules"
+keywords: ["power on", "resets", "restart"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "eec92a3f36f6c902a8cf9ace22280c8f45adb2d4c8b26978a19726c486020833"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Startup Sequence
 
-When powering on the console, UNIDEX starts its operating system. Once the startup sequence is complete, the **main screen** appears and loads:
+When the console is powered on, UNIDEX starts its operating system. Once the startup sequence is complete, the **main screen** is displayed and the following are loaded:
 
 1. The **default user profile.**
 2. The **last active scene** before shutdown.
 
+---
+
 ## User Profile and Permissions
 
-The user profile determines the **access level to functions** within the console.\
-From settings, you can define which profile loads automatically at startup.\
-From factory, the console starts with the **ADMIN** profile, which has full access.
+The user profile determines the **level of access to functions** within the console.\
+From the configuration, you can define which profile is loaded automatically when the unit is powered on. By default, the console starts with the **ADMIN** profile, which has full access.
 
-### Available User Levels
+### Available user levels
 
-1. **BASIC** – Restricted access to essential functions
-2. **EXPERT** – Advanced access (password required)
-3. **ADMIN** – Full access (password required)
+1. **BASIC** – Access restricted to essential functions
+2. **EXPERT** – Advanced access (requires password)
+3. **ADMIN** – Full access (requires password)
 
 <Info>
-  During startup, **no password is required**, even if the default profile has protection.\
-  For UX24 to start in restricted mode and require a password for advanced functions, you must **change the default profile** to one other than ADMIN.
+  During startup, **no password is requested**, even if the default profile is protected.\
+  For the UX24 to start in restricted mode and require a password to access advanced functions, the **default profile must be changed** to one other than ADMIN.
 </Info>
 
-For more information about user configuration, see:\
-**SETTINGS → USERS**
+For more information on user configuration, see: `SETTINGS → USERS`
 
-## CPU Shutdown
+---
 
-UNIDEX consoles have an **internal CPU** that must be **safely shut down** before completely disconnecting the console.
+## System Actions
 
-### CPU Shutdown Procedure:
+System actions are available from the main screen, by accessing the option **STATUS → "\+"**.
 
-1. On the **main screen**, tap the **"+"** icon located in the **STATUS** section.
-
+1. On the **main screen**, touch the **"\+"** icon located in the **STATUS** section.
    <img
      src="/images/ux/ux_home_status.png"
      alt="Main Screen - STATUS"
      title="Main Screen - STATUS"
      style={{ width:"24%" }}
    />
-2. In the popup window, select the **POWER-OFF** option.
-
+2. A pop-up window appears. These functions allow you to **restart different stages of the system separately**, and are not used during normal operation.
    <img
      src="/images/ux/ux_status_poweroff.png"
      alt="Status, resets and power-off"
@@ -63,34 +59,35 @@ UNIDEX consoles have an **internal CPU** that must be **safely shut down** befor
      style={{ width:"53%" }}
    />
 
-<Warning>
-  This function **does not power off the entire console**, it only shuts down the system's main CPU.\
-  Complete shutdown is done using the **mechanical power switch** (on the rear panel or external power supply depending on model).
-</Warning>
-
-After shutting down the CPU, **wait a few seconds** before completely powering off the unit to allow proper closure of internal processes.
-
-## System Actions
-
-System actions are available from the main screen by accessing **STATUS → "+"**.
-
-These functions allow **separately restarting different system stages**, and are not used during normal operation.
-
 <Info>
-  Reset actions are technical maintenance tools.\
+  The reset actions are technical maintenance tools.\
   Under normal operating conditions, **it is not necessary to execute them**.
 </Info>
 
 ### Available Options
 
 - **RESET USB**\
-  Restarts only the USB stage.\
-  Forces the operating system to re-recognize connected USB devices.
+  Resets only the USB stage.\
+  Forces the operating system to recognize connected USB devices again.
 - **RESET MIXER**\
-  Restarts UNIDEX's internal mixing engine and control surface.\
-  Does not affect the CPU or display.
+  Resets the internal mixing engine of UNIDEX and the control surface.\
+  Does not affect the CPU or the display.
 - **RESET DISPLAY**\
-  Restarts the onboard computer that manages **streaming** and the **graphical interface**.
+  Resets the onboard computer that manages **streaming** and the **graphical interface**.
 - **FULL RESET**\
-  Restarts all system stages.\
-  Equivalent to a complete power off and on of the equipment.
+  Resets all stages of the system.\
+  Equivalent to a complete power-off and power-on of the equipment.
+- **POWER-OFF**\
+  Shuts down the internal computer, which handles the touchscreen display and streaming services.\
+  The console will continue to operate, even when controlled from the WEB Control.\
+  To completely power off the equipment, wait a few seconds and turn off the power supply (on the rear panel or the external supply depending on the model).
+
+<Warning>
+
+### CPU Shutdown
+
+UNIDEX consoles have an **internal CPU** that must be **safely shut down** before completely disconnecting the console. This function **does not shut down the entire console**, only the system's main CPU.
+
+- After shutting down the CPU, **wait a few seconds** before turning off the unit completely, to allow for proper closure of internal processes.
+- The complete shutdown is performed using the **mechanical power switch** (on the rear panel or on the external power supply, depending on the model).
+</Warning>

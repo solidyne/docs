@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "48cda1ad7697289aa1194882f05feb52e07a34c16ebc0ee1c58ef9ca269a079b",
+      "translation": "When the equipment broadcasts over the Internet, a land line (POTS) or a mobile phone can be used as a backup transmission method.\\\nOr if the broadcast is made using a Bluetooth mobile phone, a land line can be used simultaneously as a backup transmission for the mobile phone.\n\nThe configuration of the lines to operate as links is:\n\n<Tabs>\n  <Tab title=\"Line as Link\">\n    It is also possible to use a phone line as the **main transmission channel**.\n\n    - In the **PGM** position, the studio return is suppressed from the CUE monitoring and is added to the program mix.\n    - The **TALK mic** is not sent to the studio.\n    - It is recommended to use the line in the **PGM** position, to prevent the talkback microphone from accidentally going on-air.\n    - If it is not necessary to hear the studio return: keep the **PGM knob closed**.\n    - To hear the return: open the **PGM** knob → the studio signal is heard in all headphones monitoring the PGM mix.\n    - The signal sent to the lines is in **mix-minus** mode: the signal coming from the studio is removed from the send, avoiding feedback.\n  </Tab>\n  <Tab title=\"Line as Backup\">\n    While the MX2200 broadcasts over **Internet**, the land line or a mobile phone can be used as a **backup method**.\n\n    - When the line is in the **CUE** position, the studio return is sent only to the headphone monitoring.\n\n    <Info>\n      Once the call is established, the studios always receive the **PGM** mix, regardless of whether the line is in **CUE** or **PGM** mode.\n    </Info>\n    - If **TALK** is pressed on that line, the talkback microphone is sent to the studio via that line.\n    - This condition allows the MX2200 operator to privately converse with the Studio, while the console transmits over the Internet.\n  </Tab>\n</Tabs>\n\n<Note>\n  More details on line operation in [Using the Phone Lines](/es/mx2200/mx2200-op-lineas-intro)\n</Note>\n\n---",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "daa5310076396e5adee272f53a8c5afe268232e83dee0bb1b11b1036fcb9a0a8",
+      "translation": "## Reception in studios\n\n- Phone calls are received in the studio via **telephone hybrids and conventional interfaces**.\n- All **Solidyne** consoles support standard **POTS** land lines (POTS) and **Bluetooth** interfaces to pair mobile phones.",
+      "title": "Recepción en estudios",
+      "level": 2
+    }
+  ]
+}

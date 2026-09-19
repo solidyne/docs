@@ -1,117 +1,114 @@
 ---
 title: "Hybrid and Bluetooth"
-description: "Telephone line and mobile phone connection"
-keywords: ["hybrid", "Bluetooth", "rejection", "null"]
-tags: ["studio consoles", "Classic line", "D612"]
+description: "Phone line and mobile phone connection"
+keywords: ["hybrid", "Bluetooth", "null", "rejection"]
+tags: ["consolas de estudio", "linea Classic", "D612"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "a31bc7004afff6a13a17bc3f824f29f2fa9bbe010961e9f488428fbd1574925c"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-## Fixed Line Connection
+import tierras from '/snippets/snippet-tierras.mdx'
 
-The hybrid channel handles two telephone lines:
+## Land Line (POTS) Connection
 
-- A conventional landline (2-wire).
-- A Bluetooth-linked mobile phone.
+The telephone hybrid channel handles two phone lines:
 
-Internal settings are factory calibrated and require no intervention. Only the hybrid rejection preset (**null**) must be adjusted when installing the console or changing the telephone line.
+- A conventional land line (2-wire).
+- A Bluetooth-paired mobile phone.
 
-The rear panel features two RJ11 connectors:
+The internal settings are factory-calibrated and require no intervention. Only the hybrid's null preset needs adjustment when installing the console or changing the phone line.
+
+On the rear panel are two RJ11 connectors:
 
 <img
   src="/images/612/612-trasero-rj11.jpg"
-  alt="612 Rear Rj11 Jp"
-  title="612 Rear Rj11 Jp"
+  alt="612 Trasero Rj11 Jp"
+  title="612 Trasero Rj11 Jp"
   className="mx-auto"
   style={{ width:"51%" }}
 />
 
 - One for the line.
-- Another for the associated telephone.
+- Another for the associated phone.
 
-The line can be connected directly to the public network or to the station's PBX.\
-Private PBXs may degrade hybrid rejection; using public lines is recommended whenever possible.
+The line can be connected directly to the public exchange or to the station's PBX.\
+Private PBX systems may degrade the hybrid's rejection; using public lines is recommended whenever possible.
 
 ### Protections
 
-Lines are internally protected against high-voltage discharges (indirect lightning) using metal oxide varistors.
+The lines are internally protected against high voltage surges (indirect lightning strikes) using metal oxide varistors.
 
-<Danger>
-  External protection on the telephone line (gas discharge tubes and fuses) is essential.\
-  Lightning damage is **not covered by warranty**.
-</Danger>
+<tierras />
 
-### Rejection Adjustment (Null)
+### Null Adjustment
 
-This adjustment applies only to landlines. It is performed once during installation.\
-Rejection prevents the transmitted signal from returning mixed with the remote speaker's voice, improving local voice quality.
+This adjustment applies only to the land line (POTS). It is performed once during installation.\
+The null prevents the transmitted signal from returning mixed with the remote caller's voice, improving the local voice quality.
 
 **Procedure:**
 
-1. Establish a phone call through the hybrid.
-2. Have an announcer speak through the microphone to the person on the line.
-3. Adjust the line level (Telephone Control knob) until the PGM VU-meter reaches the red zone.
-4. While listening to the local voice in PGM, turn the **NULL** preset until achieving identical quality to that perceived with _Telephone Control_ closed.\
-   A practical method: turn NULL to both extremes, listen to the deterioration and locate the midpoint where sound is optimal (no or very little coloration).
-5. Repeat adjustment if changing telephone lines.
+1. Establish a phone call through the telephone hybrid.
+2. Have an announcer speak into the microphone to the person on the line.
+3. Adjust the line level (Telephone Control knob) until the PGM VU meter reaches the red zone.
+4. While listening to the local voice on PGM, turn the **NULL** preset until achieving identical quality to what is perceived with _Telephone Control_ fully closed.\
+   A practical method: turn NULL to both extremes, listen for the degradation, and locate the midpoint where the sound is optimal (null or very little coloration).
+5. Repeat the adjustment if you change phone lines.
 
 ## Mobile Phones (Bluetooth)
 
-Any Bluetooth-enabled phone can be paired with the D612. Once paired, connection occurs automatically when Bluetooth is active on both devices.
+Any Bluetooth-enabled phone can be paired with the D612. Once paired, the connection is established automatically when Bluetooth is active on both devices.
 
-**Range:** up to 10 m (keeping the phone near the console is recommended, though not directly on top).
+**Range:** up to 10 m (it's recommended to keep the mobile phone near the console, though not on top of it).
 
 ### Pairing Procedure
 
-1. **On the console:** verify the Bluetooth LED is off (LED is located on the VU-meter panel).
-   - If it's on (slow green flash, 1 every 2 s), turn it off by holding the **Bluetooth** button in the Hybrid section.
-2. With Bluetooth off, hold the **Cellular Phone Bluetooth** button for about 10 s until LEDs flash alternately green/red. The console enters _search_ mode.
+1. **On the console:** Verify that the Bluetooth LED is off (the LED is located on the VU meter panel).
+   - If it is on (slow green blink, 1 every 2 s), turn it off by holding the **Bluetooth** button in the Hybrid section.
+2. With Bluetooth off, hold the **Cellular Phone Bluetooth** button for about 10 s until the LEDs flash alternately green/red. The console enters _search mode_.
 
    <Info>
-     Note that Bluetooth first turns on in normal mode with slow flashing. Don't release the button until rapid flashing begins.
+     Note that Bluetooth first turns on in normal mode with a slow blink. Do not release the button until the fast blinking starts.
    </Info>
-3. **On the phone:** search for Bluetooth devices (procedure depends on model).
+3. **On the mobile phone:** Search for Bluetooth devices (the procedure depends on the model).
 4. Select the **Solidyne BTM641** device (or BTM751 on very old units).
-   - If prompted for a code, enter **0000**.
-5. Devices are now paired. The LED remains green with slow flash (1 every 2 s), indicating active Bluetooth.
+   - If prompted for a PIN, enter **0000**.
+5. The devices are now paired. The LED remains green with a slow blink (1 every 2 s), indicating Bluetooth is active.
 
-### Reconnecting a Paired Device
+### Re-pairing a Paired Device
 
-1. Turn on Bluetooth on the D612 by holding **Cellular Phone Bluetooth** until the green LED lights (≈5 s).\
-   The green LED continues slow flashing.
-2. Activate Bluetooth on the phone.\
-   When the connection notice appears, the console is ready.
+1. Turn on Bluetooth on the D612 by holding down **Cellular Phone Bluetooth** until the green LED lights up (≈5 s).\
+   The green LED will blink slowly.
+2. Activate Bluetooth on the mobile phone.\
+   When the connection prompt appears, the console is ready.
 
 <Note>
-  On some phones, reconnection isn't automatic. You'll need to manually select **Solidyne BTM641** from the Bluetooth devices list.
+  On some phones, reconnection is not automatic. You will need to manually select **Solidyne BTM641** from the list of Bluetooth devices.
 </Note>
 
 ### Volume Adjustment
 
 <Warning>
-  On the phone, Bluetooth volume must be set to maximum during a call to ensure proper reception and better signal-to-noise ratio.
+  On the mobile phone, the Bluetooth volume must be set to maximum during a call to ensure proper reception and optimal signal-to-noise ratio.
 </Warning>
 
 - This adjustment is independent of the phone's speaker volume.
-- Adjusting volume without Bluetooth pairing only changes the mobile's speaker volume.
+- If you adjust the volume without pairing Bluetooth, it only changes the mobile phone's speaker volume.
 - The phone remembers the last Bluetooth level setting.
-- If changing phones, repeat the adjustment.
+- If you switch mobile phones, repeat the adjustment.
 
-### Turning Off Bluetooth on the Console
+### Disabling Bluetooth on the Console
 
-Hold **Cellular Phone Bluetooth** until the LED turns off completely.
+Hold down **Cellular Phone Bluetooth** until the LED turns off completely.
 
 ## External Hybrid
 
-The D612 provides a connector for send and return to an external telephone hybrid.
+The D612 features a connector for send and return to an external telephone hybrid.
 
-- **6.35 mm jack (TRS):** combines input and output.
+- **6.35 mm (TRS) Jack:** combines input and output.
 
 <img
   src="/images/612/612-cable-insert.bmp"
@@ -121,9 +118,9 @@ The D612 provides a connector for send and return to an external telephone hybri
   style={{ width:"65%" }}
 />
 
-**Pin Assignment**
+**Contact Assignment**
 
-- **Tip:** MIX-MINUS send (program, without telephone line audio). This signal connects to the **external hybrid input**.
-- **Ring:** return from external hybrid (line audio). Connects to hybrid output. In the console, it's summed to PGM output via the internal hybrid channel.
+- **Tip:** MIX-MINUS send (program audio without telephone line audio). This signal connects to the **external hybrid input**.
+- **Ring:** return from the external hybrid (line audio). Connects to the external hybrid output. In the console, it's summed to the PGM output via the internal hybrid channel.
 
-The Hybrid channel fader behaves the same as with direct lines, sending signal to air or preview monitoring (see Console Operation).
+The Hybrid channel fader operates the same as with direct lines, sending signal on-air or to pre-monitoring (see Console Operation).

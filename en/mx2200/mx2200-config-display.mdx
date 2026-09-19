@@ -1,28 +1,26 @@
 ---
-title: "Device Configuration"
-description: "System configuration from the device front panel."
-keywords: ["configuration","SETUP", "encoder", "oled", "display"]
-tags: ["portable consoles","CODEC","MX2200"]
+title: "Configuration from the Equipment"
+description: "System configuration from the front panel."
+keywords: ["configuration", "SETUP", "encoder", "oled", "display"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "06a579ca640db221f43dbe994ef9b13834c3571cd0fb0cca5d83dcfd542a7072"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## The SETUP Screen
 
 The **SETUP** screen is one of the four main screens.\
-It is accessed by rotating the **encoder** and allows configuring all network and streaming options.
+It is accessed by turning the **encoder** and allows you to configure all network and broadcast options.
 
-- The initial view shows the status of **Wi-Fi, Ethernet and Modem**.
-- For each connection it indicates if there is an **assigned IP** or if it is **inactive**.
-- For Wi-Fi, it also shows the **network name** of the connected network.
+- The initial view shows the status of **Wi-Fi, Ethernet, and Modem**.
+- For each connection, it indicates whether there is an **assigned IP** or if it is **inactive**.
+- For Wi-Fi, the **network name** you are connected to is also displayed.
 
-Pressing the encoder displays all configuration options.
+Pressing the encoder reveals all configuration options.
 
 ---
 
@@ -30,7 +28,7 @@ Pressing the encoder displays all configuration options.
 
 - Lists available **2.4G and 5.8G** wireless networks, sorted by signal strength.
 - Signal level is expressed in **dB millivolts** (values closer to 0 = stronger signal).
-- The **Wi-Fi interface MAC** appears in the upper right corner.
+- The **Wi-Fi interface MAC** appears in the top right corner.
 
 <Note>
   Some providers require reporting the interface **MAC** to authorize the connection.
@@ -48,16 +46,16 @@ Pressing the encoder displays all configuration options.
 />
 
 - Configures wired network parameters.
-- Factory default is **DHCP enabled**, so it receives an IP automatically.
-- For **static IP**, DHCP must be disabled and manually assign:
+- From the factory, it comes with **DHCP enabled**, so it receives an IP address automatically.
+- To use a **static IP**, DHCP must be disabled and the following must be assigned manually:
   - IP Address
   - Subnet Mask
   - Gateway
   - DNS Servers
-- Shows the **MAC** address for reference (not editable).
+- Displays the **MAC** address as informational data (not editable).
 
 <Warning>
-  Manual configuration should be performed by **specialized technical personnel**.
+  Manual configuration must be performed by **qualified technical personnel**.
 </Warning>
 
 ---
@@ -72,13 +70,13 @@ Pressing the encoder displays all configuration options.
 />
 
 - Compatible with **4G dongles** (plug & play).
-- Modern dongles act as Ethernet adapters and require no configuration.
-- Older 3G dongles need **APN, username and password** parameters (provided by ISP).
-- If connection is active, it shows an **IP different from 0.0.0.0**.
+- Modern dongles act as Ethernet adapters and do not require configuration.
+- Older 3G dongles need **APN, username, and password** parameters (provided by the ISP).
+- If the connection is active, it shows an **IP address other than 0.0.0.0**.
 
 <Warning>
   Always connect the modem using a **USB extension cable**.\
-  Direct connection to the USB port may cause **audible interference**.
+  A direct connection to the USB port can cause **audible interference**.
 </Warning>
 
 ---
@@ -92,13 +90,13 @@ Pressing the encoder displays all configuration options.
   style={{ width:"45%" }}
 />
 
-- RTP transmission configuration:
+- RTP streaming configuration:
   - Destination IP address
   - Port
   - Codec (MP3, Opus, PCM)
 
 <Warning>
-  These advanced settings should be configured by **specialized technical personnel**.
+  These advanced settings must be configured by **qualified technical personnel**.
 </Warning>
 
 ---
@@ -112,8 +110,8 @@ Pressing the encoder displays all configuration options.
   style={{ width:"45%" }}
 />
 
-- Configuration for streaming to **Icecast/Shoutcast** web servers.
-- Credentials and parameters from the contracted server are entered.
+- Configuration for streaming to **Icecast/Shoutcast** type web servers.
+- Enter the credentials and parameters of the contracted server.
 
 ---
 
@@ -128,16 +126,16 @@ Pressing the encoder displays all configuration options.
 
 - Entry of **SIP account** data (provided by the service).
 - At least **two accounts** are required:
-  - A SIP address for the console. Ex: `mx2200@sip.linphone.org`.
-  - A SIP address for the studio, to be configured in the VoIP software used to receive (or make) calls. Ex: `studio@sip.linphone.org`.
+  - One SIP address for the console. Example: `mx2200@sip.linphone.org`.
+  - One SIP address for the studios, which will be configured in the VoIP software used to receive (or generate) the calls. Example: `estudio@sip.linphone.org`.
 
 <Info>
-  SIP services can be free (e.g.: [Linphone](https://www.linphone.org)) or paid, depending on implementation complexity.
+  SIP services can be free (e.g., [Linphone](https://www.linphone.org)) or paid, depending on the complexity of the implementation.
 </Info>
 
 ### SIP Audio Quality
 
-SIP account QUALITY allows setting the preferred audio quality for SIP calls.\
+The SIP account QUALITY setting allows you to set the preferred audio quality for SIP calls.\
 Available options:
 
 - Mono VoIP 16 kbps
@@ -148,8 +146,8 @@ Available options:
 - Stereo HiStudio 256 kbps
 
 <Note>
-  MX2200 prioritizes the **Opus** codec at the selected quality.\
-  If the receiver doesn't support it, another available codec will be automatically negotiated.
+  The MX2200 prioritizes the **Opus** codec at the selected quality.\
+  If the receiver does not support it, another available codec will be automatically negotiated.
 </Note>
 
 ---
@@ -163,8 +161,8 @@ Available options:
   style={{ width:"45%" }}
 />
 
-- Shows the SIP contacts directory.
-- Basic navigation from console; full editing **only from web interface**.
+- Displays the SIP contacts directory.
+- Basic navigation from the console; full editing **only from the web interface**.
 
 <Accordion title="Add a contact (web interface)" icon="pencil" iconType="solid">
   1. [Access the web interface](/en/mx2200/mx2200-config-acceso).
@@ -177,15 +175,17 @@ Available options:
        style={{ width:"54%" }}
      />
   3. Enter **SIP Address** and **Friendly Name**.
-  4. Press **ADD** and then **APPLY** to send changes to hardware.
+  4. Click **ADD** and then **APPLY** to send changes to the hardware.
 
-  #### Edit contact
+</Accordion>
+
+#### Edit contact
 
   1. Select the contact from the list.
   2. Modify the fields.
   3. Press **UPDATE** and then **APPLY**.
 
-  #### Delete contact
+#### Delete Contact
 
   1. Select the contact.
   2. Press **DELETE** and then **APPLY**.
@@ -202,27 +202,27 @@ Available options:
   style={{ width:"45%" }}
 />
 
-- Shows power and battery status.
-- Indicates if the unit is using internal battery or external power.
-- Example: `Battery 7.0 V` → console running on battery.
-- The `Bat level` field shows remaining level (%).
-- A 100% charge typically provides over 3 hours of transmission.
-- The unit automatically shuts down at **6.2 V**.
-- A **12V power bank** can be used as external power source.
+- Displays the power and battery status.
+- Indicates whether the unit is using the internal battery or an external power source.
+- Example: `Battery 7,0 V` → console powered by battery.
+- The `Bat level` field indicates the remaining battery level (%).
+- A 100% charge typically provides over 3 hours of on-air operation.
+- The unit automatically shuts down when the voltage reaches **6,2 V**.
+- A **12 V power bank** can be used as an external power source.
 
 ---
 
 ### SETUP → Time Zone
 
-- Adjusts the time zone to correctly timestamp recordings.
-- Usually configured once.
-- Synchronization is done through **public NTP servers**.
+- Adjust the time zone to correctly assign date/time to recordings.
+- Typically configured only once.
+- Synchronization is performed via **public NTP servers**.
 
 ---
 
 ### SETUP → RX Volume
 
-- Adjusts the return level sent from the station when connection is via **SIP**.
+- Adjusts the return level sent from the station when the connection is via **SIP**.
 - This return is added to:
   - CUE monitoring circuit (headphones).
   - Send to **POTS** lines.

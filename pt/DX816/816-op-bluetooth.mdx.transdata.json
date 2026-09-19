@@ -14,8 +14,8 @@
       "level": 3
     },
     {
-      "hash": "53f4a49ecf7ac0d958a23323bddfddd004142a856e4cf5d44f9aefd2d20069af",
-      "translation": "### Chamada recebida (celular)\n\n- Toca no celular e em **CUE** (TELCO fechado). **CELL PHONE** pisca em azul.\n- Atender com **toque curto em BLUETOOTH** (ou pela tela do celular).\n- **Dialogar em prévio:** Com fader em **CUE** escuta-se a chamada por **CUE**.\n- **Pressionar TALK** para dialogar. O botão é retido, pressionar novamente ao parar de falar.\n- **HOLD**: levar o fader para a zona HOLD, a pessoa chamada escuta o programa, não sai no ar.\n- **No AR**: subir o fader até alcançar o nível apropriado.\n\n<Info>\n  Em conferências entre **celular** e **linha fixa/VoIP** pode haver algum **eco** no retorno do jornalista remoto. **Não** sai no ar.\n</Info>",
+      "hash": "91af86ff35108421a4aa841ff5583b098ef5af5614e1d7f4237ed2a46d0980b2",
+      "translation": "### Chamada recebida (celular)\n\n- O toque de chamada é reproduzido no telefone e no **CUE** (com o fader TELCO fechado). Durante a chamada, o botão CELL PHONE para de piscar e permanece apagado.\n- Atender com **toque curto em BLUETOOTH** (ou pela tela do celular).\n- Pressionar o botão Bluetooth para captar o áudio do telefone celular. Ele ficará piscando entre vermelho/rosa.\n- **Dialogar em prévia:** Com o fader em **CUE**, a chamada é ouvida pelo **CUE**.\n- **Pressionar TALK** para dialogar. O botão é mantido. Enquanto estiver ativado, apenas o sinal do microfone talkback será enviado ao telefone. Pressionar novamente ao terminar de falar.\n- **HOLD**: levar o fader para a zona HOLD, o chamador ouve o programa, mas não vai no ar.\n- **NO AR**: subir o fader até alcançar o nível apropriado.\n\n<Info>\n  Em conferências entre **telefone celular** e **linha telefônica fixa (POTS)/VoIP** pode haver algum **eco** no retorno do jornalista remoto. **Não** vai no ar.\n</Info>",
       "title": "Llamada entrante (móvil)",
       "level": 3
     },
@@ -32,8 +32,8 @@
       "level": 3
     },
     {
-      "hash": "79f37f490cc6b96afa31c012b3b2cf942c91af3b26e2c7e2af012f15de3bf8d4",
-      "translation": "### Gerar chamada a partir do celular\n\n1. No celular, desativar o Bluetooth para poder falar diretamente pelo telefone.\n2. Estabelecer a chamada.\n3. Para transferir para a console, mudar para o modo **Bluetooth/Headset**.\n4. Com o fader na posição **HOLD**, o celular recebe retorno da console, mas não vai no ar.\n5. Subir o fader para colocar no ar.\n6. Para encerrar: **toque rápido no botão BLUETOOTH** ou encerrar a chamada pelo celular.\n\n<Note>\n  Também é possível estabelecer a chamada **sem sair** do modo Bluetooth no celular, com o fader na posição **CUE** e usando **TALK** para dialogar a partir da console.\n</Note>",
+      "hash": "c618f8321678e6ba98af43068cd5ae9eca2950a2b7ab3a0f6fc3a380ece54b66",
+      "translation": "### Realizar chamada a partir de celular\n\n1. No celular, desconectar o Bluetooth para poder falar diretamente pelo telefone.\n2. Estabelecer a chamada.\n3. Para transferir para a console, mudar para o modo **Bluetooth/Headset**.\n4. Com o fader na posição **HOLD**, o celular recebe retorno da console, mas não vai no ar.\n5. Subir o fader para colocar no ar.\n6. Para encerrar: **toque rápido no botão BLUETOOTH** ou encerrar a chamada pelo celular.\n\n<Note>\n  Também é possível estabelecer a chamada **sem sair** do modo Bluetooth no celular, com o fader na posição **CUE** e usando **TALK** para dialogar a partir da console.\n</Note>",
       "title": "Generar llamada desde celular",
       "level": 3
     }

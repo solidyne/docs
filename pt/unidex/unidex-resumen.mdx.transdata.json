@@ -1,0 +1,59 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "e9ccc35dba8c48e9233babe0d863097d46aae86c02406c1cae1c35a3094f5351",
+      "translation": "A linha **UNIDEX** da Solidyne atende às necessidades de operação e operação no ar em **emissoras de FM, AM e streaming**. A UNIDEX oferece um fluxo de trabalho digital sem a complexidade de uma rede IP dedicada, mas com a opção de áudio sobre IP (DANTE/AES67).\n\n![Linea Unidex Pn](/images/thumbnails/Linea_unidex.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "b62db1dba32dd6f394153442ac5533dee311f6aff2e533e39146cec64e4cb094",
+      "translation": "## Modelos UX18 e UX24\n\nA Série UNIDEX conta com dois modelos de consoles de mixagem: **UX24** e **UX18**.\n\nAmbos os modelos compartilham características e modos de uso. Para simplificar a documentação, os aspectos em comum são explicados nesta seção.\n\nAs entradas do menu [UX24 ](/pt-br/ux24/ux24-resumo)e [UX18 ](/pt-br/ux18/ux18-resumo)detalham as particularidades operacionais e de configuração próprias de cada modelo.\n\n---",
+      "title": "Modelos UX18 y UX24",
+      "level": 2
+    },
+    {
+      "hash": "6f827e10ff01ec6e46bb0070a194bf544cad168e7c986d6ab2984b9107419f01",
+      "translation": "## Adaptadores UDX\n\n- **UNIDEX** significa “UNIversal Desktop with EXternal adapters”. São interfaces externas que se conectam diretamente à console para inserir diferentes tipos de sinais (telecomunicações, microfones, USB, etc.).\n- As entradas do tipo UNIDEX na console são entradas de linha balanceadas com capacidades ampliadas, que admitem conexão de adaptadores UDX.\n- Conectam-se diretamente à console: não são necessários roteadores, switches ou redes.\n- Os adaptadores comunicam dados e controle de funções a partir da superfície da console.\n\n---",
+      "title": "Adaptadores UDX",
+      "level": 2
+    },
+    {
+      "hash": "06534972acfcac57059430ce257426d9d9a92f3a11004d7346aa43db72c4cf84",
+      "translation": "## Áudio sobre IP (opcional)\n\n1. Permite interconexão avançada entre dispositivos e estúdios através de uma **rede de áudio**.\n2. Requer uma **rede dedicada** e nós de entrada/saída DANTE/AES67 compatíveis.\n3. Controle via interface WEB a partir de estúdios remotos.\n\n---",
+      "title": "Audio sobre IP (opcional)",
+      "level": 2
+    },
+    {
+      "hash": "e9e5f2f3a7cadeaf743300b9f0c3c84a0d828ec9bb5c9f65413f30a9e44edaa2",
+      "translation": "## Hardware\n\n- Processamento interno: DSP full-digital **24 bits @ 48 kHz**.\n- Faders 100 mm soft-touch de alta durabilidade:\\\n  UX24: 12 físicos \\+ 12 “virtuais” na tela sensível ao toque de 7”\\\n  UX18: 10 físicos \\+ 8 \"virtuais\" na tela sensível ao toque de 7”\n- UX24 expansível para 18 ou 24 faders físicos com painéis UX6 (6 faders).\n\n---",
+      "title": "Hardware",
+      "level": 2
+    },
+    {
+      "hash": "b10d4a70dc942fd749ebf2d06456ce4f0723f5f0cb22c9eb82e2de717a959f13",
+      "translation": "## Conectividade\n\n- Todas as E/S vão por **RJ45** no painel traseiro.\n- Tramos adaptadores RJ45→XLR/TRS/RCA disponíveis.\n\n---",
+      "title": "Conectividad",
+      "level": 2
+    },
+    {
+      "hash": "d8bd13ea364f2c7e739d6405c761a57fbd3771142d142719f77a8fc3be514c91",
+      "translation": "## Operação no ar\n\n- **Plug & play**: configuração de fábrica pronta para uso.\n- Não requer conhecimentos avançados.\n- Operação similar a uma console tradicional.\n- Os processos de áudio são ajustados na tela sensível ao toque.\n\n---",
+      "title": "Puesta al aire",
+      "level": 2
+    },
+    {
+      "hash": "884e33d738446a30fa0d42bd1093f42cc5de69d27b5109dc377cb737a3267fef",
+      "translation": "## Níveis de usuário\n\n1. **Básico**: acesso a funções mínimas.\n2. **Intermediário**: inclui opções avançadas.\n3. **Administrador**: acesso total à configuração e ajustes.\n\n---",
+      "title": "Niveles de usuario",
+      "level": 2
+    },
+    {
+      "hash": "23bc2640260a53daaa6d76f3783d08a7fc1e45f8babbedf5c7cde1c7b093fa06",
+      "translation": "## Flexibilidade avançada\n\n- Atribua **qualquer entrada** a qualquer um dos faders físicos ou aos virtuais.\n- Crie **cenas** com ajustes de canais e processamento.\n- Controle e configuração **remotos** via IP (navegador WEB). Permite montar um estúdio auxiliar controlado a partir de uma tela, sem necessidade de uma console adicional.\n- Use **efeitos VST** em tempo real via USB ASIO e computador externo.\n- Suporta até dois estúdios no ar simultâneos (modelo UX24).\n\n<Info>\n  Todas as funções e ajustes são gerenciados a partir da tela sensível ao toque ou via IP a partir de um navegador em tablet ou computador.\n</Info>",
+      "title": "Flexibilidad avanzada",
+      "level": 2
+    }
+  ]
+}

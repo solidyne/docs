@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "e542fd53da76a01080afcda218480be954092dab0adabf0753fd733e25039533",
+      "translation": "## STUDIO MONITOR Output Connector\n\nThe **STUDIO MONITOR** output connector carries the monitoring signals to the main studio (Studio A in the UX24).\n\n**Solidyne StudioBox HD3 and HD5** monitoring bays connect directly to this output using an **RJ45–RJ45 STP** cable, with a **pin-to-pin** connection.\n\nWhen a StudioBox is not used, the console includes an **RJ45 to audio connectors** adapter cable, which allows for direct connection of active speakers and headphone amplifiers in the studio.\n\n<Warning>\n  The **STUDIO MONITOR** output must not be connected using cables other than the original one or via generic RJ45 adapter cables. This can cause failures or damage to the Studio Monitor output.\n</Warning>\n\nThe signals present on the **STUDIO MONITOR** connector are:\n\n| **PIN** | **SIGNAL** |\n| :-: | --- |\n| 1 | Headphones Left (\\+4 dBu) |\n| 2 | Headphones Right |\n| 3 | GND |\n| 4 | ON-AIR (\\+14 V) |\n| 5 | Talkback to Control Room |\n| 6 | VCC \\+14 V |\n| 7 | Speakers Left (\\+4 dBu) |\n| 8 | Speakers Right |\n|  | \\*Chassis = GND |\n\n<img\n  src=\"/images/ux24/UNIDEX-StudioMonitoring.jpg\"\n  alt=\"RJ45 front view - Pins according to TIA-568B\"\n  style={{ maxWidth:\"350px\",height:\"auto\",marginBottom:\"1rem\" }}\n/>\n\n---\n\n<Info>\n  **STUDIO B in UX24**\n\n  To configure a monitoring circuit in a second studio, one of the general outputs is assigned, configured to be **muted** when Studio B is active.\n</Info>",
+      "title": "Conector de salida STUDIO MONITOR",
+      "level": 2
+    }
+  ]
+}

@@ -1,70 +1,68 @@
 ---
 title: "Inputs"
-description: "Description of inputs in UNIDEX UX24 and UX18"
-keywords: ["inputs","connections","installation"]
-tags: "IP consoles,UNIDEX"
+description: "Description of inputs on UNIDEX UX24 and UX18"
+keywords: ["inputs", "connections", "installation"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "48cf08251d319d54bd64e563e6b4e973c4a5189e0aadc1cb4b72b8708ef4542e"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 <Tip>
-  Each input can be assigned to any physical or virtual channel.
+  Each input can be assigned to any of the hardware or virtual channels.
 </Tip>
 
 ## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Microphone Inputs
 
-The balanced microphone inputs support **48V** _phantom_ power. The voltage can be enabled/disabled for each channel from the screen.
+The balanced microphone inputs support **48 V** *phantom* power. The voltage is activated/deactivated for each channel from the screen.
 
-Each input has a **microswitch that allows reducing the preamplifier gain by -12 dB**. The switch in the down position **activates the attenuation**.
+Each input has a **microswitch that allows reducing the preamplifier gain by –12 dB**. The switch in the down position **activates the attenuation**.
 
 <Info>
-  In UX18, the MIC-5 input has fixed level.
+  On the UX18, the MIC-5 input is at a fixed level.
 </Info>
 
-## <Icon icon="arrow-right-to-line" iconType="solid" color="#6f07ab" size="22" />  UNIDEX Type Inputs
+## <Icon icon="arrow-right-to-line" iconType="solid" color="#6f07ab" size="22" />  UNIDEX-Type Inputs
 
-**UNIDEX** type inputs are special inputs that, in addition to audio, carry **PoE power** and **control communication** channels to operate Solidyne **UDX** external adapters.
+**UNIDEX**-type inputs are special inputs that, in addition to audio, carry **PoE power** and **control communication** channels to operate Solidyne **UDX** **external adapters**.
 
-They are normally used to connect **UDX adapters** that allow adding microphones, telephone lines or mobile phones.
+They are typically used to connect **UDX adapters** which allow adding microphones, phone lines, or mobile phones.
 
-UNIDEX inputs can also **be used as conventional balanced inputs**. Each UNIDEX input connector contains left and right balanced signals.
+UNIDEX inputs can also **be used as conventional balanced inputs**. Each UNIDEX input connector contains the left and right balanced signals.
 
 ## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  Balanced Analog Inputs
 
-- Each input uses a **single** STP cable that carries the **left and right** balanced signals.
-- At the end, the RJ45 adapts to the required audio connector type (XLR, TRS, RCA).
+- Each input uses a **single** STP cable that carries the balanced **left and right** signals.
+- At the end, the RJ45 is adapted to the required audio connector type (XLR, TRS, RCA).
 
-To connect a source in **unbalanced mode**, an **appropriate adapter cable** must be used, connecting:
+To connect a source in **unbalanced mode**, a **suitable adapter cable** must be used, connecting:
 
-- The **(-)** signal terminal to the cable **shield**.
-- The **(+)** signal terminal as the signal **hot**.
+- The signal terminal **(–)** to the cable **shield**.
+- The signal terminal **(\+)** as the **hot** signal.
 
 ## <Icon icon="arrow-right-to-line" iconType="solid" color="#008dff" size="22" />  AES3 Digital Inputs
 
-- Connected using **RJ45-RJ45 CAT5** cable, using the **SOL-F3/XLRF** adapter.
-- To facilitate wiring compatibility, they use the **same pin-out** as stereo balanced inputs, although the cable **only uses the left channel** for the AES3 signal.
-- Support **S/PDIF** signals.
+- They are connected using a **RJ45–RJ45 CAT5** cable, utilizing the **SOL-F3/XLRF** adapter.
+- To facilitate wiring compatibility, they use the **same pin-out** as the balanced stereo inputs, although the cable **only uses the left channel** for the AES3 signal.
+- They support **S/PDIF** signals.
 
 <Note>
-  When the streaming downlink function is enabled, the decoded audio internally replaces the **AES1** input. The rear panel **AES-1** connector is automatically disconnected.
+  When the streaming downmix function is enabled, the decoded audio internally replaces the **AES1** input. The **AES-1** connector on the rear panel is internally disconnected.
 </Note>
 
 ## External Tuner Input
 
-The console has a **stereo input for external tuner** (ON AIR MONITOR) via **1/4" TRS** connector (unbalanced). This input is available in the monitoring assignment for both Studio and Control Room, allowing direct monitoring of the tuned signal.
+The console features a **stereo input for an external tuner** (ON AIR MONITOR) via a 1/4" TRS connector (unbalanced). This input is available in the monitoring assignment for both the Studio and Control Room, allowing direct listening of the tuned signal.
 
 <Tip>
-  For FM, it is important that both in the studios and control room, monitoring is done with the **processed on-air signal**, not from the direct PGM bus. This allows detecting actual broadcast errors and provides more comfortable listening, without volume jumps that may occur in the direct signal.
+  For FM, it is important that monitoring in both the studios and the control booth is performed using the **processed on-air signal**, not directly from the PGM bus. This allows for the detection of actual broadcast errors and provides more comfortable listening, without the volume jumps that can occur in the direct signal.
 </Tip>
 
 <Note>
-  In **UX18** the **ON AIR MONITOR** input can also be assigned to a channel; thus operating as an additional auxiliary input when not used for on-air monitoring.
+  In the **UX18**, the **ON AIR MONITOR** input can also be assigned to a channel; thus it operates as an additional auxiliary input when not used for on-air broadcast monitoring.
 
-  When assigned to a channel, it remains available as a selectable source in the monitoring section.
+  When assigned to a channel, it remains available as an eligible source in the monitoring section.
 </Note>

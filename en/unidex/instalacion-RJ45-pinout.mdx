@@ -1,105 +1,16 @@
 ---
 title: "RJ45 Cable Assembly"
-description: "Structured cabling diagrams"
+description: "Diagrams for structured cabling"
+keywords: ["wiring", "cables", "connections", "RJ45"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "e537497a114d3957fed310f9d90c3b50f4f5595171032e9f7fcf1d79d3114135"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-For assembling connection cables, it is recommended to:
+import rj45 from '/snippets/RJ45_es.mdx'
 
-- Use **shielded RJ45 connectors**.
-- Use premium quality **CAT-5 STP or S/FTP cable**.
-- Ensure the connector shield is properly bonded to the cable shield.
-
-The following table shows the standard color coding and pin numbering for RJ45 connectors.
-
-## RJ45 Standard Nomenclature
-
-<img
-  src="/images/ux24/RJ-45_TIA-568B.png"
-  alt="RJ45 front view - Pins according to TIA-568B"
-  style={{ maxWidth:"300px",height:"auto",marginBottom:"1rem" }}
-  title=""
-/>
-
-| **PIN** | **WIRE COLOR**    |
-| :-----: | ----------------- |
-| 1       | White / Orange    |
-| 2       | Orange            |
-| 3       | White / Green     |
-| 4       | Blue              |
-| 5       | White / Blue      |
-| 6       | Green             |
-| 7       | White / Brown     |
-| 8       | Brown             |
-
-## Pin Configuration for Balanced Audio Connection
-
-| **PIN** | **FUNCTION**           | **WIRE COLOR**    |
-| :-----: | --------------------- | ----------------- |
-| 1       | Left channel (\+)     | White / Orange    |
-| 2       | Left channel (–)      | Orange            |
-| 3       | Right channel (\+)    | White / Green     |
-| 4       | Ground               | Blue              |
-| 5       | Reserved             | White / Blue      |
-| 6       | Right channel (–)     | Green             |
-| 7       | –15 V (optional)      | White / Brown     |
-| 8       | \+15 V (optional)     | Brown             |
-
-## Pin Configuration for Unbalanced Audio Connection
-
-| **PIN** | **FUNCTION**           | **WIRE COLOR**    |
-| :-----: | --------------------- | ----------------- |
-| 1       | Left channel (\+)     | White / Orange    |
-| 2       | NC                    | Orange            |
-| 3       | Right channel (\+)    | White / Green     |
-| 4       | Ground               | Blue              |
-| 5       | Reserved             | White / Blue      |
-| 6       | NC                    | Green             |
-| 7       | –15 V (optional)      | White / Brown     |
-| 8       | \+15 V (optional)     | Brown             |
-
-## Adapter Patches to Conventional Audio Connectors
-
-### RJ45 to Unbalanced RCA
-
-<img
-  src="/images/ux24/RJ45-a-RCA.jpg"
-  alt="RJ45 to RCA"
-  style={{ maxWidth:"550px",height:"auto",marginBottom:"1rem" }}
-  title=""
-/>
-
-### RJ45 to Balanced XLR
-
-<img
-  src="/images/ux24/RJ45-a-XLR.jpg"
-  alt="RJ45 to XLR"
-  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
-  title=""
-/>
-
-### RJ45 to Balanced TRS
-
-<img
-  src="/images/ux24/RJ45-a-TRS.jpg"
-  alt="RJ45 to TRS"
-  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
-  title=""
-/>
-
----
-
-<Warning>
-  SOL-M12/minijack adapters (to female mini plug) can be connected to balanced or unbalanced OUTPUTS. Not recommended for unbalancing inputs as they leave the (-) pin unconnected, which may introduce noise.
-</Warning>
-
-<Warning>
-  SOL-M12/RCAM adapters (to male RCA) can be connected to balanced INPUTS to unbalance them, as they connect the balanced (-) signal to ground. **DO NOT USE ON BALANCED OUTPUTS**, as outputs must be unbalanced by leaving the (-) pin unconnected.
-</Warning>
+<rj45 />

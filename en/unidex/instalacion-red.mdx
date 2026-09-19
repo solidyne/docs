@@ -1,28 +1,26 @@
 ---
 title: "Ethernet Ports"
-description: "Remote Control and Streaming Ports"
+description: "Ports for Remote Control and Streaming"
 keywords: ["installation", "network", "Ethernet", "Discovery", "remote control", "streaming"]
-tags: ["IP consoles", "UNIDEX"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: ""
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Ethernet Connection for Remote Control
 
-The console features an **Ethernet port** for remote control through local network (LAN). The **internal web control interface** can be accessed with a web browser from any computer connected to the same network.
+The console features an **Ethernet port** for remote control via a local area network (LAN). The **built-in web control interface** is accessed using a web browser from any computer connected to the same network.
 
 ### Step 1: Physical Connection
 
-Connect the UNIDEX **CONTROL ETHERNET** port to a **router** port using a standard Ethernet network cable.
+Connect the **CONTROL ETHERNET** port on the UNIDEX to a port on the **router**, using a standard Ethernet network cable.
 
 <Warning>
-  Do not confuse the **CONTROL** Ethernet connector with the **STREAMING** Ethernet port.
+  Do not confuse the Ethernet connector for **CONTROL** with the Ethernet port for **STREAMING**.
 
   <img
     src="/images/ux24/trasero-control.jpg"
@@ -33,29 +31,26 @@ Connect the UNIDEX **CONTROL ETHERNET** port to a **router** port using a standa
   />
 </Warning>
 
-- By default, UNIDEX is configured with **DHCP enabled**.
-- The router will automatically assign an available IP address. This IP may change when restarting the console, unless a static IP is configured, but this is usually not necessary.
-- The current IP address is displayed on the console's **main screen** under:\
+- From the factory, UNIDEX is configured with **DHCP enabled**.
+- The router will automatically assign an available IP address. This IP may change when the console is restarted, unless a static IP is configured, but this is usually not necessary (if a static IP is required, go to: `SETTINGS → SYSTEM`).
+- The current IP address is displayed on the console's **main screen**, under the name:\
   **UNIDEX IP.**
-
   <img
     src="/images/ux24/unidex-ControlIP.png"
     alt="RJ45 to RCA"
     style={{ width:"45%" }}
-    title=""
     className="mx-auto"
   />
-- If a static IP needs to be assigned, go to:`SETTINGS → SYSTEM`
-
-### **Step 2**: Browser Access
-
-From any computer connected to the **same local network** (preferably via cable) open a web browser (**Google Chrome** recommended) and enter the IP address shown as **UNIDEX IP**.
 
 <Note>
-     **Solidyne Multi-Discovery**
+  **Solidyne Multi-Discovery**
 
-     If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/en/unidex/unidex-discovery) that detects Solidyne devices connected to the network.
+  If you do not have physical access to the console, you can [**download the Multi-Discovery tool**](/es/unidex/unidex-discovery) which detects Solidyne devices connected to the network.
 </Note>
+
+### **Step 2**: Access via Web Browser
+
+From any computer connected to the **same local network** (preferably via cable) open a web browser (recommended: **Google Chrome**) and enter the IP address displayed as **UNIDEX IP**.
 
 This will open the web interface for console operation and configuration. The interface is similar to the one shown on the **onboard touchscreen**.
 
@@ -64,11 +59,9 @@ This will open the web interface for console operation and configuration. The in
 ## Ethernet Connection for Streaming Services
 
 1. Connect the **Streaming Out** port to the LAN router using a standard Ethernet cable.
-
    <Warning>
      DO NOT CONFUSE the **streaming Ethernet connector** with the **remote control** Ethernet connector.\
      Both use RJ45, but serve completely different functions.
-
      <img
        src="/images/ux24/trasero-streaming.jpg"
        alt="Rear RJ45 Streaming"
@@ -78,11 +71,10 @@ This will open the web interface for console operation and configuration. The in
      />
    </Warning>
 2. The router will assign an IP address via **DHCP**, visible on the main screen as: **Stream IP**
-3. This IP may change when restarting the console, unless a static IP is configured.
-4. Streaming services can be configured in two ways:
-   - From the console's **touchscreen**.
-   - From any computer on the network, accessing the **Stream IP** address through a web browser.
-
+3. This IP may change when the console is restarted, unless a static IP is configured.
+4. Streaming service configuration can be done in two ways:
+   - From the console's **touch screen**.
+   - From any computer on the network, by accessing the **Stream IP** address from a web browser.
      <img
        src="/images/ux24/unidex_streaming_ip.jpg"
        alt="Unidex Streaming Ip Jp"
@@ -90,3 +82,8 @@ This will open the web interface for console operation and configuration. The in
        style={{ width:"45%" }}
      />
 
+<Note>
+  **Solidyne Multi-Discovery**
+
+  If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/es/unidex/unidex-discovery) which detects Solidyne devices connected to the network.
+</Note>

@@ -8,14 +8,14 @@
       "level": 2
     },
     {
-      "hash": "4920e3368fa3313dc16f91317a5d5f137f65c71cbba61d754d5358bf4cf9ee8e",
-      "translation": "### Quick Reconnection\n\n1. Ensure the **TELCO** fader is in **CUE** (closed) position.\n2. **Enable Bluetooth on console:** Hold **BLUETOOTH for 5 seconds** until **CELL PHONE** lights blue. The button will blink with slow pulse.\n  <Warning>\n  The Bluetooth module receives power from **USB-1 or USB-2** channels.\\\n  If neither is connected to a PC, use an **external USB power source** (standard charger) with the supplied cable.\n</Warning>\n3. Activate Bluetooth on mobile device → connection restores automatically.\n4. Incoming calls may be answered either from the mobile or via **BLUETOOTH** on the console.",
+      "hash": "9cd1083ca137816941ad9ba96d3e33f9d58334a47ffbffd32506ec77803cd8b3",
+      "translation": "### Quick Reconnection\n\n1. Secure the **TELCO** fader to **CUE** (closed).\n2. **Enable Bluetooth on the console:** hold **BLUETOOTH for approximately 5 seconds** and release as soon as **CELL PHONE** lights up blue. The button continues to flash with a slow blink.\n\n<Warning>\n  The Bluetooth module receives power from the **USB-1 or USB-2** channels.\\\n  If neither is connected to a PC, use an **external USB power source** (a standard charger) with the supplied cable.\n</Warning>\n\n3. Activate Bluetooth on the mobile phone → the pairing is restored.\n4. Incoming calls can be answered from the mobile phone or with **BLUETOOTH** on the console.",
       "title": "Re-conexión rápida",
       "level": 3
     },
     {
-      "hash": "53f4a49ecf7ac0d958a23323bddfddd004142a856e4cf5d44f9aefd2d20069af",
-      "translation": "### Incoming Call (Mobile)\n\n- Rings on cellphone and **CUE** (TELCO closed). **CELL PHONE** flashes blue.\n- Answer with **short press on BLUETOOTH** (or from mobile screen).\n- **Monitor conversation:** With fader at **CUE**, call is heard through **CUE**.\n- **Press TALK** to speak. Button latches; press again to stop talking.\n- **HOLD**: Move fader to HOLD zone, caller hears program but isn't broadcast.\n- **ON-AIR**: Raise fader to achieve proper level.\n\n<Info>\n  During conferences between **cellphone** and **landline/VoIP**, some **echo** may occur in the remote journalist's return feed. **Does not** go on-air.\n</Info>",
+      "hash": "91af86ff35108421a4aa841ff5583b098ef5af5614e1d7f4237ed2a46d0980b2",
+      "translation": "### Incoming Call (Mobile Phone)\n\n- The phone rings in **CUE** (with TELCO fader closed). During the ring, the CELL PHONE button stops blinking and remains off.\n- Answer with **short press on BLUETOOTH** (or from the mobile phone screen).\n- Press the Bluetooth button to take audio from the mobile phone. It will blink red/pink.\n- **Preview conversation:** With fader in **CUE**, the call is heard through **CUE**.\n- **Press TALK** to speak. The button is latched. While active, only the talkback microphone signal will be sent to the phone. Press again when finished speaking.\n- **HOLD**: Move the fader to the HOLD zone, the caller hears the program but does not go on-air.\n- **ON-AIR**: Raise the fader to reach the appropriate level.\n\n<Info>\n  In conferences between **mobile phone** and **land line (POTS)/VoIP**, there may be some **echo** in the return from the remote journalist. It **does not** go on-air.\n</Info>",
       "title": "Llamada entrante (móvil)",
       "level": 3
     },
@@ -32,8 +32,8 @@
       "level": 3
     },
     {
-      "hash": "565d6650660633a18aba7feef252571b14199b65a1e0d3496fef223c5322e9e7",
-      "translation": "### Initiate Call from Mobile Phone\n\n1. On the mobile device, disable Bluetooth to speak directly through the phone.\n2. Establish the call.\n3. To transfer to the console, switch to **Bluetooth/Headset** mode.\n4. With the fader in the **HOLD** position, the mobile receives return feed from the console but remains off-air.\n5. Raise the fader to bring the call on-air.\n6. To terminate: **brief press of the BLUETOOTH button** or disconnect from the mobile.\n\n<Note>\n  The call can also be established **without exiting** Bluetooth mode on the mobile, with the fader in **CUE** position and using **TALK** to converse from the console.\n</Note>",
+      "hash": "c618f8321678e6ba98af43068cd5ae9eca2950a2b7ab3a0f6fc3a380ece54b66",
+      "translation": "### Make a call from mobile phone\n\n1. On the mobile phone, disconnect Bluetooth to speak directly from the phone.\n2. Establish the call.\n3. To transfer to console, switch to **Bluetooth/Headset** mode.\n4. With the fader in **HOLD** position, the mobile phone receives return audio from the console but does not go on-air.\n5. Raise the fader to put on-air.\n6. To end call: **brief press of BLUETOOTH button** or disconnect from the mobile phone.\n\n<Note>\n  The call can also be established **without leaving** Bluetooth mode on the mobile phone, with the fader in **CUE** position and using **TALK** to communicate from the console.\n</Note>",
       "title": "Generar llamada desde celular",
       "level": 3
     }

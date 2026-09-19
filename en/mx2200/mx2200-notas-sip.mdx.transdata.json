@@ -1,0 +1,83 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "53c60dccd0bdde0e326c1efc114ebea1ec12ecc0faf5ea520362c87949964513",
+      "translation": "## The Problem of Finding a Peer on the Internet\n\nWhen two devices need to communicate with each other, they both need to know the other's IP address.\\\nIn some cases, you can subscribe to a **static IP** from your provider, though this usually involves an additional cost and is not always available (example: cooperatives that provide private subnets).\n\nTo overcome these limitations, signaling protocols were developed, among which the most important is: **SIP (Session Initiation Protocol)**.\n\n---",
+      "title": "El problema de encontrar al compañero en Internet",
+      "level": 2
+    },
+    {
+      "hash": "864e4feece0cbf82a5805ea44dfd4f21e52f07d0f799ffcc7c20514f6dac7c19",
+      "translation": "## What is SIP?\n\nSIP is a communication protocol between devices connected to the Internet.\\\nIts primary function is to allow two devices to find each other and establish a session without previously knowing their IP addresses.\n\n- Each SIP client has an address formatted similarly to an email:\\\n  sip:user@server.com\n- Both clients must register with a **SIP Server**, which keeps the list of IPs updated.\n- The server acts as an \"initial intermediary,\" but data transfer is **point-to-point** between clients.\n- The system validates identity via **username + password**.",
+      "title": "¿Qué es SIP?",
+      "level": 2
+    },
+    {
+      "hash": "51b4e30840a1d5ae2e9c5546b3c4b95513a42fcde730a58235d275a986b8cfab",
+      "translation": "### Basic SIP Call Flow\n\n1. Client **A** sends an **INVITE** to the SIP Server.\n2. The server relays the request to **B**.\n3. **B** responds with **RINGING** → the server relays it to **A**.\n4. If **B** accepts, it sends **OK** → relayed to **A**.\n5. Both clients receive the IP addresses and session parameters (SDP: sample rate, channels, codec).\n6. Audio/data flows directly between A and B.\n7. To end, a **BYE → OK** is sent.\n\n<Info>\n  SIP is similar to email, but in real time.\\\n  A client can even subscribe to presence notifications from its contacts.\n</Info>\n\nIn scenarios with **routers/firewalls**, **NAT** intervenes, adding complexity to the connection.\n\n<Note>\n  Full specification: RFC 3261 – SIP: Session Initiation Protocol\\\n  https://datatracker.ietf.org/doc/html/rfc3261\n</Note>\n\n---",
+      "title": "Flujo básico de llamada SIP",
+      "level": 3
+    },
+    {
+      "hash": "0b6d4c0accbbe9743279c9c7206f462e94743982140969b0273f82f011fdd948",
+      "translation": "## How do I get a SIP account?\n\nThere are many providers (free and paid).\\\nSome offer limited free accounts; others include minutes to conventional phone service through a monthly subscription.",
+      "title": "¿Cómo obtengo una cuenta SIP?",
+      "level": 2
+    },
+    {
+      "hash": "4b8741921bca578d1e9bff741cb287d3cf30c130d4446fb07a6a7ed5c0550201",
+      "translation": "### Practical Guide\n\nYou can consult the official guide:\\\n[SIP Account Configuration Guide in Linphone](https://solidynepro.com/descargas/productos/Tutorial_Linphone_Accounts.pdf)\n\nWhen creating an account, the provider supplies the following data:\n\n1.  **SIP Address**\\\n    Example:\n    - sip:usuario@proveedorSIP.com\\\n      Sometimes the fields are provided separately (username + server).\\\n      Also called _SIP identity_, _SIP URL_, or _SIP URI_.\n2.  **Domain**\\\n    Example:\n    - sip:radiovirtual.linphone.org\n    - sip:radiovirtual.onsip.com\\\n      Also known as _URL of Registrar_ or _Reg Server_.\n3.  **Realm (Authentication realm)**\n    - May be the same as the domain.\n    - Usually configured as “\\*”.\n4.  **Username / Auth Username**\n    - Some systems differentiate between a generic username and an authentication username.\n    - Example:\n        - Username: Luis_Garcia\n        - Auth Username: lgarcia77\n    - If the provider supplies a single piece of data → both are the same.\n5.  **Password**\n    - Password provided for validation against the server.",
+      "title": "Guía práctica",
+      "level": 3
+    },
+    {
+      "hash": "87fcdc575067cbb2c2beeb5008a07306bd2f664d51a359cde0ddd5fe2eb5084f",
+      "translation": "### Example SIP Addresses\n\nsip:estudioFM@radiovirtual.onsip.com\nsip:estudioproduccion@linphone.org\n\n<Info>\n  As with email addresses, there are no restrictions:\\\n  a client on one SIP provider can call another registered with a different provider.\n</Info>\n\n---",
+      "title": "Ejemplo de direcciones SIP",
+      "level": 3
+    },
+    {
+      "hash": "bdfe1523b71985955cfadc6238a54128bf01315533e0009a7dfd881e2eb3620e",
+      "translation": "## Other theoretical definitions",
+      "title": "Otras definiciones teóricas",
+      "level": 2
+    },
+    {
+      "hash": "21bd9bf88232fc9ef6c8274e180b343b64ab43df1127a38bdb18ee42dc882bd4",
+      "translation": "### IP Address\n\n- Every device connected to the Internet has an **IP** address.\n- Format: four numbers separated by dots (e.g., 192.168.0.100).\n- The hierarchical organization allows for message routing.",
+      "title": "Dirección IP",
+      "level": 3
+    },
+    {
+      "hash": "3987ed13abfbfa960629c8bdf99e07fb6ce1f9712afe1b70e2ddb0a8960c5d30",
+      "translation": "### Public IP vs Private IP\n\n- Within a LAN, devices use **private IPs**, which are not externally visible.\n- The router assigns a **public IP** to the entire network and acts as a **firewall**.",
+      "title": "IP pública vs IP privada",
+      "level": 3
+    },
+    {
+      "hash": "ebed48ec50430393e1e2e4634a2f9aa12227902665b216bf09d58cfcf60da485",
+      "translation": "### NAT (Network Address Translation)\n\n- Translates private IPs on the LAN to the router's public IP.\n- Allows multiple devices to share a single external IP.\n- Different types of NAT exist, which can affect SIP.\n\n<Note>\n  More info: RFC 2663 – NAT Terminology\\\n  https://datatracker.ietf.org/doc/html/rfc2663\n</Note>",
+      "title": "NAT (Network Address Translation)",
+      "level": 3
+    },
+    {
+      "hash": "30924eec403da4d89bc72f9570800a2c8c41b5ddfb39bbedff25eeabfa9e7cc3",
+      "translation": "### STUN\n\nSession Traversal Utilities for NAT\\\nAllows a client behind NAT to discover its public IP and the type of NAT in use.\\\nDefined in RFC 5389.",
+      "title": "STUN",
+      "level": 3
+    },
+    {
+      "hash": "f17206fda48645c31d2f256cb1f92b67195034347c9a985e76468201b72618d9",
+      "translation": "### TURN\n\nTraversal Using Relays around NAT\\\nUses relay servers for clients behind symmetric NAT.\\\nDefined in RFC 8656.",
+      "title": "TURN",
+      "level": 3
+    },
+    {
+      "hash": "49685ed051e3a29074483eb744945286129e50bd9e8679f63bae284600d5c9cb",
+      "translation": "### ICE\n\nInteractive Connectivity Establishment\\\nCombines NAT traversal techniques (STUN, TURN) to establish a connection between two devices on different LANs.\\\nDefined in RFC 8445.",
+      "title": "ICE",
+      "level": 3
+    }
+  ]
+}

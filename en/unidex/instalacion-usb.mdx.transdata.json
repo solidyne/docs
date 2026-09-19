@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "354db2f218a1e65e62545fcc121c1f8893226ba7669c1beb75ae41a542a5c8e2",
+      "translation": "The built-in **USB** port provides a direct connection to the computer, without the need for additional audio interfaces.\n\n- <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size={22} /> Provides **4 stereo playback devices** (from PC to \"USB inputs\" on the console).\n- <Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} /> Provides **4 stereo recording devices** (\"USB outputs\" from the console to the PC).\n\nThis means the computer can **send 4 stereo signals** to the console, and **receive another 4 stereo signals** from it.\n\n<Info>\n  Although USB is technically a data port, in this context we refer to it as **USB audio inputs and outputs**.\n\n  - The console's \"**USB outputs**\" correspond to **USB recording devices** in Windows.\n  - The console's \"**USB inputs**\" correspond to **USB playback devices** in Windows. Keeping this in mind is essential for correctly understanding the signal flow.\n</Info>\n\nThe signal assignment to the USB outputs (i.e., the USB recording devices in Windows) is configured from the console in the `SETTINGS → OUTPUTS` screen.\n\n---",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "bc70318b53d83d62e0c25d77e59d836cf933dcdbc7cf164111017d8cd47c01f5",
+      "translation": "## USB Driver Installation\n\n<Note>\n  The following description refers to the **built-in USB connector** on the Rear Panel of the UX24 and UX18 models.\\\n  To install an **external UDX-USB adapter**, refer to the section: **UNIDEX External Adapters**\n</Note>\n\nUNIDEX requires its own USB driver for the device to be correctly recognized in Windows.",
+      "title": "Instalación del controlador USB",
+      "level": 2
+    },
+    {
+      "hash": "d7c4fc42b1d7189ba5874234282f7f6a67797de9eda984eadad42d2b0c77e7ca",
+      "translation": "### Installation Steps:\n\n1. Connect the console's USB port to the PC using the supplied **USB A/B** cable.\n\n<Danger>\n  Using **poor quality or damaged cables** can cause the computer to not recognize the USB device correctly or to identify it with errors.\n</Danger>\n\n2. Download the driver: [Download Center](/es/otros_docs/downloads)\n3. Run the installer and follow the instructions.",
+      "title": "Pasos para la instalación:",
+      "level": 3
+    },
+    {
+      "hash": "e2b1c245f7602700fa6ee4299fe143bd0de84b5860fd6d2a0c93a4ba2453f6e7",
+      "translation": "### USB Devices in Windows\n\nOnce the driver is correctly installed, Windows will display:\n\nPlayback devices (outputs from the PC to UNIDEX):\n\n- **Solidyne USB OUT 1 →** USB Input 1 (UX24)\n- **Solidyne USB OUT 2 →** USB Input 2 (UX24)\n- **Solidyne USB OUT 3 →** USB Input 3 (UX24)\n- **Solidyne USB OUT 4 →** USB Input 4 (UX24)\n\nRecording devices (sends from UX24 to the PC):\n\n- **Solidyne USB IN 1 ←** USB Output 1 (UX24)\n- **Solidyne USB IN 2 ←** USB Output 2 (UX24)\n- **Solidyne USB IN 3 ←** USB Output 3 (UX24)\n- **Solidyne USB IN 4 ←** USB Output 4 (UX24)\n\nThese outputs are assigned from the screen at: `SETTINGS → OUTPUTS`\n\n---",
+      "title": "Dispositivos USB en Windows",
+      "level": 3
+    },
+    {
+      "hash": "5e84662ad875525b722f8c67bbc0d0c4d39c6758895ea94702e806f396fb7585",
+      "translation": "## ASIO 3.0 Compatibility\n\n**ASIO 3.0** compatibility allows for the shared and simultaneous use of different USB channels between different applications, even if they are not ASIO compatible.",
+      "title": "Compatibilidad con ASIO 3.0",
+      "level": 2
+    },
+    {
+      "hash": "c69e0ce41805f844a08323a660e484da6c7172c8bc450f7692cedf981b74eced",
+      "translation": "### Advanced Application Example:\n\n- The automation software plays music through the **USB 1** channel via WDM.\n- Another processing software (such as an ASIO effects host) takes the **USB 2** return channel from the console and applies **VST effects** in real time to the microphone voices.\n\n<Icon icon=\"video\" iconType=\"solid\" color=\"#b30000\" size={25} />  [Video Tutorial: Using External VST Effects ](https://youtu.be/qKi0MMbBEuc?si=j2B0-sSk--1DxuZE)",
+      "title": "Ejemplo de aplicación avanzada:",
+      "level": 3
+    }
+  ]
+}

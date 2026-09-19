@@ -1,0 +1,89 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "baa83c632d0f69046d12d2cfb6a47497c0539bcbdeabba106cac1919eb25b4c7",
+      "translation": "The screen for user and scene management allows:\n\n- Changing the active user.\n- Changing the current scene.\n- Using advanced functions to organize channels.\n\nIt is accessed by pressing the **SCENES** option, available on the contextual buttons when the console displays the **main screen**.\n\n<img\n  src=\"/images/ux24/ux24-pantallas-escenas.jpg\"\n  alt=\"UX18 Scenes Screen\"\n  title=\"UX18 Scenes Screen\"\n  className=\"mx-auto\"\n  style={{ width:\"75%\" }}\n/>",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "8cf42c533687078e6fec57f1b4f8454b41f19a541c972afe253120be37978478",
+      "translation": "## USERS\n\nIn the **USER LOGIN** area (1) of the screen, the currently active user is displayed, and you can switch to another user by tapping the corresponding option.\\\nThere are **three user levels** with different pre-set permissions. The restrictions apply both to operation from the console screen and from the remote web interface.",
+      "title": "LOS USUARIOS",
+      "level": 2
+    },
+    {
+      "hash": "41bab91ea5135b58935cf2f51751912fca8a244c956d42364a043b037130e9e4",
+      "translation": "### BASIC User\n\nMost restricted profile:\n\n- No password protection.\n- No access to advanced configuration options (SETTINGS).\n- Can switch scenes, but cannot save changes or create new scenes.\n- Can view the settings and status of the processors, but cannot modify them or turn them on/off.\n- Can temporarily modify basic channel options (**GAIN**, **NAME**, **PAN**, **CHANNEL ACTIONS**), but without saving the changes to the scene.",
+      "title": "Usuario BASIC",
+      "level": 3
+    },
+    {
+      "hash": "9c329afd24feebcd56c6d02d77158a6a040e24fdff1ab0f2c41db4cd731a9c56",
+      "translation": "### EXPERT User\n\nProfile with intermediate restrictions:\n\n- Password protected (default: `expert`). Only the ADMIN user can change it.\n- Same as BASIC, without access to advanced configuration (**SETTINGS**).\n- Full access to audio processes.\n- On the **CHANNEL** screen, they can change **gain**, **pan**, **name**, **input assignment**, and **channel mode**, but without access to SETTINGS.\n- They can save the current scene, unless it is protected.\n- They can create new scenes, even from a protected one.",
+      "title": "Usuario EXPERT",
+      "level": 3
+    },
+    {
+      "hash": "149b67644635afbe121ab05855eafc01b4205603e11f5022b9870c837718236d",
+      "translation": "### ADMIN User\n\nProfile with full access:\n\n- Protected by password (default: `admin`).\n- Can change all passwords for all profiles.\n- Can create protected or read-only scenes, which are operational for BASIC and EXPERT but only editable by ADMIN.\n\n---\n\n<Note>\n  **STARTUP USER**\n\n  When powered on, the console starts with a predefined user profile (factory default: ADMIN) and never requests a password. To ensure access restriction from startup, change the startup user to BASIC or EXPERT.\n\n  In `SETTINGS → USERS` you can:\n\n  - Change the startup user.\n  - **Change the passwords** for ADMIN, EXPERT, and BASIC.\n</Note>",
+      "title": "Usuario ADMIN",
+      "level": 3
+    },
+    {
+      "hash": "8d0503fb56c400443f9d937e31e6332ad19368a81b0b4c57ebdea1d8f0bab84b",
+      "translation": "## SCENES\n\nA **scene** stores the entire configuration of the console, with the exception of system settings (network, streaming, startup user, etc.). It includes:\n\n- Input and output configuration.\n- Channel and bus assignment.\n- Gains.\n- Audio processor settings.\n\nScenes allow you to quickly load a default configuration according to the requirements of each show; for example, by reassigning inputs, changing the channel order, or adjusting microphone processors.\n\n<Warning>\n  The scene must be saved after modifying any parameter (gain, equalizer, channel name, etc.) for the change to be stored permanently.\n</Warning>",
+      "title": "LAS ESCENAS",
+      "level": 2
+    },
+    {
+      "hash": "862f102afb0282667ecd1c98e7dbbdb5c09626105aed1943659d20384528d83e",
+      "translation": "### Available Scenes\n\nThe list (see 2 in the image) shows 12 user scenes.\n\n- Navigate by turning the encoder and confirm by pressing it.\n- The active scene is highlighted in **cyan**.\n- The selected scene (but not confirmed) is highlighted in **orange**.",
+      "title": "Escenas disponibles",
+      "level": 3
+    },
+    {
+      "hash": "0aa9b9ee8323fc43b33f31a2c20b6a81db3a8c85cf762e07cb0b8095ae22e35f",
+      "translation": "### Protected Scenes (Lock)\n\n- Only the **ADMIN** profile can create them.\n- They are identified with a lock icon.\n- BASIC and EXPERT users can load them but cannot modify or delete them.",
+      "title": "Escenas protegidas (Lock)",
+      "level": 3
+    },
+    {
+      "hash": "646ff2addf50ea0023271aa197694cc976cdc2a8471ceed13f1c19c512225066",
+      "translation": "### Scene Manager\n\nIt presents two groups of options: for the **selected scene** and for the **active scene**.\n\n**LOAD**: Loads the selected scene. Can be done from the touch screen, context button, or encoder.\n\n- Requires confirmation (cancels after 8 seconds if not confirmed).\n- All profiles can load any scene.\n- If there are channels on-air, they remain active even if they change position, maintaining their bus assignment.\n- If the newly assigned channel has a different fader level, the previous digital level is maintained and indicated by flashing on the OLED.\n- **Audio cuts out if the previously on-air input is not assigned** to a channel in the new scene.\n- You cannot change scenes with a phone line on-air or on hold.\n\n**RENAME**: Changes the name of the selected scene.\n\n- Disabled for BASIC.\n\n**COPY CURRENT**: Copies the active scene over the selected one.\n\n- Requires confirmation.\n- Disabled for BASIC.\n\n**SET TO DEFAULT**: Restores the active scene to the factory configuration.\n\n- Disabled for BASIC.\n\n**SAVE**: Saves the current configuration of:\n\n- Input assignment to the 24 channels.\n- Signal assignment to the outputs.\n- Specific input and output configuration (phantom, MIX-MINUS modes, etc.).\n- Input and output gains.\n- Channel labels and actions.\n- Audio processor settings.\n- Assignment status, including VBUS.\n\n<Warning>\n  The scene **does not save** the state of the **ON-AIR** or **CUE** buttons.\n</Warning>",
+      "title": "Scene Manager",
+      "level": 3
+    },
+    {
+      "hash": "2c583077bc7d5c954368302d40fce3dc48fa510ce413cb9aff87f75d460b4fa0",
+      "translation": "### Factory Scenes\n\nAny of the 12 scenes can be reset to a default configuration. Furthermore, UNIDEX comes from the factory with scenes designed with different configurations and UDX expansions, intended to serve as the base or example for creating new configurations.\n\n<Note>\n  Download the [infographic on the default scene configuration](https://solidynepro.com/descargas/productos/UX24_Quickguide_Default_scenes_routing.pdf) (PDF)\n</Note>",
+      "title": "Escenas de fábrica",
+      "level": 3
+    },
+    {
+      "hash": "6b4a555a00c5352d73eb8067d2e4902d21bf33dc7cb449093746f2037d0b8acc",
+      "translation": "### Export and import scenes\n\nScenes can be exported and imported from the **WEB control interface**. \\\nFrom the scene management option in the web control, it is possible to export each scene as a file on disk. They can then be imported into any of the 12 available positions.",
+      "title": "Exportar e importar escenas",
+      "level": 3
+    },
+    {
+      "hash": "b6197b74556592f4bb5b1a3334dc84d27f95cfd765ed176f212eefe4d3dba004",
+      "translation": "## Channel Map (Channel Map)\n\nThe **CHANNEL MAP** function displays the configuration of all channels and allows you to easily reorder them.\\\nThere are two operating modes: **SWAP 2 CH** (swap two channels) and **ORDER CH** (reorder channels).",
+      "title": "Channel Map (Mapa de Canales)",
+      "level": 2
+    },
+    {
+      "hash": "3fc301586d27ccb334daf263c97410592945dd4b4321b10856565cb10f4fc50c",
+      "translation": "### SWAP 2 CH (Swap Two Channels)\n\nAllows swapping the position of two channels.\n\n<img\n  src=\"/images/ux24/ux24-chmap.png\"\n  alt=\"UX18 Channel Map\"\n  title=\"UX18 Channel Map\"\n  style={{ width:\"65%\" }}\n/>\n\n**Procedure:**\n\n1. Press **SWAP 2 CH** to enable the option.\n2. Select the two channels you wish to swap from the list.\n3. Press **APPLY** to execute the swap.\n4. Press **SAVE** to save the changes to the current scene.\n\n---",
+      "title": "SWAP 2 CH (Intercambiar dos canales)",
+      "level": 3
+    },
+    {
+      "hash": "5f3236cc3297fdb77393b7d3c85fe99ef47964cf915d020b70eecdb473ca4e6e",
+      "translation": "## ORDER CH (Reorder Channels)\n\nAllows assigning new positions to one or more channels.\n\n<img\n  src=\"/images/ux24/ux24-OrderCH.png\"\n  alt=\"UX18 Order CH\"\n  title=\"UX18 Order CH\"\n  style={{ width:\"65%\" }}\n/>\n\n**Procedure:**\n\n1. Press **ORDER CH**.\\\n   A drop-down menu will appear to the right of the channel number, allowing you to assign a new position.\n2. Touch the on-screen menu and choose the new position for the channel.\\\n   Multiple channels can be relocated at once.\n\n<Warning>\n  If a channel is assigned a position that is already occupied, the information in the destination channel will be overwritten when the changes are applied.\n</Warning>\n\n3. Press **APPLY** to confirm.\n   - **APPLY** applies the changes temporarily (they are not yet saved).\n   - If you exit the scene without saving, the changes are lost.\n4. Press **SAVE** to make the changes permanent in the scene.\n5. To cancel, deactivate **ORDER CH** by touching the option again or press the contextual **BACK** button.",
+      "title": "ORDER CH (Reorganizar canales)",
+      "level": 2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "be2719fed20f0a36a7600aacbc9d44eff827e876d846ffdab0382d9dba2cdcd8",
+      "translation": "## Preassembled Cable Kits\n\nAll consoles have the **option** to purchase a **generic cable kit**, which varies depending on the equipment model. The available kits for each device are detailed in the equipment documentation (accessories section).\n\nUsers can also request cables individually from the [general catalog](/es/accesorios/cables-y-adaptadores/catalogo). This way they only acquire what's needed for their specific installation configuration. The generic kits include essentials for on-air operation, but each installation has its unique requirements. No standardized kit guarantees that cables or adapters will neither be missing nor left unused.",
+      "title": "Kits de cables prearmados",
+      "level": 2
+    },
+    {
+      "hash": "3d3ab2df8296092be0e97853196c25b7e7ab71c55045c13a5cc8b89e6d2945e3",
+      "translation": "## What Cables Are Included from the Factory?\n\nSome equipment includes part of the cabling from the factory, such as USB cables, Ethernet cables, adapters for special outputs (Studio Monitor on Unidex consoles and Classic line), and connectors for On-Air Light or GPIO.\n\nIn the documentation for each piece of equipment, and on the box, you will find details of the cables and connectors included from the factory.",
+      "title": "¿Qué cables se incluyen de fábrica?",
+      "level": 2
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "aaa462ee5cbaa947db623c1131b9672d92cb2719cc1cc93d2d8d618b86f72d99",
+      "translation": "import rj45 from '/snippets/RJ45_es.mdx'\n\n<rj45 />\n",
+      "title": "Whole file",
+      "level": 0
+    }
+  ]
+}

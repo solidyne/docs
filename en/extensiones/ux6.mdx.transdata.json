@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "02b41ab5d27934050175faf411cc45cda53245a447d97d2c12d44622b3cd31fe",
+      "translation": "The UX6 extension adds **physical faders** to the UNIDEX UX24 console for controlling 6 channels. \\\nUp to two UX6 modules can be installed, one on each side, to cover all 24 channels of the console.\n\nIf you purchased UX6 modules along with the UNIDEX UX24, they come factory-ready for installation.\n\nThe procedure for installing and configuring the UX6 expansions [is detailed in this document](http://solidyne.dx.com.ar/DW/doc-guides/UNIDEX_expansion_UX6_ESP.pdf).",
+      "title": "Whole file",
+      "level": 0
+    }
+  ]
+}

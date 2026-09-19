@@ -1,22 +1,20 @@
 ---
 title: "Live Assist"
-description: "Instant playback button panels."
+description: "Instant access button panels."
 keywords: ["Live Assist"]
-tags: "Software,Audicom"
+ttags: ["Software", "Audicom"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "5bebef2802bf7ae4aff33ee03c05ea8d97650db530570b2d0817478e513ca09e"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Live Assist Button Panels
 
-The **Live Assist 1** and **Live Assist 2** modules enable instant playback of audio files.\
-They are mainly used for playing **SFX, promos, jingles and beds**.
+The **Live Assist 1** and **Live Assist 2** modules allow instant on-air playback of audio elements.\
+They are primarily used for playing **SFX, promos, jingles, and beds**.
 
 <img
   src="/images/audicom/au-liveassist.png"
@@ -26,68 +24,58 @@ They are mainly used for playing **SFX, promos, jingles and beds**.
   style={{ width:"51%" }}
 />
 
-- Audio files are organized in button grids.
-- Each profile has 12 pages or tabs.
-- The number of buttons per page depends on rows and columns defined in the **Configuration Panel**.
-- The panel can be resized and button sizes adjust automatically.
+- Audio elements are organized in button grids.
+- Each profile contains 12 pages or tabs.
+- The number of buttons per page depends on the rows and columns defined in the **Configuration Panel**.
+- The panel can be resized, and button sizes adjust automatically.
 
 Live Assist supports control from:
 
-- Keyboard (see _Keyboard Control_ section).
+- Keyboard (see section _Keyboard Control_).
 - External controllers via **MIDI**.
 
 ### Audio Devices
 
-- Can be assigned independent output devices or share the same as **CyberPlay**.
-- When sharing, mixing is done internally according to **MIX** value.
+- Independent output devices can be assigned or share the same device as **CyberPlay**.
+- When sharing, the mix is performed internally according to the **MIX** value.
 - Assignment is done from the **Configuration Panel**.
 
 ### Video
 
 In **Audicom Black Video**, Live Assist also supports video playback.
 
-- Does not interrupt or overlap with videos playing through CyberPlay or PlayList Manager.
-
-
+- It does not interrupt or overlap videos that are playing in CyberPlay or PlayList Manager.
 
 ## Output Devices
 
-Both modules can play through internal mix with CyberPlay or through independent outputs.\
-Assignment is done from the **Configuration Panel**.
-
-
+Both modules can play through internal mixing on CyberPlay or through independent outputs.\
+The assignment is made from the **Configuration Panel**.
 
 ## Expanded View
 
 You can toggle between compact and expanded views.
 
-- Toggle using the **Maximize** button in the title bar.
-
-
+- The switch is made using the **Maximize** button, located in the title bar.
 
 ## Pause, Stop and Fade-Stop
 
 - **Pause**: stops playback and allows resuming with Play.
-- **Stop**: completely stops and returns to start.
-- **Fade-Stop**: gradually fades out level then stops.
+- **Stop**: completely stops and returns to the beginning.
+- **Fade-Stop**: gradually attenuates the level and then stops.
 
+## Preview Monitoring (CUE)
 
-
-## Preview (Cue)
-
-- Right click on a button → plays in **CUE** through dedicated channel.
-- Hold right click \>1s also activates CUE.
-- Alternatively: double click on **CUE** label in display.
+- Right-click on a button → playback on dedicated **CUE** channel.
+- Holding right-click >1s also activates CUE.
+- Alternative method: double-click the **CUE** label on the display.
 
 <Warning>
-  Console CUE mode is not recommended:
+  Console-based CUE mode is not recommended:
 
-  - Does not report to RDS/iRDS.
-  - Does not log to `.air` files.
-  - Requires enabling/disabling CUE for each action → prone to errors.
+  - Not reported in RDS/iRDS.
+  - Not recorded in `.air` files.
+  - Requires manual CUE activation/deactivation per action → error-prone.
 </Warning>
-
-
 
 ## Playback Modes
 
@@ -95,103 +83,93 @@ Live Assist has three modes, selectable by pressing the button successively:
 
 - **Normal**:
   - Plays once.
-  - If another file is triggered, it queues (flashing text).
+  - If another file is triggered, it queues (blinking text).
 - **Loop**:
-  - Continuous loop playback.
-  - Stops with Stop or changing modes.
+  - Looped playback.
+  - Stops with Stop or by changing modes.
 - **Instant**:
-  - If another button is triggered, interrupts previous playback.
+  - If another button is triggered, it interrupts the previous one.
 
-### Chain to Air
+### Chaining with on-air
 
-- With Air module stopped:
-  - Trigger one or more Live Assist buttons.
-  - Then press the chain to air button.
-- Window closes and after sequence ends, Air playlist continues.
+- While the on-air module is stopped:
+  - Trigger one or more buttons in Live Assist.
+  - Then press the on-air chaining button.
+- The window closes and when the sequence ends, the on-air playlist continues.
 
 <Note>
-  From keyboard, same operation using **spacebar** after triggering a file.
+  The same operation can be performed from the keyboard using the **spacebar** after triggering a file.
 </Note>
 
-
-
-## Start and End Markers
+## In and Out Markers
 
 <Steps>
-  <Step title="Enable CUE">
-    Set Live Assist to CUE mode with double click on CUE label.\
-    This prevents audio from reporting to RDS or logging to `.air` files.
+  <Step title="Activate CUE">
+    Double-click the CUE label to put Live Assist in CUE mode.\
+    This prevents audio from being reported in RDS or recorded in `.air` files.
   </Step>
   <Step title="Trigger button">
     Press the button you want to mark.
   </Step>
-  <Step title="Set markers">
-    Right click to select **Mark In** or **Mark Out**.\
-    Listen to audio and mark at desired point.
+  <Step title="Define markers">
+    Right-click and select **Mark In** or **Mark Out**.\
+    Listen to the audio and mark at the desired moment.
   </Step>
 </Steps>
 
+## Icon Window
 
-
-## Icons Window
-
-- Shows name and icon of active Live Assist profile.
+- Displays the name and icon of the active Live Assist profile.
 - Icons are `.ico` files located in `\Audicom\LA-Icons`.
-- Icons can be added or removed as needed.
+- Icons can be added or deleted as preferred.
 
 ### Private Profiles
 
 - Private profiles are only accessible by the user who created them.
-- They appear identified with owner's name.
-- If another user attempts access, a restriction message appears.
-
-
+- They are identified with the owner's name.
+- If another user attempts to access, a restriction message appears.
 
 ### Export / Import Page
 
-- **Export**: saves current page as a Playlist (`.txt`).
-- **Import**: loads a Playlist into Live Assist buttons.
+- **Export**: saves the current page as a Playlist (`.txt`).
+- **Import**: loads a Playlist into the Live Assist button panel.
 
-List items load into buttons in sequence order.
+The list items are loaded into buttons according to their order.
 
-
-
-### Creating Live Assist Profiles
+### Create Live Assist Profiles
 
 <Steps>
   <Step title="Open creation menu">
-    In icons window, right click → **Add**.\
-    Enter profile name and icon.
+    In the icons window, right click → **Add**.\
+    Enter name and icon for the profile.
   </Step>
-  <Step title="Set privacy">
-    Enable **Private** option if profile should only be available to that user.\
+  <Step title="Define privacy">
+    Enable the **Private** option if the profile should only be available for that user.\
     (Requires administrator authorization).
   </Step>
   <Step title="Load titles">
     Drag titles from Media Manager.\
-    Button takes the color of title's category.
+    The button takes the color of the title's category.
   </Step>
   <Step title="Edit profile">
-    To change name or icon: load profile → right click on icon → **Edit**.
+    To change name or icon: load the profile → right click on icon → **Edit**.
   </Step>
 </Steps>
-
-
 
 ## Live Assist Configuration
 
 ### Button Panel Size
 
-- Set in **Configuration Panel \> Preferences**.
-- Number of rows and columns can be modified.
-- Larger buttons with fewer quantity, smaller with more quantity.
+- Configured in **Settings Panel > Preferences**.
+- Number of rows and columns can be adjusted.
+- Larger buttons with fewer elements, smaller buttons with more elements.
 - Default configuration: **4 columns x 12 rows = 48 buttons per page**.
 - Font type and size can also be changed.
 
 ### Data Files
 
-- Information is saved in `Liveass.dat` and `Liveass2.dat`.
-- Path is defined in `audicom.ini`.
+- Information is stored in `Liveass.dat` and `Liveass2.dat`.
+- The path is defined in `audicom.ini`.
 
 Example:
 
@@ -207,6 +185,6 @@ LastPos2=0 0 0
 
 ### Icons
 
-- Default location is `\Audicom\LA-Icons`.
+- Default location: `\Audicom\LA-Icons`.
 - Location can be changed in `audicom.ini`.
-- Can be freely added or removed.
+- Icons can be freely added or removed.

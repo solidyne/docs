@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "1f450cf24e209ac3e71528e268d0d44db12a3de351131932b768190380874c84",
+      "translation": "## Fonte de alimentação\n\nA unidade conta com uma fonte de alimentação interna do tipo chaveada, **110/240V 50/60Hz.**\n\nNo painel traseiro está localizada a **chave de liga/desliga**; o fusível geral (1A) e o conector para o cabo de alimentação tipo Interlock (fornecido com a console).\n\n<img\n  src=\"/images/ux24/ux24_powerinput.png\"\n  alt=\"RJ45 a RCA\"\n  style={{ maxWidth:\"500px\",height:\"auto\",marginBottom:\"1rem\" }}\n  title=\"\"\n/>",
+      "title": "Fuente de alimentación",
+      "level": 2
+    },
+    {
+      "hash": "68aad7ea4c887983afc201bf40879e3b8914c66a6f3c8f3b36181b387086b096",
+      "translation": "## Aterramento\n\nO UX24 é aterrado através do cabo de alimentação. Não utilize adaptadores ou cabos que suprimam o pino de aterramento. Recomenda-se também conectar o borne de aterramento do chassi à terra da instalação, usando cabo de 4 mm ou superior.\n\nA instalação elétrica geral deve contar com um aterramento adequado. Como referência, você pode consultar o [plano de conexões de aterramento para FM](/es/puesta-a-tierra).\n\n<Danger>\n  **ATENÇÃO!**\n\n  **Certifique-se de que o computador conectado ao UX24 via USB tenha um aterramento adequado.**\n</Danger>",
+      "title": "Puesta a tierra",
+      "level": 2
+    },
+    {
+      "hash": "886b667713c5c752fb1c9e0df643899b1f62c8e84a0745e398792673aa73b3e0",
+      "translation": "## Entradas, saídas e portas\n\nO painel traseiro concentra todas as conexões da console. São utilizados conectores RJ45 para todas as conexões de áudio, com exceção das saídas para fones de ouvido e alto-falantes da cabine de controle.\n\nTambém encontramos portas **Ethernet**, porta **USB**, conexões para **luzes de ar** (Tally Light) e controle **GPIO**.\n\n<Note>\n  Ver [Infografia de entradas e saídas](http://solidyne.dx.com.ar/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF).\n</Note>\n\n![Ux24 Rearpanel Notes Pn](/images/ux24/ux24_rearpanel_notes.png)\n\n<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size={22} />  [ENTRADAS](/es/unidex/instalacion-entradas) (clique para ampliar informações)\n\n- 4 entradas para **microfones**.\n  - Utilizam conectores RJ45. São conectadas por meio de um cabo **SOL-M25/1XLRF** (RJ45 macho para XLR fêmea, 2,5 metros). Também podem ser adquiridos trechos mais curtos para conectar a XLR próximo à console.\n\n  <Info>\n    As entradas de **MICROFONE** RJ45 fêmea utilizam o **canal ESQUERDO** da conexão balanceada.\n  </Info>\n- **16 entradas UNIDEX** mono agrupáveis em pares estéreo.\n- **4 balanceadas** estéreo.\n- **4 digitais** AES3\n- **4 USB** áudio estéreo.\n- **1 streaming** de áudio (substitui AES3-1)\n- OPÇÃO: \\*\\*DANTE \\*\\*x16\n\n<Note>\n  **MODELOS COM OPÇÃO DANTE** (UX24-A67)\n\n  Quando a UX24 inclui a opção DANTE/AES67, substitui as entradas:\n\n  **UNIDEX 5, 6, 7 e 8**   São substituídas por AoIP 1, 2, 3 e 4.\\\n  **BAL 9, 10, 11 e 12**.   São substituídas por AoIP 5, 6, 7 e 8.\n</Note>\n\n<Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} />  [**SAÍDAS**](/es/unidex/instalacion-salidas)\n\n- 2 PGM balanceadas\n- 4 estéreo balanceadas\n- 4 estéreo não balanceadas\n- 4 digitais AES3\n- 4 USB áudio estéreo\n- 2 streams de áudio\n- OPÇÃO: DANTE x16\n\n<Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} />  [SAÍDA STUDIO](/es/unidex/instalacion-cableado_monitoreo)\n\n<Icon icon=\"usb-drive\" iconType=\"solid\" color=\"#008dff\" size={24} />  [USB](/es/unidex/instalacion-usb)\n\n<Icon icon=\"network-wired\" iconType=\"solid\" color=\"#ffc044\" size={23} />  [ETHERNET](/es/unidex/instalacion-red)\n\n<Icon icon=\"arrow-down-arrow-up\" color=\"#ffc044\" size={24} />  [GPIO](/es/unidex/instalacion-gpio)",
+      "title": "Entradas, salidas y puertos",
+      "level": 2
+    }
+  ]
+}

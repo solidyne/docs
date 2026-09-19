@@ -1,0 +1,77 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "03b06d742a1ee89f77e5403b0b12f5b9b9cb0a4a8fc512ab71f20ce79d552e5b",
+      "translation": "- O adaptador UDX TEL+BT fornece conexão para uma **linha telefônica fixa (POTS) e emparelhamento Bluetooth** para um telefone celular.\n- Conecta-se diretamente ao painel traseiro do UNIDEX com dois cabos SFTP RJ45-RJ45 (por exemplo, Solidyne código SOL P50).\n- É controlado a partir da superfície da console ou remotamente pela interface de Controle WEB.\n\n- O adaptador UDX TEL+BT fornece conexão para uma **linha telefônica fixa (POTS) e emparelhamento Bluetooth** para um telefone celular.\n- Conecta-se diretamente ao painel traseiro do UNIDEX com dois cabos SFTP RJ45-RJ45 (por exemplo, Solidyne código SOL P50).\n- É controlado a partir da superfície da console ou remotamente pela interface de Controle WEB.\n\n---\n\n<Frame>\n  <img\n    src=\"/images/UDX_TELBT-connection.png\"\n    alt=\"Conexão UDX TELBT\"\n    style={{ width:\"82%\" }}\n  />\n</Frame>\n\nA imagem mostra um exemplo de conexão ao UNIDEX UX24.\n\nO UDX TEL+BT conecta-se a uma das entradas UNIDEX 1 a UNIDEX 4 e à saída correspondente a essa entrada. Para facilitar a conexão, no painel traseiro os conectores das entradas UNIDEX 1 a 4 estão alinhados com suas saídas associadas.",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "c1505fa2134a16f807344c4c296fcd74b760d6d2a2b0ee966a3306aa919fe1f1",
+      "translation": "### Correspondência de entradas para saídas (modo mix-minus)\n\n| Entrada | Saídas (UX24) | Saídas (UX18) |\n| --: | :-: | :-: |\n| UNIDEX 1 | UNBAL 5 | UNBAL 1 |\n| UNIDEX 2 | UNBAL 6 | UNBAL 2 |\n| UNIDEX 3 | UNBAL 7 | UNBAL 3 |\n| UNIDEX 4 | UNBAL 8 | UNBAL 4 |",
+      "title": "Correspondencia de entradas para salidas (modo mix-minus)",
+      "level": 3
+    },
+    {
+      "hash": "124f23fb036676895a5c50e22bc1e2efdbf14a6d27c23b073264c8c365afe164",
+      "translation": "## Configurações\n\nUma vez conectado o adaptador **UDX 2TEL**, configure:\n\n- **Entradas**\n- **Saídas (envios)**\n- **Canais**",
+      "title": "Configuraciones",
+      "level": 2
+    },
+    {
+      "hash": "fe068e535d5fe71a8421e7e61f1966b5e3070589147054c4833d1585ca47cad8",
+      "translation": "### Configurar entradas\n\n1. Na tela principal, acessar a opção `SETTINGS`.\n2. **Girar o encoder** até selecionar a entrada UNIDEX à qual o UDX TEL\\+BT foi conectado. Se a entrada estiver atualmente configurada como `MONO`, será possível selecionar \"L\" e \"R\" individualmente.\n3. Se estiver configurada como `STEREO`, o par L/R será selecionado. Nesse caso, altere `INPUT MODE` para `MONO`.\n   <Note>\n     A entrada \"L\" corresponde ao Bluetooth.\\\n     A entrada \"R\" corresponde à linha telefônica fixa (POTS).\n   </Note>\n4. Escolher a entrada \"UDX L\". Na opção `UDX TYPE`, escolher `TEL+BT`.\n5. Tocando na tela, abrir o menu `ASSIGNED TO CHANNEL` para atribuir um CANAL ao Bluetooth. Se escolher um canal que já tem uma entrada atribuída, aparecerá um aviso. Se continuar, a entrada nesse canal será substituída.\n   <Tip>\n     Recomenda-se atribuir as linhas TELCO a canais físicos.\\\n     O ganho da entrada pode ser ajustado **durante a operação** na tela TELCO.\n   </Tip>\n6. Repetir a partir do Passo 4 para a entrada \"UDX R\" e atribuir um CANAL à linha telefônica fixa.\n7. Pressionar `BACK` para voltar à tela principal.\n8. O próximo passo será configurar a saída.",
+      "title": "Configurar entradas",
+      "level": 3
+    },
+    {
+      "hash": "b0602e3e6696294b77b0d1c187e01e57e28eaf4fd286087b818bb84d9d7c8bc3",
+      "translation": "### Configurar saídas\n\n1. Na tela principal, acessar a opção `SETTINGS`.\n2. Em `SETTINGS`, escolher a opção `OUTPUTS`.\n3. Girando o encoder, selecionar a saída à qual o UDX TEL\\+BT foi conectado. Se a saída estiver atualmente no modo `MONO`, será possível selecionar individualmente `OUT-L` e `OUT-R`.\n4. Se estiver configurada como `STEREO`, o par L/R será selecionado. Nesse caso, alterar o `AUDIO MODE` para `MONO`.\n   <Note>\n     A saída \"L\" é o envio para Bluetooth.\\\n     A saída \"R\" é o envio para linha telefônica.\n   </Note>\n5. Selecionar `OUT-L` e configurar `SEND MODE` como `MIX-MINUS`. Ao ativar `MIX-MINUS`, a saída será associada à entrada UNIDEX correspondente.\n6. Repetir a operação para a `OUT-R`.\n\n<Tip>\n  O **nível de envio** para a linha (OUT GAIN) pode ser ajustado **durante a operação** na tela TELCO.\n</Tip>",
+      "title": "Configurar salidas",
+      "level": 3
+    },
+    {
+      "hash": "0f5fca7690dc32510598347e152bb15a1989dab44a6e72138321b8a16db562e1",
+      "translation": "### Configuração do canal\n\n1. Na tela principal, pressionar `CHANNEL`. Os botões `CUE` mudam para o modo `SELECT`.\n2. Pressionar o botão `CUE/SELECT` no canal a ser configurado. A console sai do modo `SELECT` e exibe a tela `CHANNEL` do canal selecionado.\n3. Na opção `MODE`, abrir o menu e selecionar `TELCO`. Isso faz com que os canais sejam exibidos na tela TELCO, para gerenciar as chamadas.\n4. Para editar o **rótulo**, tocar sobre o nome. Será exibido um teclado na tela para editar o texto.\n5. Verificar se a atribuição de saída indica a saída correspondente à entrada UNIDEX utilizada e se o modo está como MIX-MINUS.\n6. Pressionar `BACK` para retornar à tela principal.\n\n<Warning>\n  PARA ARMAZENAR DE MANEIRA DEFINITIVA OS AJUSTES, **SALVE A CENA**.\n</Warning>\n\n---",
+      "title": "Configuración del canal",
+      "level": 3
+    },
+    {
+      "hash": "124f23fb036676895a5c50e22bc1e2efdbf14a6d27c23b073264c8c365afe164",
+      "translation": "## Configurações\n\nUma vez conectado o adaptador **UDX 2TEL**, configure:\n\n- **Entradas**\n- **Saídas (envios)**\n- **Canais**",
+      "title": "Configuraciones",
+      "level": 2
+    },
+    {
+      "hash": "fe068e535d5fe71a8421e7e61f1966b5e3070589147054c4833d1585ca47cad8",
+      "translation": "### Configurar entradas\n\n1. Na tela principal, acessar a opção `SETTINGS`.\n2. **Girar o encoder** até selecionar a entrada UNIDEX à qual o UDX TEL\\+BT foi conectado. Se a entrada estiver atualmente configurada como `MONO`, será possível selecionar \"L\" e \"R\" individualmente.\n3. Se estiver configurada como `STEREO`, o par L/R será selecionado. Nesse caso, altere `INPUT MODE` para `MONO`.\n   <Note>\n     A entrada \"L\" corresponde ao Bluetooth.\\\n     A entrada \"R\" corresponde à linha telefônica fixa (POTS).\n   </Note>\n4. Escolher a entrada \"UDX L\". Na opção `UDX TYPE`, escolher `TEL+BT`.\n5. Tocando na tela, abrir o menu `ASSIGNED TO CHANNEL` para atribuir um CANAL ao Bluetooth. Se escolher um canal que já tem uma entrada atribuída, aparecerá um aviso. Se continuar, a entrada nesse canal será substituída.\n   <Tip>\n     Recomenda-se atribuir as linhas TELCO a canais físicos.\\\n     O ganho da entrada pode ser ajustado **durante a operação** na tela TELCO.\n   </Tip>\n6. Repetir a partir do Passo 4 para a entrada \"UDX R\" e atribuir um CANAL à linha telefônica fixa.\n7. Pressionar `BACK` para voltar à tela principal.\n8. O próximo passo será configurar a saída.",
+      "title": "Configurar entradas",
+      "level": 3
+    },
+    {
+      "hash": "b0602e3e6696294b77b0d1c187e01e57e28eaf4fd286087b818bb84d9d7c8bc3",
+      "translation": "### Configurar saídas\n\n1. Na tela principal, acessar a opção `SETTINGS`.\n2. Em `SETTINGS`, escolher a opção `OUTPUTS`.\n3. Girando o encoder, selecionar a saída à qual o UDX TEL\\+BT foi conectado. Se a saída estiver atualmente no modo `MONO`, será possível selecionar individualmente `OUT-L` e `OUT-R`.\n4. Se estiver configurada como `STEREO`, o par L/R será selecionado. Nesse caso, alterar o `AUDIO MODE` para `MONO`.\n   <Note>\n     A saída \"L\" é o envio para Bluetooth.\\\n     A saída \"R\" é o envio para linha telefônica.\n   </Note>\n5. Selecionar `OUT-L` e configurar `SEND MODE` como `MIX-MINUS`. Ao ativar `MIX-MINUS`, a saída será associada à entrada UNIDEX correspondente.\n6. Repetir a operação para a `OUT-R`.\n\n<Tip>\n  O **nível de envio** para a linha (OUT GAIN) pode ser ajustado **durante a operação** na tela TELCO.\n</Tip>",
+      "title": "Configurar salidas",
+      "level": 3
+    },
+    {
+      "hash": "0f5fca7690dc32510598347e152bb15a1989dab44a6e72138321b8a16db562e1",
+      "translation": "### Configuração do canal\n\n1. Na tela principal, pressionar `CHANNEL`. Os botões `CUE` mudam para o modo `SELECT`.\n2. Pressionar o botão `CUE/SELECT` no canal a ser configurado. A console sai do modo `SELECT` e exibe a tela `CHANNEL` do canal selecionado.\n3. Na opção `MODE`, abrir o menu e selecionar `TELCO`. Isso faz com que os canais sejam exibidos na tela TELCO, para gerenciar as chamadas.\n4. Para editar o **rótulo**, tocar sobre o nome. Será exibido um teclado na tela para editar o texto.\n5. Verificar se a atribuição de saída indica a saída correspondente à entrada UNIDEX utilizada e se o modo está como MIX-MINUS.\n6. Pressionar `BACK` para retornar à tela principal.\n\n<Warning>\n  PARA ARMAZENAR DE MANEIRA DEFINITIVA OS AJUSTES, **SALVE A CENA**.\n</Warning>\n\n---",
+      "title": "Configuración del canal",
+      "level": 3
+    },
+    {
+      "hash": "6579575e98a9931dc0a724d9b647da9c09018a4ec1b987e0afa49dd57f274f7a",
+      "translation": "## Emparelhar UDX TEL+BT a um telefone celular\n\n<Frame>\n  <img\n    src=\"/images/UDX_TELBT-connection.png\"\n    alt=\"Conexão UDX TELBT\"\n    style={{ width:\"82%\" }}\n  />\n</Frame>\n\nA imagem mostra um exemplo de conexão ao UNIDEX UX24.\n\nApós realizar as configurações correspondentes, o canal Bluetooth aparece na tela TELCO. O próximo passo é emparelhar um celular ao dispositivo.\n\nPara saber como emparelhar e trabalhar com o telefone celular na console UNIDEX, consulte a seção TELCO do modelo correspondente:\n\n[_OPERAÇÃO→ TELCO - Comunicações_ no UX24](/es/ux24/ux24-op-telco#Operación-con-teléfonos-móviles) \\\n[_OPERAÇÃO→ TELCO - Comunicações_ no UX24](/es/ux18/ux18-op-telco#Operación-con-teléfonos-móviles)\n\n---",
+      "title": "Vincular UDX TEL\\+BT a un teléfono móvil",
+      "level": 2
+    },
+    {
+      "hash": "4550723256bb048ec9b1a4e9e1071da93367e77be62dca3772da624b3a64da79",
+      "translation": "## Conexão do UDX TEL+BT a uma linha telefônica\n\nOs passos para conectar a linha telefônica fixa (POTS) são:\n\n1. Conexão à linha telefônica.\n2. Conexão de um telefone associado.\n3. Ajuste do fator de rejeição.\n\nO procedimento é detalhado para o adaptador de linha telefônica dupla UDX 2TEL. [Clique aqui para ir à explicação.](/es/extensiones/UDX-2TEL#Conexión-a-líneas-telefónicas)",
+      "title": "Conexión de UDX TEL\\+BT a una línea telefónica",
+      "level": 2
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "5aedac7f8bbafd17cada3b42a88bebc74714803b3e8c54925ae5b735ba645385",
+      "translation": "<Tip>\n  Each input can be assigned to any of the hardware or virtual channels.\n</Tip>",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "7453cd8a9ae90f9807fdd4fbd2dcaf41126680047e9945b49139be48b30459a2",
+      "translation": "## <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Microphone Inputs\n\nThe balanced microphone inputs support **48 V** *phantom* power. The voltage is activated/deactivated for each channel from the screen.\n\nEach input has a **microswitch that allows reducing the preamplifier gain by –12 dB**. The switch in the down position **activates the attenuation**.\n\n<Info>\n  On the UX18, the MIC-5 input is at a fixed level.\n</Info>",
+      "title": "<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas para micrófonos",
+      "level": 2
+    },
+    {
+      "hash": "7fe7a5cf21db1b68c6085ee768db12d401def0efc9db83912cde37f0442bfbf7",
+      "translation": "## <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#6f07ab\" size=\"22\" />  UNIDEX-Type Inputs\n\n**UNIDEX**-type inputs are special inputs that, in addition to audio, carry **PoE power** and **control communication** channels to operate Solidyne **UDX** **external adapters**.\n\nThey are typically used to connect **UDX adapters** which allow adding microphones, phone lines, or mobile phones.\n\nUNIDEX inputs can also **be used as conventional balanced inputs**. Each UNIDEX input connector contains the left and right balanced signals.",
+      "title": "<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#6f07ab\" size=\"22\" />  Entradas tipo UNIDEX",
+      "level": 2
+    },
+    {
+      "hash": "85ab45adf67499cc8638b464bf62a6aaee66dbaaab22b3dcf7bb1c02eacc8be2",
+      "translation": "## <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Balanced Analog Inputs\n\n- Each input uses a **single** STP cable that carries the balanced **left and right** signals.\n- At the end, the RJ45 is adapted to the required audio connector type (XLR, TRS, RCA).\n\nTo connect a source in **unbalanced mode**, a **suitable adapter cable** must be used, connecting:\n\n- The signal terminal **(–)** to the cable **shield**.\n- The signal terminal **(\\+)** as the **hot** signal.",
+      "title": "<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas analógicas balanceadas",
+      "level": 2
+    },
+    {
+      "hash": "88821bbf8f96ff4c1c48be049766f5a3bf86cff11db210875a0fc0fc0adce93d",
+      "translation": "## <Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  AES3 Digital Inputs\n\n- They are connected using a **RJ45–RJ45 CAT5** cable, utilizing the **SOL-F3/XLRF** adapter.\n- To facilitate wiring compatibility, they use the **same pin-out** as the balanced stereo inputs, although the cable **only uses the left channel** for the AES3 signal.\n- They support **S/PDIF** signals.\n\n<Note>\n  When the streaming downmix function is enabled, the decoded audio internally replaces the **AES1** input. The **AES-1** connector on the rear panel is internally disconnected.\n</Note>",
+      "title": "<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size=\"22\" />  Entradas digitales AES3",
+      "level": 2
+    },
+    {
+      "hash": "8bc3540b59630a6ed01662385f2428176c8021fc0da2dd35f680d547742729a4",
+      "translation": "## External Tuner Input\n\nThe console features a **stereo input for an external tuner** (ON AIR MONITOR) via a 1/4\" TRS connector (unbalanced). This input is available in the monitoring assignment for both the Studio and Control Room, allowing direct listening of the tuned signal.\n\n<Tip>\n  For FM, it is important that monitoring in both the studios and the control booth is performed using the **processed on-air signal**, not directly from the PGM bus. This allows for the detection of actual broadcast errors and provides more comfortable listening, without the volume jumps that can occur in the direct signal.\n</Tip>\n\n<Note>\n  In the **UX18**, the **ON AIR MONITOR** input can also be assigned to a channel; thus it operates as an additional auxiliary input when not used for on-air broadcast monitoring.\n\n  When assigned to a channel, it remains available as an eligible source in the monitoring section.\n</Note>",
+      "title": "Entrada para sintonizador externo",
+      "level": 2
+    }
+  ]
+}

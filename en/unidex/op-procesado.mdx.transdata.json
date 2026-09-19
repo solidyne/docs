@@ -1,0 +1,47 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "eab0389e1968dc08adad665d0a61e0efc398b7a0aed69ec228e07e9ea1b1a132",
+      "translation": "## PROCESS SCREEN\n\nTo access, press **PROCESS** on the main screen. This also activates **SELECT mode** to choose a channel.\n\n<img\n  src=\"/images/ux24/ux24-pantalla-processs.jpg\"\n  alt=\"UNIDEX Pantalla Processs\"\n  title=\"UNIDEX Pantalla Processs\"\n  style={{ width:\"65%\" }}\n  className=\"mr-auto\"\n/>\n\nThe processors are **fixed to each input**, not to the channel. They cannot be reassigned to other channels, buses, or outputs. The available processes depend on the **input type** assigned to the channel.\n\n| **INPUT** | **EQ \\+ Filters** | **Comp. \\+ Gate** | **De-esser** |\n| :-: | :-: | :-: | :-: |\n| MIC | 4 bands | **yes** | **yes** |\n| UNIDEX | 3 bands | **yes** | no |\n| USB | 3 bands | no | no |\n| AES3 | 3 bands | no | no |\n| BALANCED | 3 bands | no | no |\n\n**Functions of the PROCESS screen**\n\n- View which processors are on the channel and whether they are active or in **BYPASS**.\n- Activate/deactivate a processor by touching **BYPASS**.\n- Access its settings by touching the icon or the context button.\n\n**Channel selection**\n\n- In SELECT mode, use **CUE/SELECT** on the console or the **encoder** to scroll through the 24 channels (hardware channels in cyan, virtual channels in violet).\n- Any action in PROCESS cancels SELECT, applying changes to the active channel.\n- From PROCESS, you can also activate SELECT and choose another channel.\n\n**Parameter adjustment:**\\\nIt is performed by combining the **encoder** and the **touch options**, as indicated for each processor.\n\n<Note>\n  The processor settings can be **saved in the scene** .\n</Note>\n\n---",
+      "title": "PANTALLA PROCESS",
+      "level": 2
+    },
+    {
+      "hash": "10a998d4d7e1bf3bdd21f66c2be022b763490ba6a3d41728d99786f2d94a15a4",
+      "translation": "## PARAMETRIC EQUALIZER\n\n<img\n  src=\"/images/ux24/ux24-EQ.png\"\n  alt=\"UNIDEX EQ\"\n  title=\"UNIDEX EQ\"\n  style={{ width:\"71%\" }}\n/>\n\n**1 - NAME:** Indicates the channel number and name. Virtual channels show the name area in violet.\n\n**2 - BANDS:** Band selection. The parameters for one band are displayed on screen at a time.\\\nEach band has a color that identifies it in the graph and in the parameter area.\\\nAll inputs have 3 parametric bands, except for inputs MIC-1 to MIC-4 which have four bands.\n\n**3 - CONTROLS:** Parameters for each EQ band. The background color changes with the selected band.\n\n- **GAIN:** Gain in dB, with a range of ± 9 dB.\n- **FREQ:** Adjusts the center frequency. All bands cover from 20 Hz to 20 kHz.\n- **Q:** Width of the EQ bell curve. Determines the precision of the applied correction.\n- **TYPE:** Band operating mode. Toggled by touching the TYPE option on screen.\n  - Band #1: peak, low-shelf, or HPF.\n  - Band #2 (and #3 on microphone inputs): peak or HPF/LPF.\n  - Band #3 (#4 on mic inputs): peak, hi-shelf, or LPF.\n- **ON/OFF:** Turns the band on/off. Toggled by touching ON/OFF on screen.\n\n**4 - BY-PASS:** Disables the entire equalization stage. Also appears on the PROCESS screen.\\\nToggled by touching BY-PASS on screen.\n\n**5 - SELECT:** Activates channel selection mode.\n\n**6 - BACK:** Returns to the previous screen.",
+      "title": "ECUALIZADOR PARAMÉTRICO",
+      "level": 2
+    },
+    {
+      "hash": "ba0dd9b8c740764081cc9264e2fc05e6f6dc9332779a29d0a704d400a831b0ee",
+      "translation": "### High-Pass / Low-Pass Filters\n\n- Band #1 can function as a 2nd order (12 dB/oct) high-pass filter (HPF).\n- Band #3 (Band #4 on MIC-1 to MIC-4 inputs) can function as a 2nd order (12 dB/oct) low-pass filter (LPF).\n- Band #2 (and Band #3 on MIC-1 to MIC-4 inputs) can work as either an HPF or LPF.\\\n  If two bands are configured as high-pass or low-pass at the same frequency, the total cutoff attenuation will be **24 dB/oct**.\n\n---",
+      "title": "Filtros Pasa-Alto / Pasa-Bajo",
+      "level": 3
+    },
+    {
+      "hash": "af2746c61972427c6b4a396c3de75a8fa67368eff113532ff98f59412a8e1a95",
+      "translation": "## DYNAMICS\n\nThe **DYNAMIC** processor includes a **noise gate** and a dynamic **compressor**.\n\n<img\n  src=\"/images/ux24/ux24-dynamics.jpg\"\n  alt=\"UNIDEX Dynamics\"\n  title=\"UNIDEX Dynamics\"\n  style={{ width:\"65%\" }}\n/>\n\n**1 - COMPRESSION CURVE:** Graphically displays the input-output relationship of the dynamic processor, including the gate and the compressor.\n\n**2 - INPUT LEVEL:** Indicates the peak level of the signal at the compressor input (dBfs).",
+      "title": "DYNAMICS",
+      "level": 2
+    },
+    {
+      "hash": "044915bd02221a4c95ef224e05e749d6bd44f942f4a773225d14939349fef258",
+      "translation": "### 3 - Noise Gate (GATE)\n\n- **Threshold:** Gate activation threshold (dB).\n- **Attenuation:** Attenuation applied to the signal when the gate is active.\n- **Style:** Changes the recovery time between preset values.\n- **Active:** Indicator that lights up red when the gate is closed.",
+      "title": "3 - Compuerta de Ruido (GATE)",
+      "level": 3
+    },
+    {
+      "hash": "fbf9f9038ffee1a6fb0de61348fcd31c5add2ad613ca530c690850bd56800a55",
+      "translation": "### 4 - Dynamic Compressor\n\nControls for adjusting:\n\n- Threshold\n- Ratio\n- Attack time\n- Release time\n- Hold\n- Output gain\n\n**5 - BYPASS:** Completely disables the dynamic processing stage (gate + compressor).\n\n---",
+      "title": "4 - Compresor dinámico",
+      "level": 3
+    },
+    {
+      "hash": "bb3ae5c25dd5b2a5a5f5ebd066f4bd9ca18bf4eb82cf898b32aba9f1d4674cb2",
+      "translation": "## DE-ESSER\n\n<img\n  src=\"/images/ux24/ux24-deesser.jpg\"\n  alt=\"UNIDEX De-esser\"\n  title=\"UNIDEX De-esser\"\n  style={{ width:\"65%\" }}\n/>\n\nThe microphone inputs feature a **de-esser** for sibilance reduction.\\\nThis processor works as a multiband compressor, attenuating only the defined frequency range when the signal level exceeds the set threshold.\n\n**Controls:**\n\n- **1 - Type:** Preset adjustments.\n- **2 - Frequency start:** Lower cutoff frequency. Adjusted according to signal characteristics. Usually between 4,500 and 5,500 Hz.\n- **3 - Frequency end:** Upper cutoff frequency. Adjusted according to signal characteristics. Usually between 7,000 and 12,000 Hz.\n- **4 - Threshold:** Threshold level in dB. When the signal in the working band exceeds this value, it is attenuated with a **fixed ratio of 15:1**.\n- **5 - Gain reduction:** Indicates the applied level reduction, in dB.",
+      "title": "DE-ESSER",
+      "level": 2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ff2cf77bf37b312831f2e353f57f50a19a14aedc644b7bd5248ac5301806a075",
+      "translation": "## General Specifications\n\n<Accordion title=\"Inputs\">\n  - **Balanced stereo**: XLR-3 and RJ45 connectors\\\n    Auto-adjusting level 0 dBu to +15 dBu, Z = 600/10 kΩ\n  - **Unbalanced stereo**: RCA connectors\\\n    Auto-adjusting level –15 dBu to 0 dBu, Z = 10 kΩ\n  - **Digital USB (optional)**\n</Accordion>\n\n<Accordion title=\"Outputs\">\n  - **Balanced stereo**: XLR connectors, +4 dBu, Z = 600/10 kΩ\\\n    With de-emphasis (flat response).\n  - **Digital USB (optional)**\n</Accordion>\n\n<Accordion title=\"MPX Outputs\">\n  - Dual MPX output with independent level adjustment (4 Vpp, factory setting), Z = 600/10 kΩ.\n  - Differential output to cancel hum caused by ground loops between transmitter and studio grounding.\n</Accordion>\n\n<Accordion title=\"Audio Specifications\">\n  - **Frequency response**: 20 – 16,000 Hz ±0.5 dB (measured below compression/limiting threshold).\n  - **Total harmonic distortion**: < 0.02% (30 – 15,000 Hz).\n  - **Noise**: < –90 dBA referenced to 100% modulation.\n  - **Stereo separation**: > 75 dBA.\n  - **Subsonic filter**: 2nd order Chebyshev, 15 Hz.\n</Accordion>\n\n<Accordion title=\"Processing\">\n  - **Asymmetric cancellation**: 5:1 ratio, Kahn-Bonello method.\n  - **Expander**: 10:1 slope, 100 µs attack.\n  - **AGC (wideband)**: VCA-controlled.\\\n    Range: 30 dB (–10 dB / +20 dB relative to nominal input level).\n  - **Multiband compression**:\n    - 3 bands, 18 dB/octave, linear phase divider.\n    - Compressors: 30 dB range, 5:1 slope.\n    - Automatic attack.\n    - Recovery: controlled by _Energy_ knobs.\n    - Clipper with IM cancellation (> 30 dB attenuation below 250 Hz).\n    - Dynamic EQ: 0 – 12 dB of dynamic boost in lows, mids and highs.\n</Accordion>\n\n<Accordion title=\"Power Supply\">\n  115 V / 230 V (rear panel selector)\\\n  50/60 Hz, 20 W\n</Accordion>\n\n<Accordion title=\"Dimensions\">\n  19\" rack mount module (44.4 mm).\n</Accordion>\n\n---",
+      "title": "Especificaciones generales",
+      "level": 2
+    },
+    {
+      "hash": "6663f839b6f939945c5cb1aeedadf7e90ae77e75d800d7065fa2fe82fef8a244",
+      "translation": "## Stereo Coder Specifications\n\n<Accordion title=\"Audio input\">\n  2 Vpp for 100% MPX output (4 Vpp).\n</Accordion>\n\n<Accordion title=\"Audio specifications\">\n  - **Frequency response**:\n    - 15 kHz / 5th order elliptic LP filter, –1 dB at 15 kHz.\n    - 20 – 14,000 Hz ±0.25 dB.\n    - Attenuation at 19 kHz > 40 dB.\n  - **Harmonic distortion**:\n    - < 0.01% THD (20 – 15,000 Hz).\n    - Typical: 0.003% @ 1 kHz.\n  - **S/N ratio**: > 90 dBA (ref. 100% modulation).\n  - **Stereo separation**: 65 dB @ 1 kHz.\n</Accordion>\n\n<Accordion title=\"Harmonic suppression\">\n  - 38 kHz: better than –70 dB (ref. 100% modulation).\n  - 57, 76 and 95 kHz: better than –75 dB (ref. 100% modulation).\n</Accordion>\n\n<Accordion title=\"Pilot tone stability\">\n  ±0.002% (±0.5 Hz).\n</Accordion>",
+      "title": "Stereo Coder Specifications",
+      "level": 2
+    }
+  ]
+}

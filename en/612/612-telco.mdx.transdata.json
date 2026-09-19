@@ -1,0 +1,65 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ae74e08e4bc9b0beacff760d756c139fbc9a3c4281977a5a5a9d38015ebca897",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx'\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "04cb75a0bdcb5c9a65d6c97559f49ee96b549378d39c7113e15405c6aa796f49",
+      "translation": "## Land Line (POTS) Connection\n\nThe telephone hybrid channel handles two phone lines:\n\n- A conventional land line (2-wire).\n- A Bluetooth-paired mobile phone.\n\nThe internal settings are factory-calibrated and require no intervention. Only the hybrid's null preset needs adjustment when installing the console or changing the phone line.\n\nOn the rear panel are two RJ11 connectors:\n\n<img\n  src=\"/images/612/612-trasero-rj11.jpg\"\n  alt=\"612 Trasero Rj11 Jp\"\n  title=\"612 Trasero Rj11 Jp\"\n  className=\"mx-auto\"\n  style={{ width:\"51%\" }}\n/>\n\n- One for the line.\n- Another for the associated phone.\n\nThe line can be connected directly to the public exchange or to the station's PBX.\\\nPrivate PBX systems may degrade the hybrid's rejection; using public lines is recommended whenever possible.",
+      "title": "Conexión de líneas fijas",
+      "level": 2
+    },
+    {
+      "hash": "52e50b543fdd2f671a0907df14fa8cd4b93a90a7c3dc5dbf56457f21397e56ba",
+      "translation": "### Protections\n\nThe lines are internally protected against high voltage surges (indirect lightning strikes) using metal oxide varistors.\n\n<tierras />",
+      "title": "Protecciones",
+      "level": 3
+    },
+    {
+      "hash": "48684106b999a355360ddc9a07f0dad1407d6ce849a5442661f1ce91e7741957",
+      "translation": "### Null Adjustment\n\nThis adjustment applies only to the land line (POTS). It is performed once during installation.\\\nThe null prevents the transmitted signal from returning mixed with the remote caller's voice, improving the local voice quality.\n\n**Procedure:**\n\n1. Establish a phone call through the telephone hybrid.\n2. Have an announcer speak into the microphone to the person on the line.\n3. Adjust the line level (Telephone Control knob) until the PGM VU meter reaches the red zone.\n4. While listening to the local voice on PGM, turn the **NULL** preset until achieving identical quality to what is perceived with _Telephone Control_ fully closed.\\\n   A practical method: turn NULL to both extremes, listen for the degradation, and locate the midpoint where the sound is optimal (null or very little coloration).\n5. Repeat the adjustment if you change phone lines.",
+      "title": "Ajuste de rechazo (Null)",
+      "level": 3
+    },
+    {
+      "hash": "1c1bb2ecbbdbda491e338298848c1f0bcd4527eea745ca635d7d4be4566b696a",
+      "translation": "## Mobile Phones (Bluetooth)\n\nAny Bluetooth-enabled phone can be paired with the D612. Once paired, the connection is established automatically when Bluetooth is active on both devices.\n\n**Range:** up to 10 m (it's recommended to keep the mobile phone near the console, though not on top of it).",
+      "title": "Teléfonos móviles (Bluetooth)",
+      "level": 2
+    },
+    {
+      "hash": "932dbcef0580752e9fac8e0042d1390fe0e3753d29c6e4a80bb99f504d6e221d",
+      "translation": "### Pairing Procedure\n\n1. **On the console:** Verify that the Bluetooth LED is off (the LED is located on the VU meter panel).\n   - If it is on (slow green blink, 1 every 2 s), turn it off by holding the **Bluetooth** button in the Hybrid section.\n2. With Bluetooth off, hold the **Cellular Phone Bluetooth** button for about 10 s until the LEDs flash alternately green/red. The console enters _search mode_.\n\n   <Info>\n     Note that Bluetooth first turns on in normal mode with a slow blink. Do not release the button until the fast blinking starts.\n   </Info>\n3. **On the mobile phone:** Search for Bluetooth devices (the procedure depends on the model).\n4. Select the **Solidyne BTM641** device (or BTM751 on very old units).\n   - If prompted for a PIN, enter **0000**.\n5. The devices are now paired. The LED remains green with a slow blink (1 every 2 s), indicating Bluetooth is active.",
+      "title": "Procedimiento de vinculación",
+      "level": 3
+    },
+    {
+      "hash": "5b8161edf0992b2e7a0899c8a2a2052694fe087ddd5dace30c297e78e57c369d",
+      "translation": "### Re-pairing a Paired Device\n\n1. Turn on Bluetooth on the D612 by holding down **Cellular Phone Bluetooth** until the green LED lights up (≈5 s).\\\n   The green LED will blink slowly.\n2. Activate Bluetooth on the mobile phone.\\\n   When the connection prompt appears, the console is ready.\n\n<Note>\n  On some phones, reconnection is not automatic. You will need to manually select **Solidyne BTM641** from the list of Bluetooth devices.\n</Note>",
+      "title": "Re-conectar un dispositivo vinculado",
+      "level": 3
+    },
+    {
+      "hash": "162684d41132dc74338318e331a3fbef2b6d573fe91beaa27191d3781d116022",
+      "translation": "### Volume Adjustment\n\n<Warning>\n  On the mobile phone, the Bluetooth volume must be set to maximum during a call to ensure proper reception and optimal signal-to-noise ratio.\n</Warning>\n\n- This adjustment is independent of the phone's speaker volume.\n- If you adjust the volume without pairing Bluetooth, it only changes the mobile phone's speaker volume.\n- The phone remembers the last Bluetooth level setting.\n- If you switch mobile phones, repeat the adjustment.",
+      "title": "Ajuste del volumen",
+      "level": 3
+    },
+    {
+      "hash": "4e44275927692a3f5392a76e2b61bf4230ae6e61d3c4acf47c18fe071e2f5cd3",
+      "translation": "### Disabling Bluetooth on the Console\n\nHold down **Cellular Phone Bluetooth** until the LED turns off completely.",
+      "title": "Apagar Bluetooth en la consola",
+      "level": 3
+    },
+    {
+      "hash": "551849cd04fb4f87d0d45f2ffd71f3612b3141055d1fa7da945f9806c558761d",
+      "translation": "## External Hybrid\n\nThe D612 features a connector for send and return to an external telephone hybrid.\n\n- **6.35 mm (TRS) Jack:** combines input and output.\n\n<img\n  src=\"/images/612/612-cable-insert.bmp\"\n  alt=\"612 Cable Insert Bm\"\n  title=\"612 Cable Insert Bm\"\n  className=\"mx-auto\"\n  style={{ width:\"65%\" }}\n/>\n\n**Contact Assignment**\n\n- **Tip:** MIX-MINUS send (program audio without telephone line audio). This signal connects to the **external hybrid input**.\n- **Ring:** return from the external hybrid (line audio). Connects to the external hybrid output. In the console, it's summed to the PGM output via the internal hybrid channel.\n\nThe Hybrid channel fader operates the same as with direct lines, sending signal on-air or to pre-monitoring (see Console Operation).",
+      "title": "Híbrido externo",
+      "level": 2
+    }
+  ]
+}

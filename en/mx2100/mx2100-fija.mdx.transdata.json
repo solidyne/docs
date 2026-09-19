@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "084ecbef296621901d8691ba1e3e234d3dcafe38409b84f1c84e114844e90960",
+      "translation": "The console connects to the phone line via the **RJ11 “Cellular & Phone”** connector, using a standard telephone cable.\n\n- It incorporates a **DTMF** keypad, so an additional telephone is not required.\n- The **program mix** is sent to the radio station via the line.\n- The **return from Studios** is received on the same line and is added directly to the headphone mix.",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "023ec480e5d6aa92c15504e450c8f58e790b8591c21dae7da7aefc9a0be21ab6",
+      "translation": "### RJ11 Pinout\n\n<img\n  src=\"/images/RJ11.png\"\n  alt=\"RJ11 Pinout\"\n  title=\"RJ11 Pinout\"\n  style={{ width:\"10%\" }}\n  className=\"mr-auto\"\n/>\n\n| Pin | Function     |\n| --- | ------------ |\n| 1   | No connection |\n| 2   | LINE         |\n| -   | LINE         |\n| 4   | No connection |",
+      "title": "Pinout RJ11",
+      "level": 3
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "81b6e235891bb311c168ba43c267b625825c48792eb1eebfb82fd2aeeec301da",
+      "translation": "## Configuration\n\nAll Internet broadcasting options and modes can be accessed in two ways:\n\n1.  **From the onboard screen**: using the rotary encoder (**encoder**).\n2.  **Remotely (recommended)**: using a computer and a web browser.",
+      "title": "Configuración",
+      "level": 2
+    },
+    {
+      "hash": "76ea6a24ede39c68490500d2649c5e6143bf22ada33eaae51672df6e28ae6daf",
+      "translation": "## Web Access\n\n<Steps>\n  <Step title=\"Connect the console to the network\">\n    - **Ethernet (recommended)** via the RJ45 port.\n    - Or via the **Wi-Fi antenna**.\n  </Step>\n  <Step title=\"Connect the computer\">\n    The computer must be on the **same network as the MX2200** and preferably using the same access method (Ethernet or Wi-Fi).\n\n    <Note>\n      Some Wi-Fi networks do not allow access to devices connected by cable (LAN).\n    </Note>\n  </Step>\n  <Step title=\"Open browser and enter IP\">\n    Enter the **IP address** of the MX2200 (corresponding to the method used: Ethernet or Wi-Fi) in the browser.\n  </Step>\n  <Step title=\"Get the IP from the console\">\n    Turn the **CONTROL (encoder)** knob and access the **SETUP** screen.\\\n    The first three items show the connection status and the assigned IP for Ethernet, Wi-Fi and Modem.\n  </Step>\n  <Step title=\"Get the IP from the computer\">\n    The IP can also be found by running the **Solidyne Multi-Discovery** tool on the PC.\n  </Step>\n</Steps>\n\n\n<Note>\n     **Solidyne Multi-Discovery**\n\n     If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/es/mx2200/mx2200-discovery) which detects Solidyne devices connected to the network.\n</Note>",
+      "title": "Acceso web",
+      "level": 2
+    }
+  ]
+}

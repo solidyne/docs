@@ -1,0 +1,53 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "f081138cd9fa2f44fece1b58003e17a07252c5090df03b650d278992d90e4d1c",
+      "translation": "## Main Panel Zones and Controls of the UX24\n\n![Ux24 Operacion Zonas Jp](/images/ux24/ux24-operacion-zonas.jpg)\n\n**A — Channel controls**\\\nTraditional controls with faders, assignment buttons, on-air and pre-fade listen (PFL).\\\nThey operate conventionally and allow direct handling of line communications, VoIP and cellular via Bluetooth (using UNIDEX TELCO adapters).\n\n**B — Touchscreen**\\\n7\" display used to operate multiple console functions.\\\nIncludes 6 quick-access buttons and a rotary encoder.\\\nBoth the buttons and encoder are **contextual controls**, so their function varies depending on the active screen.\n\n**C — Monitoring and talkback zone**\\\nArea dedicated to monitoring control and the talkback circuit.\n\n**D — Remote control**\\\nAllows remote operation and configuration of the console.\\\nAny computer with a web browser can access the console via its IP address.\\\nUseful for handling virtual channels, using a tablet as a fader extension, or configuring a remote studio.",
+      "title": "Zonas y controles del panel principal UX24",
+      "level": 2
+    },
+    {
+      "hash": "71284932cec98ea0dd7ba0cdc9ac6543a62b3043843facb49446c80ad2103d7e",
+      "translation": "## Main Screen",
+      "title": "Pantalla principal",
+      "level": 2
+    },
+    {
+      "hash": "28bf4bf38040da7772347515ed4e022f13dda087834a579475e54ba94ea44100",
+      "translation": "### Level Indicators\n\nThe **PGM**, **REC**, **AUX**, and **VBUS** indicators display:\n\n- Average level in **VU** (slow-moving blue bar).\n- Peak level in **dBfs** (floating yellow segment).\n\nThe scale is tabulated in dBfs, where **–20 dBfs corresponds to 0 VU**.\\\nThe numerical value on the right indicates the current maximum (in VU or dBfs) and can be toggled by tapping the number.\\\nThe main indicator remains visible on all screens and can be switched between buses by tapping the bus name on the left.\n\n<Tip>\n  **Note on levels:**\\\n  The indicators show the **bus** level.\n\n  - On digital outputs, the level matches the output level if the gain is set to 0.\n  - On analog outputs, 0 VU = –20 dBfs, with nominal levels of **\\+4 dBu** (balanced) and **0 dBu** (unbalanced).\\\n    If a gain level higher than nominal is set, the headroom is reduced, and clipping may occur before the indicator shows it.\n</Tip>",
+      "title": "Indicadores de nivel",
+      "level": 3
+    },
+    {
+      "hash": "054a5dcd7f0971a3de9823cb6d57662ccc9b49a103d403c66257294fa43e95fe",
+      "translation": "### CUE Level\n\nIndicates the level of the **CUE** bus, after the physical level knob.",
+      "title": "CUE Level",
+      "level": 3
+    },
+    {
+      "hash": "6d993952887ea62a2170886b0829392735733a9e6901fa959acb8b8267b28ed2",
+      "translation": "### Status\n\n- **Unidex IP:** IP address for remote control. Enter in a web browser (recommended: Google Chrome) to access the control interface. Requires connection of the _Ethernet Remote Control_ port to the LAN.\n- **Stream IP:** IP address of the streaming module. Enter in a browser to configure streaming services. Requires connection of the _Ethernet Streaming_ port to the LAN.\n- **SCENE:** Name of the currently active scene.\n- **USER:** Active user profile (ADMIN, EXPERT, or BASIC).\n- **MSG:** System messages.\n- **“\\+” Advanced:** Opens maintenance options (includes shutting down the internal CPU before cutting power).",
+      "title": "Status",
+      "level": 3
+    },
+    {
+      "hash": "8379e9767048a825e922053bcf3c5277f74c080884c7381e14819ec1d1e849a9",
+      "translation": "### Master Clock\n\nDisplays the current time.\\\nAutomatically synchronizes when the console is connected to the internet, or manually (see SETTINGS -> SYS CONFIG screen).",
+      "title": "Reloj central",
+      "level": 3
+    },
+    {
+      "hash": "6c0351e4865081648fd026a2ec4fcd0582580baa9cddfbb9c114e29139c5dabd",
+      "translation": "### On-Air Timer\n\nStarts an ascending count (**hh:mm:ss**) when microphones are activated. When turned off, the value remains displayed.",
+      "title": "Contador EN EL AIRE",
+      "level": 3
+    },
+    {
+      "hash": "b5374a1eb92cf00852ed9c16888e2cca6b128a485911cb9f0b62b6957c3faabc",
+      "translation": "### Context Menu\n\nSix buttons located below the screen provide quick access to main functions.\\\nTheir function varies depending on the active screen. Navigation and editing are performed using the touchscreen and encoder.\n\nShortcuts on the main screen:\n\n- **SETTINGS:** Advanced and system configuration (ADMIN only).\n- **SCENE:** Scene management and user profiles.\n- **PROCESS:** Access to equalization, compression, de-essing, and noise gate (available processors vary for each input).\n- **VIRTUAL:** Pressing the encoder accesses the virtual channel control screen (12, 6, or none, depending on UX6 expansions).\n- **MONITOR:** Audio source assignment for Studio and Control Room, with advanced monitoring functions.\n- **TELCO:** Telephone line, Bluetooth, or VoIP management, with level and gain controls.\n- **CHANNEL:** Information and control for the selected channel, including gain, panning, processors, and source reassignment.\n\n<Note>\n  **Power Saving Mode**\n  The screens turn off after 15 minutes of inactivity.\n  They reactivate by moving a fader or pressing an Intercom button.\n</Note>",
+      "title": "Menú contextual",
+      "level": 3
+    }
+  ]
+}

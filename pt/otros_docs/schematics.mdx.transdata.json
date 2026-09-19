@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "dd1ac4950d672da1afb96a573e9c71bdb6bd4a723bc9fa491f94ba731952f22b",
+      "translation": "Nesta seção, você pode solicitar o **Manual de Serviço**, que inclui:\n\n- Diagramas de circuito\n- Distribuição de componentes\n- Informação técnica para diagnóstico e reparo\n\nComo alguns equipamentos possuem diferentes versões de hardware, é necessário identificar corretamente a unidade antes de enviar a documentação correspondente.",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "d624393dd82a7c3f1e6b6dec900784e6d6c488af42c99bc959db77a46fff97b8",
+      "translation": "## Procedimento para solicitar documentação técnica\n\n<Steps>\n  <Step title=\"Enviar a informação por e-mail\">\n    Envie um e-mail para `info@solidyne.ar` anexando:\n\n    - A fotografia do equipamento\n    - Modelo do equipamento\n    - Número de série\n    - Nome da emissora ou empresa\n    - Endereço e país\n    - Descrição clara do problema detectado\n\n    Quanto mais precisa for a descrição técnica, mais eficiente será o processo de assistência.\n  </Step>\n  <Step title=\"Pagar a taxa\">\n    Junto com a confirmação de recepção da informação enviada, será informado o **custo da documentação** solicitada e um link para efetuar o pagamento.\n  </Step>\n  <Step title=\"Recepção do manual\">\n    Dentro de **2 dias úteis** após a confirmação do pagamento, será enviado por e-mail o **Manual de Serviço em formato PDF** solicitado.\n  </Step>\n</Steps>",
+      "title": "Procedimiento para solicitar documentación técnica",
+      "level": 2
+    },
+    {
+      "hash": "1e69b53f9df83afbc7c14a0309a8d5a03f211eaf7d2f2ada23098af2a0858305",
+      "translation": "## Confidencialidade da informação\n\n<Note>\n  A recepção do Manual de Serviço implica a aceitação de manter a **confidencialidade das informações técnicas fornecidas**.\n\n  A documentação deve ser compartilhada exclusivamente com o técnico responsável pelo reparo do equipamento e não deve ser distribuída publicamente.\n</Note>",
+      "title": "Confidencialidad de la información",
+      "level": 2
+    }
+  ]
+}

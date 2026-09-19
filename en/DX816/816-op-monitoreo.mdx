@@ -1,114 +1,120 @@
 ---
 title: "Monitoring and Headphones"
 description: "Monitoring on speakers and headphones. Talkback communication."
-keywords: ["monitoring", "headphones", "talkback", "CUE", "studiobox"]
-tags: ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+keywords:
+  ["monitoring", "headphones", "talkback", "CUE", "studiobox"]
+  - "auriculares"
+  - "talkback"
+  - "cue"
+  - "studiobox"
+tags:
+  ["consolas de estudio", "linea Classic", "DX816", "DX822"]
+  - "linea Classic"
+  - "DX816"
+  - "DX822"
 translation:
   source_lang: "es"
   target_lang: "en"
   human_revision: 0
-  reviewed_by: null
-  reviewed_at: null
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Monitor Section
 
 This section contains the controls:
 
-- **Studio Monitor**: determines which signal will be heard in the studio monitors and headphones.
-- **Control Monitor**: assigns the signal to the control room monitors and headphones.
+- **Studio Monitor**: determines which signal will be heard on the studio monitor speakers and headphones.
+- **Control Monitor**: assigns the signal to the control room monitor speakers and headphones.
 - **CUE volume** control.
-- **Talk-Back** button and microphone to the studio.
+- **Talk-Back** button and microphone to the Studio.
 - Master "**ON-AIR Mics**" button. Activates the microphone channels and "ON-AIR" signals.
 
 <img
   src="/images/816/816-panel-monitores.png"
-  alt="816 Op Monitoreo Pn"
-  title="816 Op Monitoreo Pn"
+  alt="816 Monitor Panel"
+  title="816 Monitor Panel"
   className="mx-auto"
   style={{ width:"66%" }}
 />
 
- 1. Control room speaker level control.
- 2. Adds CUE audio to the control room speakers.
- 3. Operator headphone level control.
- 4. Signal assignment to the studio monitor output (headphones and speakers).
- 5. Signal assignment to the control room monitor output (headphones and speakers).
- 6. Level at which the CUE signal is added to the control room headphones and speakers.
- 7. Talk-Back microphone (studio communication and intercom).
- 8. Talk-Back button
- 9. Talk-Back microphone sensitivity
-10. Microphone master button.
+1. Control room speaker level control.
+2. Adds CUE audio to the control room speakers (post-fader).
+3. Operator headphone level control.
+4. Signal assignment to the studio monitor output (headphones and speakers).
+5. Signal assignment to the control room monitor output (headphones and speakers).
+6. Level at which the CUE signal is added to the control room headphones and speakers.
+7. Talk-Back microphone (studio communication and intercom).
+8. Talk-Back pushbutton.
+9. Talk-Back microphone sensitivity.
+10. Microphone activation button.
 
 ### **Studio Monitor**
 
-- Provides four signal sources: CUE, PGM, REC, and ON-AIR [4].  
-- The console delivers fixed-level signals to both headphones and studio monitors.  
-- For level distribution and control in the studio, a **headphone distribution system** is required, such as the optional Solidyne HD3 and HD5 modules.  
+- Provides four signal sources: CUE, PGM, REC and ON-AIR \[4\].
+- The console sends signals with fixed level to both headphones and speakers.
+- For level distribution and control in the Studio, a **headphone distribution amplifier** is required, such as the optional Solidyne HD3 and HD5 modules.
 
 <Info>
-  See wiring in Installation ⟶ [Monitoring](/DX816/816-monitoring)
+  See wiring in Installation ⟶ [Monitoring](/en-US/DX816/816-monitoring)
 </Info>
 
-### **Control Monitor**
+### **Monitor Control**
 
-- The headphone [3] and speaker [1] levels are managed with independent controls.
-- Using the selection buttons [5], choose the signal to monitor:
+- Headphone level [3] and speaker level [1] are controlled independently.
+- Use the selector buttons [5] to choose the signal to monitor:
   - **PGM**: signal sent on-air.
   - **REC**: signal from the REC auxiliary bus.
   - **ON-AIR**: signal from an external tuner, recommended for on-air monitoring.
 
 <Note>
-  Adjust the monitor speaker volume to a comfortable level with the **SPEAKERS** control in the center position.
+  Adjust monitor speaker volume to a comfortable level with the **SPEAKERS** control in center position.
 </Note>
 
 <Info>
-  If the Studio–Transmitter link or the audio processor introduces an audible delay, it is recommended to process the **ON-AIR** monitor signal with a delay-free processor, connected directly to a PGM output of the console.
+  If the Studio-Transmitter Link or the audio processor introduces audible delay, it's recommended to process the **ON-AIR** monitor signal with a delay-free processor connected directly to a PGM output from the console.
 </Info>
 
----
+## CUE Monitoring
 
-## Pre-fader Listen (CUE)
-
-Each channel features a **CUE** button that allows monitoring the signal before the fader (off-air). When multiple CUEs are activated, the signals are summed.
+Each channel features a **CUE** button that allows monitoring the signal before the fader (off-air). When multiple CUE signals are activated, they are summed together.
 
 The CUE signal can be routed to:
 
-- Control Room monitor speakers: press the **MIX** button [2].
-- Control Room headphones. This routing is fixed. CUE is summed with the signal assigned by the monitor selection.
-- Studio Monitor. It's available as a signal source in STUDIO MONITOR.
+- **Control Room monitor speakers**: press the **MIX** button \[2\].
+- **Control Room headphones**. This routing is fixed. CUE is summed with the signal selected by the monitoring source.
+- Studio monitor. Available as a signal source in STUDIO MONITOR.
 
-CUE level is controlled exclusively by the **CUE** knob [6], for both headphones and speakers.
+CUE level is controlled exclusively by the **CUE** knob \[6\], affecting both headphones and speakers.
 
 <Warning>
-  If the **CUE [6]** knob is turned down, the CUE signal won't be heard even if the headphone and speaker knobs are open.\
-  Conversely, if **SPEAKERS [1]** and **HEADPHONES [3]** are turned down, CUE will still be audible if the CUE knob is open.
+  If the **CUE \[6\]** knob is turned down, the CUE signal will not be heard even if the headphone and speaker knobs are turned up.
+
+  Conversely, if **SPEAKERS \[1\]** and **HEADPHONES \[3\]** are turned down, CUE will still be audible if the CUE knob is turned up.
 </Warning>
 
 Additional features:
 
-- CUE routing is **monophonic**.
+- CUE routing is **mono**.
 - To isolate CUE monitoring:
-  - Lower the **SPEAKERS** or **HEADPHONES** level as needed.
+  - Reduce the monitoring level of **SPEAKERS** or **HEADPHONES** as appropriate.
   - Release PGM, REC and ON-AIR buttons.
 
 <Tip>
   We recommend monitoring the on-air signal at moderate volume and CUE at a higher level to clearly distinguish between them.
 </Tip>
 
----
-
-## Talkback to Studio
+## Studio Talkback
 
 The talkback channel allows the operator to communicate with the announcer in the studio.
 
 - Press the **TALK-BACK** button.
-- Program audio in Control Room speakers is interrupted to prevent feedback.
+- Program audio in the control room speakers is muted to prevent feedback.
 - The operator is heard on the studio's **left channel**.
-- The **right channel** maintains the on-air signal for announcers' and reporters' reference.
-- It's also possible to activate **CUE** on the microphone channel to communicate with the announcer.
+- The **right channel** maintains the on-air signal as a reference for announcers and reporters.
+- You can also activate **CUE** on the microphone channel to communicate with the announcer.
 
 <Note>
   The talkback microphone level is factory-calibrated.\
-  It should only be adjusted when strictly necessary, using the **LEVEL** preset.
+  It should only be adjusted when absolutely necessary, using the **LEVEL** preset.
 </Note>

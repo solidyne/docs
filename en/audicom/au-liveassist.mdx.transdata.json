@@ -1,0 +1,113 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "9bd59b525b6b6d748eee1a2d40587986c4ec4248ec3c8d3adde2fd9d87997560",
+      "translation": "## Live Assist Button Panels\n\nThe **Live Assist 1** and **Live Assist 2** modules allow instant on-air playback of audio elements.\\\nThey are primarily used for playing **SFX, promos, jingles, and beds**.\n\n<img\n  src=\"/images/audicom/au-liveassist.png\"\n  alt=\"Au Liveassist Pn\"\n  title=\"Au Liveassist Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"51%\" }}\n/>\n\n- Audio elements are organized in button grids.\n- Each profile contains 12 pages or tabs.\n- The number of buttons per page depends on the rows and columns defined in the **Configuration Panel**.\n- The panel can be resized, and button sizes adjust automatically.\n\nLive Assist supports control from:\n\n- Keyboard (see section _Keyboard Control_).\n- External controllers via **MIDI**.",
+      "title": "Botoneras Live Assist",
+      "level": 2
+    },
+    {
+      "hash": "4e4dfc457d25a89bf0fa6237aac13de178a167021d16304d4ae80bc51ec1d4aa",
+      "translation": "### Audio Devices\n\n- Independent output devices can be assigned or share the same device as **CyberPlay**.\n- When sharing, the mix is performed internally according to the **MIX** value.\n- Assignment is done from the **Configuration Panel**.",
+      "title": "Dispositivos de audio",
+      "level": 3
+    },
+    {
+      "hash": "899614c812a323203d78c5023df7b86067f29ec198da4403ece9ebcd112a411c",
+      "translation": "### Video\n\nIn **Audicom Black Video**, Live Assist also supports video playback.\n\n- It does not interrupt or overlap videos that are playing in CyberPlay or PlayList Manager.",
+      "title": "Video",
+      "level": 3
+    },
+    {
+      "hash": "5a10fd0956703785888ed35ac81adf1f6b01fe4643cb0c5fa5cf3bae42ca554f",
+      "translation": "## Output Devices\n\nBoth modules can play through internal mixing on CyberPlay or through independent outputs.\\\nThe assignment is made from the **Configuration Panel**.",
+      "title": "Dispositivos de salida",
+      "level": 2
+    },
+    {
+      "hash": "9b34e5008114fe6b27438be217eb972394df9c94c722cae4adca0614c7b14007",
+      "translation": "## Expanded View\n\nYou can toggle between compact and expanded views.\n\n- The switch is made using the **Maximize** button, located in the title bar.",
+      "title": "Visualización expandida",
+      "level": 2
+    },
+    {
+      "hash": "894fd00e3dbcaa47cf91d07ee2612b4c3d2c65078efcf1bfb796ab01d7818fed",
+      "translation": "## Pause, Stop and Fade-Stop\n\n- **Pause**: stops playback and allows resuming with Play.\n- **Stop**: completely stops and returns to the beginning.\n- **Fade-Stop**: gradually attenuates the level and then stops.",
+      "title": "Pausa, Stop y Fade-Stop",
+      "level": 2
+    },
+    {
+      "hash": "a940806d9ea02b0206e4c1cb74bc9366e8925bcde7e5fabb90edb093ed0f4e53",
+      "translation": "## Preview Monitoring (CUE)\n\n- Right-click on a button → playback on dedicated **CUE** channel.\n- Holding right-click >1s also activates CUE.\n- Alternative method: double-click the **CUE** label on the display.\n\n<Warning>\n  Console-based CUE mode is not recommended:\n\n  - Not reported in RDS/iRDS.\n  - Not recorded in `.air` files.\n  - Requires manual CUE activation/deactivation per action → error-prone.\n</Warning>",
+      "title": "Escucha previa (Cue)",
+      "level": 2
+    },
+    {
+      "hash": "2433c4365663a315dcbd731c663e14bd1a74fda1cc102cbe504cacf5716f0723",
+      "translation": "## Playback Modes\n\nLive Assist has three modes, selectable by pressing the button successively:\n\n- **Normal**:\n  - Plays once.\n  - If another file is triggered, it queues (blinking text).\n- **Loop**:\n  - Looped playback.\n  - Stops with Stop or by changing modes.\n- **Instant**:\n  - If another button is triggered, it interrupts the previous one.",
+      "title": "Modos de reproducción",
+      "level": 2
+    },
+    {
+      "hash": "d92e59f54ad76631ffe6f908ea5cf4b0bdb88de27a50ab2eedcace808312ad05",
+      "translation": "### Chaining with on-air\n\n- While the on-air module is stopped:\n  - Trigger one or more buttons in Live Assist.\n  - Then press the on-air chaining button.\n- The window closes and when the sequence ends, the on-air playlist continues.\n\n<Note>\n  The same operation can be performed from the keyboard using the **spacebar** after triggering a file.\n</Note>",
+      "title": "Encadenar con aire",
+      "level": 3
+    },
+    {
+      "hash": "2f7648d47c1f832248b2126c5adec1527a6a84b0d000a463048863239a0e0461",
+      "translation": "## In and Out Markers\n\n<Steps>\n  <Step title=\"Activate CUE\">\n    Double-click the CUE label to put Live Assist in CUE mode.\\\n    This prevents audio from being reported in RDS or recorded in `.air` files.\n  </Step>\n  <Step title=\"Trigger button\">\n    Press the button you want to mark.\n  </Step>\n  <Step title=\"Define markers\">\n    Right-click and select **Mark In** or **Mark Out**.\\\n    Listen to the audio and mark at the desired moment.\n  </Step>\n</Steps>",
+      "title": "Marcadores de inicio y fin",
+      "level": 2
+    },
+    {
+      "hash": "9d3c0a32f68eecf851f714b32a047ffde4f1f9f1bac68fdbc100cec69aecf7f2",
+      "translation": "## Icon Window\n\n- Displays the name and icon of the active Live Assist profile.\n- Icons are `.ico` files located in `\\Audicom\\LA-Icons`.\n- Icons can be added or deleted as preferred.",
+      "title": "Ventana de iconos",
+      "level": 2
+    },
+    {
+      "hash": "45939b7d22241f16427c7afaaf0461a738cfcf6fd54ec22b7467a4249bf6e237",
+      "translation": "### Private Profiles\n\n- Private profiles are only accessible by the user who created them.\n- They are identified with the owner's name.\n- If another user attempts to access, a restriction message appears.",
+      "title": "Perfiles privados",
+      "level": 3
+    },
+    {
+      "hash": "cb8c1ac6b11eef781bcaf37d936991fa6b7827cfa62fdc51731338a1ff598c04",
+      "translation": "### Export / Import Page\n\n- **Export**: saves the current page as a Playlist (`.txt`).\n- **Import**: loads a Playlist into the Live Assist button panel.\n\nThe list items are loaded into buttons according to their order.",
+      "title": "Exportar / Importar página",
+      "level": 3
+    },
+    {
+      "hash": "b43cd0760a175d19f9f54e133310e5d899a3ed15d3136fcba2812062757258b8",
+      "translation": "### Create Live Assist Profiles\n\n<Steps>\n  <Step title=\"Open creation menu\">\n    In the icons window, right click → **Add**.\\\n    Enter name and icon for the profile.\n  </Step>\n  <Step title=\"Define privacy\">\n    Enable the **Private** option if the profile should only be available for that user.\\\n    (Requires administrator authorization).\n  </Step>\n  <Step title=\"Load titles\">\n    Drag titles from Media Manager.\\\n    The button takes the color of the title's category.\n  </Step>\n  <Step title=\"Edit profile\">\n    To change name or icon: load the profile → right click on icon → **Edit**.\n  </Step>\n</Steps>",
+      "title": "Crear perfiles Live Assist",
+      "level": 3
+    },
+    {
+      "hash": "f760ef9ded2e9d64453666124788d5785b58b08ea84e4c04eff5b920aea0fc07",
+      "translation": "## Live Assist Configuration",
+      "title": "Configuración de Live Assist",
+      "level": 2
+    },
+    {
+      "hash": "8e4714c4a1405f783115da9a76a5a04ed477a70714c8251eb8726c83d93583f7",
+      "translation": "### Button Panel Size\n\n- Configured in **Settings Panel > Preferences**.\n- Number of rows and columns can be adjusted.\n- Larger buttons with fewer elements, smaller buttons with more elements.\n- Default configuration: **4 columns x 12 rows = 48 buttons per page**.\n- Font type and size can also be changed.",
+      "title": "Tamaño de botoneras",
+      "level": 3
+    },
+    {
+      "hash": "d83585e7faa8b0768e0bd1c45c1e0b02a8f7871f95a1d056a8555d399070a2e9",
+      "translation": "### Data Files\n\n- Information is stored in `Liveass.dat` and `Liveass2.dat`.\n- The path is defined in `audicom.ini`.\n\nExample:\n\n```ini\n[Live Assist]\nGrid=5 12\nState=1\nLastPos=0 3 0\nIconPath=c:\\Audicom\\LA-ICONS\nFile=c:\\Audicom\\LIVEASS.DAT\nLastPos2=0 0 0\n```",
+      "title": "Archivos de datos",
+      "level": 3
+    },
+    {
+      "hash": "18875d331737f05c573796ecfbb90022c9e11bdf5ddd55b2c308ff89e9115cc3",
+      "translation": "### Icons\n\n- Default location: `\\Audicom\\LA-Icons`.\n- Location can be changed in `audicom.ini`.\n- Icons can be freely added or removed.",
+      "title": "Iconos",
+      "level": 3
+    }
+  ]
+}

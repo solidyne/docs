@@ -1,29 +1,27 @@
 ---
-title: "Remote Link Commands"
+title: "Commands for Remote Links"
 description: "Instructions for managing streaming and links."
-keywords: ["CyberPlay Editor","links","repeaters"]
-tags: "Software,Audicom"
+keywords: ["CyberPlay Editor", "Links", "Repeaters"]
+tags: ["Software", "Audicom"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "147b99a1f2daeec291d0e6df37cda58f63412602415274cbbcbb040e059d2a54"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Internet Link - ILink
 
-The `/ILink` command allows AUDICOM to connect to audio streams over the Internet.\
-It is used in **repeater stations** that rebroadcast audio streaming and metadata from the master station.
+The `/ILink` command allows AUDICOM to connect with audio streams over the Internet.\
+It is used in **repeaters** that retransmit the streaming audio and metadata from the master station.
 
-#### Usage example with AUDICOM repeaters
+#### Example usage with AUDICOM repeaters
 
 `/Block /00:00-24:00 /ILink="AutoDj Jazz" ilink://190.247.72.170:8080`
 
-In this case, the repeater receives the **streaming** from the head-end.\
-During commercial breaks, it replaces the head-end's commercials with **local breaks**.
+In this case, the repeater receives the **streaming** from the main station.\
+During commercial breaks, it replaces the main station's commercials with **local spots**.
 
 ---
 
@@ -33,58 +31,54 @@ During commercial breaks, it replaces the head-end's commercials with **local br
 
 - **MMS Protocol**: Windows standard, requires no additional decoders.
 - Other supported protocols:
-  - **HTTP Streams**: `icyx://[stream path]` (default port 80).
-  - **RTSP Streams**: `rtpx://[stream path]` (default port 554).
-  - **HTTP/RTSP Streams**: `htpx://[stream path]` (default port 80).
-  - **RTMP Flash Streams**: `rtmx://[stream path]` (default port 1935).
+  - **HTTP Streams**: `icyx://[stream path]` (port 80 by default).
+  - **RTSP Streams**: `rtpx://[stream path]` (port 554 by default).
+  - **HTTP/RTSP Streams**: `htpx://[stream path]` (port 80 by default).
+  - **RTMP Flash Streams**: `rtmx://[stream path]` (port 1935 by default).
 
 An **AutoDj format** must be specified as backup:\
 If the server connection is lost, this format is activated.\
-When the link is restored, AutoDj stops and streaming resumes.
-
----
+When the link is restored, the AutoDj is interrupted and streaming resumes.
 
 ## Satellite Fill Block (SatFill)
 
-`/Block /HH:MM-HH:MM /Satfill /X [Block Title]`
+`/Block /HH:MM-HH:MM /Satfill /X [Block title]`
 
 In this block, AUDICOM plays the **satellite** signal (or VHF link).\
-At specific times it interrupts the external signal to broadcast **local programming** (commercials, music, news, etc.).\
-After the break ends, the system returns to **SYNCRO**, resuming the satellite signal until the next break.
+At specific times, it interrupts the external signal to switch to **local programming** (commercials, music, news, etc.).\
+After the local segment, the system returns to **SYNCRO**, resuming the satellite signal until the next break.
 
 #### Switching Methods
 
 - **a) Console remote control**: via USB port.
-- **b) Sound card line input**: the system switches the satellite signal to the line input.
+- **b) Audio board line input**: the system switches the satellite signal to the line input.
 
 The `/X` modifier defines which parallel port output to use:\
 `1, 2, 3 or 4` → correspond to Data 0, 1, 2 and 3 respectively.\
-This allows controlling up to four console modules.
+This allows control of up to four console modules.
 
----
+## Satellite Master-Slave Block (SatSlave)
 
-## Master-Slave Satellite Block (SatSlave)
+`/Block /HH:MM-HH:MM /Satslave [Block title]`
 
-`/Block /HH:MM-HH:MM /Satslave [Block Title]`
-
-**SatSlave** mode automates switching between **local signal** and **satellite signal** using **control pulses** sent by audicom via USB.
+The **SatSlave** mode automates switching between **local signal** and **satellite feed** using **control pulses** sent via USB by AUDICOM.
 
 - In **SYNC** state, the satellite program module is enabled.
-- When a **trigger pulse** arrives from the downlink head-end, AUDICOM switches to **local programming** and executes the corresponding break.
-- Upon completion, it returns to the link.
+- When a **trigger pulse** arrives from the downlink headend, AUDICOM switches to **local programming** and executes the corresponding break.
+- Upon completion, it returns to the satellite link.
 
-This cycle repeats break after break, synchronizing the local signal with the remote one.
+This cycle repeats break after break, synchronizing the local signal with the remote feed.
 
 #### Considerations
 
-- If the number of received pulses is **less** than programmed breaks, there will be delay: remaining breaks will trigger at the start of next day.
-- If pulses are **greater**, breaks will repeat from the beginning until completing 24h.
-- The last SatSlave block requires no pulse: if none arrives, the system switches by schedule to maintain the grid.
+- If the number of pulses received is **less** than the scheduled batches, there will be a delay: the remaining batches will trigger at the start of the next day.
+- If the pulses are **greater**, the batches will repeat from the beginning until completing the 24-hour cycle.
+- The last SatSlave block does not require a pulse: if none arrives, the system switches by schedule to maintain the programming grid.
 
 #### Example
 
 `/Block /10:00-12:30 /Satslave`
 
-Between 10:00 and 12:30 the satellite signal is transmitted.\
-Local breaks, generated by AUDICOM, replace the satellite ones.\
-When the block ends, satellite control is deactivated and moves to the next programming segment.
+Between 10:00 and 12:30, the satellite signal is broadcast.\
+Local commercial breaks, generated by AUDICOM, replace the satellite ones.\
+When the block ends, satellite control is deactivated and the system moves to the next programming segment.

@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "cd87d41760ecea9e1094cc305a9bebe7e87355c204370a21f735473b54452d32",
+      "translation": "import multidiscovery from '/snippets/multi-discovery.mdx';\n\n<multidiscovery />\n",
+      "title": "Whole file",
+      "level": 0
+    }
+  ]
+}

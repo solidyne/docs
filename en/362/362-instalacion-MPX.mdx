@@ -1,65 +1,64 @@
 ---
 title: "MPX Connection"
-description: "Multiplex output (MPX) and modulation adjustment."
+description: "Multiplexed (MPX) output and modulation adjustment."
 keywords: ["MPX", "pre-emphasis", "modulation", "AGC", "transmitter"]
+tags: ["procesadores", "362", "Audimax 362"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "7ec969c84a18cd106c47f2405cfe5a0a805f0eb3111a8460427bd20e2e98dc89"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-The **Audimax 362HD** features dual MPX outputs with independent level adjustments.\
-This allows connecting a backup transmitter or dedicating it to a nighttime transmitter.
+The **Audimax 362HD** features dual MPX output with independent level adjustments.\
+This allows connection to a second transmitter operating as a backup, or alternatively, to a transmitter used during nighttime.
 
 <img
   src="/images/362/362-trasero-mpx.png"
-  alt="362 Rear Mpx Pn"
-  title="362 Rear Mpx Pn"
+  alt="362 Rear MPX Panel"
+  title="362 Rear MPX Panel"
   className="mx-auto"
   style={{ width:"32%" }}
 />
 
-- Output connectors are **BNC** type.
-- For MPX connection, use **75 Ohm** coaxial cable (CCTV standard).
-- Cable length should not exceed **25 meters**.
+- The output connectors are of the **BNC** type.
+- For MPX connection, **75 Ohm** coaxial cable (CCTV standard) must be used.
+- The cable length should not exceed **25 meters**.
 
 <Warning>
-  Proper ground distribution is essential.
+  It is essential to maintain proper grounding distribution.
 </Warning>
 
 <Note>
-  When connecting to the transmitter's MPX input, ensure the transmitter's internal pre-emphasis network is disabled (flat response 20 - 100 kHz).
-  Pre-emphasis in the Audimax 362HD is factory-set, available in either 50 µs or 75 µs.
+  When connecting to the transmitter via the MPX input, ensure that the transmitter's internal pre-emphasis network is disabled (flat response 20 – 100 kHz).
+  The pre-emphasis in the Audimax 362HD is factory-set, with the option to choose between 50 µs or 75 µs.
 </Note>
 
-## Adjusting to 100% Modulation
+## Modulation Adjustment to 100%
 
-Modulation is adjusted by varying the equipment's MPX output level.\
-It is recommended to use program material with **voice and strong music** (e.g., contemporary pop).
+Modulation is adjusted by varying the MPX output level of the unit.\
+It's recommended to use program material with **loud voice and music** (example: contemporary pop).
 
 <Steps>
   <Step title="Prepare the input signal">
-    - Ensure you are using the appropriate inputs (BAL/UNBAL) according to your console.
-    - Adjust the console's audio level to reach **0 VU on peaks**.
-    - This way, the AGC stage works at its equilibrium point.
+    - Ensure you're using the appropriate inputs (BAL/UNBAL) according to the console.
+    - Adjust the audio level on the console to reach **0 VU on peaks**.
+    - This way, the AGC stage operates at its equilibrium point.
   </Step>
-  <Step title="Configure processor and transmitter">
-    - Set all processor controls to their **center position**.
+  <Step title="Configure the processor and transmitter">
+    - Set all processor controls to **center position**.
     - If the transmitter has modulation level control, set it to maximum.
   </Step>
   <Step title="Adjust MPX output">
-    - Adjust the 362HD's MPX output level until reaching **75 kHz deviation (100%)**, measured with an **FM modulation monitor** or the transmitter's indicator instrument.
+    - Vary the 362HD's MPX output level until achieving **75 kHz deviation (100%)**, measured with an **FM modulation monitor** or the transmitter's indicator instrument.
   </Step>
 </Steps>
 
 <Note>
-  Some countries allow infrequent peaks up to **110% modulation** (e.g., FCC regulations in USA).\
-  Needle-type modulation indicators may show peaks above 100% due to ballistic overshoots or average readings of sinusoidal signals. This does not indicate actual over-modulation in the system.
+  Some countries permit occasional peaks up to **110% modulation** (example: FCC regulations in the USA).\
+  Needle-type modulation indicators may show peaks above 100% due to ballistic overshoot or average sine wave readings. This doesn't indicate actual over-modulation in the system.
 </Note>
 
-Once modulation level is set, proceed to **customize the station's sound** by adjusting the Audimax 362HD controls.\
-This process does not affect the modulation level, as the processor delivers constant peak level.
+Once the modulation level is adjusted, proceed to **customize the station's sound** by adjusting the Audimax 362HD controls.\
+This process doesn't affect the modulation level, as the processor delivers constant peak level.

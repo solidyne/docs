@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "88e1e2ffffbd6d895cbf1cd02f9e29865205b971fff8adf56fc94713a461e1f3",
+      "translation": "## Connecting a Mobile Phone via Bluetooth\n\nThe MX2100 supports connecting a mobile phone via **Bluetooth**, for transmission to studios or to add a mobile phone to the broadcast when the link is made from an external computer or land line (POTS).\n\n- Compatible with any phone with Bluetooth.\n- Eliminates dependence on hands-free cables, which vary by brand and model.\n- Maximum distance: up to 5 meters; recommended: keep the mobile phone on your person but separate from the console (shirt pocket or belt on the opposite side).\n- Advantage: the signal remains digital from the mobile phone to inside the MX2100, achieving better audio quality.\n\n---",
+      "title": "Conexión a celular por Bluetooth",
+      "level": 2
+    },
+    {
+      "hash": "34e22798fbae81d59381848c130a25c21e01def47e9fd38f195b0690e757db07",
+      "translation": "### Pairing a Mobile Phone to the Console\n\nThe initial pairing only needs to be done once per phone. After that, the connection is automatic when Bluetooth is activated on both devices.\n\n<Steps>\n  <Step title=\"Turn off Bluetooth on the console\">\n    Verify that the Bluetooth LED (located on the DTMF keypad) is off.\n\n    - If it flashes green every 2 seconds → it is on.\n    - To turn it off: hold down the **\"#\" and \"9\"** keys until the LED turns off.\n  </Step>\n  <Step title=\"Activate search mode on the console\">\n    With Bluetooth off, hold down **\"#\" and \"9\"** for ~10 seconds until the LED flashes rapidly alternating green/red.\\\n    This indicates the MX2100 has entered search mode.\n  </Step>\n  <Step title=\"Search for devices on the mobile phone\">\n    On the phone, start a search for Bluetooth devices.\\\n    The procedure depends on the model; consult the mobile phone's manual.\n  </Step>\n  <Step title=\"Select the console\">\n    The phone will display the device **Solidyne BTM641** (on older models: BTM751).\n\n    - If it requests a PIN: enter **0000**.\n    - The MX2100's ID is stored in the mobile phone.\n    - The console's LED changes to a slow green flash (one flash every 2 seconds), indicating an active connection.\n  </Step>\n</Steps>\n\n<Warning>\n  Bluetooth is turned on by holding \"#\" and \"9\" (or any combination between rows 3 and 4) for ~5 seconds, releasing when the green LED lights up.\n\n  - Slow green = on.\n  - Fast green/red = search mode.\n</Warning>\n\n<Note>\n  On some phones, after detecting the device, it is necessary to press **\"connect\"** for it to become active. Others activate it automatically.\n</Note>\n\n---",
+      "title": "Vincular el celular a la consola",
+      "level": 3
+    },
+    {
+      "hash": "4b9336fbac9972babfc827cca4b4daef042d6654c7d7698b520ba6ae8005d27c",
+      "translation": "### Reconnect Paired Device\n\nTo reconnect a previously paired mobile phone:\n\n<Steps>\n  <Step title=\"Turn on Bluetooth on the console\">\n    Press **“#” and “9”** until the LED lights green (approx. 5 seconds).\n  </Step>\n  <Step title=\"Turn on Bluetooth on the phone\">\n    When the mobile phone confirms connection, it is ready to operate.\\\n    When making or receiving calls, the audio is sent to the console.\n  </Step>\n</Steps>\n\n<Note>\n  On some phones, reconnection is not automatic and the **Solidyne BTM641** device must be manually selected from the list of Bluetooth devices.\n</Note>\n\n---",
+      "title": "Re-conectar dispositivo vinculado",
+      "level": 3
+    },
+    {
+      "hash": "80e8e121885b9a7d06e5982e0eb34ac2bbe6796163768ac685b6024e4976cc5a",
+      "translation": "### Volume Adjustment\n\n- Adjust the Bluetooth volume on the mobile phone to **maximum**, to achieve the best signal-to-noise ratio.\n- The adjustment must be made **during a call** via Bluetooth.\n- The phone's volume is independent of the Bluetooth volume.\n- The value is stored in the mobile phone's memory.\n- If you change phones, you must readjust the level to maximum.\n\n<Warning>\n  If you adjust the volume without being on a Bluetooth call, you are only changing the phone's speaker volume, **not** the Bluetooth volume.\n</Warning>\n\n---",
+      "title": "Ajuste del volumen",
+      "level": 3
+    },
+    {
+      "hash": "d5fee1e5e2842f2aab131629492da7f0367fbb1c4820b0e49421375ca48d630f",
+      "translation": "### Turn Off Bluetooth on the Console\n\nTo avoid battery consumption when not in use, turn off Bluetooth by holding down **\"#\" and \"9\"** until the LED turns off completely.\n\n---\n\n<Accordion title=\"Mobile Phone Connection via Cable (Obsolete)\" icon=\"mobile\">\n  The **RJ-11 \"Cellular&Phone\"** connector allows connecting a mobile phone using a **hands-free** accessory.\n\n  - It is used as a backup for the external computer link, especially when Bluetooth is in use to send another mobile phone on-air.\n  - The mobile phone transmits the microphone (tip of the miniplug) and speaker (ring) signals to the MX2100.\n  - The console sends the program signal to the mobile phone, which retransmits it to the radio.\n  - The return from the radio arrives at the mobile phone and from there to the console, integrating into the headphone mix (STUDIO).\n  - While using this connector, the mobile phone's microphone and speaker are disconnected.\n\n  <img\n    src=\"/images/mx2100/mx2100-manos-libres.jpg\"\n    alt=\"Mx2100 Manos Libres Jp\"\n    title=\"Mx2100 Manos Libres Jp\"\n    className=\"mx-auto\"\n    style={{ width:\"53%\" }}\n  />\n  <Note>\n    The connection cable varies depending on the mobile phone's brand and model. It is necessary to acquire the specific \"hands-free\" accessory for each phone and follow the manufacturer's documentation.\n  </Note>\n  \n</Accordion>",
+      "title": "Apagar Bluetooth en la consola",
+      "level": 3
+    }
+  ]
+}

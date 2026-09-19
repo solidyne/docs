@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "2c04c7749ac3e63f5c27c941ba754e2515f0b7009cd980b8a5425a146137f48d",
+      "translation": "import discovery from '/snippets/discovery.mdx';\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "f62be2e44fb92def3c819125e6a786f655d51371d98162a33c2b96347e40bfe0",
+      "translation": "### Software Update\n\nUX24 models **manufactured from 2023 onwards** allow software updates by accessing the web interface from a computer with Internet access.\\\nFor earlier models that do not include this feature, please write to: [**info@solidyne.ar**](mailto:info@solidyne.ar).\n\n**Components that can be updated:**\n\n- Mixing engine firmware (hardware).\n- Graphical interface.\n- Streaming tools.",
+      "title": "Actualización de software",
+      "level": 3
+    },
+    {
+      "hash": "b1ce0213a199b7cd2a198186bcfb8c9a80d45397b05269c3b32cb40eedd94c16",
+      "translation": "#### Update Procedure\n\n1. Connect the **Ethernet Streaming Out** and **Remote Control** ports of the console to the local network.\n2. Ensure the network has **Internet access**.\n3. On the console's main screen, verify the IP address assigned to **STREAMING IP**.\n\n<img\n  src=\"/images/ux24/unidex_streaming_ip.jpg\"\n  alt=\"UNIDEX Streaming IP\"\n  title=\"UNIDEX Streaming IP\"\n  style={{ width:\"34%\" }}\n/>\n\n<discovery />\n\n 4. In the browser, enter the IP address followed by `/update`.\\\n    Example: `192.168.0.88/update`\n 5. Press **Enter** to open the update screen.\n\n    <img\n      src=\"/images/ux24/ux24-update-firmware.png\"\n      alt=\"UNIDEX Firmware Update\"\n      title=\"UNIDEX Firmware Update\"\n      style={{ width:\"61%\" }}\n    />\n 6. Click **CHECK FOR UPDATES**.\n 7. If there are no updates, the system will report that it is up to date.\n 8. If updates are available, a list with details will be displayed.\n 9. Updates **are not installed automatically**.\n10. To install an update, press **INSTALL**.\n\n    <Warning>\n      Depending on the type of update, the console may restart, interrupting the on-air signal for a few seconds.\n    </Warning>",
+      "title": "Procedimiento de actualización",
+      "level": 4
+    }
+  ]
+}

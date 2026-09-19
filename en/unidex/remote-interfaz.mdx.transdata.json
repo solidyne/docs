@@ -1,0 +1,59 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "b4fc53a81f36b7cdf4a0af1f6ba5f6b4bf5f94170aa5fa16b4b44d0698c659ac",
+      "translation": "All functions and configurations of **UNIDEX** can be controlled remotely by connecting the console to the **LAN** and accessing its IP address from a web browser.\n\n<Note>\n  The web control screens offer the same options as the built-in touchscreen, although the arrangement and layout of some controls may vary.\\\n  This section describes only the screens that present the most significant differences.\n</Note>",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "7cd484ed567dbdc9047c4e35cb98d3af11f1d3e3a62885a55fb9a0a8ab61207a",
+      "translation": "## Connecting UNIDEX to the Network\n\n<Icon icon=\"network-wired\" iconType=\"solid\" color=\"#ff6600\" size={22} />  [**LAN Connection**](/es/unidex/instalacion-red)",
+      "title": "Conección de UNIDEX a la red",
+      "level": 2
+    },
+    {
+      "hash": "1eb49ef5ff5536b379452765a96beb6cc13aed750f3891ec7e358dd19f6ef19b",
+      "translation": "## Accessing the WEB Control Interface\n\nFrom a computer connected to the same LAN as the UNIDEX (preferably via cable), open a web browser —**Google Chrome** is recommended— and enter the **Unidex IP** address to access the operation and configuration control interface.\n\nUpon access, the main screen will be displayed, very similar to the one that appears on the console itself.",
+      "title": "Acceso a la interfaz de control WEB",
+      "level": 2
+    },
+    {
+      "hash": "e3c975c9f10518240a5837ba3eb9b2cd1b82a70d9176c4dd6a56f4939003c239",
+      "translation": "### User Profile\n\nAllows switching the user for the web interface, independent of the user set on the hardware. A dialog box will be displayed to enter the username, followed by another to enter the password.\n\n<img\n  src=\"/images/ux24/ux24-WEB-USERS.png\"\n  alt=\"UNIDEX WEB USERS\"\n  title=\"UNIDEX WEB USERS\"\n  className=\"mx-auto\"\n  style={{ width:\"82%\" }}\n/>\n\n<Note>\n  There are three user profiles:\n\n  - ADMIN with full access.\n  - EXPERT with access to some advanced functions.\n  - BASIC with restricted access.\n</Note>\n\nBy default, the password is the same as the username. The LOGOUT option leaves the web interface operating with the restrictions of the BASIC user.",
+      "title": "Perfil de usuario",
+      "level": 3
+    },
+    {
+      "hash": "300cfa136210ca43e099a849ed1de4792cd8a7939a23ccc8f877d293bd9f3caf",
+      "translation": "### Remote Operation Interface\n\nSelecting the **REMOTE CONTROL** option in the menu provides access to the remote operation interface.\n\nThe available functions are the same as those offered by the hardware and the onboard screen, so the explanations in this manual for each of them are valid. However, there are some operational differences described below.\n\nThe main screen of the remote interface is similar to the **HOME** screen on the hardware.\\\nIt includes level meters, counters, ON AIR signaling, and a quick-access menu in the lower area.\n\n- **PROCESS:** Direct access to the processors screen. It is also possible to reach this screen from the *mixing console*.\n- **REMOTE:** Opens the *mixing console*, a graphical interface that emulates the controls of the console's physical surface.\n- **SCENES:** Allows switching scenes. The change is performed directly on the console, just as if done from the onboard screen. The web interface does not have its own scenes, although scenes can be imported from disk.\n- **SETTINGS:** Access to configuration options. The options are presented in a vertical menu, similar to the layout of the onboard **SETTINGS** screen.",
+      "title": "Interfaz de operación remota",
+      "level": 3
+    },
+    {
+      "hash": "e5e2340725a3d5a4e6ffc7a339df8d574c58e81496005a9886240fd511096858",
+      "translation": "### Mixing Console\n\nThe WEB interface can control all console channels. Its design is optimized for use on touch screens.\n\nA \"traditional\" application is to configure it as an auxiliary controller for the onboard screen, running on a large touch monitor.\n\n<img\n  src=\"/images/ux24/ux24_monitor_touch.jpg\"\n  alt=\"WEB Control - Touch Monitor\"\n  className=\"mx-auto\"\n  style={{ width:\"84%\" }}\n/>\n\nAt a more advanced level, it enables \\*\\*configuring an auxiliary studio \\*\\*to operate signals without the need to install a second console. For this case, the remote mixing interface includes a monitoring panel and the ability to listen to audio sent by the console over the network.\n\n<img\n  src=\"/images/ux24/ux24-WEB-remotemixer.jpg\"\n  alt=\"WEB Control - Remote Mixer\"\n  className=\"mx-auto\"\n  style={{ width:\"87%\" }}\n/>\n\nThe **visible channels** in the WEB mixing interface are set by clicking the \"pencil\" icon. Only the ADMIN user can modify this configuration. When the edit icon is clicked, a list of the 24 channels appears.\n\n<img\n  src=\"/images/ux24/ux24-WEB-remote_edit.png\"\n  alt=\"WEB Control - Mixer Config\"\n  title=\"WEB Control - Mixer Config\"\n  className=\"mx-auto\"\n  style={{ width:\"74%\" }}\n/>\n\nIn the remote interface, channels marked as visible will always be displayed in ascending order.\\\nThis setting can be **saved to the active** scene.",
+      "title": "Consola de mezclas",
+      "level": 3
+    },
+    {
+      "hash": "a97e667b6ae9b78ba8e543506643b4c7a3d12734ec32e8e5bfeeaec56791a1bb",
+      "translation": "### **Microphone and Line Channels**\n\nOn each channel, the same controls present on the console surface are replicated.\\\nOperations performed from the web controller are immediately reflected on the physical console.\n\n- **BUS BUTTONS:** Assign the channel to the corresponding bus.\n- **CUE:** Activates CUE monitoring for that channel. The audio is heard through the CUE circuit on the console.\n- **ON AIR:** Toggles the channel on/off.\n- **FADER:** Controls the channel level.\n  - When adjusted from the web controller, the console updates the level and displays the value in dB on the OLED screen, which flashes to indicate the change was remote.\n  - **The physical fader is not motorized**, so its position does not change. If the operator moves the physical fader, the level smoothly adjusts to the new value and the web interface updates the fader position.",
+      "title": "**Canales de micrófono y línea**",
+      "level": 3
+    },
+    {
+      "hash": "87592e0b1be827042c06fd92e216507280a9c5e6d763e3b2624a86ee21c524fe",
+      "translation": "### TELCO Channels\n\nTELCO channels include, in addition to the controls already covered, a **RING/HOLD** button that allows you to answer an incoming call; and information about the line status.\n\nHowever, talkback and dialing functions must be performed from the console, or in a remote studio configuration, using an associated phone.",
+      "title": "Canales TELCO",
+      "level": 3
+    },
+    {
+      "hash": "9f763b4fd9d69ddeeb79ce8cc1bc11f94eaf0106a6954c568d9505cded7f97fc",
+      "translation": "### Audio Processing\n\nIn the remote interface, audio processing is accessed from the **PROCESS** option on the REMOTE CONTROL home screen, or from the **FX** icon on each channel of the web mixer.\n\n**Available processing:**\n\n- Parametric equalizer.\n- De-esser.\n- Compressor and noise gate.\n\n<Note>\n  Processing is assigned to inputs, so the availability of each one depends on the input connected to the channel.\n</Note>\n\n<img\n  src=\"/images/ux24/ux24-WEB-EQ.jpg\"\n  alt=\"WEB Control - EQ\"\n  title=\"WEB Control - EQ\"\n  className=\"mx-auto\"\n  style={{ width:\"74%\" }}\n/>\n\n**Features and usage:**\n\n1. Processors are inserted on each input.\n   - To view them, select the input from the **INPUT (1)** dropdown menu.\n   - A channel can also be selected from **CHANNEL**; the interface will show the processing for the input assigned to that channel.\n2. In the **Parametric EQ**, the remote interface has some differences compared to the onboard screen:\n   - The **ON/OFF** buttons enable or disable each band.\n   - The **B1**, **B2**, and **B3** checkboxes allow you to select the band to edit **(2)**.\n   - This design reduces the number of visible controls and makes them easier to use on touchscreens.\n3. Switching between processes is done by tapping the corresponding icons **(3)**.\n   - The available processes change depending on the selected input.",
+      "title": "Procesos de audio",
+      "level": 3
+    }
+  ]
+}

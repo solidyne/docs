@@ -1,90 +1,95 @@
 ---
 title: "Scenes and User Profiles"
-description: "Scene and access profile management"
+description: "Scene and Access Profile Management"
 keywords: ["operation", "scenes", "users", "profiles", "channel map", "permissions"]
-tags: ["IP consoles", "UNIDEX", "UX24"]
+tags: ["consolas IP", "UNIDEX", "UX24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "facd1c6b21f38ae8d1262723be02189377648c83d52dc781af5d375b792b053f"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 The user and scene management screen allows:
 
-- Changing the active user
-- Changing the current scene
-- Using advanced channel organization functions
+- Changing the active user.
+- Changing the current scene.
+- Using advanced functions to organize channels.
 
-Access by pressing the **SCENES** option, available in the contextual buttons when the console shows the **main screen**.
+It is accessed by pressing the **SCENES** option, available in the contextual buttons when the console displays the **main screen**.
 
 <img
-  src="/images/ux24/ux24-pantallas-escenas.jpg"
-  alt="UX24 Scenes"
-  title="UX24 Scenes"
+  src="/images/ux24/UX24_SCENES.png"
+  alt="UX24 SCENES Screen"
+  title="UX24 SCENES"
   className="mx-auto"
   style={{ width:"75%" }}
 />
 
 ## USERS
 
-The **USER LOGIN** area (1) shows the currently active user and allows switching to another user by touching the corresponding option.\
-There are **three user levels** with different preset permissions. Restrictions apply both to console screen operation and remote web interface.
+The **USER LOGIN** area displays the currently active user, highlighted in blue, and allows switching to another user by tapping the name.<br />There are **four user levels** with different preset permissions. Restrictions apply both for onboard screen access and the remote web interface.
+
+### GUEST User
+
+Highly restricted profile. No password protection.
+
+- Can only operate essential functions: physical faders, CUE, monitor assignment, TELCO, and bus assignment.
+- Cannot change scenes. Cannot access virtual channels.
 
 ### BASIC User
 
-Most restricted profile:
+Restricted profile:
 
-- No password protection
-- No access to advanced configuration options (SETTINGS)
-- Can change scenes but cannot save changes or create new scenes
-- Can view processor settings and status but cannot modify or turn them on/off
-- Can temporarily modify basic channel options (**GAIN**, **NAME**, **PAN**, **CHANNEL ACTIONS**) but cannot save changes to the scene
+- Password protected (default: `basic`). Only ADMIN user can change it.
+- No access to advanced configuration settings (SETTINGS).
+- Can switch scenes but cannot save changes or create new scenes.
+- Can view processor settings and status but cannot modify them or turn them on/off.
+- Can temporarily modify basic channel options (**GAIN**, **NAME**, **PAN**, **CHANNEL ACTIONS**) but cannot save changes to the scene.
 
 ### EXPERT User
 
 Profile with intermediate restrictions:
 
-- Password protected (default: `expert`). Only ADMIN user can change it
-- Like BASIC, no access to advanced configuration (SETTINGS)
-- Full access to audio processing
-- In **CHANNEL** screen can change **gain**, **pan**, **name**, **input assignment** and **channel mode**, but without accessing SETTINGS
-- Can save current scene, except if protected
-- Can create new scenes, even from a protected one
+- Password protected (default: `expert`). Only the ADMIN user can change it.
+- Same as BASIC, without access to advanced configuration (**SETTINGS**).
+- Full access to audio processes.
+- On the **CHANNEL** screen, can change **gain**, **pan**, **name**, **input assignment**, and **channel mode**, but without access to SETTINGS.
+- Can save the current scene, except if it is protected.
+- Can create new scenes, even from a protected one.
 
 ### ADMIN User
 
 Profile with full access:
 
-- Password protected (default: `admin`). Can change all passwords from **SETTINGS** screen
-- Can create protected or read-only scenes that are operational for BASIC and EXPERT but only editable by ADMIN
+- Password protected (default: `admin`).
+- Can modify passwords for all profiles.
+- Can create protected or read-only scenes, which are operational for BASIC and EXPERT but only editable by ADMIN.
+
+---
 
 <Note>
-  Passwords are defined in the **SETTINGS - USERS** screen.
+  **STARTUP USER**
+
+  When powered on, the console starts with a predefined user profile (factory default: ADMIN) and never prompts for a password. To ensure access restriction from startup, change the startup user to BASIC or EXPERT.
+
+  In `SETTINGS → USERS` you can:
+
+  - Change the startup user.
+  - **Change passwords** for ADMIN, EXPERT, and BASIC.
 </Note>
-
-#### Startup User
-
-On power up, the console starts with a predefined user profile (factory default: ADMIN) and never requests password.
-
-In **SETTINGS → USERS** you can:
-
-- Change the startup user
-- **Change passwords** for ADMIN and EXPERT
 
 ## SCENES
 
-A **scene** stores all console configuration, except system settings (network, streaming, startup user, etc.). It includes:
+A **scene** stores the entire console configuration, except for system settings (network, streaming, startup user, etc.). It includes:
 
-- Input and output configuration
-- Channel and bus assignments
-- Gains
-- Audio processor settings
+- Input and output configuration.
+- Channel and bus assignments.
+- Gain settings.
+- Audio processor adjustments.
 
-Scenes allow quickly loading a preset configuration according to each show's requirements; for example, reassigning inputs, changing channel order or adjusting microphone processors.
+Scenes allow quickly loading a default configuration according to each show's requirements; for example, reassigning inputs, changing channel order, or adjusting microphone processors.
 
 <Warning>
   The scene must be saved after modifying any parameter (gain, equalizer, channel name, etc.) for the change to be permanently stored.
@@ -92,79 +97,79 @@ Scenes allow quickly loading a preset configuration according to each show's req
 
 ### Available Scenes
 
-The list (see 2 in image) shows 12 user scenes.
+The list displays 12 user scenes.
 
-- Navigate by turning the encoder and confirm by pressing it
-- Active scene is highlighted in **light blue**
-- Selected scene (but not confirmed) is highlighted in **orange**
+- Navigation is done by rotating the encoder and confirmed by pressing it.
+- The active scene is highlighted in **cyan**.
+- The selected scene (but not confirmed) is highlighted in **orange**.
 
 ### Protected Scenes (Lock)
 
-- Only **ADMIN** profile can create them
-- Identified with a padlock icon
-- BASIC and EXPERT users can load them but cannot modify or delete them
+- Only the **ADMIN** profile can create them.
+- They are identified by a lock icon.
+- BASIC and EXPERT users can load them but cannot modify or delete them.
 
 ### Scene Manager
 
-Presents two option groups: for the **selected scene** and for the **active scene**.
+Displays two groups of options: for the **selected scene** and for the **active scene**.
 
-**LOAD**: Loads the selected scene. Can be done from touchscreen, contextual button or encoder.
+**LOAD**: Loads the selected scene. Can be executed via touchscreen, context button, or encoder.
 
-- Requires confirmation (cancels after 8 seconds if not confirmed)
-- All profiles can load any scene
-- If channels are on-air, they remain active even if position changes, maintaining bus assignments
-- If the new assigned channel has a different fader level, previous digital level is maintained and indicated by flashing OLED
-- **Audio cuts if previously on-air input is not assigned** to a channel in new scene
-- Cannot change scenes with telephone line on-air or on hold
+- Requires confirmation (cancels after 8 seconds if not confirmed).
+- All profiles can load any scene.
+- If channels are on-air, they remain active even if their position changes, maintaining their bus assignments.
+- If the newly assigned channel has a different fader level, the previous digital level is maintained and indicated by blinking OLED.
+- **Audio cuts if the previously on-air input isn't assigned** to a channel in the new scene.
+- Scene changes are blocked with an active or held TELCO line.
 
-**RENAME**: Changes selected scene name.
+**RENAME**: Renames the selected scene.
 
-- Disabled for BASIC
+- Disabled for BASIC.
 
-**COPY CURRENT**: Copies active scene over selected scene.
+**COPY CURRENT**: Copies the active scene over the selected one.
 
-- Requires confirmation
-- Disabled for BASIC
+- Requires confirmation.
+- Disabled for BASIC.
 
-**SET TO DEFAULT**: Restores active scene to factory configuration.
+**SET TO DEFAULT**: Restores the active scene to factory settings.
 
-- Disabled for BASIC
+- Disabled for BASIC.
 
-**SAVE**: Saves current configuration of:
+**SAVE**: Saves the current configuration of:
 
-- Input assignment to 24 channels
-- Signal assignment to outputs
-- Specific input/output configuration (phantom, MIX-MINUS modes, etc.)
-- Input and output gains
-- Channel labels and actions
-- Audio processor settings
-- Assignment status, including VBUS
+- Input assignments to all 24 channels.
+- Signal routing to outputs.
+- Specific input/output settings (phantom, MIX-MINUS modes, etc.).
+- Input and output gains.
+- Channel labels and actions.
+- Audio processor settings.
+- Assignment states, including VBUS.
 
 <Warning>
-  Scene does **not save** status of **ON-AIR** or **CUE** buttons.
+  The scene **does not save** the state of **ON-AIR** or **CUE** buttons.
 </Warning>
 
 ### Factory Scenes
 
-Any of the 12 scenes can be reset to a default configuration. Additionally, UNIDEX comes from factory with scenes designed with different configurations and UDX expansions, intended as base or example for creating new configurations.
+Any of the 12 scenes can be reset to a default configuration. Additionally, UNIDEX comes from the factory with scenes designed with different configurations and UDX expansions, intended to serve as the foundation or example for creating new configurations.
 
 <Note>
-  Download [default scene configuration infographic](http://www.solidyne.dx.com.ar/wordpress-files/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF)
+  Download [infographic about the default scene configuration](http://solidyne.dx.com.ar/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF)
 </Note>
 
 ### Export and Import Scenes
 
-Scenes can be exported and imported from the **WEB control interface**.\
-From the scene management option in web control, each scene can be exported as a disk file. And later imported into any of the 12 available positions.
+Scenes can be exported and imported from the **WEB control interface**. \
+From the scene management option in the web control, it's possible to export each scene as a file on disk. They can then be imported into any of the 12 available positions.
 
 ## Channel Map
 
-The **CHANNEL MAP** function shows configuration of all channels and allows easy reordering.\
-There are two operation modes: **SWAP 2 CH** (swap two channels) and **ORDER CH** (reorganize channels).
+The **CHANNEL MAP** function displays the configuration of all channels and allows easy reordering.\
+There are two operating modes: **SWAP 2 CH** (swap two channels) and **ORDER CH** (rearrange channels).
 
-### SWAP 2 CH
+### SWAP 2 CH (Swap Two Channels)
 
-Allows swapping position of two channels.
+Allows swapping the position of two channels.
 
 <img
   src="/images/ux24/ux24-chmap.png"
@@ -175,14 +180,14 @@ Allows swapping position of two channels.
 
 **Procedure:**
 
-1. Press **SWAP 2 CH** to enable option
-2. Select from list the two channels to swap
-3. Press **APPLY** to execute swap
-4. Press **SAVE** to store changes in current scene
+1. Press **SWAP 2 CH** to enable the option.
+2. Select the two channels you wish to swap from the list.
+3. Press **APPLY** to execute the swap.
+4. Press **SAVE** to save the changes to the current scene.
 
 ---
 
-## ORDER CH
+## ORDER CH (Reorder Channels)
 
 Allows assigning new positions to one or more channels.
 
@@ -196,16 +201,16 @@ Allows assigning new positions to one or more channels.
 **Procedure:**
 
 1. Press **ORDER CH**.\
-   A dropdown menu appears right of channel number, allowing new position assignment
-2. Touch screen menu and choose new position for channel.\
-   Multiple channels can be relocated at once
+   A dropdown menu will appear to the right of the channel number, allowing assignment of a new position.
+2. Touch the on-screen menu and select the new position for the channel.\
+   Multiple channels can be repositioned simultaneously.
 
 <Warning>
-  If assigning a channel to an occupied position, destination channel information will be overwritten when applying changes.
+  If a channel is assigned to an already occupied position, the destination channel's information will be overwritten when applying changes.
 </Warning>
 
-3. Press **APPLY** to confirm
-   - **APPLY** applies changes temporarily (not yet saved)
-   - Changes are lost if scene is abandoned without saving
-4. Press **SAVE** for changes to be permanent in scene
-5. To cancel, deactivate **ORDER CH** by touching option again or press **BACK** contextual button
+3. Press **APPLY** to confirm.
+   - **APPLY** temporarily applies changes (not yet saved).
+   - If the scene is exited without saving, changes will be lost.
+4. Press **SAVE** to make changes permanent in the scene.
+5. To cancel, deactivate **ORDER CH** by touching the option again or pressing the contextual **BACK** button.

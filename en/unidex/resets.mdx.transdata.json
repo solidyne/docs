@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "b47ce8f8836fc58774aec4562a84488ef9fc9c6603cad901923427af26b5c666",
+      "translation": "## Startup Sequence\n\nWhen the console is powered on, UNIDEX starts its operating system. Once the startup sequence is complete, the **main screen** is displayed and the following are loaded:\n\n1. The **default user profile.**\n2. The **last active scene** before shutdown.\n\n---",
+      "title": "Secuencia de arranque",
+      "level": 2
+    },
+    {
+      "hash": "6f5124495a33d6d7c95134f790cee69980b0340d8e0caa47e2c62b55311da6ef",
+      "translation": "## User Profile and Permissions\n\nThe user profile determines the **level of access to functions** within the console.\\\nFrom the configuration, you can define which profile is loaded automatically when the unit is powered on. By default, the console starts with the **ADMIN** profile, which has full access.",
+      "title": "Perfil de usuario y permisos",
+      "level": 2
+    },
+    {
+      "hash": "7bd8336c9ee043335bceeadf26dd2eca2477f0e85887efab2c3f816c7b95b1d6",
+      "translation": "### Available user levels\n\n1. **BASIC** – Access restricted to essential functions\n2. **EXPERT** – Advanced access (requires password)\n3. **ADMIN** – Full access (requires password)\n\n<Info>\n  During startup, **no password is requested**, even if the default profile is protected.\\\n  For the UX24 to start in restricted mode and require a password to access advanced functions, the **default profile must be changed** to one other than ADMIN.\n</Info>\n\nFor more information on user configuration, see: `SETTINGS → USERS`\n\n---",
+      "title": "Niveles de usuario disponibles",
+      "level": 3
+    },
+    {
+      "hash": "da24886006e533460449a33c977c3c7f1b9c3294daf4c80d8446492beffa950a",
+      "translation": "## System Actions\n\nSystem actions are available from the main screen, by accessing the option **STATUS → \"\\+\"**.\n\n1. On the **main screen**, touch the **\"\\+\"** icon located in the **STATUS** section.\n   <img\n     src=\"/images/ux/ux_home_status.png\"\n     alt=\"Main Screen - STATUS\"\n     title=\"Main Screen - STATUS\"\n     style={{ width:\"24%\" }}\n   />\n2. A pop-up window appears. These functions allow you to **restart different stages of the system separately**, and are not used during normal operation.\n   <img\n     src=\"/images/ux/ux_status_poweroff.png\"\n     alt=\"Status, resets and power-off\"\n     title=\"Status, resets and power-off\"\n     style={{ width:\"53%\" }}\n   />\n\n<Info>\n  The reset actions are technical maintenance tools.\\\n  Under normal operating conditions, **it is not necessary to execute them**.\n</Info>",
+      "title": "Acciones del sistema",
+      "level": 2
+    },
+    {
+      "hash": "0f9482af2b258d821c03feafb93e9cce25e323c8597bd98ef2b5845eb4a87951",
+      "translation": "### Available Options\n\n- **RESET USB**\\\n  Resets only the USB stage.\\\n  Forces the operating system to recognize connected USB devices again.\n- **RESET MIXER**\\\n  Resets the internal mixing engine of UNIDEX and the control surface.\\\n  Does not affect the CPU or the display.\n- **RESET DISPLAY**\\\n  Resets the onboard computer that manages **streaming** and the **graphical interface**.\n- **FULL RESET**\\\n  Resets all stages of the system.\\\n  Equivalent to a complete power-off and power-on of the equipment.\n- **POWER-OFF**\\\n  Shuts down the internal computer, which handles the touchscreen display and streaming services.\\\n  The console will continue to operate, even when controlled from the WEB Control.\\\n  To completely power off the equipment, wait a few seconds and turn off the power supply (on the rear panel or the external supply depending on the model).\n\n<Warning>",
+      "title": "Opciones disponibles",
+      "level": 3
+    },
+    {
+      "hash": "ea48bf50499d2d0b8e828fa2d31ae140e57827497dd64fa93439735843248d1a",
+      "translation": "### CPU Shutdown\n\nUNIDEX consoles have an **internal CPU** that must be **safely shut down** before completely disconnecting the console. This function **does not shut down the entire console**, only the system's main CPU.\n\n- After shutting down the CPU, **wait a few seconds** before turning off the unit completely, to allow for proper closure of internal processes.\n- The complete shutdown is performed using the **mechanical power switch** (on the rear panel or on the external power supply, depending on the model).\n</Warning>",
+      "title": "Apagado del CPU",
+      "level": 3
+    }
+  ]
+}

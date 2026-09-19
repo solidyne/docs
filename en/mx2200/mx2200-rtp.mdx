@@ -1,32 +1,29 @@
 ---
-title: "RTP Streaming"
-description: "Studio Linking via RTP"
-keywords: ["RTP","link"]
-tags: ["portable consoles","CODEC","MX2200"]
-
+title: "Streaming RTP"
+description: "Linking to Studios via RTP"
+keywords: ["RTP", "link"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "c133203391bbf4252c9a40dc1f5bc3b5da6bd2eb85fd28058463342dd1d04f8a"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-**RTP** connection offers maximum quality and low latency, but requires **network configuration** at both ends (transmitter and receiver).\
+The **RTP** connection offers maximum quality and low latency, but requires **network configuration** at both ends (transmitter and receiver).\
 It is ideal for **fixed installations** or locations with **known and controlled networks**.
 
 <Warning>
-  **Network Prerequisites**\
-  Make sure you have the correct **IP/port** defined and have resolved **NAT / firewall / port forwarding** at the receiver. Without this preparation, the link may not establish.
+  **Network prerequisites**\
+  Ensure you have defined the correct **IP/port** and have resolved **NAT / firewall / port forwarding** on the receiver. Without this preparation, the link may not be established.
 </Warning>
 
 <Tabs>
   <Tab title="Start RTP from MX2200">
     <Steps>
       <Step title="Open Connection Center">
-        Turn the **encoder** to **CONNECTION CENTER** and press it to enter connection options.
+        Turn the **encoder** to **CONNECTION CENTER** and press it to enter the connection options.
 
         <img
           src="/images/mx2200/mx2200-connection_center.png"
@@ -55,39 +52,39 @@ It is ideal for **fixed installations** or locations with **known and controlled
           style={{ width:"51%" }}
         />
 
-        When active, both **CONNECTION CENTER** and **HOME** screens show **RTP STREAM ENABLED**.
+        When active, the **CONNECTION CENTER** and **HOME** screens show **RTP STREAM ENABLED**.
       </Step>
       <Step title="End the link">
-        Repeat the procedure and select **NO** to disable RTP.
+        Repeat the procedure and select **NO** to disable the RTP.
       </Step>
     </Steps>
     <Info>
-      Before starting, verify that the **network and audio format** configuration in the MX2200 matches what is expected at the receiver (destination IP, **port**, **codec** and **sampling rate**).
+      Before starting, verify that the **network and audio format configuration** on the MX2200 matches what is expected by the receiver (destination IP, **port**, **codec**, and **sample rate**).
     </Info>
   </Tab>
   <Tab title="Return from Studios">
-    **RTP transmission is unidirectional**. Return is not typically used in this mode because the location generates content without studio interaction.
+    The **RTP transmission is unidirectional**. Return is typically not used in this mode because the location generates the content without interaction with the studio.
 
     <Note>
-      If you need **return audio** (intercom or floor), use a **SIP call** or **telephone communication** (Bluetooth mobile or POTS landline) in parallel to RTP.
+      If you need a **return** (intercom or floor), use **a SIP call** or a **telephone communication** (Bluetooth mobile phone or POTS land line) in parallel with the RTP.
     </Note>
   </Tab>
-  <Tab title="Studio Reception (VLC)">
-    To receive streaming from an MX2200 on a **computer**, use software with **RTP** support. **VLC Player** (free) is recommended.
+  <Tab title="Reception in Studios (VLC)">
+    To receive the streaming from an MX2200 on a **computer**, use software with **RTP** support. **VLC Player** (free) is recommended.
 
     <Steps>
-      <Step title="Choose compatible format">
+      <Step title="Choose a compatible format">
         Configure the MX2200 with a format that the receiver supports directly:
 
         - **PCM16 @ 44.1 kHz** (linear)
-        - **MP3** (any available mode)
+        - **MP3** (any of the available modes)
 
         <Note>
           **OPUS** requires an **SDP (Session Description)** file to describe the content to the player.
         </Note>
       </Step>
       <Step title="Open network location in VLC">
-        In **VLC Player** go to **Media → Open Network Location**.
+        In **VLC Player**, go to **Media → Open Network Stream**.
       </Step>
       <Step title="Enter the URL">
         Use the format:
@@ -104,16 +101,16 @@ It is ideal for **fixed installations** or locations with **known and controlled
 
         Where:
 
-        - `rtp` is the protocol used by MX2200.
-        - `0.0.0.0` means "**listen from any incoming IP**" on the receiving PC.
-        - `3030` is the configured **port** for reception.
+        - `rtp` is the protocol used by the MX2200.
+        - `0.0.0.0` indicates "**listen from any incoming IP**" on the receiving PC.
+        - `3030` is the **port** configured for reception.
 
         <Info>
-          Some VLC versions also accept: `rtp://@:3030`
+          Some versions of VLC also accept: `rtp://@:3030`
         </Info>
       </Step>
       <Step title="Verify firewall/port">
-        Ensure the configured **UDP port** is **allowed** in both system firewall and studio router.
+        Ensure the configured **UDP port** is **allowed** in the system firewall and the studio router's firewall.
       </Step>
     </Steps>
   </Tab>

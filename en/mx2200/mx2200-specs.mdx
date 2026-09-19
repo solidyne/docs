@@ -1,61 +1,58 @@
 ---
 title: "Technical Specifications"
 keywords: ["specifications"]
-tags: ["portable consoles", "CODECS", "MX2200"]
+tags: ["MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "173e12625bdef1559095233e4a63e62c745bce02cec3d0f89d83b326962e02f8"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ---
-
 <Accordion title="CODEC – LINK">
   - **SIP:** Opus 48 kHz · Speex 32k / 16k / 8k · G729 · G722
-  - **Icecast/Shoutcast Streaming:** MP3 · Opus 64–320 kbps
-  - **RTP Streaming:** PCM 32–44.1–48 kHz · MP3 64–320 kbps · Opus 64–320 kbps
+  - **Streaming Icecast/Shoutcast:** MP3 · Opus 64–320 kbps
+  - **Streaming RTP:** PCM 32–44.1–48 kHz · MP3 64–320 kbps · Opus 64–320 kbps
 </Accordion>
 
 <Accordion title="Connectivity">
   - Bluetooth 4.0
   - Gigabit Ethernet RJ45
   - Wi-Fi 2.4G / 5.8G (USB antenna included)
-  - External 4G USB modem (not included)
+  - External USB 4G modem (not included)
 </Accordion>
 
 <Accordion title="Inputs">
   - 4 × Dynamic MIC (XLR)
-    - Fader #3 controls MIC3 \+ MIC4
+    - Fader #3 controls MIC3 + MIC4
     - Level: –70 to –30 dBu
   - 1 × USB audio from PC (Fader #4)
-    - Without USB, Fader #4 switches to analog stereo line
-  - 1 × Stereo Line (Telephone/Line or Fader #4)
-    - Level –10 / \+20 dBu
-  - 1 × POTS telephone line (RJ11)
-    - VoIP through external FXS adapter (not included)
+    - If no USB, Fader #4 switches to analog stereo line
+  - 1 × Stereo line (Telephone/Line or Fader #4)
+    - Level –10 / +20 dBu
+  - 1 × POTS phone line (RJ11)
+    - VoIP via external FXS adapter (not included)
   - 1 × Smartphone via Bluetooth 4.0 (50 Hz – 8 kHz voice)
-  - Stereo PGM insert for external processor (\+4 dBu)
+  - Stereo PGM insert for external processor (+4 dBu)
 </Accordion>
 
 <Accordion title="Outputs">
-  - Stereo Program Out: Analog, unbalanced \+4 dBu
-    - Max. \+14 dBu · Z \>5 kΩ
+  - Stereo Program Out: Analog, unbalanced +4 dBu
+    - Max. +14 dBu · Z >5 kΩ
   - USB Stereo Program to PC
   - MIC Mixer Out for PC recording (–10 dBu / 10kΩ)
-  - 4 × headphone outputs (16–600 Ω)
-    - Level \+5 dBu / 50 Ω
-  - Monitor speakers (replaces Headphone #1 output when on-air light connected)
+  - 4 × Headphone outputs (16–600 Ω)
+    - Level +5 dBu / 50 Ω
+  - Monitor speakers (replaces Headphone output #1 if on-air light is connected)
   - 12 V / 120 mA output for on-air light (Tally light)
 </Accordion>
 
 <Accordion title="Recording">
-  - Internal stereo MP3 recording
-  - Over 100 hours storage (@192 kbps)
-  - Resolution 16 bits / 48 kHz
+  - Internal recording in stereo MP3 format
+  - Over 100 hours of storage (@192 kbps)
+  - Resolution 16-bit / 48 kHz
   - Configurable bitrate: 64 to 320 kbps
   - Nominal level –10 dBFS · Dynamic range 80 dB
 </Accordion>
@@ -63,8 +60,8 @@ translation:
 <Accordion title="Audio Performance">
   - **RTP PCM 48 kHz:**
     - Response: 20–18,000 Hz ±1 dB
-    - Noise / Dynamic range \>85 dBA
-    - Distortion less than 0.01% THD
+    - Noise / Dynamic range >85 dBA
+    - Distortion less than 0.01 % THD
   - **MIC to PGM Out:**
     - 20–15,000 Hz ±1 dB (with anti-pop –3 dB @30 Hz)
     - 20–20,000 Hz ±2 dB
@@ -78,34 +75,34 @@ translation:
     - Compression up to 20 dB
     - Attack 5 ms · Release 200 ms
   - **Distortion:**
-    - USB In → USB PGM Out less than 0.02% THD @1 kHz
-    - MIC –50 dBu → PGM Out less than 0.1% THD
+    - USB In → USB PGM Out less than 0.02 % THD @1 kHz
+    - MIC –50 dBu → PGM Out less than 0.1 % THD
 </Accordion>
 
 <Accordion title="Phone Hybrid">
   - Response: 300–3400 Hz ±1 dB
-  - Rejection: \>40 dB @1 kHz (rear NULL adjustment)
-  - S/N ratio \>60 dBA
-  - Built-in DTMF dialer
+  - Rejection: >40 dB @1 kHz (rear NULL adjustment)
+  - S/N ratio >60 dBA
+  - Built-in DTMF dialing
 </Accordion>
 
 <Accordion title="Intercom">
   - Internal talkback microphone
-  - Private communication with studio, headphones, telephone line and mobile
+  - Private communication with studio, headphones, phone line and mobile phone
 </Accordion>
 
 <Accordion title="Power Supply">
   - External switching power supply 90–240 V AC 50/60 Hz → 12 V / 1.25 A
   - Internal Li-Ion battery 2×3.7 V / 2500 mAh (with internal charger)
-  - Approx. 4 h autonomy (Wi-Fi on, Bluetooth off)
-  - Compatible with external Power Bank 12 V DC / 1000 mAh (≈15 h operation)
+  - Approx. 4-hour autonomy (Wi-Fi on, Bluetooth off)
+  - Compatible with external Power Bank 12 V DC / 1000 mAh (≈15 hours of operation)
 </Accordion>
 
 <Accordion title="Insert External Devices">
   - Stereo PGM insert for external processor
-  - Switched TRS 1/4" "Stream In" connector
+  - ¼" TRS "Stream In" connector, switched
   - Replaces internal PGM signal in streaming and USB
-  - Level \+4 dBu
+  - Level +4 dBu
 </Accordion>
 
 <Accordion title="Dimensions and Weight">

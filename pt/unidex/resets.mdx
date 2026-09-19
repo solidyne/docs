@@ -1,31 +1,29 @@
 ---
 title: "Ligando, desligando e resets"
-description: "Inicialização e desligamento. Reiniciar módulos do sistema"
-keywords: ["ligando", "resets", "reinício"]
-tags: ["consolas IP","UNIDEX","ux18","ux24"]
+description: "Ligando e desligando. Reiniciar módulos do sistema"
+keywords: ["# Liga/Desliga", "Resets e Reinício ## Liga/Desliga A console possui um botão de liga/desliga físico na parte traseira. Ao pressioná-lo", "a console inicia o processo de inicialização do sistema operacional e do software de áudio. O botão também pode ser usado para desligar a console de forma segura através do sistema operacional. ## Resets A console oferece diferentes níveis de reset", "dependendo da necessidade: ### Reset de Software (Reinício Suave) Pressione e segure o botão de liga/desliga por 3 segundos. Isso força o fechamento do software de áudio e reinicia o sistema operacional", "sem afetar as configurações de fábrica ou o sistema de arquivos. ### Reset de Fábrica Para restaurar todas as configurações para os valores padrão de fábrica", "incluindo configurações de rede", "perfis de usuário e configurações de áudio: 1. Desligue a console. 2. Pressione e segure o botão de liga/desliga. 3. Continue segurando o botão enquanto a console liga. 4. Solte o botão quando a luz de status começar a piscar rapidamente. 5. A console iniciará com todas as configurações de fábrica restauradas. **Atenção:** O reset de fábrica apaga todas as configurações personalizadas", "perfis de usuário e configurações de rede. Faça backup de suas configurações importantes antes de executar este procedimento. ## Reinício do Sistema Para um reinício completo do sistema (incluindo o sistema operacional e todos os serviços): 1. No menu principal", "navegue até **Sistema** > **Reiniciar**. 2. Confirme a ação quando solicitado. 3. A console reiniciará completamente", "um processo que pode levar alguns minutos. ## Solução de Problemas Se a console não responder ou apresentar comportamento anômalo: 1. **Tente um reset de software primeiro** – Isso resolve a maioria dos problemas de software sem perder configurações. 2. **Verifique a fonte de alimentação** – Certifique-se de que a console está recebendo energia adequada. 3. **Considere um reset de fábrica** – Se problemas persistentes ocorrerem", "um reset de fábrica pode resolver problemas de configuração corrompida. 4. **Contate o suporte técnico** – Se os problemas persistirem após um reset de fábrica", "pode indicar um problema de hardware. ## Dicas Importantes - **Sempre desligue corretamente** – Use o procedimento de desligamento do sistema operacional sempre que possível para evitar corrupção de dados. - **Backup regular** – Faça backup de suas configurações importantes regularmente usando a função de exportação de perfil. - **Tempo de inicialização** – A inicialização completa da console pode levar de 1 a 2 minutos", "dependendo da configuração. - **Indicadores de status** – Observe as luzes de status durante a inicialização para diagnosticar problemas (consulte o manual para os códigos de luz específicos)."]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
   target_lang: "pt"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "efeb32f71fba95da9fb2c805c27de9c68c98454cc5721c3a5376c2d428a6d749"
-
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Sequência de inicialização
 
-Ao ligar o console, o UNIDEX inicia seu sistema operacional. Uma vez completada a sequência de inicialização, é exibida a **tela principal** e são carregados:
+Ao ligar a console, o UNIDEX inicia seu sistema operacional. Uma vez concluída a sequência de inicialização, a **tela principal** é exibida e são carregados:
 
 1. O **perfil de usuário padrão.**
 2. A **última cena ativa** antes do desligamento.
 
+---
+
 ## Perfil de usuário e permissões
 
-O perfil de usuário determina o **nível de acesso às funções** dentro do console.\
-Nas configurações, é possível definir qual perfil é carregado automaticamente ao ligar a unidade.\
-De fábrica, o console inicia com o perfil **ADMIN**, que tem acesso completo.
+O perfil de usuário determina o **nível de acesso às funções** dentro da console.\
+A partir da configuração, é possível definir qual perfil é carregado automaticamente ao ligar a unidade. De fábrica, a console inicia com o perfil **ADMIN**, que tem acesso completo.
 
 ### Níveis de usuário disponíveis
 
@@ -34,48 +32,32 @@ De fábrica, o console inicia com o perfil **ADMIN**, que tem acesso completo.
 3. **ADMIN** – Acesso total (requer senha)
 
 <Info>
-  Durante a inicialização, **não é solicitada senha**, mesmo se o perfil padrão tiver proteção.\
-  Para que o UX24 inicie em modo restrito e exija senha para acessar funções avançadas, é necessário **alterar o perfil padrão** para um diferente de ADMIN.
+  Durante a inicialização, **nenhuma senha é solicitada**, mesmo que o perfil padrão tenha proteção.\
+  Para que o UX24 inicialize no modo restrito e exija senha para acessar funções avançadas, é necessário **alterar o perfil padrão** para um diferente de ADMIN.
 </Info>
 
-Para mais informações sobre configuração de usuários, ver:\
-**SETTINGS → USERS**
+Para mais informações sobre configuração de usuários, ver: `SETTINGS → USERS`
 
-## Desligamento da CPU
+---
 
-Os consoles UNIDEX possuem uma **CPU interna** que deve ser **desligada de forma segura** antes de desconectar o console completamente.
+## Ações do sistema
 
-### Procedimento de desligamento da CPU:
+As ações do sistema estão disponíveis na tela principal, acessando a opção **STATUS → "\+"**.
 
-1. Na **tela principal**, toque no ícone **"+"** localizado no setor **STATUS**.
-
+1. Na **tela principal**, toque no ícone **“\+”** localizado no setor **STATUS**.
    <img
      src="/images/ux/ux_home_status.png"
      alt="Tela Principal - STATUS"
      title="Tela Principal - STATUS"
      style={{ width:"24%" }}
    />
-2. Na janela pop-up, selecione a opção **POWER-OFF**.
-
+2. Uma janela pop-up aparece. Essas funções permitem **reiniciar separadamente diferentes estágios do sistema** e não são usadas durante a operação normal.
    <img
      src="/images/ux/ux_status_poweroff.png"
-     alt="Status, resets and power-off"
-     title="Status, resets and power-off"
+     alt="Status, resets e desligamento"
+     title="Status, resets e desligamento"
      style={{ width:"53%" }}
    />
-
-<Warning>
-  Esta função **não desliga todo o console**, apenas desliga a CPU principal do sistema.\
-  O desligamento total é realizado através da **chave mecânica** liga/desliga (no painel traseiro ou na fonte externa dependendo do modelo).
-</Warning>
-
-Após desligar a CPU, **aguarde alguns segundos** antes de desligar a unidade completamente, para permitir o encerramento correto dos processos internos.
-
-## Ações do sistema
-
-As ações do sistema estão disponíveis na tela principal, acessando a opção **STATUS → "+"**.
-
-Estas funções permitem **reiniciar separadamente diferentes estágios do sistema**, e não são utilizadas durante a operação normal.
 
 <Info>
   As ações de reinício são ferramentas técnicas de manutenção.\
@@ -94,4 +76,18 @@ Estas funções permitem **reiniciar separadamente diferentes estágios do siste
   Reinicia o computador de bordo que gerencia o **streaming** e a **interface gráfica**.
 - **FULL RESET**\
   Reinicia todos os estágios do sistema.\
-  Equivale a um desligamento completo e religamento do equipamento.
+  Equivale a um desligamento completo e ligamento do equipamento.
+- **POWER-OFF**\
+  Desliga o computador interno, que gerencia a tela sensível ao toque e os serviços de streaming.\
+  A console poderá continuar operando, inclusive comandada pelo Controle WEB.\
+  Para desligar completamente o equipamento, aguarde alguns segundos e desligue a fonte de alimentação (no painel traseiro ou na fonte externa conforme o modelo).
+
+<Warning>
+
+### Desligamento da CPU
+
+As consoles UNIDEX possuem uma **CPU interna** que deve ser **desligada de forma segura** antes de desconectar a console completamente. Esta função **não desliga toda a console**, apenas desliga a CPU principal do sistema.
+
+  - Após desligar a CPU, **espere alguns segundos** antes de desligar a unidade por completo, para permitir o encerramento correto dos processos internos.
+  - O desligamento total é realizado pela **chave mecânica** de liga/desliga (no painel traseiro ou na fonte externa, conforme o modelo).
+</Warning>

@@ -1,0 +1,89 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "baa83c632d0f69046d12d2cfb6a47497c0539bcbdeabba106cac1919eb25b4c7",
+      "translation": "A tela para gestão de usuários e cenas permite:\n\n- Alterar o usuário ativo.\n- Alterar a cena atual.\n- Utilizar funções avançadas para organizar canais.\n\nEla é acessada pressionando a opção **SCENES**, disponível nos botões contextuais quando a console mostra a **tela principal**.\n\n<img\n  src=\"/images/ux24/ux24-pantallas-escenas.jpg\"\n  alt=\"UX18 Pantalla Escenas\"\n  title=\"UX18 Pantalla Escenas\"\n  className=\"mx-auto\"\n  style={{ width:\"75%\" }}\n/>",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "8cf42c533687078e6fec57f1b4f8454b41f19a541c972afe253120be37978478",
+      "translation": "## OS USUÁRIOS\n\nNa área **USER LOGIN** (1) da tela é exibido o usuário atualmente ativo e é permitido mudar para outro usuário tocando na opção correspondente.\\\nExistem **três níveis de usuários** com diferentes permissões pré-estabelecidas. As restrições se aplicam tanto na operação a partir da tela da console quanto a partir da interface web remota.",
+      "title": "LOS USUARIOS",
+      "level": 2
+    },
+    {
+      "hash": "41bab91ea5135b58935cf2f51751912fca8a244c956d42364a043b037130e9e4",
+      "translation": "### Usuário BASIC\n\nPerfil mais restrito:\n\n- Não tem proteção por senha.\n- Sem acesso a opções de configuração avançadas (SETTINGS).\n- Pode mudar de cena, mas não salvar alterações nem criar novas cenas.\n- Pode visualizar os ajustes e o estado dos processadores, mas não modificá-los nem ligar/desligar.\n- Pode modificar temporariamente opções básicas do canal (**GANHO**, **NOME**, **PANORAMA**, **AÇÕES DO CANAL**), mas sem salvar as alterações na cena.",
+      "title": "Usuario BASIC",
+      "level": 3
+    },
+    {
+      "hash": "9c329afd24feebcd56c6d02d77158a6a040e24fdff1ab0f2c41db4cd731a9c56",
+      "translation": "### Usuário EXPERT\n\nPerfil com restrições intermediárias:\n\n- Protegido por senha (padrão: `expert`). Somente o usuário ADMIN pode alterá-la.\n- Igual ao BASIC, sem acesso à configuração avançada (**SETTINGS**).\n- Acesso total aos processos de áudio.\n- Na tela **CHANNEL** pode alterar **ganho**, **panoramização**, **nome**, **atribuição de entrada** e **modo do canal**, mas sem acesso a SETTINGS.\n- Pode salvar a cena atual, exceto se estiver protegida.\n- Pode criar novas cenas, mesmo a partir de uma protegida.",
+      "title": "Usuario EXPERT",
+      "level": 3
+    },
+    {
+      "hash": "149b67644635afbe121ab05855eafc01b4205603e11f5022b9870c837718236d",
+      "translation": "### Usuário ADMIN\n\nPerfil com acesso total:\n\n- Protegido por senha (padrão: `admin`).\n- Pode alterar todas as senhas de todos os perfis.\n- Pode criar cenas protegidas ou somente leitura, que são operacionais para BASIC e EXPERT, mas editáveis apenas por ADMIN.\n\n---\n\n<Note>\n  **USUÁRIO DE INICIALIZAÇÃO**\n\n  Ao ligar, a console inicia com um perfil de usuário predefinido (de fábrica: ADMIN) e nunca solicita senha. Para garantir a restrição de acesso desde a inicialização, altere o usuário de inicialização para BASIC ou EXPERT.\n\n  Em `SETTINGS → USERS` é possível:\n\n  - Alterar o usuário de inicialização.\n  - **Alterar as senhas** de ADMIN, EXPERT e BASIC.\n</Note>",
+      "title": "Usuario ADMIN",
+      "level": 3
+    },
+    {
+      "hash": "8d0503fb56c400443f9d937e31e6332ad19368a81b0b4c57ebdea1d8f0bab84b",
+      "translation": "## AS CENAS\n\nUma **cenas** armazena toda a configuração da console, com exceção dos ajustes de sistema (rede, streaming, usuário de inicialização, etc.). Inclui:\n\n- Configuração de entradas e saídas.\n- Atribuição de canais e buses.\n- Ganhos.\n- Ajustes de processadores de áudio.\n\nAs cenas permitem carregar rapidamente uma configuração padrão de acordo com os requisitos de cada programa; por exemplo, reatribuindo entradas, alterando a ordem dos canais ou ajustando processadores de microfone.\n\n<Warning>\n  É necessário salvar a cena após modificar qualquer parâmetro (ganho, equalizador, nome do canal, etc.) para que a alteração seja armazenada de forma definitiva.\n</Warning>",
+      "title": "LAS ESCENAS",
+      "level": 2
+    },
+    {
+      "hash": "862f102afb0282667ecd1c98e7dbbdb5c09626105aed1943659d20384528d83e",
+      "translation": "### Cenas disponíveis\n\nA lista (ver 2 na imagem) mostra 12 cenas de usuário.\n\n- Navegue girando o encoder e confirme pressionando-o.\n- A cena ativa é destacada em **ciano**.\n- A cena selecionada (mas não confirmada) é destacada em **laranja**.",
+      "title": "Escenas disponibles",
+      "level": 3
+    },
+    {
+      "hash": "0aa9b9ee8323fc43b33f31a2c20b6a81db3a8c85cf762e07cb0b8095ae22e35f",
+      "translation": "### Cenas protegidas (Lock)\n\n- Somente o perfil **ADMIN** pode criá-las.\n- São identificadas com um ícone de cadeado.\n- Os usuários BASIC e EXPERT podem carregá-las, mas não podem modificá-las nem excluí-las.",
+      "title": "Escenas protegidas (Lock)",
+      "level": 3
+    },
+    {
+      "hash": "646ff2addf50ea0023271aa197694cc976cdc2a8471ceed13f1c19c512225066",
+      "translation": "### Gerenciador de Cenas\n\nApresenta dois grupos de opções: para a **cena selecionada** e para a **cena ativa**.\n\n**LOAD**: Carrega a cena selecionada. Pode ser feito a partir da tela sensível ao toque, botão contextual ou encoder.\n\n- Requer confirmação (é cancelada após 8 segundos se não confirmada).\n- Todos os perfis podem carregar qualquer cena.\n- Se houver canais no ar, estes permanecem ativos mesmo que mudem de posição, mantendo sua atribuição de buses.\n- Se o novo canal atribuído tiver outro nível de fader, o nível digital anterior é mantido e indicado piscando no OLED.\n- **O áudio é cortado se a entrada previamente no ar não estiver atribuída** a um canal na nova cena.\n- Não é possível mudar de cena com uma linha telefônica no ar ou em espera.\n\n**RENAME**: Altera o nome da cena selecionada.\n\n- Desabilitado para BASIC.\n\n**COPY CURRENT**: Copia a cena ativa sobre a selecionada.\n\n- Requer confirmação.\n- Desabilitado para BASIC.\n\n**SET TO DEFAULT**: Restaura a cena ativa para a configuração de fábrica.\n\n- Desabilitado para BASIC.\n\n**SAVE**: Salva a configuração atual de:\n\n- Atribuição de entradas aos 24 canais.\n- Atribuição de sinais às saídas.\n- Configuração específica de entradas e saídas (phantom, modos MIX-MINUS, etc.).\n- Ganhos de entradas e saídas.\n- Rótulos e ações dos canais.\n- Ajustes dos processadores de áudio.\n- Estado das atribuições, incluindo VBUS.\n\n<Warning>\n  A cena **não salva** o estado dos botões **ON-AIR** nem **CUE**.\n</Warning>",
+      "title": "Scene Manager",
+      "level": 3
+    },
+    {
+      "hash": "2c583077bc7d5c954368302d40fce3dc48fa510ce413cb9aff87f75d460b4fa0",
+      "translation": "### Cenas de fábrica\n\nQualquer uma das 12 cenas pode ser restaurada para uma configuração padrão. Além disso, o UNIDEX sai de fábrica com cenas projetadas com diferentes configurações e expansões UDX, pensadas para servir de base ou exemplo para a criação de novas configurações.\n\n<Note>\n  Baixar[ infográfico sobre a configuração da cena padrão](https://solidynepro.com/descargas/productos/UX24_Quickguide_Default_scenes_routing.pdf) (PDF)\n</Note>",
+      "title": "Escenas de fábrica",
+      "level": 3
+    },
+    {
+      "hash": "6b4a555a00c5352d73eb8067d2e4902d21bf33dc7cb449093746f2037d0b8acc",
+      "translation": "### Exportar e importar cenas\n\nAs cenas podem ser exportadas e importadas a partir da **interface de controle WEB**. \\\nA partir da opção de gerenciamento de cenas do controle web, é possível exportar cada cena como um arquivo em disco. E importá-las posteriormente em qualquer uma das 12 posições disponíveis.",
+      "title": "Exportar e importar escenas",
+      "level": 3
+    },
+    {
+      "hash": "b6197b74556592f4bb5b1a3334dc84d27f95cfd765ed176f212eefe4d3dba004",
+      "translation": "## Channel Map (Mapa de Canais)\n\nA função **CHANNEL MAP** exibe a configuração de todos os canais e permite reordená-los facilmente.\\\nExistem dois modos de operação: **SWAP 2 CH** (trocar dois canais) e **ORDER CH** (reorganizar canais).",
+      "title": "Channel Map (Mapa de Canales)",
+      "level": 2
+    },
+    {
+      "hash": "3fc301586d27ccb334daf263c97410592945dd4b4321b10856565cb10f4fc50c",
+      "translation": "### SWAP 2 CH (Trocar dois canais)\n\nPermite trocar a posição de dois canais.\n\n<img\n  src=\"/images/ux24/ux24-chmap.png\"\n  alt=\"UX18 Channel Map\"\n  title=\"UX18 Channel Map\"\n  style={{ width:\"65%\" }}\n/>\n\n**Procedimento:**\n\n1. Pressionar **SWAP 2 CH** para habilitar a opção.\n2. Selecionar na lista os dois canais que se deseja trocar.\n3. Pressionar **APPLY** para executar a troca.\n4. Pressionar **SAVE** para salvar as alterações na cena atual.\n\n---",
+      "title": "SWAP 2 CH (Intercambiar dos canales)",
+      "level": 3
+    },
+    {
+      "hash": "5f3236cc3297fdb77393b7d3c85fe99ef47964cf915d020b70eecdb473ca4e6e",
+      "translation": "## ORDER CH (Reorganizar canais)\n\nPermite atribuir novas posições a um ou mais canais.\n\n<img\n  src=\"/images/ux24/ux24-OrderCH.png\"\n  alt=\"UX18 Order CH\"\n  title=\"UX18 Order CH\"\n  style={{ width:\"65%\" }}\n/>\n\n**Procedimento:**\n\n1. Pressionar **ORDER CH**.\\\n   Um menu suspenso aparecerá à direita do número do canal, permitindo atribuir uma nova posição.\n2. Tocar o menu na tela e escolher a nova posição para o canal.\\\n   Vários canais podem ser reposicionados simultaneamente.\n\n<Warning>\n  Se uma posição já ocupada for atribuída a um canal, as informações do canal de destino serão sobrescritas ao aplicar as alterações.\n</Warning>\n\n3. Pressionar **APPLY** para confirmar.\n   - **APPLY** aplica as alterações temporariamente (ainda não são salvas).\n   - Se a cena for abandonada sem salvar, as alterações serão perdidas.\n4. Pressionar **SAVE** para que as alterações se tornem definitivas na cena.\n5. Para cancelar, desativar **ORDER CH** tocando novamente na opção ou pressionar o botão contextual **BACK**.",
+      "title": "ORDER CH (Reorganizar canales)",
+      "level": 2
+    }
+  ]
+}

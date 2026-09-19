@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "785dab2168c143045a91c7b692e957353e24a1acdabc06ecae5f328f73de4f46",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx'\n\n<tierras />\n",
+      "title": "Whole file",
+      "level": 0
+    }
+  ]
+}

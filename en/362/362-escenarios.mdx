@@ -1,35 +1,32 @@
 ---
-title: "Working Scenarios"
-description: "Application Cases"
+title: "Work Scenarios"
+description: "Application Scenarios"
 keywords: ["MPX", "streaming", "remote access", "retransmission", "HD mode", "AGC", "multiband compression"]
+tags: ["procesadores", "362", "Audimax 362"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "7f4679cc9ee68b428b8432cda0122c1cdb20735b8052675ea36759c341d0b956"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-## Stereo Processor and Encoder for FM
+## FM Stereo Processor and Coder
 
-This is the standard use as an **FM audio processor**.\
-The unit is located at the **transmitter site** and connects via **MPX output** to the main transmitter.
+This is the typical use as an **FM audio processor**.\
+The unit is located at the **transmitter site** and is connected, via the **MPX output**, to the main transmitter.
 
 - The **secondary MPX output** allows connection to a backup transmitter.
 - The program signal enters through the **analog inputs**.
 
 <Warning>
-  Always use the appropriate input (**balanced or unbalanced**) according to your console.
+  Always use the appropriate input (**balanced or unbalanced**) according to the on-air console.
 </Warning>
 
-When the transmitter site is remote from the studio, the processor is installed at the site and receives the program audio (PGM) through a point-to-point link, which can be:
+When the transmitter site is remote from the studio, the processor is installed at the transmitter site and receives the program audio (PGM) via a point-to-point link, which can be:
 
-- RF audio link.
+- RF audio.
 - Digital audio via fiber optic or UHF.
-
----
 
 ### USB Output for External Streaming
 
@@ -37,49 +34,49 @@ Requires the **Audimax 362HD/USB** model.\
 The **USB connection operates independently from MPX**, allowing the same on-air processing to be used for Internet streaming.
 
 - The processor receives the program signal through analog inputs.
-- Sends processed audio to both **USB digital output** and **MPX outputs**.
-- A computer receives the audio via USB for streaming.
+- Sends the processed audio to both the **digital USB output** and **MPX outputs**.
+- A computer receives the audio via USB for streaming purposes.
 
-Therefore:
+This configuration provides:
 
 - **MPX** → FM transmitter.
 - **USB** → streaming computer.
 
 <Note>
-  It is recommended to install **remote access** software on the computer to facilitate streaming system monitoring.
+  It's recommended to install **remote access software** on the computer to facilitate monitoring of the streaming system.
 </Note>
 
 ---
 
-## FM Rebroadcast of Incoming Stream
+## Incoming Streaming Rebroadcast on FM
 
 This setup also requires the **Audimax 362HD/USB** model and an external computer.\
-It is used, for example, in **relay stations**.
+It is used, for example, in **signal repeater stations**.
 
-- An external computer receives the stream from the main station (via Internet or LAN).
-- Decodes it and sends **PCM** to the processor through USB connection.
-- The Audimax 362 processes the audio and delivers it to the **MPX outputs**, feeding the FM transmitter.
+- An external computer receives the streaming from the main station (via Internet or LAN).
+- It decodes it and sends it in **PCM** to the processor through the USB connection.
+- The Audimax 362 processes the audio and delivers it to the **MPX outputs**, which feed the FM transmitter.
 
 <Note>
-  It is recommended to install **remote access** software on the computer for streaming encoder monitoring.
+  It is recommended to install **remote access** software on the computer for monitoring the streaming encoder.
 </Note>
 
 ---
 
-## Uses as Audio Processor (HD Mode)
+## Uses as an Audio Processor (HD Mode)
 
-In **HD mode (High Definition)**, the Audimax 362HD can be used in applications requiring dynamic control or loudness enhancement **without FM transmission** (MPX disabled; see [HD Mode](/en/362/362-instalacion-audio)).
+In **HD mode (High Definition)**, the Audimax 362HD can be used in applications requiring dynamic control or loudness enhancement **without FM transmission** (MPX disabled; see [HD Mode](/es/362/362-instalacion-audio)).
 
 ### Application Examples:
 
-- Digital radio stations (HD Radio).
+- Radio stations with digital broadcasting (HD Radio).
 - High-quality streaming transmission.
-- Audio pre-processing in remote units.
+- Audio pre-processing in mobile field units.
 - Sound reinforcement in small shows or rehearsal rooms.
-- Venues, auditoriums, conferences and background music systems.
+- Venues, auditoriums, conferences, and functional music systems.
 
 In this mode:
 
-- Peak control maximizes digital range usage, with minimal safety headroom (2-3 dB) to prevent coding overshoots.
-- A **soft clipper** is coupled to the audio outputs, limiting post-multiband compressor peaks and protecting PA power stages.
-- The combination of **AGC** and **multiband compression** maintains uniform and clear sound, independent of input signal variations.
+- Peak control allows for maximum utilization of the digital range, with a minimal safety margin (2–3 dB) to avoid clipping on encoding overshoots.
+- A **soft clipper** is coupled to the audio outputs, which limits peaks after the multiband compressor and protects the PA power stages.
+- The combination of **AGC** and **multiband compression** maintains a uniform and clear sound, independent of input signal variations.

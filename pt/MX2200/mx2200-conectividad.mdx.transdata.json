@@ -1,0 +1,77 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "6d7bfabb250bd411f9e81e1610db2e63279e73bd3c98719ca98ece0dda9d7076",
+      "translation": "## Conectores no painel traseiro\n\n<img\n  src=\"/images/mx2200/mx2200-trasero.png\"\n  alt=\"Mx2200 Trasero Pn\"\n  title=\"Mx2200 Trasero Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"92%\" }}\n/>",
+      "title": "Conectores en el panel trasero",
+      "level": 2
+    },
+    {
+      "hash": "61ccd06e6a53f7620c257a9f2eff558db3141a62546e5e77c1e4de4044dd0d29",
+      "translation": "### Alimentação (1)\n\n1. **Entrada para fonte externa**: Conector tubular de 2 mm (pino +).\n   - Fonte chaveada 90/240 V → saída **12 V / 1.5 A**.\n   - Também aceita bateria externa de 12 V (respeitar a polaridade).\n2. **Bateria interna**: autonomia aprox. **4 horas** (chamada SIP por Ethernet, sem Wi-Fi ou Bluetooth).\n3. **Recarga**: é realizada com o equipamento **ligado e conectado** à fonte externa.\n   - Tempo de carga completa (bateria totalmente descarregada): **10 horas**.\n\n<Warning>\n  O uso de **fontes externas não fornecidas de fábrica** ocasionará a **perda da garantia**.\n</Warning>\n\n---",
+      "title": "Alimentación (1)",
+      "level": 3
+    },
+    {
+      "hash": "1cf7e15633250164ffaf93c0b6bb6292ef2693eaa4a43f17c8e5dfa9196a0d11",
+      "translation": "### Luz de ar (2)\n\n- Conector tubular de 2,5 mm (pino \\+).\n- Fornece **12 VDC**, suporta até **200 mA**.\n- Quando uma luz de ar é conectada:\n  - A saída de **fones de ouvido #1** passa a funcionar como saída para **monitores**.\n  - É silenciada automaticamente quando os microfones são ativados, para evitar realimentação.",
+      "title": "Luz de aire (2)",
+      "level": 3
+    },
+    {
+      "hash": "761b4647ad0067a105c7ae39f25e582677e30c42c84a42842dbf39e79f3270de",
+      "translation": "### USB Audio (3)\n\n- Conexão digital ao computador por meio de cabo USB A/B (utilizar o cabo fornecido).\n- Recomendação: não exceder **4 m** de comprimento.\n\n  <Warning>\n    Certifique-se de que o computador esteja **aterrado**.\\\n    Caso contrário, a entrada USB da console ou do computador poderá ser danificada.\n  </Warning>\n- Compatível com Windows 7 a 11, Linux Ubuntu e macOS (reconhecimento automático).\n- O sistema detecta:\n  - **Dispositivo de reprodução USB** → entrada LINE USB na console.\n  - **Dispositivo de gravação USB** → saída de áudio a partir de PGM.\n\n  <Note>\n    No Windows, pode ser gerenciado em: **Painel de Controle → Som → Áudio** → seleção de dispositivos de reprodução e gravação.\n  </Note>\n\n---",
+      "title": "USB Audio (3)",
+      "level": 3
+    },
+    {
+      "hash": "ca29094590c52e26c414d99842b40c6d458e5144c83857d1529a155054fb1741",
+      "translation": "### Micrófonos (4)\n\n- Quatro entradas balanceadas (XLR) para microfones dinâmicos.\n- **MIC 3 e MIC 4** compartilham o mesmo fader.\n- Recomendação: usar microfones da mesma marca e modelo em entradas compartilhadas.\n\n---",
+      "title": "Micrófonos (4)",
+      "level": 3
+    },
+    {
+      "hash": "10fc2cbb9f038884774d4026ad4d8e484e898657dfcde4353b5a8943906382eb",
+      "translation": "### Fones de ouvido (5)\n\n- Quatro saídas TRS 1/8” (minijack).\n- Todas entregam o mesmo nível, controlado pelo botão **CUE MONITOR**.\n- Saída #1 pode ser usada como saída de **monitores de estúdio**:\n  - É silenciada automaticamente quando uma **luz de no ar** está conectada e é ativada ao enviar microfones para PGM.\n\n---",
+      "title": "Auriculares (5)",
+      "level": 3
+    },
+    {
+      "hash": "d2da3d1c1f5aca6a5f638b409612ad00f26000182c782ec68020a608f1c38baf",
+      "translation": "### Linha telefônica fixa (6)\n\n- Conector RJ11 para conexão de linha POTS.\n- Pode ser conectado diretamente à central pública ou a uma PBX (central privada).\n- Proteção interna contra descargas com varistores.\n\n  <Warning>\n    Recomenda-se proteção adicional em áreas de tempestade.\\\n    Danos causados por raios **não são cobertos pela garantia**.\n  </Warning>\n- **Preset NULL** permite ajustar a rejeição do híbrido.\n\n  <Accordion title=\"Ajuste de rejeição (NULL)\" icon=\"gear\">\n    É realizado ao conectar a console à linha. Se a console for desconectada e reconectada posteriormente à mesma linha telefônica, não é necessário repetir o ajuste. \\\n    Mas deve ser reajustado sempre que for conectado a uma linha diferente.\n\n    <Steps>\n      <Step title=\"Preparar o sinal\">\n        Enviar conteúdo falado para PGM a partir do computador. Se não houver conteúdo falado disponível, pode-se falar ao vivo usando os microfones.\n      </Step>\n      <Step title=\"Estabelecer chamada\">\n        Realizar uma chamada usando a linha fixa (PHONE).\n      </Step>\n      <Step title=\"Silenciar o interlocutor\">\n        Pedir ao outro lado que ative **mute** ou permaneça em silêncio. \\\n        Pode-se ligar para um telefone celular próprio e silenciar o microfone.\n      </Step>\n      <Step title=\"Ouvir em CUE\">\n        Remover PGM dos fones de ouvido (botão PGM em CUE liberado).\n        Ouvir a linha em CUE.\n      </Step>\n      <Step title=\"Ajustar preset NULL\">\n        Girar o preset NULL até encontrar o ponto de **retorno mínimo**.\n      </Step>\n      <Step title=\"Finalizar\">\n        Encerrar a comunicação.\n      </Step>\n    </Steps>\n  </Accordion>\n\n---",
+      "title": "Línea telefónica terrestre (6)",
+      "level": 3
+    },
+    {
+      "hash": "4893c6ab24d28d23645f950c4654fe70c382b6eb126e64fbc40c845b8ceddfac",
+      "translation": "### Entrada de linha estéreo (7)\n\n- Conector TRS 1/4” não balanceado.\n  - É controlado pelo fader LINE quando **USB não está conectado**.\n  - Se o USB estiver ativo, LINE se torna uma entrada secundária (a partir da seção PHONE).\n\n<Warning>\n  Se a conexão for feita via Bluetooth, **LINE IN não pode ser somada** a partir da seção PHONE.\\\n  Só estará disponível a partir do fader LINE se o USB Audio não for conectado.\n</Warning>\n\n---",
+      "title": "Entrada de línea estéreo (7)",
+      "level": 3
+    },
+    {
+      "hash": "e3b3680e967f42ab065f094c78e27e359023729c11f44defaf86c94faa495ab5",
+      "translation": "### Inserção de programa (8)\n\n- Entrada **Stream-In** TRS 1/4” com contato de corte.\n- Ao ser conectada, **substitui a mixagem interna** de PGM no **streaming e USB**.\n- Permite usar processadores externos:  _PGM Out → Processador → Stream-In_.",
+      "title": "Inserción de programa (8)",
+      "level": 3
+    },
+    {
+      "hash": "12e5eb105d2c1cd9e090c498247062b3eea0e50102db8e743de6c08685a5b6b1",
+      "translation": "### Saída de programa (9)\n\n- **Stereo PGM Out** (TRS 1/4”).\n- Envia a mixagem completa: microfones, USB, linha auxiliar e linhas telefônicas.\n\n---",
+      "title": "Salida de programa (9)",
+      "level": 3
+    },
+    {
+      "hash": "e35b4df6f09d310b9af803f442726c21cbed88dca9c182ebd48a4d8ad7ce0c4a",
+      "translation": "### Ethernet (rede cabeada)  (10)\n\n- Porta RJ45 para conexão à rede local.\n- Usos:\n  - Acesso via web à configuração do CODEC.\n  - Conexão à Internet para SIP e streaming.\n  - Acesso via web às gravações.\n- Configuração de fábrica: **DHCP habilitado**.\n\n---",
+      "title": "Ethernet (red por cable)  (10)",
+      "level": 3
+    },
+    {
+      "hash": "d1ba1d206df66f8892f1c4841f931362e5baa780b5c3948e5906becb9b6c7c89",
+      "translation": "### Portas USB (Wi-Fi e Módem)  (11)\n\n- Portas USB 2.0 tipo A.\n- Permitem conectar:\n  - **Antena Wi-Fi**.\n  - **Módem 4G** (requer cabo extensor de 1 m).\n\n<Warning>\n  **Não conecte um módem USB diretamente à porta**. Pode causar **interferências audíveis**.\\\n  Use sempre um cabo extensor para separar o módem da console.\\\n  Isso também permitirá reorientar o Módem caso obtenha a indicação de sinal fraco.\n</Warning>",
+      "title": "Puertos USB (Wi-Fi y Módem)  (11)",
+      "level": 3
+    }
+  ]
+}

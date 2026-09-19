@@ -1,0 +1,47 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "a51804e198a782ec85fac7190b76ce2cfc352adb6a2e46238d96b138f5b4509a",
+      "translation": "## Input Level\n\nThe Audimax 362HD **does not have manual input level control**.\\\nAdjustment is automatic via the **AGC** system.\n\n- The rear panel features input connectors for **balanced (XLR and RJ45)** and **unbalanced (RCA)** equipment.\n- It can be connected from non-professional consoles (–10 dBV) to broadcast consoles with balanced outputs at \\+4 dBu or even \\+8/\\+12 dBu levels.\n- The **AGC eliminates level variations** inherent in operation or recorded material:\n  - If the level remains low, it compensates the signal to maintain uniform output.\n  - If the level consistently exceeds 0 VU, it attenuates to prevent overload.\n\nThis way, the program signal reaches the processing stages at a constant level, achieving uniform on-air sound with consistent processing intensity.",
+      "title": "Nivel de entrada",
+      "level": 2
+    },
+    {
+      "hash": "c91aad431703350c180436eb7ff58e71c123c2c815a926f0e0b8601fcad52c40",
+      "translation": "### Check Input Level\n\nThe AGC (see section 2 image) features a three-stage indicator:\n\n<img\n  src=\"/images/362/362-frente-niveles.png\"\n  alt=\"362 Front Panel Levels\"\n  title=\"362 Front Panel Levels\"\n  className=\"mx-auto\"\n  style={{ width:\"57%\" }}\n/>\n\n- The first LED (green) should remain lit in the presence of music or voice.\n- The second LED (yellow) should light up during peaks or remain steadily lit.\n- The third LED (red) **should never remain permanently lit**.\n\n---",
+      "title": "Verificar el nivel de entrada",
+      "level": 3
+    },
+    {
+      "hash": "95268e71bf7c3a2d32b48c0c69a8ce301b14126f937db4a78b2cdf8a37248b53",
+      "translation": "## Sound Customization\n\nThe **Audimax 362HD** has been designed for easy and intuitive operation. No specialized audio processing knowledge is required to set it up and adjust its sound.\n\nInitial setup: simply set all controls to center position... and you're done! \\\nYou'll be on-air with proper sound quality.\n\nSound customization is achieved through **seven rotary controls** on the front panel.\n\n<img\n  src=\"/images/362/362-frente-controles.png\"\n  alt=\"362 Front Panel Controls\"\n  title=\"362 Front Panel Controls\"\n  className=\"mx-auto\"\n  style={{ width:\"66%\" }}\n/>",
+      "title": "Personalización del sonido",
+      "level": 2
+    },
+    {
+      "hash": "c05783a414a96024cd03ec559ff2e2bc0918c906704252edc2240a70fb078065",
+      "translation": "### Dynamic Equalizer\n\nThe 3-band dynamic equalizer acts on the **compression thresholds** of each band.\\\nUnlike a conventional equalizer, **its effect increases with higher signal levels**.\n\n- Ensure the multiband compressor **is engaged** (\"Multiband compressor\" LEDs lit).\n- Adjust the _Dynamic Equalizer_ knobs for **low, mid, and high frequencies**:\n  - Turn left → increases compression in that band.\n  - Turn right → decreases compression, freeing the band and boosting those frequencies.\n\n<Note>\n  Maintain a balanced relationship between the three bands. Extreme differences create imbalance between lows, mids, and highs.\n</Note>\n\n- To achieve impact in low frequencies, slightly free this band compared to mids and highs.\n- Remember listeners may boost bass on their receivers; therefore, deliver clean low frequencies without over-compression.",
+      "title": "Dynamic Equalizer",
+      "level": 3
+    },
+    {
+      "hash": "3c68c3a22b5571a43fb0c208528addaf502faa9f67aaaa7dd111cedcda628ddf",
+      "translation": "### Band Energy\n\nThese controls **increase peak density in the bands**, modifying the **release times** of the compressor.\n\n- To the right → **compact and aggressive** sound (fast release).\n- To the left → **smooth and more dynamic** sound (slow release).",
+      "title": "Band Energy",
+      "level": 3
+    },
+    {
+      "hash": "d1e3130ef9b4903860711e7e42b0ef19dd2faec4df60f115a2509587a7f1fb82",
+      "translation": "### Multiband Compressor\n\nIt is the heart of the processing. The indicators show the action of the **band compressors**.\n\n<img\n  src=\"/images/362/362-frente-bandas.png\"\n  alt=\"362 Frente Bandas Pn\"\n  title=\"362 Frente Bandas Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"61%\" }}\n/>\n\nThe **Multiband** control adjusts the input gain to the compressors.\\\nIt is the control that most impacts the **sound of the radio**.\n\n- To the left → soft sound, less processed, with lower energy.\n- To the right → strong sound, with more energy, but with less dynamics and less naturalness.\n\n<Warning>\n  Excessive processing can result in a very loud but **flattened** sound (with no dynamics) and unnatural voices.\n</Warning>\n\n<Info>\n  A proper working level is achieved when the multiband compressor indicators act without reaching maximum illumination.\n</Info>\n\n- For natural and balanced voices: middle or lower position of the Multiband control.\n- For more intense processing: use **slow recovery times** (Band Energy to the left).\n\n---",
+      "title": "Compresor multibanda",
+      "level": 3
+    },
+    {
+      "hash": "ad609db43dcf33af5ab7db347dca3a73af457d8d81e3f0e6fece5fcd2570e11c",
+      "translation": "## Relationship Between Controls\n\nFor **Dynamic EQ** and **Band Energy** to function, the **multiband compressor must be active**. This means that in each band, at least the first LEDs must be lit.\\\nWithout multiband compression, the controls have no effect, as they are associated with the compression process.",
+      "title": "Relación entre controles",
+      "level": 2
+    }
+  ]
+}

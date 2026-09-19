@@ -1,41 +1,40 @@
 ---
 title: "Adaptador UDX 2TEL"
 description: "Híbrido telefônico de duas linhas (POTS)"
-keywords: ["linhas terrestres", "POTS", "híbrido", "TELCO"]
+keywords: ["linhas telefônicas fixas (POTS)", "híbrido telefônico", "TELCO"]
 tags: ["ux24", "ux18", "UNIDEX", "UDX 2TEL"]
 translation:
   source_lang: "es"
   target_lang: "pt"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "8f57140c5ac286d474bed07f9d582b3b56d92579c9365966e25c0528aea9a3a5"
-
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
+
+import tierras from '/snippets/snippet-tierras.mdx'
 
 ## Resumo
 
-A expansão **UDX 2TEL** permite conectar **duas linhas telefônicas terrestres** e seus telefones associados.
+A expansão **UDX 2TEL** permite conectar **duas linhas telefônicas fixas (POTS)** e seus telefones associados.
 
 - **UDX 2TEL-P**\
-  Inclui controles que permitem **atender a linha** e **transferi-la para o console**.\
-  Isso permite instalar a unidade e os telefones associados em locais distantes do console, como um escritório de produção.
+  Inclui controles que permitem **captar a linha** e **transferi-la para a console**.\
+  Isso possibilita instalar a unidade e os telefones associados em locais afastados da console, como uma sala de produção.
 - **UDX 2TEL**\
-  Não possui controles a bordo.\
-  Foi projetado para que as chamadas sejam sempre atendidas pelo operador a partir do console.
+  Não possui controles locais.\
+  Foi projetado para que as chamadas sejam sempre atendidas pelo operador a partir da console.
 
-Todas as funções de comunicação (discar, atender, colocar em espera, falar em PFL) são operadas **a partir do console**.\
+Todas as funções de comunicação (discar, atender, colocar em espera, dialogar em pré-escuta) são operadas **a partir da console**.\
 Cada linha telefônica funciona de forma **independente** em um canal.
-
----
 
 ## Conexão do UDX 2TEL
 
-A conexão é feita com dois cabos padrão **STP RJ45–RJ45** conectados **pino a pino** (modelos Solidyne **SOL-P50** ou **SOL-P25**).
+A conexão é realizada com dois cabos padrão **STP RJ45–RJ45** conectados **pino a pino** (modelos Solidyne **SOL-P50** ou **SOL-P25**).
 
-- **Saída "TO UNIDEX INPUT"** → Conectar a uma **entrada UNIDEX** (1 a 4)
-- **Entrada "FROM UNIDEX OUTPUT"** → Conectar a uma **saída analógica não balanceada** (5 a 8)
+- **Saída “TO UNIDEX INPUT”** → Conectar a uma **entrada UNIDEX** (1 a 4)
+- **Entrada “FROM UNIDEX OUTPUT”** → Conectar a uma **saída analógica não balanceada**
+
+O diagrama a seguir mostra a conexão do UDX 2TEL a uma console UX24.
 
 <img
   src="/images/ux24/udx2tel-conexion.svg"
@@ -46,74 +45,42 @@ A conexão é feita com dois cabos padrão **STP RJ45–RJ45** conectados **pino
 />
 
 <Tip>
-  No painel traseiro do console, as entradas **UNIDEX 1, 2, 3 e 4** estão alinhadas com as saídas não balanceadas **5, 6, 7 e 8**, para simplificar o cabeamento.
+  Para simplificar a instalação dos cabos, no painel traseiro os conectores das entradas **UNIDEX 1, 2, 3 e 4** estão alinhados com as saídas correspondentes de acordo com a atribuição padrão (saídas em modo mix-minus).
 </Tip>
 
-### Correspondência entrada/saída recomendada
+### Correspondência de entradas para saídas em modo mix-minus
 
-| Entrada UNIDEX | Saída não balanceada |
-| -------------: | -------------------- |
-| UNIDEX 1       | UNBAL 5              |
-| UNIDEX 2       | UNBAL 6              |
-| UNIDEX 3       | UNBAL 7              |
-| UNIDEX 4       | UNBAL 8              |
+| Entrada | Saídas (UX24) | Saídas (UX18) |
+| --: | :-: | :-: |
+| UNIDEX 1 | UNBAL 5 | UNBAL 1 |
+| UNIDEX 2 | UNBAL 6 | UNBAL 2 |
+| UNIDEX 3 | UNBAL 7 | UNBAL 3 |
+| UNIDEX 4 | UNBAL 8 | UNBAL 4 |
 
-## Conexão às linhas telefônicas
+## Configurações
 
-As linhas telefônicas e seus aparelhos associados são conectados com cabos padrão **RJ11**.
-
-- Duas entradas para **linhas telefônicas**
-- Duas entradas para conectar os **telefones associados**
-
-Os telefones funcionam normalmente sempre que as linhas **não estiverem em uso pelo console**.
-
-<Warning>
-  Se ao atender a linha telefônica **não houver tom de discagem**, verifique no adaptador **UDX TEL** se as conexões **LINHA** e **TELEFONE** não estão invertidas.
-</Warning>
-
-### Tipo de conexão
-
-- As linhas podem ser conectadas diretamente à **central telefônica pública** ou ao **PABX** da rádio.
-- As centrais privadas (**PABX**) reduzem levemente a rejeição do híbrido, por isso recomenda-se conectar o console diretamente à **central pública**.
-- Podem ser usados adaptadores **ATA GSM** (telular) que funcionam com um chip GSM e permitem conexão a um aparelho telefônico fixo convencional.
-
-### Proteção e filtragem
-
-Os adaptadores **UDX TEL** incluem:
-
-- Filtros internos de rejeição de **RF** (bandas AM, VHF e UHF)
-- Proteção interna contra descargas de alta tensão (centelhas ou raios indiretos) através de varistores de óxido metálico.
-
-<Danger>
-  As linhas telefônicas contam com proteção interna contra descargas de alta tensão (centelhas ou raios não diretos) através de **varistores de óxido metálico**. No entanto, é **imprescindível** instalar **protetores gasosos externos** nas linhas de centrais públicas, conectados a um **aterramento com haste enterrada a 2 m**.
-
-  Em caso de danos provocados por raios, **a garantia do equipamento não cobre os reparos**.\
-  Consulte o **Diagrama Geral de Conexões de Aterramento** para sua correta instalação.
-</Danger>
-
-Uma vez conectado o adaptador **UDX 2TEL** (ou **TEL\+BT**), configure:
+Uma vez conectado o adaptador **UDX 2TEL**, configure:
 
 - **Entradas**
 - **Saídas (envios)**
 - **Canais**
 
-## Configurar entradas
+### Configurar entradas
 
 <Note>
-  A distribuição e forma dos controles mostrados a seguir podem variar. Isso não altera o procedimento de configuração.
+  A distribuição e forma dos controles mostrados abaixo podem variar. Isso não altera o procedimento de configuração.
 </Note>
 
-1. Na tela principal, acessar a opção **SETTINGS**.
-2. **Girar o encoder** até selecionar o **canal "L"** da entrada UNIDEX à qual foi conectado o UDX 2TEL. "L" corresponde à LINHA A do UDX 2MIC enquanto "R" é a LINHA B.
-3. Tocando na tela, configurar **INPUT MODE** em **MONO**.
-4. Na opção **UDX TYPE** escolher **2TEL**
-5. Tocando na tela, abrir o menu **ASSIGNED TO CHANNEL** para atribuir um CANAL à entrada. Se for escolhido um canal que já tem uma entrada atribuída, aparecerá um aviso. Se continuar, a entrada nesse canal será substituída.
-
+1. Na tela principal, acessar a opção `SETTINGS`.
+2. **Girar o encoder** até selecionar o **canal "L"** da entrada UNIDEX à qual o UDX 2TEL foi conectado. "L" corresponde à LINHA A do UDX 2MIC, enquanto "R" é a LINHA B.
+3. Tocando na tela, configurar `INPUT MODE` como `MONO`.
+4. Na opção `UDX TYPE`, escolher `2TEL`.
+5. Tocando na tela, abrir o menu `ASSIGNED TO CHANNEL` para atribuir um CANAL à entrada. Se escolher um canal que já tem uma entrada atribuída, aparecerá um aviso. Se continuar, a entrada nesse canal será substituída.
    <Warning>
      Recomenda-se atribuir as linhas TELCO a canais físicos.
    </Warning>
-6. Na seção **PROCESS** pode-se predefinir uma equalização e/ou gate de ruído.
-7. Pressionar BACK para voltar à tela principal.
+6. Na seção `PROCESS`, é possível pré-definir uma equalização e/ou gate de ruído.
+7. Pressionar `BACK` para voltar à tela principal.
 8. O próximo passo será configurar a saída.
 
 <img
@@ -124,21 +91,17 @@ Uma vez conectado o adaptador **UDX 2TEL** (ou **TEL\+BT**), configure:
   style={{ width:"60%" }}
 />
 
-## Configurar saídas
+### Configurar saídas
 
-1. Na tela principal, acessar a opção **SETTINGS**.
-2. Em SETTINGS escolher a opção **OUTPUTS**.
-3. Girando o encoder selecionar canal "L" da saída à qual foi conectado o UDX 2TEL.
-
-   OUT-L = UDX 2TEL Linha A
-
-   OUT-R = UDX 2TEL Linha B
-4. Na opção **AUDIO MODE**, definir a saída como **MONO**.
-5. Configurar **SEND MODE** em **MIX-MINUS**. Ao ativar MIX-MINUS a saída ficará associada à entrada UNIDEX correspondente.
+1. Na tela principal, acessar a opção `SETTINGS`.
+2. Em `SETTINGS`, selecionar a opção `OUTPUTS`.
+3. Girando o encoder, selecionar o canal “L” da saída à qual o UDX 2TEL foi conectado. OUT-L = UDX 2TEL Linha A OUT-R = UDX 2TEL Linha B
+4. Na opção `AUDIO MODE`, definir a saída como **MONO**.
+5. Configurar `SEND MODE` como `MIX-MINUS`. Ao ativar o MIX-MINUS, a saída será associada à entrada UNIDEX correspondente.
 6. Repetir a operação para a Linha B.
 
 <Tip>
-  O **nível de envio** à linha (OUT GAIN) e o **ganho de entrada** podem ser ajustados **durante a operação** a partir da tela TELCO.
+  O **nível de envio** para a linha (OUT GAIN) e o **ganho de entrada** podem ser ajustados **durante a operação** na tela TELCO.
 </Tip>
 
 <img
@@ -149,20 +112,52 @@ Uma vez conectado o adaptador **UDX 2TEL** (ou **TEL\+BT**), configure:
   style={{ width:"64%" }}
 />
 
-## Configuração do canal
+### Configuração do canal
 
-1. Na tela principal, pressionar **CHANNEL**. Os botões CUE mudam para modo SELECT.
-2. Pressionar o botão **CUE/SELECT** no canal a configurar. O console sai do modo SELECT e mostra a tela CHANNEL do canal selecionado.
-3. Na opção **MODE**, abrir o menu e escolher **TELCO**.
-4. Para editar a **etiqueta**, tocar sobre o nome. Aparecerá um teclado na tela para inserir o texto.
-5. Verificar se a atribuição de saída indica a saída correspondente à entrada utilizada, e se o modo é MIX-MINUS.
-6. Pressionar BACK para voltar à tela principal.
+1. Na tela principal, pressionar `CHANNEL`. Os botões `CUE` mudam para o modo `SELECT`.
+2. Pressionar o botão `CUE/SELECT` no canal a ser configurado. A console sai do modo `SELECT` e exibe a tela `CHANNEL` do canal selecionado.
+3. Na opção `MODE`, abrir o menu e selecionar `TELCO`.
+4. Para editar o **rótulo**, tocar sobre o nome. Será exibido um teclado na tela para inserir o texto.
+5. Verificar se a atribuição de saída indica a saída correspondente à entrada utilizada e se o modo está como MIX-MINUS.
+6. Pressionar `BACK` para retornar à tela principal.
 
 <Warning>
-  PARA ARMAZENAR DEFINITIVAMENTE OS AJUSTES, **SALVE A CENA**.
+  PARA ARMAZENAR DE MANEIRA DEFINITIVA OS AJUSTES, **SALVE A CENA**.
 </Warning>
 
-## Ajuste da rejeição (Null)
+## Conexão a linhas telefônicas
+
+As linhas telefônicas e seus aparelhos associados são conectados com cabos padrão **RJ11**.
+
+- Duas entradas para **linhas telefônicas**
+- Duas entradas para conectar os **telefones associados**
+
+Os telefones funcionam de forma normal desde que as linhas **não estejam ocupadas pela console**.
+
+<Warning>
+  Se ao ocupar a linha telefônica **não houver tom de discagem**, verifique no adaptador **UDX TEL** se as conexões **LINEA** e **TELÉFONO** não estão invertidas.
+</Warning>
+
+### Tipo de conexão
+
+- As linhas podem ser conectadas diretamente à **central telefônica pública** ou ao **PBX** da rádio.
+- As centrais privadas (**PBX**) reduzem levemente a rejeição do híbrido, por isso recomenda-se conectar a console diretamente à **central pública**.
+- Podem ser usados adaptadores **ATA GSM** (celular) que funcionam com um chip GSM e permitem conectá-lo a um aparelho telefônico fixo convencional.
+
+### Proteção e filtragem
+
+Os adaptadores **UDX TEL** incluem:
+
+- Filtros internos de rejeição de **RF** (bandas AM, VHF e UHF)
+- Proteção interna contra descargas de alta tensão (centelhas ou raios indiretos) mediante varistores de óxido metálico.
+
+<Warning>
+  As linhas telefônicas contam com proteção interna contra descargas de alta tensão mediante **varistores de óxido metálico**. Porém, é **imprescindível** instalar **protetores externos** nas linhas de centrais públicas, conectados a um **aterramento com haste enterrada a 2 m**.
+</Warning>
+
+<tierras />
+
+## Ajuste do rejeição (Null)
 
 É fundamental ajustar o **fator de rejeição** ou _null_ para cada linha telefônica.
 
@@ -174,20 +169,18 @@ Este ajuste se aplica às caixas:
 
 - **UDX 2TEL**
 - **UDX 2TEL-P**
-- **TEL\+BT** (apenas para a linha terrestre)
+- **TEL\+BT** (apenas para a linha telefônica fixa (POTS))
 
 ### Procedimento de ajuste
 
-1. Pressionar botão **TELCO** para acessar tela de operação de Telecomunicações.
-2. Estabelecer uma chamada (pode ser sainte ou entrante). Do outro lado da linha deverá silenciar o microfone do telefone.
-3. Na seção **CONFIG** da tela TELCO pressionar ENTER **Null Adjust**. O console injeta um tom de ajuste na linha telefônica. O nível com que retorna é visualizado em INPUT LEVEL.
-
-   Não é necessário que a linha esteja no ar (o fader pode estar fechado).
+1. Pressionar o botão **TELCO** para acessar a tela de operação de Telecomunicações.
+2. Estabelecer uma chamada (pode ser de saída ou entrada). Do outro lado da linha, o microfone do telefone deve ser silenciado.
+3. Na seção `CONFIG` da tela `TELCO`, pressionar `ENTER Null Adjust`. A console injeta um tom de ajuste na linha telefônica. O nível com que retorna é visualizado em `INPUT LEVEL`. Não é necessário que a linha esteja no ar (o fader pode estar fechado).
 4. A rejeição é ajustada a partir da caixa UDX 2TEL. Cada linha tem um preset de ajuste.
-5. Usando uma chave de fenda pequena, girar suavemente o preset em um sentido e outro até encontrar o ponto em que o retorno do sinal mostrado no indicador seja mínimo.
-6. Uma vez ajustada a rejeição, encerre a comunicação.
+5. Usando uma chave de fenda, girar suavemente o preset em um sentido e outro até encontrar o ponto em que o retorno do sinal mostrado no indicador seja mínimo.
+6. Uma vez ajustada a rejeição, encerrar a comunicação.
 7. Repetir o ajuste de rejeição para a outra linha.
 
 <Note>
-  Se mudar de linha telefônica, deverá repetir o ajuste.
+  Se a linha telefônica for alterada, o ajuste deverá ser repetido.
 </Note>

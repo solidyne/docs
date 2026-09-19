@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "c18388625f1b0cdda08c02479f9155d0ac1a73b76451836c0434dfe811e51b6b",
+      "translation": "The **UDX external adapters** allow expanding the capabilities of UNIDEX consoles to handle various types of signals and devices.\n\nThey connect simply using RJ45-RJ45 cables. Each UDX adapter requires connection to a UNIDEX input. Some UDX models also use console outputs.\n\nAll UNIDEX adapter functions **are controlled from the console**.\n\nAvailable modules are:\n\n<CardGroup cols={2}>\n  <Card title=\"UDX 2MIC and DMIC\" icon=\"puzzle\" color=\"#ff6000\" href=\"./UDX-2MIC\">\n    - Microphone preamplifiers: single and dual input with 48V phantom power\n  </Card>\n  <Card title=\"UDX 2TEL\" icon=\"puzzle\" color=\"#ff6000\" href=\"./UDX-2TEL\">\n    - Two conventional telephone hybrid (POTS) lines\n  </Card>\n  <Card title=\"UDX TEL+BT\" icon=\"puzzle\" color=\"#ff6000\" href=\"./udx-tel-bt\">\n    - Two-line hybrid, one land line (POTS) and Bluetooth link to pair a mobile phone\n  </Card>\n  <Card title=\"UDX USB\" icon=\"puzzle\" color=\"#ff6000\" href=\"./udx-usb\">\n    - USB to AES-3 converter. Stereo I/O to connect additional computers to UNIDEX.\n  </Card>\n</CardGroup>",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "45412c8599a5a59e1ca1f13a3c2b0d5675fca66e4700bcd5ef2a62a7bc804c17",
+      "translation": "## UDX Boxes Installation\n\n**RJ45** connections are highly reliable, but require certain conditions to ensure proper installation.\n\n- It is essential that the boxes and cables are securely fastened, preventing any movement in the connector.\n- Cables must be installed in **conduits** or **cable channels**, ensuring they are not loose or subjected to mechanical stress.\n- The boxes should be firmly mounted to the wall or under tables.\\\n  They feature **two notches** that allow them to be secured with screws and easily removed if needed.\n\n  <Note>\n    Download [drilling template](https://solidynepro.com/manuales/udx-drilling-template.pdf) for anchor screws.\n  </Note>",
+      "title": "Montaje de las cajas UDX",
+      "level": 2
+    }
+  ]
+}

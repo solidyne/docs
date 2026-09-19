@@ -1,24 +1,22 @@
 ---
 title: "Firmware Update"
-description: "Console firmware update procedure"
-keywords: ["firmware"]
-tags: ["IP consoles", "UNIDEX"]
+description: "Procedure for updating firmware on the console"
+keywords: ["firmware", "update"]
+tags: ["consolas IP", "UNIDEX", "UX24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "db72c4ef0eb2d8c799c9b45436903c10110395a2ee9d747cc14bed8258f3ad38"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 import discovery from '/snippets/discovery.mdx';
 
 ### Software Update
 
-UX24 models **manufactured since 2023** can be updated via the web interface from a computer with Internet access.\
-For earlier models without this feature, please contact: [**info@solidyne.ar**](mailto:info@solidyne.ar).
+UX24 models **manufactured from 2023 onwards** allow software updates by accessing the web interface from a computer with Internet access.\
+For earlier models that do not include this feature, please write to: [**info@solidyne.ar**](mailto:info@solidyne.ar).
 
 **Components that can be updated:**
 
@@ -28,9 +26,9 @@ For earlier models without this feature, please contact: [**info@solidyne.ar**](
 
 #### Update Procedure
 
-1. Connect the console's **Ethernet Streaming Out** and **Remote Control** ports to the local network.
+1. Connect the **Ethernet Streaming Out** and **Remote Control** ports of the console to the local network.
 2. Ensure the network has **Internet access**.
-3. On the console's main screen, check the IP address assigned to **STREAMING IP**.
+3. On the console's main screen, verify the IP address assigned to **STREAMING IP**.
 
 <img
   src="/images/ux24/unidex_streaming_ip.jpg"
@@ -43,7 +41,7 @@ For earlier models without this feature, please contact: [**info@solidyne.ar**](
 
  4. In the browser, enter the IP address followed by `/update`.\
     Example: `192.168.0.88/update`
- 5. Press **Enter** to open the updates screen.
+ 5. Press **Enter** to open the update screen.
 
     <img
       src="/images/ux24/ux24-update-firmware.png"
@@ -52,9 +50,9 @@ For earlier models without this feature, please contact: [**info@solidyne.ar**](
       style={{ width:"61%" }}
     />
  6. Click **CHECK FOR UPDATES**.
- 7. If no updates are available, the system will inform you that it is up to date.
+ 7. If there are no updates, the system will report that it is up to date.
  8. If updates are available, a list with details will be displayed.
- 9. Updates are **not installed automatically**.
+ 9. Updates **are not installed automatically**.
 10. To install an update, press **INSTALL**.
 
     <Warning>

@@ -1,0 +1,77 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "8d1bf3ce6b025bae9cbfb324cb679bfb9d2624ca306d6d6f91f4ecbca07d9023",
+      "translation": "## Operational Areas\n\nAudio sources (microphones, computer, and phone lines) enter the console through the input channels, which amplify them.\\\nThe console mixes all signals to generate a single main signal called **Program (PGM)**.\n\nThe level of each source is controlled using the main faders. The final mix is sent to the studios via one or more transmission channels.\n\nDifferent areas can be distinguished on the console:\n\n<img\n  src=\"/images/mx2200/mx2200-panel_secciones.png\"\n  alt=\"Mx2200 Panel Secciones Pn\"\n  title=\"Mx2200 Panel Secciones Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"72%\" }}\n/>\n\n1.  **INTERCOM**: controls for speaking to phone lines and headphones.\n2.  **TELECOMMUNICATIONS**: controls for managing the land line (POTS) and a mobile phone paired via Bluetooth.\n3.  **DISPLAY AND ROTARY CONTROL**: allow management of Internet connection options (streaming and SIP) and recording.\n4.  **DTMF KEYPAD**: used to enter characters in text fields and dial (DTMF) on land line (POTS) calls.\n5.  **FADERS**: allow mixing signals from microphones and lines (USB or analog) to generate the PGM. It is recommended to keep the level around **0 VU (-10 dBFS)**.\n6.  **CONNECTION DISTRIBUTION**: guides for easily locating the main connectors on the rear panel.\n\n---",
+      "title": "Areas operativas",
+      "level": 2
+    },
+    {
+      "hash": "14822a392394cdce15efe71980c33ebf3ccbaf1f023b50205784f22c965e4251",
+      "translation": "## Power Supply\n\nThe unit has an internal battery that allows operation for up to **4 hours** (see specifications).\\\nThe level is indicated on the screen, and it is recommended to connect the charger when it drops to **10%**.\\\nThe full charging time, if the battery is discharged, is **10 hours**.\n\n<Warning>\n  Recharging the battery requires the unit to be **ON** and connected to the external power supply.\n</Warning>\n\n- The included charger supplies **12 VDC / 2 A** and works on **110/240V 50/60 Hz** mains.\n- The console can be used while connected to the charger even with the battery at 100%.\n- If the external power is disconnected while the unit is on, the system automatically switches to battery mode.\n\n---",
+      "title": "Fuente de alimentación",
+      "level": 2
+    },
+    {
+      "hash": "09974ca36c86bd7062d9b35fc1d8fb5e1f021d7128410fddb4835cdbf6e12c3e",
+      "translation": "## Power On / Off\n\nThe power on/off button is located on the rear panel.\n\n- When powered on, a startup screen appears for 15 seconds, followed by the main screen.\n- To power off, press the button again: the system shuts down after 5 seconds.\n- It is recommended to wait a few seconds before turning the unit on again.\n\n---",
+      "title": "Encendido / apagado",
+      "level": 2
+    },
+    {
+      "hash": "6ba121cedd2eb7381659f04caa06da75997e0e277a467d0288e2e2ea57298ac8",
+      "translation": "## Screen and Rotary Control\n\nNavigation is performed using the rotary encoder:\n\n- **Rotate**: navigate between screens or options within a screen.\n- **Short press**:\n  - on a screen: enter its items\n  - on an item: edit it\n  - on a value: confirm change\n- **Long press (1 s)**: cancel option or change\n\nThe **DATA ENTRY** keypad allows entering alphanumeric characters:\n\n- Pressing a key repeatedly cycles through its associated characters.\n- Rotating the encoder moves the edit position.\n- Confirmation: short press. Cancellation: long press.",
+      "title": "Pantalla y control rotativo",
+      "level": 2
+    },
+    {
+      "hash": "6a4fbdea26e6c588fe7fa1fbee399ae0fc66f059fa698c0f0c60e2a7eaf21403",
+      "translation": "### Main Screens (Quick View)\n\n1. **HOME SCREEN**\n\n   <img\n     src=\"/images/mx2200/mx2200_display_home.jpg\"\n     alt=\"Mx2200 Display Home Jp\"\n     style={{ width:\"45%\" }}\n   />\n   - PGM (L/R) level indicators in dBFS. The mark at **0 VU (-10 dBFS)** is brighter. Avoid having the signal permanently exceed this level.\n   - Reception (Rx) level indicator for SIP calls.\n   - Network status (4G/Ethernet/Wi-Fi).\n   - Status of SIP, RTP, and streaming connections (active, off, or error).\n   - Battery level (plug in at 10%).\n   - Quick access to the **SIP Contacts** directory by pressing the encoder.\n2. **CONNECTION CENTER**\n\n   <img\n     src=\"/images/mx2200/mx2200_display_connection_center.png\"\n     alt=\"Mx2200 Display Connection Center Pn\"\n     title=\"Mx2200 Display Connection Center Pn\"\n     style={{ width:\"45%\" }}\n   />\n   - Shows the three connection modes and their current status.\n   - Allows establishing or terminating each connection.\n3. **SETUP**\n\n   <img\n     src=\"/images/mx2200/mx2200_display_SETUP-1.bmp\"\n     alt=\"Mx2200 Display SETUP 1 Bm\"\n     title=\"Mx2200 Display SETUP 1 Bm\"\n     style={{ width:\"45%\" }}\n   />\n   - Shows active IP addresses.\n   - From here, access all configuration options:\n      1. Wi-Fi\n      2. Ethernet\n      3. 4G Modem\n      4. RTP Stream\n      5. HTTP Stream (webcasting)\n      6. SIP Account\n      7. SIP Directory\n      8. Battery Info\n      9. Time Zone (for recordings)\n     10. Firmware Version\n\n   Configuration can also be performed remotely via a web browser.\n4. **RECORDING**\n\n   <img\n     src=\"/images/mx2200/mx2200_display_recording.bmp\"\n     alt=\"Mx2200 Display Recording Bm\"\n     title=\"Mx2200 Display Recording Bm\"\n     style={{ width:\"46%\" }}\n   />\n   - Displays and edits recording parameters for internal memory.\n\n---",
+      "title": "Pantallas principales (vista rápida)",
+      "level": 3
+    },
+    {
+      "hash": "f4f1340b7a555805603b04611095cabbba2a0a0bf1e38070c8acdbccca5610fc",
+      "translation": "## Channels",
+      "title": "Canales",
+      "level": 2
+    },
+    {
+      "hash": "352b45078071d5b33734e409ec5b5da37567a72bbca3511eacde54bc24f2367d",
+      "translation": "### Microphones\n\n- The MX2200 handles **3 microphone channels** and supports a fourth shared with the MIC 3 fader.\n- Gains are **automatic**, adjusting based on the fader position. This optimizes the signal-to-noise ratio and prevents preamp overload.\n- The **MASTER MIC** button enables the microphones, sends them to PGM, activates the **On-Air Light**, and mutes headphone #1 (when an On-Air Light is connected).\n- Microphones are **not** sent to CUE; they are only heard in headphones when they are in the program.",
+      "title": "Micrófonos",
+      "level": 3
+    },
+    {
+      "hash": "7fd4957bd3037022a1349545336211e10d2d965ce2efdc1e1cd9f9a2570bfa34",
+      "translation": "#### Microphone Compressor\n\n- The dynamic compressor activates when exceeding the threshold of **-10 dBFS (0 VU)**.\n- High ratio, attenuating up to **20 dB**.\n- **MIC COMP** indicator with 3 states:\n  - Green: reaches threshold (-10 dBFS)\n  - Red: maximum attenuation, close to clipping (-5 dBFS)\n  - Clipping: indicated with a 3-second hold\n\nWhen using two microphones on the shared channel (MIC 3+4), the signal should be kept in the yellow zone and occasionally red.\n\n<Info>\n  **About stereo mixes**\\\n  Although the MX2200 transmits in stereo, the microphone channels generate a **mono mix**.\\\n  For stereo captures (e.g., ambient sound), an auxiliary console connected to the line input is required, typically using condenser microphones with phantom power.\n</Info>\n\n---",
+      "title": "Compresor de micrófonos",
+      "level": 4
+    },
+    {
+      "hash": "633d65b6ef48f7a302858299cc44a3f4c9ec62612f45745948de1b414e223f58",
+      "translation": "### USB and analog line\n\n- The **USB/LINE IN** fader controls the USB audio if a computer is connected.\n- If there is no USB, it takes the signal from the stereo analog input **LINE IN**.\n- With USB connected, the LINE IN can be used via the telephone line control (**PHONE**) when the hybrid is not in use.\n- To send to program: raise the fader. Optimal level when peaks reach **0 VU**.\n- To listen in CUE: press the **CUE** button above the fader.\n\n<Note>\n  **USB Audio**\\\n  When connecting the USB port to a computer, the operating system installs a **USB recording device** that receives the PGM mix.\n</Note>\n\n---",
+      "title": "USB y línea analógica",
+      "level": 3
+    },
+    {
+      "hash": "ba54457b61f0861412c99f92516a0ea33b0ba039de1bde5a2d27d9f87c5bce4d",
+      "translation": "## Monitoring\n\n- The **CUE MONITOR** control adjusts the level on all four headphone outputs.\n- Any signal in CUE is sent to all outputs.\n- The **PGM** button allows muting the program signal in the headphones to listen only to what is present in CUE.\n\n<img\n  src=\"/images/mx2200/mx2200-monitoreo-auriculares.png\"\n  alt=\"Mx2200 Headphone Monitoring Pn\"\n  title=\"Mx2200 Headphone Monitoring Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"32%\" }}\n/>\n\nIf individual volume control is needed, use headphones with their own control or an external distribution amplifier (recommended).",
+      "title": "Monitoreo",
+      "level": 2
+    },
+    {
+      "hash": "342ed5e5d0e7e804a85d3fa98d373a7a2845e436c1f99d1258df4e37df5e1fc3",
+      "translation": "### Speaker/Monitor Output\n\n- With an on-air light connected, headphone output #1 functions as a speaker output.\n- This output is muted when microphones are activated to prevent feedback.\n- Audio remains active on headphones #2, #3, and #4.",
+      "title": "Salida para parlantes monitores",
+      "level": 3
+    },
+    {
+      "hash": "244cd024d329cec7995b39cc4e3e9fca328f0518828e7b461605d8aaea2ffff9",
+      "translation": "### Talk to CUE\n\nPressing the **TALK** button in the CUE MONITOR area:\n\n- Interrupts the signal in the headphones.\n- Sends the voice from the built-in microphone.\n- Allows the operator to communicate with the team in headphones without shouting, gesturing, or removing them.",
+      "title": "Talk to CUE",
+      "level": 3
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "edf7a59d5544d8f745c461126f34cbad0b0a8116ce95bf4a3e89724eeb4d7328",
+      "translation": "![HL240 Pn](/images/hl240/HL240.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "12ab30cd8e19b93d5807ca5294c026a739f51155e31128006ddd288ee13f9bae",
+      "translation": "## Key Features HL240-VQ",
+      "title": "Funcionalidades destacadas HL240-VQ",
+      "level": 2
+    },
+    {
+      "hash": "82db8eed726250650685c836484a28056650d89c8b7eed4a5bef10f4b6fdb19c",
+      "translation": "### Connectivity\n\n- **Land lines (POTS)**: 2 analog hybrids with adjustable rejection.\n- **Bluetooth 4.0**: two independent channels with HSP/HFP/A2DP profiles.\n- **VoIP compatibility**: via ATA adapters or VoIP phones with Bluetooth.\n- **Solidyne console interface**: direct hybrid send/return connection (2300, 2600, DX816/822, D612 series).",
+      "title": "Conectividad",
+      "level": 3
+    },
+    {
+      "hash": "35c072182a37ba9024d7b155b273f8d44dd67cc717f4202ec91fec97c08251db",
+      "translation": "### Inputs and Outputs\n\n- **AUDIO IN input (Send to Lines)**: unbalanced, for mix-minus feed from the console.\n- **AUDIO OUT output (Mix)**: balanced XLR, delivers the total line mix.\n- **Direct outputs PH-1 and BLT-1**: unbalanced, pre-fader, with fixed level.\n- **Headphone output**: direct monitoring of the main mix.",
+      "title": "Entradas y salidas",
+      "level": 3
+    },
+    {
+      "hash": "7479564a365eabb0444ad7fb9fb779a1ea6adff88946562c61444f7e09b04e31",
+      "translation": "### Audio Processing\n\n- **VQR (Voice Quality Restoration)**: bass reconstruction up to 50 Hz and treble up to 12 kHz.\n- **NOISE Control**: noise gate to reduce background noise during conversation pauses.",
+      "title": "Procesado de audio",
+      "level": 3
+    },
+    {
+      "hash": "8277dcdb628664e2f7118a926190e70b18b5ab127d8931652125663a9ce94cdd",
+      "translation": "### Operation\n\n- **Illuminated buttons**: line status and ring cadence.\n- **Integrated talkback**: allows private conversation with the caller.\n- **Priority system**: attenuates line audio by 10 dB when local voice is detected.\n- **Conference**: internal mixing of up to 4 lines (2 POTS + 2 Bluetooth).",
+      "title": "Operación",
+      "level": 3
+    },
+    {
+      "hash": "61678a7b5342f96188893466dd92593a400ec9fe902788fe68fd885280a68eaa",
+      "translation": "### Performance\n\n- **Frequency response**: 50 Hz – 12 kHz with VQR // 300 Hz – 3.4 kHz without VQR.\n- **Signal-to-noise ratio**: 70 dBA with VQR.\n- **THD**: < 0.2 %.\n- **Hybrid rejection**: > 40 dB (measured with 2 km artificial line).",
+      "title": "Rendimiento",
+      "level": 3
+    },
+    {
+      "hash": "9e0cf07eb47c4f1b0c3965abb991766e187ed4ad9c2bfef2f1388ddbb8bc4796",
+      "translation": "### Construction and Power Supply\n\n- **19\" rack-mount format**: 1U height. Includes rubber feet for desktop use.\n- **Internal stabilized power supply**: Switchable 110/220 V, 20 W power consumption.\n- **Surge protection**: Metal oxide varistors rated for up to 2,000 V.",
+      "title": "Construcción y alimentación",
+      "level": 3
+    }
+  ]
+}

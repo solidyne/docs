@@ -1,0 +1,53 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "37118c5c849b4de8e5af56fdce093a98d44edc073ff338e69320a9de425074e4",
+      "translation": "## Auxiliary Playlists\n\nIt is possible to work with prearranged title lists (**Playlists**).\\\nAUDICOM features 4 auxiliary players called **PlayList Managers**, accessible via the **PLAYLIST 1** to **PLAYLIST 4** buttons in the toolbar.\n\n<img\n  src=\"/images/audicom/au-playlistmanager.jpg\"\n  alt=\"Au Playlistmanager Jp\"\n  title=\"Au Playlistmanager Jp\"\n  className=\"mr-auto\"\n  style={{ width:\"35%\" }}\n/>",
+      "title": "Listas de reproducción auxiliares",
+      "level": 2
+    },
+    {
+      "hash": "b6a25608cb1994b7a97a28ece79428e41bdb5ec2103fe05bdb9e95561568f0ad",
+      "translation": "## Creating and Loading Playlists\n\n- You can drag titles from any AUDICOM window to a PlayList Manager.\n- The playlist is saved as a `.txt` file in the `\\Audicom\\PGM` folder.\n- PlayList Manager supports playlists in **.m3u** and **.plt** formats, editable with **CyberPlay Editor** (option: _Playlists_).",
+      "title": "Creación y carga de listas",
+      "level": 2
+    },
+    {
+      "hash": "47ef71bc1642f9e60a4394a7afa3c6acb1e8e15020fd13b4ffb7bb6d2d7bf1f5",
+      "translation": "### How to create a playlist\n\n1. Open a PlayList module (or use `[Alt + P]` for PlayList 1).\n2. Drag titles from **Media Manager**, **InfoMusic**, **Live Assist** or **CyberPlay**.\n3. Enter a name and press **Save**.\n\nPlaylists are saved in `.txt` format in `\\Audicom\\PGM`.",
+      "title": "Cómo crear una lista",
+      "level": 3
+    },
+    {
+      "hash": "01db2753a4253f844e2ceba06b8658618c5a62946bf28b5dec1af9b16b887e74",
+      "translation": "### How to load an existing playlist\n\n- Select it from the dropdown menu at the bottom.\n- To add external playlists, copy them directly to the `\\Audicom\\PGM` folder.\n\n<Info>\n  Titles appear in different colors based on their last broadcast date:\n\n  - Music (Class = Music in the database): light blue background.\n  - Promotional spots: yellow background.\n</Info>\n\nPlayList Manager supports CyberPlay scheduling commands:\n\n- Text comments.\n- Pauses.\n- Meteor instructions.\\\n  These are inserted from the right-click menu.\n\n---",
+      "title": "Cómo cargar una lista existente",
+      "level": 3
+    },
+    {
+      "hash": "c03c6f3e58de992aee3a97d6087fe3d45e015739522bf7aa4f0cc2c4e5a81ee2",
+      "translation": "## Preview Monitoring\n\n- Double-click on a title or **CUE** button → playback on preview monitor channel.\n- **StopCUE** button → stops playback.\n- If **CUE** mode is activated from the display (double-click to the left of the counter):\n  - Audio is not reported in RDS/iRDS.\n  - It is also not recorded in `.air` files.\n\n<Warning>\n  This mode is not recommended in practice, but some operators use it to work directly with the console's CUE, treating each PlayList Manager as an independent player.\n</Warning>\n\n---",
+      "title": "Escucha previa",
+      "level": 2
+    },
+    {
+      "hash": "809e4ca4548efd49f48d548b5fb46f988cc99c1def859b79311b130292827485",
+      "translation": "## Content Broadcasting\n\nEach PlayList Manager can be assigned to a different audio device, defined in the **Configuration Panel**, to route it to various channels on the audio console.\n\n- To send a title on-air: select it and press **Play**.\n- Normal mode: playback stops when finished.\n- Continuous mode: plays all titles sequentially.\n  - Pauses can be inserted via the right-click menu.",
+      "title": "Emisión del contenido",
+      "level": 2
+    },
+    {
+      "hash": "ffe55079b003f526b369332a4300bfeba4467491f862137a003936bdb4387555",
+      "translation": "### Playback Controls\n\n- Progress bar: allows navigation within the file (left click).\n- Slider: adjusts playback speed (**Pitch**) ±5%.\n- **Insert** button: inserts the entire playlist into CyberPlay, above the yellow cursor.\n  - Titles are distributed while respecting commercial breaks.\n- Individual insertion: drag a title to the CyberPlay window.\n\n<Note>\n  - If no item is selected in CyberPlay, the playlist will not be inserted.\n  - The comments window will display: _Define the insertion point_.\n</Note>\n\n---",
+      "title": "Controles de reproducción",
+      "level": 3
+    },
+    {
+      "hash": "7a747176f6a464e4dd5785d17be04d9ec74afc5856716fa58538d8966478a515",
+      "translation": "## Duration Constraints\n\n<Danger>\n  If a PlayList exceeds the duration of the program block, **only the titles that fit until the block ends will be inserted**.\\\n  It does not extend into the next program.\n</Danger>\n\nExample:\n\n- Insert a 1-hour PlayList at 5:30 PM in a live block that ends at 6:00 PM.\n- Only titles up to 6:00 PM will be inserted.",
+      "title": "Restricciones de duración",
+      "level": 2
+    }
+  ]
+}

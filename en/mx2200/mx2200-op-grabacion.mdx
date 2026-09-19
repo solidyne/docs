@@ -1,23 +1,21 @@
 ---
 title: "Recording"
 description: "Internal recording."
-keywords: ["recording","MP3","backup"]
-tags: ["portable consoles","CODEC","MX2200"]
+keywords: ["recording", "MP3", "backup"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "9547c447909630a46c72980aea88ddcbbbad23506fcbee510d6a5766814f3b34"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Recording Screen
 
-The **MX2200** console allows you to make a **backup recording of the event** in stereo **MP3 format (16 bits / 48 kHz)**, widely supported by audio players and editors.
+The **MX2200** console allows for a **safety recording of the event** in **MP3 (16-bit / 48 kHz)** stereo format, widely supported by audio players and editors.
 
-The RECORDING screen is accessed by rotating the encoder from the HOME screen. It allows you to **start/stop** recording and configure its parameters.
+The RECORDING screen is accessed by turning the encoder on the HOME screen. It allows you to **start/stop** the recording and configure its parameters.
 
 <img
   src="/images/mx2200/mx2200_display_recording.bmp"
@@ -27,22 +25,22 @@ The RECORDING screen is accessed by rotating the encoder from the HOME screen. I
   style={{ width:"49%" }}
 />
 
-Navigation is similar to other screens: pressing the knob accesses internal navigation and, within each option, a click allows changing its value or state.
+Navigation is similar to other screens: pressing the knob accesses internal navigation, and within each option, a click allows you to change its value or state.
 
 - **STATUS**\
-  Allows you to **enable or stop** recording.\
-  When stopped, the file is automatically generated with the content recorded up to that moment.
+  Allows you to **enable or stop** the recording.\
+  When stopped, the file with the recorded content up to that point is automatically generated.
 - **MAX TIME**\
   Defines the maximum recording time.
   - Prevents the operator from having to stop it manually.
-  - Recording stops automatically when reaching the defined time.
-  - Editing: value is entered using the console's numeric keypad (maximum **240 minutes / 4 hours**).
-  - It's possible to **increase the time limit while recording is in progress**, without interrupting it.
+  - The recording is automatically cut off when the defined time is reached.
+  - Editing: the value is entered using the console's numeric keypad (maximum **240 minutes / 4 hours**).
+  - It is possible to **increase the time limit while the recording is in progress**, without interrupting it.
 - **BIT RATE**\
-  Defines audio quality.
+  Defines the audio quality.
   - Range: **64 to 320 kbps**.
-  - The higher the value, the better quality and larger file size.
-  - At **192 kbps** approximately **100 hours** can be stored inside the console.
+  - The higher the value, the better the quality and the larger the file size.
+  - At **192 kbps**, approximately **100 hours** can be stored within the console.
 
 <Info>
   When recording is enabled, the main screen indicates the recording status and shows the **remaining available time**.
@@ -50,9 +48,9 @@ Navigation is similar to other screens: pressing the knob accesses internal navi
 
 ---
 
-## Managing Recordings
+## Recording Management
 
-Management (monitoring, playback, renaming, downloading and cleanup) is done **remotely** from a networked computer.
+Management (monitoring, playback, renaming, downloading, and cleanup) is performed **remotely** from a networked computer.
 
 To access: enter the equipment's IP address followed by **/recording** in a browser (Firefox, Chrome, Safari, Edge, etc.).
 
@@ -60,14 +58,14 @@ Example: `192.168.0.118/recording`
 
 <Steps>
   <Step title="Connect the console">
-    Connect the console to the local network using the **Ethernet** port (recommended) or **Wi-Fi** antenna.
+    Connect the console to the local network using the **Ethernet** port (recommended) or the **Wi-Fi** antenna.
   </Step>
-  <Step title="Open browser">
-    On a computer on the same network, open a browser and enter the MX2200's **IP address** with the `/recording` subpath.
+  <Step title="Open the browser">
+    On a computer on the same network, open a browser and enter the MX2200's **IP address** with the subpath `/recording`.
   </Step>
-  <Step title="Get IP address">
-    To find the assigned IP, rotate the **CONTROL (encoder)** knob and access the **SETUP** screen.\
-    The first three items show the connection status and IP address for **Ethernet**, **Wi-Fi** and **4G Modem**.
+  <Step title="Get the IP address">
+    To find the assigned IP, turn the **CONTROL (encoder)** knob and access the **SETUP** screen.\
+    The first three items show the connection status and IP address for **Ethernet**, **Wi-Fi**, and **4G Modem**.
   </Step>
 </Steps>
 
@@ -83,11 +81,11 @@ Example: `192.168.0.118/recording`
   className="mx-auto"
 />
 
-- Each recording is saved with the name: `[Equipment name] + [Date and time]`
-- The **HTML5** interface includes a player to **forward, rewind and pause**.
-- The list can be sorted by **name, date or size**.
+- Each \_recording \_is saved with the name: `[Unit Name] + [Date and Time]`
+- The **HTML5** interface includes a player for **fast-forward, rewind, and pause**.
+- The list can be sorted by **name, date, or size**.
 
   <Note>
     The displayed date corresponds to the **local time of the client computer**, not the console.
   </Note>
-- Audio can be **downloaded** and will be saved to the browser's default downloads folder.
+- The audio can be **downloaded** and will be saved to the browser's default download folder.

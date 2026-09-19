@@ -1,68 +1,66 @@
 ---
 title: "File Manager"
 description: "File Manager. Description."
-keywords: ["File Manager","Media Manager","media management"]
-tags: "Software,Audicom"
+keywords: ["File Manager", "description"]
+tags: ["Software", "Audicom"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "8420902a66324cb54bbb2f0683ad7be228e63dd18d4df38a8150e6e7bffba34a"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Introduction
 
 <Note>
-  The **File Manager** module was discontinued since **AUDICOM 14 (Audicom Black)** and replaced by **Media Manager**.\
-  Although it remains included in the distribution to avoid an abrupt change, we recommend migrating to **Media Manager**, as File Manager will be removed in future versions.
+  The **File Manager** module was discontinued starting with **AUDICOM 14 (Audicom Black)** and replaced by **Media Manager**.\
+  Although it is still included in the distribution to avoid a sudden change, we recommend migrating to **Media Manager**, as File Manager will be removed in future versions.
 </Note>
 
-It can be accessed from the **"+ tools"** menu in the top bar of the main desktop.\
-The module is organized in tabs that show the available audio files on each terminal (local or network drives).
+It is accessed from the **“+ tools”** menu in the top bar of the main desktop.\
+The module is organized into tabs that display the audio files available on each terminal (local or network drives).
 
 **Features:**
 
 - Uses a **fixed folder structure** (external folders will be ignored).
 - Files are classified by type (Music, Spots, Commercials, Effects, etc.).
-- Titles can be:
-  - played on air,
-  - inserted into the program schedule,
-  - or loaded into Live Assist instant access buttons.
+- Titles can:
+  - be played on-air,
+  - be inserted into the programming schedule,
+  - or loaded into the Live Assist instant access button panels.
 
 <Note>
-  Each terminal only displays the folders declared on that terminal (**audioDrives**).\
+  On each terminal, only the folders declared on that terminal (**audioDrives**) are displayed.\
   Additionally, the Administrator can restrict each user's access to specific folders from **Access Levels**.
 </Note>
 
 ---
 
-## General Description
+## Overview
 
-The main window shows the files in the selected folder with the following fields:\
+The main window displays the files in the selected folder with the following fields:\
 **Artist – Title – Duration – Format – Location**.
 
-- To view other folders: click on the upper tabs.
+- To view other folders: click on the top tabs (Tabs).
 - If there are more than 18 folders: use the scroll buttons `<-- -->`.
 - Window size and position are configurable.
 - Column order can be changed by clicking on the header.
-- **Quick letter search** is also possible:
-  - Example: Pressing "A" positions the cursor on the first file beginning with "A" in the active column.
+- You can also perform **quick search by letter**:
+  - Example: If you press "A", the cursor positions itself on the first file starting with "A" in the active column.
 
 ---
 
-## Title Colors (last air time)
+## Title Colors (Last On-air Play)
 
-Music files registered in the database appear in different colors according to time since last broadcast:
+Music files registered in the database appear in different colors based on the time since their last broadcast:
 
-- **Red**: \< 4 hours
-- **Orange**: 4-12 hours
-- **Green**: 12-24 hours
-- **Black**: \> 24 hours
+- **Red**: < 4 hours
+- **Orange**: 4–12 hours
+- **Green**: 12–24 hours
+- **Black**: > 24 hours
 
-Time ranges are configured in the **Configuration Panel**.
+The time thresholds are configured in the **Settings Panel**.
 
 ---
 
@@ -70,26 +68,24 @@ Time ranges are configured in the **Configuration Panel**.
 
 Each folder can be assigned a color for easier identification.
 
-- Filters allow showing only folders of a specific color.
-- Colors are unique and valid for all network terminals.
-- They are defined when creating the folder or from the **INFO** window.
+- Filters allow displaying only folders of a specific color.
+- Colors are unique and valid across all terminals on the network.
+- Colors are defined when creating the folder or from the **INFO** window.
 
 <Tip>
-  We recommend creating a reference chart visible in the studio.\
-  Example: red = music, green = spots, yellow = effects.
+  We recommend creating a visible reference chart in the studio.\
+  Example: red = music, green = announcements, yellow = sound effects.
 </Tip>
 
----
+## Main Controls
 
-## Main Buttons
-
-### Update
+### Update (Update)
 
 `[Numeric Keypad /]`
 
-- Updates the selected folder to show new files.
-- By default, File Manager stores the listing in memory when opening a folder; changes don't appear until pressing **Update**.
-- The window shows date and time of last update.
+- Refreshes the selected folder to display new files.
+- By default, File Manager caches the listing when opening a folder; changes won't appear until pressing **Update**.
+- The window shows the date and time of the last update.
 
 ### Insert
 
@@ -103,46 +99,46 @@ Each folder can be assigned a color for easier identification.
 
 `[Delete]`
 
-- Plays the selected title in **preview**.
-- Double click = preview playback.
-- Second click or Delete = play last 5 seconds (Cue End).
-- Right click = stop preview.
+- Plays the selected title in **CUE**.
+- Double click = play in CUE.
+- Second click or Delete = play the last 5 seconds (Cue End).
+- Right click = stop CUE.
 
 <Warning>
-  If the system works with **a single sound card**, there is no monitoring channel.\
-  In this case, double clicking plays the file directly **on air**.
+  If the system works with **a single sound card**, there is no monitor channel.\
+  In that case, double click plays the file directly **on-air**.
 </Warning>
 
 ### Play
 
-- Plays the selected title through the **Program** output (same as CyberPlay).
-- If CyberPlay is already playing, the file mixes on air.
-- Includes VU meters, time counter and position bar.
+- Plays the selected track through the **Program** output (same as CyberPlay).
+- If CyberPlay is already playing, the file mixes into the on-air signal.
+- Includes VU meters, time counter, and position bar.
 
 ### Stop / Pause
 
-- **Once**: stops and pauses (can resume).
-- **Double click**: stops completely and moves to next file.
+- **Single click**: stops and pauses (can be resumed).
+- **Double click**: stops completely and moves to the next file.
 
 ### Audio Edit
 
 - Accessed from context menu or expanded window.
-- Opens the file in the associated editor according to extension (.wav, .mp3, .txt).
+- Opens the file in the associated editor based on extension (.wav, .mp3, .txt).
 - By default, .wav files open in **FX5**.
-- If another editor is installed, Windows may automatically assign it.
+- If another editor is installed, Windows may assign it automatically.
 
 ### Syncro
 
-Allows **folder synchronization** between two locations (left/right).
+Allows **synchronizing folders** between two locations (left/right).
 
 Options:
 
 - **Sync left**: copies from right → left.
 - **Sync right**: copies from left → right.
-- **Both**: both folders end up with identical content.
+- **Both**: both folders end with identical content.
 
 ---
 
 <Info>
-  Although File Manager remains functional, we recommend gradually migrating to **Media Manager**, which replaces all these functions with a more modern and scalable design.
+  While File Manager remains functional, we recommend gradually migrating to **Media Manager**, which replaces all these functions with a more modern and scalable design.
 </Info>

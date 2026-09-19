@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ee691222e178a3ff047ab81e4f803e0cdbb758206c5dfd125f018b36508854e9",
+      "translation": "The diagram exemplifies an operational scenario that allows visualizing all the possibilities of the **MX2200**.\n\n![Mx2200 Flujo Jp](/images/mx2200/mx2200-flujo.jpg)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "5d542c13328c48547f158fc01afc61be0e224311cf633f543abfd9b60a6f79f7",
+      "translation": "## Program Mix\n\n- **4 dynamic microphones** (two share the MIC 3+4 fader).\n- **1 mobile phone**:\n  - Can be used with a Bluetooth microphone.\n  - Can be paired via Bluetooth to a second **Solidyne MX2100** console to handle multiple microphones and headphones.\n- **Notebook via USB**: plays audio directly into the console, allowing all content to be generated from the remote location.",
+      "title": "Mezcla de programa",
+      "level": 2
+    },
+    {
+      "hash": "f0252400ab1341aae35d44dd869a0a6203f69514c3108f0c420a1952b516a74a",
+      "translation": "## On-Air Transmission to the Studios\n\nThe **MX2200** obtains internet access via:\n\n- Connection to a Wi-Fi network\n- Connection to a wired LAN\n- 4G modem\n\n**Link to the studio:**\n\n- The connection is established via full-duplex **SIP calls** with no audible delay.\n- Call setup is immediate: the console dials and the studio answers (or vice versa).\n- A server on the internet (**Cloud Service**) initially connects both ends (1 and 2). Once established, the connection transforms into a **private tunnel (Internet Tunneling)** between the console and the studio (3).\n- In parallel to the SIP call, the **MX2200's CODEC** can transmit:\n  - An RTP stream to an IP address\n  - Another stream to a web server (Icecast/Shoutcast), with differentiated qualities\n- As a backup, the following can be used:\n  - A **land line (POTS)**\n  - The **Bluetooth mobile phone** (if it is not being used for program contribution)",
+      "title": "Emisión hacia los estudios",
+      "level": 2
+    },
+    {
+      "hash": "6e3d33aca740eb3242bb7bd7869c304db815ec84ca63128db1d5f9d9d27ae9b9",
+      "translation": "## Reception in the studio\n\nThe SIP call is received using a computer with third-party software for VoIP account management. There are free options, such as [Linphone](https://www.linphone.org/).",
+      "title": "Recepción en el estudio",
+      "level": 2
+    },
+    {
+      "hash": "8e64895034977b8970a782c59dc08f3299bc85764ea5c82c88eef994cc955595",
+      "translation": "## Recording\n\nThe **MX2200** can record over **100 hours** of program material in **MP3 @192 kbps** format to its internal memory.\\\nRecording can be activated simultaneously with broadcasting.",
+      "title": "Grabación",
+      "level": 2
+    }
+  ]
+}

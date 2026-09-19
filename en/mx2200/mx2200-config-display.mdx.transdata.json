@@ -1,0 +1,89 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "8b47ff8cffed696fa12cb7adf6ebb6aaaee5c8cafd2e5757f0b8506a4116df80",
+      "translation": "## The SETUP Screen\n\nThe **SETUP** screen is one of the four main screens.\\\nIt is accessed by turning the **encoder** and allows you to configure all network and broadcast options.\n\n- The initial view shows the status of **Wi-Fi, Ethernet, and Modem**.\n- For each connection, it indicates whether there is an **assigned IP** or if it is **inactive**.\n- For Wi-Fi, the **network name** you are connected to is also displayed.\n\nPressing the encoder reveals all configuration options.\n\n---",
+      "title": "La pantalla SETUP",
+      "level": 2
+    },
+    {
+      "hash": "b4b784a93d3e24098593d7ab75d6ab182c5d89431fa7c4f7de50f2233d4c27ca",
+      "translation": "### SETUP → Wi-Fi\n\n- Lists available **2.4G and 5.8G** wireless networks, sorted by signal strength.\n- Signal level is expressed in **dB millivolts** (values closer to 0 = stronger signal).\n- The **Wi-Fi interface MAC** appears in the top right corner.\n\n<Note>\n  Some providers require reporting the interface **MAC** to authorize the connection.\n</Note>\n\n---",
+      "title": "SETUP → Wi-Fi",
+      "level": 3
+    },
+    {
+      "hash": "7b69dfcc0271bb1fd82fcfd0950ddcd26fe17e7f26e3137a74fe3cbfc8428412",
+      "translation": "### SETUP → Ethernet\n\n<img\n  src=\"/images/mx2200/mx2200-display-setup-ethernet.png\"\n  alt=\"Mx2200 Display Setup Ethernet Pn\"\n  title=\"Mx2200 Display Setup Ethernet Pn\"\n  style={{ width:\"45%\" }}\n/>\n\n- Configures wired network parameters.\n- From the factory, it comes with **DHCP enabled**, so it receives an IP address automatically.\n- To use a **static IP**, DHCP must be disabled and the following must be assigned manually:\n  - IP Address\n  - Subnet Mask\n  - Gateway\n  - DNS Servers\n- Displays the **MAC** address as informational data (not editable).\n\n<Warning>\n  Manual configuration must be performed by **qualified technical personnel**.\n</Warning>\n\n---",
+      "title": "SETUP → Ethernet",
+      "level": 3
+    },
+    {
+      "hash": "8b2bef72ff87c90eaf7963c8f1d825aea524c3d9e5f562eee1813b784dc89d25",
+      "translation": "### SETUP → Modem\n\n<img\n  src=\"/images/mx2200/mx2200-display-setup-modem.png\"\n  alt=\"Mx2200 Display Setup Modem Pn\"\n  title=\"Mx2200 Display Setup Modem Pn\"\n  style={{ width:\"45%\" }}\n/>\n\n- Compatible with **4G dongles** (plug & play).\n- Modern dongles act as Ethernet adapters and do not require configuration.\n- Older 3G dongles need **APN, username, and password** parameters (provided by the ISP).\n- If the connection is active, it shows an **IP address other than 0.0.0.0**.\n\n<Warning>\n  Always connect the modem using a **USB extension cable**.\\\n  A direct connection to the USB port can cause **audible interference**.\n</Warning>\n\n---",
+      "title": "SETUP → Módem",
+      "level": 3
+    },
+    {
+      "hash": "4fd2ea5c9c9a67c3dc0b306ba617212311e253d23108bc257732b38e3ddb0976",
+      "translation": "### SETUP → RTP Stream\n\n<img\n  src=\"/images/mx2200/mx2200-display-setup-rtp.png\"\n  alt=\"Mx2200 Display Setup Rtp Pn\"\n  title=\"Mx2200 Display Setup Rtp Pn\"\n  style={{ width:\"45%\" }}\n/>\n\n- RTP streaming configuration:\n  - Destination IP address\n  - Port\n  - Codec (MP3, Opus, PCM)\n\n<Warning>\n  These advanced settings must be configured by **qualified technical personnel**.\n</Warning>\n\n---",
+      "title": "SETUP → RTP Stream",
+      "level": 3
+    },
+    {
+      "hash": "14c55cf841041333abae3439e5a018a37e4530de7173de1ddeb1e4bb66dc8218",
+      "translation": "### SETUP → HTTP Stream\n\n<img\n  src=\"/images/mx2200/mx2200-display-setup-http.png\"\n  alt=\"Mx2200 Display Setup Http Pn\"\n  title=\"Mx2200 Display Setup Http Pn\"\n  style={{ width:\"45%\" }}\n/>\n\n- Configuration for streaming to **Icecast/Shoutcast** type web servers.\n- Enter the credentials and parameters of the contracted server.\n\n---",
+      "title": "SETUP → HTTP Stream",
+      "level": 3
+    },
+    {
+      "hash": "7ea7a2faa45dbc702703ddd2f637c8dbc95ba56d14bec8d394d2d4b57c55bf50",
+      "translation": "### SETUP → SIP Account\n\n<img\n  src=\"/images/mx2200/mx2200-display-setup-sip.png\"\n  alt=\"Mx2200 Display Setup Sip Pn\"\n  title=\"Mx2200 Display Setup Sip Pn\"\n  style={{ width:\"45%\" }}\n/>\n\n- Entry of **SIP account** data (provided by the service).\n- At least **two accounts** are required:\n  - One SIP address for the console. Example: `mx2200@sip.linphone.org`.\n  - One SIP address for the studios, which will be configured in the VoIP software used to receive (or generate) the calls. Example: `estudio@sip.linphone.org`.\n\n<Info>\n  SIP services can be free (e.g., [Linphone](https://www.linphone.org)) or paid, depending on the complexity of the implementation.\n</Info>",
+      "title": "SETUP → SIP Account",
+      "level": 3
+    },
+    {
+      "hash": "d0dadd04ce761c9324872f1ca662ae40ed2541312d52deccc70b1b2f01b1c7df",
+      "translation": "### SIP Audio Quality\n\nThe SIP account QUALITY setting allows you to set the preferred audio quality for SIP calls.\\\nAvailable options:\n\n- Mono VoIP 16 kbps\n- Mono Wideband 32 kbps\n- Mono FM 64 kbps\n- Mono HiStudio 128 kbps\n- Stereo Mid 128 kbps\n- Stereo HiStudio 256 kbps\n\n<Note>\n  The MX2200 prioritizes the **Opus** codec at the selected quality.\\\n  If the receiver does not support it, another available codec will be automatically negotiated.\n</Note>\n\n---",
+      "title": "Calidad de audio SIP",
+      "level": 3
+    },
+    {
+      "hash": "77cef5b3fa15e5e4c0a24d9a34d455a1f475315f38ba9aa6fecde8659e2b0fa2",
+      "translation": "### SETUP → SIP Contacts\n\n<img\n  src=\"/images/mx2200/mx2200-display-setup-contactos.png\"\n  alt=\"Mx2200 Display Setup Contactos Pn\"\n  title=\"Mx2200 Display Setup Contactos Pn\"\n  style={{ width:\"45%\" }}\n/>\n\n- Displays the SIP contacts directory.\n- Basic navigation from the console; full editing **only from the web interface**.\n\n<Accordion title=\"Add a contact (web interface)\" icon=\"pencil\" iconType=\"solid\">\n  1. [Access the web interface](/en/mx2200/mx2200-config-acceso).\n  2. Select the **CONTACTS** tab.\n\n     <img\n       src=\"/images/mx2200/mx2200-web_SIP_contacts.jpg\"\n       alt=\"Mx2200 Web SIP Contacts Jp\"\n       title=\"Mx2200 Web SIP Contacts Jp\"\n       style={{ width:\"54%\" }}\n     />\n  3. Enter **SIP Address** and **Friendly Name**.\n  4. Click **ADD** and then **APPLY** to send changes to the hardware.\n\n</Accordion>",
+      "title": "SETUP → SIP Contacts",
+      "level": 3
+    },
+    {
+      "hash": "f9c01ec28542754cc2fc62b088a0ac23aada4aab9dd809ffe53df66e7574fbfc",
+      "translation": "#### Edit contact\n\n  1. Select the contact from the list.\n  2. Modify the fields.\n  3. Press **UPDATE** and then **APPLY**.",
+      "title": "Editar contacto",
+      "level": 4
+    },
+    {
+      "hash": "b0fa5a7e95e1c4442a70e305f50b24432bf3d645b5946ce259340040f04850b3",
+      "translation": "#### Delete Contact\n\n  1. Select the contact.\n  2. Press **DELETE** and then **APPLY**.\n</Accordion>\n\n---",
+      "title": "Borrar contacto",
+      "level": 4
+    },
+    {
+      "hash": "90ad828fea487729e3fbacca52b0e4fbe68444303466684eadd344394e1914ad",
+      "translation": "### SETUP → Power Info\n\n<img\n  src=\"/images/mx2200/mx2200_display_setup_power.png\"\n  alt=\"Setup - Power Info\"\n  title=\"Mx2200 Display Setup Power Pn\"\n  style={{ width:\"45%\" }}\n/>\n\n- Displays the power and battery status.\n- Indicates whether the unit is using the internal battery or an external power source.\n- Example: `Battery 7,0 V` → console powered by battery.\n- The `Bat level` field indicates the remaining battery level (%).\n- A 100% charge typically provides over 3 hours of on-air operation.\n- The unit automatically shuts down when the voltage reaches **6,2 V**.\n- A **12 V power bank** can be used as an external power source.\n\n---",
+      "title": "SETUP → Power Info",
+      "level": 3
+    },
+    {
+      "hash": "45b9530d10c3c04aa72f09a99e59689af28ea102ea46f30e2030b1f43644fea2",
+      "translation": "### SETUP → Time Zone\n\n- Adjust the time zone to correctly assign date/time to recordings.\n- Typically configured only once.\n- Synchronization is performed via **public NTP servers**.\n\n---",
+      "title": "SETUP → Time Zone",
+      "level": 3
+    },
+    {
+      "hash": "72aa7c5d88a01a5b70832f043e4540b77a97e00717dd9bc2f7407f842e5622dd",
+      "translation": "### SETUP → RX Volume\n\n- Adjusts the return level sent from the station when the connection is via **SIP**.\n- This return is added to:\n  - CUE monitoring circuit (headphones).\n  - Send to **POTS** lines.\n  - Send to **Bluetooth** line.",
+      "title": "SETUP → RX Volume",
+      "level": 3
+    }
+  ]
+}

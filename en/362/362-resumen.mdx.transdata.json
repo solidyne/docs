@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "a6259928769282683a773c4c0c59471781e217250e1351555e7f046a713f8a51",
+      "translation": "![362HD Front Panel](/images/362/362HD-frentes.png)\n\nThe **Solidyne Audimax 362HD processor** integrates **7 processing stages** plus a **stereo coder** in a single chassis.\\\nIts main feature is **ease of use**, as it doesn't require a specialized technician for adjustments.\n\n- It has no manual input level adjustment. It incorporates **high-level balanced inputs** (XLR and RJ45) and **low-level unbalanced inputs (RCA)**.\n- Its **automatic gain control (AGC)** adapts the equipment's input by compensating level differences across a wide range (30 dB).\n\nThe ability to operate without pre-emphasis/de-emphasis also makes it an excellent processor for **WEBcasting** (streaming).\n\nThe processor operates in **3 bands**, fully controlled via **VCA (Voltage Controlled Amplifiers)**, simplifying its adjustment.\n\nThe **stereo coder** uses **digital synthesis with 16x oversampling**, a technology developed by Solidyne that ensures:\n\n- Ultra-low distortion.\n- High channel separation.\n- Operation free from readjustments throughout its lifespan.\n\nThe **MPX output** to the transmitter is differential type, canceling any potential residual hum in the signal.",
+      "title": "Whole file",
+      "level": 0
+    }
+  ]
+}

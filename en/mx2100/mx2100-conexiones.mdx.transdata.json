@@ -1,0 +1,71 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "507ac5f02645554d6935d0664f6e1d69285671902f52036f39050904d6f46f04",
+      "translation": "## Microphone Inputs\n\nThe MX2100 has 3 microphone inputs (MIC-1, MIC-2, and MIC-3) with **1/4\" (6.25 mm) TRS** connectors.\n\nThe preamplifiers use the *local feedback* technique, which prevents saturation in the presence of high sound pressure levels (for example, a commentator shouting a goal).",
+      "title": "Entradas de micrófono",
+      "level": 2
+    },
+    {
+      "hash": "dac300dcc518e22bdb6fd67b57107ff281737504e494a428c50f4ce321f3a69e",
+      "translation": "### Built-in Microphone\n\n- Electret microphone built into the front of the unit (MIC-4).\n- Allows going on-air even without external microphones.\n- Shares the level control with the line input and Bluetooth return.\n\n<Warning>\n  MIC-4 is disabled if the USB connection (to a computer or charger) is used or if the line input is connected.\\\n  The **MIC-4/LIN/Bluetooth** control presents different signals depending on the operating scenario (see *Console Operation*).\n</Warning>\n\n---",
+      "title": "Micrófono incorporado",
+      "level": 3
+    },
+    {
+      "hash": "5673efea4ba24e27f397cbe5e43daf8abf071e2e8afc689eb1bad96fbe4857e2",
+      "translation": "## Line Input\n\n- **LIN-4:** mono line input.\n- Accepts direct connection from headphone outputs of portable recorders, mobile phones, notebooks, tablets, etc.\n- A 1/8\" stereo miniplug cable can be used, although in the console the ring (right channel) remains unconnected.\n- Shares level control with the built-in microphone (MIC-4) and the Bluetooth return.\n\n<Warning>\n  If stereo equipment is connected, the input will use only one channel. The plug's ring (right channel) remains unconnected in the console.\n</Warning>\n\n---\n\n---",
+      "title": "Entrada de línea",
+      "level": 2
+    },
+    {
+      "hash": "45b99d2b1f96d85cf7428f24394f23d70649f371cf5e9148cf4115c7f4178b99",
+      "translation": "## Program Output (Bal Out)\n\n- Balanced, mono output with **TRS 1/8\"** connector.\n- Mix of signals: MIC-1, MIC-2, MIC-3/USB and MIC-4/LINE/Bluetooth.",
+      "title": "Salida de programa (Bal Out)",
+      "level": 2
+    },
+    {
+      "hash": "bb88da61e6f3f26609ea497ce3775c2af9e1356b5b778332fba55a10fd44297b",
+      "translation": "### Dynamic Processing\n\nThe PGM signal passes through a dynamic range compressor designed for human voice:\n\n- Controls peaks and prevents level differences.\n- Distortion‑free with no increase in background noise.\n- Compression indicated by two front‑panel LEDs.\n\nThis system allows interviews to be conducted with consistent levels, without requiring an audio operator.\n\nThe PGM output can be used to:\n\n- Connect to portable digital recorders and obtain high‑quality recordings.\n- Send signal to studios via VHF/UHF radio link in high quality (30–15,000 Hz).\n\n---",
+      "title": "Procesamiento dinámico",
+      "level": 3
+    },
+    {
+      "hash": "07570d7bd9ef4ab6481eeffb3016469a99a7c1e09ff24ac42d4343fa3a56cc60",
+      "translation": "## Headphone Outputs\n\n- Internal headphone signal distribution.\n- 3 outputs with 3.5 mm minijack connectors.\n- The mix sent to the headphones depends on the connection mode and work scenario (see _Console Operation_).",
+      "title": "Salidas de auriculares",
+      "level": 2
+    },
+    {
+      "hash": "302c5e40a0fde9d9cb903a5ddc965a125accff3ff333e239bf72aba9530ae5a2",
+      "translation": "## Audio USB\n\nThe **MX2100** console was designed to simplify connection with laptops, enabling Internet streaming transmissions.\n\n- The **USB** connection handles both **sends** and **returns** of the signal with Studios.\n- A standard **mini-USB to USB-A male** cable is used.",
+      "title": "Audio USB",
+      "level": 2
+    },
+    {
+      "hash": "75a7c940a5b339437b153edc2bec0adb4c8f5340bf26eaef610b5cc8a07e027f",
+      "translation": "### Automatic Operating System Detection\n\nWhen connecting the MX2100 to a computer running **Windows 7/8/10**, **Linux**, or **OS-X**:\n\n- The operating system detects the console and automatically installs the necessary drivers.\n- No additional drivers are required.\n\n<Info>\n  On Windows, the USB device is automatically configured as the **default device**.\n</Info>",
+      "title": "Detección automática del sistema operativo",
+      "level": 3
+    },
+    {
+      "hash": "dd179ddd8ccf9f25a53898069e3bedf91e082aa93de87d60bd71acce4e00bf75",
+      "translation": "### Detected Devices\n\nThe console is identified as:\n\n- **USB playback device (stereo out):** the computer sends audio to the MX2100.\n- **USB recording device (stereo in):** the computer receives audio from the MX2100.\n\n---",
+      "title": "Dispositivos detectados",
+      "level": 3
+    },
+    {
+      "hash": "be07fa6d6034e526ec1337886bb79c8bdc1e9584c383756c129f39b07174d53a",
+      "translation": "## USB Power Supply\n\n- Internal rechargeable Ni-Cd battery.\n- Battery life: 16 hours of continuous use thanks to CMOS technology.\n- Automatic multi-voltage external USB charger (100–240 VAC) included.\n- Connection via USB-A to mini-USB cable.",
+      "title": "Alimentación USB",
+      "level": 2
+    },
+    {
+      "hash": "b79f3dab011166f9766571bb4db6f4bf27dad0d2d6067058d55f7959ac37c137",
+      "translation": "### Charging Time and Method\n\n- Time for full charge: ~12 hours.\n- Above that value, the charging current decreases and it can be left connected without risk.\n- Red LED (CHG) indicates charging in progress.\n- The LED remains lit while the unit is connected to the charger, even when powered off.\n- It can also be recharged by connecting it via USB to a computer.",
+      "title": "Tiempo y forma de carga",
+      "level": 3
+    }
+  ]
+}

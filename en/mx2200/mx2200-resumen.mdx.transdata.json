@@ -1,0 +1,53 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "6ead9e95ac3c5a8559c3d094d83f7448e34859344f25a60ae12b58d37fa3edec",
+      "translation": "![MX2200 Pn](/images/thumbnails/MX2200.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "26dd7118170d81f11b99500bbc43e95b1baefc8b082f3a6544850e184b5447cf",
+      "translation": "## Description\n\nThe **Solidyne MX2200** codec-mixer is a compact unit for field work and remote broadcasts. It handles multiple connection technologies with simple and intuitive operation.\n\nIt can be configured from its **onboard screen** or, when connected to a network, from a computer using a web browser.\n\nIt is powered by a **12 VDC / 1.25 A** switching power supply, and its internal battery provides up to **4 hours of autonomy**.",
+      "title": "Descripción",
+      "level": 2
+    },
+    {
+      "hash": "40136093ebe0aed7daeae8b3e4cda903870a960a821ab82ba70185c6cb2ba23c",
+      "translation": "## Link and Transmission\n\n**Link Types:**\n\n1. Wired Ethernet\n2. Wi-Fi (using external antenna)\n3. 4G LTE (using USB modem)\n4. Bluetooth (to a mobile phone)\n5. Land line (POTS)\n\n**Transmission Methods:**\n\n1. VoIP via SIP calls (full duplex)\n2. Streaming to Icecast or Shoutcast servers\n3. RTP streaming\n4. Audio via mobile phone\n5. Conventional phone call",
+      "title": "Enlace y transmisión",
+      "level": 2
+    },
+    {
+      "hash": "4f6c144945eccbd17dc9ab36d0cf7e03253d43a42ee184d8752e6ddcafd2c06d",
+      "translation": "## Recording\n\nThe MX2200 can record over **100 hours** to its internal memory in **MP3** format.\\\nAutomatic time-based stop can be configured.\n\nRecorded files are accessed by connecting the console to the local network and using a computer with any web browser.",
+      "title": "Grabación",
+      "level": 2
+    },
+    {
+      "hash": "f2b71e830481b2361f021ba60d340bf24908148946157a4be35c74b328b6cb92",
+      "translation": "## Audio Inputs\n\n**Microphones**\\\nThree 100 mm faders control up to 4 dynamic microphones. \\\nFader #3 handles the **MIC 3** and **MIC 4** inputs. When using both inputs, it is advisable to use microphones of the same brand and model.\n\nLevel differences between different voices are partially compensated by an **internal compressor**, which acts on the microphone mix.\n\n**Line Inputs**\\\nThe MX2200 has two stereo inputs for line-level signals:\n\n- One analog input (TRS connector)\n- USB port for direct connection to a computer",
+      "title": "Entradas de audio",
+      "level": 2
+    },
+    {
+      "hash": "13566a637ded6a5f056d23f51658e774d68a92322dbe98d4262088b354e6ff44",
+      "translation": "## Telephone Connections\n\nThe unit handles:\n\n- One conventional phone line\n- One mobile phone paired via Bluetooth\n\nThese communications can be used **as the primary link** to the studio or as a backup for the data connection (streaming or SIP).\\\nWhen not used as a link, they can be integrated into the program mix.\n\n<Warning>\n  **Warning!** CONFERENCE between the phone line and Bluetooth **is not supported**.\\\n  It is possible to put both lines on-air, but they will not hear each other and will not be able to converse.\n</Warning>",
+      "title": "Conexiones telefónicas",
+      "level": 2
+    },
+    {
+      "hash": "35178ef93405aa24a99768b7052bfb519a10eb056263de2b08f83fb565793e71",
+      "translation": "## Monitoring and CUE\n\n- Up to **4 headphones** can be connected to the rear panel. There is a single master volume adjustment. To obtain different levels, it is recommended to use an external headphone distribution amplifier or headphones with built-in volume control.\n- An **onboard talkback microphone** allows you to speak privately to the paired mobile phone or phone line, or to send messages to the headphones.\n- The monitoring circuit (**CUE**) allows you to listen to signals before sending them to the program mix, for example to talk to the lines.\n\n**On-Air Light (Tally light)**\\\nIf an on-air light is connected, the **HEADPHONES #1** output becomes a speaker output, as it is muted when the microphones are active, preventing feedback.",
+      "title": "Monitoreo y previos",
+      "level": 2
+    },
+    {
+      "hash": "445ba0a9f469ec7cdaf051bfc7713e75be15fe7b2dee8f9790dcca54909d1be7",
+      "translation": "## Outputs\n\nThe MX2200 offers:\n\n- Stereo analog output\n- Stereo send via USB\n- An integrated CODEC that allows simultaneous generation of:\n  - A SIP communication (full duplex)\n  - Two streamings: one to an IP address via RTP and another to an Icecast/Shoutcast server\n\nThe main mix includes a **stereo insert point (analog)** for connecting an external audio processor.",
+      "title": "Salidas",
+      "level": 2
+    }
+  ]
+}

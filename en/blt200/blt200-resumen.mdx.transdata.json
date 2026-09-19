@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "a0ffd3bc8bb8bb234a123645db8a2745d0b6b5a1d75b6f999be707f384e20b41",
+      "translation": "<img\n  src=\"/images/thumbnails/BLT200.png\"\n  alt=\"BLT200 Pn\"\n  title=\"BLT200 Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"80%\" }}\n/>\n\nThe Solidyne BLT200 is a Bluetooth interface that allows pairing up to two mobile phones with an audio console.\n\nIt can be used with any type of console, from broadcast audio consoles to conventional audio consoles. Only a mix-minus send or an auxiliary mix bus is required for the connection.",
+      "title": "Whole file",
+      "level": 0
+    }
+  ]
+}

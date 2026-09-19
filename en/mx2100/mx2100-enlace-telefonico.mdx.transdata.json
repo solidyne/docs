@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ce8eab307323f881fd04c294dc16e6d5a4713b1f9b245a2eb5816603f93a1808",
+      "translation": "Communication is performed from the phone connected to the console, whether it is a land line (POTS) or a mobile phone.\nThe operation for both cases is described below.",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "d4d057b9673b01366adbd1af32a6b611c7b73b2b542210a66f53c5048a732f8b",
+      "translation": "### Mobile Phone\n\n- **Via Bluetooth:**\n  1. From the mobile phone, call the radio station.\n  2. Once the connection is established, use the microphones and headphones connected to the MX2100 to communicate with the studio.\n  3. If the radio station calls the journalist, the **ring** is heard in the headphones and the call signal on the mobile phone.\n  4. The call can be accepted from the mobile phone itself or by briefly pressing **# 9** on the console.\n- **Via hands-free cable (deprecated):**\n  1. Place the call from the mobile phone.\n  2. Once connected, press the **PHONE** button on the console.\n  3. Connect the \"hands-free\" cable (already connected to the **Cellular & Phone** input of the MX2100) to the mobile phone's connector.\n  4. From this point on, the conversation is conducted using the console's microphones and headphones.\n\n<Note>\n  To end the communication from a mobile phone, hang up and disconnect using the mobile phone's keypad (refer to the phone's manual).\n</Note>\n\n---",
+      "title": "Teléfono celular",
+      "level": 3
+    },
+    {
+      "hash": "c4088f49c9e2e2e28e15c72df58c57c370b198d9fe9343468bc9c4c99a1a0b63",
+      "translation": "### Land line (POTS)\n\n1. Press the **PHONE** button to seize the line.\n2. Dial the radio station's number using the console's DTMF keypad.\n3. Once the connection is established:\n   - Speak from the microphones connected to the MX2100.\n   - Listen to the Studios in the headphones.\n   - The program signal (console output) is sent to the radio station via the line.\n4. To end the call: press the **PHONE** button again, which will return to its outward position, terminating the call.\n5. For incoming calls from the radio station:\n   - The incoming **RING** is heard in the headphones.\n   - The call is answered directly from the console.\n\n---",
+      "title": "Línea terrestre",
+      "level": 3
+    },
+    {
+      "hash": "13a3dd37b947a83ecf6e0980aacbf0b2a71a50d0449e0ca054dcbd93a7e0ddb2",
+      "translation": "### If the communication is interrupted...\n\n- **Mobile phone:**\n  - The mobile phone itself ends the call.\n  - The MX2100 operator can wait for the radio station to call back and answer from the mobile, or press **# 9** on the console to answer.\n  - The link with the radio station is restored.\n- **Land line (POTS):**\n  - If the call is dropped, release the **ON-AIR** button to initiate or receive the new communication.\n  - In case of an incoming call from the radio station:\n    - The **RING** is heard in the headphones.\n    - Answer directly from the console by pressing **ON-AIR**.\n\n---",
+      "title": "Si la comunicación se interrumpe...",
+      "level": 3
+    },
+    {
+      "hash": "ddccf23e766017cd135a982e0ebacec6d625afa3562cbf3de637f98a1409452a",
+      "translation": "## Diagram: Bluetooth Mobile Phone Transmission\n\n<img\n  src=\"/images/mx2100/mx2100-diagrama.png\"\n  alt=\"Mx2100 Diagrama Pn\"\n  title=\"Mx2100 Diagrama Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"65%\" }}\n/>\n\n- The console transmits to the Studio using a **mobile phone paired via Bluetooth**.\n- As a transmission backup, a **land line (POTS)** can be connected.\n- The Studio return feed enters, via Bluetooth, directly into the **headphone mix**.\n- The mix of up to **three microphones** and **one line input** (which allows connecting, for example, a portable recorder) is sent on-air.\n\n<Warning>\n  Connecting the line input **disables the internal microphone (MIC-4)**.\n</Warning>",
+      "title": "Diagrama: transmisión vía celular Bluetooth",
+      "level": 2
+    }
+  ]
+}

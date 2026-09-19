@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "5af8b49949684375167e0ef8c37beeefe5113f186a969aef5b554b7a1e996584",
+      "translation": "This section describes functionalities that _only apply to the UX24 model_. Also refer to the [Unidex Series](/en/unidex/unidex-summary) for more information.\n\n![UX24 Pn](/images/thumbnails/UX24.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "a53822481287947b3c2a36a164d89364f83cdd19ed398c2c3ae4dc60a2dbb489",
+      "translation": "## Channels\n\n- The UNIDEX UX24 has 24 channels:\n  12 channels with 100 mm faders and 12 \"virtual\" channels that are operated from the touch screen or via remote web interface.\n- It can be expanded with UX6 modules to provide 18 or 24 physical faders.\n- Each channel can be assigned to any input (except the external tuner).\n- Channels are configured in three modes: **MIC**, **LINE**, or **TELCO**, which modifies their behavior and functions.\n- They can be assigned to four stereo mix buses: **PGM**, **REC**, **AUX**, and **VBUS**.",
+      "title": "Canales",
+      "level": 2
+    },
+    {
+      "hash": "8efd498e5aa9c13de56cfc02c7a2f3084926d45ecaba701bf250cfe6b37f5cd6",
+      "translation": "## Inputs\n\n- **Microphone (4 mono balanced)**\n  With 48V phantom power, 4-band parametric equalizer, dynamic compressor, noise gate, and de-esser.\n- **Line (4 stereo balanced)**\n  With 3-band parametric equalizer.\n- **UNIDEX (16 mono / 8 stereo)**\n  Balanced inputs configurable as mono or stereo.\n  Allow connection of UNIDEX adapters (microphones, telephone lines, Bluetooth interfaces, etc.).\n  Include 3-band parametric equalizer, dynamic compressor, and noise gates.\n- **USB (4 stereo digital inputs)**\n  Compatible with ASIO 3.0. The connected computer recognizes four playback devices.\n  Include 3-band parametric equalizer.\n- **AES-3 (4 stereo digital inputs)**\n  With 3-band parametric equalizer.\n- **Incoming streaming**\n  Not an independent input; when activated, it replaces AES-3 input #1.\n- **External tuner**\n  Dedicated input for transmission monitoring.",
+      "title": "Entradas",
+      "level": 2
+    },
+    {
+      "hash": "ec04c0733ce8beef4a6327ed9fbec9e6d750a83b01393a741baac68ebcc6b555",
+      "translation": "## Outputs\n\nThere are 18 stereo outputs and 4 monitoring outputs:\n\n- **Program (PGM)**\n  Dual balanced stereo analog output.\n- **4 balanced stereo (assignable)**\n- **4 unbalanced stereo (assignable)**\n  Can be configured as up to 8 mono outputs. Include **mix-minus** option for telephone and VoIP communications.\n- **USB (4 assignable stereo sends)**\n  The computer connected via USB detects these outputs as recording devices.\n- **AES-3 (4 digital outputs)**\n  Two of them can be assigned to any of the buses.\n- **Dual PCM/MP3 streaming**\n  Simultaneous transmission via RTP and Icecast/Shoutcast.",
+      "title": "Salidas",
+      "level": 2
+    },
+    {
+      "hash": "d146c9395f49174fbd1aeedca6372461f96fb163f29d892169a91905757dc320",
+      "translation": "## Monitoring and Intercom\n\n- Monitoring outputs for Studio (speakers and headphones).\n- Simplified monitoring connection for Studio with **Solidyne StudioBox** bays.\n- Monitoring outputs for Control (speakers and headphones).\n- Talkback to Studio.\n- Selectable command microphone: internal (PZM) or external.\n- 4 assignable intercom lines to audio outputs.\n- **Reverse talkback**: allows speaking from Studio to the operator's CUE (requires Studiobox HD3 or HD5).\n- CUE bus (Pre Fader Level) assignable to any output.",
+      "title": "Monitoreo e intercomunicación",
+      "level": 2
+    },
+    {
+      "hash": "451bb3f90c4456a9f95c7e265b3d6c03b12e539412d68bbf5ce9f41c567ff1db",
+      "translation": "## External Device Triggering\n\nFeatures:\n\n- **4 GPI**\n- **8 GPO** of open-collector type\n\nAllows triggering:\n\n- Solidyne Audicom automation\n- Audio processors\n- Other remotely controlled devices\n\nActivation is programmable (see corresponding section).",
+      "title": "Disparo de dispositivos externos",
+      "level": 2
+    }
+  ]
+}

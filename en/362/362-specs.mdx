@@ -1,16 +1,15 @@
 ---
-title: "Technical specifications"
+title: "Technical Specifications"
+tags: ["362", "Audimax 362"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "19374f9b5bbabd6ee119d8bec9b8a69e41d0a2fef980434b04d0a9e47545119c"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-## General specifications
+## General Specifications
 
 <Accordion title="Inputs">
   - **Balanced stereo**: XLR-3 and RJ45 connectors\
@@ -28,33 +27,33 @@ translation:
 
 <Accordion title="MPX Outputs">
   - Dual MPX output with independent level adjustment (4 Vpp, factory setting), Z = 600/10 kΩ.
-  - Differential output for canceling ground loop hum between transmitter and studio ground.
+  - Differential output to cancel hum caused by ground loops between transmitter and studio grounding.
 </Accordion>
 
-<Accordion title="Audio specifications">
+<Accordion title="Audio Specifications">
   - **Frequency response**: 20 – 16,000 Hz ±0.5 dB (measured below compression/limiting threshold).
-  - **Harmonic distortion**: < 0.02% (30 – 15,000 Hz).
+  - **Total harmonic distortion**: < 0.02% (30 – 15,000 Hz).
   - **Noise**: < –90 dBA referenced to 100% modulation.
   - **Stereo separation**: > 75 dBA.
   - **Subsonic filter**: 2nd order Chebyshev, 15 Hz.
 </Accordion>
 
 <Accordion title="Processing">
-  - **Asymmetrical cancellation**: 5:1 ratio, Kahn-Bonello method.
+  - **Asymmetric cancellation**: 5:1 ratio, Kahn-Bonello method.
   - **Expander**: 10:1 slope, 100 µs attack.
-  - **AGC (wideband)**: VCA controlled.\
+  - **AGC (wideband)**: VCA-controlled.\
     Range: 30 dB (–10 dB / +20 dB relative to nominal input level).
   - **Multiband compression**:
-    - 3 bands, 18 dB/octave, linear phase crossover.
+    - 3 bands, 18 dB/octave, linear phase divider.
     - Compressors: 30 dB range, 5:1 slope.
     - Automatic attack.
-    - Recovery: controlled by Energy knobs.
-    - Clipper with IM canceller (> 30 dB attenuation below 250 Hz).
-    - Dynamic EQ: 0 – 12 dB dynamic boost in bass, mid and treble.
+    - Recovery: controlled by _Energy_ knobs.
+    - Clipper with IM cancellation (> 30 dB attenuation below 250 Hz).
+    - Dynamic EQ: 0 – 12 dB of dynamic boost in lows, mids and highs.
 </Accordion>
 
-<Accordion title="Power supply">
-  115 V / 230 V (selector on rear panel)\
+<Accordion title="Power Supply">
+  115 V / 230 V (rear panel selector)\
   50/60 Hz, 20 W
 </Accordion>
 

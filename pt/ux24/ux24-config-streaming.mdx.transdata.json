@@ -1,0 +1,59 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "6217d91ad2e870d831ceb0446d4a4eee21b81312a04b6eeee5d54cb7bb13344b",
+      "translation": "As consoles UX24 podem gerar **dois streams de áudio independentes** e decodificar um streaming de áudio de entrada.",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "8503cb3546a549c9aa5cc5de1cf252b8a7810e402ff27ee7e3f1b0dbe3f52d85",
+      "translation": "### Tipos de streaming disponíveis\n\n- **Streaming 1 (saída)**\\\n  Utiliza o protocolo **RTP**, ideal para enlace com planta transmissora (**STL**).\n- **Streaming 2 (saída)**\\\n  Compatível com **servidores Shoutcast/Icecast** para transmissão via internet.\n- **Streaming 3 (entrada)**\\\n  Pode ser **RTP** ou um **streaming público HTTP**.\\\n  Quando esta função é habilitada, o áudio recebido é **decodificado e comutado automaticamente**, substituindo a entrada **AES-1**.",
+      "title": "Tipos de streaming disponibles",
+      "level": 3
+    },
+    {
+      "hash": "90ce0f7c363df966e5cdec414928674ca766bdb213fac77d5c7ab5c593e4aafb",
+      "translation": "### Fonte de sinal e nível de envio\n\nO streaming utiliza o sinal de **PROGRAMA** captado da saída **AES-1**, tanto para o upload em servidores **Icecast/Shoutcast** quanto para o áudio stream **RTP**.\n\nO nível de saída padrão (ganho=0) é **-20 dBfs** referenciado a **0VU** (1 kHz @ 0VU = -20 dBfs).\\\nO ganho é ajustado na tela **SETTINGS → OUTPUTS**.\n\n<Warning>\n  Se você alterar o ganho da saída **AES-1**, o nível de envio para streaming também será modificado.\n</Warning>\n\n---",
+      "title": "Fuente de señal y nivel de envío",
+      "level": 3
+    },
+    {
+      "hash": "4590c7329787bd2b3d7240f153ba890543a175781c9fd64b94d5312d4bf82e18",
+      "translation": "## Configuração dos serviços de streaming\n\nÉ feita a partir da tela **SETTINGS** na opção **STREAMING**. \\\nApresenta quatro abas para configurar os serviços de streaming de saída (UP-STREAM e RTP Link); de entrada (DOWN-STREAM) e as opções de rede.",
+      "title": "Configuración de los servicios de streaming",
+      "level": 2
+    },
+    {
+      "hash": "0386525c018c14c593c5f422be1f0cc1875260808b17dc19f56ee0cb0b464dc8",
+      "translation": "### UP-STREAM (TX)\n\nA aba **UP-STREAM** permite configurar um servidor de transmissão do tipo **Icecast** ou **Shoutcast** para publicar o sinal do programa.\n\n<img\n  src=\"/images/ux24/ux24-config-icecast.png\"\n  alt=\"UX24 Config Icecast\"\n  style={{ width:\"75%\" }}\n/>",
+      "title": "UP-STREAM (TX)",
+      "level": 3
+    },
+    {
+      "hash": "7a775cbc8f9e6e351fa72eac559dc16b098cafce26ba689c4f53e7b7f6e0abbf",
+      "translation": "### UP-STREAM Icecast/Shoutcast\n\n-   **ENABLE/DISABLED**: Habilita ou desabilita o envio do streaming quando as alterações são confirmadas ao pressionar **APPLY**.\n\n    <Tip>\n        Para otimizar os recursos do sistema, mantenha parado quando o serviço não estiver em uso.\n    </Tip>\n\n-   **PROTOCOL**: Define se o servidor é do tipo Icecast ou Shoutcast.\n-   **SERVER IP**: Endereço IP de destino do servidor.\n-   **PORT**: Porta TCP de escuta do servidor.\n-   **MOUNTPOINT**: Nome único que identifica o stream no servidor.\n-   **Stream NAME**: Nome que identifica o stream.\n-   **CODEC**: Formato de áudio de transmissão (Opus ou MP3).\n-   **QUALITY**: Taxa de bits para a codificação.\n-   **PASSWORD**: Senha de acesso para a publicação (se aplicável).\n-   **APPLY**: Aplica e salva as alterações e inicia ou para a emissão (de acordo com o estado ENABLE/DISABLED).\n\n<Note>\n    Os parâmetros de configuração para Icecast/Shoutcast são fornecidos pelo provedor do servidor.\n</Note>",
+      "title": "UP-STREAM Icecast/Shoutcast",
+      "level": 3
+    },
+    {
+      "hash": "8ab29066dc540412953ddf37c76e39e2164664dffe16457673ab6ba614021425",
+      "translation": "### RTP LINK\n\nA aba **RTP LINK** permite configurar o envio de streaming para um endereço IP específico, por exemplo, para enviar o sinal de programa para uma planta transmissora (**STL**).\n\n<Warning>\n  A implementação de um enlace RTP requer conhecimentos avançados em configuração de redes.\n</Warning>\n\n<img\n  src=\"/images/ux24/ux24-config-rtplink.png\"\n  alt=\"UX24 Configuração RTP link\"\n  title=\"UX24 Config RTP link\"\n  style={{ width:\"62%\" }}\n/>\n\n- **ENABLE/DISABLED**: Habilita ou desabilita o streaming RTP quando as alterações são confirmadas pressionando **APPLY**.\n\n  <Tip>\n    Para otimizar os recursos do sistema, mantenha desabilitado quando o serviço não estiver sendo utilizado.\n  </Tip>\n- **DESTINATION ADDRESS**: Endereço IP de destino.\n- **PORT**: Porta TCP de transmissão.\n- **CODEC**: Formato de áudio para RTP (**PCM** / **MP3**).\n- **QUALITY**: Bitrate MP3 ou frequência de amostragem PCM.\n- **GPO**: Habilita o envio de sinais de **luz de ar (Tally Light)** via TCP/IP para equipamentos Solidyne compatíveis.\n  - **Estúdio A e B** (linhas 1 e 2 respectivamente)\n  - **Estúdio B e A** (ordem invertida)\n  - **A+B** (o sinal é ativado em ambas as linhas, independentemente do estúdio ativo)",
+      "title": "RTP LINK",
+      "level": 3
+    },
+    {
+      "hash": "f8365e9bd78c4edbcf87bfb2ffaeefa1276f73510383a5ad75a121f35a24fbd4",
+      "translation": "### Down-Stream (RX)\n\nPermite configurar um _streaming_ _entrante_. Quando o módulo **DOWN-STREAM** está ativado (**ENABLE**), o áudio decodificado é enviado internamente para a entrada **AES-1**, que muda seu nome para **STREAM-1**.\\\nNeste modo, o conector AES-1 no painel traseiro fica desabilitado.\n\n- **RUN/STOP**\\\n  Inicia ou interrompe a decodificação do _streaming_ quando as alterações são confirmadas com **APPLY**.\n\n  <Tip>\n    Para otimizar os recursos do sistema, mantenha interrompido quando o serviço não está em uso.\n  </Tip>\n- **PROTOCOL**\\\n  Define o tipo de _streaming_ entrante. Os seguintes formatos são suportados:\n  - Streams públicos **HTTP** e **MMS** codificados em PCM 16 (44.1/48 kHz), MP3 ou Opus.\n  - Streams **RTP** em PCM 16 (44.1 kHz) e MP3.\n- **SERVER URL/IP**\\\n  Nome ou endereço IP do servidor que gera o _streaming_.\n- **PORT**\\\n  Porta TCP pela qual o _streaming_ entra.\\\n  Valor padrão: **0**.\n- **MOUNTPOINT**\\\n  Nome único que identifica o _stream_.\n- **APPLY**\\\n  Aplica as alterações na configuração.\n\n<Note>\n  **Passo a passo** Baixe um guia passo a passo para [configurar um streaming entrante](http://solidyne.dx.com.ar/DW/doc-guides/UNIDEX_AplicationNote-Incoming_streaming.pdf).\n</Note>\n\n---",
+      "title": "Down-Stream (RX)",
+      "level": 3
+    },
+    {
+      "hash": "b13165a1e0a961267cd0515a65cc4dd7badf8b9de0aacb199d9c67d55e969e30",
+      "translation": "### Network (Módulo Streamer)\n\nConfigurações gerais de rede para o módulo **Streamer UX24** (não confundir com o acesso para controle web).\n\n<img\n  src=\"/images/ux24/ux24-config-streaming_eth.png\"\n  alt=\"UX24 Configuração Streaming Ethernet\"\n  title=\"UX24 Config Streaming Ethernet\"\n  style={{ width:\"75%\" }}\n/>\n\nPor padrão, o endereço IP opera em modo dinâmico (DHCP). O endereço atribuído é exibido na tela principal como **STREAM IP**.\n\nAcessando de um computador na rede o endereço IP do módulo streamer, todas as suas funções poderão ser visualizadas e configuradas.",
+      "title": "Network (Streamer Module)",
+      "level": 3
+    }
+  ]
+}

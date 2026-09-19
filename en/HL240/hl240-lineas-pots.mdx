@@ -1,75 +1,67 @@
 ---
-title: "Telephone Lines (POTS)"
-description: "Connection and adjustment of traditional telephone lines"
-keywords: ["connections", "POTS", "telephone line", "rejection", "null"]
-tags: ["hybrids", "HL240"]
+title: "Land lines (POTS)"
+description: "Using HL240 with land lines (POTS)"
+keywords: ["VoIP"]
+tags: ["híbridos", "HL240"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "f2dadccb17d7e7ba3b5887110050a8ecc76eeb49a2776ff4b887e6d153fb6b2e"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-## Connections
+import tierras from '/snippets/snippet-tierras.mdx';
 
-On the rear panel there are two pairs of RJ11 connectors: **PHONE SET/LINE 1** and **PHONE SET/LINE 2**.\
-These are used to connect the telephone pairs (POTS lines) and their associated telephones.
+## Wiring
 
-The telephones operate normally while the lines are not engaged by the HL240-VQ (OFF mode). When a line is engaged (ON mode) it disconnects from the telephone.
+The rear panel has two pairs of RJ11 connectors: **PHONE SET/LINE 1** and **PHONE SET/LINE 2**.\
+These connect to the telephone pairs (POTS lines) and their associated phones.
 
-The lines can come from a public exchange or a private branch exchange (PBX).\
-Using a PBX degrades the hybrid's rejection, so it is recommended to connect the HL240-VQ directly to public exchange lines.
+The phones operate normally while the lines are not engaged by the HL240-VQ (OFF mode). When a line is engaged (ON mode), it disconnects from the phone.
 
-The telephone hybrid includes internal RF rejection filters for **AM, VHF and UHF** bands.\
-If using ADSL lines (with Internet signal), make sure you have the corresponding RF filter.
+The lines can come from a public telephone exchange or a private branch exchange (PBX).\
+Using a PBX reduces the hybrid's rejection performance, so it's recommended to connect the HL240-VQ directly to public exchange lines.
 
-The telephone connections are protected against high voltage discharges (sparks or indirect lightning) using metal oxide varistors, withstanding overvoltages up to 2 kV.
+### Protection Features
 
-<Warning>
-  It is essential to install external gas discharge tubes on lines coming from public exchanges, connected to a good ground connection (ground rod).\
-  In case of direct lightning strikes, equipment damage is not covered by warranty.
-</Warning>
+- The telephone hybrid includes internal RF rejection filters for **AM, VHF, and UHF** bands.
+- Phone line connections are protected against high-voltage surges (indirect lightning strikes or power surges) using metal oxide varistors, capable of withstanding overvoltages up to 2 kV.
+- If using ADSL lines (with Internet signal), ensure you have the corresponding RF filter provided by your Internet service provider (ISP).
 
-<Accordion title="General grounding diagram for radio stations">
-  <img src="/images/Grounding_recomendations.jpg" alt="Grounding diagram" style={{maxWidth: "100%"}} />
-</Accordion>
-
----
+<tierras />
 
 ## Rejection Factor Adjustment
 
-The hybrid rejection adjustment applies only to analog landlines.\
-Its function is to minimize the local signal return coming back through the line.
+The telephone hybrid rejection adjustment applies only to analog land lines (POTS).\
+Its function is to minimize the return of local signal that comes back through the line.
 
 <Note>
-  On an analog line, local sources (studio microphones) and audio from the other end mix on the same pair of wires.\
-  The telephone hybrid separates both signals, but separation is never complete: a small portion of the audio sent to the line returns to the console.
+  On an analog line, local sources (studio microphones) and audio from the other end are mixed on the same pair of wires.\
+  The telephone hybrid separates both signals, but the separation is never complete: a small portion of the audio sent to the line returns to the console.
 </Note>
 
-If the hybrid is misadjusted, local signal return will be high and will degrade direct voice quality.\
-Rejection is factory-adjusted with standardized impedances, but needs readjustment at each installation.
+If the hybrid is misadjusted, the return of local signal will be high and will degrade the quality of the direct voice.\
+The rejection is factory-adjusted with standardized impedances, but it needs to be readjusted for each installation.
 
-The **NULL-1** and **NULL-2** controls (rear panel) allow calibrating the rejection for each line.
+The **NULL-1** and **NULL-2** controls (rear panel) allow calibration of the rejection for each line.
 
 **Procedure:**
 
 <Steps>
   <Step title="Establish call">
-    Use the associated telephone to make a call (to another landline or mobile).
+    Use the associated phone and make a call (to another land line (POTS) or to a mobile phone).
   </Step>
   <Step title="Inject reference tone">
     Press the **AUDIO TONE** button. A tone will be injected into the line.\
-    This tone does not interrupt the signal sent from the console, so sending should be muted.
+    This tone does not interrupt the signal sent from the console, so the send should be muted.
   </Step>
   <Step title="Adjust rejection">
     Turn the **NULL** control (multi-turn) in both directions, observing the **OUTPUT LEVEL** indicator.\
     Find the position with the lowest signal level.
   </Step>
   <Step title="Optional monitoring">
-    Listen to the residual tone variation using headphones connected to the **HEADPHONES** output or monitor from the console.
+    Listen to the variation of the residual tone using headphones connected to the **HEADPHONES** output or monitor from the console.
   </Step>
   <Step title="Repeat for other line">
     Perform the same adjustment for the second line.
@@ -80,17 +72,17 @@ The **NULL-1** and **NULL-2** controls (rear panel) allow calibrating the reject
 
 ## Priority System
 
-The priority system applies only to landlines.\
-When local signal is detected (studio microphones), the incoming audio from the line is attenuated by **10 dB**.
+The priority system applies only to land lines (POTS).\
+When local signal (studio microphones) is detected, the audio from the phone line is attenuated by **10 dB**.
 
 This system has two purposes:
 
-- Give priority to the host in a debate: if both speak simultaneously, studio voice prevails.
-- Improve local voice quality by reducing the residual signal that the hybrid cannot reject.
+- Give priority to the studio host in a debate: if both speak simultaneously, the studio voice prevails.
+- Improve local voice quality by reducing residual signal that the telephone hybrid fails to reject.
 
 **Practical tips:**
 
-- Avoid using background music (_beds_), or keep it at very low level, as it could trigger the priority system and attenuate incoming audio.
-- In interviews and dialogues, the priority system action is natural and not perceived by the listener.
-- In special applications (e.g.: contests where listeners must identify a song), the attenuation may be undesired.\
-  In these cases, using Bluetooth phones is recommended.
+- Avoid using background music (_beds_), or keep it at very low level, as it may trigger the priority system and attenuate incoming audio.
+- During interviews and dialogues, the priority system operates naturally and remains imperceptible to listeners.
+- In special applications (e.g., contests where listeners must identify a song), the attenuation may be undesirable.\
+  In these cases, using mobile phones via Bluetooth is recommended.

@@ -1,0 +1,77 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "4bd35e528fab8fc3161e56700ea6057622b6898afee948b309a0966b9f13bf39",
+      "translation": "## Introduction\n\n<Note>\n  The **File Manager** module was discontinued starting with **AUDICOM 14 (Audicom Black)** and replaced by **Media Manager**.\\\n  Although it is still included in the distribution to avoid a sudden change, we recommend migrating to **Media Manager**, as File Manager will be removed in future versions.\n</Note>\n\nIt is accessed from the **“+ tools”** menu in the top bar of the main desktop.\\\nThe module is organized into tabs that display the audio files available on each terminal (local or network drives).\n\n**Features:**\n\n- Uses a **fixed folder structure** (external folders will be ignored).\n- Files are classified by type (Music, Spots, Commercials, Effects, etc.).\n- Titles can:\n  - be played on-air,\n  - be inserted into the programming schedule,\n  - or loaded into the Live Assist instant access button panels.\n\n<Note>\n  On each terminal, only the folders declared on that terminal (**audioDrives**) are displayed.\\\n  Additionally, the Administrator can restrict each user's access to specific folders from **Access Levels**.\n</Note>\n\n---",
+      "title": "Introducción",
+      "level": 2
+    },
+    {
+      "hash": "08d8fa60b3d32c84786eef2cbcac9ed96deebc2877234606448b1ace79711787",
+      "translation": "## Overview\n\nThe main window displays the files in the selected folder with the following fields:\\\n**Artist – Title – Duration – Format – Location**.\n\n- To view other folders: click on the top tabs (Tabs).\n- If there are more than 18 folders: use the scroll buttons `<-- -->`.\n- Window size and position are configurable.\n- Column order can be changed by clicking on the header.\n- You can also perform **quick search by letter**:\n  - Example: If you press \"A\", the cursor positions itself on the first file starting with \"A\" in the active column.\n\n---",
+      "title": "Descripción general",
+      "level": 2
+    },
+    {
+      "hash": "3591924fcf89ea6bd64ad542c573b754d6733e146f3fdf2af134053423865edb",
+      "translation": "## Title Colors (Last On-air Play)\n\nMusic files registered in the database appear in different colors based on the time since their last broadcast:\n\n- **Red**: < 4 hours\n- **Orange**: 4–12 hours\n- **Green**: 12–24 hours\n- **Black**: > 24 hours\n\nThe time thresholds are configured in the **Settings Panel**.\n\n---",
+      "title": "Colores de los títulos (última salida al aire)",
+      "level": 2
+    },
+    {
+      "hash": "0e87fd5aab7eb0f3264f6faee4862d80810f373b46a787d79b9a4201317e9c2c",
+      "translation": "## Folder Colors\n\nEach folder can be assigned a color for easier identification.\n\n- Filters allow displaying only folders of a specific color.\n- Colors are unique and valid across all terminals on the network.\n- Colors are defined when creating the folder or from the **INFO** window.\n\n<Tip>\n  We recommend creating a visible reference chart in the studio.\\\n  Example: red = music, green = announcements, yellow = sound effects.\n</Tip>",
+      "title": "Colores de las carpetas",
+      "level": 2
+    },
+    {
+      "hash": "f439dab64a894e1f80a1258ae3de00041296d7f6ec29facdb34cbc6ca79169da",
+      "translation": "## Main Controls",
+      "title": "Botones principales",
+      "level": 2
+    },
+    {
+      "hash": "5734097e7c7f408583b507aabf12641f9620ec01de79794d8930f39c7fdfe5bb",
+      "translation": "### Update (Update)\n\n`[Numeric Keypad /]`\n\n- Refreshes the selected folder to display new files.\n- By default, File Manager caches the listing when opening a folder; changes won't appear until pressing **Update**.\n- The window shows the date and time of the last update.",
+      "title": "Update (Actualizar)",
+      "level": 3
+    },
+    {
+      "hash": "50ea26e5f8a0c00ecaf183839ef7be5d79321c089b46e13937b3fccff3cd336e",
+      "translation": "### Insert\n\n`[Enter]`\n\n- Inserts the selected title into the **CyberPlay** window (above the yellow cursor).\n- Also supports **Drag & Drop**.\n- Multiple selected titles can be inserted at once.",
+      "title": "Insert",
+      "level": 3
+    },
+    {
+      "hash": "7cc51bb5b1767aa667d520a6dec3fd1b57f3df122eb2d986a352c581736e29e1",
+      "translation": "### Cue Start / Stop\n\n`[Delete]`\n\n- Plays the selected title in **CUE**.\n- Double click = play in CUE.\n- Second click or Delete = play the last 5 seconds (Cue End).\n- Right click = stop CUE.\n\n<Warning>\n  If the system works with **a single sound card**, there is no monitor channel.\\\n  In that case, double click plays the file directly **on-air**.\n</Warning>",
+      "title": "Cue Start / Stop",
+      "level": 3
+    },
+    {
+      "hash": "6944b294b02f45563926e4af0a64d27c9adff0a3922fbb9d71f8dc6b5f6f7873",
+      "translation": "### Play\n\n- Plays the selected track through the **Program** output (same as CyberPlay).\n- If CyberPlay is already playing, the file mixes into the on-air signal.\n- Includes VU meters, time counter, and position bar.",
+      "title": "Play",
+      "level": 3
+    },
+    {
+      "hash": "2e464a9ada2fe4aa781eddd39b3816e45acc55d7ba7bfe3be141fcf6e36fb23b",
+      "translation": "### Stop / Pause\n\n- **Single click**: stops and pauses (can be resumed).\n- **Double click**: stops completely and moves to the next file.",
+      "title": "Stop / Pausa",
+      "level": 3
+    },
+    {
+      "hash": "4b0a7b378d880b4739c4521ecdad46c49acb3b70fdf96b56c940ad7de31259f4",
+      "translation": "### Audio Edit\n\n- Accessed from context menu or expanded window.\n- Opens the file in the associated editor based on extension (.wav, .mp3, .txt).\n- By default, .wav files open in **FX5**.\n- If another editor is installed, Windows may assign it automatically.",
+      "title": "Audio Edit",
+      "level": 3
+    },
+    {
+      "hash": "e37f27e05d0eca564c2e09f15f6b4a33a0d92083c61f13db375d49b0c58b3be6",
+      "translation": "### Syncro\n\nAllows **synchronizing folders** between two locations (left/right).\n\nOptions:\n\n- **Sync left**: copies from right → left.\n- **Sync right**: copies from left → right.\n- **Both**: both folders end with identical content.\n\n---\n\n<Info>\n  While File Manager remains functional, we recommend gradually migrating to **Media Manager**, which replaces all these functions with a more modern and scalable design.\n</Info>",
+      "title": "Syncro",
+      "level": 3
+    }
+  ]
+}

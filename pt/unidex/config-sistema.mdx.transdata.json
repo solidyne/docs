@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "1d8c319586c893d4803f01015b35b827dba90a673db72aedf22c945e9eaef5ed",
+      "translation": "## Configurações de sistema\n\nA opção **SYS CONFIG** na tela SETTINGS permite configurar diferentes funções de sistema.\n\n<img\n  src=\"/images/ux24/unidex-config-sysconfig.jpg\"\n  alt=\"UNIDEX Sysconfig\"\n  title=\"UNIDEX Sysconfig\"\n  style={{ width:\"75%\" }}\n/>",
+      "title": "Configuraciones de sistema",
+      "level": 2
+    },
+    {
+      "hash": "5bf2d7a2ca166aa44a1ec045ed7455f7daab9cba320523dcaa2cf2251edacdd2",
+      "translation": "### **1** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Entrada de Início no Ar\n\nDefine a entrada que será colocada automaticamente no ar se a console for reiniciada devido a uma falha no fornecimento de energia.\\\nPara entradas estéreo, pode-se selecionar qualquer um dos canais do par.\n\nA entrada escolhida deve estar atribuída a um canal físico ou virtual. A console sempre inicia com a última cena utilizada; portanto, se a estação trabalha em modo automatizado, certifique-se de que a cena selecionada tenha atribuído pelo menos um canal com a entrada definida para \"arranque automático\".\n\nA fonte de áudio conectada a essa entrada também deve ser retomada de forma autônoma.\n\n**Barramento Padrão**\\\nIndica os barramentos que serão ativados no canal atribuído à entrada definida em `Start on-air input`.\n\n**Nível**\\\nNível pré-configurado, independente da posição do fader físico. Se o fader for movido, o nível mudará para o valor correspondente à sua posição atual.",
+      "title": "**1** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Start On-Air Input",
+      "level": 3
+    },
+    {
+      "hash": "6504879765e29d1f607c6ea106db77338c710d2e53ee1dd6dfc6ba16c2366102",
+      "translation": "### **2** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Ajustes de rede (acesso remoto)\n\nConfigure a conexão de rede para o controle remoto através do Ethernet Control.\\\nPor padrão, a console trabalha no modo **DHCP**. O endereço IP atribuído pelo roteador é exibido na tela principal (campo _UNIDEX IP_ no setor **STATUS**).\n\nAtravés deste IP, é possível acessar a console de qualquer computador na mesma LAN usando um navegador web.\\\nO UNIDEX incorpora um servidor HTML5 interno que fornece a interface gráfica para operar e configurar todas as suas funções.",
+      "title": "**2** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Ajustes de red (acceso remoto)",
+      "level": 3
+    },
+    {
+      "hash": "65f023a8b18944744065cce58ba778779746131f5883978a2fb979713d3e0bff",
+      "translation": "### **1** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Configurações do Relógio\n\nAbre uma janela para ajustar a hora. O ajuste pode ser realizado de três maneiras:\n\n1.  **Sincronização automática pela porta STREAMING**\\\n    Conecte a porta Ethernet STREAMING a uma LAN com acesso à Internet. A sincronização é realizada automaticamente contra um relógio padrão internacional (UTC), sem intervenção do usuário.\n2.  **Sincronização automática pela porta CONTROL**\\\n    Conecte a porta Ethernet CONTROL a uma LAN com acesso à Internet. Isso sincroniza o relógio interno da console (*UX-Core*). Em seguida, sincronize manualmente o computador de controle (tela sensível ao toque) pressionando a opção **SYNC FROM UX-CORE**.\n3.  **Ajuste manual**\\\n    Insira a hora manualmente em casos onde não haja acesso à Internet.\n\n**Fuso horário**\\\nDefina o fuso horário correspondente no campo `Time Zone`.\n\n---",
+      "title": "**1** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Clock Settings",
+      "level": 3
+    },
+    {
+      "hash": "b37c4ecd67596a19a406903676f4e3ea3e6a6493b20617b609514efc5ad235a4",
+      "translation": "## Usuários e níveis de acesso\n\nSão acessados a partir da tela **SETTINGS**, na opção **USERS**.\\\nA UNIDEX dispõe de vários níveis de usuário com restrições predefinidas:\n\n- **ADMIN**\n- **EXPERT**\n- **BASIC**\n- **GUEST** (somente na UX24)\n\nOs perfis **ADMIN,** **EXPERT** (e BASIC na UX24) estão protegidos por senha, definida a partir desta tela.\n\n<Warning>\n  **Somente o usuário ADMIN pode modificar senhas.**\n</Warning>\n\nA senha padrão é o nome de usuário em minúsculas: admin, expert, basic (na UX18, Basic não requer senha).",
+      "title": "Usuarios y niveles de acceso",
+      "level": 2
+    },
+    {
+      "hash": "73651a2c8bf8b5a64edddf9bbc439a32218f0e4bea3eb259b31b9634a7bc9be0",
+      "translation": "#### Como iniciar com acesso restringido\n\nA opção `DEFAULT USER` define o usuário que é carregado ao ligar a console.\\\nO usuário padrão é **ADMIN** e, na inicialização, o sistema nunca solicita senha.\n\nPara **restringir o acesso** a funções avançadas, recomenda-se alterar o usuário padrão (**ADMIN**) para **BASIC** ou **EXPERT**, conforme o nível de restrição desejado.\n\n- Se a console iniciar com o nível **BASIC**, o operador deverá inserir a senha de **EXPERT** ou **ADMIN** para acessar funções restritas.\n- Se iniciar com o nível **EXPERT**, apenas as funções que requerem nível **ADMIN** são bloqueadas.",
+      "title": "Cómo iniciar con acceso restringido",
+      "level": 4
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "1af2a7e876653921c7865d0425cd77a4a8b32b20f1f181408c62f37917881171",
+      "translation": "## Ethernet Connection for Remote Control\n\nThe console features an **Ethernet port** for remote control via a local area network (LAN). The **built-in web control interface** is accessed using a web browser from any computer connected to the same network.",
+      "title": "Conexión Ethernet para control remoto",
+      "level": 2
+    },
+    {
+      "hash": "1fc6a4823be80a1a2a7a140dfc9a6b8a497dbf0d90795ab8ce86c78e50c50e7c",
+      "translation": "### Step 1: Physical Connection\n\nConnect the **CONTROL ETHERNET** port on the UNIDEX to a port on the **router**, using a standard Ethernet network cable.\n\n<Warning>\n  Do not confuse the Ethernet connector for **CONTROL** with the Ethernet port for **STREAMING**.\n\n  <img\n    src=\"/images/ux24/trasero-control.jpg\"\n    alt=\"Rear RJ45 Control\"\n    title=\"Rear RJ45 Control\"\n    className=\"mx-auto\"\n    style={{ width:\"40%\" }}\n  />\n</Warning>\n\n- From the factory, UNIDEX is configured with **DHCP enabled**.\n- The router will automatically assign an available IP address. This IP may change when the console is restarted, unless a static IP is configured, but this is usually not necessary (if a static IP is required, go to: `SETTINGS → SYSTEM`).\n- The current IP address is displayed on the console's **main screen**, under the name:\\\n  **UNIDEX IP.**\n  <img\n    src=\"/images/ux24/unidex-ControlIP.png\"\n    alt=\"RJ45 to RCA\"\n    style={{ width:\"45%\" }}\n    className=\"mx-auto\"\n  />\n\n<Note>\n  **Solidyne Multi-Discovery**\n\n  If you do not have physical access to the console, you can [**download the Multi-Discovery tool**](/es/unidex/unidex-discovery) which detects Solidyne devices connected to the network.\n</Note>",
+      "title": "Paso 1: Conexión física",
+      "level": 3
+    },
+    {
+      "hash": "15f0cbe2a96c458970a5ba2f78853be6b4e49871413eedb34a1d08580b893fe9",
+      "translation": "### **Step 2**: Access via Web Browser\n\nFrom any computer connected to the **same local network** (preferably via cable) open a web browser (recommended: **Google Chrome**) and enter the IP address displayed as **UNIDEX IP**.\n\nThis will open the web interface for console operation and configuration. The interface is similar to the one shown on the **onboard touchscreen**.\n\n---",
+      "title": "**Paso 2**: Acceso desde navegador web",
+      "level": 3
+    },
+    {
+      "hash": "e35359d1ce5b9d5c4c6d565ec94a65a52d99b18d8b175f186ad43f5369145bb5",
+      "translation": "## Ethernet Connection for Streaming Services\n\n1. Connect the **Streaming Out** port to the LAN router using a standard Ethernet cable.\n   <Warning>\n     DO NOT CONFUSE the **streaming Ethernet connector** with the **remote control** Ethernet connector.\\\n     Both use RJ45, but serve completely different functions.\n     <img\n       src=\"/images/ux24/trasero-streaming.jpg\"\n       alt=\"Rear RJ45 Streaming\"\n       title=\"Rear RJ45 Streaming\"\n       style={{ width:\"40%\" }}\n       className=\"mx-auto\"\n     />\n   </Warning>\n2. The router will assign an IP address via **DHCP**, visible on the main screen as: **Stream IP**\n3. This IP may change when the console is restarted, unless a static IP is configured.\n4. Streaming service configuration can be done in two ways:\n   - From the console's **touch screen**.\n   - From any computer on the network, by accessing the **Stream IP** address from a web browser.\n     <img\n       src=\"/images/ux24/unidex_streaming_ip.jpg\"\n       alt=\"Unidex Streaming Ip Jp\"\n       className=\"mx-auto\"\n       style={{ width:\"45%\" }}\n     />\n\n<Note>\n  **Solidyne Multi-Discovery**\n\n  If physical access to the console is not available, you can [**download the Multi-Discovery tool**](/es/unidex/unidex-discovery) which detects Solidyne devices connected to the network.\n</Note>",
+      "title": "Conexión Ethernet para servicios de streaming",
+      "level": 2
+    }
+  ]
+}

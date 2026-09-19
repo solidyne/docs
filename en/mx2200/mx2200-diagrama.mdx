@@ -1,55 +1,53 @@
 ---
 title: "Workflow"
-description: "General workflow diagram for MX2200"
+description: "General workflow diagram in MX2200"
 keywords: ["configuration", "diagrams"]
-tags: ["portable consoles", "CODECS", "MX2200"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "085cc82e1406d583d93cd1772cfc40135fb288f808cf7bda5e2170d35cb2392f"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-The diagram illustrates an operational scenario that shows all the capabilities of the **MX2200**.
+The diagram exemplifies an operational scenario that allows visualizing all the possibilities of the **MX2200**.
 
-![Mx2200 Flow Jp](/images/mx2200/mx2200-flujo.jpg)
+![Mx2200 Flujo Jp](/images/mx2200/mx2200-flujo.jpg)
 
 ## Program Mix
 
-- **4 dynamic microphones** (two share the MIC 3\+4 fader).
+- **4 dynamic microphones** (two share the MIC 3+4 fader).
 - **1 mobile phone**:
   - Can be used with a Bluetooth microphone.
-  - Can be Bluetooth-linked to a second **Solidyne MX2100** console to handle multiple microphones and headphones.
-- **Notebook via USB**: plays audio directly through the console, allowing all content to be generated from the remote location.
+  - Can be paired via Bluetooth to a second **Solidyne MX2100** console to handle multiple microphones and headphones.
+- **Notebook via USB**: plays audio directly into the console, allowing all content to be generated from the remote location.
 
-## Broadcasting to the Studios
+## On-Air Transmission to the Studios
 
-The **MX2200** accesses the Internet through:
+The **MX2200** obtains internet access via:
 
-- Wi-Fi connection
-- Wired LAN connection
+- Connection to a Wi-Fi network
+- Connection to a wired LAN
 - 4G modem
 
-**Studio Link:**
+**Link to the studio:**
 
-- Connection is established through full-duplex **SIP calls** with no audible delay.
+- The connection is established via full-duplex **SIP calls** with no audible delay.
 - Call setup is immediate: the console dials and the studio answers (or vice versa).
-- An Internet server (**Cloud Service**) initially connects both ends (1 and 2). Once established, the connection becomes a private **Internet Tunneling** between the console and the studio (3).
-- In parallel with the SIP call, the **MX2200 CODEC** can transmit:
+- A server on the internet (**Cloud Service**) initially connects both ends (1 and 2). Once established, the connection transforms into a **private tunnel (Internet Tunneling)** between the console and the studio (3).
+- In parallel to the SIP call, the **MX2200's CODEC** can transmit:
   - An RTP stream to an IP address
-  - Another stream to a web server (Icecast/Shoutcast), with different quality settings
-- As backup, you can use:
-  - A **landline (POTS)**
-  - The **Bluetooth mobile phone** (if not used for program mix)
+  - Another stream to a web server (Icecast/Shoutcast), with differentiated qualities
+- As a backup, the following can be used:
+  - A **land line (POTS)**
+  - The **Bluetooth mobile phone** (if it is not being used for program contribution)
 
-## Studio Reception
+## Reception in the studio
 
-The SIP call is received using a computer with third-party VoIP account management software. Free options are available, such as [Linphone](https://www.linphone.org/).
+The SIP call is received using a computer with third-party software for VoIP account management. There are free options, such as [Linphone](https://www.linphone.org/).
 
 ## Recording
 
-The **MX2200** can record over **100 hours** of program in **MP3 @192 kbps** format to its internal memory.\
-Recording can be activated simultaneously with transmission.
+The **MX2200** can record over **100 hours** of program material in **MP3 @192 kbps** format to its internal memory.\
+Recording can be activated simultaneously with broadcasting.

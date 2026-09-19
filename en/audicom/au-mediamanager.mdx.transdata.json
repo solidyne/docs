@@ -1,0 +1,65 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "968eae6eabb631e210429c1af9843b285a3917cf24490880c1af767ecbc14187",
+      "translation": "## Media Management and Search\n\nFrom this window, you can perform the following operations:\n\n- View and modify information in the **Database**.\n- Perform **multiple searches** (by title, artist, genre, etc.).\n- **Preview (CUE)** the material.\n- **Insert titles into CyberPlay** (drag & drop or insert arrow).\n- Modify the **crossfade time** of the audio.\n- Modify the **Intro time** of the material.\n- Set **start point** (_Start_).\n- Set **end point** (_End_).",
+      "title": "Gestión de medios y búsquedas",
+      "level": 2
+    },
+    {
+      "hash": "ae83152664739c657ee7fa9c181b9f7408c5fc62aafe6a7838f7f194f6a903d0",
+      "translation": "## On-Air Terminal Uses\n\nThere are three main modes of operation:\n\n1. **Program following.**\n2. **Search and access** to titles in the Database.\n3. **Pre-listening** to files (CUE).",
+      "title": "Usos en la terminal de Aire",
+      "level": 2
+    },
+    {
+      "hash": "9fed5df124e0a2085b0cab6ca50851019da7d753ca593ca62d377b1cd045f43b",
+      "translation": "### Program Tracking\n\n- InfoMusic displays real-time information about the title currently on-air.\n- The operator can **modify parameters** and **save** to the Database (**Save** button) whenever their **user profile** permits it.",
+      "title": "Seguimiento de la programación",
+      "level": 3
+    },
+    {
+      "hash": "9b2d449fd7f802fd292b48c196de06b4938a2ffd523e83be18e0ddbf80cc19db",
+      "translation": "### Search and Access Titles\n\n- Press **Clear** to suspend tracking and enter **Search Mode** (the button changes to **A/Z Search**).\n- Set filters (Title, Artist, Genre, etc.) and press **Search**.\n\n**Search Results**\n\n- Displayed in resizable **auxiliary windows**.\n- A second search opens a second window; the third replaces the content of the first; the fourth replaces the second, and so on.\n- To work with **a single window**, close window 1 before a new search.\n- To **retain** the search in window 1 and use window 2 for new searches, close window 2 after each search.\n\n**Insertion into CyberPlay**\n\n- From the results window, you can **drag** titles to **CyberPlay**, or use the **Insert Arrow** (inserts over the **yellow cursor** in CyberPlay).\n\n<Note>\n  The menus (Genre, Artist, etc.) are **updated when opening** InfoMusic.\\\n  If new Genres/Artists are added in Production, they will not appear until **closing and reopening** InfoMusic in On-Air.\\\n  For more information, see **InfoMusic – Production**.\n</Note>\n\n---",
+      "title": "Búsqueda y acceso de títulos",
+      "level": 3
+    },
+    {
+      "hash": "ccca5b357f9e686cdae8db8e4b12079079435b04c04b6ffb7a18f49d1f7f5b9e",
+      "translation": "## Fades, Intro and Start/End Markers\n\nInfoMusic On-Air displays and allows editing of:\n\n- **Crossfade** (crossfade) for the current title.\n- **Intro** (time from musical start to voice entry).\n- **Start/End** (playback **start** and **end** markers).",
+      "title": "Fundidos, Intro y marcas de Inicio/Final",
+      "level": 2
+    },
+    {
+      "hash": "ee8a39c13a18f72fde76a92b9ed5c1c025c2c3cabfbd20182a9d43157f5b3315",
+      "translation": "### Crossfade\n\n- Crossfade times are stored in the **Database**.\n- From the on-air interface, you can change them **only for the current instance** or **permanently** (using the **Save** button).\n- The window displays the **title graphically** and how it overlaps with the previous/next one.\n- Adjust by dragging the **blue handles** (overlap range from **0 to 5 s**).\n\n**Application rules**\n\n- If two titles have different times, the **shorter** one is used.\n- **Fade In slope**: always 0 (the _Fade In_ value represents overlap time at the beginning).\n- **Fade Out slope**: automatically adjusted based on the fade value for better artistic results.\n\n**Change persistence**\n\n- **Save** writes to the Database (if the profile permits).\n- If not saved, changes only apply to the **current playback** of the title.\n\n<Warning>\n  Duration and crossfade modifications **only take effect** starting from the **second title** below the currently playing one.\\\n  If you edit the **currently playing title** or the **immediately following one**, changes are **ignored** (the system precalculates fades for performance reasons).\n</Warning>",
+      "title": "Fundido cruzado",
+      "level": 3
+    },
+    {
+      "hash": "939899929ba79d45ae61dfb9fcee073df03a71a0af710dfa75ce40b6b8fc500b",
+      "translation": "### Intro\n\nAllows setting or modifying the **intro time**:\n\n1. Press **Play** (on InfoMusic On-Air) to preview playback.\n2. When the intro ends, press **SET** → the **INTRO** display shows the value.\n3. If you press **SET** with CUE stopped, the value resets to **0**.\n4. Fine adjustments with the **arrow buttons**:\n   - **Left button**: **1 s** steps.\n   - **Right button**: **0.1 s** steps.\n   - Holding the button accelerates the change.\n5. Press **Save** to persist (subject to permissions).\n\n<Note>\n  **Intro** times are typically set in the **Production/Recording Terminal**.\n</Note>",
+      "title": "Intro",
+      "level": 3
+    },
+    {
+      "hash": "bb7b6839c3f1d12255b73bb487fa29cacce73b94da8e56938e70e4f7b4588587",
+      "translation": "### Start Time\n\n- Play in **CUE** (InfoMusic On-Air Play) and press **SET** at the desired point.\n- **SET** with CUE stopped → returns to **0**.\n- Precision shortcuts: **CTRL + Left/Right Arrows**\n  - The preview enters a **0.5 s loop**.\n  - Repeated presses move the **START** marker in **0.5 s** steps.\n- **Save** to persist (if the profile allows).",
+      "title": "Tiempo de inicio (Start Time)",
+      "level": 3
+    },
+    {
+      "hash": "a75c6cd0e042177fca81348cae7b1300443fed18359acec8caf896a12f81e8be",
+      "translation": "### End Time\n\n- Play in **CUE** and press **SET** where the track should **end**.\n- **SET** with CUE in Stop → display shows **0**.\n- Shortcuts: **CTRL + Left/Right Arrow**\n  - **0.5 s** loop for precision.\n  - Adjusts the **END** mark in **0.5 s** steps.\n- **Save** to persist (if the profile allows).  \n\n---",
+      "title": "Tiempo de final (End Time)",
+      "level": 3
+    },
+    {
+      "hash": "6bb7aade5b719a34561574c0cc3ef5d282cfe7b8353a98776a270e8c21d361bb",
+      "translation": "## Keyboard Operation (InfoMusic Functions)\n\n- **F5 – Search**: executes the search with the loaded parameters.\n- **F6 – Clear Fields**: suspends tracking, enters **Search** and clears all fields (except **Class**).\n- **F7 – Style**: opens the **Style** menu (navigate with arrows, confirm with Enter).\n  - If it was in tracking, it switches to **Search** while retaining only **Style**.\n- **F8 – Genre**: same criteria, for **Genre**.\n- **F9 – Author**: same criteria, for **Author**.\n- **F10 – Performer**: same criteria, for **Performer**.\n- **F11 – Top Hit**: same criteria, for **Top Hit**.\n- **F12 – Open/Close InfoMusic**.\n- **CTRL + Left/Right Arrows**: moves **START/END** markers (depending on which is active) in **0.5 s** steps.\n\n<Info>\n  Example of using F7 during tracking:\\\n  If a track categorized as \"Classics-Pop\" is playing and you press **F7**, InfoMusic clears all fields except **Style = Classics-Pop**.\\\n  Then **F5** returns all titles of that style.\n</Info>",
+      "title": "Manejo desde el teclado (Funciones InfoMusic)",
+      "level": 2
+    }
+  ]
+}

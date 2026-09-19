@@ -1,153 +1,149 @@
 ---
 title: "Media Manager"
-description: "Media and database manager"
-keywords: ["media Manager","database"]
-tags: "Software,Audicom"
+description: "Media and Database Manager"
+keywords: ["media Manager", "database"]
+tags: ["Software", "Audicom"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "00546c765a69aceb7ee253956e5af102a7c245717a8ef5449f69310fc682786e"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Media Management and Search
 
-From this window you can perform the following operations:
+From this window, you can perform the following operations:
 
 - View and modify information in the **Database**.
 - Perform **multiple searches** (by title, artist, genre, etc.).
-- **Preview/CUE** the content.
-- **Insert titles into CyberPlay** (drag & drop or insertion arrow).
-- Modify audio **crossfade time**.
-- Modify content **Intro time**.
-- Set **start point**.
-- Set **end point**.
+- **Preview (CUE)** the material.
+- **Insert titles into CyberPlay** (drag & drop or insert arrow).
+- Modify the **crossfade time** of the audio.
+- Modify the **Intro time** of the material.
+- Set **start point** (_Start_).
+- Set **end point** (_End_).
 
----
+## On-Air Terminal Uses
 
-## Usage in On-Air Terminal
+There are three main modes of operation:
 
-There are three main operation modes:
+1. **Program following.**
+2. **Search and access** to titles in the Database.
+3. **Pre-listening** to files (CUE).
 
-1. **Program monitoring**.
-2. **Search and access** titles in the Database.
-3. **Preview** files (CUE).
+### Program Tracking
 
-### Program Monitoring
+- InfoMusic displays real-time information about the title currently on-air.
+- The operator can **modify parameters** and **save** to the Database (**Save** button) whenever their **user profile** permits it.
 
-- InfoMusic displays real-time information about the currently playing title.
-- The operator can **modify parameters** and **save** to the Database (**Save** button) if their **user profile** allows it.
+### Search and Access Titles
 
-### Title Search and Access
-
-- Press **Clear** to suspend monitoring and enter **Search mode** (button changes to **A/Z Search**).
+- Press **Clear** to suspend tracking and enter **Search Mode** (the button changes to **A/Z Search**).
 - Set filters (Title, Artist, Genre, etc.) and press **Search**.
 
 **Search Results**
 
 - Displayed in resizable **auxiliary windows**.
-- A second search opens a second window; third search replaces first window content; fourth replaces second, and so on.
-- To work with **single window**, close window 1 before new search.
-- To **retain** search in window 1 and use window 2 for new searches, close window 2 after each search.
+- A second search opens a second window; the third replaces the content of the first; the fourth replaces the second, and so on.
+- To work with **a single window**, close window 1 before a new search.
+- To **retain** the search in window 1 and use window 2 for new searches, close window 2 after each search.
 
 **Insertion into CyberPlay**
 
-- From results window you can **drag** titles to **CyberPlay**, or use **Insert Arrow** (inserts at **yellow cursor** in CyberPlay).
+- From the results window, you can **drag** titles to **CyberPlay**, or use the **Insert Arrow** (inserts over the **yellow cursor** in CyberPlay).
 
 <Note>
-  Menus (Genre, Artist, etc.) are **updated when opening** InfoMusic.\
-  If new Genres/Artists are added in Production, they won't appear until InfoMusic is **closed and reopened** in On-Air.\
-  For more information see **InfoMusic – Production**.
+  The menus (Genre, Artist, etc.) are **updated when opening** InfoMusic.\
+  If new Genres/Artists are added in Production, they will not appear until **closing and reopening** InfoMusic in On-Air.\
+  For more information, see **InfoMusic – Production**.
 </Note>
 
 ---
 
-## Fades, Intro and Start/End Marks
+## Fades, Intro and Start/End Markers
 
-InfoMusic On-Air displays and edits:
+InfoMusic On-Air displays and allows editing of:
 
-- **Crossfade** of current title.
-- **Intro** (time from music start to vocal entry).
-- **Start/End** (playback **start** and **end** marks).
+- **Crossfade** (crossfade) for the current title.
+- **Intro** (time from musical start to voice entry).
+- **Start/End** (playback **start** and **end** markers).
 
 ### Crossfade
 
 - Crossfade times are stored in the **Database**.
-- From On-Air you can change them **only for current instance** or **permanently** (**Save** button).
-- Window shows **graphically** the title and how it overlaps with previous/next.
-- Adjust by dragging **blue handles** (**0 to 5 s** overlap).
+- From the on-air interface, you can change them **only for the current instance** or **permanently** (using the **Save** button).
+- The window displays the **title graphically** and how it overlaps with the previous/next one.
+- Adjust by dragging the **blue handles** (overlap range from **0 to 5 s**).
 
-**Application Criteria**
+**Application rules**
 
-- If two titles have different times, **shortest** is used.
-- **Entry slope**: always 0 (_Fade In_ value is overlap time at start).
-- **Exit slope**: automatically adjusted based on fade value for better artistic result.
+- If two titles have different times, the **shorter** one is used.
+- **Fade In slope**: always 0 (the _Fade In_ value represents overlap time at the beginning).
+- **Fade Out slope**: automatically adjusted based on the fade value for better artistic results.
 
-**Change Persistence**
+**Change persistence**
 
-- **Save** writes to Database (if profile allows).
-- Without saving, change applies only to **current inclusion** of title.
+- **Save** writes to the Database (if the profile permits).
+- If not saved, changes only apply to the **current playback** of the title.
 
 <Warning>
-  Duration and crossfade modifications **only apply** from **second title** below currently playing.\
-  If you edit the **playing title** or **immediate next**, changes are **ignored** (system pre-calculates fades for performance).
+  Duration and crossfade modifications **only take effect** starting from the **second title** below the currently playing one.\
+  If you edit the **currently playing title** or the **immediately following one**, changes are **ignored** (the system precalculates fades for performance reasons).
 </Warning>
 
 ### Intro
 
-Allows setting or modifying **introduction time**:
+Allows setting or modifying the **intro time**:
 
-1. Press **Play** (in InfoMusic On-Air) to **preview**.
-2. When intro ends, press **SET** → **INTRO** display shows value.
-3. Pressing **SET** with CUE stopped resets value to **0**.
-4. Fine adjustments with **arrows**:
+1. Press **Play** (on InfoMusic On-Air) to preview playback.
+2. When the intro ends, press **SET** → the **INTRO** display shows the value.
+3. If you press **SET** with CUE stopped, the value resets to **0**.
+4. Fine adjustments with the **arrow buttons**:
    - **Left button**: **1 s** steps.
    - **Right button**: **0.1 s** steps.
-   - Hold to accelerate change.
-5. Press **Save** to persist (according to permissions).
+   - Holding the button accelerates the change.
+5. Press **Save** to persist (subject to permissions).
 
 <Note>
-  **Intro** times are usually set at the **Production/Recording Terminal**.
+  **Intro** times are typically set in the **Production/Recording Terminal**.
 </Note>
 
 ### Start Time
 
-- Play in **CUE** (InfoMusic On-Air Play) and press **SET** at desired point.
+- Play in **CUE** (InfoMusic On-Air Play) and press **SET** at the desired point.
 - **SET** with CUE stopped → returns to **0**.
 - Precision shortcuts: **CTRL + Left/Right Arrows**
-  - Preview enters **0.5 s loop**.
-  - Repeated presses move **START** mark in **0.5 s** steps.
-- **Save** to persist (if profile allows).
+  - The preview enters a **0.5 s loop**.
+  - Repeated presses move the **START** marker in **0.5 s** steps.
+- **Save** to persist (if the profile allows).
 
 ### End Time
 
-- Play in **CUE** and press **SET** where track should **end**.
-- **SET** with CUE stopped → display to **0**.
-- Shortcuts: **CTRL + Left/Right Arrows**
+- Play in **CUE** and press **SET** where the track should **end**.
+- **SET** with CUE in Stop → display shows **0**.
+- Shortcuts: **CTRL + Left/Right Arrow**
   - **0.5 s** loop for precision.
-  - Adjusts **END** mark in **0.5 s** steps.
-- **Save** to persist (if profile allows).
+  - Adjusts the **END** mark in **0.5 s** steps.
+- **Save** to persist (if the profile allows).  
 
 ---
 
-## Keyboard Control (InfoMusic Functions)
+## Keyboard Operation (InfoMusic Functions)
 
-- **F5 – Search**: executes search with loaded parameters.
-- **F6 – Clear fields**: suspends monitoring, enters **Search** and clears all fields (except **Class**).
-- **F7 – Genre**: opens **Genre** menu (navigate with arrows, confirm with Enter).
-  - If monitoring, switches to **Search** keeping only **Genre**.
-- **F8 – Style**: same criteria, for **Style**.
+- **F5 – Search**: executes the search with the loaded parameters.
+- **F6 – Clear Fields**: suspends tracking, enters **Search** and clears all fields (except **Class**).
+- **F7 – Style**: opens the **Style** menu (navigate with arrows, confirm with Enter).
+  - If it was in tracking, it switches to **Search** while retaining only **Style**.
+- **F8 – Genre**: same criteria, for **Genre**.
 - **F9 – Author**: same criteria, for **Author**.
-- **F10 – Artist**: same criteria, for **Artist**.
+- **F10 – Performer**: same criteria, for **Performer**.
 - **F11 – Top Hit**: same criteria, for **Top Hit**.
 - **F12 – Open/Close InfoMusic**.
-- **CTRL + Left/Right Arrows**: shifts **START/END** marks (depending on which is active) in **0.5 s** steps.
+- **CTRL + Left/Right Arrows**: moves **START/END** markers (depending on which is active) in **0.5 s** steps.
 
 <Info>
-  Example of F7 use during monitoring:\
-  If a song categorized as "Classic-Pop" is playing and you press **F7**, InfoMusic clears all fields except **Genre = Classic-Pop**.\
-  Then **F5** returns all titles of that genre.
+  Example of using F7 during tracking:\
+  If a track categorized as "Classics-Pop" is playing and you press **F7**, InfoMusic clears all fields except **Style = Classics-Pop**.\
+  Then **F5** returns all titles of that style.
 </Info>

@@ -1,0 +1,143 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "2182717e5e4318860b9bda37dabea377cdbf4a2cbf3d597df8e1a96186a3ea1d",
+      "translation": "## Tela SETTINGS\n\nAcessa-se pressionando o botão **SETTINGS** na tela principal. Contém todas as opções de configuração da console.",
+      "title": "Pantalla SETTINGS",
+      "level": 2
+    },
+    {
+      "hash": "d8de7ea8476b47b2d60f43393bc3df60b6c5d94b6172ccd023236f5b76ea1d92",
+      "translation": "## **1** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> MENU DE CONFIGURAÇÃO\n\n- As opções de configuração são exibidas em abas à esquerda da tela: INPUTS, OUTPUTS, GPIO, SYS CONFIG, STREAMING, AoIP (Dante), USERS.\n- Ao acessar SETTINGS, por padrão, o primeiro item do menu é carregado, que é INPUTS.\n- Algumas opções também podem ser acessadas a partir do menu contextual da zona inferior.\n- Ao tocar em uma opção, os controles e valores correspondentes dessa opção são exibidos na tela.\n\n<img\n  src=\"/images/ux24/UX24-Settings-Inputs.png\"\n  alt=\"UX24 Settings Inputs\"\n  title=\"UX24 Settings Inputs\"\n  style={{ width:\"75%\" }}\n/>\n\n---",
+      "title": "**1** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> MENU DE CONFIGURACIÓN",
+      "level": 2
+    },
+    {
+      "hash": "8107a71e939fa01775428587cbff1993a1853926cce9c86ea1c4bf2f7dac548a",
+      "translation": "## CONFIGURAÇÕES DE ENTRADAS",
+      "title": "INPUTS SETTINGS",
+      "level": 2
+    },
+    {
+      "hash": "6ca5d1c3ceb5d5d307e417b44a5161b1396e3da865eff0e1221662bc03ab2974",
+      "translation": "### **2** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Lista de entradas\n\nMostra todas as entradas disponíveis.\\\n<Icon icon=\"arrows-rotate-reverse\" iconType=\"solid\" color=\"#0400ff\" size={16} /> A seleção de uma entrada é feita **girando o encoder**.\\\nÀ direita, são visualizadas as opções e configuração da entrada selecionada.\n\n- O **número ID** à esquerda de cada entrada é fixo e corresponde à ordem interna.\n- O **número à direita** indica o **canal atribuído** a essa entrada.\n- As entradas estéreo são mostradas agrupadas em pares **L/R**.\n  - Se estiverem configuradas em `ESTÉREO`, são agrupadas como um par.\n  - Se estiverem em `MONO`, os canais esquerdo e direito são desvinculados e podem ser selecionados separadamente.",
+      "title": "**2** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Listado de entradas",
+      "level": 3
+    },
+    {
+      "hash": "890f6c792abd6aaf45fcc95cbca277e7a08480ffdac3817c5361afd1b55ca1c6",
+      "translation": "### **3** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Ganho de Entrada\n\nControla o ganho da entrada selecionada.\\\n<Icon icon=\"arrows-rotate-reverse\" iconType=\"solid\" color=\"#0400ff\" size={16} /> Para modificar o valor, gire o encoder.\\\n<Icon icon=\"arrow-down-to-line\" iconType=\"solid\" color=\"#0400ff\" size={16} /> Pressionando o encoder, alterna-se o controle entre navegação da lista e ajuste de ganho.\n\nO indicador de nível mostra o valor de pico do sinal na entrada (dBfs).\n\n**Ajuste rápido do ganho:**\n\n1. Em entradas de linha, reproduzir música com pouca dinâmica (ex. pop atual).\\\n   Em entradas de microfone, falar de forma contínua em um nível apropriado e distância correta.\n2. Posicionar o fader do canal na zona normal de trabalho (marcada entre -10 dB e -20 dB).\n3. Ajustar o ganho até que o vúmetro de **PROGRAMA** marque em torno de 0 VU. Observar a leitura lenta (VU), não o pico dBfs, pois o pico sempre estará \"flutuando\" acima do valor VU.\n   <Tip>\n     A indicação numérica à direita do indicador principal pode ser alterada entre dBFS e VU tocando no número.\n   </Tip>\n\n<Info>\n  Este controle de ganho também é mostrado na tela de canal (CHANNEL). O ajuste de ganho pode ser feito indistintamente a partir de qualquer uma dessas telas.\n</Info>",
+      "title": "**3** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Input Gain",
+      "level": 3
+    },
+    {
+      "hash": "f21b30dac1126ec37c8b4c3fd032ae8079bec8c644624dfc42791563ff85da15",
+      "translation": "### **4** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Opções da entrada\n\nAs opções disponíveis **dependem do tipo de entrada** selecionada:\n\n- **INPUT TYPE**: Indica o tipo de entrada (MIC, LINE, UDX, USB, AES).\n- **MODE**: Estéreo ou mono. Em mono, os canais L/R são configurados como entradas independentes.\n- **ASSIGNED TO CHANNEL**: Canal no ar para o qual o sinal da entrada selecionada é enviado.\\\n  O canal é escolhido no menu suspenso. Esta opção também é exibida na tela CHANNEL.\n- **PHANTOM**: Disponível apenas para as entradas MIC e em entradas UNIDEX com adaptadores UDX 2MIC. Ativa/desativa a alimentação de 48 V.\n- **UDX TYPE**: Disponível apenas em entradas UNIDEX. Define o modelo do adaptador conectado.\\\n  Se a entrada UNIDEX for usada como linha balanceada, `UDX TYPE` deve ser `LINE `(padrão).",
+      "title": "**4** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Opciones de la entrada",
+      "level": 3
+    },
+    {
+      "hash": "b8b5e5f44e381edd9eab7a9cfaa150e18fb33e8114bb1678f1c5b64c680e88cd",
+      "translation": "### **5** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Process\n\nAtalhos para os processos disponíveis para a entrada.\\\nEm operação normal, eles estão acessíveis a partir das telas PROCESS e CHANNEL.",
+      "title": "**5** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Process",
+      "level": 3
+    },
+    {
+      "hash": "32c0f1202fe5c8087219e962dacb7c44e93cb02636adf182f164d3613bb46e62",
+      "translation": "### **6** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Select\n\nAtiva o modo **SELECT**, permitindo escolher um canal a partir dos botões **CUE/SELECT** e visualizar a entrada atribuída.\\\nO encoder sempre navega pela lista de entradas, mesmo com o SELECT ativado.\n\n---",
+      "title": "**6** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Select",
+      "level": 3
+    },
+    {
+      "hash": "08671fb31da9a5d292fb86fe212c408f6f20708f144f98757d8d27c9da2958c1",
+      "translation": "## CONFIGURAÇÕES DE SAÍDAS\n\n<img\n  src=\"/images/ux24/ux24-odroid-outputs.png\"\n  alt=\"Saídas UX24\"\n  title=\"Saídas UX24\"\n  style={{ width:\"75%\" }}\n/>",
+      "title": "OUTPUTS SETTINGS",
+      "level": 2
+    },
+    {
+      "hash": "821978c9e68ada79922045c0a17dbeade82983f7f0b2e3466b23b418bc452879",
+      "translation": "### **1** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Lista de saídas\n\nMostra todas as saídas disponíveis.\\\n<Icon icon=\"arrows-rotate-reverse\" iconType=\"solid\" color=\"#0400ff\" size={16} /> A seleção é feita **girando o encoder** ou tocando diretamente na tela.\\\nÀ direita são mostradas as opções de configuração da saída selecionada.",
+      "title": "**1** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Listado de salidas",
+      "level": 3
+    },
+    {
+      "hash": "7ce604c5dfc712e7637921046bf10d685cbe02171a3dce4bf2fbc8bde763e375",
+      "translation": "### **2** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Ganho de Saída\n\nAjusta o nível da saída. Dependendo do tipo de saída, o ajuste pode ser dado em dBu ou dBfs.\n\n- **Saídas analógicas:** o nível é expresso em dBu referenciados a 0 VU (padrão: \\+4 dBu).\n- **Saídas digitais:** o ganho é expresso em dB.\\\n  Quando o ganho é zero (padrão), o nível coincide com a escala dos medidores\\\n  (0 VU = –20 dBfs, 1 kHz @ 0 VU).\n\nPressionando o encoder, alterna-se entre a navegação na lista de saídas e o controle de ganho. <Icon icon=\"arrows-rotate-reverse\" iconType=\"solid\" color=\"#0400ff\" size={16} /> Para alterar o valor, **gire o encoder**.\n\n<Danger>\n  Os medidores da tela principal PGM, REC e AUX mostram o nível do barramento **antes** dos ganhos de saída. Se um ganho digital for modificado, o nível real da saída pode diferir do indicado, existindo risco de *clipping* não visível nos medidores.\n</Danger>",
+      "title": "**2** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Output Gain",
+      "level": 3
+    },
+    {
+      "hash": "43669198b2eb8c680e795d9b642ae616fafed963d7069e915850a5dbead7981e",
+      "translation": "### **3** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Modo de Áudio\n\nPermite configurar a saída em `estéreo` ou `mono`. No modo mono, os canais esquerdo e direito do par são usados como saídas independentes (por exemplo, para alimentar adaptadores UDX 2TEL que enviam sinais mono para as linhas telefônicas).",
+      "title": "**3** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Audio Mode",
+      "level": 3
+    },
+    {
+      "hash": "a45b765d97046c26580fb9f7ec58c0cc1be0ea6d1d7d9cb7982a885c429f55d5",
+      "translation": "### 6 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Fonte\n\nDisponível apenas em saídas atribuíveis. Define o sinal que é enviado para essa saída. \\\nEm saídas com a opção MIX-MINUS, define a fonte de sinal para a saída no modo **DIRECT**.",
+      "title": "6 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Source",
+      "level": 3
+    },
+    {
+      "hash": "b67c2d19189f9c7dd2d8e5610e562a2e1a61199b535efd54cc904c4d289d782c",
+      "translation": "#### **Fontes disponíveis nas saídas para UX-24:**\\\n\\\n`PGM, REC, AUX, VBUS, CUE, STUDIO HEADPHONES, TALKBACK, MIC-1, MIC-2, MIC-3, MIC-4, UDX-1 a UDX-8`",
+      "title": "**Fuentes disponibles en las salidas para UX-24:**\\",
+      "level": 4
+    },
+    {
+      "hash": "869d64ab556b9c15475f83458612309b8bd173f813a3eed513ddf6fd10e86c82",
+      "translation": "#### **Fontes disponíveis nas saídas da UX-18:**\n\n| **SAÍDAS ATRIBUÍVEIS** | **FONTE** |\n| --- | --- |\n| **ESTÉREO 1 a 4** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 a MIC-4; USB-1 a USB-4 |\n| **USB 1 a 4** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 a MIC-4; UNIDEX-1 a UNIDEX-4 |\n| **AES-2** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK |\n| **AoIP (DANTE) IN-5 a IN-8** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 a MIC-5; Bluetooth; UNIDEX 1 e 2; USB 1 e 2; AES-1 |",
+      "title": "**Fuentes disponibles en las salidas para UX-18:**",
+      "level": 4
+    },
+    {
+      "hash": "eda6d9c954054f8b0ef777df3a759aa965630da2035a87e2045cabe0ad76eb79",
+      "translation": "## Envios Mix-Minus\n\nUma saída MIX-MINUS envia uma mixagem da qual é SUBTRAÍDA o sinal de uma entrada associada. É utilizada, por exemplo, para o retorno a uma linha telefônica, evitando que o áudio da chamada volte a entrar no sistema e gere realimentação. À linha é enviado um _MIX-MINUS de PGM_, que é o sinal PGM MENOS o áudio da linha telefônica.\n\nAs **saídas estéreo** (5 a 8 na UX24; 1 a 4 na UX18) e todas as **USB** podem ser configuradas como **Direto** ou **Mix-Minus**.\n\n<img\n  src=\"/images/ux24/unidex_config_mix-minus.jpg\"\n  alt=\"UNIDEX Mix-Minus\"\n  title=\"UNIDEX Mix-Minus\"\n  style={{ width:\"42%\" }}\n/>",
+      "title": "Envíos Mix-Minus",
+      "level": 2
+    },
+    {
+      "hash": "11cb51b7a860981c19807b4b867b6f7615dc61242ee1401234321a15c8e84522",
+      "translation": "### **7** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Modo de Envio\n\n- **Direto**: Modo de operação normal das saídas. O mix-minus está desativado. O sinal definido em FONTE é enviado diretamente para a saída.\n- **Mix-Minus**: Do sinal da saída é subtraído o sinal de uma entrada associada.",
+      "title": "**7** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Send Mode",
+      "level": 3
+    },
+    {
+      "hash": "179d364aca6cf0778745ddf7aff40e3b0cf72a213b2fa8fd85d9b16e7359aabe",
+      "translation": "### **8** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Fonte Mix-Minus\n\nDefine o barramento sobre o qual a subtração é realizada: `PGM, REC, AUX, VBUS ou AUTO ASSIGN`.\\\nEm **AUTO ASSIGN**, o barramento é escolhido automaticamente de acordo com a prioridade:\n\nPrioridade 1 - PGM\\\nPrioridade 2 - REC\\\nPrioridade 3 - AUX\\\nPrioridade 4 - VBUS\n\nPor exemplo:\n\n- Se um canal está atribuído a PGM e REC, o Mix-Minus é feito sobre PGM.\n- Se está atribuído apenas a REC e AUX, é feito sobre REC.",
+      "title": "**8** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Mix-Minus Source",
+      "level": 3
+    },
+    {
+      "hash": "1d4aa5da97df1c48a0d1f9f92a3f1d4acf9fd963ba248dc4c09adee147ad09aa",
+      "translation": "### **9** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Canal Mix-Minus\n\nMostra a entrada associada à saída selecionada e o canal atribuído a essa entrada. \\\nEstes campos não podem ser editados.\\\nCada saída no modo Mix-Minus tem sua entrada associada predefinida.\n\n<Warning>\n  Para que uma saída funcione em Mix-Minus, a entrada associada **deve estar atribuída a um canal**.\\\n  Se não estiver, a opção permanece desabilitada.\n</Warning>\n\nTabela de atribuições MIX-MINUS predefinidas na UX24. Para a UX18 é igual, apenas as OUT 5 a 8 mudam para OUT 1 a 4.\n\n| **SAÍDA (UX24)** | **ENTRADA ASSOCIADA** |\n| :-: | :-: |\n| OUT5-L | UDX1-L |\n| OUT5-R | UDX1-R |\n| OUT6-L | UDX2-L |\n| OUT6-R | UDX2-R |\n| OUT7-L | UDX3-L |\n| OUT7-R | UDX3-R |\n| OUT8-L | UDX4-L |\n| OUT8-R | UDX4-R |\n| USB OUT1-L | USB IN1-L |\n| USB OUT1-R | USB IN1-R |\n| USB OUT2-L | USB IN2-L |\n| USB OUT2-R | USB IN2-R |\n| USB OUT3-L | USB IN3-L |\n| USB OUT3-R | USB IN3-R |\n| USB OUT4-L | USB IN4-L |\n| USB OUT4-R | USB IN4-R |",
+      "title": "**9** <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Mix-Minus Channel",
+      "level": 3
+    },
+    {
+      "hash": "bb1cbbd0a23de0a798e444cf656dd63265321863d19cb5ef9b94dc38cd25a85b",
+      "translation": "## Opções especiais para Talk-Back e Intercom",
+      "title": "Opciones especiales para Talk-Back e Intercom",
+      "level": 2
+    },
+    {
+      "hash": "a515bc16156c9b9328cb8d9294bf45b7e068206ff1203b639b2e41da4fd4d719",
+      "translation": "### Intercom (somente UX24)\n\nHabilita o envio de intercom para essa saída. Quando o botão **Intercom** atribuído é pressionado na console, o áudio do microfone de talkback interrompe o sinal presente na saída. É utilizado, por exemplo, para configurar envios de comandos diferenciados para a monitoração em fones de ouvido.",
+      "title": "Intercom (solo UX24)",
+      "level": 3
+    },
+    {
+      "hash": "70604382d9d918947899d8d9384a691674cbcfdbe13c98f7cb968ae3c6fb6676",
+      "translation": "### Monitoração do Estúdio B (somente UX24)\n\nPermite utilizar a saída para alimentar os monitores de um **Estúdio B**.\\\nQuando microfones atribuídos a este estúdio são ativados, a saída é silenciada automaticamente.",
+      "title": "Studio B Speakers (solo UX24)",
+      "level": 3
+    },
+    {
+      "hash": "b7fdf8f86bfbd4c01aa8ff15db485b2213b02aa928ccd4ad823a58213e17ed63",
+      "translation": "### Talk-Back Ch e Studio Talk-Back Link (somente UX18)\n\nEstas opções permitem configurar o UX18 para trabalhar com **canais de talkback diferenciados** e grupos de fones de ouvido. Esta conexão é explicada em [Configurar StudioBox com canal duplo de Talk-Back](/pt-br/ux18/ux18-doble-talkback).\n\n**Talk-Back Channel:** Vincula a saída ao **modo *talk-back* de um canal** de hardware (não se aplica a canais virtuais).\n\n- O *talk-back* é ativado a partir do canal mantendo pressionado o botão **CUE/SELECT**.\n- Quando ativado em um canal associado a uma saída, o sinal do microfone de talkback (interno ou externo) é enviado **apenas para essa saída**, interrompendo o áudio atual.\n- O menu suspenso permite escolher:\n  - Canais 1 a 6\n  - Um canal de GRUPO (A, B, C ou D)\n  - Desabilitar a função (*unassigned*)\n\n**Studio Talk-Back Link:** Vincula a saída ao botão **Talk-Back principal** do painel da console.\n\n- Ao pressionar Talk-Back, o microfone de talkback é enviado para a saída **STUDIO** e para todas as saídas que tiverem o *Studio Talk-Back Link* ativado.",
+      "title": "Talk-Back Ch y Studio Talk-Back Link (solo UX18)",
+      "level": 3
+    }
+  ]
+}

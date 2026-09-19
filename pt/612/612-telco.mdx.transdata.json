@@ -1,0 +1,65 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ae74e08e4bc9b0beacff760d756c139fbc9a3c4281977a5a5a9d38015ebca897",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx'\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "04cb75a0bdcb5c9a65d6c97559f49ee96b549378d39c7113e15405c6aa796f49",
+      "translation": "## Conexão de linhas fixas\n\nO canal de híbrido telefônico gerencia duas linhas telefônicas:\n\n- Uma linha telefônica fixa (POTS) convencional (2 fios).\n- Um telefone celular emparelhado por Bluetooth.\n\nOs ajustes internos são calibrados de fábrica e não requerem intervenção. Apenas o preset de rejeição do híbrido (**null**) deve ser ajustado durante a instalação da console ou ao trocar a linha telefônica.\n\nNo painel traseiro existem dois conectores RJ11:\n\n<img\n  src=\"/images/612/612-trasero-rj11.jpg\"\n  alt=\"612 Trasero Rj11 Jp\"\n  title=\"612 Trasero Rj11 Jp\"\n  className=\"mx-auto\"\n  style={{ width:\"51%\" }}\n/>\n\n- Um para a linha telefônica.\n- Outro para o telefone associado.\n\nA linha pode ser conectada diretamente à central pública ou à PBX da estação.\\\nAs PBX privadas podem prejudicar a rejeição do híbrido; recomenda-se usar linhas públicas sempre que possível.",
+      "title": "Conexión de líneas fijas",
+      "level": 2
+    },
+    {
+      "hash": "52e50b543fdd2f671a0907df14fa8cd4b93a90a7c3dc5dbf56457f21397e56ba",
+      "translation": "### Proteções\n\nAs linhas estão protegidas internamente contra descargas de alta tensão (raios indiretos) por meio de varistores de óxido metálico.\n\n<tierras />",
+      "title": "Protecciones",
+      "level": 3
+    },
+    {
+      "hash": "48684106b999a355360ddc9a07f0dad1407d6ce849a5442661f1ce91e7741957",
+      "translation": "### Ajuste de rejeição (Null)\n\nEste ajuste aplica-se apenas à linha telefônica fixa (POTS). É realizado uma vez durante a instalação.\\\nA rejeição evita que o sinal transmitido retorne misturado com a voz do interlocutor remoto, melhorando a qualidade da voz local.\n\n**Procedimento:**\n\n1. Estabeleça uma chamada telefônica através do híbrido telefônico.\n2. Peça que um locutor fale pelo microfone para a pessoa em linha.\n3. Ajuste o nível da linha (botão Telephone Control) até que o medidor VU PGM alcance a zona vermelha.\n4. Ouvindo a voz local em PGM, gire o preset **NULL** até obter uma qualidade idêntica à que se percebe com _Telephone Control_ fechado.\\\n   Um método prático: girar NULL para ambos os extremos, ouvir a deterioração e posicionar o ponto médio onde o som é ótimo (nula ou muito pouca coloração).\n5. Repita o ajuste se houver mudança de linha telefônica.",
+      "title": "Ajuste de rechazo (Null)",
+      "level": 3
+    },
+    {
+      "hash": "1c1bb2ecbbdbda491e338298848c1f0bcd4527eea745ca635d7d4be4566b696a",
+      "translation": "## Telefones celulares (Bluetooth)\n\nQualquer telefone com Bluetooth pode ser emparelhado com a D612. Uma vez emparelhados, a conexão é estabelecida automaticamente quando o Bluetooth está ativo em ambos os equipos.\n\n**Alcance:** até 10 m (recomenda-se manter o telefone celular próximo à console, porém não sobre ela).",
+      "title": "Teléfonos móviles (Bluetooth)",
+      "level": 2
+    },
+    {
+      "hash": "932dbcef0580752e9fac8e0042d1390fe0e3753d29c6e4a80bb99f504d6e221d",
+      "translation": "### Procedimento de emparelhamento\n\n1. **Na console:** verifique se o LED Bluetooth está apagado (o LED está localizado no painel de vúmetros).\n   - Se estiver aceso (piscada verde lenta, 1 a cada 2 s), desligue-o mantendo pressionado o botão **Bluetooth** na seção Híbrido.\n2. Com o Bluetooth desligado, mantenha pressionado o botão **Cellular Phone Bluetooth** por aproximadamente 10 s até que os LEDs pisquem alternadamente em verde/vermelho. A console entra no modo _busca_.\n\n   <Info>\n     Observe que primeiro o Bluetooth é ligado no modo normal, com piscada lenta. Não solte o botão até que inicie a piscada rápida.\n   </Info>\n3. **No telefone celular:** busque dispositivos Bluetooth (o procedimento depende do modelo).\n4. Selecione o dispositivo **Solidyne BTM641** (ou BTM751 em equipamentos muito antigos).\n   - Se solicitar senha, digite **0000**.\n5. Os equipamentos ficam emparelhados (pairing). O LED fica verde com piscada lenta (1 a cada 2 s), indicando Bluetooth ativo.",
+      "title": "Procedimiento de vinculación",
+      "level": 3
+    },
+    {
+      "hash": "5b8161edf0992b2e7a0899c8a2a2052694fe087ddd5dace30c297e78e57c369d",
+      "translation": "### Reemparelhar um dispositivo Bluetooth\n\n1. Ative o Bluetooth na D612 mantendo pressionado **Cellular Phone Bluetooth** até que o LED verde acenda (≈5 s).\\\n   O LED verde ficará piscando lentamente.\n2. Ative o Bluetooth no telefone celular.\\\n   Quando o aviso de conexão aparecer, a console está pronta.\n\n<Note>\n  Em alguns celulares, o reemparelhamento não é automático. Será necessário selecionar manualmente **Solidyne BTM641** da lista de dispositivos Bluetooth.\n</Note>",
+      "title": "Re-conectar un dispositivo vinculado",
+      "level": 3
+    },
+    {
+      "hash": "162684d41132dc74338318e331a3fbef2b6d573fe91beaa27191d3781d116022",
+      "translation": "### Ajuste do volume\n\n<Warning>\n  No telefone celular, o volume Bluetooth deve ser ajustado ao máximo durante uma chamada para garantir recepção adequada e melhor relação sinal/ruído.\n</Warning>\n\n- Este ajuste é independente do volume do alto-falante do telefone.\n- Se ajustar o volume sem emparelhar Bluetooth, apenas altera o volume do alto-falante do celular.\n- O telefone memoriza o último ajuste de nível do Bluetooth.\n- Se trocar de celular, repita o ajuste.",
+      "title": "Ajuste del volumen",
+      "level": 3
+    },
+    {
+      "hash": "4e44275927692a3f5392a76e2b61bf4230ae6e61d3c4acf47c18fe071e2f5cd3",
+      "translation": "### Desativar Bluetooth na console\n\nMantenha pressionado **Cellular Phone Bluetooth** até que o LED se apague definitivamente.",
+      "title": "Apagar Bluetooth en la consola",
+      "level": 3
+    },
+    {
+      "hash": "551849cd04fb4f87d0d45f2ffd71f3612b3141055d1fa7da945f9806c558761d",
+      "translation": "## Híbrido externo\n\nA D612 possui um conector para envio e retorno de um híbrido telefônico externo.\n\n- **Jack 6,35 mm (TRS):** combina entrada e saída.\n\n<img\n  src=\"/images/612/612-cable-insert.bmp\"\n  alt=\"612 Cable Insert Bm\"\n  title=\"612 Cable Insert Bm\"\n  className=\"mx-auto\"\n  style={{ width:\"65%\" }}\n/>\n\n**Atribuição dos contatos**\n\n- **Tip (ponta):** envio MIX-MINUS (programa, sem áudio de linhas telefônicas). Este sinal é conectado à **entrada do híbrido externo**.\n- **Ring (anel):** retorno do híbrido externo (áudio da linha). Conecta-se à saída do híbrido externo. Na console, é somado à saída PGM através do canal de híbrido interno.\n\nO fader do canal Híbrido se comporta da mesma forma que com linhas diretas, enviando sinal no ar ou para a pré-escuta (CUE) (ver Operação da console).",
+      "title": "Híbrido externo",
+      "level": 2
+    }
+  ]
+}

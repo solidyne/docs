@@ -1,19 +1,192 @@
 ---
 title: "UDX TEL+BT Adapter"
-description: "Interface for landline and Bluetooth mobile phone connection"
-keywords: ["landlines","POTS","hybrid","TELCO","bluetooth"]
-tags: ["expansions", "UNIDEX", "UDX-TEL+BT", "UX24", "UX18"]
+description: "Interface for land line (POTS) and Bluetooth mobile phone connection"
+keywords: ["land lines (POTS)", "telephone hybrid", "TELCO", "bluetooth"]
+tags: ["ux24", "ux18", "UNIDEX", "UDX TEL+BT", "UDX 2BLT"]
 translation:
   source_lang: "es"
-  status: "reviewed"
-  version: 1
-  reviewed_by: "Spinelli"
-  reviewed_at: "2026-02-22"
-  source_hash: "7a330888061659707689bcd7c633173d27e9960e850aff357b33b0e10934a597"
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
+---
+
+- The UDX TEL+BT adapter provides connection for a **land line (POTS) and Bluetooth pairing** for a mobile phone.
+- It connects directly to the rear panel of UNIDEX with two SFTP RJ45-RJ45 cables (e.g. Solidyne code SOL P50).
+- It is controlled from the console surface or remotely via the WEB Control interface.
+
+- The UDX TEL+BT adapter provides connection for a **land line (POTS) and Bluetooth pairing** for a mobile phone.
+- It connects directly to the rear panel of UNIDEX with two SFTP RJ45-RJ45 cables (e.g. Solidyne code SOL P50).
+- It is controlled from the console surface or remotely via the WEB Control interface.
 
 ---
 
-The UDX TEL+BT adapter provides connection for one ****landline telephone and Bluetooth link**** for a mobile phone.
+<Frame>
+  <img
+    src="/images/UDX_TELBT-connection.png"
+    alt="UDX TELBT Connection"
+    style={{ width:"82%" }}
+  />
+</Frame>
 
-- For console connection, configuration and landline adjustment [proceed as in the UDX 2TEL model](/en/extensiones/UDX-2TEL).
-- The procedure for pairing and using a mobile phone [is explained in the TELCO section](/en/ux24/ux24-op-telco).
+The image shows an example connection to UNIDEX UX24.
+
+UDX TEL+BT connects to one of the UNIDEX 1 to UNIDEX 4 inputs and to the corresponding output. To facilitate connection, the rear panel connectors for UNIDEX 1 to 4 inputs are aligned with their associated outputs.
+
+### Input to output routing (mix-minus mode)
+
+| Input | Outputs (UX24) | Outputs (UX18) |
+| --: | :-: | :-: |
+| UNIDEX 1 | UNBAL 5 | UNBAL 1 |
+| UNIDEX 2 | UNBAL 6 | UNBAL 2 |
+| UNIDEX 3 | UNBAL 7 | UNBAL 3 |
+| UNIDEX 4 | UNBAL 8 | UNBAL 4 |
+
+## Configurations
+
+Once the **UDX 2TEL** adapter is connected, configure:
+
+- **Inputs**
+- **Outputs (sends)**
+- **Channels**
+
+### Configure Inputs
+
+1. On the main screen, access the `SETTINGS` option.
+2. **Turn the encoder** until selecting the UNIDEX input where UDX TEL\+BT is connected. If the input is currently configured as `MONO`, you will be able to select "L" and "R" individually.
+3. If it is configured as `STEREO`, the L/R pair will be selected. In this case, change `INPUT MODE` to `MONO`.
+   <Note>
+     The "L" input corresponds to Bluetooth.\
+     The "R" input corresponds to the land line (POTS).
+   </Note>
+4. Select the "UDX L" input. In the `UDX TYPE` option, choose `TEL+BT`.
+5. Tap the screen to display the `ASSIGNED TO CHANNEL` menu to assign a CHANNEL to Bluetooth. If you choose a channel that already has an input assigned, a warning will appear. If you continue, the input on that channel is replaced.
+   <Tip>
+     It is recommended to assign TELCO lines to hardware channels.\
+     The input gain can be adjusted **during operation** from the TELCO screen.
+   </Tip>
+6. Repeat from Step 4 for the "UDX R" input and assign a CHANNEL to the land line.
+7. Press `BACK` to return to the main screen.
+8. The next step will be to configure the output.
+
+### Configure Outputs
+
+1. From the main screen, access the `SETTINGS` option.
+2. In `SETTINGS`, select the `OUTPUTS` option.
+3. Using the encoder, select the output to which the UDX TEL+BT is connected. If the output is currently in `MONO` mode, you can individually select `OUT-L` and `OUT-R`.
+4. If configured as `STEREO`, the L/R pair will be selected. In this case, change the `AUDIO MODE` to `MONO`.
+   <Note>
+     The "L" output is the Bluetooth send.\
+     The "R" output is the phone line send.
+   </Note>
+5. Select `OUT-L` and set `SEND MODE` to `MIX-MINUS`. When activating `MIX-MINUS`, the output will be associated with its corresponding UNIDEX input.
+6. Repeat the operation for `OUT-R`.
+
+<Tip>
+  The **send level** to the line (OUT GAIN) can be adjusted **during operation** from the TELCO screen.
+</Tip>
+
+### Channel Configuration
+
+1. On the main screen, press `CHANNEL`. The `CUE` buttons will switch to `SELECT` mode.
+2. Press the `CUE/SELECT` button for the channel you want to configure. The console will exit `SELECT` mode and display the `CHANNEL` screen for the selected channel.
+3. Under the `MODE` option, open the menu and select `TELCO`. This will display the channels on the TELCO screen for call management.
+4. To edit the **label**, tap on the name. An on-screen keyboard will appear for text editing.
+5. Verify that the output assignment matches the UNIDEX input being used, and that the mode is set to MIX-MINUS.
+6. Press `BACK` to return to the main screen.
+
+<Warning>
+  TO PERMANENTLY STORE THE SETTINGS, **SAVE THE SCENE**.
+</Warning>
+
+---
+
+## Configurations
+
+Once the **UDX 2TEL** adapter is connected, configure:
+
+- **Inputs**
+- **Outputs (sends)**
+- **Channels**
+
+### Configure Inputs
+
+1. On the main screen, access the `SETTINGS` option.
+2. **Turn the encoder** until selecting the UNIDEX input where UDX TEL\+BT is connected. If the input is currently configured as `MONO`, you will be able to select "L" and "R" individually.
+3. If it is configured as `STEREO`, the L/R pair will be selected. In this case, change `INPUT MODE` to `MONO`.
+   <Note>
+     The "L" input corresponds to Bluetooth.\
+     The "R" input corresponds to the land line (POTS).
+   </Note>
+4. Select the "UDX L" input. In the `UDX TYPE` option, choose `TEL+BT`.
+5. Tap the screen to display the `ASSIGNED TO CHANNEL` menu to assign a CHANNEL to Bluetooth. If you choose a channel that already has an input assigned, a warning will appear. If you continue, the input on that channel is replaced.
+   <Tip>
+     It is recommended to assign TELCO lines to hardware channels.\
+     The input gain can be adjusted **during operation** from the TELCO screen.
+   </Tip>
+6. Repeat from Step 4 for the "UDX R" input and assign a CHANNEL to the land line.
+7. Press `BACK` to return to the main screen.
+8. The next step will be to configure the output.
+
+### Configure Outputs
+
+1. From the main screen, access the `SETTINGS` option.
+2. In `SETTINGS`, select the `OUTPUTS` option.
+3. Using the encoder, select the output to which the UDX TEL+BT is connected. If the output is currently in `MONO` mode, you can individually select `OUT-L` and `OUT-R`.
+4. If configured as `STEREO`, the L/R pair will be selected. In this case, change the `AUDIO MODE` to `MONO`.
+   <Note>
+     The "L" output is the Bluetooth send.\
+     The "R" output is the phone line send.
+   </Note>
+5. Select `OUT-L` and set `SEND MODE` to `MIX-MINUS`. When activating `MIX-MINUS`, the output will be associated with its corresponding UNIDEX input.
+6. Repeat the operation for `OUT-R`.
+
+<Tip>
+  The **send level** to the line (OUT GAIN) can be adjusted **during operation** from the TELCO screen.
+</Tip>
+
+### Channel Configuration
+
+1. On the main screen, press `CHANNEL`. The `CUE` buttons will switch to `SELECT` mode.
+2. Press the `CUE/SELECT` button for the channel you want to configure. The console will exit `SELECT` mode and display the `CHANNEL` screen for the selected channel.
+3. Under the `MODE` option, open the menu and select `TELCO`. This will display the channels on the TELCO screen for call management.
+4. To edit the **label**, tap on the name. An on-screen keyboard will appear for text editing.
+5. Verify that the output assignment matches the UNIDEX input being used, and that the mode is set to MIX-MINUS.
+6. Press `BACK` to return to the main screen.
+
+<Warning>
+  TO PERMANENTLY STORE THE SETTINGS, **SAVE THE SCENE**.
+</Warning>
+
+---
+
+## Pairing UDX TEL+BT with a mobile phone
+
+<Frame>
+  <img
+    src="/images/UDX_TELBT-connection.png"
+    alt="UDX TELBT Connection"
+    style={{ width:"82%" }}
+  />
+</Frame>
+
+The image shows a connection example to UNIDEX UX24.
+
+After completing the corresponding configurations, the Bluetooth channel appears on the TELCO screen. The next step is to pair a phone with the device.
+
+To learn how to pair and work with a mobile phone on the UNIDEX console, see the TELCO section of the corresponding model:
+
+[_OPERATION→ TELCO - Communications_ in UX24](/es/ux24/ux24-op-telco#Operación-con-teléfonos-móviles) \
+[_OPERATION→ TELCO - Communications_ in UX24](/es/ux18/ux18-op-telco#Operación-con-teléfonos-móviles)
+
+---
+
+## Connecting UDX TEL+BT to a Phone Line
+
+The steps to connect the land line (POTS) are:
+
+1. Connection to the phone line.
+2. Connection of an associated phone.
+3. Adjustment of the rejection factor.
+
+The procedure is detailed for the dual phone line adapter UDX 2TEL. [Click here to go to the explanation.](/es/extensiones/UDX-2TEL#Conexión-a-líneas-telefónicas)

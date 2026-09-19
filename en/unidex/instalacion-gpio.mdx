@@ -1,125 +1,129 @@
 ---
 title: "GPIO and Tally Light"
-description: "External device control via GPIO in UNIDEX"
-keywords: ["GPIO","Tally Light","installation"]
-tags: "IP consoles,UNIDEX"
+description: "External Device Control via GPIO in UNIDEX"
+keywords: ["GPIO", "Tally Light", "Installation", "On-Air Light"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "68d18216745ddee49a5f63e75580b06261d03c411c1c86fee3c4c48049d8feb1"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## GPIO Control
 
-The **GPIO** connector _(General Purpose Input/Output)_ provides inputs and outputs that allow controlling console functions (GPI) such as mic activation; or controlling external devices (GPO) like tally lights or audio processing.
+The **GPIO** _(General Purpose Input/Output)_ connector provides inputs and outputs that allow control of console functions (GPI), such as microphone activation; or control of external devices (GPO), such as indicator lights or audio processing.
 
-- **GPI** supports trigger signals of **5-15V/150mA** (high active).
-- **GPO 1 to 7** are _"open drain"_ type. They work as switches, connecting the output to ground. They support signals of **5–24 V / 250 mA**.
-- **PIN 8** provides **DC voltage** (varies by console model, see below). It can be used to directly trigger GPIs (with a switch). Or to power an external device controlled through a GPO (for example a light or small relay)
+- **GPI** supports trigger signals of **5-15V/150mA** (active high).
+- **GPO 1 to 7** are of the \_"open drain" type. \_They function as switches, connecting the output to ground. They support signals of **5–24 V / 250 mA**.
+- **PIN 8** supplies **DC voltage** (differs depending on the console model, see below). It can be used to trigger GPIs directly (with a switch). Or to power an external device activated via a GPO (for example, a light or a small relay)
 
-## Pin-out and configuration
+## Pin-out and Configuration
 
 <AccordionGroup>
   <Accordion title="GPIO UX24">
-    ### DB15 PIN-OUT (UX24)
 
-    <img
-      src="/images/UX24-GPIO.png"
-      alt="UX24 GPIO"
-      title="UX24 GPIO"
-      className="mx-auto"
-      style={{ width:"49%" }}
-    />
+### DB15 PIN-OUT (UX24)
 
-    <Note>
-      **GPO 8** provides **+12V / 250 mA** when active. 0V when inactive.
-    </Note>
-    ### ACTION CONFIGURATION
+<img
+  src="/images/ux24/UX24-GPIO.png"
+  alt="UX24 GPIO"
+  title="UX24 GPIO"
+  className="mx-auto"
+  style={{ width:"49%" }}
+/>
 
-    <img
-      src="/images/ux24/unidex-config-GPIO.png"
-      alt="Unidex Config GPIO"
-      title="Unidex Config GPIO"
-      className="mx-auto"
-      style={{ width:"64%" }}
-    />
+<Note>
+  **GPO 8** delivers **+12V / 250 mA** when active. 0V when inactive.
+</Note>
 
-    GPIO-triggered actions are defined in the `SETTINGS→GPIO` screen. Each **GP-IN** and **GP-OUT** can be associated with a channel and a specific action.
+### GPIO CONFIGURATION
 
-    Available actions for **GPI** are:
+<img
+  src="/images/ux24/unidex-config-GPIO.png"
+  alt="Unidex Config GPIO"
+  title="Unidex Config GPIO"
+  className="mx-auto"
+  style={{ width:"64%" }}
+/>
 
-    `UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A;  MASTER MIC B`
+The actions triggered by the **GPIO** are defined on the `SETTINGS→GPIO` screen. Each **GP-IN** and **GP-OUT** can be associated with a specific channel and action.
 
-    Available actions for **GPO** are:
+The available actions for **GPI** are:
 
-    `UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING;  OUTPUT +12V` (GPO8 only)
-  </Accordion>
-  <Accordion title="GPIO UX18">
-    ### DB15 PIN-OUT (UX18)
+`UNASSIGNED; CHANNEL ON/OFF; CHANNEL MUTE; MASTER MIC A; MASTER MIC B`
 
-    <img
-      src="/images/ux18_gpio.png"
-      alt="Ux18 Gpio"
-      title="Ux18 Gpio"
-      className="mx-auto"
-      style={{ width:"49%" }}
-    />
+The available actions for **GPO** are:
 
-    <Note>
-      **PIN 8** PROVIDES A FIXED VOLTAGE OF **+15 VDC / 100 mA** (max).
-    </Note>
-    ### ACTION CONFIGURATION
+`UNASSIGNED; CHANNEL ON/OFF; TALLY A; TALLY B; TELCO RING; OUTPUT +12V` (only GPO8)
+</Accordion>
 
-    GPIO-triggered actions are defined in the `SETTINGS→GPIO` screen. Each **GP-IN** and **GP-OUT** can be associated with a channel and a specific action.
+<Accordion title="GPIO UX18">
 
-    Available actions for **GPI** are:
+### DB15 PIN-OUT (UX18)
 
-    `UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A`
+<img
+  src="/images/ux18/ux18_gpio.png"
+  alt="Ux18 Gpio"
+  title="Ux18 Gpio"
+  className="mx-auto"
+  style={{ width:"49%" }}
+/>
 
-    Available actions for **GPO** are:
+<Note>
+  **PIN 8** PROVIDES A FIXED VOLTAGE OF **+15 VCC / 100 mA** (max).
+</Note>
 
-    `UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING`
-  </Accordion>
+### GPIO ACTION CONFIGURATION
+
+The actions that trigger the GPIO are defined in the `SETTINGS→GPIO` screen. Each **GP-IN** and **GP-OUT** can be associated with a channel and a specific action.
+
+The available actions for **GPI** are:
+
+`UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A`
+
+The available actions for **GPO** are:
+
+`UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING`
+
+</Accordion>
 </AccordionGroup>
 
 <Tip>
   **EXAMPLES**
 
   \
-  The following GPI configuration: **GPI 1  |  CHANNEL ON/OFF  |  CHANNEL 1**
+  The following configuration for GPI:  **GPI 1  |  CHANNEL ON/OFF  |  CHANNEL 1**
 
-  ...will make Channel 1 turn on or off according to the control signal present at **GPI 1** input.
+  ...will cause Channel 1 to turn on or off based on the control signal present at the **GPI 1** input.
 
-  The following GPO configuration: GPO 1  |   CHANNEL ON/OFF  |  CHANNEL 6
+  The following configuration for GPO: GPO 1  |   CHANNEL ON/OFF  |  CHANNEL 6
 
-  ...will change the state of **GPO 1** output according to Channel 6 being turned on or off.
+  ...will change the state of the **GPO 1** output based on whether Channel 6 is turned on or off.
 </Tip>
 
 ## GPIO Application Cases
 
-### LED Microphone Arm (GPO)
+### LED Gooseneck Arm (GPO)
 
-**GPO 1 to 7** outputs can work as **electronic switches**, switching LEDs connected to an external power supply, as long as current consumption does not exceed **250 mA**.
+The **GPO 1 to 7** outputs can function as **electronic switches**, controlling LEDs connected to an external power supply, provided the current draw does not exceed **250 mA**.
 
 <Danger>
-  If current consumption exceeds **250 mA**, an **external relay** must be used for switching. It is recommended to use **GPO 8** to directly control a 12V relay coil with consumption up to 250 mA.
+  If the current draw exceeds **250 mA**, an **external relay** must be used for switching. It is recommended to use **GPO 8** to directly drive a 12 V coil relay with a current draw of up to 250 mA.
 </Danger>
 
-The figure shows an example of direct connection of a **microphone arm with LED**, using **GPO-1**.
+The figure shows an example of directly connecting an **LED gooseneck microphone arm**, using **GPO-1**.
 
 <img
   src="/images/ux24/unidex_GPIO_brazo.jpg"
-  alt="UNIDEX GPIO arm"
-  title="UNIDEX GPIO arm"
+  alt="UNIDEX GPIO brazo"
+  title="UNIDEX GPIO brazo"
   style={{ width:"51%" }}
   className="mx-auto"
 />
 
-In the **GPIO configuration**, GPO outputs must be assigned to the ON/OFF function of the corresponding MIC channel.
+In the **GPIO configuration**, the GPO outputs must be assigned to the ON/OFF function of the corresponding MIC channel.
 
 Typical example:
 
@@ -127,11 +131,11 @@ Typical example:
 - **GPO 2 →** ON/OFF MIC Channel 2
 - etc.
 
-### Microphone Muting (using GPI)
+### Mute Microphone (GPI Usage)
 
-**GPI** inputs allow executing automated actions on the console.
+The **GPI** inputs allow automated actions to be executed on the console.
 
-One of the most useful is temporary channel muting (MUTE), ideal for implementing a **cough button** in the studio. This allows the announcer to mute their microphone without operator intervention.
+One of the most useful is the temporary channel mute (MUTE), ideal for implementing a **cough button** in the studio. This allows the presenter to mute their microphone without operator intervention.
 
 The following example shows the connection of a **momentary push button** to activate **GPI 1**.
 
@@ -145,29 +149,32 @@ The following example shows the connection of a **momentary push button** to act
 
 In this case:
 
-- **GPI 1** is configured with the **MUTE** action and associated with the desired channel.
-- **GPO 8** provides fixed voltage.
+- **GPI 1** is configured with the **MUTE** action and is associated with the desired channel.
+- **GPO 8** delivers a fixed voltage.
 
 <Warning>
-  On UX24, configure GPO-8 for fixed voltage. On UX18 pin-8 always provides fixed voltage
+  In **UX24**, configure GPO-8 for fixed voltage. In **UX18**, pin-8 always delivers fixed voltage.
 </Warning>
 
-During GPI-activated muting, if the operator **manually moves the fader**, the console returns control to them, and the microphone automatically returns to air.
+During a GPI-activated mute, if the operator **moves the fader manually**, the console returns control to them, and the microphone automatically goes back on-air.
 
-## "ON AIR" Warning Lights (Tally Light)
+## "ON-AIR" Indicator Lights (Tally Light)
 
-On the console's rear panel, there is a **12V / 250mA output** for connecting **"ON AIR"** warning lights. The UX24 model has two outputs: Tally Light A and B.
+On the rear panel of the console is the **12 V / 250 mA output** for connecting **"ON-AIR"** indicator lights.
+
+<Note>
+  The UX24 model handles two studios and has two Tally Light outputs: Studio A and Studio B.
+</Note>
 
 - Up to **two Solidyne LA100 on-air lights** can be connected per output.
-- For lights from other manufacturers, ensure total consumption **does not exceed 250 mA**.
+- For lights from other brands, ensure the total consumption **does not exceed 250 mA**.
 
 <Warning>
-  The on-air light outputs are protected by a **PTC (fusistor)** component that acts based on temperature.\
-  If current exceeds **250 mA**, the output automatically disconnects to protect the console.
+  The on-air light outputs are protected by a **PTC (fusistor)** component that acts on temperature. If the current exceeds **250 mA**, the output is automatically disconnected to protect the console.
 
   To restore the output:
 
   1. Disconnect the load (the light).
-  2. Review the system to identify the cause of overconsumption (e.g. excess LEDs or short circuit).
+  2. Check the system to identify the cause of the overconsumption (e.g., too many LEDs or a short circuit).
   3. Wait for the PTC to cool down before reconnecting.
 </Warning>

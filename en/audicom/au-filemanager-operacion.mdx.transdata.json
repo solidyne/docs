@@ -1,0 +1,83 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "d6436410c4556f068f4258f49adda8df5c7e2aa91fb895dc56a05c909a375509",
+      "translation": "## File Manager Operation\n\n<Note>\n  This section corresponds to the **File Manager** module (discontinued in Audicom Black and replaced by **Media Manager**). It is maintained for operational compatibility and for users in transition.\n</Note>",
+      "title": "Operación de File Manager",
+      "level": 2
+    },
+    {
+      "hash": "5d49aa6ca53a156d061ffad0c0843a6ddebf608da2f0d2be137eb4db4a9b4aca",
+      "translation": "## Expanded Mode\n\n- When you press the **red arrow**, a **second window** appears to the right of the module (similar to the main one).\n- It is used to **move or copy** files between folders, among other functions.\n- Clicking on a file changes the **active window**, indicated by the **green arrow**.\n- The playback buttons act on the file **selected in the active window**.",
+      "title": "Modo expandido",
+      "level": 2
+    },
+    {
+      "hash": "7d8e0650f4b191978c20a93706659246d73bcdb2cef5f741f90ce948e2bbf74c",
+      "translation": "## Moving and Copying Files\n\n<Steps>\n  <Step title=\"Open second window\">\n    Enable **expanded mode** (red arrow) to display two panels.\n  </Step>\n  <Step title=\"Select files\">\n    - Multiple selection with **Ctrl + click** (one by one).\n    - Continuous range with **Shift + click** (from first to last).\n  </Step>\n  <Step title=\"Choose destination\">\n    In the secondary window, open the **destination folder**.\n  </Step>\n  <Step title=\"Move\">\n    Drag the selection to the destination folder.\\\n    If the files were **registered in the Database**, their **location updates** automatically.\n  </Step>\n  <Step title=\"Copy\">\n    Drag **while holding Ctrl**: you'll see a **(+)** sign indicating copy.\n  </Step>\n</Steps>\n\n<Info>\n  **autoDB Folders**\n\n  - If moving/copying music to an **autoDB folder**:\\\n    a) If the file **was not** registered, it gets **added** automatically.\\\n    b) If it **was already** registered, all info remains **except \"Genre\"**, which takes the **new folder's name**.\n  - From an **autoDB → non-autoDB folder**: the Database **remains unchanged**.\n  - The **autoDB logic** applies **only during move/copy**; it doesn't modify info afterward.\n</Info>\n\n<Warning>\n  Avoid moving/renaming/deleting registered files **using Windows tools**:\n\n  - If moved, the location will correct when played on-air (AutoDJ/InfoMusic), but requires **exhaustive searches**.\n  - If deleted or renamed, the Database will mark the media as **\\_missing**.\n</Warning>",
+      "title": "Mover y copiar archivos",
+      "level": 2
+    },
+    {
+      "hash": "7a1b25ade3f660b5ece7dc20505b48e063f3958c2a64475f2aa18cd43fc7cc7d",
+      "translation": "## Renaming Material\n\n- Press **F2** to open the **Artist / Title** edit window.\n- There's no need to type the file extension (it remains unchanged).\n- Both the **filename** and the **database title** will be updated (if the folder is **autoDB** or if the file was already registered in InfoMusic).\n- Recommended filename format: **\"Artist - Title.ext\"**.\n- The **[Abc]** button toggles **UPPERCASE/lowercase**.\n\n**Examples**\n\n- \"Radio Buenos Aires.mp3\" → Empty Artist field; Title \"Radio Buenos Aires\". Using **F2**: Artist \"Promocional\"; becomes \"Promocional - Radio Buenos Aires.mp3\".\n- \"05 - Lucho Gonzalez - Centro al corazón.mp3\" → Artist \"05 - Lucho Gonzalez\"; Title \"Centro al corazón\". Adjust with **F2**.\n- \"JORGE FANDERMOLE\" → **[Abc]** → \"Jorge Fandermole\".",
+      "title": "Renombrar el material",
+      "level": 2
+    },
+    {
+      "hash": "a5cf99fcf06add112fe40d6d7e72f12e4a3cdc426771df7259c8afc1371bf848",
+      "translation": "## Delete Files\n\n- Right-click on the file → **Delete** → confirm.\n- If it was in the **Database**, it will also be removed there.\n- Supports multiple deletions with prior selection.\n\n<Danger>\n  - Files are deleted **directly** (they do not go to the Recycle Bin).\n  - Do not delete registered media from **Windows**: if you do, you will need to clean them up **manually** in the Database using **InfoMusic**.\n</Danger>\n\n---",
+      "title": "Borrar archivos",
+      "level": 2
+    },
+    {
+      "hash": "57b24006922ff829375d656a679f38dd6c765d852d9f715315065249003ad2aa",
+      "translation": "## Search Files `[F3]`\n\n- **F3** (or right-click → _Search_) opens the criteria dialog:\n\n**Available Criteria**\n\n- **Search**: string for **filename** (not database title).\n- **Exhaustive mode**: if disabled, searches only for files that **start with** the string.\n- **Exclude**: words to exclude.\n- **Duration longer than [s]** / **shorter than [s]**.\n- **Local disks only**.\n- **Current directory only**.\n- **Between dates** (based on Windows _modified date_).\n- **Between times** (based on Windows _modified time_).\n\n**Results**\n\n- Listed in the **Search Results** window.\n- From there you can: **play**, **insert into CyberPlay**, **send to Live Assist**, **delete** (if you have permissions).\n- **Report** generates a **.txt** file with the results.\n\n---",
+      "title": "Buscar archivos `[F3]`",
+      "level": 2
+    },
+    {
+      "hash": "9686c2c95dcc91edd89a301c568ccc2f98f44c6350c3b89c4b9998aa3dd3e7f2",
+      "translation": "## Add New Folders\n\nFile Manager displays all subfolders under `\\Audicom\\Audio` and `\\Audicom\\Text`.\n\n- To create: click the **New Folder** button and complete:\n  - **Name** (max. 15 characters).\n  - **Disk or server** (local or UNC with write permissions).\n  - **Type**:\n    - **Audio** (audio media).\n    - **Text** (news; can associate text with audio for CyberPlay/Teleprompter).\n    - **Extras** (folders outside `\\Audicom\\Audio` temporarily mapped in File Manager; **manual use only**).\n  - **autoDB** (automatic registration in InfoMusic).\n  - **Class** (key for autoDB).\n  - **Color** (shared tab across the network).\n  - **Sort by** (Artist / Title / Duration).\n  - **Fade** (tenths of a second: _15_ = 1.5 s).\n\n<Info>\n  **autoDB** rules (summary):\n\n  - Prioritizes the **filename**: “Artist - Title.ext”. Uses the **last hyphen** as a separator.\n  - Reads **ID3v1/v2** if available.\n  - **Class** in DB = “Class” defined in _New Folder_.\n  - If **Class = Music** → **Genre = folder name**; otherwise, Genre remains empty.\n  - Default **Fades**: music **1 s in/out**; non-music **0 s**.\n  - Duplicate titles → suffixes **(2), (3)…**.\n</Info>\n\n<Warning>\n  - Maximum **320 folders** (including all local and network drives).\n  - Avoid **duplicate names**: File Manager will display only the first one found based on the order declared in `Audicom.ini`.\n  - Declare **local drives** first, followed by **network drives**.\n</Warning>\n\n---",
+      "title": "Agregar nuevas carpetas",
+      "level": 2
+    },
+    {
+      "hash": "73326ab3cd38e0a5b53db368229a817a62bd23919a6441c096d5388bcfffe5e6",
+      "translation": "## Folder Properties (INFO)\n\n- Right-click on the tab → **INFO**.\n- **Name**: read-only.\n- **autoDB**: enables/disables automatic logging.\n- **Color**: 8 available colors for grouping and filtering.\n- **Sort by**: defines the **default** order when entering.\n- **Show Artist**: hides/displays the column (useful in non-music folders).",
+      "title": "Propiedades de una carpeta (INFO)",
+      "level": 2
+    },
+    {
+      "hash": "c05e47572da9d67f28716dbea8e11af60a05acf5955ded120ab7712e7b2e6eaa",
+      "translation": "## Exploring the Network\n\n- The main window displays **all** AUDICOM network folders (subject to user restrictions).\n- In **expanded mode**, the right pane can show **all** folders or **only** those from a selected **terminal** (top menu).\n- Useful when **folders with identical names** exist on different terminals: the local tab shows **only its local folder**; to view another terminal's folder, use the right panel with terminal selection.",
+      "title": "Explorando la red",
+      "level": 2
+    },
+    {
+      "hash": "d16c0a752ad6045b89c557f2687218e7117aa774a23f71b5114cc4ca0e9cbf9f",
+      "translation": "## Dropdown Menu (Right-click on File)\n\n- **CUE** / **CUE End** / **CUE Stop**\n- **Add to Play Queue**: Adds the file to the **play queue** of File Manager (plays next; counter changes color).\n- **Save as PlayList.txt**: Saves a selection (≥2 titles) as a **playlist** (saved in **PGM**).\n- **AutoEdit…**: Opens in **AutoEdit** for automatic start/end silence trimming.\n- **Edit**: Opens with the **associated Windows editor** (default FX5).\n- **InfoMusic**:\n  - On-Air: Displays data in **InfoMusic On-Air**.\n  - In Production: Opens **InfoMusic-Prod**.\n- **Search**: Opens the search dialog (equivalent to **F3**).\n- **Delete**: Deletes from disk and the Database.\n- **Rename**: Edits **Artist/Title** with database update (equivalent to **F2**).\n- **Sort by Title / Duration** (equivalent to clicking the header).\n- **Show…**: Quick filters to view **recent files**.\n\n---",
+      "title": "Menú desplegable (clic derecho sobre archivo)",
+      "level": 2
+    },
+    {
+      "hash": "6b997d9b3853d767bf3ebff5386f3676d8b24c12208a8d51a9a261039112c084",
+      "translation": "## Advanced Information\n\n**Required Structure**\n\n- All units must have: `\\Audicom\\Audio` (and `\\Audicom\\Text`).\n- File Manager **only** shows folders within **Audio**.\n- **Subfolders** within **Audio** folders are **not supported** (they are ignored).\n- If you create a folder on a disk without structure, File Manager will **create it** automatically.\n\n**Drive Declaration**\n\n- In **Configuration Panel \\> Folders**:\n  - **Local**: `AudioDrives=` with contiguous letters.\n  - **Network (UNC)**: paths separated by **semicolons** (e.g. `\\\\Server\\C;\\\\Production\\C`).\n  - See **Audicom on Network \\> File Configuration**.",
+      "title": "Información avanzada",
+      "level": 2
+    },
+    {
+      "hash": "7e4fcb4215e92ae114e7775a3181f7505cd157e2d86e01759f662c6798089b43",
+      "translation": "### Import Folders\n\n- In expanded mode, the **Import Folder** button appears (CD icon).\n- Allows **temporary loading** of a folder **outside** `\\Audicom\\Audio` (including CD-ROM/network).\n- Added as an **extra tab** to copy files without using Explorer.\n- To **remove** imported folders: **close** File Manager (Alt+F4).\n- Imported folders **are not retained** when reopened.\n\n<Warning>\n  Files from **extra/imported folders**:\n\n  - Can be **manually played** and **dragged to CyberPlay**.\n  - **Cannot** be included in **LOG/PGM** or stored in the **Database**.\n  - Are **excluded from automatic programming**.\n</Warning>",
+      "title": "Importar carpetas",
+      "level": 3
+    },
+    {
+      "hash": "37a9add916e1ebf421a382a3e5cd8409eaf4fb6f3897416cf457f997e0b3a6f1",
+      "translation": "### Deleting Folders\n\n- Folders can only be deleted if they are **empty** (double-click on the tab).\n- To **rename**: create a folder with the new name, **move** all contents using File Manager, then delete the empty one.\n- This maintains database **consistency**.",
+      "title": "Eliminar carpetas",
+      "level": 3
+    }
+  ]
+}

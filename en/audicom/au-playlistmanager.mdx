@@ -1,22 +1,20 @@
 ---
 title: "PlayList Manager"
-description: "Using auxiliary playlists"
+description: "Using Auxiliary Playlists"
 keywords: ["PlayList Manager"]
-tags: "Software,Audicom"
+tags: ["Software", "Audicom"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "eee50b3a8518a36b34027c2622d7aa2c18619a5b06daa7a97a422eb5733bd030"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-## Auxiliary playlists
+## Auxiliary Playlists
 
-You can work with pre-built title lists (**Playlists**).\
-AUDICOM includes 4 auxiliary players called **PlayList Managers**, accessible from the **PLAYLIST 1** to **PLAYLIST 4** buttons in the toolbar.
+It is possible to work with prearranged title lists (**Playlists**).\
+AUDICOM features 4 auxiliary players called **PlayList Managers**, accessible via the **PLAYLIST 1** to **PLAYLIST 4** buttons in the toolbar.
 
 <img
   src="/images/audicom/au-playlistmanager.jpg"
@@ -26,35 +24,33 @@ AUDICOM includes 4 auxiliary players called **PlayList Managers**, accessible fr
   style={{ width:"35%" }}
 />
 
----
+## Creating and Loading Playlists
 
-## Creating and loading lists
+- You can drag titles from any AUDICOM window to a PlayList Manager.
+- The playlist is saved as a `.txt` file in the `\Audicom\PGM` folder.
+- PlayList Manager supports playlists in **.m3u** and **.plt** formats, editable with **CyberPlay Editor** (option: _Playlists_).
 
-- Titles can be dragged from any AUDICOM window to a PlayList Manager.
-- The list is saved as a `.txt` file in the `\Audicom\PGM` folder.
-- PlayList Manager supports **.m3u** and **.plt** format lists, editable with **CyberPlay Editor** (option: _Playlists_).
-
-### How to create a list
+### How to create a playlist
 
 1. Open a PlayList module (or use `[Alt + P]` for PlayList 1).
 2. Drag titles from **Media Manager**, **InfoMusic**, **Live Assist** or **CyberPlay**.
 3. Enter a name and press **Save**.
 
-Lists are saved in `.txt` format in `\Audicom\PGM`.
+Playlists are saved in `.txt` format in `\Audicom\PGM`.
 
-### How to load an existing list
+### How to load an existing playlist
 
-- Select it from the bottom dropdown menu.
-- To add external lists, copy them directly to the `\Audicom\PGM` folder.
+- Select it from the dropdown menu at the bottom.
+- To add external playlists, copy them directly to the `\Audicom\PGM` folder.
 
 <Info>
-  Titles appear in different colors according to their last air date.
+  Titles appear in different colors based on their last broadcast date:
 
-  - Music (Class = Music in database): light blue background.
-  - Promotional cuts: yellow background.
+  - Music (Class = Music in the database): light blue background.
+  - Promotional spots: yellow background.
 </Info>
 
-PlayList Manager supports CyberPlay programming commands:
+PlayList Manager supports CyberPlay scheduling commands:
 
 - Text comments.
 - Pauses.
@@ -63,13 +59,13 @@ PlayList Manager supports CyberPlay programming commands:
 
 ---
 
-## Preview listening
+## Preview Monitoring
 
-- Double click on a title or **CUE** button → playback on preview monitoring channel.
+- Double-click on a title or **CUE** button → playback on preview monitor channel.
 - **StopCUE** button → stops playback.
-- If **CUE** mode is activated from the display (double click to the left of the counter):
-  - Audio is not reported on RDS/iRDS.
-  - It is not logged in `.air` files either.
+- If **CUE** mode is activated from the display (double-click to the left of the counter):
+  - Audio is not reported in RDS/iRDS.
+  - It is also not recorded in `.air` files.
 
 <Warning>
   This mode is not recommended in practice, but some operators use it to work directly with the console's CUE, treating each PlayList Manager as an independent player.
@@ -77,38 +73,38 @@ PlayList Manager supports CyberPlay programming commands:
 
 ---
 
-## Content broadcasting
+## Content Broadcasting
 
-Each PlayList Manager can be assigned to a different audio device, defined in the **Configuration Panel**, to route it to different channels of the mixing console.
+Each PlayList Manager can be assigned to a different audio device, defined in the **Configuration Panel**, to route it to various channels on the audio console.
 
-- To send a title on air: select it and press **Play**.
+- To send a title on-air: select it and press **Play**.
 - Normal mode: playback stops when finished.
-- Continuous mode: plays all titles one after another.
-  - Pauses can be inserted from the right-click menu.
+- Continuous mode: plays all titles sequentially.
+  - Pauses can be inserted via the right-click menu.
 
-### Playback controls
+### Playback Controls
 
-- Progress bar: allows moving within the file (left click).
-- Slider control: adjusts speed (**Pitch**) ±5%.
-- **Insert** button: inserts the entire list into CyberPlay, above the yellow cursor.
-  - Titles are distributed respecting commercial blocks.
+- Progress bar: allows navigation within the file (left click).
+- Slider: adjusts playback speed (**Pitch**) ±5%.
+- **Insert** button: inserts the entire playlist into CyberPlay, above the yellow cursor.
+  - Titles are distributed while respecting commercial breaks.
 - Individual insertion: drag a title to the CyberPlay window.
 
 <Note>
-  - If no item is selected in CyberPlay, the list will not be inserted.
-  - The comments window will show: _Define insertion point_.
+  - If no item is selected in CyberPlay, the playlist will not be inserted.
+  - The comments window will display: _Define the insertion point_.
 </Note>
 
 ---
 
-## Duration restrictions
+## Duration Constraints
 
 <Danger>
-  If a PlayList exceeds the program block duration, **only titles that fit until the block ends will be inserted**.\
-  It does not extend to the next program.
+  If a PlayList exceeds the duration of the program block, **only the titles that fit until the block ends will be inserted**.\
+  It does not extend into the next program.
 </Danger>
 
 Example:
 
-- Inserting a 1-hour PlayList at 17:30 in a live block ending at 18:00.
-- Only titles up to 18:00 will be inserted.
+- Insert a 1-hour PlayList at 5:30 PM in a live block that ends at 6:00 PM.
+- Only titles up to 6:00 PM will be inserted.

@@ -1,0 +1,47 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "8d94cf388d6701a56606354df07f16ed235d0a725c89f40930cf0039bcc07b62",
+      "translation": "<img\n  src=\"/images/mx2100/mx2100-frente.png\"\n  alt=\"Mx2100 Front Panel\"\n  title=\"Mx2100 Front Panel\"\n  className=\"mx-auto\"\n  style={{ width:\"71%\" }}\n/>",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "c04a3e8b2b38c86cf70ed7fd24587c28ae12c770a9ba65651bfa9c84b254edc8",
+      "translation": "## Front Panel",
+      "title": "Panel frontal",
+      "level": 2
+    },
+    {
+      "hash": "160f07419b83db7d8ef0ead190da4d049bff05306aeff846a5c76e66c02b73dd",
+      "translation": "### Power On\n\nThe unit is powered on by pressing the **ON** button, whether it is connected to the charger or operating on internal battery.\n\n<Note>\n  When the unit is connected via USB, to the charger, or to a computer, the charge indicator LED (**CHG**) remains lit even when the console is off.\\\n  Battery life: 16 hours of continuous use.\\\n  Total charging time: 12 hours.\\\n  The charging system automatically reduces the current when it reaches 100%, so it can remain connected indefinitely.\n</Note>\n\n<Warning>\n  Remember to turn off the console after use to avoid unnecessary battery consumption.\n</Warning>\n\n---",
+      "title": "Encendido",
+      "level": 3
+    },
+    {
+      "hash": "7c7f206ac2ac4851d845a0c883b79ee54d375b32575e7d9bc8fca5fa8974fc77",
+      "translation": "## Program Mixer\n\nThe program signal (**PGM**) is generated from the sum of the sources: **MIC-1, MIC-2, MIC-3, MIC-4 (built-in), LINE, Bluetooth, and USB**.\\\nSome inputs share controls and their availability depends on the console's connection method.\n\n- The PGM signal is sent to the radio via telephone or computer with Internet.\n- It is also present at the **BAL OUT** connector on the rear panel.\n\n**MIC-3/USB Control**\n\nSwitches between the MIC-3 input or the computer connected to the USB. When the MX2100 is used connected to a computer for Internet transmission, a microphone **must be connected to MIC-3**. In this condition, USB does not enter the PGM mix, but it is heard in the headphones as a direct return.\n\n**MIC-4/LIN/Bluetooth Control**\n\nHandles the signal from the built-in mic, the LINE input, or the Bluetooth device; depending on the operating condition:\n\n- MIC-4 signal is available if USB or the line input is **NOT** being used.\n- LINE signal is available only when LIN-4 is connected (overrides MIC-4).\n- Bluetooth return is available in the PGM mix only when the console is connected via USB (scenario of transmission from the external computer).",
+      "title": "Mezclador de programa",
+      "level": 2
+    },
+    {
+      "hash": "7a3942782b502f42f3b4b2a762aa6f015ad1afb14b18604565b8703c5a6e038d",
+      "translation": "## Headphones\n\nThe headphone mix varies depending on the usage mode:\n\n- **(a) Telephone communication (land line or Bluetooth):**\n  - PGM mix: MIC-1, MIC-2, MIC-3, and Line/MIC-4.\n  - Direct return from Studios (hybrid or Bluetooth).\n  - Ring tone on incoming calls.\n- **(b) USB and external computer with unidirectional streaming:**\n  - PGM mix: MIC-1, MIC-2, USB, and Bluetooth (used to bring another mobile phone on-air).\n  - Return from USB (return from Studios is not used due to streaming delay).\n- **(c) USB and external computer with real-time link (VoIP):**\n  - PGM mix: MIC-1, MIC-2, MIC-3, and LINE.\n  - USB return (Studios).\n  - Bluetooth return.\n  - Hybrid return.\n\n<Note>\n  The field reporter hears themselves through the program mix.\\\n  The operator in Studios does not need to forward their signal.\n</Note>\n\n<Warning>\n  The noise floor in the headphones increases if the hybrid is active (the **ON-AIR** button is pressed).\\\n  Verify that it is not pressed when the hybrid is not in use.\n</Warning>\n\n---",
+      "title": "Auriculares",
+      "level": 2
+    },
+    {
+      "hash": "a02e78ed5d4bc6a405d9354ac07ab83710d6d21a8a5956ff7f1fffa8ce8031fa",
+      "translation": "## Level Indicator\n\n- Dual LED indicator shows the action of the internal compressor.\n- Green LED: low level, no compression.\n- Red LED: indicates compression.\n- The greater the compression, the higher the intensity of the red LED.\n\n<Note>\n  The proper operating level is achieved when signal peaks occasionally activate the red LED.\n</Note>\n\n---",
+      "title": "Indicador de nivel",
+      "level": 2
+    },
+    {
+      "hash": "3d1d8436c1b9afa1d1122c58cccb204f4d0001a540f7a5aaefa5abec063f9feb",
+      "translation": "### Compressor Action\n\nThe MX2100 incorporates an **automatic compressor + limiter**, which keeps signal peaks constant at the output.\n\n- Improves the signal-to-noise ratio.\n- Ensures uniformity across different transmission channels.",
+      "title": "Acción del compresor",
+      "level": 3
+    }
+  ]
+}

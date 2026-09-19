@@ -11,16 +11,14 @@ translation:
   reviewed_at: "AAAAMMDD"
 ---
 
-## Parear um telefone móvel
+## Emparelhar um telefone celular
 
-Qualquer celular com **Bluetooth** pode ser pareado com a DX816/822.\
-A distância máxima é de 5 m, embora seja recomendado manter o equipamento próximo (nunca sobre o console).
+Qualquer telefone celular com **Bluetooth** pode ser emparelhado com a DX816/822.<br />A distância máxima é de 5 m, embora seja recomendado manter o equipamento próximo (nunca sobre a console).
 
-O telefone registra apenas uma vez o código único do console (ID). Posteriormente, a conexão é automática ao ativar o Bluetooth em ambos os equipamentos.
+O telefone registra uma única vez o código único da console (ID). Posteriormente, a conexão é automática ao ativar o Bluetooth em ambos os equipamentos.
 
 <Warning>
-  O módulo Bluetooth recebe alimentação pelos canais **USB-1 ou USB-2**.\
-  Se nenhum estiver conectado a um PC, utilize uma **fonte USB externa** (um carregador padrão) com o cabo fornecido.
+  O módulo Bluetooth recebe alimentação dos canais **USB-1 ou USB-2**.<br />Se nenhum estiver conectado a um PC, utilize uma **fonte USB externa** (um carregador padrão) com o cabo fornecido.
 </Warning>
 
 ### **Procedimento de emparelhamento:**
@@ -55,13 +53,11 @@ O telefone registra apenas uma vez o código único do console (ID). Posteriorme
 ### Ajuste do volume Bluetooth
 
 <Danger>
-  O ajuste deve ser feito durante uma chamada ativa por Bluetooth.\
-  O volume do celular é independente do volume do link Bluetooth.\
-  Se ajustar sem chamada ativa, somente alterará o alto-falante interno do telefone.
+  O ajuste deve ser feito durante uma chamada ativa por Bluetooth.<br />O volume do telefone celular é independente do volume do enlace Bluetooth.<br />Se ajustar sem chamada ativa, apenas alterará o alto-falante interno do telefone.
 </Danger>
 
 - O volume Bluetooth fica armazenado no telefone.
-- Recomenda-se fixá-lo no **máximo** para obter a melhor relação sinal-ruído.
+- Recomenda-se configurá-lo no **máximo** para obter a melhor relação sinal-ruído.
 
 ---
 
@@ -82,17 +78,9 @@ import tierras from '/snippets/snippet-tierras.mdx';
 
 ## Conexão de linhas telefônicas
 
-O canal híbrido gerencia **duas linhas telefônicas fixas** e **um telefone celular** vinculado via Bluetooth.
+O canal de híbrido telefônico gerencia **duas linhas telefônicas fixas (POTS)** e **um telefone celular** emparelhado por Bluetooth.
 
-No painel traseiro do console há **quatro conectores RJ11**:
-
-<img
-  src="/images/816/816-POTS.png"
-  alt="Conectores RJ11"
-  title="816816 POTS Pn"
-  className="mx-auto"
-  style={{ width:"40%" }}
-/>
+No painel traseiro da console há **quatro conectores RJ11**:
 
 <img
   src="/images/816/816-POTS.png"
@@ -102,35 +90,33 @@ No painel traseiro do console há **quatro conectores RJ11**:
   style={{ width:"40%" }}
 />
 
-- Duas linhas telefônicas (para conexão à rede pública ou a uma central PBX).
-- Dois telefones associados (rotulados como “SET”), geralmente usados pela produção para atender chamadas.
+- Duas linhas telefônicas (para conectar à rede pública ou a uma central PBX).
+- Dois telefones associados (rotulados como "SET"), geralmente usados pela produção para atender chamadas.
 
 <Warning>
-  As linhas possuem proteção contra sobretensões (até 2.000 V) através de varistores internos.\
-  Entretanto, é obrigatório **instalar protetores externos** conectados a aterramento de haste de 2 m para centrais públicas. **A garantia do equipamento não cobre danos causados por raios**.
+  As linhas estão protegidas contra sobretensões (até 2.000 V) por meio de varistores internos.<br />No entanto, é essencial **instalar protetores externos** conectados à haste de aterramento de 2 m para centrais públicas. **A garantia do equipamento não cobre danos causados por raios**.
 </Warning>
 
 ---
 
 ### Ajuste de rejeição (Null)
 
-Este ajuste aplica-se exclusivamente às **linhas terrestres**. É realizado uma única vez durante a instalação.\
-A rejeição evita que o sinal transmitido retorne misturado à voz do entrevistado, melhorando a qualidade do locutor local.
+Este ajuste aplica-se apenas às **linhas telefônicas fixas (POTS)**. É realizado uma única vez durante a instalação.<br />A rejeição evita que o sinal transmitido retorne misturado à voz do entrevistado, melhorando a qualidade do locutor local.
 
 **Procedimento:**
 
 1. Atribua o Canal de Telecomunicações à saída **REC** (para não ajustar no ar).
 2. Estabeleça uma chamada e peça ao entrevistado que fale.
 3. Ajuste o nível da chamada com o fader do Canal 8, até que o VUmetro REC alcance a zona branca.
-4. Ative um canal de microfone (sobre REC) e peça a alguém que fale do Estúdio.
-5. Ouvindo a voz local em REC, gire o controle **NULL** em um sentido e em outro até encontrar o ponto óptimo, que é obtido quando o sinal local que se soma ao microfone via híbrido é mínimo.
+4. Ative um canal de microfone (sobre REC) e peça a alguém que fale desde o Estúdio.
+5. Ouvindo a voz local em REC, gire o controle **NULL** em um sentido e em outro até encontrar o ponto ótimo, que é obtido quando o sinal local que se soma ao microfone via híbrido é mínimo.
 6. Este ajuste depende da linha telefônica. Se a linha telefônica for alterada, repita o ajuste.
 
 ---
 
 ## Híbrido externo
 
-As consolas DX incluem um conector para **External Hybrid**, que gerencia programa e retorno de híbrido externo por meio de um jack TRS de 6,35 mm (¼”).
+As consoles DX incluem um conector para **External Hybrid**, que gerencia programa e retorno de híbrido externo por meio de um jack TRS de 6,35 mm (¼”).
 
 <img
   src="/images/816/816-HibExt.bmp"
@@ -140,15 +126,7 @@ As consolas DX incluem um conector para **External Hybrid**, que gerencia progra
   style={{ width:"77%" }}
 />
 
-<img
-  src="/images/816/816-HibExt.bmp"
-  alt="816 Hib Ext Bm"
-  title="816 Hib Ext Bm"
-  className="mx-auto"
-  style={{ width:"77%" }}
-/>
+- **Saída (Tip)**: Retorno de microfones e programa para a linha. Este sinal é uma cópia de PGM menos o áudio de linhas telefônicas (**MIX-MINUS**). Conectar à \*\*entrada "retorno a linhas" \*\*do híbrido externo.
+- **Entrada (Ring)**: Sinal proveniente do híbrido externo para a console. É somado ao bus de PGM, mas não ao MIX-MINUS. Deverá ser conectado à saída do híbrido telefônico externo.
 
-- **Saída (Tip)**: Retorno de microfones e programa para a linha. Este sinal é uma cópia de PGM menos o áudio de linhas telefônicas (**MIX-MINUS**). Conectar à **entrada "retorno para linhas"** do híbrido externo.
-- **Entrada (Ring)**: Sinal proveniente do híbrido externo para a console. É somado ao bus de PGM, mas não ao MIX-MINUS. Deve ser conectado à saída do híbrido telefônico externo.
-
-O áudio de retorno passa pelo mesmo circuito que o híbrido interno. O fader principal do **Canal 8** opera da mesma forma que com as linhas internas, permitindo enviar ao ar ou para CUE conforme a posição.
+O áudio de retorno passa pelo mesmo circuito que o híbrido interno. O fader principal do **Canal 8** opera da mesma forma que com as linhas internas, permitindo enviar ao ar ou ao CUE conforme a posição.

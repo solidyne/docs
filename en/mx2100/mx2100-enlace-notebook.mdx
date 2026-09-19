@@ -1,19 +1,17 @@
 ---
 title: "Laptop + Internet Link"
-description: "Operation description when broadcasting using an external computer"
+description: "Description of operation when broadcasting using an external computer"
 keywords: ["USB", "link", "streaming"]
-tags: ["portable consoles", "MX2100"]
+tags: ["consolas portátiles", "exteriores", "MX2100"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "efe46f0bd751b93950ff396e52dda2b5d05bab4a839689572e95e9cf58f6b416"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-## Case 1: Real-time Remote Broadcasting
+## Case 1: Real-time remote mobile phone
 
 <img
   src="/images/mx2100/mx2100-enlace-bluetooth.png"
@@ -23,97 +21,97 @@ translation:
   style={{ width:"96%" }}
 />
 
-### About Broadcasting
+### About Transmission
 
-- Communication with the radio station is established from a **laptop connected via USB** to the MX2100.
-- Alternatively, a **tablet or smartphone connected via Bluetooth** can be used.
-- The mobile device uses a communications application, such as **Skype®** to communicate with the Studio.
-- Cellular connections via Bluetooth or landline can be used as **backup** for the Internet link.
+- Communication with the radio station is established from a **USB-connected laptop** to the MX2100.
+- Alternatively, a **Bluetooth-connected tablet or smartphone** can be used.
+- The mobile device uses a communications application, for example **Skype®**, to communicate with the Studios.
+- Bluetooth or land line (POTS) connections to a mobile phone can be used as a **backup** for the Internet link.
 
 <Warning>
-  At the Studio, the operator should **NOT send background music in the return feed**. \
+  In the Studios, it is advisable for the operator **NOT to send background music in the return feed**. \
   Only voices should be sent.\
-  In applications like Skype®, communication is _half-duplex_, and background music could cause interruptions in the remote audio.
+  In applications like Skype® the communication is *half-duplex*, and the music bed could cause interruptions in the mobile phone's audio.
 </Warning>
 
 <Note>
-  If Bluetooth is used to communicate with the radio station in an emergency, the **MIC-4/LIN/Bluetooth** control must remain closed to avoid a feedback loop.\
-  The Bluetooth return feeds directly into the headphone mix.
+  If Bluetooth were to be used to communicate with the radio station in an emergency situation, the **MIC-4/LIN/Bluetooth** control must remain closed to avoid a feedback loop.\
+  The Bluetooth return feed goes directly into the headphone mix.
 </Note>
 
-### About Studio Return Feed
+### About Studio Return
 
-- The mix generated in the console is sent via USB to the laptop, which transmits it to the Studio.
-- From the laptop, the Studio return enters the console via USB, directly to the **headphone mix**.
+- The mix generated in the console is sent via USB to the laptop, which transmits it to the Studios.
+- From the laptop, the Studio return enters the console via USB, directly into the **headphone mix**.
 - Connecting a microphone to the **MIC-3** input triggers the **USB return switching** to the headphone mix.
 - In headphones, the operator hears both the Studio return and the program mix (**MIC-1, MIC-2, MIC-3**).
 
 <Danger>
-  In a two-way communication with Studio via Internet, a microphone must **ALWAYS be connected to the MIC-3 input**. This ensures the USB return is routed to the headphones.\
-  If no microphone is connected to MIC-3:
+  In a bidirectional communication with Studios via the Internet, a microphone must **ALWAYS be connected to the MIC-3 input**. This ensures the USB return is routed to the headphones.\
+  If a microphone is not connected to MIC-3:
 
   - The Studio return will not be heard.
-  - The USB signal on the _MIC-3/USB_ control cannot be used, as it would send the Studio return to air.
+  - The USB signal on the _MIC-3/USB_ control cannot be used, as it would send the Studio return on-air.
 </Danger>
 
 ---
 
-## Case 2: High-Quality One-Way Communication
+## Case 2: Unidirectional High-Quality Communication
 
-The diagram shows a scenario where the portable console operates as a **remote studio**, broadcasting to the main Studio through **high-quality audio streaming**.
+The diagram shows a scenario where the portable console operates as a **remote studio**, transmitting to the Main Studios via a **high-quality audio streaming** link.
 
 <img
   src="/images/mx2100/mx2100-enlace-laptop.jpg"
-  alt="Mx2100 Laptop Link Jp"
-  title="Mx2100 Laptop Link Jp"
+  alt="Mx2100 Enlace Laptop Jp"
+  title="Mx2100 Enlace Laptop Jp"
   className="mx-auto"
   style={{ width:"94%" }}
 />
 
-### About Broadcasting
+### About Transmission
 
 - The console connects via **USB to a laptop with Internet access**.
-- Communication with the Studio is established from the laptop:
-  - Using **Solidyne Audicom®** to generate the stream.
+- Communication with the Studio is established from the Netbook:
+  - Using **Solidyne Audicom®** to generate the streaming.
   - Or any other compatible encoding software.
 
   <Note>
-    Skype® or other VoIP apps do not apply in this case, as they are voice-only, while here **stereo audio** high quality transmission is required.
+    Skype® or other VoIP apps do not apply in this case, as they are only suitable for voice, while here **high-quality stereo audio** transmission is required.
   </Note>
-- As **backup** options you can use:
-  - A wired cell phone.
-  - Or a landline connected to the console's RJ-11.
+- As a **backup**, the following can be used:
+  - A wired mobile phone.
+  - Or a land line (POTS) connected to the console's RJ-11.
 
-### About Studio Return Feed
+### About Studio Return
 
-- The one-way data flow allows sending **high-quality** audio, but dialogue with the Studio is not possible due to streaming delays.
-- In this condition, **all signal is generated from the MX2100**.
-- If Studio return feed is mandatory, it is recommended to do it through:
-  - Cell phone (wired or via Bluetooth).
+- The unidirectional data flow allows sending audio in **high quality**, but it is not possible to communicate with the studio due to streaming delays.
+- Under this condition, **all signal is generated from the MX2100**.
+- If a return from the studio is mandatory, it is recommended to implement it via:
+  - Mobile phone (wired or via Bluetooth).
 - The return is heard in headphones, without delay.
 
-### About Available Signals
+### About the Signals That Can Be Handled
 
-**Microphones and Lines**
+**Microphones and Line Inputs**
 
 - Available: MIC-1 and MIC-2.
-- **MIC-3 remains unconnected**, to enable sending the USB input to air (audio from computer).
+- **MIC-3 is left** **unconnected**, to enable sending the USB input (audio from the computer) on-air.
 
 <Note>
-  Connecting a microphone to MIC-3 **triggers the USB return switching to the headphone mix**, which only applies to two-way communication with Studio.
+  Connecting a microphone to MIC-3 **switches the USB return to the headphone mix**, which corresponds only to the case of two-way communication with Studios.
 </Note>
 
-**Cell Phone**
+**Mobile Phone**
 
-- A cell phone linked via **Bluetooth** allows broadcasting a remote interviewer or journalist (using _MIC-4/LIN/Bluetooth_ control).
-- A second MX2100 can also be linked via cell phone.
+- A mobile phone paired via **Bluetooth** allows putting a remote interviewee or journalist on-air (control _MIC-4/LIN/Bluetooth_).
+- A second MX2100 can also be linked via mobile phone.
 
 <Note>
-  When the console is connected via USB (to computer or charger), the internal **MIC-4 is disabled**, and the Bluetooth return appears instead.\
-  This allows broadcasting a phone call when Bluetooth is not being used to link the MX2100 with Studio (assuming the main link is done through the computer).
+  When the console is connected via USB (to a computer or charger), the internal microphone **MIC-4 is disabled**, and the Bluetooth return appears in its place.\
+  This allows sending a phone call on-air when Bluetooth is not used to link the MX2100 with Studios (it is assumed the primary link is made by the computer).
 </Note>
 
 <Warning>
-  The Bluetooth signal is always present in the headphone mix at a fixed level.\
-  When sending Bluetooth to air through the _MIC-4/LIN/Bluetooth_ control, adjust by monitoring the console's VU meter.
+  The Bluetooth signal is always present in the headphone mix, at a fixed level.\
+  When sending Bluetooth on-air via the _MIC-4/LIN/Bluetooth_ control, the level must be adjusted while observing the console's VU meter.
 </Warning>

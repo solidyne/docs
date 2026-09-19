@@ -1,0 +1,65 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "194f82d25a63dc971c4c63ea32463687eec2b1515907ebc8dd2485b4b739d7dd",
+      "translation": "![D612 Pn](/images/thumbnails/d612.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "a0b9abb535376bb3be4a5c5186955dc7ebd819c02d51ecaa46c9aef0af152b9e",
+      "translation": "## General Features\n\nThe D612 console is a compact, sturdy, and elegant unit. Despite its small size, it offers extensive interconnection flexibility, including digital input and output via USB, allowing the console to communicate digitally with a computer without the need for expensive sound cards in the PC.\n\nIt features 5 conductive ceramic 100 mm faders, which, combined with the ETM-VCA control, provide a lifespan exceeding 10 million operations under normal usage conditions.",
+      "title": "Características generales",
+      "level": 2
+    },
+    {
+      "hash": "b317b17e1cf9532e3335a1185b5e0c9ef2fe5f3e5a85bdea538ff6a15a9b24fb",
+      "translation": "## Inputs",
+      "title": "Entradas",
+      "level": 2
+    },
+    {
+      "hash": "b138e4db9fa11cee25cd9c69f55ed8027ec0c33392db02717426a79262e80ee8",
+      "translation": "### Microphones\n\n- 2 channels handle 4 microphones.\n- Microphones feature 48V phantom power, switchable from the front panel.\n- The microphone mix can be assigned to a 4-band equalizer.\n- Automatic dynamic range compressor on the microphone mix.\n\nEach microphone channel can handle up to two microphones in parallel, connected to 4 XLR connectors (MIC-1a, MIC-1b, MIC-2a, MIC-2b).\n\nThe level between microphones sharing a channel is balanced, within certain limits, by the internal compressor. When using multiple microphones on the same channel, we recommend using identical make and model microphones.",
+      "title": "Micrófonos",
+      "level": 3
+    },
+    {
+      "hash": "fc95e475696bc01956140309bfd2b3c4fdc4e722a2853f4044cdbdba03fbcc0b",
+      "translation": "### Line Inputs\n\nThe 3 line channels allow connecting up to 6 stereo audio sources:\n\n- Channels 3 and 4 support unbalanced (LIN-1 and LIN-2) and balanced (BAL-1 and BAL-2) analog inputs.\n- Channel 5 is digital, with direct USB connection to the computer, and also supports an unbalanced auxiliary input.\n\nAll channels feature a gain control that affects the selected input (main or auxiliary).\n\n<Note>\n  On units with the /AoIP option, the auxiliary LIN-2 input is internally assigned to the streaming module's audio signal and cannot be used for other sources.\n</Note>",
+      "title": "Líneas",
+      "level": 3
+    },
+    {
+      "hash": "67ac9f72f9fbfcad57447104f59d72d7199c8ede88d669f79802e01a2961fc40",
+      "translation": "## Outputs\n\nThe D612 console has two main outputs:\n\n- **PGM (Program):** Main signal for on-air or streaming.\n- **REC (Recording):** Allows recording without interfering with the on-air output.\n\nAdditionally:\n\n- The USB connection delivers PGM or REC digitally to the PC, selectable by the operator. On the computer, it is recognized as an external recording device (USB recording device).\n- **PGM / REC digital via USB** can be used for Internet transmission.\n- **PGM via Ethernet (optional):** In models with the /IP option, it can send RTP streaming to a transmitter site or MPEG streaming to an Icecast server (see D612/IP Models).\n- **External hybrid:** Dedicated send and return, integrated with the internal hybrid channel.\n\nAn output for **On-Air Light (Tally Light)** allows connection of LED indicators. It activates when any microphone channel is opened. The console also includes an LED indicator on its chassis.\n\n<Warning>\n  The maximum load on the Tally Light output **must not exceed 120 mA** (two Solidyne LA100 signals).\n</Warning>",
+      "title": "Salidas",
+      "level": 2
+    },
+    {
+      "hash": "251a23dd9a5006c1aebfc8d29c27bdf5bd95c5373bb921618fe1ada6e121322c",
+      "translation": "## Phone Lines\n\nThe telephone hybrid channel handles two lines: one land line (POTS) (2-wire) and one mobile phone via Bluetooth. All lines can be conferenced. Many functions are automated, simplifying operation.\n\nThe console includes send and return connections for external telephone hybrids. The external hybrid integrates into the built-in hybrid's circuit, eliminating the need for additional channels for its connection.",
+      "title": "Líneas telefónicas",
+      "level": 2
+    },
+    {
+      "hash": "b44da1ba01b0b6cffa29c8ac2a621a3d71aa4fd00129281e6606a8916a91baf1",
+      "translation": "## Monitoring\n\nThe monitoring section distributes signals to studio and control room speakers and headphones.\n\n- Both Studio and Control feature global level control and assignment switches to route signals from the on-air source (external tuner), console output (PGM), or recording output (REC).\n- In studios, the level remains fixed at the console, and it is recommended to install active monitors and headphone distribution systems with their own level control.\n- The Solidyne **StudioBox** accessory is an excellent complementary option.",
+      "title": "Monitoreo",
+      "level": 2
+    },
+    {
+      "hash": "a753a53f96b8fdaa1aaba38750e03f50a986e1b010ec6274af1fc071812d87d5",
+      "translation": "## CUE Monitoring\n\nThe console includes an internal speaker for cue monitoring with level control. CUE allows listening to the signal before the fader (PFL). In integrated studios, the CUE speaker can be disabled and CUE can be routed to the operator's headphones.\n\nThe monitoring section also incorporates the studio talkback microphone, which is also used for private communication with a phone line.",
+      "title": "Escucha en previo CUE",
+      "level": 2
+    },
+    {
+      "hash": "3d50cd4ccdd7ee47fab7d340942f3d5aa96a88ba8d6a528ba4787620bd0d6106",
+      "translation": "## ETM-VCA Attenuators\n\nThe **ETM-VCA (Electrometric Voltage Controlled Amplifier)** technology prevents audio signals from passing through the faders, reducing noise and wear. Level is controlled via low-noise, high-stability amplifiers; the faders only transmit DC control signals.\n\nKey advantages:\n\n- Completely eliminates noise caused by fader wear.\n- Reduces maintenance and extends lifespan.\n- Provides outstanding stereo correlation (error below 0.1 dB).\n- Allows use of faders rated for over 10 million operations (under proper usage conditions).",
+      "title": "Atenuadores ETM-VCA",
+      "level": 2
+    }
+  ]
+}

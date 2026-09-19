@@ -1,0 +1,17 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "2dde15116e9568a9eb05fef43b9c93190250369fb0adfaac5e9e8660a5649937",
+      "translation": "## <Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} />  Analog Outputs\n\nEach output uses an **RJ45** connector, which carries the **left and right** signals in a single cable. In some applications, these stereo outputs can be configured as **two independent mono channels**. For example, the **UDX adapters for phone lines** use the unbalanced mono outputs to send signal to external communication lines.\n\n<Info>\n  The outputs labeled as PGM and/or REC (balanced) deliver the BUS mix by default.\n\n  Other outputs are assignable; they can be configured to deliver any of the mix buses or even redirect inputs (DIRECT OUT)\n</Info>",
+      "title": "<Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} />  Salidas analógicas",
+      "level": 2
+    },
+    {
+      "hash": "85eb01006143a53187630eb5b89fcc1c1a5b78b64f4bafdf9d11709367b4ff6b",
+      "translation": "## <Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} />  AES3 Digital Outputs\n\n- They are connected using a **RJ45–RJ45 CAT5** cable and a **SOL-F3/XLRM** adapter.\n- They use the same **pin-out** as the balanced stereo analog outputs, although **only the left channel is transmitted**.\n- They also support the connection of **S/PDIF** signals.\n- They are transformer-balanced.\n\n| AES Output | UX24 | UX18 |\n| :-: | :-: | :-: |\n| AES-1 | PGM Bus | Assignable via configuration |\n| AES-2 | REC Bus | Assignable via configuration |\n| AES-3 | Assignable via configuration | Not available |\n| AES-4 | Assignable via configuration | Not available |\n\n<Warning>\n  **VERY IMPORTANT:**\n\n  The **AES3 OUTPUTS ONLY OPERATE AT 48 kHz**.\n\n  It is essential to **configure the recording device** in Windows to **48,000 Hz** to avoid compatibility errors. To configure the sample rate in Windows 10:\n\n  1. Open the **System Settings** menu and select **Sound**.\n  2. In **Sound settings**, open the **input device properties**.\n  3. Go to **Other device settings**.\n  4. In the **Advanced** tab, set the **sample rate to 48,000 Hz**.\n</Warning>",
+      "title": "<Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} />  Salidas digitales AES3",
+      "level": 2
+    }
+  ]
+}

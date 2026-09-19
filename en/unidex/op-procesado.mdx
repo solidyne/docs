@@ -1,57 +1,55 @@
 ---
 title: "Audio Processing"
-description: "Audio processors integrated in UX24 and UX18"
-keywords: ["operation", "processing", "eq", "dynamics", "deesser", "process"]
-tags: ["IP consoles", "UNIDEX"]
+description: "Integrated audio processors in the UX24 and UX18"
+keywords: ["operation", "processing", "eq", "dynamics", "de-esser", "process"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "a198e2994294a0eb01001afefcc7893d7813ee329096a446647cf11d7e634f45"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## PROCESS SCREEN
 
-Press **PROCESS** on the main screen to access. This also activates **SELECT mode** to choose a channel.
+To access, press **PROCESS** on the main screen. This also activates **SELECT mode** to choose a channel.
 
 <img
   src="/images/ux24/ux24-pantalla-processs.jpg"
-  alt="UNIDEX Process Screen"
-  title="UNIDEX Process Screen"
+  alt="UNIDEX Pantalla Processs"
+  title="UNIDEX Pantalla Processs"
   style={{ width:"65%" }}
   className="mr-auto"
 />
 
-Processors are **fixed to each input**, not to the channel. They cannot be reassigned to other channels, buses or outputs. Available processes depend on the **input type** assigned to the channel.
+The processors are **fixed to each input**, not to the channel. They cannot be reassigned to other channels, buses, or outputs. The available processes depend on the **input type** assigned to the channel.
 
 | **INPUT** | **EQ \+ Filters** | **Comp. \+ Gate** | **De-esser** |
-| :---------: | :---------------: | :---------------: | :----------: |
-| MIC         | 4 bands           | **yes**           | **yes**      |
-| UNIDEX      | 3 bands           | **yes**          | no           |
-| USB         | 3 bands          | no                | no           |
-| AES3        | 3 bands          | no                | no           |
-| BALANCED    | 3 bands          | no                | no           |
+| :-: | :-: | :-: | :-: |
+| MIC | 4 bands | **yes** | **yes** |
+| UNIDEX | 3 bands | **yes** | no |
+| USB | 3 bands | no | no |
+| AES3 | 3 bands | no | no |
+| BALANCED | 3 bands | no | no |
 
-**PROCESS screen functions**
+**Functions of the PROCESS screen**
 
-- View which processors are on the channel and if they are active or in **BYPASS**.
-- Enable/disable a processor by touching **BYPASS**.
-- Access settings by touching the icon or contextual button.
+- View which processors are on the channel and whether they are active or in **BYPASS**.
+- Activate/deactivate a processor by touching **BYPASS**.
+- Access its settings by touching the icon or the context button.
 
 **Channel selection**
 
-- In SELECT mode, use **CUE/SELECT** on the console or the **encoder** to scroll through all 24 channels (physical in cyan, virtual in purple).
+- In SELECT mode, use **CUE/SELECT** on the console or the **encoder** to scroll through the 24 channels (hardware channels in cyan, virtual channels in violet).
 - Any action in PROCESS cancels SELECT, applying changes to the active channel.
-- SELECT can also be activated from PROCESS to choose another channel.
+- From PROCESS, you can also activate SELECT and choose another channel.
 
 **Parameter adjustment:**\
-Done by combining the **encoder** and **touch options**, as indicated for each processor.
+It is performed by combining the **encoder** and the **touch options**, as indicated for each processor.
 
 <Note>
-  Process settings can be **saved in the scene**.
+  The processor settings can be **saved in the scene** .
 </Note>
 
 ---
@@ -65,42 +63,42 @@ Done by combining the **encoder** and **touch options**, as indicated for each p
   style={{ width:"71%" }}
 />
 
-**1 - NAME:** Shows channel number and name. Virtual channels display the name area in purple.
+**1 - NAME:** Indicates the channel number and name. Virtual channels show the name area in violet.
 
-**2 - BANDS:** Band selection. Screen shows parameters for one band at a time.\
-Each band has a color that identifies it in the graph and parameter area.\
-All inputs have 3 parametric bands, except MIC-1 to MIC-4 inputs which have four bands.
+**2 - BANDS:** Band selection. The parameters for one band are displayed on screen at a time.\
+Each band has a color that identifies it in the graph and in the parameter area.\
+All inputs have 3 parametric bands, except for inputs MIC-1 to MIC-4 which have four bands.
 
-**3 - CONTROLS:** Parameters for each EQ band. Background color changes with selected band.
+**3 - CONTROLS:** Parameters for each EQ band. The background color changes with the selected band.
 
 - **GAIN:** Gain in dB, with a range of ± 9 dB.
-- **FREQ:** Adjusts working frequency. All bands cover 20 Hz to 20 kHz.
-- **Q:** EQ bell width. Determines precision of applied correction.
-- **TYPE:** Band operation mode. Toggle by touching TYPE on screen.
-  - Band #1: peak, low-shelf or HPF.
+- **FREQ:** Adjusts the center frequency. All bands cover from 20 Hz to 20 kHz.
+- **Q:** Width of the EQ bell curve. Determines the precision of the applied correction.
+- **TYPE:** Band operating mode. Toggled by touching the TYPE option on screen.
+  - Band #1: peak, low-shelf, or HPF.
   - Band #2 (and #3 on microphone inputs): peak or HPF/LPF.
-  - Band #3 (#4 on mic inputs): peak, hi-shelf or LPF.
-- **ON/OFF:** Band enable/disable. Toggle by touching ON/OFF on screen.
+  - Band #3 (#4 on mic inputs): peak, hi-shelf, or LPF.
+- **ON/OFF:** Turns the band on/off. Toggled by touching ON/OFF on screen.
 
-**4 - BY-PASS:** Disables entire equalization stage. Also appears on PROCESS screen.\
-Toggle by touching BY-PASS on screen.
+**4 - BY-PASS:** Disables the entire equalization stage. Also appears on the PROCESS screen.\
+Toggled by touching BY-PASS on screen.
 
 **5 - SELECT:** Activates channel selection mode.
 
-**6 - BACK:** Returns to previous screen.
+**6 - BACK:** Returns to the previous screen.
 
 ### High-Pass / Low-Pass Filters
 
-- Band #1 can function as 2nd order high-pass filter (HPF) (12 dB/oct).
-- Band #3 (Band #4 on MIC-1 to MIC-4 inputs) can function as 2nd order low-pass filter (LPF) (12 dB/oct).
-- Band #2 (and Band #3 on MIC-1 to MIC-4 inputs) can work as HPF or LPF.\
-  If two bands are configured as high-pass or low-pass at the same frequency, total cutoff attenuation will be **24 dB/oct**.
+- Band #1 can function as a 2nd order (12 dB/oct) high-pass filter (HPF).
+- Band #3 (Band #4 on MIC-1 to MIC-4 inputs) can function as a 2nd order (12 dB/oct) low-pass filter (LPF).
+- Band #2 (and Band #3 on MIC-1 to MIC-4 inputs) can work as either an HPF or LPF.\
+  If two bands are configured as high-pass or low-pass at the same frequency, the total cutoff attenuation will be **24 dB/oct**.
 
 ---
 
 ## DYNAMICS
 
-The **DYNAMIC** processor includes a **noise gate** and a **compressor**.
+The **DYNAMIC** processor includes a **noise gate** and a dynamic **compressor**.
 
 <img
   src="/images/ux24/ux24-dynamics.jpg"
@@ -109,16 +107,16 @@ The **DYNAMIC** processor includes a **noise gate** and a **compressor**.
   style={{ width:"65%" }}
 />
 
-**1 - COMPRESSION CURVE:** Graphically shows input-output relationship of dynamic processor, including gate and compressor.
+**1 - COMPRESSION CURVE:** Graphically displays the input-output relationship of the dynamic processor, including the gate and the compressor.
 
-**2 - INPUT LEVEL:** Shows peak signal level at compressor input (dBfs).
+**2 - INPUT LEVEL:** Indicates the peak level of the signal at the compressor input (dBfs).
 
-### 3 - Noise Gate
+### 3 - Noise Gate (GATE)
 
 - **Threshold:** Gate activation threshold (dB).
-- **Attenuation:** Applied signal attenuation when gate is active.
-- **Style:** Changes recovery time between preset values.
-- **Active:** Indicator lights red when gate is closed.
+- **Attenuation:** Attenuation applied to the signal when the gate is active.
+- **Style:** Changes the recovery time between preset values.
+- **Active:** Indicator that lights up red when the gate is closed.
 
 ### 4 - Dynamic Compressor
 
@@ -131,7 +129,7 @@ Controls for adjusting:
 - Hold
 - Output gain
 
-**5 - BYPASS:** Completely disables dynamic processing stage (gate \+ compressor).
+**5 - BYPASS:** Completely disables the dynamic processing stage (gate + compressor).
 
 ---
 
@@ -144,13 +142,13 @@ Controls for adjusting:
   style={{ width:"65%" }}
 />
 
-**MIC-1** to **MIC-4** inputs include a **de-esser** for sibilance reduction.\
-This processor works as a multiband compressor, attenuating only the defined frequency range when signal level exceeds the set threshold.
+The microphone inputs feature a **de-esser** for sibilance reduction.\
+This processor works as a multiband compressor, attenuating only the defined frequency range when the signal level exceeds the set threshold.
 
 **Controls:**
 
-- **1 - Type:** Preset settings.
-- **2 - Frequency start:** Lower cutoff frequency. Adjusted according to voice characteristics. Usually between 4,500 and 5,500 Hz.
-- **3 - Frequency end:** Upper cutoff frequency. Adjusted according to voice characteristics. Usually between 7,000 and 10,000 Hz.
-- **4 - Threshold:** Threshold level in dB. When signal in working band exceeds this value, it is attenuated with a **fixed 15:1 ratio**.
-- **5 - Gain reduction:** Shows applied level reduction in dB.
+- **1 - Type:** Preset adjustments.
+- **2 - Frequency start:** Lower cutoff frequency. Adjusted according to signal characteristics. Usually between 4,500 and 5,500 Hz.
+- **3 - Frequency end:** Upper cutoff frequency. Adjusted according to signal characteristics. Usually between 7,000 and 12,000 Hz.
+- **4 - Threshold:** Threshold level in dB. When the signal in the working band exceeds this value, it is attenuated with a **fixed ratio of 15:1**.
+- **5 - Gain reduction:** Indicates the applied level reduction, in dB.

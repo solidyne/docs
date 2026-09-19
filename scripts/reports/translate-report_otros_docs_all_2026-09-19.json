@@ -1,0 +1,35 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "duration_sec": "185.16",
+  "results": {
+    "en": {
+      "translated": 3,
+      "skipped": 4,
+      "errors": 0,
+      "total": 7,
+      "skippedReviewed": 0,
+      "forcedUpdates": 0,
+      "totalSections": 10,
+      "translatedSections": 10,
+      "reusedSections": 0,
+      "failedSections": 0,
+      "migratedFiles": 4
+    },
+    "pt": {
+      "translated": 3,
+      "skipped": 4,
+      "errors": 0,
+      "total": 7,
+      "skippedReviewed": 0,
+      "forcedUpdates": 0,
+      "totalSections": 10,
+      "translatedSections": 10,
+      "reusedSections": 0,
+      "failedSections": 0,
+      "migratedFiles": 4
+    }
+  },
+  "skipped_reviewed": 0,
+  "forced_updates": 0,
+  "migrated_files": 8
+}

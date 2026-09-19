@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "d482f8d6f891e93cb080053759c8e534658913461d35580727213aeef4507dcb",
+      "translation": "Esta seção descreve funcionalidades que _aplicam-se apenas ao modelo UX18_. Consulte também [Série Unidex](/pt-br/unidex/unidex-resumo) para mais informações.\n\n![UX18 Pn](/images/thumbnails/UX18.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "4b3893c40e8c66d6dea59f58f4d69ef24ae751e53e9f255bf9a78b75411aa109",
+      "translation": "## Canais\n\nA UNIDEX UX18 possui 18 canais:\n\n- **10 canais** com faders de 100 mm e **8 canais “virtuais”** que são operados pela tela sensível ao toque ou pela interface web remota.\n- 4 canais podem funcionar como **grupos**, para controlar **submisturas de canais** virtuais a partir de faders físicos.\n- Cada canal pode ser atribuído a qualquer entrada.\n- Os canais são configurados em três modos: **MIC**, **LINE** ou **TELCO**, o que modifica seu comportamento e funções.\n- Podem ser atribuídos a quatro buses de mistura estéreo: **PGM**, **REC**, **AUX** e **VBUS**.",
+      "title": "Canales",
+      "level": 2
+    },
+    {
+      "hash": "56566517d8ad064be35a7611ea776348b5fa7246d39d1d87e5649087838ff0bc",
+      "translation": "## Entradas\n\nA UX18 conta com 5 entradas para microfones e 13 entradas de linha (analógicas e digitais).\n\n- **Microfone: 5 mono balanceadas**\n  Com alimentação phantom 48V, equalizador paramétrico de 4 bandas, compressor dinâmico, portão de ruído e de-esser.\n- **Linha: 2 estéreo balanceadas**\n  Com equalizador paramétrico de 3 bandas.\n- **UNIDEX: 8 mono (4 estéreo)**\n  Entradas balanceadas configuráveis como mono ou estéreo.\n  Permitem conectar adaptadores UDX (microfones, linhas telefônicas, telefones celulares via Bluetooth, computadores via USB).\n  Incluem equalizador paramétrico de 3 bandas, compressor dinâmico e portões de ruído.\n- **USB: 4 dispositivos estéreo de reprodução**\n  Compatível com ASIO 3.0.\n  Incluem equalizador paramétrico de 3 bandas.\n- **AES3: 2 entradas digitais estéreo**\n  Com equalizador paramétrico de 3 bandas.\n- **Streaming entrante**\n  Não é uma entrada independente; ao ser ativado substitui a entrada AES3 #1.\n- **Sintonizador externo**\n  Entrada estéreo para monitoração da transmissão. Também pode ser atribuída aos canais para ser usada como uma entrada convencional.",
+      "title": "Entradas",
+      "level": 2
+    },
+    {
+      "hash": "00a2ced049ac398977caa296519a5e6823b79a03535fe28b9df71d2c9dc635fe",
+      "translation": "## Saídas\n\nHá 9 saídas estéreo e saídas para monitoração:\n\n- **Programa (PGM)**\n  Saída estéreo analógica balanceada dupla.\n- **1 saída REC** estéreo balanceada\n- **4 estéreo não balanceadas (atribuíveis)**\n  Podem ser configuradas como até 8 saídas mono. Incluem opção **mix-minus** para comunicações telefônicas e VoIP.\n- **USB: 4 dispositivos de gravação estéreo**\n- **AES3: 2 saídas digitais**\n  Duas delas são atribuíveis a qualquer um dos buses.\n- **Streaming dual PCM/MP3/OPUS**\n  Envio simultâneo por RTP e Icecast/Shoutcast.",
+      "title": "Salidas",
+      "level": 2
+    },
+    {
+      "hash": "246edf6e1e16b500e394697ab051d2a8235f2b177f3e860f210fde49257018e5",
+      "translation": "## Monitoração e intercomunicação\n\n- Saídas para monitoração no Estúdio (alto-falantes e fones de ouvido).\n- Conexão simplificada para monitoração no Estúdio com bays **Solidyne StudioBox**.\n- Saídas para monitoração no Controle (alto-falantes e fones de ouvido).\n- Talk-back para o Estúdio.\n- Microfone de talkback selecionável: interno (PZM) ou externo.\n- Reverse talk-back: permite falar do Estúdio para o CUE do operador (requer Studiobox HD3 ou HD5).\n- Bus de CUE (Pre Fader Level) atribuível a qualquer saída.",
+      "title": "Monitoreo e intercomunicación",
+      "level": 2
+    },
+    {
+      "hash": "37459118dc15eb6f5a1aee21c53ef36e25e32d65028aa65578a6574125e68229",
+      "translation": "## Disparo de dispositivos externos\n\nConta com:\n\n- **2 GPI**\n- **7 GPO** do tipo open-collector\n\nPermitem disparar:\n\n- Automação Solidyne Audicom\n- Processadores de áudio\n- Outros dispositivos com controle remoto\n\nA ativação é programável (ver seção correspondente).",
+      "title": "Disparo de dispositivos externos",
+      "level": 2
+    }
+  ]
+}

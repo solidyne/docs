@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "e1dd6d19f13079fdae14deec301abdd6ed3e100fc21785b2495f6f2e59093324",
+      "translation": "## Recording Screen\n\nThe **MX2200** console allows for a **safety recording of the event** in **MP3 (16-bit / 48 kHz)** stereo format, widely supported by audio players and editors.\n\nThe RECORDING screen is accessed by turning the encoder on the HOME screen. It allows you to **start/stop** the recording and configure its parameters.\n\n<img\n  src=\"/images/mx2200/mx2200_display_recording.bmp\"\n  alt=\"Mx2200 Display Recording Bm\"\n  title=\"Mx2200 Display Recording Bm\"\n  className=\"mx-auto\"\n  style={{ width:\"49%\" }}\n/>\n\nNavigation is similar to other screens: pressing the knob accesses internal navigation, and within each option, a click allows you to change its value or state.\n\n- **STATUS**\\\n  Allows you to **enable or stop** the recording.\\\n  When stopped, the file with the recorded content up to that point is automatically generated.\n- **MAX TIME**\\\n  Defines the maximum recording time.\n  - Prevents the operator from having to stop it manually.\n  - The recording is automatically cut off when the defined time is reached.\n  - Editing: the value is entered using the console's numeric keypad (maximum **240 minutes / 4 hours**).\n  - It is possible to **increase the time limit while the recording is in progress**, without interrupting it.\n- **BIT RATE**\\\n  Defines the audio quality.\n  - Range: **64 to 320 kbps**.\n  - The higher the value, the better the quality and the larger the file size.\n  - At **192 kbps**, approximately **100 hours** can be stored within the console.\n\n<Info>\n  When recording is enabled, the main screen indicates the recording status and shows the **remaining available time**.\n</Info>\n\n---",
+      "title": "Pantalla de grabación",
+      "level": 2
+    },
+    {
+      "hash": "da022b16575002c354252c6b68bdefe9e7381f786955f79047741af50a7b9928",
+      "translation": "## Recording Management\n\nManagement (monitoring, playback, renaming, downloading, and cleanup) is performed **remotely** from a networked computer.\n\nTo access: enter the equipment's IP address followed by **/recording** in a browser (Firefox, Chrome, Safari, Edge, etc.).\n\nExample: `192.168.0.118/recording`\n\n<Steps>\n  <Step title=\"Connect the console\">\n    Connect the console to the local network using the **Ethernet** port (recommended) or the **Wi-Fi** antenna.\n  </Step>\n  <Step title=\"Open the browser\">\n    On a computer on the same network, open a browser and enter the MX2200's **IP address** with the subpath `/recording`.\n  </Step>\n  <Step title=\"Get the IP address\">\n    To find the assigned IP, turn the **CONTROL (encoder)** knob and access the **SETUP** screen.\\\n    The first three items show the connection status and IP address for **Ethernet**, **Wi-Fi**, and **4G Modem**.\n  </Step>\n</Steps>\n\n---",
+      "title": "Gestión de las grabaciones",
+      "level": 2
+    },
+    {
+      "hash": "1a3b68ba98e302b74ff67cefc3ad4c236026f50a24584206c58a8a7b3b4ebac3",
+      "translation": "### Web Interface\n\n<img\n  src=\"/images/mx2200/mx2200-web-recording.png\"\n  alt=\"Mx2200 Web Recording Pn\"\n  title=\"Mx2200 Web Recording Pn\"\n  style={{ width:\"98%\" }}\n  className=\"mx-auto\"\n/>\n\n- Each \\_recording \\_is saved with the name: `[Unit Name] + [Date and Time]`\n- The **HTML5** interface includes a player for **fast-forward, rewind, and pause**.\n- The list can be sorted by **name, date, or size**.\n\n  <Note>\n    The displayed date corresponds to the **local time of the client computer**, not the console.\n  </Note>\n- The audio can be **downloaded** and will be saved to the browser's default download folder.",
+      "title": "Interfaz Web",
+      "level": 3
+    }
+  ]
+}

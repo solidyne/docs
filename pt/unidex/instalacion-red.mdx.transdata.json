@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "1af2a7e876653921c7865d0425cd77a4a8b32b20f1f181408c62f37917881171",
+      "translation": "## Conexão Ethernet para controle remoto\n\nA console possui uma **porta Ethernet** para controle remoto através de rede local (LAN).  A **interface de controle web interna** é acessada com um navegador web a partir de qualquer computador conectado à mesma rede.",
+      "title": "Conexión Ethernet para control remoto",
+      "level": 2
+    },
+    {
+      "hash": "1fc6a4823be80a1a2a7a140dfc9a6b8a497dbf0d90795ab8ce86c78e50c50e7c",
+      "translation": "### Passo 1: Conexão física\n\nConecte a porta **ETHERNET de controle** da UNIDEX a uma porta do **roteador**, utilizando um cabo de rede Ethernet padrão.\n\n<Warning>\n  Não confunda o conector Ethernet para **CONTROLE** com a porta Ethernet para **STREAMING**.\n\n  <img\n    src=\"/images/ux24/trasero-control.jpg\"\n    alt=\"Trasero RJ45 Control\"\n    title=\"Trasero RJ45 Control\"\n    className=\"mx-auto\"\n    style={{ width:\"40%\" }}\n  />\n</Warning>\n\n- De fábrica, a UNIDEX está configurada no modo **DHCP ativado**.\n- O roteador atribuirá automaticamente um endereço IP disponível. Este IP pode mudar ao reiniciar a console, a menos que seja configurado um IP fixo, mas normalmente isso não é necessário (se for necessário um IP estático, acesse: `SETTINGS → SYSTEM`).\n- O endereço IP atual é exibido na **tela principal** da console, abaixo do nome:\\\n  **UNIDEX IP.**\n  <img\n    src=\"/images/ux24/unidex-ControlIP.png\"\n    alt=\"RJ45 a RCA\"\n    style={{ width:\"45%\" }}\n    className=\"mx-auto\"\n  />\n</Warning>\n\n<Note>\n  **Solidyne Multi-Discovery**\n\n  Se não houver acesso físico à console, você pode [**baixar a ferramenta Multi-Discovery**](/es/unidex/unidex-discovery) que detecta dispositivos Solidyne conectados à rede.\n</Note>",
+      "title": "Paso 1: Conexión física",
+      "level": 3
+    },
+    {
+      "hash": "15f0cbe2a96c458970a5ba2f78853be6b4e49871413eedb34a1d08580b893fe9",
+      "translation": "### **Passo 2**: Acesso pelo navegador web\n\nDe qualquer computador conectado à **mesma rede local** (preferencialmente por cabo) abra um navegador web (recomendado: **Google Chrome**) e digite o endereço IP exibido como **UNIDEX IP**.\n\nIsso abrirá a interface web de operação e configuração da console. A interface é semelhante à exibida na **tela sensível ao toque embarcada**.\n\n---",
+      "title": "**Paso 2**: Acceso desde navegador web",
+      "level": 3
+    },
+    {
+      "hash": "e35359d1ce5b9d5c4c6d565ec94a65a52d99b18d8b175f186ad43f5369145bb5",
+      "translation": "## Conexão Ethernet para serviços de streaming\n\n1. Conectar a porta **Streaming Out** ao roteador da LAN usando um cabo Ethernet padrão.\n   <Warning>\n     NÃO CONFUNDIR o **conector Ethernet de streaming** com o conector Ethernet de **controle remoto**.\\\n     Ambos usam RJ45, mas cumprem funções totalmente distintas.\n     <img\n       src=\"/images/ux24/trasero-streaming.jpg\"\n       alt=\"Traseiro RJ45 Streaming\"\n       title=\"Traseiro RJ45 Streaming\"\n       style={{ width:\"40%\" }}\n       className=\"mx-auto\"\n     />\n   </Warning>\n2. O roteador atribuirá um endereço IP por **DHCP**, visível na tela principal como: **Stream IP**\n3. Este IP pode mudar ao reiniciar a console, a menos que seja configurado um IP fixo.\n4. A configuração dos serviços de streaming pode ser realizada de duas formas:\n   - Pela **tela sensível ao toque** da console.\n   - De qualquer computador na rede, acessando o endereço **Stream IP** por um navegador web.\n     <img\n       src=\"/images/ux24/unidex_streaming_ip.jpg\"\n       alt=\"Unidex Streaming Ip Jp\"\n       className=\"mx-auto\"\n       style={{ width:\"45%\" }}\n     />\n\n<Note>\n  **Solidyne Multi-Discovery**\n\n  Se não houver acesso físico à console, é possível [**baixar a ferramenta Multi-Discovery**](/es/unidex/unidex-discovery) que detecta dispositivos Solidyne conectados à rede.\n</Note>",
+      "title": "Conexión Ethernet para servicios de streaming",
+      "level": 2
+    }
+  ]
+}

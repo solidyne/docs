@@ -1,0 +1,59 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "e9ccc35dba8c48e9233babe0d863097d46aae86c02406c1cae1c35a3094f5351",
+      "translation": "The **UNIDEX** line from Solidyne covers the needs for operation and on-air operation in **FM, AM and streaming stations**. UNIDEX offers a digital workflow without the complexity of a dedicated IP network, but with the option for audio over IP (DANTE/AES67).\n\n![Linea Unidex Pn](/images/thumbnails/Linea_unidex.png)",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "b62db1dba32dd6f394153442ac5533dee311f6aff2e533e39146cec64e4cb094",
+      "translation": "## UX18 and UX24 Models\n\nThe UNIDEX Series includes two mixing console models: **UX24** and **UX18**.\n\nBoth models share features and operating modes. To simplify the documentation, common aspects are explained in this section.\n\nThe [UX24](/en/ux24/ux24-summary) and [UX18](/en/ux18/ux18-summary) menu entries detail the specific operational and configuration particulars of each model.\n\n---",
+      "title": "Modelos UX18 y UX24",
+      "level": 2
+    },
+    {
+      "hash": "6f827e10ff01ec6e46bb0070a194bf544cad168e7c986d6ab2984b9107419f01",
+      "translation": "## UDX Adapters\n\n- **UNIDEX** stands for \"UNIversal Desktop with EXternal adapters\". They are external interfaces that connect directly to the console to input different types of signals (telecommunications, microphones, USB, etc.).\n- The UNIDEX-type inputs on the console are balanced line inputs with expanded capabilities, which support the connection of UDX adapters.\n- They connect directly to the console: no routers, switches, or networks are required.\n- The adapters communicate data and function control from the console surface.\n\n---",
+      "title": "Adaptadores UDX",
+      "level": 2
+    },
+    {
+      "hash": "06534972acfcac57059430ce257426d9d9a92f3a11004d7346aa43db72c4cf84",
+      "translation": "## Audio over IP (optional)\n\n1. Enables advanced interconnection between devices and studios via an **audio network**.\n2. Requires a **dedicated network** and compatible DANTE/AES67 input/output nodes.\n3. Control via WEB interface from remote studios.\n\n---",
+      "title": "Audio sobre IP (opcional)",
+      "level": 2
+    },
+    {
+      "hash": "e9e5f2f3a7cadeaf743300b9f0c3c84a0d828ec9bb5c9f65413f30a9e44edaa2",
+      "translation": "## Hardware\n\n- Internal processing: Full-digital **24-bit @ 48 kHz** DSP.\n- 100 mm soft-touch high-durability faders:\\\n  UX24: 12 physical faders \\+ 12 virtual faders on 7” touchscreen\\\n  UX18: 10 physical faders \\+ 8 virtual faders on 7” touchscreen\n- UX24 expandable to 18 or 24 physical faders with UX6 panels (6 faders each).\n\n---",
+      "title": "Hardware",
+      "level": 2
+    },
+    {
+      "hash": "b10d4a70dc942fd749ebf2d06456ce4f0723f5f0cb22c9eb82e2de717a959f13",
+      "translation": "## Connectivity\n\n- All I/O is via **RJ45** on the rear panel.\n- RJ45→XLR/TRS/RCA adapter cables are available.\n\n---",
+      "title": "Conectividad",
+      "level": 2
+    },
+    {
+      "hash": "d8bd13ea364f2c7e739d6405c761a57fbd3771142d142719f77a8fc3be514c91",
+      "translation": "## On-air operation\n\n- **Plug & play**: factory-configured, ready to use.\n- No advanced knowledge required.\n- Operation similar to a traditional console.\n- Audio processing is adjusted on the touchscreen.\n\n---",
+      "title": "Puesta al aire",
+      "level": 2
+    },
+    {
+      "hash": "884e33d738446a30fa0d42bd1093f42cc5de69d27b5109dc377cb737a3267fef",
+      "translation": "## User Levels\n\n1. **Basic**: access to minimal functions.\n2. **Intermediate**: includes advanced options.\n3. **Administrator**: full access to configuration and settings.\n\n---",
+      "title": "Niveles de usuario",
+      "level": 2
+    },
+    {
+      "hash": "23bc2640260a53daaa6d76f3783d08a7fc1e45f8babbedf5c7cde1c7b093fa06",
+      "translation": "## Advanced Flexibility\n\n- Assign **any input** to any of the physical faders or to the virtual ones.\n- Create **scenes** with channel settings and processing.\n- **Remote** control and configuration via IP (WEB browser). Allows setting up an auxiliary studio controlled from a screen, without needing an additional console.\n- Use **VST effects** in real time via USB ASIO and an external computer.\n- Supports up to two simultaneous on-air studios (UX24 model).\n\n<Info>\n  All functions and settings are managed from the touch screen or via IP from a browser on a tablet or computer.\n</Info>",
+      "title": "Flexibilidad avanzada",
+      "level": 2
+    }
+  ]
+}

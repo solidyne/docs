@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ae74e08e4bc9b0beacff760d756c139fbc9a3c4281977a5a5a9d38015ebca897",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx'\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "5a3f2a38b86b6d7fee767b87d787bfcf6a71dd87a30dfa6d566cea5b51415ba0",
+      "translation": "## Installation\n\nConsider the following recommendations when installing:\n\n- Solidyne Audimax 362HD processors are designed for installation in a standard 483 mm (19\") rack, occupying one rack unit.\\\n  They can also be placed on a table using the included self-adhesive rubber feet.\n- Ambient temperature should be maintained between **5 °C and 40 °C**.\\\n  Avoid direct sunlight exposure on the processor, as well as proximity to heat sources or strong electromagnetic fields (power transformers, large motors, etc.).\\\n  Its internal RF field protection allows installation near AM/FM transmitters.\n\n<Danger>\n  Avoid installation in very humid locations or saline atmospheres, as this may cause corrosion on printed circuit boards and electronic components.\n</Danger>",
+      "title": "Montaje",
+      "level": 2
+    },
+    {
+      "hash": "881b4eed4cdf7475604f436de41f194ce52af748f6b5218d3981a9371f0c9d64",
+      "translation": "## Power Supply\n\n<img\n  src=\"/images/362/362-trasero-fuente.png\"\n  alt=\"362 Rear Panel Power Supply\"\n  title=\"362 Rear Panel Power Supply\"\n  className=\"mx-auto\"\n  style={{ width:\"33%\" }}\n/>\n\n- **Voltage selector switch 110/220 V**: Verify it is in the correct position according to the mains voltage. \\\n  Variations of up to ±10% are tolerated (example: 200–240 V for the 220 V position).\n\n<Warning>\n  If the mains voltage exceeds this range, install fast-acting voltage regulators to prevent equipment damage.\n</Warning>\n\n- **Interlock power connector** and **1 A main fuse**.\n- **Power switch**.\n\n<tierras />",
+      "title": "Alimentación",
+      "level": 2
+    }
+  ]
+}

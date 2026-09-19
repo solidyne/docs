@@ -1,0 +1,41 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "b47ce8f8836fc58774aec4562a84488ef9fc9c6603cad901923427af26b5c666",
+      "translation": "## Sequência de inicialização\n\nAo ligar a console, o UNIDEX inicia seu sistema operacional. Uma vez concluída a sequência de inicialização, a **tela principal** é exibida e são carregados:\n\n1. O **perfil de usuário padrão.**\n2. A **última cena ativa** antes do desligamento.\n\n---",
+      "title": "Secuencia de arranque",
+      "level": 2
+    },
+    {
+      "hash": "6f5124495a33d6d7c95134f790cee69980b0340d8e0caa47e2c62b55311da6ef",
+      "translation": "## Perfil de usuário e permissões\n\nO perfil de usuário determina o **nível de acesso às funções** dentro da console.\\\nA partir da configuração, é possível definir qual perfil é carregado automaticamente ao ligar a unidade. De fábrica, a console inicia com o perfil **ADMIN**, que tem acesso completo.",
+      "title": "Perfil de usuario y permisos",
+      "level": 2
+    },
+    {
+      "hash": "7bd8336c9ee043335bceeadf26dd2eca2477f0e85887efab2c3f816c7b95b1d6",
+      "translation": "### Níveis de usuário disponíveis\n\n1. **BASIC** – Acesso restrito a funções essenciais\n2. **EXPERT** – Acesso avançado (requer senha)\n3. **ADMIN** – Acesso total (requer senha)\n\n<Info>\n  Durante a inicialização, **nenhuma senha é solicitada**, mesmo que o perfil padrão tenha proteção.\\\n  Para que o UX24 inicialize no modo restrito e exija senha para acessar funções avançadas, é necessário **alterar o perfil padrão** para um diferente de ADMIN.\n</Info>\n\nPara mais informações sobre configuração de usuários, ver: `SETTINGS → USERS`\n\n---",
+      "title": "Niveles de usuario disponibles",
+      "level": 3
+    },
+    {
+      "hash": "da24886006e533460449a33c977c3c7f1b9c3294daf4c80d8446492beffa950a",
+      "translation": "## Ações do sistema\n\nAs ações do sistema estão disponíveis na tela principal, acessando a opção **STATUS → \"\\+\"**.\n\n1. Na **tela principal**, toque no ícone **“\\+”** localizado no setor **STATUS**.\n   <img\n     src=\"/images/ux/ux_home_status.png\"\n     alt=\"Tela Principal - STATUS\"\n     title=\"Tela Principal - STATUS\"\n     style={{ width:\"24%\" }}\n   />\n2. Uma janela pop-up aparece. Essas funções permitem **reiniciar separadamente diferentes estágios do sistema** e não são usadas durante a operação normal.\n   <img\n     src=\"/images/ux/ux_status_poweroff.png\"\n     alt=\"Status, resets e desligamento\"\n     title=\"Status, resets e desligamento\"\n     style={{ width:\"53%\" }}\n   />\n\n<Info>\n  As ações de reinício são ferramentas técnicas de manutenção.\\\n  Em condições normais de uso, **não é necessário executá-las**.\n</Info>",
+      "title": "Acciones del sistema",
+      "level": 2
+    },
+    {
+      "hash": "0f9482af2b258d821c03feafb93e9cce25e323c8597bd98ef2b5845eb4a87951",
+      "translation": "### Opções disponíveis\n\n- **RESET USB**\\\n  Reinicia apenas o estágio USB.\\\n  Força o sistema operacional a reconhecer novamente os dispositivos USB conectados.\n- **RESET MIXER**\\\n  Reinicia o motor de mixagem interno do UNIDEX e a superfície de controle.\\\n  Não afeta a CPU nem a tela.\n- **RESET DISPLAY**\\\n  Reinicia o computador de bordo que gerencia o **streaming** e a **interface gráfica**.\n- **FULL RESET**\\\n  Reinicia todos os estágios do sistema.\\\n  Equivale a um desligamento completo e ligamento do equipamento.\n- **POWER-OFF**\\\n  Desliga o computador interno, que gerencia a tela sensível ao toque e os serviços de streaming.\\\n  A console poderá continuar operando, inclusive comandada pelo Controle WEB.\\\n  Para desligar completamente o equipamento, aguarde alguns segundos e desligue a fonte de alimentação (no painel traseiro ou na fonte externa conforme o modelo).\n\n<Warning>",
+      "title": "Opciones disponibles",
+      "level": 3
+    },
+    {
+      "hash": "ea48bf50499d2d0b8e828fa2d31ae140e57827497dd64fa93439735843248d1a",
+      "translation": "### Desligamento da CPU\n\nAs consoles UNIDEX possuem uma **CPU interna** que deve ser **desligada de forma segura** antes de desconectar a console completamente. Esta função **não desliga toda a console**, apenas desliga a CPU principal do sistema.\n\n  - Após desligar a CPU, **espere alguns segundos** antes de desligar a unidade por completo, para permitir o encerramento correto dos processos internos.\n  - O desligamento total é realizado pela **chave mecânica** de liga/desliga (no painel traseiro ou na fonte externa, conforme o modelo).\n</Warning>",
+      "title": "Apagado del CPU",
+      "level": 3
+    }
+  ]
+}

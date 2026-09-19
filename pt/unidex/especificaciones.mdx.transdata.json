@@ -1,0 +1,71 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "f234826f284858a848bc08a4029828249e0a10473f2aa71e0f075e90106574e0",
+      "translation": "<AccordionGroup>\n  <Accordion title=\"Características gerais\">\n    | Parâmetro | Especificação |\n    | --- | --- |\n    | Canais | 24 canais; 12 faders físicos expansíveis para 24 mediante módulos UX-6 |\n    | Faders virtuais | 12 (UX24 base) Operáveis a partir da tela sensível ao toque ou interface web |\n    | Controle remoto | Interface web interna (HTML5) para operação remota via LAN |\n    | Distribuição de entradas | Configurável sobre os 24 canais |\n    | Cenas | 12 cenas de usuário (configuração de entradas, atribuição de canais, ajustes de processos) |\n    | Tela sensível ao toque | 7” — 1024 × 600 pixels, multi-touch |\n    | Displays por canal | OLED (nome, nível de entrada, nível de atenuação, indicações especiais) |\n  </Accordion>\n\n  <Accordion title=\"Entradas\">",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "f16a460c06e1b8b22033a66db0b8e15d474d34624b05d0c066b8fe3a309bb9e3",
+      "translation": "#### Entradas analógicas\n\n| Tipo | Quantidade | Detalhe |\n| --- | --: | --- |\n| MIC | 4 | Alimentação +48 V comutável em cada entrada |\n| Linha estéreo balanceada | 4 | Nível + 4 dBu |\n| UNIDEX | 16 mono / 8 estéreo | Entradas balanceadas de nível de linha, com capacidades extras para conexão de adaptadores Solidyne UDX. Permitem até 16 fontes adicionais (microfones, linhas TELCO). |",
+      "title": "Entradas analógicas",
+      "level": 4
+    },
+    {
+      "hash": "f5b7b6546bf35d014ef2723af93c3c5e8fb101b53d855c523a42ecc4ef78ad55",
+      "translation": "#### Entradas digitais\n\n    | Tipo | Quantidade | Detalhe |\n    | --- | --: | --- |\n    | AES3 | 4 (estéreo) | Suportam amostragem a 44.1 - 48 - 96 kHz |\n    | USB Audio | 4 estéreo / 8 mono | 4 dispositivos de reprodução estéreo em um computador (WDM).<br />ASIO compatível → suporta modo 8-in mono. |\n  </Accordion>\n\n  <Accordion title=\"Saídas\">",
+      "title": "Entradas digitales",
+      "level": 4
+    },
+    {
+      "hash": "c119fdeaaa62eab34fd96687635902083299b687b57580d11ecc0006d41f9756",
+      "translation": "#### Saídas analógicas\n\n| Tipo | Quantidade |\n| --- | --- |\n| PGM estéreo balanceadas | 2 |\n| Estéreo balanceadas atribuíveis | 4 |\n| Não balanceadas (mix-minus) | 8 |\n| Monitoração de Cabine de Controle (alto-falantes + fones de ouvido) | 2 estéreo |\n| Monitoração de Estúdios (alto-falantes + fones de ouvido + talkback) | 2 estéreo |",
+      "title": "Salidas analógicas",
+      "level": 4
+    },
+    {
+      "hash": "0ab61c0f96002c009c90a6507632ef10275c0248fe628f8dc0197ab74a1cbd89",
+      "translation": "#### Saídas digitais\n\n| Tipo | Quantidade | Detalhe |\n| --- | --- | --- |\n| AES3 | 4 estéreo | SOMENTE suportam amostragem a 48 kHz |\n| USB Audio | 4 estéreo / 8 mono | 4 dispositivos de gravação estéreo em um computador (WDM).<br />Compatível com ASIO → suporta modo 8-outs mono. |\n| Streaming AoIP | 2 estéreo (RTP, Icecast/Shoutcast) |  |\n</Accordion>\n\n<Accordion title=\"GPIO, intercom e auxiliares\">\n| Função | Especificação |\n| --- | --- |\n| Luzes “No ar” | 2 saídas (Estúdios A e B), 12 VCC, 250 mA |\n| GPI | 4 entradas de uso geral (ativa alta 3.3 ~ 15 V) |\n| GPO | 8 saídas (7 coletor aberto; \\+24 V @ 250 mA; \\+1 × 12 VDC @ 250 mA) |\n| Monitoração de ar | 1 entrada estéreo não balanceada (sintonizador externo) |\n| Talkback desde estúdios | 1 entrada (no conector Studio Box) |\n| Microfone de talkback | Integrado (talk-back) |\n| Intercom | 4 botões de intercomunicação atribuíveis |\n| Intercom em TELCO | PTT (falar-escutar) em canais TELCO usando botão CUE |\n</Accordion>\n\n<Accordion title=\"Arquitetura e processamento de áudio\">\n| Parâmetro | Valor |\n| --- | --- |\n| Buses de mixagem | 4 buses estéreo (PGM, REC, AUX com atribuição direta desde a superfície; VBUS atribuível desde tela) |\n| PFL | 1 bus PFL (CUE) |\n| Resolução / SR | 24 bits @ 48 kHz |\n| Processos DSP | Fixos por entrada e segundo tipo: EQ paramétrico (3 ou 4 bandas), portão de ruído, compressor/limitador, de-esser |\n| Mix-minus / talkback | Envios automáticos (TELCO) |\n| Latência | 1.2 ms (linha analógica → saída analógica) / 1.4 ms (MIC com EQ \\+ dinâmica \\+ de-esser) |\n</Accordion>\n\n<Accordion title=\"Valores e medições (ruído, distorção, níveis)\">",
+      "title": "Salidas digitales",
+      "level": 4
+    },
+    {
+      "hash": "87c7f11537c946fa1be90693b1af3fa59facb1c1fac5ecc1de63393dc45e3839",
+      "translation": "#### Entradas e saídas digitais (AES3, USB, AoIP)\n\n| Parâmetro | Valor |\n| --- | --- |\n| RD | 120 dBA |\n| Resposta de frequência | 20 Hz – 20 kHz ± 0.1 dB |\n| THD | \\< 0.002 % |",
+      "title": "Entradas y salidas digitales (AES3, USB, AoIP)",
+      "level": 4
+    },
+    {
+      "hash": "c72e813a19f967da5a31017402dcf3c933d65597f18fada57f8a3d14c4d7e605",
+      "translation": "#### Entradas analógicas\n\n| Parâmetro | Valor |\n| --- | --- |\n| Nível de entrada | Máx: +26 dBu / Mín: –24 dBu / Nominal: +4 dBu |\n| Faixa dinâmica | 112 dBA |\n| Resposta de frequência | 20 Hz – 20 kHz ± 0.25 dB |\n| THD+N | 0.01 % |",
+      "title": "Entradas analógicas",
+      "level": 4
+    },
+    {
+      "hash": "e57957ffd0f9070162149505d1d512b8e77603e99baa6168a18adb3a61778a1b",
+      "translation": "#### Entradas de microfone\n\n| Parâmetro | Valor |\n| --- | --- |\n| Nível de entrada | Máx: –24 dBu / Mín: –75 dBu / Nominal: –50 dBu (150 Ω) |\n| Ruído | EIN @ –50 dBu: –121 dBA |\n| Resposta em frequência | 20 Hz – 20 kHz ± 0.5 dB |\n| THD\\+N | 0.01 % |\n| Alimentação | \\+48 V individual |",
+      "title": "Entradas de micrófono",
+      "level": 4
+    },
+    {
+      "hash": "d122b0bc25d8216466f51299156f054cb30dbbc2a4fecf390f1fe1ba804729cf",
+      "translation": "#### Saídas analógicas\n\n| Parâmetro | Valor |\n| --- | --- |\n| Nível | Nominal: \\+4 dBu / Máx: \\+24 dBu |\n| Faixa dinâmica | \\> 110 dBA |\n| Resposta em frequência | 20 Hz – 20 kHz ± 0.5 dB |\n| THD | Típ. 0.005 % @ 1 kHz |\n</Accordion>\n\n<Accordion title=\"USB\">\n| Característica | Detalhe |\n| --- | --- |\n| Porta | 1 × USB 2.0 |\n| Canais | 4 dispositivos estéreo de reprodução/gravação sobre um PC (Windows WDM) |\n| Driver | ASIO 2.2 (suporta reprodução simultânea em ASIO e WDM) |\n| VST | Suporta hosts VST de 32-bit e 64-bit (ASIO) para plug-ins em tempo real |\n| Multi-cliente | Suporta mais de uma aplicação ASIO em paralelo |\n| Compatibilidade | Windows 11/10/8/7 (32 e 64 bits) |\n</Accordion>\n\n<Accordion title=\"Opção Dante AES67\">\n| Característica | Detalhe |\n| --- | --- |\n| Canais AoIP | 16 × 16 |\n| Capacidade de rede | Compatível com redes DANTE existentes de até 512 × 512 canais.<br />Atende ao padrão AES67 para integração com outras redes AoIP, como LiveWire/AES67. |\n| Alterações na console | Substitui 4 entradas de linha estéreo e 4 entradas UNIDEX estéreo (módulo UX8-in) por 16 entradas Dante AoIP (módulo UX-Dante). |\n| Saídas AoIP | PGM, REC, AUX, fones de Controle, fones de Estúdio e 3 estéreo atribuíveis pelo usuário |\n</Accordion>\n\n<Accordion title=\"Dimensões e peso\">",
+      "title": "Salidas analógicas",
+      "level": 4
+    },
+    {
+      "hash": "871c90579adbbb0f0d9edc4871c7f4969f3b49995dfcecda043e6e6f9bb4decf",
+      "translation": "#### Console (12 faders)\n\n| Parâmetro | Valor |\n| --- | --- |\n| Largura | 730 mm |\n| Profundidade | 455 mm (550 mm com a tampa traseira que oculta os cabos) |\n| Altura | 130 mm |\n| Peso | 8 kg |",
+      "title": "Consola (12 atenuadores)",
+      "level": 4
+    },
+    {
+      "hash": "43e7f41a502d7d43c228c4b93666b7a33b59b9b8f0924a391898414c0fa630d0",
+      "translation": "#### Embalagem e acessórios\n\n| Elemento | Valor |\n| --- | --- |\n| Dimensões da embalagem | 850 mm × 610 mm × 270 mm |\n| Peso com embalagem (UX24 + cabos) | 15 kg |\n| Adaptadores UDX | 0.33 kg cada unidade |\n| Kit cabos RJ45 | 4 kg |\n  </Accordion>\n</AccordionGroup>",
+      "title": "Embalaje y accesorios",
+      "level": 4
+    }
+  ]
+}

@@ -1,28 +1,26 @@
 ---
 title: "Input and Output Configuration"
-description: "Input and output configuration for UX24 and UX18"
-keywords: ["inputs","outputs","gain","intercom","talkback","configuration"]
-tags: ["IP consoles", "UNIDEX"]
+description: "Input and Output Configuration on the UX24 and UX18"
+keywords: ["inputs", "outputs", "gain", "intercom", "talkback", "configuration"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "b03cbaff7a50f4652d2d1111d8929f69559d243922efaebf6b55f3a859dd4e4e"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## SETTINGS Screen
 
-Access by pressing **SETTINGS** on the main screen. Contains all console configuration options.
+Accessed by pressing **SETTINGS** on the main screen. It contains all the console's configuration options.
 
 ## **1** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> CONFIGURATION MENU
 
-- Configuration options are shown in tabs on the left side: INPUTS, OUTPUTS, GPIO, SYS CONFIG, STREAMING, AoIP (Dante), USERS.
-- When accessing SETTINGS, the first menu item (INPUTS) loads by default.
-- Some options can also be accessed from the context menu at the bottom.
-- Touching an option displays its corresponding controls and values on screen.
+- Configuration options are displayed in tabs on the left side of the screen: INPUTS, OUTPUTS, GPIO, SYS CONFIG, STREAMING, AoIP (Dante), USERS.
+- When accessing SETTINGS, the first menu item, which is INPUTS, is loaded by default.
+- Some options can also be accessed from the context menu in the lower zone.
+- Tapping an option displays the corresponding controls and values for that option on the screen.
 
 <img
   src="/images/ux24/UX24-Settings-Inputs.png"
@@ -31,64 +29,67 @@ Access by pressing **SETTINGS** on the main screen. Contains all console configu
   style={{ width:"75%" }}
 />
 
+---
+
 ## INPUTS SETTINGS
 
 ### **2** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Input List
 
-Shows all available inputs.\
-<Icon icon="arrows-rotate-reverse" iconType="solid" color="#0400ff" size={16} /> Select an input by **turning the encoder**.\
-The options and configuration for the selected input are shown on the right.
+Displays all available inputs.\
+<Icon icon="arrows-rotate-reverse" iconType="solid" color="#0400ff" size={16} /> An input is selected by **rotating the encoder**.\
+On the right, the options and configuration for the selected input are displayed.
 
 - The **ID number** on the left of each input is fixed and corresponds to the internal order.
 - The **number on the right** indicates the **assigned channel** for that input.
 - Stereo inputs are shown grouped in **L/R** pairs.
-  - When set to `STEREO`, they are grouped as a pair.
-  - When set to `MONO`, left and right channels are unlinked and can be selected separately.
+  - If they are configured as `STEREO`, they are grouped as a pair.
+  - If they are in `MONO`, the left and right channels are unlinked and can be selected separately.
 
 ### **3** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Input Gain
 
 Controls the gain of the selected input.\
-<Icon icon="arrows-rotate-reverse" iconType="solid" color="#0400ff" size={16} /> Turn the encoder to modify the value.\
-<Icon icon="arrow-down-to-line" iconType="solid" color="#0400ff" size={16} /> Press the encoder to toggle between list navigation and gain adjustment.
+<Icon icon="arrows-rotate-reverse" iconType="solid" color="#0400ff" size={16} /> To modify the value, turn the encoder.\
+<Icon icon="arrow-down-to-line" iconType="solid" color="#0400ff" size={16} /> Pressing the encoder toggles the control between list navigation and gain adjustment.
 
-The level indicator shows the peak signal value at the input (dBfs).
+The level meter shows the peak value of the signal at the input (dBfs).
 
 **Quick gain adjustment:**
 
-1. Play music with low dynamics (e.g. current pop) for line inputs,\
-   or speak continuously at normal level and correct distance for microphone inputs.
+1. For line inputs, play music with low dynamic range (e.g., modern pop).\
+   For microphone inputs, speak continuously at an appropriate level and correct distance.
 2. Position the channel fader in the normal working zone (marked between -10 dB and -20 dB).
-3. Adjust gain until the **PROGRAM** VU meter reads around 0 VU. Observe the slow reading (VU), not the dBfs peak, as the peak will always "float" above the VU value.
-
+3. Adjust the gain until the **PROGRAM** VU meter reads around 0 VU. Observe the slow (VU) reading, not the dBfs peak, as the peak will always be "floating" above the VU value.
    <Tip>
-     The numerical indication to the right of the main indicator can be toggled between dBFS and VU by touching the number.
+     The numeric indication to the right of the main meter can be switched between dBFS and VU by touching the number.
    </Tip>
 
 <Info>
-  This gain control is also shown on the CHANNEL screen. Gain adjustment can be done from either screen.
+  This gain control is also shown on the channel (CHANNEL) screen. The gain adjustment can be made from either of these screens.
 </Info>
 
 ### **4** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Input Options
 
-Available options **depend on the type** of selected input:
+The available options **depend on the selected input type**:
 
-- **INPUT TYPE**: Indicates input type (MIC, LINE, UDX, USB, AES).
-- **MODE**: Stereo or mono. In mono, L/R channels are configured as independent inputs.
-- **ASSIGNED TO CHANNEL**: Channel where the selected input signal is routed.\
-  Channel is chosen from the dropdown menu. This option is also shown on the CHANNEL screen.
-- **PHANTOM**: Available only for MIC inputs. Enables/disables 48V power.
-- **UDX TYPE**: Available only on UNIDEX inputs. Defines the connected adapter model.\
-  If used as balanced line, value should be `LINE` (default).
+- **INPUT TYPE**: Indicates the input type (MIC, LINE, UDX, USB, AES).
+- **MODE**: Stereo or mono. In mono, the L/R channels are configured as independent inputs.
+- **ASSIGNED TO CHANNEL**: Channel to which the signal from the selected input is sent.\
+  The channel is chosen from the dropdown menu. This option is also shown on the CHANNEL screen.
+- **PHANTOM**: Available only for MIC inputs and for UNIDEX inputs with UDX 2MIC adapters. Enables/disables 48 V power.
+- **UDX TYPE**: Available only on UNIDEX inputs. Defines the model of adapter connected.\
+  If the UNIDEX input is used as a balanced line, `UDX TYPE` must be `LINE `(default).
 
 ### **5** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Process
 
-Direct access to available processes for the input.\
-During normal operation, these are accessible from PROCESS and CHANNEL screens.
+Shortcuts to the processes available for the input.\
+In normal operation, they are accessible from the PROCESS and CHANNEL screens.
 
 ### **6** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Select
 
-Activates **SELECT** mode, allowing channel selection via **CUE/SELECT** buttons and displaying the assigned input.\
-The encoder always navigates the input list, even with SELECT active.
+Activates **SELECT** mode, allowing you to choose a channel from the **CUE/SELECT** buttons and view the assigned input.\
+The encoder always navigates through the input list, even with SELECT active.
+
+---
 
 ## OUTPUTS SETTINGS
 
@@ -101,54 +102,52 @@ The encoder always navigates the input list, even with SELECT active.
 
 ### **1** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Output List
 
-Shows all available outputs.\
-<Icon icon="arrows-rotate-reverse" iconType="solid" color="#0400ff" size={16} /> Selection is made by **turning the encoder** or touching directly on screen.\
-Configuration options for the selected output are shown on the right.
+Displays all available outputs.\
+<Icon icon="arrows-rotate-reverse" iconType="solid" color="#0400ff" size={16} /> Selection is made by **rotating the encoder** or by touching the screen directly.\
+On the right, the configuration options for the selected output are shown.
 
 ### **2** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Output Gain
 
-Adjusts output level. Depending on output type, adjustment may be in dBu or dBfs.
+Adjusts the output level. Depending on the output type, the adjustment may be given in dBu or dBfs.
 
-- **Analog outputs:** level is expressed in dBu referenced to 0 VU (default: +4 dBu).
-- **Digital outputs:** gain is expressed in dB.\
-  When gain is zero (default), level matches meter scale\
+- **Analog outputs:** the level is expressed in dBu referenced to 0 VU (default: \+4 dBu).
+- **Digital outputs:** the gain is expressed in dB.\
+  When the gain is zero (default), the level matches the meter scale\
   (0 VU = –20 dBfs, 1 kHz @ 0 VU).
 
-Press encoder to toggle between output list navigation and gain control. <Icon icon="arrows-rotate-reverse" iconType="solid" color="#0400ff" size={16} /> To change value, **turn the encoder**.
+Pressing the encoder toggles between navigating the output list and controlling the gain. <Icon icon="arrows-rotate-reverse" iconType="solid" color="#0400ff" size={16} /> To change the value, **rotate the encoder**.
 
 <Danger>
-  PGM, REC and AUX meters on main screen show bus level **before** output gains. If digital gain is modified, actual output level may differ from indicated level,\
-  with clipping risk not visible on meters.
+  The PGM, REC, and AUX meters on the main screen show the bus level **before** the output gains. If a digital gain is modified, the actual output level may differ from the indicated one, creating a risk of clipping not visible on the meters.
 </Danger>
 
 ### **3** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Audio Mode
 
-Configures output as `stereo` or `mono`. In mono mode, left and right channels of the pair are used as independent outputs (for example, to feed UDX 2TEL adapters sending mono signals to lines).
+Allows configuration of the output as `stereo` or `mono`. In mono mode, the left and right channels of the pair are used as independent outputs (for example, to feed UDX 2TEL adapters that send mono signals to the phone lines).
 
-### **6** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Source
+### 6 <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Source
 
-Only available on assignable outputs. Defines signal sent to that output.\
-For outputs with MIX-MINUS option, defines source signal for output in **DIRECT** mode.
+Only available on assignable outputs. Defines the signal sent to that output. \
+On outputs with the MIX-MINUS option, defines the signal source for the output in **DIRECT** mode.
 
-**Available sources for UX-24 outputs:**\
+#### **Sources available on the outputs for the UX-24:**\
 \
 `PGM, REC, AUX, VBUS, CUE, STUDIO HEADPHONES, TALKBACK, MIC-1, MIC-2, MIC-3, MIC-4, UDX-1 to UDX-8`
 
-**Available sources for UX-18 outputs:**
+#### **Sources available on the UX-18 outputs:**
 
-| **OUTPUTS (ST)**             | **SOURCE**                                                                                        |
-| ---------------------------- | ------------------------------------------------------------------------------------------------ |
-| **UNIDEX 1 to 4**           | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 to MIC-4; USB-1 to USB-4                          |
-| **USB 1 to 4**              | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 to MIC-4; UNIDEX-1 to UNIDEX-4                    |
-| **AES-2**                   | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK                                                           |
-| **AoIP (DANTE) IN-5 to IN-8** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 to MIC-5; Bluetooth; UNIDEX 1 & 2; USB 1 & 2; AES-1 |
+| **ASSIGNABLE OUTPUTS** | **SOURCE** |
+| --- | --- |
+| **STEREO 1 to 4** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 to MIC-4; USB-1 to USB-4 |
+| **USB 1 to 4** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 to MIC-4; UNIDEX-1 to UNIDEX-4 |
+| **AES-2** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK |
+| **AoIP (DANTE) IN-5 to IN-8** | PGM; REC; AUX; VBUS; STUDIO; CUE; TLBK; MIC-1 to MIC-5; Bluetooth; UNIDEX 1 and 2; USB 1 and 2; AES-1 |
 
-## Mix-Minus Sends
+## Mix-Minus Feeds
 
-A MIX-MINUS output sends a mix from which an associated input signal is SUBTRACTED. It's used, for example, for telephone line return, preventing call audio from\
-re-entering the system and causing feedback. The line receives a _PGM MIX-MINUS_, which is the PGM signal MINUS the telephone line audio.
+A MIX-MINUS output sends a mix from which the signal of an associated input is SUBTRACTED. It is used, for example, for the return feed to a phone line, preventing the call audio from re-entering the system and causing feedback. The line is sent a *PGM Mix-Minus*, which is the PGM signal MINUS the phone line audio.
 
-**Stereo outputs** (5 to 8 in UX24; 1 to 4 in UX18) and all **USB** can be configured as **Direct** or **Mix-Minus**.
+The **stereo outputs** (5 to 8 on UX24; 1 to 4 on UX18) and all **USB** outputs can be configured as **Direct** or **Mix-Minus**.
 
 <img
   src="/images/ux24/unidex_config_mix-minus.jpg"
@@ -159,13 +158,13 @@ re-entering the system and causing feedback. The line receives a _PGM MIX-MINUS_
 
 ### **7** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Send Mode
 
-- **Direct**: Normal output operation mode. MIX-MINUS is disabled. Signal defined in SOURCE is sent directly to output.
-- **Mix-Minus**: Associated input signal is subtracted from output signal.
+- **Direct**: Normal working mode for the outputs. mix-minus is disabled. The signal defined in SOURCE is sent directly to the output.
+- **Mix-Minus**: The signal from an associated input is subtracted from the output signal.
 
 ### **8** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Mix-Minus Source
 
-Defines bus for subtraction: `PGM, REC, AUX, VBUS or AUTO ASSIGN`.\
-In **AUTO ASSIGN**, bus is automatically chosen by priority:
+Defines the bus on which the subtraction is performed: `PGM, REC, AUX, VBUS, or AUTO ASSIGN`.\
+In **AUTO ASSIGN**, the bus is chosen automatically based on priority:
 
 Priority 1 - PGM\
 Priority 2 - REC\
@@ -174,65 +173,65 @@ Priority 4 - VBUS
 
 For example:
 
-- If a channel is assigned to PGM and REC, Mix-Minus is done on PGM.
-- If assigned only to REC and AUX, it's done on REC.
+- If a channel is assigned to PGM and REC, the mix-minus is performed on PGM.
+- If it is assigned only to REC and AUX, it is performed on REC.
 
 ### **9** <Icon icon="arrow-right-long" iconType="solid" color="#ffa300" size={18} /> Mix-Minus Channel
 
-Shows input associated with selected output and channel assigned to that input.\
+Displays the input associated with the selected output and the channel assigned to that input.\
 These fields cannot be edited.\
-Each Mix-Minus mode output has its predetermined associated input.
+Each output in mix-minus mode has its associated input preconfigured.
 
 <Warning>
-  For an output to work in Mix-Minus, the associated input **must be assigned to a channel**.\
-  If not assigned, the option remains disabled.
+  For an output to function in mix-minus mode, its associated input **must be assigned to a channel**.\
+  If it is not, the option remains disabled.
 </Warning>
 
-Default MIX-MINUS assignments for UX24:
+Default MIX-MINUS assignment table for the UX24. For the UX18 it is the same, except outputs OUT 5 to 8 are replaced by OUT 1 to 4.
 
 | **OUTPUT (UX24)** | **ASSOCIATED INPUT** |
-| :--------------: | :-----------------: |
-| OUT5-L           | UDX1-L              |
-| OUT5-R           | UDX1-R              |
-| OUT6-L           | UDX2-L              |
-| OUT6-R           | UDX2-R              |
-| OUT7-L           | UDX3-L              |
-| OUT7-R           | UDX3-R              |
-| OUT8-L           | UDX4-L              |
-| OUT8-R           | UDX4-R              |
-| USB OUT1-L       | USB IN1-L           |
-| USB OUT1-R       | USB IN1-R           |
-| USB OUT2-L       | USB IN2-L           |
-| USB OUT2-R       | USB IN2-R           |
-| USB OUT3-L       | USB IN3-L           |
-| USB OUT3-R       | USB IN3-R           |
-| USB OUT4-L       | USB IN4-L           |
-| USB OUT4-R       | USB IN4-R           |
+| :-: | :-: |
+| OUT5-L | UDX1-L |
+| OUT5-R | UDX1-R |
+| OUT6-L | UDX2-L |
+| OUT6-R | UDX2-R |
+| OUT7-L | UDX3-L |
+| OUT7-R | UDX3-R |
+| OUT8-L | UDX4-L |
+| OUT8-R | UDX4-R |
+| USB OUT1-L | USB IN1-L |
+| USB OUT1-R | USB IN1-R |
+| USB OUT2-L | USB IN2-L |
+| USB OUT2-R | USB IN2-R |
+| USB OUT3-L | USB IN3-L |
+| USB OUT3-R | USB IN3-R |
+| USB OUT4-L | USB IN4-L |
+| USB OUT4-R | USB IN4-R |
 
 ## Special Options for Talk-Back and Intercom
 
 ### Intercom (UX24 only)
 
-Enables intercom send to that output. When assigned **Intercom** button is pressed on console, talkback mic audio interrupts current output signal. Used, for example, to set up differentiated talkback sends to headphone monitoring.
+Enables intercom feed to that output. When the assigned **Intercom** button is pressed on the console, the order microphone audio interrupts the signal present at the output. It is used, for example, to set up separate talkback feeds to headphone monitoring.
 
 ### Studio B Speakers (UX24 only)
 
-Allows using output to feed monitor speakers in **Studio B**.\
-When microphones assigned to this studio are activated, output is automatically muted.
+Allows using the output to power the monitor speakers of a **Studio B**.\
+When microphones assigned to this studio are activated, the output is automatically muted.
 
-### Talk-Back Ch and Studio Talk-Back Link (UX18 only)
+### Talk-Back Channel and Studio Talk-Back Link (UX18 only)
 
-These options allow configuring UX18 to work with **differentiated talkback channels** and headphone groups. For connection details see _Configuring StudioBox with dual Talk-Back channel_.
+These options allow you to configure the UX18 to work with **separate talkback channels** and headphone groups. This wiring is explained in [Configuring StudioBox with Dual Talk-Back Channel](/en/ux18/ux18-doble-talkback).
 
-**Talk-Back Channel:** Links output to hardware channel _talk-back_ mode.
+**Talk-Back Channel:** Links the output to the **_talk-back_ mode of a hardware channel** (does not apply to virtual channels).
 
-- _Talk-back_ is activated from a channel by holding the **CUE/SELECT** button.
-- When activated on a channel associated with an output, talkback mic signal (internal or external) is sent **only to that output**, interrupting current audio.
-- Dropdown menu allows selecting:
+- Talkback is activated from the channel by holding down the **CUE/SELECT** button.
+- When activated on a channel linked to an output, the talkback microphone signal (internal or external) is sent **only to that output**, interrupting the current audio.
+- The dropdown menu allows you to choose:
   - Channels 1 to 6
-  - A GROUP channel (A, B, C or D)
-  - Disable function (_unassigned_)
+  - A GROUP channel (A, B, C, or D)
+  - Disable the function (_unassigned_)
 
-**Studio Talk-Back Link:** Links output to console's main **Talk-Back** button.
+**Studio Talk-Back Link:** Links the output to the main **Talk-Back** button on the console panel.
 
-- When Talk-Back is pressed, talkback mic is sent to **STUDIO** output and all outputs with _Studio Talk-Back Link_ enabled.
+- When the Talk-Back button is pressed, the talkback microphone is sent to the **STUDIO** output and to all outputs that have _Studio Talk-Back Link_ enabled.

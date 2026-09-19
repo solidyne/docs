@@ -1,54 +1,52 @@
 ---
 title: "Using Bluetooth"
-description: "Mobile Bluetooth operation"
-keywords: ["operation", "Bluetooth","mobile","connection","pair","call", "pairing"]
-tags: ["portable consoles","CODEC","MX2200"]
+description: "Bluetooth Mobile Phone Operation"
+keywords: ["operation", "Bluetooth", "mobile", "connection", "pair", "call", "pairing"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "5e88708a6474ce26619e1549dfbf6d889f0e9b3d916e9de3884a51341311740a"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Key Concepts
 
-In operation, it's essential to distinguish three different actions:
+In operation, it is crucial to distinguish three distinct actions:
 
-- **Enable/disable Bluetooth on mobile**\
-  Turn Bluetooth on or off on the phone. Does not involve pairing or connecting to a device.
-- **Pair/Link the mobile with a device**\
-  Also called _pairing_. The mobile **registers** an external device (headphones, car hands-free, or MX2200's Bluetooth channel). This is done **only once** per device.\
-  A device can be **unpaired**, meaning deleted from the list of Bluetooth devices linked to the mobile. To use it again, you'll need to pair it again.
-- **Connect/Disconnect a previously paired device**\
-  The mobile **connects** to one of the previously paired devices. This is different from pairing. With Bluetooth enabled on the mobile, connection/disconnection is done from the **list of paired devices**.
+-   **Enable/Disable Bluetooth on the mobile phone**\
+    Turn Bluetooth on or off on the phone. This does not imply pairing or connecting to a device.
+-   **Pair the mobile phone with a device**\
+    Also called *pairing*. The mobile phone **registers** an external device (headphones, car hands-free kit, or the MX2200's Bluetooth channel). This is done **only once** per device.\
+    A device can be **unpaired**, meaning it is deleted from the list of Bluetooth devices paired to the mobile phone. To use it again, it must be paired anew.
+-   **Connect/Disconnect a previously paired device**\
+    The mobile phone **connects** to one of the previously paired devices. This is different from pairing. With Bluetooth enabled on the mobile phone, you connect or disconnect from the **list of paired devices**.
 
-### BLT LED States
+### BLT LED Status
 
-The **BLT** button illuminates in amber with different flashing patterns according to the Bluetooth status:
+The **BLT** button lights up in amber with different flashing patterns depending on the Bluetooth status:
 
-| Mode  | Status                                   | LED Indication                              | Meaning                                                                                                                                           |
-| :---: | ---------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A** | **Mobile connected**                      | Brief ON (1 s) \+ long OFF (2 s)           | Mobile is connected to MX2200, **no active call**                                                                                                 |
-| **B** | **Mobile not connected / Call in progress** | Slow ON (2 s) \+ short OFF (1 s)          | - Bluetooth on but **no mobile connected**<br />- Or mobile has an **active call**<br />- When a mobile connects, status changes to **A**         |
-| **C** | **_Search mode (Pairing)_**               | Fast flashing                               | Allows phone to find and pair with **MX2200**                                                                                                     |
-| **D** | **Incoming call**                         | Steady ON                                   | Indicates an incoming call                                                                                                                        |
-| —     | **Off**                                   | No illumination                             | Bluetooth off                                                                                                                                     |
+| Mode | Status                                    | LED Indication                           | Meaning                                                                                                                                                   |
+| :--: | ----------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | **Mobile phone connected**                | Short on (1 s) + long off (2 s)          | The mobile phone is connected to the MX2200, **with no call in progress**                                                                                 |
+| **B** | **Mobile phone not connected / Call in progress** | Slow on (2 s) + short off (1 s) | - Bluetooth is on but **no mobile phone is connected**<br />- Or the mobile phone is on an active **call**<br />- When a phone connects, status changes to **A** |
+| **C** | **_Pairing Mode_**                        | Fast flash                               | Allows the phone to find and **pair** with the **MX2200**                                                                                                 |
+| **D** | **Incoming call**                         | Steady on                                | Indicates an incoming call                                                                                                                                |
+| —    | **Off**                                   | No illumination                          | Bluetooth is off                                                                                                                                          |
 
 ### Operation Notes
 
-- **Mode A** confirms the mobile is properly linked, ready to use as audio source or backup link.
-- **Mode B** can indicate two situations: no mobile connected yet, or an active call.
+- **Mode A** confirms that the mobile phone is paired correctly, ready to be used as an audio source or backup link.
+- **Mode B** can indicate two situations: that no mobile phone is connected yet, or that there is an active call.
 - **Mode C** should only be used when **pairing** a new phone.
-- **Mode D** acts as clear notification of incoming call, with steady illumination.
+- **Mode D** acts as a clear incoming call notification, with a steady illumination.
 
 <Note>
-  Never confuse **pairing (mode C)** with **connecting/disconnecting (mode A/B)**. Pairing is done only once per phone, while connection/disconnection happens each time of use.
+  Never confuse **pairing (mode C)** with **connecting/disconnecting (mode A/B)**. Pairing is only performed once per phone, while connection/disconnection occurs each time it is used.
 </Note>
 
-The image shows an example of an Android mobile with a call. Switching between Bluetooth and Speaker allows transferring the call to MX2200 (Bluetooth) or speaking from the phone (Speaker).
+The image shows an example of an Android mobile phone with a call. Switching between Bluetooth and Speaker allows passing the call to the MX2200 (Bluetooth) or speaking from the phone (Speaker).
 
 <img
   src="/images/android_bluetooth.jpg"
@@ -59,53 +57,53 @@ The image shows an example of an Android mobile with a call. Switching between B
 />
 
 <Note>
-  Interface may vary by system/version: some Android show a **Headset/Speaker** button, others a menu with **options**. Check your phone's manual.
+  The interface may vary by system/version: some Android devices show a **Headset/Speaker** button, others a menu with **options**. Consult the phone's manual.
 </Note>
 
 ---
 
-## Pairing mobile with MX2200
+## Pairing a Mobile Phone with the MX2200
 
 <Steps>
-  <Step title="Prepare the console">
+  <Step title="Prepare the Console">
     Ensure Bluetooth is **off** on the MX2200.\
-    If the **BLT** button flashes amber with **slow** intermittence (≈1 flash every 2 s), Bluetooth is **on**. Press and hold **BLT** until the LED turns completely **off**.
+    If the **BLT** button flashes **slowly** in amber (≈1 flash every 2 s), Bluetooth is **on**. Hold **BLT** until the LED turns **off** completely.
   </Step>
-  <Step title="Enter pairing mode">
-    With Bluetooth off, press and hold **BLT** ~**8 s**.\
-    You'll first see **slow** flashes (mode B) then **fast** flashing (mode C). **Release** the button when it changes to fast flashing: console enters **pairing** mode and is ready to be discovered.
+  <Step title="Enter Pairing Mode">
+    With Bluetooth off, hold **BLT** for ~**8 s**.\
+    You will first see **slow** flashes (mode B) and then a **fast** flash (mode C). **Release** the button when it changes to fast flash: the console is now in **pairing** mode and ready to be discovered.
   </Step>
-  <Step title="Search from mobile">
-    On the phone, **enable Bluetooth** and search for **new devices** (procedure varies by make/model).
+  <Step title="Search from the Mobile Phone">
+    On the phone, **enable Bluetooth** and search for **new devices** (the procedure varies by brand/model).
   </Step>
-  <Step title="Select the device">
-    The device will appear as **Solidyne BTM641**. Select it to **pair** and then to **connect** if the system asks twice.
+  <Step title="Select the Device">
+    The device will appear as **Solidyne BTM641**. Select it to **pair** and then to **connect** if the system prompts twice.
   </Step>
-  <Step title="Confirmation and name">
-    After pairing, **BLT** remains with **slow** flash (Bluetooth **active**).\
-    On mobile you can **rename** "Solidyne BTM641" from device settings if desired.
+  <Step title="Confirmation and Naming">
+    After pairing, **BLT** will have a **slow** flash (Bluetooth **active**).\
+    On the mobile phone, you can **rename** "Solidyne BTM641" from the device settings, if desired.
   </Step>
-  <Step title="Multiple mobiles and distance">
-    You can **pair multiple** phones with MX2200, but **only one** can be **connected** at a time.\
-    Typical range: **up to 3 m**. Keep mobile **nearby**, but **never** placed directly on the MX2200.
+  <Step title="Multiple Phones and Distance">
+    You can **pair several** phones with the MX2200, but **only one** can be **connected** at a time.\
+    Typical range: **up to 3 m**. Keep the phone **close**, but **never** resting directly on the MX2200.
   </Step>
 </Steps>
 
 ---
 
-## Re-connecting a previously paired mobile
+## Reconnecting a previously paired mobile phone
 
-The mobile can **disconnect** from MX2200 in various situations. The following table shows what happens and how to reconnect:
+The mobile phone may **disconnect** from the MX2200 in various situations. The following table indicates what happens and how to reconnect it:
 
-| Situation                                      | What happens to the call                                                                        | How to return to MX2200                                                                                        |
-| ---------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Bluetooth turned off on mobile**             | Call usually **transfers to phone** (behavior may vary by make/model)                           | **Turn Bluetooth back on**; reconnection may be **automatic** or select **Solidyne BTM641** from list          |
-| **Mobile disconnected from Bluetooth device**   | Call exits Bluetooth and goes to **phone**                                                      | On mobile **reconnect to Bluetooth** Solidyne BTM641 to return it to console                                   |
-| **"Speaker" activated on mobile**               | Call exits "hands-free" mode (Bluetooth) and goes to **phone**                                  | Switch to **"Headset/Bluetooth"** on mobile to return to console                                               |
-| **Bluetooth channel turned off on MX2200**     | Bluetooth link cuts off. Call usually transfers to phone.                                       | **Turn on BLT** and **reconnect** from mobile                                                                  |
+| Situation                                            | What happens to the call                                                                             | How to return to MX2200                                                                                             |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Bluetooth is turned off on the mobile phone**                   | Typically the call **is transferred to the phone** (behavior may vary by brand/model) | Turn **Bluetooth back on**; reconnection may be **automatic** or you may need to select **Solidyne BTM641** from the list |
+| **The mobile phone is disconnected from the Bluetooth device** | The call leaves Bluetooth and goes to the **phone**                                                 | On the mobile phone, **reconnect to the Bluetooth** device Solidyne BTM641 to return it to the console.                            |
+| **"Speaker" is activated on the mobile phone**                  | The call leaves "hands-free" mode (Bluetooth) and goes to the **phone**                          | Switch to **"Headset/Bluetooth"** on the mobile phone to return to the console                                            |
+| **The Bluetooth channel is turned off on the MX2200**            | The Bluetooth link is cut. Typically the call goes to the phone.                              | **Turn BLT on** and **reconnect** from the mobile phone                                                                  |
 
 <Note>
-  Reconnection **won't be possible** if the **same** Bluetooth channel on MX2200 was paired with **another phone** and that second phone is **currently connected**.
+  Reconnection **will not be possible** if the **same** Bluetooth channel on the MX2200 was paired with **another phone** and that second phone is currently **connected**.
 </Note>
 
 ---
@@ -113,90 +111,90 @@ The mobile can **disconnect** from MX2200 in various situations. The following t
 ## Volume Adjustment
 
 <Warning>
-  On the **mobile**, set **Bluetooth volume to maximum** to ensure good reception and best **signal-to-noise ratio**.
+  On the **mobile phone**, set the **Bluetooth volume to maximum** to ensure good reception and the best **signal-to-noise ratio**.
 </Warning>
 
 <Info>
-  Make the adjustment **during a Bluetooth call**. If you change volume **without** an active call, it modifies the phone's **internal speaker** volume and **not** Bluetooth volume.
+  Make the adjustment **during a Bluetooth call**. If you change the volume **without** an active call, you are adjusting the phone's internal **speaker volume** and **not** the Bluetooth volume.
 </Info>
 
-- Bluetooth level remains **stored in the mobile**.
-- If changing phones, repeat adjustment to set Bluetooth volume to **maximum**.
+- The Bluetooth level is **stored on the mobile phone**.
+- If you change phones, repeat the adjustment to set the Bluetooth volume **to maximum**.
 
 ---
 
-## Turning off Bluetooth on console
+## Turn Off Bluetooth on the Console
 
-To **turn off** Bluetooth on MX2200, press and hold **BLT** until LED **turns off**.\
-If operating on battery and not using Bluetooth, keep it **off** to **save power**.
+To **turn off** Bluetooth on the MX2200, hold down **BLT** until the LED **turns off**.\
+If operating on battery and you will not use Bluetooth, keep it **off** to **save power**.
 
 ---
 
-## Broadcasting via Bluetooth
+## On-air Operation via Bluetooth
 
 <Steps>
-  <Step title="Console preparation">
-    On **CELL PHONE**, keep **LEVEL control closed** and **CUE/PGM in CUE** (released).
+  <Step title="Console Preparation">
+    In **CELL PHONE**, keep the **LEVEL control closed** and **CUE/PGM in CUE** (released).
   </Step>
-  <Step title="Turn on Bluetooth on console">
-    Press and hold **BLT** ~**5 s** until it remains **lit** with **slow** flash (Bluetooth active).
+  <Step title="Enable Bluetooth on the Console">
+    Press and hold **BLT** for ~**5 s** until it remains **illuminated** with a **slow flash** (Bluetooth active).
   </Step>
-  <Step title="Connect mobile">
-    Enable Bluetooth on **mobile**. If already paired, link restores in **few seconds**.
+  <Step title="Connect the Mobile Phone">
+    Enable Bluetooth on the **mobile phone**. If it was already paired, the link is restored in **a few seconds**.
   </Step>
 </Steps>
 
 <Warning>
-  Before **transferring** the call to console, verify **CUE/PGM is in CUE** to prevent call from going **on air** at transfer moment.
+  Before **transferring** the call to the console, verify that **CUE/PGM is in CUE** to prevent the call from going **on-air** at the moment of transfer.
 </Warning>
 
 <Tabs>
-  <Tab title="Incoming call (Bluetooth)">
+  <Tab title="Incoming Call (Bluetooth)">
     <Steps>
-      <Step title="Answer if Bluetooth is off">
-        If Bluetooth is **off on mobile**, answer call from **phone** then **enable Bluetooth** to transfer to console.
+      <Step title="Answer if Bluetooth is Off">
+        If Bluetooth is **off on the mobile phone**, answer the call from the **phone** and then **enable Bluetooth** to transfer it to the console.
       </Step>
-      <Step title="Answer if Bluetooth is active">
-        If Bluetooth is **active**, you can answer directly from console with a **short press on BLT**.\
-        In this condition conversation happens **only through console**.
+      <Step title="Answer if Bluetooth is Active">
+        If Bluetooth is **active**, you can answer directly from the console with a **short tap on BLT**.\
+        In this condition, the conversation takes place **only through the console**.
       </Step>
-      <Step title="Call transfer">
-        Once transferred to console, **mobile receives PGM signal**.
+      <Step title="Call Transfer">
+        Once transferred to the console, the **mobile phone receives the PGM signal**.
       </Step>
-      <Step title="Private talk">
-        Press **TALK** in **CELL Phone** zone and listen on **CUE** through headphones.
+      <Step title="Private Talk">
+        Press **TALK** in the **CELL Phone** zone and listen via **CUE** on the headphones.
       </Step>
-      <Step title="Put on PGM">
-        Switch **CUE/PGM to PGM** and **adjust level** to send call to program.
+      <Step title="Put to PGM">
+        Change **CUE/PGM to PGM** and **adjust the level** to send the call to program.
       </Step>
-      <Step title="End call">
-        End with a **short press on BLT** or by hanging up from **mobile**.
+      <Step title="End the Call">
+        End with a **short tap on BLT** or by hanging up from the **mobile phone**.
       </Step>
-      <Step title="Return to phone">
-        To return call to mobile, switch mode from **"Headset/Bluetooth"** to **"Speaker"** on phone.
+      <Step title="Resume from the Phone">
+        To return the call to the mobile phone, change the mode from **"Headset/Bluetooth"** to **"Speaker"** on the phone.
       </Step>
     </Steps>
   </Tab>
-  <Tab title="Call from mobile">
+  <Tab title="Call from the Mobile Phone">
     <Steps>
-      <Step title="Switch to speaker">
-        On **mobile**, set audio to **"Speaker"** to talk from phone.
+      <Step title="Switch to Speaker">
+        On the **mobile phone**, set the audio to **"Speaker"** to speak from the phone.
       </Step>
-      <Step title="Dial call">
-        Make the **call** and establish connection from mobile.
+      <Step title="Dial the Call">
+        Perform the **dialing** and establish the call from the mobile phone.
       </Step>
-      <Step title="Transfer to console">
-        Switch audio mode on mobile to **"Headset/Bluetooth"** to transfer call to console.
+      <Step title="Transfer to the Console">
+        Change the audio mode on the mobile phone to **"Headset/Bluetooth"** to pass the call to the console.
       </Step>
-      <Step title="Confirm not on PGM">
-        Before transferring, ensure console is in **CUE**.\
-        If in **PGM**, call could accidentally go on air.
+      <Step title="Confirm Not in PGM">
+        Before transferring, ensure the console is in **CUE**.\
+        If it were in **PGM**, the call could accidentally go on-air.
       </Step>
-      <Step title="Put on air">
-        Switch **CUE/PGM to PGM** and **adjust level** to send call to program.
+      <Step title="Put On-air">
+        Change **CUE/PGM to PGM** and **adjust the level** to send the call to program.
       </Step>
-      <Step title="End call">
-        End with a **short press on BLT** or by hanging up from **mobile**.
+      <Step title="End the Call">
+        End with a **short tap on BLT** or by hanging up from the **mobile phone**.
       </Step>
     </Steps>
   </Tab>

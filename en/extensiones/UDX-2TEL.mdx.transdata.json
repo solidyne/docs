@@ -1,0 +1,83 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "ae74e08e4bc9b0beacff760d756c139fbc9a3c4281977a5a5a9d38015ebca897",
+      "translation": "import tierras from '/snippets/snippet-tierras.mdx'\n\n",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "2da265c6552c3ddc9f661b503a8afd2965ea1a6b7e05ce6d24914c354cb75e5a",
+      "translation": "## Overview\n\nThe **UDX 2TEL** expansion allows connecting **two land lines (POTS)** and their associated phones.\n\n- **UDX 2TEL-P**\\\n  Includes controls to **answer the line** and **transfer it to the console**.\\\n  This allows installing the unit and associated phones in locations remote from the console, such as a production office.\n- **UDX 2TEL**\\\n  Has no onboard controls.\\\n  It's designed for calls to always be handled by the operator from the console.\n\nAll communication functions (dialing, answering, holding, talkback) are operated **from the console**.\\\nEach phone line operates **independently** on a channel.",
+      "title": "Resúmen",
+      "level": 2
+    },
+    {
+      "hash": "54361d96b31db1b270c86c234ca245c3a059043dae95368b504b103125534c6b",
+      "translation": "## UDX 2TEL Connection\n\nThe connection is made using two standard **STP RJ45–RJ45** cables connected **pin-to-pin** (Solidyne models **SOL-P50** or **SOL-P25**).\n\n- **Output \"TO UNIDEX INPUT\"** → Connect to a **UNIDEX input** (1 to 4)\n- **Input \"FROM UNIDEX OUTPUT\"** → Connect to an **unbalanced analog output**\n\nThe following diagram shows the UDX 2TEL connection to a UX24 console.\n\n<img\n  src=\"/images/ux24/udx2tel-conexion.svg\"\n  alt=\"Udx2tel Connection Diagram\"\n  title=\"Udx2tel Connection Diagram\"\n  className=\"mx-auto\"\n  style={{ width:\"59%\" }}\n/>\n\n<Tip>\n  To simplify wiring, on the rear panel the connectors for **UNIDEX 1, 2, 3 and 4** inputs are aligned with their corresponding outputs according to the default assignment (outputs in mix-minus mode).\n</Tip>",
+      "title": "Conexión de UDX 2TEL",
+      "level": 2
+    },
+    {
+      "hash": "ff17c921212b6e51531ff13d3b191c4234da1c351c07e21c3119dcb5852fdb09",
+      "translation": "### Input to output mapping in mix-minus mode\n\n| Input | Outputs (UX24) | Outputs (UX18) |\n| --: | :-: | :-: |\n| UNIDEX 1 | UNBAL 5 | UNBAL 1 |\n| UNIDEX 2 | UNBAL 6 | UNBAL 2 |\n| UNIDEX 3 | UNBAL 7 | UNBAL 3 |\n| UNIDEX 4 | UNBAL 8 | UNBAL 4 |",
+      "title": "Correspondencia de entradas para salidas en modo mix-minus",
+      "level": 3
+    },
+    {
+      "hash": "124f23fb036676895a5c50e22bc1e2efdbf14a6d27c23b073264c8c365afe164",
+      "translation": "## Configurations\n\nOnce the **UDX 2TEL** adapter is connected, configure:\n\n- **Inputs**\n- **Outputs (sends)**\n- **Channels**",
+      "title": "Configuraciones",
+      "level": 2
+    },
+    {
+      "hash": "5f82bc2b9c495929ff54a82943d462338b8e0bea4dc0e067df18a6be09e94d3a",
+      "translation": "### Configure Inputs\n\n<Note>\n  The layout and shape of the controls shown below may vary. This does not affect the configuration procedure.\n</Note>\n\n1. On the main screen, access the `SETTINGS` option.\n2. **Rotate the encoder** until selecting the **channel \"L\"** of the UNIDEX input where UDX 2TEL is connected. \"L\" corresponds to LINE A of UDX 2MIC while \"R\" is LINE B.\n3. Tap the screen to set `INPUT MODE` to `MONO`.\n4. In the `UDX TYPE` option, select `2TEL`\n5. Tap the screen to open the `ASSIGNED TO CHANNEL` menu to assign a CHANNEL to the input. If you choose a channel that already has an input assigned, a warning will appear. If you continue, the input on that channel is replaced.\n   <Warning>\n     It is recommended to assign TELCO lines to hardware channels.\n   </Warning>\n6. In the `PROCESS` section, you can preset an equalization and/or noise gate.\n7. Press `BACK` to return to the main screen.\n8. The next step will be to configure the output.\n\n<img\n  src=\"/images/ux24/udx-2tel-entradas.svg\"\n  alt=\"Udx 2tel Entradas Sv\"\n  title=\"Udx 2tel Entradas Sv\"\n  className=\"mx-auto\"\n  style={{ width:\"60%\" }}\n/>",
+      "title": "Configurar entradas",
+      "level": 3
+    },
+    {
+      "hash": "8fa2c315ddf6e7f7d5f5eb07ca285d1602a11b83f73894ca54a29bde6c51de6d",
+      "translation": "### Configure Outputs\n\n1. From the main screen, access the `SETTINGS` option.\n2. In `SETTINGS`, select the `OUTPUTS` option.\n3. Using the encoder, select channel \"L\" of the output to which UDX 2TEL is connected. OUT-L = UDX 2TEL Line A OUT-R = UDX 2TEL Line B\n4. In the `AUDIO MODE` option, set the output to **MONO**.\n5. Configure `SEND MODE` to `MIX-MINUS`. When MIX-MINUS is activated, the output will be associated with the corresponding UNIDEX input.\n6. Repeat the operation for Line B.\n\n<Tip>\n  The **send level** to the line (OUT GAIN) and the **input gain** can be adjusted **during operation** from the TELCO screen.\n</Tip>\n\n<img\n  src=\"/images/ux24/udx2tel-salidas.svg\"\n  alt=\"Udx2tel Salidas Sv\"\n  title=\"Udx2tel Salidas Sv\"\n  className=\"mx-auto\"\n  style={{ width:\"64%\" }}\n/>",
+      "title": "Configurar salidas",
+      "level": 3
+    },
+    {
+      "hash": "739e0fe060d70d21823596dceb4487c7c5106bb54a748daea68ce8e95d83ff62",
+      "translation": "### Channel Configuration\n\n1. On the main screen, press `CHANNEL`. The `CUE` buttons switch to `SELECT` mode.\n2. Press the `CUE/SELECT` button on the channel to be configured. The console exits `SELECT` mode and displays the `CHANNEL` screen for the selected channel.\n3. In the `MODE` option, open the menu and select `TELCO`.\n4. To edit the **label**, tap on the name. An on-screen keyboard will appear to enter the text.\n5. Verify that the output assignment indicates the output corresponding to the input being used, and that the mode is MIX-MINUS.\n6. Press `BACK` to return to the main screen.\n\n<Warning>\n  TO PERMANENTLY STORE THE SETTINGS, **SAVE THE SCENE**.\n</Warning>\n\n---",
+      "title": "Configuración del canal",
+      "level": 3
+    },
+    {
+      "hash": "26eb01cd6c4446b947453b28ddc81711a0c30de7b7fb42ba618166e2d79bd05e",
+      "translation": "## Phone Line Connections\n\nPhone lines and their associated devices are connected using standard **RJ11** cables.\n\n- Two inputs for **phone lines**\n- Two inputs to connect the **associated phones**\n\nThe phones operate normally as long as the lines **are not being used by the console**.\n\n<Warning>\n  If there is **no dial tone** when seizing the phone line, verify on the **UDX TEL** adapter that the **LINE** and **PHONE** connections are not reversed.\n</Warning>",
+      "title": "Conexión a líneas telefónicas",
+      "level": 2
+    },
+    {
+      "hash": "0b91a1e374605e7c29a9252440cc72fb660f898803d7bd7eec1e47fdd18faaad",
+      "translation": "### Connection Type\n\n- Lines can be connected directly to the **public telephone exchange** or to the radio station's **PBX**.\n- Private exchanges (**PBX**) slightly reduce the hybrid's rejection, so it's recommended to connect the console directly to the **public exchange**.\n- **ATA GSM** (cellular) adapters can be used, which work with a GSM chip and allow connection to a conventional land line (POTS) telephone.",
+      "title": "Tipo de conexión",
+      "level": 3
+    },
+    {
+      "hash": "1dcd828dc1d66f0453a6490a0f99d5c0373b443f7ecba70731a84bdbe9fe43bc",
+      "translation": "### Protection and Filtering\n\nThe **UDX TEL** adapters include:\n\n- Internal **RF** rejection filters (AM, VHF and UHF bands)\n- Internal protection against high-voltage surges (lightning or indirect strikes) using metal oxide varistors.\n\n<Warning>\n  Phone lines have internal protection against high-voltage surges using **metal oxide varistors**. However, it is **essential** to install **external protectors** on public exchange lines, connected to a **2 m buried grounding rod**.\n</Warning>\n\n<tierras />",
+      "title": "Protección y filtrado",
+      "level": 3
+    },
+    {
+      "hash": "08e5ab689cb79e11e060c45f1ea9773174256a43f9a449968a05ebad0a069fb4",
+      "translation": "## Null Adjustment\n\nIt is essential to adjust the **null factor** for each phone line.\n\n- From the factory, units are calibrated to work with **ideal impedances**.\n- In practice, real phone lines exhibit impedance variations.\n- If the null is not optimized during on-air operation, the studio host's voice may mix with the call audio, degrading quality.\n\nThis adjustment applies to the following units:\n\n- **UDX 2TEL**\n- **UDX 2TEL-P**\n- **TEL\\+BT** (only for the land line (POTS))",
+      "title": "Ajuste del rechazo (Null)",
+      "level": 2
+    },
+    {
+      "hash": "f50d8b75efe238059dec4337aa2f83602851a329cd0c7c8381863933fadfe869",
+      "translation": "### Adjustment Procedure\n\n1. Press the **TELCO** button to access the Telecommunications operation screen.\n2. Establish a call (can be outgoing or incoming). The microphone on the phone should be muted on the other end of the line.\n3. In the `CONFIG` section of the `TELCO` screen, press `ENTER Null Adjust`. The console injects an adjustment tone into the phone line. The level at which it returns is displayed in `INPUT LEVEL`. The line does not need to be on-air (the fader can be closed).\n4. The rejection is adjusted from the UDX 2TEL box. Each line has an adjustment preset.\n5. Using a screwdriver, gently turn the preset clockwise and counterclockwise until finding the point where the signal return shown on the indicator is minimized.\n6. Once the rejection is adjusted, terminate the communication.\n7. Repeat the rejection adjustment for the other line.\n\n<Note>\n  If you change phone lines, the adjustment must be repeated.\n</Note>",
+      "title": "Procedimiento de ajuste",
+      "level": 3
+    }
+  ]
+}

@@ -1,42 +1,40 @@
 ---
-title: "VoIP Call (SIP)"
-description: "Connect to Studios via SIP call"
-keywords: ["VoIP","SIP","call","return","Internet"]
-tags: "portable consoles,CODEC,MX2200"
+title: "VoIP (SIP) Call"
+description: "Connect with Studios via SIP Call"
+keywords: ["VoIP", "SIP", "call", "return", "Internet"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "66549d96523e24d9c2f5d604bddfd78825a1a12740d8009510648c00a5177419"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-The **SIP CALL** option enables **bidirectional communication or link** through Internet, with **minimal delay**.\
+The **SIP CALL** option enables establishing a **bidirectional communication or link** over the Internet with **minimal delay**.\
 It is equivalent to a conventional VoIP call (similar to Skype or WhatsApp).
 
-It is used when:
+It is used when required:
 
-- Immediate interaction with studios is required.
-- Simple connection is needed on networks beyond your control (public Internet, Wi-Fi at various locations).
+- Immediate interaction with the studios.
+- Connection simplicity on networks over which you have no control (public Internet, Wi-Fi from various locations).
 
-Communication is established without complex configurations at either end, even under **limited bandwidth** conditions.
+The communication is established without complex configurations at the endpoints, even under **limited bandwidth** conditions.
 
-- When configured at low bitrate, it ensures continuity even with restricted Internet.
-- When configured at maximum quality, audio is equivalent to direct studio sound.
+- Configured at a low bitrate, it ensures continuity even with restricted Internet.
+- Configured at maximum quality, the audio is equivalent to direct sound in the studios.
 
-Operation is simple: a pre-loaded directory shows available contacts. The user selects one and makes the call. At the studio, the operator receives the communication on a compatible computer or equipment. It's also possible to **receive incoming calls from the studios**.
+Usage is simple: a pre-loaded address book shows the available contacts. The user selects one and makes the call. In the studio, the operator receives the communication on a computer or compatible equipment. It is also possible for the MX2200 to **receive the incoming call originated from the Studio**.
 
-### SIP Operation Procedure
+### Procedure for Operating with SIP
 
 ---
 
 <Tabs>
-  <Tab title="Making a SIP call">
+  <Tab title="Make a SIP Call">
     <Steps>
-      <Step title="Access Connection Center">
-        Turn the **encoder** until the **CONNECTION CENTER** screen appears and press it to enter options.\
+      <Step title="Access the Connection Center">
+        Turn the **encoder** until the **CONNECTION CENTER** screen appears and press it to enter the options.\
         You can also access it from the main screen by pressing the encoder.
 
         <img
@@ -47,7 +45,7 @@ Operation is simple: a pre-loaded directory shows available contacts. The user s
         />
       </Step>
       <Step title="Select SIP CALL">
-        In the options, select **SIP CALL** and press. The SIP contacts directory will open.
+        In the options, select **SIP CALL** and press it. The SIP contacts list will open.
 
         <img
           src="/images/mx2200/mx2200-connection_center_agenda.png"
@@ -56,7 +54,7 @@ Operation is simple: a pre-loaded directory shows available contacts. The user s
           style={{ width:"51%" }}
         />
       </Step>
-      <Step title="Choose contact">
+      <Step title="Choose Contact">
         Turn the encoder to select the desired contact.\
         Press to initiate the call.
 
@@ -67,11 +65,11 @@ Operation is simple: a pre-loaded directory shows available contacts. The user s
           style={{ width:"52%" }}
         />
       </Step>
-      <Step title="Connection established">
-        When the studio operator answers, the display will show **SIP CALL ENABLED**.
+      <Step title="Connection Established">
+        When the studio operator answers, the screen will show **SIP CALL ENABLED**.
       </Step>
-      <Step title="End the call">
-        Return to **CONNECTION CENTER** and press **SIP CALL** again.
+      <Step title="End the Call">
+        Return to the **CONNECTION CENTER** and press **SIP CALL** again.
 
         <img
           src="/images/mx2200/mx2200-connection_center_cortar.png"
@@ -82,7 +80,7 @@ Operation is simple: a pre-loaded directory shows available contacts. The user s
       </Step>
     </Steps>
   </Tab>
-  <Tab title="Receiving a SIP call">
+  <Tab title="Receive a SIP Call">
     When the studio operator calls the MX2200:
 
     <img
@@ -94,33 +92,35 @@ Operation is simple: a pre-loaded directory shows available contacts. The user s
     />
 
     - The MX2200 display shows a dialog box to **Accept/Reject** the call.
-    - A **ring tone plays in CUE**.
+    - A **ring in CUE** is played.
 
     <Warning>
-      To receive incoming calls on MX2200, it's necessary to **disable call encryption** in the communications software used.
+      To be able to receive incoming calls on the MX2200, it is necessary to **disable call encryption** in the communications software used.
 
-      In Linphone: _Preferences → Calls and Chat → Encryption = None_.\
-      If encryption is active, the console won't be able to take the call.
+      In Linphone: *Preferences → Calls and Chat → Encryption = None*.\
+      If encryption is active, the console will not be able to take the call.
     </Warning>
   </Tab>
-  <Tab title="Studio Return">
+  <Tab title="Return from Studio">
     - The MX2200 sends the **Program (PGM)** signal to the Studio.
-    - The Studio returns **mix-minus**: floor signal without the console's own signal.
-    - The console mixes program signal plus studio return in CUE.
-    - The user can remove the PGM signal from headphones to hear only the **Studio return** (see _Monitoring_ section).
+    - The Studio returns a **mix-minus**: the studio floor signal without the console's own signal.
+    - The console mixes the program signal plus the studio return in CUE.
+    - The user can remove the PGM signal from the headphones to listen only to the **Studio return** (see the *Monitoring* section).
   </Tab>
 </Tabs>
 
-## Receiving MX2200 at the Studios
+---
+
+## MX2200 Reception at the Studios
 
 The SIP call can be received with any compatible system:
 
-- Hardware **DECODERs**.
-- **VoIP Software** on PC.
+- **Hardware DECODERs**.
+- **VoIP** software on a PC.
 
 The user can freely choose the SIP service:
 
 - Paid services are recommended for stability.
-- Free options are also available, notably [Linphone](https://www.linphone.org).
+- Free options also exist, with [Linphone](https://www.linphone.org) being a notable one.
 
-The **SIP account/contact** assigned to the studio (the contact the console calls) is configured in the decoder.
+The **SIP account/contact** assigned to the studio (the contact the console calls) is configured on the decoder.

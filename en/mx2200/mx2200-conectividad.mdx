@@ -1,16 +1,14 @@
 ---
-title: "Connections and startup"
-description: "Description of connection options and initial setup."
+title: "Connections and Startup"
+description: "Description of connection options and initial configuration."
 keywords: ["connectivity", "connectors"]
-tags: ["portable consoles", "CODECS", "MX2200"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "c4c95bd3a9fb719faafcffc9e46ae3520b65fe2688a1041e155e69d75a387cd0"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Rear Panel Connectors
@@ -26,155 +24,149 @@ translation:
 ### Power Supply (1)
 
 1. **External power input**: 2 mm barrel connector (pin \+).
-   - Switching power supply 90/240 V → output **12 V / 1.5 A**.
-   - Also accepts 12 V external battery (observe polarity).
-2. **Internal battery**: approx. **4 hours** autonomy (SIP call via Ethernet, without Wi-Fi or Bluetooth).
-3. **Charging**: occurs with unit **powered on and connected** to external supply.
-   - Full charging time (completely discharged battery): **10 hours**.
+   - 90/240 V switching power supply → output **12 V / 1.5 A**.
+   - Also accepts an external 12 V battery (observe polarity).
+2. **Internal battery**: approx. **4 hours** of autonomy (SIP call via Ethernet, without Wi-Fi or Bluetooth).
+3. **Recharging**: performed with the unit **powered on and connected** to the external power supply.
+   - Full charge time (from a fully depleted battery): **10 hours**.
 
 <Warning>
-  Using **power supplies not provided by factory** will void the **warranty**.
+  The use of **external power supplies not provided by the factory** will result in **voiding the warranty**.
 </Warning>
 
 ---
 
-### On-Air Light (2)
+### On-air Light (2)
 
-- 2.5 mm barrel connector (pin \+).
+- 2.5 mm barrel connector (pin +).
 - Provides **12 VDC**, supports up to **200 mA**.
 - When an on-air light is connected:
-  - **Headphones #1** output becomes **monitor speakers** output.
-  - Automatically mutes when microphones are activated to prevent feedback.
-
----
+  - The **headphones #1** output switches to behave as a **monitor** output.
+  - It is automatically muted when the microphones are activated, to avoid feedback.
 
 ### USB Audio (3)
 
-- Digital connection to computer via USB A/B cable (use provided cable).
-- Recommendation: do not exceed **4 m** length.
+- Digital connection to the computer via USB A/B cable (use the provided cable).
+- Recommendation: do not exceed **4 m** in length.
 
   <Warning>
-    Ensure the computer is **properly grounded**.\
-    If not, the console or computer USB input could be damaged.
+    Ensure the computer is properly **grounded**.\
+    If it is not, the USB input on the console or the computer could be damaged.
   </Warning>
-- Compatible with Windows 7 to 11, Linux Ubuntu and macOS (automatic recognition).
-- System detects:
-  - **USB Playback Device** → LINE USB input on console.
-  - **USB Recording Device** → audio output from PGM.
+- Compatible with Windows 7 through 11, Linux Ubuntu, and macOS (automatic recognition).
+- The system detects:
+  - **USB playback device** → LINE USB input on the console.
+  - **USB recording device** → audio output from PGM.
 
   <Note>
-    In Windows, manage through: **Control Panel → Sound → Audio** → select playback and recording devices.
+    In Windows, this can be managed in: **Control Panel → Sound → Audio** → selection of playback and recording devices.
   </Note>
 
 ---
 
 ### Microphones (4)
 
-- Four balanced inputs (XLR) for dynamic microphones.
+- Four balanced (XLR) inputs for dynamic microphones.
 - **MIC 3 and MIC 4** share the same fader.
-- Recommendation: use microphones of same brand and model on shared inputs.
+- Recommendation: use microphones of the same brand and model on shared inputs.
 
 ---
 
 ### Headphones (5)
 
-- Four 1/8" TRS outputs (minijack).
-- All deliver same level, controlled by **CUE MONITOR** knob.
-- Output #1 can be used as **monitor speakers** output:
-  - Automatically mutes when **on-air light** is connected and microphones are sent to PGM.
+- Four 1/8" (minijack) TRS outputs.
+- All deliver the same level, controlled by the **CUE MONITOR** knob.
+- Output #1 can be used as a **monitor speaker** output:
+  - It is automatically muted when an **on-air light** is connected and activates when microphones are sent to PGM.
 
----
-
-### Landline Phone (6)
+### Land line (POTS) (6)
 
 - RJ11 connector for POTS line connection.
-- Can connect directly to public network or PBX (private exchange).
+- Can be connected directly to the public telephone exchange or to a PBX (private branch exchange).
 - Internal surge protection with varistors.
 
   <Warning>
-    Additional protection recommended in storm-prone areas (gas arrestors and fuses).\
-    Lightning damage is **not covered by warranty**.
+    Additional protection is recommended in storm-prone areas.\
+    Damage caused by lightning **is not covered by the warranty**.
   </Warning>
-- **NULL Preset** allows hybrid rejection adjustment.
+- **NULL preset** allows adjustment of the hybrid's rejection.
 
-  <Accordion title="Rejection adjustment (NULL)" icon="gear">
-    Performed when connecting console to line. If console is disconnected and later reconnected to same phone line, adjustment is not necessary. \
-    However, readjustment is required each time connected to a different line.
+  <Accordion title="Rejection (NULL) Adjustment" icon="gear">
+    It is performed when connecting the console to the line. If the console is disconnected and later reconnected to the same phone line, it is not necessary to repeat the adjustment.\
+    However, it should be readjusted each time it is connected to a different line.
 
     <Steps>
-      <Step title="Prepare signal">
-        Send spoken content to PGM from computer. If spoken content unavailable, live microphone speech can be used.
+      <Step title="Prepare the signal">
+        Send spoken content to PGM from the computer. If no spoken content is available, you can speak live using the microphones.
       </Step>
-      <Step title="Establish call">
-        Make a call using landline (PHONE).
+      <Step title="Establish a call">
+        Make a call using the land line (PHONE).
       </Step>
-      <Step title="Mute caller">
-        Ask other end to activate **mute** or remain silent. \
+      <Step title="Mute the other party">
+        Ask the other end to activate **mute** or remain silent.\
         You can call your own mobile phone and mute its microphone.
       </Step>
       <Step title="Listen in CUE">
         Remove PGM from headphones (PGM button in CUE released).
-        Listen to line in CUE.
+        Listen to the line in CUE.
       </Step>
-      <Step title="Adjust NULL preset">
-        Turn NULL preset until finding point of **minimum return**.
+      <Step title="Adjust the NULL preset">
+        Turn the NULL preset until you find the point of **minimum return**.
       </Step>
       <Step title="Finish">
-        End the call.
+        End the communication.
       </Step>
     </Steps>
   </Accordion>
 
 ---
 
-### Stereo Line Input (7)
+### Stereo line input (7)
 
-- Unbalanced 1/4" TRS connector.
-  - Controlled by LINE fader when **USB is not connected**.
-  - If USB is active, LINE becomes secondary input (from PHONE section).
+- Unbalanced 1/4” TRS connector.
+  - Controlled by the LINE fader when **USB is not connected**.
+  - If USB is active, LINE becomes a secondary input (from the PHONE section).
 
 <Warning>
-  If link is via Bluetooth, **LINE IN cannot be added** from PHONE section.\
-  Only available through LINE fader if USB Audio is not connected.
+  If the link is via Bluetooth, **LINE IN cannot be summed** from the PHONE section.\
+  It will only be available from the LINE fader if USB Audio is not connected.
 </Warning>
 
 ---
 
 ### Program Insert (8)
 
-- **Stream-In** 1/4" TRS with interruption contact.
-- When connected, **replaces internal PGM mix** in **streaming and USB**.
-- Allows external processors: _PGM Out → Processor → Stream-In_.
-
----
+- **Stream-In** input TRS 1/4” with break contact.
+- When connected, **replaces the internal mix** of PGM on **streaming and USB**.
+- Allows the use of external processors:  _PGM Out → Processor → Stream-In_.
 
 ### Program Output (9)
 
-- **Stereo PGM Out** (1/4" TRS).
-- Sends complete mix: microphones, USB, auxiliary line and phone lines.
+- **Stereo PGM Out** (TRS 1/4”).
+- Sends the complete mix: microphones, USB, auxiliary line, and phone lines.
 
 ---
 
-### Ethernet (Wired Network) (10)
+### Ethernet (Wired Network)  (10)
 
-- RJ45 port for local network connection.
+- RJ45 port for connection to local network.
 - Uses:
-  - Web access to CODEC configuration.
+  - Web access for CODEC configuration.
   - Internet connection for SIP and streaming.
   - Web access to recordings.
-- Factory setting: **DHCP enabled**.
+- Factory default setting: **DHCP enabled**.
 
 ---
 
-### USB Ports (Wi-Fi and Modem) (11)
+### USB Ports (Wi-Fi and Modem)  (11)
 
-- USB 2.0 type A ports.
+- USB 2.0 Type A ports.
 - Allow connection of:
   - **Wi-Fi antenna**.
-  - **4G modem** (requires 1 m extension cable).
+  - **4G modem** (requires a 1 m extension cable).
 
 <Warning>
-  **Do not connect USB modem directly to port**. Can cause **audible interference**.\
-  Always use extension cable to separate modem from console.\
-  This also allows reorienting modem if weak signal indication is received.
+  **Do not connect a USB modem directly to the port**. It can cause **audible interference**.\
+  Always use an extension cable to separate the modem from the console.\
+  This will also allow you to reposition the modem if you get a weak signal indication.
 </Warning>

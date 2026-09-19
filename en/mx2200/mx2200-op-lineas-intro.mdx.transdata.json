@@ -1,0 +1,29 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "0d18d3e546439e86ba781af5cc0d4aac4c8a88865120166f3f585736e67db81d",
+      "translation": "## Overview\n\nThe **MX2200** handles:\n\n- A conventional land line (POTS).\n- A mobile phone paired via **Bluetooth**.\n\nThe primary function of both lines is to serve as a **backup link** to the Internet connection.\\\nThey can also be used:\n\n- As the main broadcast channel when Internet is not available.\n- As an audio source to add a call to the broadcast.",
+      "title": "Descripción general",
+      "level": 2
+    },
+    {
+      "hash": "3620c1367c1f21f3039f1404d703f2bf93a4e799155160039ac700cfe38f1b77",
+      "translation": "## Using \"On-Air\" Phone Lines\n\n- Participants (reporters or interviewees) can be added to the broadcast.\n- This can be done using a land line (POTS) or a Bluetooth-paired mobile phone, even while the console is transmitting via the Internet.\n- The line can interact privately with the console operator, and also with the studios when it is sent to program (PGM).\n- The studio return signal (SIP) is injected into the CUE monitoring and into the send to the land line (POTS) and Bluetooth-paired phone.\n- The return level of the SIP link is adjusted from the screen, in **SETUP → RX VOLUME**.\n\n<Warning>\n  **Warning!**\\\n  Conferencing between a land line (POTS) and a Bluetooth-paired mobile phone **is not supported**.\\\n  It is possible to put both lines on-air, but they will not hear each other and will not be able to converse.\n</Warning>\n\n---",
+      "title": "Uso de líneas “al aire”",
+      "level": 2
+    },
+    {
+      "hash": "18182d2ef1b223fb31095b5b843b3c88f28be4c35acbd46ccb5fe4b314b3079c",
+      "translation": "## Phone Line as Studio Link\n\n- Once the call is established, the studios always receive the **PGM mix** through the phone line.\n- In **CUE position**, the return signal sent by the Studio is only heard in monitoring. If the TALK button for that line is pressed, the talkback microphone is sent to the studios.\n- In **PGM position**, the return from the Studio is suppressed from CUE and added to PGM.\n- The send to the line is **mix-minus**: the return from the Studio is not added to the PGM sent back, preventing feedback.\n- In PGM position, the talkback microphone is not sent to the studio.\n- Therefore, when using the line as a link, it must always be set to **PGM**, preventing the TALK mic from accidentally going on-air.\n- The studio return (audio from the other end) can be heard in headphones by mixing PGM with the phone line (verify that PGM monitoring is enabled in CUE).\n- If listening to the return is not needed, keep the PGM knob closed.\n\n---",
+      "title": "Línea como enlace al estudio",
+      "level": 2
+    },
+    {
+      "hash": "f17957d778b575fc2c7b6bc1ed2822c2112fe343e1dbe00a21f21cb935b22a6f",
+      "translation": "## Controls (Land Line (POTS) and Bluetooth)\n\nThe following controls apply both for adding calls to the local transmission and for using the lines as a studio link:\n\n<img\n  src=\"/images/mx2200/mx2200-telco.png\"\n  alt=\"Mx2200 Telco Pn\"\n  title=\"Mx2200 Telco Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"66%\" }}\n/>\n\n 1. **PHONE/LINE IN**\n    - Switches between phone line and stereo line input.\n    - With an Internet link, it is possible to operate with 4 microphones and 2 audio sources (LINE IN and USB).\n    - If a call comes in on the land line (POTS), the **HOLD** button flashes. The operator can switch from LINE IN to PHONE and answer the call.\n\n    <Warning>\n      When there is no Internet and the link is made via Bluetooth, it is not possible to add from PHONE LINE, neither the land line (POTS) nor LINE IN, as **PHONE LINE is not added to the mix sent to Bluetooth**.\\\n      LINE IN can only be used from its own fader if there is no USB audio.\n    </Warning>\n 2. **Phone line / LINE IN level knob**\n    - Adjusts level in both CUE and PGM.\n 3. **TALK button (Land Line (POTS))**\n    - Allows talking in cue with the land line (POTS) using the built-in TALK microphone.\n 4. **HOLD**\n    - Indicates incoming call (flashes with the ring).\n    - Allows answering and putting the line on hold or sending it to PGM.\n 5. **CUE/PGM**\n    - Switches the signal (telephone or LINE IN) between cue listen (CUE) and program output (PGM).\n 6. **Bluetooth mobile phone audio level control**\n 7. **Bluetooth on/off**\n    - Also activates \"pairing\" mode to pair a mobile phone.\n 8. **Bluetooth CUE/PGM**\n    - Switches Bluetooth signal between CUE listen and PGM output.\n 9. **TALK button (Bluetooth)**\n    - Allows talking in cue with the Bluetooth line using the built-in TALK mic.\n10. **Master headphone control**\n11. **PGM to Headphones**\n\n- Removes the PGM signal from the headphones, leaving only what is present in CUE.\n- Useful for dialoguing with a phone line or listening only to studio return on a SIP call.\n\n12. **TALK to headphones button**\n\n- Sends the voice from the built-in talkback microphone to the headphones.",
+      "title": "Controles (línea fija y Bluetooth)",
+      "level": 2
+    }
+  ]
+}

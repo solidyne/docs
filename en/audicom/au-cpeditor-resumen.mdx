@@ -1,45 +1,43 @@
 ---
 title: "CyberPlay Editor"
-description: "Content programming."
-keywords: ["cyberplay editor","breaks","commercials","blocks","schedule"]
-tags: "Software,Audicom"
+description: "Content scheduling."
+keywords: ["Cyberplay Editor", "Tandas", "Commercials", "Blocks", "Schedule"]
+tags: ["Software", "Audicom"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "875f223e662ef1881f512164949f994006c0f351a6fa5b2933c907a896a9c1cc"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-## About the programming schedule
+## About the Programming Schedule
 
-**Commercial breaks** and **programs** are created separately and stored in different files:
+**Commercial breaks** and **program blocks** are created separately and stored in different files:
 
 - `.LOG` for commercial breaks.
 - `.PGM` for program blocks.
 
-Commercial breaks can be created **manually** with **CyberPlay Editor** (this chapter) or **automatically** with the **ADMICOM Traffic module** (see **ADMICOM** chapter).\
-**Program blocks** are defined in **CyberPlay Editor** in different time segments: live programs, **AutoDJ**, pre-built playlists, satellite blocks, etc.
+Commercial breaks can be created **manually** with **CyberPlay Editor** (this chapter) or **automatically** with the **ADMICOM Traffic Module** (see chapter **ADMICOM**).\
+**Program blocks** are defined in **CyberPlay Editor** across different time slots: live programs, **AutoDJ**, pre-built playlists, satellite feeds, etc.
 
-Breaks and blocks are created using **AUDICOM's own instructions**. No need to memorize them: there are **wizards** (e.g., _Magic Programming_) and visual editing tools that streamline scheduling.
+Breaks and blocks are created using **AUDICOM-specific commands**. There's no need to memorize them: **wizards** (e.g., _Magic Programming_) and visual editing tools streamline scheduling.
 
-### General description
+### Overview
 
-Access the AUDICOM desktop and open **CyberPlay Editor** from the dropdown menu.\
+Enter the AUDICOM desktop and open **CyberPlay Editor** from the dropdown menu.\
 Requires permission in your **user profile** (see **Access Levels**).
 
 AUDICOM builds the schedule from:
 
 - **.LOG** (commercial breaks)
-- **.PGM** (music blocks, live, satellite, etc.)
+- **.PGM** (music blocks, live broadcasts, satellite feeds, etc.)
 
-The **commands** for breaks and programs and **filenames** (promos, songs, spots, etc.) are edited in CyberPlay Editor's **LOG** and **PGM** windows.\
-Many commands can be managed **graphically** from **CyberPlay-Test** or with wizards like **Magic Programming**.
+The **commands** for commercial breaks and programs and the **filenames** (promos, songs, spots, etc.) are edited in the **LOG** and **PGM** windows of CyberPlay Editor.\
+Many commands can be managed **graphically** from **CyberPlay-Test** or with assistants like **Magic Programming**.
 
 <Tip>
-  Think of the **classic radio grid**: programming by day **00:00 to 24:00**. That's what you'll define in CyberPlay Editor.
+  Think of the **classic radio grid**: programming by day **00:00 to 24:00**. This is what you'll define in CyberPlay Editor.
 </Tip>
 
 <img
@@ -50,20 +48,20 @@ Many commands can be managed **graphically** from **CyberPlay-Test** or with wiz
   style={{ width:"78%" }}
 />
 
-### Content scheduling instructions
+### Instructions for Scheduling Content
 
-Below are the **commands** or instructions that generate the different content blocks. Instructions begin with **/ (slash)** unless otherwise noted.\
-Each instruction goes on **a single line**.
+Below are the **commands** or instructions that generate the different content blocks. Instructions begin with **/ (slash)** unless otherwise specified.\
+Each instruction must be on **a single line**.
 
-- The **first block** must **start at 00:00** and the **last end at 24:00**.
-- **Upper/lowercase** usage is indistinct.
-- If there's a time slot **without a block**, CyberPlay will show a **gray** block with **EMPTY**.
+- The **first block** must **start at 00:00** and the **last must end at 24:00**.
+- **Uppercase/lowercase** does not matter.
+- If there is a **time slot without a block**, CyberPlay will display a **gray** block labeled **EMPTY**.
 
 <Warning>
-  If the schedule doesn't start at **00:00** or end at **24:00**, the system **won't identify** the day change and programming will be **incorrect**.
+  If the schedule does not start at **00:00** or does not end at **24:00**, the system **will not recognize** the day change and the programming will be **incorrect**.
 </Warning>
 
-The **status window** reports: syntax errors, empty blocks, time overlaps, missing **AutoDJ** formats and other issues.
+The **status window** reports: syntax errors, empty blocks, overlapping time slots, **non-existent AutoDJ formats**, and other issues.
 
 ![Au Cpedior Pn](/images/audicom/au-cpedior.png)
 
@@ -71,26 +69,26 @@ The **status window** reports: syntax errors, empty blocks, time overlaps, missi
 
 ## LOG and PGM Files – Programming Schedule
 
-Air dates for **breaks (.LOG)** and **programs (.PGM)** can be defined as:
+The broadcast dates for **commercial blocks (.LOG)** and **programs (.PGM)** can be defined as follows:
 
-- For a **specific date** (e.g.: 1998-12-25).
-- For a **weekday of a month** (e.g.: all **Mondays in April**).
-- For a **fixed weekday** (e.g.: **every Monday** of the year).
-- For a **month** (e.g.: **August**).
+- For a **specific date** (e.g., 1998-12-25).
+- For a **weekday in a month** (e.g., all **Mondays in April**).
+- For a **fixed weekday** (e.g., **every Monday** of the year).
+- For a **month** (e.g., **August**).
 - For an **entire year**.
 
-### PGM/LOG Loading Priority Order
+### Priority order when loading PGM/LOG
 
-When **CyberPlay** on-air module builds programming, it loads **PGM** and **LOG** in this order:
+When the **CyberPlay** on-air module builds the schedule, it loads **PGM** and **LOG** following this order:
 
 1. `YYYYMMDD.LOG` / `YYYYMMDD.PGM`\
-   Year-Month-Day (e.g.: `20040501`) for **May 1st, 2004**.
+   Year-Month-Day (e.g., `20040501`) for **May 1, 2004**.
 2. `WED11.LOG` / `WED11.PGM`\
    All **Wednesdays in November**.
 3. `SUN00.LOG` / `SUN00.PGM`\
-   **Any Sunday** of the year (`00` means "all").
+   **Any Sunday** of the year (the `00` indicates "all").
 4. `MONTH04.LOG` / `MONTH04.PGM`\
-   **All April**.
+   **All of April**.
 5. `MONTH00.LOG` / `MONTH00.PGM`\
    **Every day of the year**.
 
@@ -102,20 +100,19 @@ When **CyberPlay** on-air module builds programming, it loads **PGM** and **LOG*
 
 ## Programming in the On-Air Manager
 
-The **On-Air** module loads each day the programming for the **next day** using **LOG/PGM** and the previous **priority order**. E.g.: on **08/14/2005** it can load `980814.LOG` (day's breaks) and `MONTH08.PGM` (August program blocks).
+The **On-Air** module loads the schedule for the **next day** each day using **LOG/PGM** files and the previous **priority order**. For example, on **08/14/2005** it may load `980814.LOG` (daily spots) and `MONTH08.PGM` (monthly blocks for August).
 
-**Automatic** loading occurs at **18:00** (configurable in **Configuration Panel**).
+The **automatic** loading occurs at **18:00** (configurable in the **Control Panel**).
 
-If modified:
-
-- **Current day files**
-- **Next day files** after automatic reload time
+If any of these are modified:
+- **Current day's files**
+- **Next day's files** after the automatic reload time
 
 <Warning>
-  The programming manager **must notify** the **On-Air operator** to execute a **manual reload** of files (see **Reload** in CyberPlay section).
+  The programming manager **must notify** the **On-Air operator** to perform a **manual reload** of files (see **Reload** in the CyberPlay section).
 </Warning>
 
 <Danger>
-  Perform **periodic backups** of `C:\Audicom\LOG` and `C:\Audicom\PGM` (default locations).\
-  If accidentally deleted, **programming is lost**.
+  Perform **regular backups** of `C:\Audicom\LOG` and `C:\Audicom\PGM` (default locations).\
+  If these are accidentally deleted, the **programming schedule will be lost**.
 </Danger>

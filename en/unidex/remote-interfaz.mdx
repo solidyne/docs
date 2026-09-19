@@ -1,38 +1,36 @@
 ---
 title: "HTML Control Interface"
 description: "Access to UNIDEX configuration and operation via web."
-keywords: ["web control","remote control","html interface"]
-tags: "IP consoles,UNIDEX"
+keywords: ["web control", "remote control", "html interface"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "60edc3136f1a46bc08914c6b3faad0568c1f93edb3ccb696427d80ec05c02b6d"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-All **UNIDEX** functions and settings can be remotely controlled by connecting the console to the **LAN** and accessing its IP address from a web browser.
+All functions and configurations of **UNIDEX** can be controlled remotely by connecting the console to the **LAN** and accessing its IP address from a web browser.
 
 <Note>
-  The web control screens offer the same options as the built-in touchscreen, although the layout and design of some controls may vary.\
-  This section describes only the screens that present major differences.
+  The web control screens offer the same options as the built-in touchscreen, although the arrangement and layout of some controls may vary.\
+  This section describes only the screens that present the most significant differences.
 </Note>
 
-## Connecting UNIDEX to the network
+## Connecting UNIDEX to the Network
 
-<Icon icon="network-wired" iconType="solid" color="#ff6600" size={22} />  [**LAN Connection**](/en/unidex/instalacion-red)
+<Icon icon="network-wired" iconType="solid" color="#ff6600" size={22} />  [**LAN Connection**](/es/unidex/instalacion-red)
 
-## Accessing the WEB control interface
+## Accessing the WEB Control Interface
 
-From a computer connected to the same LAN as UNIDEX (preferably via cable), open a web browser —**Google Chrome** is recommended— and enter the **Unidex IP** address to access the operation and configuration control interface.
+From a computer connected to the same LAN as the UNIDEX (preferably via cable), open a web browser —**Google Chrome** is recommended— and enter the **Unidex IP** address to access the operation and configuration control interface.
 
 Upon access, the main screen will be displayed, very similar to the one that appears on the console itself.
 
 ### User Profile
 
-Allows switching the user for the web interface, independently of the user set in the hardware. A dialog box will appear to enter the username, followed by another one to enter the password.
+Allows switching the user for the web interface, independent of the user set on the hardware. A dialog box will be displayed to enter the username, followed by another to enter the password.
 
 <img
   src="/images/ux24/ux24-WEB-USERS.png"
@@ -45,98 +43,98 @@ Allows switching the user for the web interface, independently of the user set i
 <Note>
   There are three user profiles:
 
-  - ADMIN  with full access.
-  - EXPERT  with access to some advanced functions
-  - BASIC    with restricted access.
+  - ADMIN with full access.
+  - EXPERT with access to some advanced functions.
+  - BASIC with restricted access.
 </Note>
 
-By default, the password is the same as the username. The LOGOUT option leaves the web interface operating with BASIC user restrictions.
+By default, the password is the same as the username. The LOGOUT option leaves the web interface operating with the restrictions of the BASIC user.
 
 ### Remote Operation Interface
 
-Selecting the **REMOTE CONTROL** option in the menu accesses the remote operation interface.
+Selecting the **REMOTE CONTROL** option in the menu provides access to the remote operation interface.
 
-The available functions are the same as those offered by the hardware and onboard display, so the explanations in this manual are valid for each of them. However, there are some operational differences described below.
+The available functions are the same as those offered by the hardware and the onboard screen, so the explanations in this manual for each of them are valid. However, there are some operational differences described below.
 
-The main screen of the remote interface is similar to the hardware's **HOME** screen.\
-It includes level meters, counters, ON AIR signaling, and a quick access menu in the lower area.
+The main screen of the remote interface is similar to the **HOME** screen on the hardware.\
+It includes level meters, counters, ON AIR signaling, and a quick-access menu in the lower area.
 
-- **PROCESS:** Direct access to the processors screen. This screen can also be reached from the _mixing console_.
-- **REMOTE:** Opens the **_mixing console_**, a graphical interface that emulates the physical console's surface controls.
-- **SCENES:** Allows changing scenes. The change is made directly on the console, just as if done from the onboard screen. The web interface doesn't have its own scenes, although scenes can be imported from disk.
-- **SETTINGS:** Access to configuration options. The options are presented in a vertical menu, similar to the onboard **SETTINGS** screen layout.
+- **PROCESS:** Direct access to the processors screen. It is also possible to reach this screen from the *mixing console*.
+- **REMOTE:** Opens the *mixing console*, a graphical interface that emulates the controls of the console's physical surface.
+- **SCENES:** Allows switching scenes. The change is performed directly on the console, just as if done from the onboard screen. The web interface does not have its own scenes, although scenes can be imported from disk.
+- **SETTINGS:** Access to configuration options. The options are presented in a vertical menu, similar to the layout of the onboard **SETTINGS** screen.
 
 ### Mixing Console
 
-The WEB interface can control all console channels. Its design is optimized for touchscreen operation.
+The WEB interface can control all console channels. Its design is optimized for use on touch screens.
 
-A "traditional" application is to configure it as an auxiliary controller to the onboard display, running on a large touchscreen monitor.
+A "traditional" application is to configure it as an auxiliary controller for the onboard screen, running on a large touch monitor.
 
 <img
   src="/images/ux24/ux24_monitor_touch.jpg"
-  alt="Control WEB - Monitor Touch"
+  alt="WEB Control - Touch Monitor"
   className="mx-auto"
   style={{ width:"84%" }}
 />
 
-At a more advanced level, it enables **setting up an auxiliary studio** to operate signals without installing a second console. For this case, the remote mixing interface includes a monitoring panel and the ability to listen to audio sent by the console through the network.
+At a more advanced level, it enables \*\*configuring an auxiliary studio \*\*to operate signals without the need to install a second console. For this case, the remote mixing interface includes a monitoring panel and the ability to listen to audio sent by the console over the network.
 
 <img
   src="/images/ux24/ux24-WEB-remotemixer.jpg"
-  alt="Control WEB - Remote Mixer"
+  alt="WEB Control - Remote Mixer"
   className="mx-auto"
   style={{ width:"87%" }}
 />
 
-The **visible channels** in the WEB mixing interface are set by pressing the "pencil" icon. Only the ADMIN user can modify this configuration. When pressing the edit icon, a list with all 24 channels appears.
+The **visible channels** in the WEB mixing interface are set by clicking the "pencil" icon. Only the ADMIN user can modify this configuration. When the edit icon is clicked, a list of the 24 channels appears.
 
 <img
   src="/images/ux24/ux24-WEB-remote_edit.png"
-  alt="Control WEB - Config Mixer"
-  title="Control WEB - Config Mixer"
+  alt="WEB Control - Mixer Config"
+  title="WEB Control - Mixer Config"
   className="mx-auto"
   style={{ width:"74%" }}
 />
 
-In the remote interface, channels marked as visible will always be shown in ascending order.\
-This setting can be **saved in the active scene**.
+In the remote interface, channels marked as visible will always be displayed in ascending order.\
+This setting can be **saved to the active** scene.
 
 ### **Microphone and Line Channels**
 
-Each channel replicates the same controls present on the console surface.\
+On each channel, the same controls present on the console surface are replicated.\
 Operations performed from the web controller are immediately reflected on the physical console.
 
 - **BUS BUTTONS:** Assign the channel to the corresponding bus.
-- **CUE:** Activates CUE monitoring for that channel. The audio is heard through the CUE circuit in the console.
+- **CUE:** Activates CUE monitoring for that channel. The audio is heard through the CUE circuit on the console.
 - **ON AIR:** Toggles the channel on/off.
 - **FADER:** Controls the channel level.
-  - When adjusted from the web controller, the console updates the level and displays the value in dB on the OLED screen, which flashes to indicate remote change.
-  - **The physical fader is not motorized**, so its position doesn't change. If the operator moves the physical fader, the level smoothly adjusts to the new value and the web interface updates the fader position.
+  - When adjusted from the web controller, the console updates the level and displays the value in dB on the OLED screen, which flashes to indicate the change was remote.
+  - **The physical fader is not motorized**, so its position does not change. If the operator moves the physical fader, the level smoothly adjusts to the new value and the web interface updates the fader position.
 
 ### TELCO Channels
 
-Telecommunication channels include, in addition to the controls already seen, a **RING/HOLD** button that allows answering incoming calls; and information about the line status.
+TELCO channels include, in addition to the controls already covered, a **RING/HOLD** button that allows you to answer an incoming call; and information about the line status.
 
-However, talk-back and dialing functions must be done from the console, or in a remote Studio configuration, using an associated telephone.
+However, talkback and dialing functions must be performed from the console, or in a remote studio configuration, using an associated phone.
 
 ### Audio Processing
 
-In the remote interface, audio processes are accessed from the **PROCESS** option on the initial REMOTE CONTROL screen, or from the **FX** icon on each channel of the web mixer.
+In the remote interface, audio processing is accessed from the **PROCESS** option on the REMOTE CONTROL home screen, or from the **FX** icon on each channel of the web mixer.
 
-**Available processes:**
+**Available processing:**
 
-- Parametric equalizer
-- De-esser
-- Compressor and noise gate
+- Parametric equalizer.
+- De-esser.
+- Compressor and noise gate.
 
 <Note>
-  Processes are assigned to inputs, so the availability of each one depends on the input connected to the channel.
+  Processing is assigned to inputs, so the availability of each one depends on the input connected to the channel.
 </Note>
 
 <img
   src="/images/ux24/ux24-WEB-EQ.jpg"
-  alt="Control WEB - EQ"
-  title="Control WEB - EQ"
+  alt="WEB Control - EQ"
+  title="WEB Control - EQ"
   className="mx-auto"
   style={{ width:"74%" }}
 />
@@ -145,10 +143,10 @@ In the remote interface, audio processes are accessed from the **PROCESS** optio
 
 1. Processors are inserted on each input.
    - To view them, select the input from the **INPUT (1)** dropdown menu.
-   - A channel can also be chosen from **CHANNEL**; the interface will show the processes of the input assigned to that channel.
-2. In the **parametric EQ**, the remote interface presents some differences from the onboard screen:
-   - **ON/OFF** buttons enable or disable each band.
-   - The **B1**, **B2**, and **B3** boxes allow selecting the band to edit **(2)**.
-   - This design reduces the number of visible controls and facilitates use on touchscreens.
-3. Switching between processes is done by touching the corresponding icons **(3)**.
-   - Available processes change according to the selected input.
+   - A channel can also be selected from **CHANNEL**; the interface will show the processing for the input assigned to that channel.
+2. In the **Parametric EQ**, the remote interface has some differences compared to the onboard screen:
+   - The **ON/OFF** buttons enable or disable each band.
+   - The **B1**, **B2**, and **B3** checkboxes allow you to select the band to edit **(2)**.
+   - This design reduces the number of visible controls and makes them easier to use on touchscreens.
+3. Switching between processes is done by tapping the corresponding icons **(3)**.
+   - The available processes change depending on the selected input.

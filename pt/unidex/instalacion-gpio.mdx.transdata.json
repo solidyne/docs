@@ -1,0 +1,65 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "1a09faee1325eb35a8950721e31613bedf6fc58ba2bbfa124fe135d35d85f909",
+      "translation": "## Controle por GPIO\n\nO conector **GPIO** _(General Purpose Input/Output)_ oferece entradas e saídas que permitem controlar funções da console (GPI), como a ativação do microfone; ou controlar dispositivos externos (GPO), como luzes de sinalização ou o processamento de áudio.\n\n- **GPI** suporta sinais de disparo de **5-15V/150mA** (ativo alto).\n- **GPO 1 a 7** são do tipo \\_\"open drain\". \\_Funcionam como interruptores, conectando a saída ao terra. Suportam sinais de **5–24 V / 250 mA**.\n- **PIN 8** entrega **tensão de CC** (diferente conforme o modelo da console, ver a seguir). Pode ser usado para disparar dir<u>e</u>tamente os GPI (com um interruptor). Ou para alimentar um dispositivo externo acionado através de um GPO (por exemplo, uma luz ou um pequeno relé)",
+      "title": "Control por GPIO",
+      "level": 2
+    },
+    {
+      "hash": "793c731643c24af48493b0b06dd023450736535730d3b216a885a87ecd83a432",
+      "translation": "## Pinagem e configuração\n\n<AccordionGroup>\n  <Accordion title=\"GPIO UX24\">",
+      "title": "Pin-out y configuración",
+      "level": 2
+    },
+    {
+      "hash": "cd534e23fe119af964c6be42c344e66c8093e211c6e23d5ea0fb690af23c0780",
+      "translation": "### DB15 PIN-OUT (UX24)\n\n<img\n  src=\"/images/ux24/UX24-GPIO.png\"\n  alt=\"UX24 GPIO\"\n  title=\"UX24 GPIO\"\n  className=\"mx-auto\"\n  style={{ width:\"49%\" }}\n/>\n\n<Note>\n  **GPO 8** entrega **+12V / 250 mA** quando está ativa. 0V quando está inativa.\n</Note>",
+      "title": "DB15 PIN-OUT (UX24)",
+      "level": 3
+    },
+    {
+      "hash": "c23819b8967ceb7d4787120fb98f2b3802209573486ba132e836a0aa8636331e",
+      "translation": "### CONFIGURAÇÃO DAS AÇÕES\n\n<img\n  src=\"/images/ux24/unidex-config-GPIO.png\"\n  alt=\"Unidex Config GPIO\"\n  title=\"Unidex Config GPIO\"\n  className=\"mx-auto\"\n  style={{ width:\"64%\" }}\n/>\n\nAs ações que disparam as GPIO são definidas na tela `SETTINGS→GPIO`. Cada **GP-IN** e **GP-OUT** pode ser associado a um canal e a uma ação determinada.\n\nAs ações disponíveis para as **GPI** são:\n\n`UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A;  MASTER MIC B`\n\nAs ações disponíveis para as **GPO** são:\n\n`UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING;  OUTPUT +12V` (somente GPO8)\n</Accordion>\n\n<Accordion title=\"GPIO UX18\">",
+      "title": "CONFIGURACIÓN DE LAS ACCIONES",
+      "level": 3
+    },
+    {
+      "hash": "ea80a0fb80b9cda6ca195be2c493c1e74f3c2b4f66ba6cb3dff50f08c4351b6e",
+      "translation": "### DB15 PIN-OUT (UX18)\n\n<img\n  src=\"/images/ux18/ux18_gpio.png\"\n  alt=\"Ux18 Gpio\"\n  title=\"Ux18 Gpio\"\n  className=\"mx-auto\"\n  style={{ width:\"49%\" }}\n/>\n\n<Note>\n  **PIN 8** ENTREGA UMA TENSÃO FIXA DE **\\+15 VCC / 100 mA** (máx.).\n</Note>",
+      "title": "DB15 PIN-OUT (UX18)",
+      "level": 3
+    },
+    {
+      "hash": "c7fbb14994d661e955eaa33735f2a8910eeeabf0ca789c8396bb66b1cdd4d5ef",
+      "translation": "### CONFIGURAÇÃO DAS AÇÕES\n\nAs ações que disparam as GPIO são definidas na tela `SETTINGS→GPIO`. Cada **GP-IN** e **GP-OUT** pode ser associado a um canal e a uma ação determinada.\n\nAs ações disponíveis para as **GPI** são:\n\n`UNASSIGNED; CHANNEL ON/OFF;  CHANNEL MUTE;  MASTER MIC A`\n\nAs ações disponíveis para as **GPO** são:\n\n`UNASSIGNED;  CHANNEL ON/OFF;  TALLY A;  TALLY B;  TELCO RING`\n  </Accordion>\n</AccordionGroup>\n\n<Tip>\n  **EXEMPLOS**\n\n  \\\n  A seguinte configuração para GPI:  **GPI 1  |  CHANNEL ON/OFF  |  CHANNEL 1**\n\n  ...fará com que o Canal 1 seja ligado ou desligado de acordo com o sinal de controle presente na entrada **GPI 1**.\n\n  A seguinte configuração para GPO: GPO 1  |   CHANNEL ON/OFF  |  CHANNEL 6\n\n  ...fará com que o estado da saída **GPO 1** mude de acordo com o ligar ou desligar do Canal 6.\n</Tip>",
+      "title": "CONFIGURACIÓN DE LAS ACCIONES",
+      "level": 3
+    },
+    {
+      "hash": "09daa7ea8818e6e0f487b8455c8c3140eb3c5a91b3f342a08cbc22f236ce1bfb",
+      "translation": "## Casos de aplicação para as GPIO",
+      "title": "Casos de aplicación para las GPIO",
+      "level": 2
+    },
+    {
+      "hash": "f27cdb2633f040ffb800ab14a58f5ea8a9ad092f0009d74051afbfd5de242879",
+      "translation": "### Braço suporte com LED (GPO)\n\nAs saídas **GPO 1 a 7** podem funcionar como **chaves eletrônicas**, comutando LEDs conectados a uma fonte de alimentação externa, desde que o consumo não exceda **250 mA**.\n\n<Danger>\n  Se o consumo exceder **250 mA**, deve ser utilizado um **relé externo** para a comutação. Recomenda-se usar **GPO 8** para comandar diretamente um relé de bobina 12 V com consumo de até 250 mA.\n</Danger>\n\nA figura mostra um exemplo de conexão direta de um **braço de microfone com LED**, utilizando **GPO-1**.\n\n<img\n  src=\"/images/ux24/unidex_GPIO_brazo.jpg\"\n  alt=\"UNIDEX GPIO braço\"\n  title=\"UNIDEX GPIO braço\"\n  style={{ width:\"51%\" }}\n  className=\"mx-auto\"\n/>\n\nNa **configuração de GPIO**, as saídas GPO devem ser atribuídas à função de ligar/desligar do canal MIC correspondente.\n\nExemplo típico:\n\n- **GPO 1 →** ON/OFF Canal MIC 1\n- **GPO 2 →** ON/OFF Canal MIC 2\n- etc.",
+      "title": "Brazo soporte con LED (GPO)",
+      "level": 3
+    },
+    {
+      "hash": "bc7b5d7d775076fb194a330ef1ab8d86414bb3745a72503cb42c8e199dd9eacd",
+      "translation": "### Silenciar microfone (uso de GPI)\n\nAs entradas **GPI** permitem executar ações automatizadas na console.\n\nUma das mais úteis é o silenciamento temporário do canal (MUTE), ideal para implementar um **botão de tosse** no estúdio. Isso permite ao locutor silenciar seu microfone sem intervenção do operador.\n\nO exemplo a seguir mostra a conexão de um **botão momentâneo** para ativar **GPI 1**.\n\n<img\n  src=\"/images/ux24/gpio-mute.png\"\n  alt=\"UNIDEX GPIO Mute\"\n  title=\"UNIDEX GPIO Mute\"\n  style={{ width:\"52%\" }}\n  className=\"mx-auto\"\n/>\n\nNeste caso:\n\n- **GPI 1** é configurado com a ação **MUTE** e associado ao canal desejado.\n- **GPO 8** entrega uma tensão fixa.\n\n<Warning>\n  Na **UX24**, configure GPO-8 para tensão fixa. Na **UX18** o pino-8 sempre entrega tensão fixa.\n</Warning>\n\nDurante o silêncio ativado por GPI, se o operador **mover o fader manualmente**, a console devolve o controle a ele, e o microfone volta ao ar automaticamente.",
+      "title": "Silenciar micrófono (uso de GPI)",
+      "level": 3
+    },
+    {
+      "hash": "65b4990ba8e7463a183e2286462e21e275c13d1a7850cbc4fd0db0f01ec729d2",
+      "translation": "## Luzes de sinalização \"NO AR\" (Tally Light)\n\nNo painel traseiro da console encontra-se **a saída de 12 V / 250 mA** para conexão de luzes de sinalização **“NO AR”**.\n\n<Note>\n  O modelo UX24 gerencia dois estúdios e possui duas saídas Tally Light: Estúdio A e Estúdio B.\n</Note>\n\n- É possível conectar até **duas luzes de ar Solidyne LA100** por saída.\n- Para luzes de outras marcas, certifique-se de que o consumo total **não exceda 250 mA**.\n\n<Warning>\n  As saídas de luz de ar são protegidas por um componente **PTC (fusistor)** que atua por temperatura. Se a corrente exceder **250 mA**, a saída é desconectada automaticamente para proteger a console.\n\n  Para restabelecer a saída:\n\n  1. Desconectar a carga (a luz).\n  2. Revisar o sistema para identificar a causa do sobreconsumo (ex.: excesso de LEDs ou curto-circuito).\n  3. Aguardar que o PTC esfrie antes de reconectar.\n</Warning>",
+      "title": "Lluces de señalización \"EN EL AIRE\" (Tally Light)",
+      "level": 2
+    }
+  ]
+}

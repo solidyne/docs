@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "e542fd53da76a01080afcda218480be954092dab0adabf0753fd733e25039533",
+      "translation": "## Conector de saída STUDIO MONITOR\n\nO conector de saída **STUDIO MONITOR** transporta os sinais de monitoração para o estúdio principal (Estúdio A no UX24).\n\nAs bahias de monitoração **Solidyne StudioBox HD3 e HD5** conectam-se diretamente a esta saída através de um cabo **RJ45–RJ45 STP**, com conexão **pino a pino**.\n\nQuando não se utiliza uma StudioBox, a console inclui um cabo adaptador **RJ45 para conectores de áudio**, que permite conectar diretamente alto-falantes ativos e distribuidores de fones de ouvido no estúdio.\n\n<Warning>\n  A saída **STUDIO MONITOR** não deve ser conectada utilizando cabos diferentes do original nem através de trechos adaptadores RJ45 genéricos. Isso pode provocar falhas ou danos na saída Studio Monitor.\n</Warning>\n\nOs sinais presentes no conector **STUDIO MONITOR** são:\n\n| **PIN** | **SINAL** |\n| :-: | --- |\n| 1 | Fones de Ouvido Esquerdo (\\+4 dBu) |\n| 2 | Fones de Ouvido Direito |\n| 3 | GND |\n| 4 | ON-AIR (\\+14 V) |\n| 5 | Talkback para Cabine de Controle |\n| 6 | VCC \\+14 V |\n| 7 | Alto-falantes Esquerdo (\\+4 dBu) |\n| 8 | Alto-falantes Direito |\n|  | \\*Chassi = GND |\n\n<img\n  src=\"/images/ux24/UNIDEX-StudioMonitoring.jpg\"\n  alt=\"RJ45 vista frontal - Pinos conforme TIA-568B\"\n  style={{ maxWidth:\"350px\",height:\"auto\",marginBottom:\"1rem\" }}\n/>\n\n---\n\n<Info>\n  **ESTÚDIO B no UX24**\n\n  Para configurar um circuito de monitoração em um segundo estúdio, atribui-se uma das saídas gerais, configurada para ser **silenciada** quando o Estúdio B está ativo.\n</Info>",
+      "title": "Conector de salida STUDIO MONITOR",
+      "level": 2
+    }
+  ]
+}

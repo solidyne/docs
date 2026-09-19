@@ -1,0 +1,11 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "4940a2d2f7bc1e057cbc29a662e1aaf3f4faab330d7cd3b88722e58c0396caa5",
+      "translation": "System updates are performed from the console's web interface:\n\n<Steps>\n  <Step title=\"Access the update system\">\n    In your browser, enter the console's IP address followed by the subpath **/update**.\\\n    Example: `http://192.168.0.121/update`\n  </Step>\n  <Step title=\"Check available packages\">\n    The screen displays the installed software packages and, if available, the latest versions ready for update.\n  </Step>\n  <Step title=\"Download update\">\n    Click **Download** to retrieve the latest version.\\\n    The package is saved to the **console's internal memory**.\n  </Step>\n  <Step title=\"Install update\">\n    Once the download is complete, the **Install** option becomes available.\\\n    Click it to start the installation process.\n  </Step>\n</Steps>\n\n<img\n  src=\"/images/mx2200/mx2200-firmware-update.png\"\n  alt=\"Mx2200 Firmware Update Pn\"\n  title=\"Mx2200 Firmware Update Pn\"\n  style={{ width:\"67%\" }}\n/>\n\n<Info>\n  - The console allows updates even via **Wi-Fi**.\n  - Since the package is stored locally before installation, the console can complete the installation autonomously.\n  - The **Hardware Info** section displays **hardware** information such as the battery charge cycle count.\n</Info>",
+      "title": "Whole file",
+      "level": 0
+    }
+  ]
+}

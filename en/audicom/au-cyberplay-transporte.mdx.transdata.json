@@ -1,0 +1,125 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "7cbd8c142ed775d9aba56334c0c739644c75c3933d73aec0c0c5007dacc2a6a7",
+      "translation": "The playback module contains:\n\n- Interpreter, title and file style during playback.\n- Level indicator (dBfs).\n- Elapsed time indicator (hours:minutes:seconds).\n- A horizontal bar that fills as playback progresses.\n- Transport controls (explained in the _CyberPlay Operation_ section).\n\n  <img\n    src=\"/images/audicom/au-cyberplay-transporte.png\"\n    alt=\"AUDICOM - Cyberplay Transport\"\n    title=\"AUDICOM - Cyberplay Transport\"\n    style={{ width:\"75%\" }}\n  />",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "032a3b58cfb8fa4c2b870bdef2d70ed44f611ad8744fa3e275ba0acb1ac48402",
+      "translation": "### Intro\n\nCountdown timer indicating the duration of a song's introduction, i.e., the time before the vocal track begins.\n\n- Allows the announcer to know how much time they have to talk over the song intro.\n- The **Intro** duration is defined in the **InfoMusic Production** window and can be modified from **InfoMusic On-Air**.\n- If tracks have presentation files (**Partner**), the Intro time is crucial for synchronizing these presentations.",
+      "title": "Intro",
+      "level": 3
+    },
+    {
+      "hash": "0a95a1d1d0040ec2c060afb1eab628f2270cdbd6c4043905a9fc7d94d634c422",
+      "translation": "### Fades\n\nTo the right of the **Intro** indicator, a circle appears that progressively fills each time AUDICOM performs a fade between two audio sources.",
+      "title": "Fundidos",
+      "level": 3
+    },
+    {
+      "hash": "3bbc52e39a727196354cb4c698f9fe87313362069e7459a259498206e8be5486",
+      "translation": "### Block (bloque)\n\nDisplays the remaining time in minutes and seconds until the completion of a block.\n\n- A line above the numbers graphically indicates the elapsed time.\n- In live programs (manual operation), AUDICOM remains paused during the block.\n- The counter shows how much time is left until the next break, serving as a warning.\n- The operator must press **Play** for the break to go on-air.",
+      "title": "Block (bloque)",
+      "level": 3
+    },
+    {
+      "hash": "a2ba570fe407dc3046b639bb56f032b322ac3a71ca3ed3b2c984ea24ee4766c9",
+      "translation": "### Error\n\nIndicates in minutes and seconds how much the programming has advanced or fallen behind compared to the original schedule.\n\n- In automatic mode, AUDICOM corrects the error as much as possible using commercial block tolerances.\n- In manual mode, errors may occur due to programs or newscasts having different durations than scheduled.\n\nExample:\n\n- An error of **-05:00** indicates the next block will start 5 minutes earlier than scheduled.\n- This information allows the operator to correct by taking actions such as adding or removing music, promos, or commercials.",
+      "title": "Error",
+      "level": 3
+    },
+    {
+      "hash": "fbb420746c1e02b105601b5814fabf3fd05479dbd189180fcae766a721a51ca8",
+      "translation": "### Expanded Mode\n\nAllows widening the CyberPlay window, displaying more information on the screen.\n\n- **LOG**: Log file loaded for the current day.\n  - Double-clicking the field opens a window to load any `.log` file for the day.\n- **PGM**: Program file loaded for the current day.\n  - Double-clicking the field opens a window to load any `.pgm` file for the day.",
+      "title": "Modo expandido",
+      "level": 3
+    },
+    {
+      "hash": "52414bda544da40333e437c53dd13b3b072bbdc1ce01992eac255afb5b08543e",
+      "translation": "### Comments Window\n\nDisplays additional data about the currently playing track:\n\n- Artist and composer.\n- Annotations or comments.\n\nAll data is sourced from the database.\n\n- When 15 seconds remain until the end of the track, information about the next item appears.\n- It also indicates if the track has an associated file, such as presentations.",
+      "title": "Ventana de comentarios",
+      "level": 3
+    },
+    {
+      "hash": "1408a06a503624d15c1fa487bc216788790b67b839a5ae75941dd0f06175cfc7",
+      "translation": "### Pop-up Messages\n\nIf a user attempts to perform an unauthorized operation, a pop-up message appears informing them of the restriction.\n\n- These messages automatically disappear after a few seconds.\n- They can also be dismissed by clicking or pressing **ESC**.\n\nExample: playback attempt from **File Manager** by an unauthorized user.",
+      "title": "Mensajes emergentes",
+      "level": 3
+    },
+    {
+      "hash": "f89773d223f8e9dbad975095ea0ba0465e93ea1177cb4bd94c2f4eb644ae3c0b",
+      "translation": "## Playback Controls\n\nThe following describes the controls and operations of the CyberPlay (On-Air Display) window.\\\nKeyboard shortcuts are indicated in brackets.",
+      "title": "Controles de reproducción",
+      "level": 2
+    },
+    {
+      "hash": "9cedec1f6ff0dd064d08a4097df977d351c1a0e6941400e114b74522cc5d6e16",
+      "translation": "### Play `[spacebar / Home]`\n\n- Starts playback from the title marked as \"next\" (green cursor).\n- If Play is pressed during playback, it skips to the next title.\n  - The skip is always done by cut.\n  - To fade to the next title, use **Fade → Play**.\n\n**Autorun Mode**\n\n- In case of restart after a power outage, if **Autorun** is enabled:\n  - AUDICOM starts as user **auto**.\n  - If 1 minute elapses without intervention, it starts playback from the title closest to the current time.\n- Configured in the **Configuration Panel \\> Preferences**.\n\n<Warning>\n  For AUDICOM to run when the computer starts, a shortcut to `aire.exe` must be created in the Windows **StartUp** menu.\n</Warning>\n\n<Note>\n  Some stations generate a \"virtual autorun\" by scheduling a **Satfill** block in the early morning.\\\n  This procedure is explained in _Nighttime Transmission Cut_.\n</Note>\n\n---",
+      "title": "Play `[barra espaciadora / Home]`",
+      "level": 3
+    },
+    {
+      "hash": "c09b64e2309a4bf0470c044d5d7bef217740a6fb5bb73224d76114cdb8abd99f",
+      "translation": "### Pause / Stop `[End]`\n\n- If pressed during playback:\n  - **Pause**: stops the track, allowing resumption with Play.\n  - **Stop**: completely stops playback.\n\n---",
+      "title": "Pausa / Stop `[End]`",
+      "level": 3
+    },
+    {
+      "hash": "422f9004763bc1d8cade84ee0db2f6daf10e2000e2e1606eda3e44eb826cfd6d",
+      "translation": "### Fade & Stop `[Ctrl + End]`\n\nReduces the level by 20 dB per second until playback stops.",
+      "title": "Fade & Stop `[Ctrl + End]`",
+      "level": 3
+    },
+    {
+      "hash": "aa03f0b647ed59aa218d1beffff8ae6584eaaacbf9529d64f56abafa2eca39ad",
+      "translation": "### Fade & Play `[Ctrl + Home]`\n\n- The current track ends with a fade-out.\n- The next track starts playing.\n- If tracks have fade-in and fade-out, a **crossfade** is applied.\n\n---",
+      "title": "Fade & Play `[Ctrl + Home]`",
+      "level": 3
+    },
+    {
+      "hash": "728d4945367c275bec6f963a5b2c866b8a52facb948bce97ac993c89482d8f1e",
+      "translation": "### Stop Point `[Page Up]`\n\nInserts a pause in the CyberPlay list:\n\n- When the current track ends, playback stops.\n- The next track becomes the \"next\" (green cursor).\n- Representation: black bar with the label **PAUSE**.\n\nOperations:\n\n- Insert pause on selected track (yellow cursor).\n- If no selection is made, it is inserted below the red cursor (currently playing track).\n- Remove pause: select it and press the _Pause_ button, or drag it to the left.\n- It can also be done from the context menu (right-click).\n\n---",
+      "title": "Punto de detención `[Page Up]`",
+      "level": 3
+    },
+    {
+      "hash": "c47d4abc578a638b2a147ce216cdc284083ef137133f2339c25018817a1ac531",
+      "translation": "## Actions in the title window",
+      "title": "Acciones en la ventana de títulos",
+      "level": 2
+    },
+    {
+      "hash": "297cc6787a397900846988dea1faab892600845d25b15d8c2146856630f0e80b",
+      "translation": "### Select a Title `[Arrow Keys ↑ / ↓]`\n\n- A click on a title marks it with a yellow cursor (selection).\n- Using the arrow keys, the selection cursor moves through the list.",
+      "title": "Seleccionar un título `[Flechas ↑ / ↓]`",
+      "level": 3
+    },
+    {
+      "hash": "f7780e76bca2711f7be63a906d146d73ccfe3cce094b46db7054ab8cb92f8cfd",
+      "translation": "### Preview Monitoring (Cue) `[Del]`\n\n- Double-click on a title → playback through **Cue** output.\n- Second double-click → plays the last 5 seconds (**CUE END**).\n- Output configuration in **Configuration Panel**.\n- Control from **InfoMusic On-air**, with level indicators and position bar.\n- Stop Cue playback: **Stop-cue** in InfoMusic or **ESC** key.\n\n**Cue from console**\n\n- Activate **CUE** by double-clicking the left legend of the counter.\n- Audio plays from Live Assist but:\n  - Not reported via RDS/iRDS.\n  - Not recorded in `.air` files.\n\n<Warning>\n  This mode is not recommended. It may cause errors when working without a dedicated monitoring channel.\n</Warning>",
+      "title": "Escucha previa (Cue) `[Supr]`",
+      "level": 3
+    },
+    {
+      "hash": "e0fc977a5bcb310f22ed5a20b269ecb3444fc39e3c746b93b9aeeb7b7157542c",
+      "translation": "### Delete a Title `[Backspace]`\n\n- Select the title and drag it to the left side of CyberPlay or to the counters.\n- Alternatively: right-click → **Remove**.",
+      "title": "Eliminar un título `[Retroceso]`",
+      "level": 3
+    },
+    {
+      "hash": "878332f27d51e9e97b9e7797c37c4d2bf0c50e5d93b134e4467f2421a044f97c",
+      "translation": "### Insert a Title `[Ins]`\n\n- You can insert titles from other modules (InfoMusic, MediaManager, Live Assist).\n- Drag it to the CyberPlay window.\n- A blue line appears indicating the insertion position.\n- You can also do this with the insert button (blue arrow) or the **Enter** key.",
+      "title": "Insertar un título `[Ins]`",
+      "level": 3
+    },
+    {
+      "hash": "d3ef800498ab2155ae19d7c81b423f8dfb2f7747bd4c86e07407e2546804aa56",
+      "translation": "### Changing a Title's Position\n\n- Select the title and drag it up/down.\n- A blue line appears indicating the new position.\n\n<Danger>\n  Many operations may be restricted by the user profile.\\\n  If you attempt a prohibited action, a popup message will appear indicating the restriction.\\\n  When in doubt, consult with the network administrator or technical supervisor.\n</Danger>",
+      "title": "Cambiar la posición de un título",
+      "level": 3
+    }
+  ]
+}

@@ -1,116 +1,114 @@
 ---
 title: "CyberPlay: Toolbar"
-description: "CyberPlay toolbar functions"
-keywords: ["cyberplay","tools"]
-tags: "Software,Audicom"
+description: "CyberPlay Toolbar Functions"
+keywords: ["cyberplay", "tools"]
+tags: ["Software", "Audicom"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "7850265946f3b230d09c80835d584a9b656278c3e22c79742e722be579b52265"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ### Load PGM ON/OFF
 
-- With **Load PGM** enabled (default), CyberPlay builds the final schedule using program guides created in **CyberPlay Editor** (`.pgm`).
+- With **Load PGM** enabled (default setting), CyberPlay builds the final program using the schedules created in **CyberPlay Editor** (`.pgm` files).
 - If **Load PGM** is disabled, CyberPlay ignores `.pgm` files and uses only commercial breaks.
 
   The operator can insert content between breaks or use **Playlist Manager**.
 
 <Note>
-  The Configuration Panel allows enabling automatic removal of **pauses** at the end of each commercial block.
+  In the Configuration Panel, you can enable AUDICOM to automatically remove **gaps** at the end of each commercial block.
 </Note>
 
-### Reload: Changes in Programming Schedule
+### Reload: Schedule Changes
 
-- CyberPlay automatically loads programming files daily.
-- Daily loading of **LOG** and **PGM** occurs at **18:00** (configurable in Configuration Panel).
-- Programming can be **manually reloaded** for last-minute changes.
+- CyberPlay automatically loads programming files every day.
+- The daily loading of **LOG** and **PGM** occurs at **18:00** (configurable in the Control Panel).
+- You can **manually reload** the schedule for last-minute changes.
 
-Cases when Reload should be used:
+When to use Reload:
 
-- Modifications to current day's schedule.
-- Changes to next day's schedule after automatic reload time.
+- Modifications to the current day's schedule.
+- Modifications to the next day's schedule after the automatic reload time.
 
 Usage:
 
-- Operator presses **RELOAD** or uses shortcut `[Alt + R]`.
+- The operator presses **RELOAD** or uses the shortcut `[Alt + R]`.
 - During reload:
-  - Current title continues playing but disappears from CyberPlay window.
-  - When finished, green cursor positions at most appropriate item based on time.
-  - Operator can:
+  - The current track continues playing but disappears from the CyberPlay window.
+  - Upon completion, the green cursor positions itself on the most suitable item based on the current time.
+  - The operator can:
 
-    Force start with Play.
+    Force playback with Play.
 
-    Take no action: system will continue with new schedule after current title.
+    Take no action: the system will continue with the new schedule after the current track ends.
 
 <Note>
-  - If **LOG** is modified, RELOAD button flashes indicating change.
-  - If a **PGM** or next day's LOG is modified, system doesn't notify: operator must be **informed** to reload.
-  - Individual files (LOG or PGM) can also be reloaded by double-clicking corresponding field in CyberPlay display.
+  - If the **LOG** is modified, the RELOAD button flashes to indicate the change.
+  - If a **PGM** or next day's LOG is modified, the system does not alert: the **operator must be notified** to reload.
+  - You can also reload a single file (LOG or PGM) by double-clicking the corresponding field in the CyberPlay display.
 </Note>
 
 ### Save Log and autoLog
 
-- Changes to commercial blocks are automatically saved to **LOG** file (_autoLog_ function).
+- Changes to commercial blocks are automatically saved to the **LOG** file (_autoLog_ function).
 - AutoLog **does not save** changes if:
-  - User is not authorized to modify breaks.
-  - LOG was externally modified and alarm is active (Reload button flashing).
+  - The user is not authorized to modify blocks.
+  - The LOG was modified externally and the alarm is active (Reload button flashing).
 
 The **Save LOG** button allows manual saving:
 
-- Even if file was externally modified.
-- Won't work if user lacks permissions.
-- Requests confirmation before overwriting.
+- Even if the file was modified externally.
+- It will not work if the user lacks permissions.
+- Prompts for confirmation before overwriting.
 
 ### Next Title Button `[Enter]`
 
-- Selects title marked with yellow cursor as **next title** (green cursor).
-- If no title selected, next will be the one below red cursor (currently playing).
-- Can be selected by double-clicking time area (left column).
-  - Double-clicking colored area plays in **CUE**.
+- Selects the title marked with yellow cursor as the **next title** (green cursor).
+- If no title is selected, the next one will be below the red cursor (currently playing).
+- Can be selected by double-clicking in the schedule area (left column).
+  - Double-clicking in the colored area plays in **CUE**.
 
 ### Insert AutoDJ
 
-Inserts an **AutoDJ** block into programming.
+Inserts an **AutoDJ** block into the programming schedule.
 
-- User defines **format**, start and end time.
-- Commercial breaks within range remain intact.
+- The user defines the **format**, start time and end time.
+- Commercial breaks included within the range remain intact.
 
-### Mix `[Asterisk]`
+### Mix `[Asterisco]`
 
-Controls CyberPlay attenuation when another module (e.g. Live Assist) plays on same output.
+Controls the attenuation of CyberPlay when another module (e.g. Live Assist) plays back on the same output.
 
-- Available values: **100%, 50%, 25%, 10%** (toggle by pressing button).
+- Available values: **100%, 50%, 25%, 10%** (cycle through by pressing the button).
 - During video playback:
-  - Attenuation affects only video audio.
-  - If another module also plays video, only audio is mixed.
+  - The attenuation only affects the video's audio.
+  - If another module is also playing video, only the audio is mixed.
 
-### Right-click Menu Options
+### Right-Click Menu Options
 
-Right-clicking a title shows these options:
+Pressing the right mouse button on a title displays these options:
 
-- **CUE**: preview playback.
-- **CUE End**: plays last 5 seconds.
-- **Play**: starts playback respecting crossfade in music tracks.
+- **CUE**: playback in preview.
+- **CUE End**: plays the last 5 seconds.
+- **Play**: starts playback respecting crossfade on music tracks.
 - **Stop**: stops playback.
-- **Fade & Play**: fades current audio and starts next.
-- **Fade & Stop**: fades and stops current audio.
-- **InfoMusic**: loads title in InfoMusic (only if in database).
-- **Internet...**: opens browser to search title information.
-- **Copy TANDA**: copies commercial break content.
-- **Insert TANDA**: inserts empty break.
+- **Fade & Play**: attenuates current audio and starts the next.
+- **Fade & Stop**: attenuates current audio and stops it.
+- **InfoMusic**: loads the title into InfoMusic (only if present in the database).
+- **Internet…**: opens browser to search for title information.
+- **Copy TANDA**: copies the content of a TANDA.
+- **Insert TANDA**: inserts empty TANDA.
 - **Insert Meteor**: inserts Meteor instruction.
-- **Insert Pause**: inserts pause above selected title.
-- **Insert Random**: randomly selects audio from defined folder.
-- **Remove**: deletes item from schedule.
+- **Insert Pause**: inserts pause above the selected title.
+- **Insert Random**: randomly selects an audio file from a defined folder.
+- **Remove**: deletes the item from the schedule.
 - **Remove all equal**: removes all instances of that item.
 
 <Danger>
   Some operations may be restricted based on user profile.\
-  If attempting a prohibited action, a popup message will indicate insufficient permissions.\
-  For questions, consult network administrator or technical support.
+  If attempting a prohibited action, a pop-up message will indicate insufficient permissions.\
+  For questions, consult the network administrator or technical supervisor.
 </Danger>

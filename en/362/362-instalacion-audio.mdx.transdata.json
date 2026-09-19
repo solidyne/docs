@@ -1,0 +1,35 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "b60441e078351deee7e292ef08742a85f45475df41107f80a861722da4620136",
+      "translation": "## Analog Inputs and Outputs\n\n<img\n  src=\"/images/362/362-trasero-audio.png\"\n  alt=\"362 Trasero Audio Pn\"\n  title=\"362 Trasero Audio Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"73%\" }}\n/>\n\n| **Identifier** | **Type / Connector**               | **Nominal Level** | **Details**                                                                               |\n| :---------------: | --------------------------------- | :---------------: | ------------------------------------------------------------------------------------------ |\n| **1**             | Balanced inputs (female XLR) | \\+4 dBu           | Electronically balanced <br />600 Ohms                                                |\n| **2**             | Unbalanced inputs (RCA)     | –10 dBV approx.    | Higher gain, intended for weaker signals. Impedance 10 KOhms                     |\n| **3**             | Balanced stereo input (RJ45) | \\+4 dBu           | [Pin diagrams and adapter cables for cable assembly](/es/diagramas/RJ45-pinout) |\n| **4**             | Balanced outputs (male XLR)   | \\+4 dBu           | Electronically balanced <br />600 Ohms / 10 KOhms                                     |\n\n<Info>\n  The XLR connection is standard: shield to **pin 1**, inner conductors to **2 (signal \\+)** and **3 (signal –)**\n</Info>",
+      "title": "Entradas y salidas analógicas",
+      "level": 2
+    },
+    {
+      "hash": "2a7df0d614f8da0cf1a325888602a33d2c390caf28d59655b6ae1a51e3ecdb6f",
+      "translation": "## Digital Input/Output via USB\n\nThe **Audimax 362HD/USB** model includes an optional module for sending and receiving audio via a standard USB A/B cable connection to a PC.\n\n- When connected to a **<sup>Windows©</sup>** computer, the system automatically recognizes the processor and installs the necessary drivers.\\\n  No additional drivers are required.\n- The unit is recognized as a **stereo audio card**:\n  - **USB playback device** → corresponds to the **audio input to the processor**.\n  - **USB capture device** → corresponds to the **audio output from the processor**.",
+      "title": "Entrada/salida digital por USB",
+      "level": 2
+    },
+    {
+      "hash": "eec170c4644af49a8bd85cb4c83c7556214ebaee06a573f874270f7f326ac0a7",
+      "translation": "### About USB Detection\n\n- Before connecting the USB port, ensure that the **console and the PC are properly grounded** through three-prong power plugs.\n\n<Danger>\n  Verify with a tester (25 V AC scale) between the PC chassis and the console chassis.\\\n  The reading should be 0 V. Otherwise, the USB input of the processor or the computer could be damaged.\n</Danger>\n\n- Avoid changing USB port cables, as Windows may reassign the order of devices.\n\n---",
+      "title": "Sobre la detección USB",
+      "level": 3
+    },
+    {
+      "hash": "9b90ec0d46fd5ec12d280436e54a1fbfc7c5e7017507833310fffc2cdbc081aa",
+      "translation": "## HD Mode (High Definition)\n\nThe **HD mode** is designed for audio applications where the FM stereo encoding stage (MPX) is not used.\n\n- Fully digital stations (HD Radio and streaming).\n- Sound reinforcement applications (small venues, auditoriums, shopping centers).\n\n**When switching to HD mode:**\n\n- The FM emphasis network is deactivated (and therefore the de-emphasis of the audio outputs).\n- A **fast-acting limiter** is enabled on the outputs.\n- The **MPX** outputs are deactivated.",
+      "title": "Modo HD (High Definition)",
+      "level": 2
+    },
+    {
+      "hash": "421c7403d778d8ad2add13d75e41a9c9c88150b0ee04c27aac3cb3998b488013",
+      "translation": "### Enable HD Mode\n\nTo change the operating mode, it is necessary to access the **internal micro-switches** by removing the top cover of the unit.\n\n<img\n  src=\"/images/362/362-instalacion-HD.jpg\"\n  alt=\"362 Installation HD Jp\"\n  title=\"362 Installation HD Jp\"\n  style={{ width:\"41%\" }}\n/>\n\n- All switches **ON** = FM Mode\n- All switches **OFF** = HD Mode\n\nThe status is indicated on the front panel by the **“FM”** LED:\n\n- Lit = FM\n- Off = HD\n\n<Info>\n  The unit is factory-configured in **FM mode**.\n</Info>",
+      "title": "Habilitar modo HD",
+      "level": 3
+    }
+  ]
+}

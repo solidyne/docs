@@ -1,0 +1,95 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "dd798af2ba8be7d903f857dadd4cc2a5410ba76811a14b51372faee7834695d8",
+      "translation": "## Streaming Services Summary\n\nThe UX18 consoles can generate **two independent audio streams** and decode one incoming audio stream.\n\n- **Streaming 1 (outgoing)**<br />Uses the **RTP** protocol, ideal for a link to the **transmitter site (STL)**.\n- **Streaming 2 (outgoing)**<br />Compatible with **Shoutcast/Icecast servers** for internet broadcasting.\n- **Streaming 3 (incoming)**<br />Can be **RTP** or a **public HTTP stream**.<br />When this function is enabled, the received audio is **automatically decoded and switched**, replacing the **AES-1** input.\n- **Remote monitoring:** The UX18 incorporates a **WebRTC service** that allows you to listen to the audio remotely from the **WEB Control Interface**, whether accessed locally or externally via the Internet.",
+      "title": "Resúmen de los servicios de streaming",
+      "level": 2
+    },
+    {
+      "hash": "b1818477fc7acd59995d6c50e08430431962ef6679e97812d355e2c2c35a14b7",
+      "translation": "## Streaming Services Configuration\n\nThis is done from the **SETTINGS** screen, under the **STREAMING** option. It requires the ADMIN profile.<br />STREAMING launches the Streaming Interface Access screen.\n\nIt displays a **summary of the status of audio transmission and reception streams**, and allows access to other configuration instances:\n\n- **STREAM CFG** → Access to the streaming services configuration.\n- **SYSTEM** → Access to the LAN configuration for the UX18's streaming services<br />(not to be confused with the WEB remote control LAN configuration).\n\n---",
+      "title": "Configuración de los servicios de streaming",
+      "level": 2
+    },
+    {
+      "hash": "74099104b31c2eaa7a7f8cb7a1e24b14083cf59c94706972ea161de85fb368e5",
+      "translation": "### UP-STREAM (TX) - Icecast/Shoutcast\n\nThe **UP-STREAM** tab allows you to configure an **Icecast** or **Shoutcast** type broadcast server to publish the program signal.\n\n- **RUN/STOP**: Enables or disables sending the streaming when changes are confirmed by pressing **APPLY**.\n  <Tip>\n    To optimize system resources, keep it stopped when the service is not in use.\n  </Tip>\n- **PROTOCOL**: Defines whether the server is Icecast or Shoutcast type.\n- **SERVER IP**: Destination IP address of the server.\n- **PORT**: TCP listening port of the server.\n- **MOUNTPOINT**: Unique name that identifies the stream on the server.\n- **Stream NAME**: Name that identifies the stream.\n- **PASSWORD**: Access key for publishing (if applicable).\n- **CODEC**: Audio transmission format (Opus or MP3).\n- **QUALITY**: Bit rate for encoding.\n- **APPLY**: Applies and saves the changes and starts or stops the broadcast (according to the RUN/STOP state).\n\n<Note>\n  The configuration parameters for Icecast/Shoutcast are provided by the server provider.\n</Note>",
+      "title": "UP-STREAM (TX) - Icecast/Shoutcast",
+      "level": 3
+    },
+    {
+      "hash": "44e5f09951c9cb833d45f98012b8cfd50c22b0fb69a2be570b0494f7901947a7",
+      "translation": "### Audio Processing for Streaming\n\nPressing the **PROCESS** icon accesses the audio processor, which includes **level normalization** and **bass enhancement**. This processing only affects the *streaming* for **Icecast/Shoutcast**.\n\n<img\n  src=\"/images/ux24/ux18-streaming-procesado.png\"\n  alt=\"UX18 Streaming Processing\"\n  title=\"UX18 Streaming Processing\"\n  className=\"mx-auto\"\n  style={{ width:\"63%\" }}\n/>",
+      "title": "Procesado de audio para streaming",
+      "level": 3
+    },
+    {
+      "hash": "106ea1b931cb44964a498b09f4a636914f382a90798519e20f0d8d4a633d550c",
+      "translation": "#### Normalizer\n\nReduces the signal's dynamic range and adjusts the level to a constant value, achieving a more consistent sound without volume jumps.\n\n- **Target LUFS**: Determines the target level for the streaming signal (± 1 LU).<br />It is adjusted based on the content type:\n  - **-21 to -19 LU** → Signals with large level variations, without prior control (example: uncompressed microphones).\n  - **-18 to -15 LU** → Mixed music and speech signals, using compressors on the microphone channels to limit the dynamic range.\n  - **-14 to -12 LU** → Signals already heavily compressed (music).\n- **Style**: Defines the normalizer's action times.<br />Possible values: _slow_, _normal_, _fast_.\n  - _Slow_: recommended when there are large volume variations.\n  - _Fast_: useful for normalizing previously compressed signals.",
+      "title": "Normalizer",
+      "level": 4
+    },
+    {
+      "hash": "8b873a8013addb422261c8c6410f9a3559bf9b337ed10b19dfb72a04351fac94",
+      "translation": "#### Bass Boost\n\nApplies a bass boost to the *streaming* signal.\n\n- **FREQ.** → Cutoff frequency; the boost is applied below this frequency.\n- **ACTION** → Adjusts the amount of boost applied.\n\n<Tip>\n  **Recommendation**: Use *Bass Boost* for speech-focused broadcasts to achieve voices with more impactful low frequencies.\n</Tip>\n\n---",
+      "title": "Bass Boost",
+      "level": 4
+    },
+    {
+      "hash": "ef8edc26d40442fac5186fc7810d07ef9eb452476af829e61a1987833e8a937c",
+      "translation": "### RTP LINK\n\nThe **RTP LINK** tab allows you to configure the streaming output to a specific IP address, for example, to send the program signal to a transmitter site (**STL**).\n\n<Warning>\n  Implementing an RTP link requires advanced knowledge of network configuration.\n</Warning>\n\n<img\n  src=\"/images/ux24/ux24-config-rtplink.png\"\n  alt=\"UX18 RTP Link\"\n  title=\"UX18 RTP Link\"\n  style={{ width:\"62%\" }}\n/>\n\n- **ENABLE/DISABLED**: Enables or disables RTP streaming when changes are confirmed by pressing **APPLY**.\n  <Tip>\n    To optimize system resources, keep it disabled when the service is not in use.\n  </Tip>\n- **DESTINATION ADDRESS**: Destination IP address.\n- **PORT**: TCP transmission port.\n- **CODEC**: Audio format for RTP (**PCM** / **MP3**).\n- **QUALITY**: MP3 bitrate or PCM sampling frequency.\n- **GPO**: Enables sending **Tally Light** signals via TCP/IP for compatible Solidyne equipment.\n  - **Studio A and B** (lines 1 and 2 respectively)\n  - **Studio B and A** (reversed order)\n  - **A\\+B** (the signal is activated on both lines, whichever studio is active)\n\n---",
+      "title": "RTP LINK",
+      "level": 3
+    },
+    {
+      "hash": "9e83e98d2664b27bbb057faffb9b6e5e4fc7e509fd8090af84ccce43ae0cb359",
+      "translation": "### Down-Stream (RX)\n\nAllows configuration of an incoming stream. When the **DOWN-STREAM** module is active, the decoded audio is sent internally to the **AES-1** input, which is renamed to **STREAM-1**.<br />In this mode, the AES-1 connector on the rear panel is disabled.\n\n- **RUN/STOP**<br />Starts or stops the stream decoding when changes are confirmed with **APPLY**.\n  <Tip>\n    To optimize system resources, keep it stopped when the service is not in use.\n  </Tip>\n- **PROTOCOL**<br />Defines the type of incoming stream. The following formats are supported:\n  - Public **HTTP** and **MMS** streams encoded in PCM 16 (44.1/48 kHz), MP3, or Opus.\n  - **RTP** streams in PCM 16 (44.1 kHz) and MP3.\n- **SERVER URL/IP**<br />Name or IP address of the server generating the stream.\n- **PORT**<br />TCP port through which the stream enters.<br />Default value: **0**.\n- **MOUNTPOINT**<br />Unique name identifying the stream.\n- **APPLY**<br />Applies the configuration changes.\n\n<Note>\n  **Step-by-step** Download a [step-by-step guide for configuring an incoming stream](/unidex/unidex_appnote_downstream).\n</Note>\n\n---",
+      "title": "Down-Stream (RX)",
+      "level": 3
+    },
+    {
+      "hash": "f4964935ede2523a55c37891fe6d889f7be7c1dff0f5ed8e8e8b1f42b06201b2",
+      "translation": "### REMOTE PLAYER\n\nThe **WEB Remote Control Interface** allows listening to the console's audio via a **WebRTC** service.",
+      "title": "REMOTE PLAYER",
+      "level": 3
+    },
+    {
+      "hash": "526d41a353c05856ac27b7ad969242eb4c2c20a5c4cc8ca722431112883c2284",
+      "translation": "#### Audio Format\n\n- Encoding: **Opus**\n- Configurable bitrate: **128 to 320 kbps**",
+      "title": "Formato de Audio",
+      "level": 4
+    },
+    {
+      "hash": "d530c4b4108aad4c13bb4739f29741f22400d79b58ae52d8b1f61aa992d2de08",
+      "translation": "#### Operation on the local network\n\nWhen accessed from a terminal on the **LAN**, no advanced configuration is required.<br />The remote player will play the audio directly over the local network.",
+      "title": "Funcionamiento en red local",
+      "level": 4
+    },
+    {
+      "hash": "d561ca8ebfd707cb67bba1d0c85de74b65978ef527dca742fa3ed63a59cf0ff3",
+      "translation": "#### Operation via Internet\n\nTo access audio from the **WEB Control Interface** over the Internet, the network must implement:\n\n- **Symmetric NAT**\n- **TURN server**\n\n> If these services are not available, a warning message will appear in the player.\n\n---",
+      "title": "Funcionamiento vía Internet",
+      "level": 4
+    },
+    {
+      "hash": "6b987807620b860a53dc39a20bfbfa0acd8023f06d94c7a3b83ce5335c01c41d",
+      "translation": "### SERVICES CFG\n\nThe **Services Configuration** screen allows you to assign audio sources to the streaming services.\n\n| Service | Assigned Audio Source | Additional Configuration |\n| --- | --- | --- |\n| **STREAM-1** | **Program** signal present at the **AES3-1 PGM** output | Level adjustable in `SETTINGS → OUTPUTS → AES-1/STREAM-1` |\n| **STREAM-2** | Can be assigned to **PGM**, **REC**, **AUX**, **VBUS**, **STUDIO**, **CUE** or **Talk-Back** | Configurable in `SETTINGS → OUTPUTS → STREAM-2` |",
+      "title": "SERVICES CFG",
+      "level": 3
+    },
+    {
+      "hash": "206037528d274a6fe5183e9fc5f39f57abb6e36c5afe72858e9b0ee41589687e",
+      "translation": "#### Operational Notes\n\n- The **ENABLE** column allows you to start or stop each service.\n- It is recommended to **keep stopped** any services that are not in use to optimize system resources.\n\n---",
+      "title": "Notas operativas",
+      "level": 4
+    },
+    {
+      "hash": "92383e4e230358fa6c36681e8dcfc41345dadf70704f0faa2b8ffe62ac82b0ad",
+      "translation": "### Streaming System\n\nGeneral network settings for the **Streamer UX18** module (do not confuse with the web control access).\n\n<img\n  src=\"/images/ux24/ux24-config-streaming_eth.png\"\n  alt=\"UX18 Ethernet Streaming Configuration\"\n  title=\"UX18 Ethernet Streaming Configuration\"\n  style={{ width:\"75%\" }}\n/>\n\nBy default, the IP address operates in dynamic mode (DHCP). The assigned address is displayed on the main screen as **STREAM IP**.",
+      "title": "Streaming System",
+      "level": 3
+    }
+  ]
+}

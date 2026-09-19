@@ -1,148 +1,141 @@
 ---
 title: "Playback Controls"
-description: "Transport controls and information display"
+description: "Information screen and transport controls"
 keywords: ["transport"]
-tags: "Software,Audicom"
+tags: ["Software", "Audicom"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "0ffa36a9e9763283ac91b4022defb46ed7b73552e558387d6a3a265b527833de"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-\
-The playback module includes:
+The playback module contains:
 
-- Artist, title and genre of the current playing file.
-- Level meter (dBfs).
+- Interpreter, title and file style during playback.
+- Level indicator (dBfs).
 - Elapsed time indicator (hours:minutes:seconds).
-- A horizontal progress bar that fills as playback advances.
+- A horizontal bar that fills as playback progresses.
 - Transport controls (explained in the _CyberPlay Operation_ section).
 
   <img
     src="/images/audicom/au-cyberplay-transporte.png"
     alt="AUDICOM - Cyberplay Transport"
-    title="AUDICOM - Cyberplay Transport" 
+    title="AUDICOM - Cyberplay Transport"
     style={{ width:"75%" }}
   />
 
 ### Intro
 
-Countdown timer that indicates the duration of a song's introduction, which is the time before the vocalist begins singing.
+Countdown timer indicating the duration of a song's introduction, i.e., the time before the vocal track begins.
 
-- Helps the announcer know how long they can talk over the song intro.
-- The **Intro** time is defined in the **InfoMusic Production** window and can be modified from **InfoMusic Air**.
-- If titles have presentation files (**Partner**), the Intro time is crucial for adjusting these presentations.
+- Allows the announcer to know how much time they have to talk over the song intro.
+- The **Intro** duration is defined in the **InfoMusic Production** window and can be modified from **InfoMusic On-Air**.
+- If tracks have presentation files (**Partner**), the Intro time is crucial for synchronizing these presentations.
 
-### Crossfades
+### Fades
 
-To the right of the **Intro** indicator, a circle progressively fills each time AUDICOM performs a crossfade between two audio files.
+To the right of the **Intro** indicator, a circle appears that progressively fills each time AUDICOM performs a fade between two audio sources.
 
-### Block
+### Block (bloque)
 
-Shows the remaining time until the end of a block in minutes and seconds.
+Displays the remaining time in minutes and seconds until the completion of a block.
 
-- A line above the numbers graphically indicates elapsed time.
-- In live programs (manual mode), AUDICOM remains stopped during the block.
-- The counter shows time remaining until the next commercial break as a warning.
-- The operator must press **Play** to air the commercial break.
+- A line above the numbers graphically indicates the elapsed time.
+- In live programs (manual operation), AUDICOM remains paused during the block.
+- The counter shows how much time is left until the next break, serving as a warning.
+- The operator must press **Play** for the break to go on-air.
 
 ### Error
 
-Indicates in minutes and seconds how far ahead or behind the programming is compared to the original schedule.
+Indicates in minutes and seconds how much the programming has advanced or fallen behind compared to the original schedule.
 
-- In automatic mode, AUDICOM corrects the error when possible using commercial block tolerances.
-- In manual mode, timing errors can occur due to different program or news durations.
+- In automatic mode, AUDICOM corrects the error as much as possible using commercial block tolerances.
+- In manual mode, errors may occur due to programs or newscasts having different durations than scheduled.
 
 Example:
 
 - An error of **-05:00** indicates the next block will start 5 minutes earlier than scheduled.
-- This information allows the operator to make corrections by adding or removing music, promos or spots.
+- This information allows the operator to correct by taking actions such as adding or removing music, promos, or commercials.
 
 ### Expanded Mode
 
-Allows widening the CyberPlay window to show more display information.
+Allows widening the CyberPlay window, displaying more information on the screen.
 
-- **LOG**: Commercial break file loaded for the current day.
-  - Double-click the field to open a window to load any `.log` file for the day.
+- **LOG**: Log file loaded for the current day.
+  - Double-clicking the field opens a window to load any `.log` file for the day.
 - **PGM**: Program file loaded for the current day.
-  - Double-click the field to open a window to load any `.pgm` file for the day.
+  - Double-clicking the field opens a window to load any `.pgm` file for the day.
 
 ### Comments Window
 
-Shows additional data about the currently playing title:
+Displays additional data about the currently playing track:
 
-- Artist and author.
-- Notes or comments.
+- Artist and composer.
+- Annotations or comments.
 
-All data comes from the database.
+All data is sourced from the database.
 
-- When 15 seconds remain in the current title, information for the next track appears.
-- Also indicates if the title has associated files, like presentations.
+- When 15 seconds remain until the end of the track, information about the next item appears.
+- It also indicates if the track has an associated file, such as presentations.
 
 ### Pop-up Messages
 
-If a user attempts a restricted operation, a pop-up message appears informing about the restriction.
+If a user attempts to perform an unauthorized operation, a pop-up message appears informing them of the restriction.
 
-- These messages disappear automatically after a few seconds.
-- They can also be closed by clicking or pressing **ESC**.
+- These messages automatically disappear after a few seconds.
+- They can also be dismissed by clicking or pressing **ESC**.
 
-Example: attempted playback from **File Manager** by an unauthorized user.
-
----
+Example: playback attempt from **File Manager** by an unauthorized user.
 
 ## Playback Controls
 
-Below are the controls and operations for the CyberPlay window (On-Air Screen).\
-Keyboard shortcuts are shown in brackets.
+The following describes the controls and operations of the CyberPlay (On-Air Display) window.\
+Keyboard shortcuts are indicated in brackets.
 
 ### Play `[spacebar / Home]`
 
 - Starts playback from the title marked as "next" (green cursor).
 - If Play is pressed during playback, it skips to the next title.
-  - The skip is always a hard cut.
-  - To transition to the next track with a fade, use **Fade → Play**.
+  - The skip is always done by cut.
+  - To fade to the next title, use **Fade → Play**.
 
 **Autorun Mode**
 
-- In case of restart after power failure, if **Autorun** is enabled:
-  - AUDICOM starts as **auto** user.
-  - If 1 minute passes without intervention, playback starts from the title closest to current time.
-- Configured in **Configuration Panel \> Preferences**.
+- In case of restart after a power outage, if **Autorun** is enabled:
+  - AUDICOM starts as user **auto**.
+  - If 1 minute elapses without intervention, it starts playback from the title closest to the current time.
+- Configured in the **Configuration Panel \> Preferences**.
 
 <Warning>
-  For AUDICOM to run at computer startup, create a shortcut to `aire.exe` in Windows **Startup** menu.
+  For AUDICOM to run when the computer starts, a shortcut to `aire.exe` must be created in the Windows **StartUp** menu.
 </Warning>
 
 <Note>
-  Some stations create a "virtual autorun" by scheduling a **Satfill** block overnight.\
-  This procedure is explained in _Overnight Transmission Break_.
+  Some stations generate a "virtual autorun" by scheduling a **Satfill** block in the early morning.\
+  This procedure is explained in _Nighttime Transmission Cut_.
 </Note>
 
 ---
 
 ### Pause / Stop `[End]`
 
-- When pressed during playback:
-  - **Pause**: stops the title, can resume with Play.
+- If pressed during playback:
+  - **Pause**: stops the track, allowing resumption with Play.
   - **Stop**: completely stops playback.
 
 ---
 
 ### Fade & Stop `[Ctrl + End]`
 
-Reduces level by 20 dB per second until playback stops.
-
----
+Reduces the level by 20 dB per second until playback stops.
 
 ### Fade & Play `[Ctrl + Home]`
 
-- Current title ends with progressive fade.
-- Next title begins playing.
-- If titles have fade-in and fade-out, **crossfade** is applied.
+- The current track ends with a fade-out.
+- The next track starts playing.
+- If tracks have fade-in and fade-out, a **crossfade** is applied.
 
 ---
 
@@ -150,64 +143,64 @@ Reduces level by 20 dB per second until playback stops.
 
 Inserts a pause in the CyberPlay list:
 
-- When current title ends, playback stops.
-- Next title becomes "next" (green cursor).
-- Representation: black bar with **PAUSE** label.
+- When the current track ends, playback stops.
+- The next track becomes the "next" (green cursor).
+- Representation: black bar with the label **PAUSE**.
 
 Operations:
 
-- Insert pause on selected title (yellow cursor).
-- If no selection, inserts below red cursor (playing title).
-- Remove pause: select it and press _Pause_ button, or drag it to the left.
-- Can also be done from context menu (right click).
+- Insert pause on selected track (yellow cursor).
+- If no selection is made, it is inserted below the red cursor (currently playing track).
+- Remove pause: select it and press the _Pause_ button, or drag it to the left.
+- It can also be done from the context menu (right-click).
 
 ---
 
-## Title Window Actions
+## Actions in the title window
 
-### Select a Title `[↑ / ↓ Arrows]`
+### Select a Title `[Arrow Keys ↑ / ↓]`
 
-- Click on a title marks it with yellow cursor (selection).
-- With arrows, selection cursor moves through the list.
+- A click on a title marks it with a yellow cursor (selection).
+- Using the arrow keys, the selection cursor moves through the list.
 
-### Preview (Cue) `[Delete]`
+### Preview Monitoring (Cue) `[Del]`
 
-- Double click on title → playback through **Cue** output.
-- Second double click → plays last 5 seconds (**CUE END**).
+- Double-click on a title → playback through **Cue** output.
+- Second double-click → plays the last 5 seconds (**CUE END**).
 - Output configuration in **Configuration Panel**.
-- Control from **InfoMusic Air**, with level meters and position bar.
+- Control from **InfoMusic On-air**, with level indicators and position bar.
 - Stop Cue playback: **Stop-cue** in InfoMusic or **ESC** key.
 
-**Console Cue**
+**Cue from console**
 
-- Activate **CUE** by double clicking counter's left label.
+- Activate **CUE** by double-clicking the left legend of the counter.
 - Audio plays from Live Assist but:
   - Not reported via RDS/iRDS.
-  - Not logged in `.air` files.
+  - Not recorded in `.air` files.
 
 <Warning>
-  This mode is not recommended. Can lead to errors when working without dedicated monitoring channel.
+  This mode is not recommended. It may cause errors when working without a dedicated monitoring channel.
 </Warning>
 
-### Remove a Title `[Backspace]`
+### Delete a Title `[Backspace]`
 
-- Select title and drag it to left side of CyberPlay or toward counters.
-- Alternatively: right click → **Remove**.
+- Select the title and drag it to the left side of CyberPlay or to the counters.
+- Alternatively: right-click → **Remove**.
 
-### Insert a Title `[Insert]`
+### Insert a Title `[Ins]`
 
-- Can insert titles from other modules (InfoMusic, MediaManager, Live Assist).
-- Drag it to CyberPlay window.
-- Blue line appears indicating insertion position.
-- Can also use insert button (blue arrow) or **Enter** key.
+- You can insert titles from other modules (InfoMusic, MediaManager, Live Assist).
+- Drag it to the CyberPlay window.
+- A blue line appears indicating the insertion position.
+- You can also do this with the insert button (blue arrow) or the **Enter** key.
 
-### Change Title Position
+### Changing a Title's Position
 
-- Select title and drag up/down.
-- Blue line appears indicating new position.
+- Select the title and drag it up/down.
+- A blue line appears indicating the new position.
 
 <Danger>
-  Many operations may be restricted by user profile.\
-  If you attempt a prohibited action, a pop-up message will indicate the restriction.\
-  For questions, consult the network administrator or technical manager.
+  Many operations may be restricted by the user profile.\
+  If you attempt a prohibited action, a popup message will appear indicating the restriction.\
+  When in doubt, consult with the network administrator or technical supervisor.
 </Danger>

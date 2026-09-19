@@ -20,8 +20,8 @@
       "level": 3
     },
     {
-      "hash": "1d5d69c1b947efa9b63db4584dd0341c766c37f12af412f716aaf90558159363",
-      "translation": "### Gravação de linhas telefônicas\n\nO canal **TELCO** pode ser atribuído a qualquer uma das saídas por meio do botão **PGM/REC**.\n\nExemplo: gravar uma reportagem telefônica enquanto no ar toca música.\n\n- Atribuir o **híbrido** e um **microfone** à saída **REC**.\n- Proceder com a comunicação como em _Canal de híbrido_.\n- Atribuir monitoramento a **REC** para ouvir a conversa.",
+      "hash": "f14444318e0b2af0390dd6cc2650967e191c5f9192a6b0ff766da5c4f61505d4",
+      "translation": "### Gravação de linhas telefônicas\n\nO canal **TELCO** pode ser atribuído a qualquer uma das saídas por meio do botão **PGM/REC**.\n\nExemplo: gravar uma reportagem telefônica enquanto no ar toca música.\n\n- Atribuir o **híbrido telefônico** e um **microfone** à saída **REC**.\n- Proceder com a comunicação como em _Canal de híbrido_.\n- Atribuir monitoração a **REC** para escutar a conversa.",
       "title": "Grabación de líneas telefónicas",
       "level": 3
     }

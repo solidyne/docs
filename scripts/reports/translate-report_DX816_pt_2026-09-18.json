@@ -1,0 +1,22 @@
+{
+  "model": "deepseek/deepseek-chat",
+  "duration_sec": "0.06",
+  "results": {
+    "pt": {
+      "translated": 25,
+      "skipped": 0,
+      "errors": 0,
+      "total": 25,
+      "skippedReviewed": 0,
+      "forcedUpdates": 0,
+      "totalSections": 102,
+      "translatedSections": 12,
+      "reusedSections": 85,
+      "failedSections": 0,
+      "migratedFiles": 0
+    }
+  },
+  "skipped_reviewed": 0,
+  "forced_updates": 0,
+  "migrated_files": 0
+}

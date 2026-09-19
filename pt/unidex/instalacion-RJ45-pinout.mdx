@@ -1,108 +1,16 @@
 ---
 title: "Montagem de cabos RJ45"
 description: "Diagramas para cabeamento estruturado"
-keywords: ["cabeamento", "cabos", "conexões", "RJ45"]
-tags: ["consolas IP","UNIDEX","ux18","ux24"]
+keywords: ["# Cabos", "cabeamento e conexões RJ45 ## Visão geral A console IP da Solidyne utiliza conectores RJ45 para a maioria das suas conexões de rede e áudio. Este documento descreve os tipos de cabos", "padrões de cabeamento e considerações práticas para uma instalação confiável. ## Tipos de conexões RJ45 A console utiliza conectores RJ45 (8P8C) para diferentes funções: 1.  **Rede Principal (LAN)**: Conexão à rede local da estação para controle", "configuração e", "em alguns casos", "áudio. 2.  **Áudio sobre IP (AoIP)**: Conexões dedicadas para fluxos de áudio de alta qualidade", "como Dante ou Livewire. 3.  **GPIO e Controle**: Para conexão de periféricos como botoeiras", "relés ou interfaces de automação. ## Padrões de cabeamento ### Para Rede de Dados (Ethernet padrão) *   **Cabo**: Recomenda-se cabos de par trançado blindado (F/UTP ou S/FTP) categoria 5e ou superior. *   **Padrão**: T568A ou T568B (deve ser consistente em toda a instalação). *   **Comprimento máximo**: 100 metros entre dispositivos ativos (switch e console). ### Para Áudio sobre IP (Dante", "Livewire) *   **Cabo**: Utilize cabos de categoria 6 (Cat6) ou superior para garantir a integridade do sinal de áudio com baixa latência e jitter. *   **Blindagem**: Blindagem global (F/UTP) é altamente recomendada para minimizar interferências. *   **Switch**: Utilize switches gerenciados com suporte a QoS (Quality of Service)", "priorizando tráfego de áudio. ## Práticas recomendadas de instalação 1.  **Identificação**: Identifique claramente ambos os extremos de cada cabo (ex: "Console LAN", "Switch AoIP 1"). 2.  **Proteção contra tensão**: Ao passar cabos entre edifícios ou por longas distâncias externas", "utilize protetores contra surtos de tensão para linhas de dados. 3.  **Separação**: Mantenha cabos de rede afastados de cabos de alimentação CA", "cabos de alto-falantes ou qualquer fonte de interferência eletromagnética. 4.  **Curvatura**: Evite curvas fechadas (raio inferior a 4 vezes o diâmetro do cabo) que possam danificar os condutores internos. 5.  **Teste**: Sempre teste a continuidade e o mapeamento de pinos (com um testador de cabos) antes de colocar um novo cabo em operação. ## Solução de problemas de conexão *   **Link não estabelecido**: Verifique se os LEDs do conector RJ45 na console e no switch estão acesos. Confirme o padrão de crimpagem e a continuidade do cabo. *   **Perda intermitente de pacotes**: Pode indicar um cabo danificado", "conector mal crimpado ou interferência. Substitua o cabo e verifique a blindagem. *   **Latência alta em AoIP**: Verifique a configuração do switch (QoS ativado) e a carga da rede. Isole o tráfego de áudio em uma VLAN dedicada", "se possível. ## Conectores e adaptadores A console possui apenas portas RJ45. Para conectar a periféricos com outros tipos de conector (ex: XLR", "DB9", "RS-232)", "serão necessárias caixas de interface ou adaptadores específicos fornecidos pela Solidyne ou por terceiros certificados. Seguir estas diretrizes garantirá uma conexão de rede estável e de alto desempenho", "que é a base para a operação confiável de uma console IP em um ambiente de transmissão profissional."]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
   target_lang: "pt"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "89b0e574d95874053b7bb1a6799e627c014cbcff4cb2efe1ee379684631b0bec"
-
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-Para montar os cabos de conexão, recomenda-se:
+import rj45 from '/snippets/RJ45_es.mdx'
 
-- Utilizar conectores **RJ45 blindados**.
-- Usar cabo **CAT-5 STP ou S/FTP de primeira qualidade**.
-- Garantir que a blindagem do conector esteja corretamente conectada à malha do cabo.
-
-A tabela a seguir mostra a nomenclatura padrão de cores e numeração do conector RJ45.
-
-## Nomenclatura padrão do conector RJ45
-
-<img
-  src="/images/ux24/RJ-45_TIA-568B.png"
-  alt="RJ45 vista frontal - Pinos segundo TIA-568B"
-  style={{ maxWidth:"300px",height:"auto",marginBottom:"1rem" }}
-  title=""
-/>
-
-| **PINO** | **COR DO CABO**    |
-| :------: | ------------------ |
-| 1        | Laranja / Branco   |
-| 2        | Laranja            |
-| 3        | Verde / Branco     |
-| 4        | Azul               |
-| 5        | Azul / Branco      |
-| 6        | Verde              |
-| 7        | Marrom / Branco    |
-| 8        | Marrom             |
-
-## Configuração de pinos para conexão de áudio balanceado
-
-| **PINO** | **FUNÇÃO**             | **COR DO CABO**    |
-| :------: | --------------------- | ------------------ |
-| 1        | Canal esquerdo (\+)    | Laranja / Branco   |
-| 2        | Canal esquerdo (–)     | Laranja            |
-| 3        | Canal direito (\+)     | Verde / Branco     |
-| 4        | Terra                  | Azul               |
-| 5        | Reservado              | Azul / Branco      |
-| 6        | Canal direito (–)      | Verde              |
-| 7        | –15 V (opcional)       | Marrom / Branco    |
-| 8        | \+15 V (opcional)      | Marrom             |
-
-## Configuração de pinos para conexão de áudio NÃO balanceado
-
-| **PINO** | **FUNÇÃO**             | **COR DO CABO**    |
-| :------: | --------------------- | ------------------ |
-| 1        | Canal esquerdo (\+)    | Laranja / Branco   |
-| 2        | NC                     | Laranja            |
-| 3        | Canal direito (\+)     | Verde / Branco     |
-| 4        | Terra                  | Azul               |
-| 5        | Reservado              | Azul / Branco      |
-| 6        | NC                     | Verde              |
-| 7        | –15 V (opcional)       | Marrom / Branco    |
-| 8        | \+15 V (opcional)      | Marrom             |
-
-## Adaptadores para conectores de áudio convencionais
-
-### RJ45 para RCA não balanceado
-
-<img
-  src="/images/ux24/RJ45-a-RCA.jpg"
-  alt="RJ45 para RCA"
-  style={{ maxWidth:"550px",height:"auto",marginBottom:"1rem" }}
-  title=""
-/>
-
-### RJ45 para XLR balanceado
-
-<img
-  src="/images/ux24/RJ45-a-XLR.jpg"
-  alt="RJ45 para RCA"
-  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
-  title=""
-/>
-
-### RJ45 para plug TRS balanceado
-
-<img
-  src="/images/ux24/RJ45-a-TRS.jpg"
-  alt="RJ45 para RCA"
-  style={{ maxWidth:"500px",height:"auto",marginBottom:"1rem" }}
-  title=""
-/>
-
----
-
-<Warning>
-  Os adaptadores SOL-M12/minijack (para miniplug fêmea) podem ser conectados a SAÍDAS balanceadas ou não balanceadas. Não é recomendado para desbalancear entradas, pois deixam o pino (-) desconectado, podendo introduzir ruído.
-</Warning>
-
-<Warning>
-  Os adaptadores SOL-M12/RCAM (para RCA macho) podem ser conectados a ENTRADAS balanceadas para desbalanceá-las, pois conectam o sinal (-) do balanceado ao terra. **NÃO DEVEM SER USADOS EM SAÍDAS BALANCEADAS**, porque as saídas devem ser desbalanceadas deixando o pino (-) sem conexão.
-</Warning>
+<rj45 />

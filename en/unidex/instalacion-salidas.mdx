@@ -1,56 +1,49 @@
 ---
 title: "Outputs"
-description: "Output connections in UNIDEX UX24 and UX18"
+description: "Output Connection for UNIDEX UX24 and UX18"
 keywords: ["installation", "outputs"]
-tags: ["IP consoles", "UNIDEX"]
+tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "1b5316b310dbd16314bf2e6fa7776cae325fb7753bcbca9214b97171a2dd3b92"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  Analog Outputs
 
-Each output uses an **RJ45** connector that carries **left and right** signals in a single cable. In some applications, these stereo outputs can be configured as **two independent mono channels**. For example, **UDX telephone line adapters** use unbalanced mono outputs to send signals to external communication lines.
+Each output uses an **RJ45** connector, which carries the **left and right** signals in a single cable. In some applications, these stereo outputs can be configured as **two independent mono channels**. For example, the **UDX adapters for phone lines** use the unbalanced mono outputs to send signal to external communication lines.
 
 <Info>
-  Outputs labeled as PGM and/or REC (balanced) deliver the BUS mix by default.
+  The outputs labeled as PGM and/or REC (balanced) deliver the BUS mix by default.
 
-  Other outputs are assignable and can be configured to deliver any of the mix buses or even redirect inputs (DIRECT OUT)
+  Other outputs are assignable; they can be configured to deliver any of the mix buses or even redirect inputs (DIRECT OUT)
 </Info>
 
 ## <Icon icon="arrow-left-from-line" iconType="solid" color="#00860b" size={22} />  AES3 Digital Outputs
 
-- Connected using **RJ45–RJ45 CAT5** cable and **SOL-F3/XLRM** adapter.
-- Use the same **pin-out** as balanced stereo analog outputs, although **only the left channel is transmitted**.
-- Also support **S/PDIF** signal connection.
-- Are transformer balanced
+- They are connected using a **RJ45–RJ45 CAT5** cable and a **SOL-F3/XLRM** adapter.
+- They use the same **pin-out** as the balanced stereo analog outputs, although **only the left channel is transmitted**.
+- They also support the connection of **S/PDIF** signals.
+- They are transformer-balanced.
 
-### AES3 Output Assignment in UX24
-
-- **AES-1** → **PGM** Bus
-- **AES-2** → **REC** Bus
-- **AES-3 and AES-4** → Assignable from `SETTINGS → OUTPUTS` screen
-
-### AES3 Output Assignment in UX18
-
-- **AES-1** → assignable
-- **AES-2** → assignable
+| AES Output | UX24 | UX18 |
+| :-: | :-: | :-: |
+| AES-1 | PGM Bus | Assignable via configuration |
+| AES-2 | REC Bus | Assignable via configuration |
+| AES-3 | Assignable via configuration | Not available |
+| AES-4 | Assignable via configuration | Not available |
 
 <Warning>
-  **VERY IMPORTANT:** 
+  **VERY IMPORTANT:**
 
-  **AES3 OUTPUTS ONLY OPERATE AT 48 kHz**.
+  The **AES3 OUTPUTS ONLY OPERATE AT 48 kHz**.
 
-  \
-  It is essential to **configure the recording device** in Windows to **48,000 Hz** to avoid compatibility issues. To configure the sample rate in Windows 10:
+  It is essential to **configure the recording device** in Windows to **48,000 Hz** to avoid compatibility errors. To configure the sample rate in Windows 10:
 
-  1. Open **System Settings** menu and select **Sound**.
-  2. In **Sound Settings**, open **input device properties**.
-  3. Enter **Additional device settings**.
+  1. Open the **System Settings** menu and select **Sound**.
+  2. In **Sound settings**, open the **input device properties**.
+  3. Go to **Other device settings**.
   4. In the **Advanced** tab, set the **sample rate to 48,000 Hz**.
 </Warning>

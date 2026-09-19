@@ -1,0 +1,47 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "35627e63c101ba78315a89e72c58df5b58088a78e99036e79a45319028b6028f",
+      "translation": "### Load PGM ON/OFF\n\n- With **Load PGM** enabled (default setting), CyberPlay builds the final program using the schedules created in **CyberPlay Editor** (`.pgm` files).\n- If **Load PGM** is disabled, CyberPlay ignores `.pgm` files and uses only commercial breaks.\n\n  The operator can insert content between breaks or use **Playlist Manager**.\n\n<Note>\n  In the Configuration Panel, you can enable AUDICOM to automatically remove **gaps** at the end of each commercial block.\n</Note>",
+      "title": "Load PGM ON/OFF",
+      "level": 3
+    },
+    {
+      "hash": "33e613618203e711d1ccce371ef1d949546aca1ac7966a2bba0ec8779d39ed11",
+      "translation": "### Reload: Schedule Changes\n\n- CyberPlay automatically loads programming files every day.\n- The daily loading of **LOG** and **PGM** occurs at **18:00** (configurable in the Control Panel).\n- You can **manually reload** the schedule for last-minute changes.\n\nWhen to use Reload:\n\n- Modifications to the current day's schedule.\n- Modifications to the next day's schedule after the automatic reload time.\n\nUsage:\n\n- The operator presses **RELOAD** or uses the shortcut `[Alt + R]`.\n- During reload:\n  - The current track continues playing but disappears from the CyberPlay window.\n  - Upon completion, the green cursor positions itself on the most suitable item based on the current time.\n  - The operator can:\n\n    Force playback with Play.\n\n    Take no action: the system will continue with the new schedule after the current track ends.\n\n<Note>\n  - If the **LOG** is modified, the RELOAD button flashes to indicate the change.\n  - If a **PGM** or next day's LOG is modified, the system does not alert: the **operator must be notified** to reload.\n  - You can also reload a single file (LOG or PGM) by double-clicking the corresponding field in the CyberPlay display.\n</Note>",
+      "title": "Reload: cambios en la pauta de programación",
+      "level": 3
+    },
+    {
+      "hash": "f4947dcfb76bd5dafc8568cb25e1cd8fe6e239a132f4b3baf7069431b2fbd754",
+      "translation": "### Save Log and autoLog\n\n- Changes to commercial blocks are automatically saved to the **LOG** file (_autoLog_ function).\n- AutoLog **does not save** changes if:\n  - The user is not authorized to modify blocks.\n  - The LOG was modified externally and the alarm is active (Reload button flashing).\n\nThe **Save LOG** button allows manual saving:\n\n- Even if the file was modified externally.\n- It will not work if the user lacks permissions.\n- Prompts for confirmation before overwriting.",
+      "title": "Save Log y autoLog",
+      "level": 3
+    },
+    {
+      "hash": "ba626a28c282b02ed93b70b3594e8f7e60ece507be528bfbb94f96b7582006af",
+      "translation": "### Next Title Button `[Enter]`\n\n- Selects the title marked with yellow cursor as the **next title** (green cursor).\n- If no title is selected, the next one will be below the red cursor (currently playing).\n- Can be selected by double-clicking in the schedule area (left column).\n  - Double-clicking in the colored area plays in **CUE**.",
+      "title": "Botón Next Title `[Enter]`",
+      "level": 3
+    },
+    {
+      "hash": "163aca4f3b524f69d1fde2deb9dd10f2ca7da15de78d779d524e97bc618dfd04",
+      "translation": "### Insert AutoDJ\n\nInserts an **AutoDJ** block into the programming schedule.\n\n- The user defines the **format**, start time and end time.\n- Commercial breaks included within the range remain intact.",
+      "title": "Insert AutoDJ",
+      "level": 3
+    },
+    {
+      "hash": "263df0db9fa40f19a3f56ba9b502197f8659e2bb49728d5cd60c6c73680a8fa3",
+      "translation": "### Mix `[Asterisco]`\n\nControls the attenuation of CyberPlay when another module (e.g. Live Assist) plays back on the same output.\n\n- Available values: **100%, 50%, 25%, 10%** (cycle through by pressing the button).\n- During video playback:\n  - The attenuation only affects the video's audio.\n  - If another module is also playing video, only the audio is mixed.",
+      "title": "Mix `[Asterisco]`",
+      "level": 3
+    },
+    {
+      "hash": "e30bccedfcda58419a6a5a4c07aaef50c98c53cd203767ba9d46a6af869e0114",
+      "translation": "### Right-Click Menu Options\n\nPressing the right mouse button on a title displays these options:\n\n- **CUE**: playback in preview.\n- **CUE End**: plays the last 5 seconds.\n- **Play**: starts playback respecting crossfade on music tracks.\n- **Stop**: stops playback.\n- **Fade & Play**: attenuates current audio and starts the next.\n- **Fade & Stop**: attenuates current audio and stops it.\n- **InfoMusic**: loads the title into InfoMusic (only if present in the database).\n- **Internet…**: opens browser to search for title information.\n- **Copy TANDA**: copies the content of a TANDA.\n- **Insert TANDA**: inserts empty TANDA.\n- **Insert Meteor**: inserts Meteor instruction.\n- **Insert Pause**: inserts pause above the selected title.\n- **Insert Random**: randomly selects an audio file from a defined folder.\n- **Remove**: deletes the item from the schedule.\n- **Remove all equal**: removes all instances of that item.\n\n<Danger>\n  Some operations may be restricted based on user profile.\\\n  If attempting a prohibited action, a pop-up message will indicate insufficient permissions.\\\n  For questions, consult the network administrator or technical supervisor.\n</Danger>",
+      "title": "Opciones del menú de clic derecho",
+      "level": 3
+    }
+  ]
+}

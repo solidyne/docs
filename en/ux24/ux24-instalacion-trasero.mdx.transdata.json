@@ -1,0 +1,23 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "1f450cf24e209ac3e71528e268d0d44db12a3de351131932b768190380874c84",
+      "translation": "## Power Supply\n\nThe unit features an internal switched-mode power supply, **110/240V 50/60Hz.**\n\nThe rear panel houses the **power switch**, the main fuse (1A), and the Interlock-type power cable connector (included with the console).\n\n<img\n  src=\"/images/ux24/ux24_powerinput.png\"\n  alt=\"RJ45 to RCA\"\n  style={{ maxWidth:\"500px\",height:\"auto\",marginBottom:\"1rem\" }}\n  title=\"\"\n/>",
+      "title": "Fuente de alimentación",
+      "level": 2
+    },
+    {
+      "hash": "68aad7ea4c887983afc201bf40879e3b8914c66a6f3c8f3b36181b387086b096",
+      "translation": "## Grounding\n\nUX24 is grounded through the power cable. Do not use adapters or cables that eliminate the ground pin. It is also recommended to connect the chassis ground terminal to the installation's ground, using 4 mm or larger cable.\n\nThe general electrical installation must have proper grounding. For reference, you can consult the [FM grounding connection diagram](/en-US/grounding).\n\n<Danger>\n  **WARNING!**\n\n  **Ensure the computer connected to UX24 via USB has proper grounding.**\n</Danger>",
+      "title": "Puesta a tierra",
+      "level": 2
+    },
+    {
+      "hash": "886b667713c5c752fb1c9e0df643899b1f62c8e84a0745e398792673aa73b3e0",
+      "translation": "## Inputs, Outputs and Ports\n\nThe rear panel concentrates all console connections. RJ45 connectors are used for all audio connections, except for headphone and control room speaker outputs.\n\nWe also find **Ethernet** ports, **USB** port, connections for **on-air lights** (Tally Light) and **GPIO** control.\n\n<Note>\n  See [Inputs and Outputs Infographic](http://solidyne.dx.com.ar/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF).\n</Note>\n\n![Ux24 Rearpanel Notes Pn](/images/ux24/ux24_rearpanel_notes.png)\n\n<Icon icon=\"arrow-right-to-line\" iconType=\"solid\" color=\"#008dff\" size={22} />  [INPUTS](/es/unidex/instalacion-entradas) (click for more info)\n\n- 4 **microphone** inputs.\n  - Use RJ45 connectors. Connect using **SOL-M25/1XLRF** cable (male RJ45 to female XLR, 2.5 meters). Shorter lengths are also available for connecting to XLR near the console.\n\n  <Info>\n    The **MICROPHONE** female RJ45 inputs use the **LEFT channel** of the balanced connection.\n  </Info>\n- **16 UNIDEX** mono inputs that can be grouped into stereo pairs.\n- **4 balanced** stereo inputs.\n- **4 digital** AES3 inputs.\n- **4 USB** stereo audio inputs.\n- **1 streaming** audio input (replaces AES3-1).\n- OPTION: \\*\\*DANTE \\*\\*x16\n\n<Note>\n  **MODELS WITH DANTE OPTION** (UX24-A67)\n\n  When UX24 includes the DANTE/AES67 option, it replaces the following inputs:\n\n  **UNIDEX 5, 6, 7 and 8** are replaced by AoIP 1, 2, 3 and 4.\\\n  **BAL 9, 10, 11 and 12** are replaced by AoIP 5, 6, 7 and 8.\n</Note>\n\n<Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} />  [**OUTPUTS**](/es/unidex/instalacion-salidas)\n\n- 2 balanced PGM outputs\n- 4 balanced stereo outputs\n- 4 unbalanced stereo outputs\n- 4 digital AES3 outputs\n- 4 USB stereo audio outputs\n- 2 audio streams\n- OPTION: DANTE x16\n\n<Icon icon=\"arrow-left-from-line\" iconType=\"solid\" color=\"#00860b\" size={22} />  [STUDIO OUTPUT](/es/unidex/instalacion-cableado_monitoreo)\n\n<Icon icon=\"usb-drive\" iconType=\"solid\" color=\"#008dff\" size={24} />  [USB](/es/unidex/instalacion-usb)\n\n<Icon icon=\"network-wired\" iconType=\"solid\" color=\"#ffc044\" size={23} />  [ETHERNET](/es/unidex/instalacion-red)\n\n<Icon icon=\"arrow-down-arrow-up\" color=\"#ffc044\" size={24} />  [GPIO](/es/unidex/instalacion-gpio)",
+      "title": "Entradas, salidas y puertos",
+      "level": 2
+    }
+  ]
+}

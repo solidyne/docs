@@ -1,0 +1,53 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "2515617de569452631e8de6fbfa6c052d92bf3c24755907ef0451f34ff46a448",
+      "translation": "## Operation\n\n<Steps>\n  <Step title=\"Start recording\">\n    Press the **REC** button. Recording starts immediately.\\\n    The **I-REC** module appears on screen with a VU meter showing the incoming signal level.\\\n    <Warning>\n      Ensure the last red lines on the VU meter do not light up to avoid signal clipping.\n    </Warning>\n  </Step>\n  <Step title=\"Stop recording\">\n    - Click on the module image.\n    - Or close the I-REC window (by pressing the button on the Toolbar again).\n  </Step>\n  <Step title=\"Move the window\">\n    Drag it from the title bar (Instant Recorder).\\\n    <Note>\n      It is recommended to move it only when not recording, as clicking on the image stops the recording.\n    </Note>\n  </Step>\n</Steps>\n\n<Info>\n  The module always opens in the same position where it was closed.\n</Info>",
+      "title": "Operación",
+      "level": 2
+    },
+    {
+      "hash": "059040f8ff14add1a7dd1f8f12cf291812b443898c3aaf4c0e8e8917c04802e6",
+      "translation": "### File Naming\n\nThere are two modes:\n\n- **Automatic**:\\\n  I-REC assigns names when recording completes without operator intervention.\\\n  Format: `YYMMDD HHMMSS` (Year, Month, Day, Hour, Minute, Second).\n- **Operator-defined**:\\\n  Enable the **N** indicator to the left of the VU meter.\\\n  A dialog box will appear to enter the name before saving.\n\n---",
+      "title": "Nombres de archivo",
+      "level": 3
+    },
+    {
+      "hash": "f0330fe8c72b3630f95e8cfb7f190f96a02470e4c5ee8d541afb205cdd2a1fcd",
+      "translation": "## Configuration\n\nAccess by **right-clicking** on the module.\\\n<Warning>\n  While the configuration window is open, I-REC will not record.\n</Warning>",
+      "title": "Configuración",
+      "level": 2
+    },
+    {
+      "hash": "dc56013acfe17793abd4fc0c286227f7455233cf3ddd81abdc70b0c0ab8f8f68",
+      "translation": "### Audio Input\n\n- The audio card is selected during installation in the **Configuration Panel**.\n- To modify: run **aConfig** from the toolbar or installation folder.\n- In the _Instant Recording I-Rec_ field, select the recording device (line input recommended).",
+      "title": "Entrada de audio",
+      "level": 3
+    },
+    {
+      "hash": "28ad0e8b47b8b5f19df18cdd9638db5dbb224ab6e9ce8111dfe05fc7373f5802",
+      "translation": "### Sample Rate (Hz)\n\n- **44.100 / 32.000**: high quality.\n- **22.050**: archive material without high demands.\n- **11.025 or lower**: phone lines.\n\n<Note>\n  I-REC does not compress audio.\\\n  One minute of stereo at 44.100 Hz occupies ~10 MB.\n</Note>",
+      "title": "Sample Rate (Hz)",
+      "level": 3
+    },
+    {
+      "hash": "af56fa7f4653b08e1d922ca510ed43c929328a17d4cb0aeabba33b63fc9149fd",
+      "translation": "### Channels\n\nDefine whether the recording will be **mono** or **stereo**.",
+      "title": "Canales",
+      "level": 3
+    },
+    {
+      "hash": "f045e6794c7bdd0bcf9416829dd78c4ccdfaf2fe2250be52de989883b476fef0",
+      "translation": "### Directory\n\n- Folder where recorded files will be saved.\n- A **local disk** is recommended.\n- Must be part of the AUDICOM structure to appear in **File Manager**.\n- Factory setting: `C:\\Audicom\\Audio\\I-REC`.",
+      "title": "Directorio",
+      "level": 3
+    },
+    {
+      "hash": "af92262be7da06c20e551bd46f1ebbb2b3c423161ebf7f3c4b5c66210dbc40dd",
+      "translation": "### Loop Recorder (Continuous Recording)\n\n- In this mode, I-REC keeps the last **N minutes** of programming in memory.\n- To record to disk: left-click on the module.\n- The filename can be automatic or defined by the operator.\n- Loop mode is indicated by the **red L** to the right of the VU meter.\n\n<Info>\n  I-REC can remain in Loop mode for many hours since it doesn't use disk space and only requires memory for the configured minutes.\n</Info>\n\n---\n\n<Note>\n  I-REC only works on the **on-air desktop**.\\\n  It is not available in AUDICOM's general desktop (`Desktop.exe`).\n</Note>",
+      "title": "Loop Recorder (grabación en bucle)",
+      "level": 3
+    }
+  ]
+}

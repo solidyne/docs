@@ -20,8 +20,8 @@
       "level": 3
     },
     {
-      "hash": "1d5d69c1b947efa9b63db4584dd0341c766c37f12af412f716aaf90558159363",
-      "translation": "### Phone Line Recording\n\nThe **TELCO** channel can be assigned to any output using the **PGM/REC** button.\n\nExample: recording a phone report while music is playing on-air.\n\n- Assign the **hybrid** and a **microphone** to the **REC** output.\n- Proceed with communication as described in _Hybrid Channel_.\n- Assign monitoring to **REC** to monitor the conversation.",
+      "hash": "f14444318e0b2af0390dd6cc2650967e191c5f9192a6b0ff766da5c4f61505d4",
+      "translation": "### Phone Line Recording\n\nThe **TELCO** channel can be assigned to any output using the **PGM/REC** button.\n\nExample: recording a phone interview while music is playing on-air.\n\n- Assign the **telephone hybrid** and a **microphone** to the **REC** output.\n- Proceed with communication as in _Hybrid Channel_.\n- Assign monitoring to **REC** to listen to the conversation.",
       "title": "Grabación de líneas telefónicas",
       "level": 3
     }

@@ -1,0 +1,59 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "084ffadce06601a1ff5fd6097c91348885ae0646ade2794224b684612ce42f49",
+      "translation": "![MX2100 Pn](/images/thumbnails/MX2100.png)\n\nThe Solidyne MX2100 portable mini-console was designed to provide a low-cost professional solution for remote broadcasts based on mobile phone and Internet connectivity.",
+      "title": "Whole file",
+      "level": 0
+    },
+    {
+      "hash": "2fc2ff02c8aa18b21d1f1716ed22bc67d64e7d697cbe322824030e1d3315a77e",
+      "translation": "## Operational features",
+      "title": "Facilidades operativas",
+      "level": 2
+    },
+    {
+      "hash": "fb18cb61e0a34812cb6a160a25e8043abe5cc2baafa0c3e6ce2f08a2d848e5d2",
+      "translation": "### Getting the Most Out of Your Mobile Phone\n\nWith the MX2100, you will no longer need to handle the mobile phone directly. You can use quality dynamic microphones and use the mobile phone solely as a transmitter to establish the connection with the radio station.\n\nThe phone is paired to the console **via Bluetooth**.\n\n<Note>\n  Bluetooth wireless technology does not require devices to be in line of sight, but the maximum safe distance is 3 meters (absolute maximum: 10 meters). The connection can suffer interference from walls or other electronic equipment.\n</Note>",
+      "title": "Aprovechar al máximo el teléfono móvil",
+      "level": 3
+    },
+    {
+      "hash": "8e7cce81b86337a5def0ba05308ca654f01ea1eda49825e3adf4a20c367c17ca",
+      "translation": "### Low Power Consumption for Greater Autonomy\n\nThe console uses ultra-low power CMOS amplifiers.\n\n- Power consumption: less than 0.1 W.\n- Autonomy: more than 16 hours of continuous operation.\n- Intermittent use: 20 to 25 hours.\n\n---",
+      "title": "Bajo consumo para mayor autonomía",
+      "level": 3
+    },
+    {
+      "hash": "4012d22be3ebc68b7bd6a0ce7944df46de63fe21e1fa19f1478e3b705a67c8b5",
+      "translation": "## Connectivity\n\n- USB Input/Output for streaming transmission.\n- Bluetooth link with mobile phone (to Studios or remote journalist).\n- Physical connection with mobile phone via hands-free cable.\n- DTMF keypad for dialing on land lines (POTS).",
+      "title": "Conectividad",
+      "level": 2
+    },
+    {
+      "hash": "19389f4660b10892ffdfb4d8e7b08753ff54f17ec3928ce317eed289ed09f8b4",
+      "translation": "### Inputs\n\n- 3 dynamic microphone inputs (TRS 6.25 mm). Non-saturable preamplifiers with Solidyne's *local feedback* technology.\n- 1 built-in microphone (shares the MIC-4 fader with the line input).\n- 1 mono line input (compatible with portable recorder/player headphone outputs).\n- Digital USB connection for Internet streaming.\n- Wireless Bluetooth connection, with capability for on-air transmission (to pair with another MX2100).",
+      "title": "Entradas",
+      "level": 3
+    },
+    {
+      "hash": "303107ad06039473cdf92fe79103c145e99d3b97e22c07ae0cbba63f9f56d893",
+      "translation": "### Outputs\n\nThe program signal passes through an **automatic dynamic compressor**, which maintains a constant level and simplifies operation so that even a journalist can handle the console.\n\n- **PGM**: program mix, balanced 6.5 mm TRS connector, Z=10 kΩ.\n- **Headphones (CUE)**: 3 outputs; mix of sources and returns depending on the usage condition.\n- **RJ11**: for land line (POTS) or wired mobile phone.\n- **Bluetooth**: link with Studios or remote journalist.\n- **USB**: Internet streaming (requires an external computer)\n\n---",
+      "title": "Salidas",
+      "level": 3
+    },
+    {
+      "hash": "f1c0f70ee9572fac2f0df6255be40b746d93b09fbdde699a9be75ac3569b5542",
+      "translation": "## Power Supply\n\n- Internal Ni-Cd battery.\n- Battery life: 16 hours in continuous operation; 20–25 hours in intermittent use.\n- Charging via USB connector (included external charger or connection to a PC can be used).",
+      "title": "Alimentación",
+      "level": 2
+    },
+    {
+      "hash": "1440c55d32c4c5d082bcd481d667228cf7ae961ef76181096a32170a2879d0bf",
+      "translation": "## Portability\n\n- U-shaped clip for belt hanging, close to the mobile phone.\n- RF interference shielding.\n- Minimum recommended distance between MX2100 and mobile phone: 20 cm.\n- Weight: 600 g.\n- Compact size, easy to transport and operate.",
+      "title": "Portabilidad",
+      "level": 2
+    }
+  ]
+}

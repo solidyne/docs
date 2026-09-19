@@ -1,0 +1,119 @@
+{
+  "human_revision": 0,
+  "sections": [
+    {
+      "hash": "7b22919bcba026f7f0e4d995cecea8993b560a3f93c129ad757d44a3761bd88b",
+      "translation": "## Seção de Monitoração\n\nNesta seção da console são atribuídos os sinais que serão ouvidos nos monitores e fones de ouvido do Estúdio e da Cabine de Controle.\\\nTambém estão localizados aqui os botões mestres dos microfones **A** e **B**, o controle de nível de **CUE**, o microfone de talkback (_talk-back_) e os grupos de intercomunicação.\n\n<img\n  src=\"/images/ux24/ux24-superficie-monitoreo.jpg\"\n  alt=\"UX24 área Monitoreo\"\n  title=\"UX24 área Monitoreo\"\n  style={{ width:\"51%\" }}\n  className=\"mx-auto\"\n/>\n\nOs **controles de seleção** 1 e 2 são encoders com função de giro e pressão (_push_).\\\nPara escolher uma fonte de sinal:\n\n1. Gire o encoder: na tela as opções irão rodando e permanecerão piscando até a confirmação.\n2. Pressione o encoder para confirmar: o áudio é comutado nesse momento.\n\nSe você girar o botão mas não pressionar para confirmar, após 10 segundos a mudança é cancelada e a tela volta para a fonte anterior.\n\n<Tip>\n  Se você pressionar o encoder sem girar, ele volta para a fonte anterior (indicada abaixo da atual em letra pequena), permitindo **alternar rapidamente** entre duas fontes.\n</Tip>",
+      "title": "Sección de monitoreo",
+      "level": 2
+    },
+    {
+      "hash": "0ad4a5522738e77cbbf1681e2ea69481fb77b2eb7f0e6cbc18aefecffbc8c59f",
+      "translation": "#### 1 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} />  Monitoração de Estúdio (Studio Monitor)\n\nSeleciona a fonte enviada à saída **STUDIO MONITOR**.\\\nOpções: `AIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`, `CUE`.\n\n- O nível para alto-falantes e fones de ouvido do Estúdio é ajustado a partir da tela sensível ao toque na opção **MONITOR**.\n\n  Normalmente este nível é deixado fixo e cada participante ajusta seu próprio nível a partir de um distribuidor de fones de ouvido.\n- Em rádios com apenas uma cabine, os alto-falantes de monitoração podem ser conectados à saída **Control Room** para aproveitar o potenciômetro de volume físico.",
+      "title": "1 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} />  Studio Monitor (Monitoreo en Estudio)",
+      "level": 4
+    },
+    {
+      "hash": "5e9ef3bc1fc7d5cc364d453bd8996db3e000d56b51c4e87c9f2eeccc7be5d301",
+      "translation": "#### 2 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Control Room (Monitoração na Cabine de Controle)\n\nPermite selecionar a fonte enviada para as saídas **CONTROL ROOM**.\\\nOpções: `AIR-IN`, `PGM`, `REC`, `AUX`, `VBUS`.\n\n<Note>\n  **Silenciamento dos alto-falantes da Controle:**\\\n  Ao usar um microfone na Cabine de Controle, é possível configurar para que a saída dos alto-falantes de controle seja silenciada ao ativá-lo (veja _Tela de Canal_).\\\n  Isso também é usado em emissoras de estúdio único ou \"cabine quente\", conectando os alto-falantes de monitoração à saída de **Control Room** e configurando todos os microfones como \"localizados na Control Room\" para habilitar o silenciamento automático.\n</Note>",
+      "title": "2 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Control Room (Monitoreo en la Cabina de Control)",
+      "level": 4
+    },
+    {
+      "hash": "74329e25732a0de1b08ff34f9a6d2a8b0d730774bc1ac50cddb9d2513354e56a",
+      "translation": "#### 3 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Nível em monitoração de controle\n\nAtenuador rotativo que ajusta o nível dos alto-falantes conectados à saída **Control Room**.\\\nA saída possui nível de linha para alto-falantes ativos ou amplificados. O nível máximo alcançado também dependerá do ajuste dos próprios monitores.",
+      "title": "3 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Nivel en monitores de Control",
+      "level": 4
+    },
+    {
+      "hash": "9638eec98635f4ecf4abe62f2d56d753db4a83a3f8b5bf3016252e80d8f8ba03",
+      "translation": "#### 4 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Nível em fones de controle\n\nAtenuador rotativo para o nível dos fones do operador (conectados a **Control Room Headphones**).",
+      "title": "4 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Nivel en auriculares de Control",
+      "level": 4
+    },
+    {
+      "hash": "0d7fca38bbf1887dc7dbb47e552f96b94855a33b7a3f978723fbc937c231d6ce",
+      "translation": "#### 5 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Nível no CUE\n\nAtenuador rotativo para o nível do bus **CUE**.\\\nNa tela principal, um indicador calibrado em dBfs é exibido, refletindo o nível após o controle de CUE. Se o atenuador estiver fechado, não haverá indicação.\n\nOs botões **SPEAKER** e **PHONES** permitem injetar o sinal CUE nos alto-falantes e/ou fones de ouvido da Cabine de Controle.\n\n- Quando estão ativos, o sinal CUE é somado ao sinal monitorado (indicado na tela SOURCE).\n- O sinal principal é atenuado automaticamente quando um sinal CUE é introduzido.\n- O grau de atenuação é configurado na tela **MONITOR → ADVANCED**.\n\nO bus CUE pode ser atribuído a qualquer saída para conexão de alto-falantes auxiliares. Por padrão, está atribuído a **UNBAL 8**.\n\n---",
+      "title": "5 <Icon icon=\"arrow-right-long\" iconType=\"solid\" color=\"#ffa300\" size={18} /> Nivel en CUE",
+      "level": 4
+    },
+    {
+      "hash": "dda228b18591a7c90f79f06b3db960e926a2d353f42f45667d746c0f8532b81d",
+      "translation": "## Intercom e Talk-Back",
+      "title": "Intercom y Talk-Back",
+      "level": 2
+    },
+    {
+      "hash": "93f34caac3dca2db34b018dd43b0ec58e8325ac32a0c3bb37b8307fc32bf47c3",
+      "translation": "### **INTERCOM**\n\nOs botões Intercom (ver item 6 na imagem) são vinculados a saídas de áudio da console para configurar circuitos de talkback avançados. Quando um botão Intercom é pressionado, o áudio do microfone de talkback (Talk-Back) interrompe o áudio na saída associada a esse Intercom.\n\n<Tip>\n  **Casos de aplicação:**\n\n  - Configurar grupos de fones de ouvido diferenciados, para falar com todos (com Talk-Back) ou com um grupo específico (com Intercom).\n  - Configurar um botão Talk-Back para um Estúdio B.\n</Tip>\n\n<Note>\n  **Usar HD3 como Intercom**\n\n  Baixar um guia para instalar uma [Solidyne StudioBox HD3 como Intercom](http://solidyne.dx.com.ar/DW/doc-guides/Studiobox-HD3_as_UX24s_Intercom_set.pdf).\n</Note>",
+      "title": "**INTERCOM**",
+      "level": 3
+    },
+    {
+      "hash": "fae4a107dfc6e369f66f25a72998cb628111932deaf681b141932ec1e00b1fb0",
+      "translation": "### **TALK-BACK**\n\nAo pressionar este botão, o microfone de talkback é enviado para a saída STUDIO (alto-falantes e fones de ouvido). Nos fones de ouvido, o talkback é reproduzido pelo canal esquerdo enquanto o sinal de programa (ou outro sinal atribuído) é mantido no canal direito.\n\n---",
+      "title": "**TALK-BACK**",
+      "level": 3
+    },
+    {
+      "hash": "b8c6afa95be0fb9cd61ef5589729c11a83cad4a61c768c331c4ad1ca38bf1ce7",
+      "translation": "## Botões MASTER-MIC\n\nAtivam simultaneamente todos os canais de microfone associados ao botão (A ou B). \\\nTambém ativam a sinalização Tally A ou B, conforme correspondente; e o silenciamento dos alto-falantes na saída STUDIO (MASTER MIC A) ou da saída de áudio atribuída a um Estúdio B (MASTER MIC B).\n\n---",
+      "title": "Botones MASTER-MIC",
+      "level": 2
+    },
+    {
+      "hash": "0318dd458502e6ac3c0d42d84a12ffe0a464b00535648b5c7d04392f847f883b",
+      "translation": "## Tela MONITOR\n\nAcessa-se pressionando \\*\\*MONITOR \\*\\*nos acessos da tela principal.\n\n<img\n  src=\"/images/ux24/ux24-funciones-monitor.png\"\n  alt=\"Ux24 Funciones Monitor Pn\"\n  title=\"Ux24 Funciones Monitor Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"39%\" }}\n/>\n\nReplica a atribuição de sinais para o Estúdio e a Cabine de Controle, mostrando na tela as opções em formato de botoeira tradicional, mas com “_botões táteis”_. Para alterar uma atribuição, toque na opção .\n\n<img\n  src=\"/images/ux24/ux24-monitor-basic.jpg\"\n  alt=\"Ux24 Monitor Basic Jp\"\n  title=\"Ux24 Monitor Basic Jp\"\n  className=\"mx-auto\"\n  style={{ width:\"60%\" }}\n/>\n\nHá um indicador de nível CUE, em dBfs. O nível mostrado é posterior ao potenciômetro de nível CUE. Não haverá indicação de nível se o potenciômetro estiver fechado.\n\n**CUE Reset**\\\nDesliga todos os botões CUE ativos.\n\n**ADVANCED**\\\nMostra controles de nível e ajustes avançados para os sinais de monitoração.\n\n<img\n  src=\"/images/ux24/monitoring-adv.png\"\n  alt=\"Monitoring Adv Pn\"\n  title=\"Monitoring Adv Pn\"\n  className=\"mx-auto\"\n  style={{ width:\"60%\" }}\n/>\n\n<Note>\n  Para alterar um valor, toque no controle e gire o encoder. Pressione o encoder para confirmar.\n</Note>",
+      "title": "Pantalla MONITOR",
+      "level": 2
+    },
+    {
+      "hash": "b282e59dfdabc9bdeabc1a0e11f06c95ae5698180cd50c1c774a7e713b860ff7",
+      "translation": "### Monitoração de Estúdio\n\nAjusta o nível do sinal para os alto-falantes conectados à saída **Monitoração de Estúdio**.\\\nA saída é de nível de linha, projetada para alto-falantes ativos.",
+      "title": "Studio Speaker",
+      "level": 3
+    },
+    {
+      "hash": "74e99b3076cee34dde22a54b1c17e322fed660ead83b71d226e6abb593ac5ca3",
+      "translation": "### Monitoração de fones de estúdio\n\nAjusta o nível de sinal para os fones conectados à saída **Monitoração de Estúdio**.\\\nDestina-se a alimentar um distribuidor de fones.\n\n<Warning>\n  **Nota sobre níveis de monitoração:**\\\n  O nível das saídas para alto-falantes e fones do Estúdio deve ser ajustado para evitar amplificação excessiva nos monitores ativos ou no distribuidor de fones.\\\n  Se o sinal da console estiver muito baixo e for amplificado posteriormente, a relação sinal/ruído será degradada.\n</Warning>",
+      "title": "Studio Headphones",
+      "level": 3
+    },
+    {
+      "hash": "243f56d3d076b17f993430e15646f5c00d3ec39a08d9055d47829c19fb54df3c",
+      "translation": "### Ganho da Entrada No Ar\n\nControla o ganho da entrada **Air Monitor Input** (sintonizador externo).",
+      "title": "On-Air Input Gain",
+      "level": 3
+    },
+    {
+      "hash": "9e3fc7ab4924ab4169581988ffaeb835af4ed1355676391e5b507218947cec07",
+      "translation": "### Ring Level\n\nNível do tom de \"ring\" em **CUE**, gerado pela console quando uma chamada é recebida por linha telefônica fixa (POTS) ou Bluetooth.",
+      "title": "Ring Level",
+      "level": 3
+    },
+    {
+      "hash": "844bad54f636d63dc957aea50a4eef121ab234ede6c603a277a42ab26553ebbb",
+      "translation": "### Nível do Microfone de Talkback\n\nAjusta o nível do microfone de talkback para a monitoração de Estúdio, Intercom e linhas telefônicas.",
+      "title": "Talkback Mic Level",
+      "level": 3
+    },
+    {
+      "hash": "524d626c819ba24979af2b2f737a341f93e0fed98152a692cb4a24acf2591e0c",
+      "translation": "### Fonte do Microfone de Talkback\n\nDefine a entrada de microfone utilizada para talkback (Estúdios, Telco e Intercom).\\\nOpções:\n\n- Microfone ambiental embutido.\n- Entradas de microfone 1 a 4.\n- UNIDEX-4 L e UNIDEX-4 R.\n- DANTE #1 (quando disponível)\n\nA entrada atribuída ao talkback também pode ser atribuída a um canal, por exemplo, para colocar esse microfone no ar.",
+      "title": "Talkback Mic Source",
+      "level": 3
+    },
+    {
+      "hash": "a174e1ea31bb7e9ddc77609a8e0ac4994450fba1e490188a173d2257bff07a1d",
+      "translation": "### Controle do Som de Pré-Escuta (CUE Sum) da Sala de Controle\n\nAjusta a atenuação do sinal que está sendo monitorado na Sala de Controle quando um sinal de pré-escuta (CUE) é sobreposto nos alto-falantes e/ou fones de ouvido.\\\nEsta atenuação também é aplicada ao acionar um botão de talkback (para estúdios ou linha telefônica) ou um sistema de intercomunicação (Intercom).",
+      "title": "Control Room CUE Sum Audio Att",
+      "level": 3
+    },
+    {
+      "hash": "09e9188c0dd04652fcf5842c9dfa31068240b11c5ebd34b601ddb74bcef1a1fe",
+      "translation": "#### Entrada de Intercom\n\nAjusta o nível do sinal em **CUE** proveniente dos acessórios **StudioBox** (*reverse talkback*).\n\n**Intercom para CUE:** habilita ou desabilita a entrada do retorno do Intercom no barramento CUE.",
+      "title": "Intercom Input",
+      "level": 4
+    }
+  ]
+}

@@ -1,17 +1,14 @@
 ---
-title: "Conexões e inicialização"
+title: "Conexões e colocação em funcionamento"
 description: "Descrição das opções de conexão e configuração inicial."
 keywords: ["conectividade", "conectores"]
-tags: ["consolas portáteis", "exteriores", "CODECS", "enlaces", "MX2200"]
+tags: ["consolas portátiles", "exteriores", "CODECS", "enlaces", "MX2200"]
 translation:
   source_lang: "es"
   target_lang: "pt"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "525f23ae0a8ace65625aec9e6f474b0804d69cb65dfbb4ff34e06ebc3bfe76fd"
-
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Conectores no painel traseiro
@@ -26,99 +23,97 @@ translation:
 
 ### Alimentação (1)
 
-1. **Entrada para fonte externa**: Conector tubular 2 mm (pino \+).
+1. **Entrada para fonte externa**: Conector tubular de 2 mm (pino +).
    - Fonte chaveada 90/240 V → saída **12 V / 1.5 A**.
    - Também aceita bateria externa de 12 V (respeitar a polaridade).
-2. **Bateria interna**: autonomia aprox. **4 horas** (chamada SIP por Ethernet, sem Wi-Fi nem Bluetooth).
+2. **Bateria interna**: autonomia aprox. **4 horas** (chamada SIP por Ethernet, sem Wi-Fi ou Bluetooth).
 3. **Recarga**: é realizada com o equipamento **ligado e conectado** à fonte externa.
    - Tempo de carga completa (bateria totalmente descarregada): **10 horas**.
 
 <Warning>
-  O uso de **fontes externas não fornecidas de fábrica** causará a **perda da garantia**.
+  O uso de **fontes externas não fornecidas de fábrica** ocasionará a **perda da garantia**.
 </Warning>
 
 ---
 
-### Luz de ON AIR (2)
+### Luz de ar (2)
 
-- Conector tubular 2,5 mm (pino \+).
+- Conector tubular de 2,5 mm (pino \+).
 - Fornece **12 VDC**, suporta até **200 mA**.
-- Quando uma luz de ON AIR é conectada:
-  - A saída de **fones #1** passa a funcionar como saída para **monitores**.
+- Quando uma luz de ar é conectada:
+  - A saída de **fones de ouvido #1** passa a funcionar como saída para **monitores**.
   - É silenciada automaticamente quando os microfones são ativados, para evitar realimentação.
-
----
 
 ### USB Audio (3)
 
-- Conexão digital ao computador através de cabo USB A/B (usar o cabo fornecido).
+- Conexão digital ao computador por meio de cabo USB A/B (utilizar o cabo fornecido).
 - Recomendação: não exceder **4 m** de comprimento.
 
   <Warning>
     Certifique-se de que o computador esteja **aterrado**.\
-    Caso contrário, a entrada USB do console ou do computador pode ser danificada.
+    Caso contrário, a entrada USB da console ou do computador poderá ser danificada.
   </Warning>
 - Compatível com Windows 7 a 11, Linux Ubuntu e macOS (reconhecimento automático).
 - O sistema detecta:
-  - **Dispositivo de reprodução USB** → entrada LINE USB no console.
-  - **Dispositivo de gravação USB** → saída de áudio do PGM.
+  - **Dispositivo de reprodução USB** → entrada LINE USB na console.
+  - **Dispositivo de gravação USB** → saída de áudio a partir de PGM.
 
   <Note>
-    No Windows pode ser gerenciado em: **Painel de Controle → Som → Áudio** → seleção de dispositivos de reprodução e gravação.
+    No Windows, pode ser gerenciado em: **Painel de Controle → Som → Áudio** → seleção de dispositivos de reprodução e gravação.
   </Note>
 
 ---
 
-### Microfones (4)
+### Micrófonos (4)
 
 - Quatro entradas balanceadas (XLR) para microfones dinâmicos.
-- **MIC 3 e MIC 4** compartilham o mesmo atenuador.
+- **MIC 3 e MIC 4** compartilham o mesmo fader.
 - Recomendação: usar microfones da mesma marca e modelo em entradas compartilhadas.
 
 ---
 
 ### Fones de ouvido (5)
 
-- Quatro saídas TRS 1/8" (minijack).
-- Todas fornecem o mesmo nível, controlado pelo potenciômetro **CUE MONITOR**.
-- Saída #1 pode ser usada como saída de **monitores de áudio**:
-  - É silenciada automaticamente quando uma **luz de ON AIR** está conectada e é ativada ao enviar microfones para PGM.
+- Quatro saídas TRS 1/8” (minijack).
+- Todas entregam o mesmo nível, controlado pelo botão **CUE MONITOR**.
+- Saída #1 pode ser usada como saída de **monitores de estúdio**:
+  - É silenciada automaticamente quando uma **luz de no ar** está conectada e é ativada ao enviar microfones para PGM.
 
 ---
 
 ### Linha telefônica fixa (6)
 
 - Conector RJ11 para conexão de linha POTS.
-- Pode ser conectada diretamente à central pública ou a um PABX (central privada).
+- Pode ser conectado diretamente à central pública ou a uma PBX (central privada).
 - Proteção interna contra descargas com varistores.
 
   <Warning>
-    Recomenda-se proteção adicional em áreas de tempestade (descarregadores a gás e fusíveis).\
-    Os danos causados por raios **não são cobertos pela garantia**.
+    Recomenda-se proteção adicional em áreas de tempestade.\
+    Danos causados por raios **não são cobertos pela garantia**.
   </Warning>
-- **Preset NULL** permite ajustar rejeição do híbrido.
+- **Preset NULL** permite ajustar a rejeição do híbrido.
 
   <Accordion title="Ajuste de rejeição (NULL)" icon="gear">
-    É realizado ao conectar o console à linha. Se o console for desconectado e reconectado depois à mesma linha telefônica, não é necessário repetir o ajuste. \
-    Mas deverá ser reajustado cada vez que for conectado a uma linha diferente.
+    É realizado ao conectar a console à linha. Se a console for desconectada e reconectada posteriormente à mesma linha telefônica, não é necessário repetir o ajuste. \
+    Mas deve ser reajustado sempre que for conectado a uma linha diferente.
 
     <Steps>
       <Step title="Preparar o sinal">
-        Enviar conteúdo falado para PGM do computador. Se não houver conteúdo falado disponível, pode-se falar ao vivo usando os microfones.
+        Enviar conteúdo falado para PGM a partir do computador. Se não houver conteúdo falado disponível, pode-se falar ao vivo usando os microfones.
       </Step>
       <Step title="Estabelecer chamada">
         Realizar uma chamada usando a linha fixa (PHONE).
       </Step>
       <Step title="Silenciar o interlocutor">
-        Pedir ao outro lado que ative o **mute** ou permaneça em silêncio. \
-        Pode-se ligar para um celular próprio e silenciar o microfone.
+        Pedir ao outro lado que ative **mute** ou permaneça em silêncio. \
+        Pode-se ligar para um telefone celular próprio e silenciar o microfone.
       </Step>
-      <Step title="Escutar em CUE">
-        Remover PGM dos fones (botão PGM em CUE liberado).
-        Escutar a linha em CUE.
+      <Step title="Ouvir em CUE">
+        Remover PGM dos fones de ouvido (botão PGM em CUE liberado).
+        Ouvir a linha em CUE.
       </Step>
       <Step title="Ajustar preset NULL">
-        Girar o preset NULL até encontrar o ponto de **mínimo retorno**.
+        Girar o preset NULL até encontrar o ponto de **retorno mínimo**.
       </Step>
       <Step title="Finalizar">
         Encerrar a comunicação.
@@ -130,33 +125,31 @@ translation:
 
 ### Entrada de linha estéreo (7)
 
-- Conector TRS 1/4" não balanceado.
-  - É controlado pelo atenuador LINE quando **USB não está conectado**.
-  - Se USB estiver ativo, LINE passa a ser entrada secundária (da seção PHONE).
+- Conector TRS 1/4” não balanceado.
+  - É controlado pelo fader LINE quando **USB não está conectado**.
+  - Se o USB estiver ativo, LINE se torna uma entrada secundária (a partir da seção PHONE).
 
 <Warning>
-  Se o enlace for realizado via Bluetooth, **LINE IN não pode ser somada** da seção PHONE.\
-  Só estará disponível pelo atenuador LINE se não houver conexão USB Audio.
+  Se a conexão for feita via Bluetooth, **LINE IN não pode ser somada** a partir da seção PHONE.\
+  Só estará disponível a partir do fader LINE se o USB Audio não for conectado.
 </Warning>
 
 ---
 
 ### Inserção de programa (8)
 
-- Entrada **Stream-In** TRS 1/4" com contato de corte.
-- Quando conectada, **substitui a mixagem interna** de PGM em **streaming e USB**.
-- Permite usar processadores externos: _PGM Out → Processador → Stream-In_.
-
----
+- Entrada **Stream-In** TRS 1/4” com contato de corte.
+- Ao ser conectada, **substitui a mixagem interna** de PGM no **streaming e USB**.
+- Permite usar processadores externos:  _PGM Out → Processador → Stream-In_.
 
 ### Saída de programa (9)
 
-- **Stereo PGM Out** (TRS 1/4").
+- **Stereo PGM Out** (TRS 1/4”).
 - Envia a mixagem completa: microfones, USB, linha auxiliar e linhas telefônicas.
 
 ---
 
-### Ethernet (rede cabeada) (10)
+### Ethernet (rede cabeada)  (10)
 
 - Porta RJ45 para conexão à rede local.
 - Usos:
@@ -167,15 +160,15 @@ translation:
 
 ---
 
-### Portas USB (Wi-Fi e Modem) (11)
+### Portas USB (Wi-Fi e Módem)  (11)
 
 - Portas USB 2.0 tipo A.
 - Permitem conectar:
   - **Antena Wi-Fi**.
-  - **Modem 4G** (requer cabo de extensão de 1 m).
+  - **Módem 4G** (requer cabo extensor de 1 m).
 
 <Warning>
-  **Não conectar um modem USB diretamente à porta**. Pode causar **interferências audíveis**.\
-  Use sempre um cabo extensor para separar o modem do console.\
-  Isso também permitirá reorientar o Modem caso receba indicação de sinal fraco.
+  **Não conecte um módem USB diretamente à porta**. Pode causar **interferências audíveis**.\
+  Use sempre um cabo extensor para separar o módem da console.\
+  Isso também permitirá reorientar o Módem caso obtenha a indicação de sinal fraco.
 </Warning>

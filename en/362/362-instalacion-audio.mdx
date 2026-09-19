@@ -2,92 +2,91 @@
 title: "Audio Connections"
 description: "Audio Connections"
 keywords: ["inputs", "outputs", "USB", "HD mode", "dip-switch"]
+tags: ["procesadores", "362", "Audimax 362"]
 translation:
   source_lang: "es"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "53db2d27f035b690d23025398d6fe5c712b66dcf3ef5546bc3bcdc885f3052fa"
-
+  target_lang: "en"
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
 ## Analog Inputs and Outputs
 
 <img
   src="/images/362/362-trasero-audio.png"
-  alt="362 Rear Audio Panel"
-  title="362 Rear Audio Panel"
+  alt="362 Trasero Audio Pn"
+  title="362 Trasero Audio Pn"
   className="mx-auto"
   style={{ width:"73%" }}
 />
 
-| **Identifier** | **Type / Connector**              | **Nominal Level** | **Details**                                                                           |
-| :------------: | --------------------------------- | :--------------: | ------------------------------------------------------------------------------------- |
-| **1**          | Balanced inputs (Female XLR)      | +4 dBu          | Electronically balanced <br />600 Ohms                                                 |
-| **2**          | Unbalanced inputs (RCA)          | -10 dBV approx. | Higher gain, designed for weaker signals. Impedance 10 KOhms                          |
-| **3**          | Balanced stereo input (RJ45)     | +4 dBu          | [Pin diagrams and adapter cables wiring](/en/diagramas/RJ45-pinout)                   |
-| **4**          | Balanced outputs (Male XLR)       | +4 dBu          | Electronically balanced <br />600 Ohms / 10 KOhms                                     |
+| **Identifier** | **Type / Connector**               | **Nominal Level** | **Details**                                                                               |
+| :---------------: | --------------------------------- | :---------------: | ------------------------------------------------------------------------------------------ |
+| **1**             | Balanced inputs (female XLR) | \+4 dBu           | Electronically balanced <br />600 Ohms                                                |
+| **2**             | Unbalanced inputs (RCA)     | –10 dBV approx.    | Higher gain, intended for weaker signals. Impedance 10 KOhms                     |
+| **3**             | Balanced stereo input (RJ45) | \+4 dBu           | [Pin diagrams and adapter cables for cable assembly](/es/diagramas/RJ45-pinout) |
+| **4**             | Balanced outputs (male XLR)   | \+4 dBu           | Electronically balanced <br />600 Ohms / 10 KOhms                                     |
 
 <Info>
-  XLR connection is standard: shield to **pin 1**, inner conductors to **2 (signal +)** and **3 (signal -)**
+  The XLR connection is standard: shield to **pin 1**, inner conductors to **2 (signal \+)** and **3 (signal –)**
 </Info>
 
-## USB Digital Input/Output
+## Digital Input/Output via USB
 
-The **Audimax 362HD/USB** model includes an optional module to send and receive audio through a PC connection using a standard USB A/B cable.
+The **Audimax 362HD/USB** model includes an optional module for sending and receiving audio via a standard USB A/B cable connection to a PC.
 
 - When connected to a **<sup>Windows©</sup>** computer, the system automatically recognizes the processor and installs the necessary drivers.\
   No additional drivers are required.
-- The unit is recognized as a **stereo sound card**:
+- The unit is recognized as a **stereo audio card**:
   - **USB playback device** → corresponds to the **audio input to the processor**.
   - **USB capture device** → corresponds to the **audio output from the processor**.
 
 ### About USB Detection
 
-- Before connecting the USB port, ensure that both the **console and PC are properly grounded** through three-terminal power plugs.
+- Before connecting the USB port, ensure that the **console and the PC are properly grounded** through three-prong power plugs.
 
 <Danger>
-  Check with a multimeter (25V AC scale) between the PC chassis and console chassis.\
-  Reading should be 0V. Otherwise, the USB input of the processor or computer could be damaged.
+  Verify with a tester (25 V AC scale) between the PC chassis and the console chassis.\
+  The reading should be 0 V. Otherwise, the USB input of the processor or the computer could be damaged.
 </Danger>
 
-- Avoid changing USB cables between ports, as Windows may reassign device order.
+- Avoid changing USB port cables, as Windows may reassign the order of devices.
 
 ---
 
 ## HD Mode (High Definition)
 
-**HD mode** is intended for audio applications that do not use the FM stereo encoding stage (MPX).
+The **HD mode** is designed for audio applications where the FM stereo encoding stage (MPX) is not used.
 
 - Fully digital stations (HD Radio and streaming).
-- Sound reinforcement applications (small rooms, auditoriums, shopping centers).
+- Sound reinforcement applications (small venues, auditoriums, shopping centers).
 
 **When switching to HD mode:**
 
-- FM pre-emphasis network is disabled (and therefore the de-emphasis on audio outputs).
-- A **fast-action limiter** is enabled on the outputs.
-- **MPX** outputs are disabled.
+- The FM emphasis network is deactivated (and therefore the de-emphasis of the audio outputs).
+- A **fast-acting limiter** is enabled on the outputs.
+- The **MPX** outputs are deactivated.
 
-### Enabling HD Mode
+### Enable HD Mode
 
-To change the operating mode, you need to access the internal **micro-switches** by removing the top cover of the unit.
+To change the operating mode, it is necessary to access the **internal micro-switches** by removing the top cover of the unit.
 
 <img
   src="/images/362/362-instalacion-HD.jpg"
-  alt="362 HD Installation Jumpers"
-  title="362 HD Installation Jumpers"
+  alt="362 Installation HD Jp"
+  title="362 Installation HD Jp"
   style={{ width:"41%" }}
 />
 
 - All switches **ON** = FM Mode
 - All switches **OFF** = HD Mode
 
-The status is indicated on the front panel through the **"FM"** LED:
+The status is indicated on the front panel by the **“FM”** LED:
 
 - Lit = FM
 - Off = HD
 
 <Info>
-  From factory, the unit comes configured in **FM mode**.
+  The unit is factory-configured in **FM mode**.
 </Info>

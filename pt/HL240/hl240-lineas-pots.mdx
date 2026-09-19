@@ -1,56 +1,47 @@
 ---
-title: "Linhas telefônicas (POTS)"
-description: "Conexão e ajuste de linhas telefônicas tradicionais"
-keywords: ["conexões", "POTS", "linha telefônica", "rejeição", "null"]
+title: "Linhas telefônicas fixas (POTS)"
+description: "Uso do HL240 com linhas telefônicas fixas (POTS)"
+keywords: ["VoIP"]
 tags: ["híbridos", "HL240"]
 translation:
   source_lang: "es"
   target_lang: "pt"
-  status: "draft"
-  version: 0
-  reviewed_by: ""
-  reviewed_at: ""
-  source_hash: "f2dadccb17d7e7ba3b5887110050a8ecc76eeb49a2776ff4b887e6d153fb6b2e"
-
+  human_revision: 0
+  reviewed_by: "the holy spirit"
+  reviewed_at: "AAAAMMDD"
 ---
 
-## Conexões
+import tierras from '/snippets/snippet-tierras.mdx';
+
+## Conexionamento
 
 No painel traseiro há dois pares de conectores RJ11: **PHONE SET/LINE 1** e **PHONE SET/LINE 2**.\
-Ali se conectam os pares telefônicos (linhas POTS) e seus telefones associados.
+Neles são conectados os pares telefônicos (linhas POTS) e seus telefones associados.
 
 Os telefones operam normalmente enquanto as linhas não estão ocupadas pelo HL240-VQ (modo OFF). Quando uma linha é ocupada (modo ON), ela é desconectada do telefone.
 
 As linhas podem vir de uma central pública ou de uma central privada (PBX).\
-O uso de PBX deteriora a rejeição do híbrido, por isso recomenda-se conectar o HL240-VQ diretamente às linhas de centrais públicas.
+O uso de PBX reduz a rejeição do híbrido, portanto recomenda-se conectar o HL240-VQ diretamente a linhas de centrais públicas.
 
-O híbrido telefônico conta com filtros internos de rejeição de RF nas bandas de **AM, VHF e UHF**.\
-Se utilizar linhas ADSL (com sinal de Internet), certifique-se de ter o filtro de RF correspondente.
+### Proteções
 
-As conexões telefônicas estão protegidas contra descargas de alta tensão (faíscas ou raios não diretos) através de varistores de óxido metálico, suportando sobretensões de até 2 kV.
+- O híbrido telefônico possui filtros internos de rejeição de RF nas bandas de **AM, VHF e UHF**.
+- As conexões telefônicas estão protegidas contra descargas de alta tensão (centelhas ou raios não diretos) por meio de varistores de óxido metálico, suportando sobretensões de até 2 kV.
+- Se utilizar linhas ADSL (com sinal de Internet), certifique-se de contar com o filtro de RF correspondente, fornecido pela empresa provedora do serviço (ISP).
 
-<Warning>
-  É imprescindível instalar protetores gasosos externos nas linhas provenientes de centrais públicas, conectados a um bom aterramento (haste).\
-  Em caso de descargas diretas por raio, a garantia do equipamento não cobre danos.
-</Warning>
-
-<Accordion title="Diagrama geral de aterramento para estações de rádio">
-  <img src="/images/Grounding_recomendations.jpg" alt="Grounding diagram" style={{maxWidth: "100%"}} />
-</Accordion>
-
----
+<tierras />
 
 ## Ajuste do fator de rejeição
 
-O ajuste de rejeição do híbrido se aplica apenas a linhas terrestres analógicas.\
+O ajuste de rejeição do híbrido se aplica apenas a linhas telefônicas fixas (POTS) analógicas.\
 Sua função é minimizar o retorno do sinal local que volta pela linha.
 
 <Note>
-  Em uma linha analógica, as fontes locais (microfones do estúdio) e o áudio do outro extremo se misturam no mesmo par de fios.\
-  O híbrido telefônico separa ambos os sinais, mas a separação nunca é completa: uma pequena parte do áudio enviado à linha retorna ao console.
+  Em uma linha analógica, as fontes locais (microfones do estúdio) e o áudio do outro extremo são misturados no mesmo par de fios.\
+  O híbrido telefônico separa ambos os sinais, mas a separação nunca é completa: uma pequena parte do áudio enviado à linha retorna para a console.
 </Note>
 
-Se o híbrido estiver desajustado, o retorno do sinal local será elevado e deteriorará a qualidade da voz direta.\
+Se o híbrido estiver desajustado, o retorno do sinal local será elevado e prejudicará a qualidade da voz direta.\
 A rejeição é ajustada na fábrica com impedâncias normalizadas, mas é necessário reajustá-la em cada instalação.
 
 Os controles **NULL-1** e **NULL-2** (painel traseiro) permitem calibrar a rejeição de cada linha.
@@ -59,39 +50,37 @@ Os controles **NULL-1** e **NULL-2** (painel traseiro) permitem calibrar a rejei
 
 <Steps>
   <Step title="Estabelecer chamada">
-    Usar o telefone associado e realizar uma chamada (para outra linha terrestre ou para um celular).
+    Usar o telefone associado e realizar uma chamada (para outra linha telefônica fixa ou para um celular).
   </Step>
   <Step title="Injetar tom de referência">
-    Pressionar o botão **AUDIO TONE**. Um tom será injetado na linha.\
-    Este tom não interrompe o sinal enviado do console, portanto o envio deve ser silenciado.
+    Pressionar o botão **AUDIO TONE**. Será injetado um tom na linha.\
+    Este tom não interrompe o sinal enviado da console, portanto o envio deve ser silenciado.
   </Step>
   <Step title="Ajustar rejeição">
     Girar o controle **NULL** (multivoltas) em ambos os sentidos, observando o indicador **OUTPUT LEVEL**.\
     Buscar a posição com o menor nível de sinal.
   </Step>
-  <Step title="Monitoramento opcional">
-    Ouvir a variação do tom residual usando fones de ouvido conectados à saída **HEADPHONES** ou monitorar pelo console.
+  <Step title="Monitoração opcional">
+    Ouvir a variação do tom residual usando fones de ouvido conectados à saída **HEADPHONES** ou monitorar pela console.
   </Step>
   <Step title="Repetir na outra linha">
     Realizar o mesmo ajuste para a segunda linha.
   </Step>
 </Steps>
 
----
-
 ## Sistema de prioridade
 
-O sistema de prioridade se aplica unicamente às linhas terrestres.\
+O sistema de prioridade se aplica apenas às linhas telefônicas fixas (POTS).\
 Quando é detectado sinal local (microfones do estúdio), o áudio proveniente da linha é atenuado em **10 dB**.
 
 Este sistema tem dois objetivos:
 
 - Dar prioridade ao locutor em um debate: se ambos falarem ao mesmo tempo, prevalece a voz do estúdio.
-- Melhorar a qualidade da voz local, reduzindo o sinal residual que o híbrido não consegue rejeitar.
+- Melhorar a qualidade da voz local, reduzindo o sinal residual que o híbrido telefônico não consegue rejeitar.
 
 **Dicas práticas:**
 
-- Evite usar música de fundo (_BG_), ou mantenha-a em nível muito baixo, pois poderia disparar o sistema de prioridade e atenuar o áudio de entrada.
-- Em entrevistas e diálogos, a ação do sistema de prioridade é natural e não é percebida pelo ouvinte.
+- Evite usar música de fundo (_cortinas_), ou mantenha-a em nível muito baixo, pois poderia acionar o sistema de prioridade e atenuar o áudio recebido.
+- Em entrevistas e diálogos, a ação do sistema de prioridade é natural e não percebida pelo ouvinte.
 - Em aplicações especiais (ex.: concursos onde o ouvinte deve identificar uma música), a atenuação pode ser indesejada.\
-  Nestes casos, recomenda-se utilizar telefones Bluetooth.
+  Nestes casos, recomenda-se utilizar telefones celulares com Bluetooth.
