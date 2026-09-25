@@ -983,6 +983,15 @@
                     ]
                   }
                 ]
+              },
+              {
+                "anchor": "Related docs",
+                "groups": [
+                  {
+                    "group": "Aplication notes",
+                    "pages": []
+                  }
+                ]
               }
             ]
           },
@@ -1754,6 +1763,17 @@
                     "group": "EXPANSÕES",
                     "pages": [
                       "pt/extensiones/ux6"
+                    ]
+                  }
+                ]
+              },
+              {
+                "anchor": "Documentos relacionados",
+                "groups": [
+                  {
+                    "group": "Notas de aplicação",
+                    "pages": [
+                      "en/unidex-appnote-downstream"
                     ]
                   }
                 ]
