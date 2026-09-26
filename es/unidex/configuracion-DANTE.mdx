@@ -5,42 +5,92 @@ keywords: ["DANTE", "AES67"]
 tags: ["consolas IP", "UNIDEX", "ux18", "ux24"]
 ---
 
-Los modelos UNIDEX /A67 cuentan un módulo DANTE/AES67 que brinda **16 entradas y 16 salidas** mono AoIP.
+Los modelos UNIDEX /A67 incorporan un módulo Dante/AES67 que brinda **16 entradas y 16 salidas mono AoIP**.
 
-El uso de UNIDEX en una red AoIP requiere disponer de nodos de conexión DANTE compatibles, para ingresar señales que pueden ser:
+El uso de UNIDEX en una red AoIP requiere disponer de dispositivos Dante compatibles para ingresar o enviar señales de audio. Estos dispositivos pueden ser, por ejemplo:
 
-- Preamplificadores de micrófono.
-- Computadoras reproduciendo con DANTE VIRTUAL SOUNDCARD
-- Señales de línea, por ejemplo que provienen de otra consola DANTE.
+- Preamplificadores de micrófono Dante.
+- Interfaces de línea Dante.
+- Otras consolas o procesadores con Dante.
+- Computadoras con **Dante Virtual Soundcard**.
 
-Cualquier interfaz DANTE compatible se puede conectar a UNIDEX. <br />Las computadoras pueden reproducir directamente vía AoIP. Para esto deben estar equipadas con una "virtual soundcard" DANTE, que es un software de Audinate que brinda canales AoIP a traves de una red gigabit. Estos controladres no son muy costosos y son ampliamente utilizados para interconectar computadoras a la consola y entre sí.
+Cualquier interfaz Dante compatible puede conectarse a UNIDEX, siempre que comparta los parámetros de red, frecuencia de muestreo y sincronismo requeridos por la instalación.
+
+Las computadoras pueden enviar y recibir audio directamente por la red AoIP mediante **Dante Virtual Soundcard**, una aplicación de Audinate que convierte una PC o Mac en un dispositivo Dante utilizando el puerto Ethernet estándar.
 
 <Warning>
-  La implementación de DANTE requiere conocimientos de audio sobre red.
+  La implementación de Dante requiere conocimientos básicos de audio sobre red, direccionamiento IP, ruteo de señales y sincronismo digital.
 </Warning>
 
-## Conexión del puerto Ethernet DANTE
+## Conexión del puerto Ethernet Dante
 
 ### Consideraciones generales
 
-- El puerto Ethernet DANTE se conecta a un switch gigabit QoS usando cable CAT5e o CAT6, para montar la red AoIP.
-- Tipicamente la consola se comportará como Master Clock en en la red.
-- UNIDEX soporta conexión redundante, en donde dos redes físicas reales, montadas con distintos switches, operan en paralelo. Se utiliza en grandes instalaciones AoIP para blindar la transmisión ante fallo en una de las redes. La conmutación entre redes es automática.
-- La red AoIP se puede utilizar para conectar del puerto REMOTE CONTROL de UNIDEX y controlar remotamente la consola desde las computadoras de la red AoIP.
+- El puerto Ethernet Dante se conecta a un switch Gigabit mediante cable de red adecuado para la instalación.
+- En redes dedicadas y simples, Dante puede operar con switches Ethernet estándar. En redes compartidas o administradas, se recomienda utilizar switches gestionables y configurar QoS, IGMP u otras funciones de red según las recomendaciones de Audinate.
+- No utilizar Wi-Fi para el tráfico de audio Dante.
+- La topología habitual es en estrella, con los dispositivos Dante conectados a un switch central. No utilizar el puerto secundario de Dante para encadenar dispositivos, salvo que el fabricante indique explícitamente otro modo de operación.
+- En instalaciones con redundancia Dante, las redes Primary y Secondary deben ser redes físicas separadas, montadas sobre switches independientes. La conmutación frente a falla de una red es automática cuando los dispositivos soportan redundancia.
+- El puerto Ethernet **Remote Control** de UNIDEX puede compartir la infraestructura de red si el diseño de la instalación lo permite. En instalaciones críticas, se recomienda validar esta decisión con el responsable técnico de red.
 
-### Configuración en la red DANTE
+## Configuración en la red Dante
 
-En UNIDEX, la pantalla \*\*SETTINGS - AoIP \*\*notifica el estado del módulo DANTE/AES67 y de la red.
+En UNIDEX, la pantalla **Settings - AoIP** informa el estado del módulo Dante/AES67 y de la red.
 
-La gestión de los dispositivos de entrada y salida, tanto de la consola UNIDEX como de otras interfaces, por ejemplo computadoras, se hace desde una computadora conectada a la red que corre el software [**DANTE CONTROLLER**](https://www.getdante.com/products/software-essentials/dante-controller/) desarrollado por la firma Audinet, una matriz de software que permite asignar entrdas y salidas entre los dispositivos en red.
+La gestión de dispositivos, canales de entrada, canales de salida y ruteos Dante se realiza desde una computadora conectada a la red mediante **Dante Controller**, software de Audinate para configurar y rutear audio y video en redes Dante.
+
+Dante Controller permite ver los dispositivos Dante presentes en la red, sus canales disponibles, el estado de reloj y red, y crear las conexiones entre canales transmisores y receptores.
 
 <Tip>
-  **Ejemplo de implemenación:**<br />Para más información y ejemplos de implementación [descargue esta guía en PDF](http://solidyne.dx.com.ar/DW/doc-guides/UNIDEX_UX24-A67_Dante_ESP.pdf).
+  **Ejemplo de implementación:**<br /> Para más información y ejemplos de implementación, descargue esta guía en PDF: [UNIDEX UX24/A67 Dante - Guía de implementación](http://solidyne.dx.com.ar/DW/doc-guides/UNIDEX_UX24-A67_Dante_ESP.pdf)
 </Tip>
 
-### Entradas y salidas DANTE
+### Sincronismo y rol en la red
 
-La implementación varía según el modelo de consola UNIDEX. Seleccione a continuación la opción que corresponda.
+En una red Dante, los dispositivos sincronizan sus relojes mediante PTP. Uno de los dispositivos actúa como **reloj líder** de la red y los demás operan como **seguidores**. En documentación anterior, estos roles pueden aparecer como **Master** y **Slave**.
+
+En una instalación típica con UNIDEX, la consola puede operar como reloj líder y sincronizar periféricos Dante conectados a la red. En instalaciones más complejas, por ejemplo con más de una consola o con un sistema Dante ya existente, otro dispositivo puede estar definido como reloj líder. En ese caso, UNIDEX deberá sincronizarse con el reloj definido para la red.
+
+Si no se define manualmente un reloj líder, Dante elige automáticamente uno de los dispositivos disponibles. Esta configuración se realiza desde **Dante Controller**, no desde UNIDEX.
+
+Las indicaciones disponibles en UNIDEX, tanto en la pantalla táctil como en la interfaz web, son informativas respecto del estado del módulo Dante/AES67 y de la red. El parámetro que se define desde la consola es el comportamiento del reloj del motor de mezcla.
+
+Según la configuración de la red AoIP, cuando UNIDEX participa del sincronismo Dante, la referencia de reloj puede provenir de:
+
+- El motor de mezcla de UNIDEX, si el módulo Dante está configurado para sincronizarse con una referencia externa provista por el equipo.
+- El propio módulo Dante/AES67, cuando trabaja con su reloj interno o sincronizado al reloj líder de la red.
+
+Cuando el reloj de referencia de la red lo provee el módulo Dante/AES67, el reloj del motor de mezcla de UNIDEX puede trabajar en modo interno o sincronizarse al reloj Dante, según la configuración elegida para la instalación.
+
+La configuración habitual en instalaciones simples será mantener el reloj del motor de mezcla en modo **Interno**. En redes Dante más grandes, o cuando UNIDEX opera como seguidor de un reloj externo ya definido, puede ser conveniente sincronizar el motor de mezcla con el reloj Dante para mantener coherencia con el sistema AoIP.
+
+## Compatibilidad AES67
+
+Además de dispositivos Dante, los modelos UNIDEX /A67 pueden intercambiar audio con equipos AoIP de otros fabricantes y ecosistemas que implementen el estándar **AES67**. AES67 es un estándar de interoperabilidad que permite a dispositivos Dante compatibles transmitir y recibir flujos de audio RTP multicast hacia y desde dispositivos AES67 que no utilizan Dante.
+
+Un caso especialmente relevante en instalaciones de broadcasting es **Livewire+ AES67**, utilizado por las consolas y sistemas AoIP de **Axia / Telos Alliance**. Livewire+ AES67 implementa el estándar AES67 y permite el intercambio de flujos de audio con otros dispositivos compatibles. De esta forma, UNIDEX puede integrarse con dispositivos Livewire+ AES67 mediante flujos AES67, siempre que los equipos y la red estén configurados adecuadamente.
+
+<Note>
+  La compatibilidad AES67 se refiere al **transporte e intercambio de audio**. Las funciones propietarias de cada ecosistema, como descubrimiento, control, lógica o gestión de dispositivos, no necesariamente son interoperables mediante AES67.
+</Note>
+
+### Documentación Dante recomendada 
+
+| Documento | Guía de uso para el usuario |
+| --- | --- |
+| [Dante Controller User Guide](https://dev.audinate.com/GA/dante-controller/userguide/webhelp/content/front_page.htm) | Referencia principal para operar una red Dante: detectar dispositivos, ver canales disponibles, nombrar equipos, rutear entradas y salidas, revisar estado de red y guardar configuraciones. |
+| [Dante Virtual Soundcard User Guide](https://dev.audinate.com/GA/dvs/userguide/webhelp/content/front_page.htm) | Para conectar una computadora Windows o macOS a la red Dante y usarla como dispositivo de reproducción o grabación de audio AoIP mediante el puerto Ethernet. |
+| [AES67 Config](https://dev.audinate.com/GA/dante-controller/userguide/webhelp/content/aes67_config.htm) | Para habilitar el modo AES67 en dispositivos Dante compatibles y configurar el intercambio de flujos de audio con equipos AES67 de otros fabricantes. |
+| [Clock Synchronization](https://dev.audinate.com/GA/dante-controller/userguide/webhelp/content/clock_synchronization.htm) | Para comprender el sincronismo de reloj en Dante, el rol de reloj líder y seguidores, y los parámetros `Preferred Leader` y `Enable Sync To External`. |
+| [Network Config Tab](https://dev.audinate.com/GA/dante-controller/userguide/webhelp/content/network_config_tab.htm) | Para revisar o modificar la configuración de red de un dispositivo Dante, incluyendo direcciones IP, modo redundante y configuración de puertos Ethernet cuando el equipo lo permite. |
+| [Networks and Switches](https://support.getdante.com/hc/en-gb/articles/5391517524127-Networks-and-Switches) | Para elegir y conectar switches Ethernet, comprender cuándo conviene usar QoS o IGMP, y evitar errores comunes como usar Wi-Fi o conectar incorrectamente redes Primary y Secondary. |
+| [Dante Certification Program — Level 1](https://www.getdante.com/resources/training/dante-certification-program/) | Recurso recomendado para técnicos que necesitan una base inicial sobre audio digital, redes Dante, uso básico de Dante Controller y armado de redes simples. |
+
+---
+
+## Señales AoIP en UNIDEX
+
+Cuando UNIDEX tiene instalada la opción DANTE AES67, la disponibilidad y asignación de entradas y salidas varía según el modelo de consola. A continuación se describen las configuraciones de E/S para UX24 y UX18..
 
 <Tabs>
   <Tab title="UX24">
@@ -48,7 +98,7 @@ La implementación varía según el modelo de consola UNIDEX. Seleccione a conti
 
     **SALIDAS DANTE**<br />La instalación del módulo DANTE /A67 no afecta a las salidas de UX24.<br />El módulo DANTE brinda 16 envíos AoIP mono (8 estéreo) replicando 5 salidas estéreo existentes de la consola y agregando otras 3 (6 mono) vía AoIP, asignables.
 
-    | **Dante Output** | UX24 **Standard Outputs** |
+    | **Dante Output** | **UX24 Standard Outputs** |
     | :-: | :-: |
     | AoIP 1 (L) | PGM-L |
     | AoIP 2 (R) | PGM-R |
@@ -68,11 +118,11 @@ La implementación varía según el modelo de consola UNIDEX. Seleccione a conti
     | AoIP 16 | _asignable_ |
   </Tab>
   <Tab title="UX18">
-    **ENTRADAS**<br />En las consolas UX18 **la instalación del módulo DANTE /A67 no afecta a las entradas disponibles** en la consola. DANTE **suma 16 entradas** adicionales vía AoIP.
+    **ENTRADAS**<br />En las consolas UX18 **la instalación del módulo Dante A67 no afecta a otras entradas** de la consola. El módulo Dante **suma 16 entradas** adicionales vía AoIP.
 
     **SALIDAS DANTE**<br />La instalación del módulo DANTE /A67 no afecta a las salidas de UX18.<br />El módulo DANTE brinda 16 envíos AoIP mono (8 estéreo) replicando 4 salidas estéreo existentes en la consola y agregando otras 4 (u 8 mono) vía AoIP, asignables.
 
-    | **Dante Output** | UX18 **Standard Outputs** |
+    | **Dante Output** | **UX18 Standard Outputs** |
     | :-: | :-: |
     | AoIP 1 (L) | PGM-L |
     | AoIP 2 (R) | PGM-R |
