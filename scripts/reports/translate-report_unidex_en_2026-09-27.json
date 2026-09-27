@@ -1,0 +1,22 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "duration_sec": "152.78",
+  "results": {
+    "en": {
+      "translated": 20,
+      "skipped": 0,
+      "errors": 0,
+      "total": 20,
+      "skippedReviewed": 0,
+      "forcedUpdates": 0,
+      "totalSections": 124,
+      "translatedSections": 8,
+      "reusedSections": 113,
+      "failedSections": 0,
+      "migratedFiles": 0
+    }
+  },
+  "skipped_reviewed": 0,
+  "forced_updates": 0,
+  "migrated_files": 0
+}
