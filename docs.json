@@ -54,7 +54,7 @@
             "tab": "Consolas UNIDEX",
             "anchors": [
               {
-                "anchor": "Línea UNIDEX",
+                "anchor": "UX24 / UX18",
                 "icon": "book-open",
                 "groups": [
                   {
@@ -109,9 +109,15 @@
                 ]
               },
               {
-                "anchor": "UX24",
+                "anchor": "Solo para UX24",
                 "icon": "book-open",
                 "groups": [
+                  {
+                    "group": "INTRODUCCIÓN",
+                    "pages": [
+                      "es/ux24/ux24-resumen"
+                    ]
+                  },
                   {
                     "group": "INSTALACIÓN",
                     "pages": [
@@ -121,7 +127,6 @@
                   {
                     "group": "CONFIGURACIÓN",
                     "pages": [
-                      "es/ux24/ux24-resumen",
                       "es/ux24/ux24-instalacion-trasero",
                       "es/ux24/ux24-config-streaming"
                     ]
@@ -146,7 +151,7 @@
                 ]
               },
               {
-                "anchor": "UX18",
+                "anchor": "Solo para UX18",
                 "icon": "book-open",
                 "groups": [
                   {
