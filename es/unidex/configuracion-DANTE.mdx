@@ -27,15 +27,17 @@ Las computadoras pueden enviar y recibir audio directamente por la red AoIP medi
 ### Consideraciones generales
 
 - El puerto Ethernet Dante se conecta a un switch Gigabit mediante cable de red adecuado para la instalación.
-- En redes dedicadas y simples, Dante puede operar con switches Ethernet estándar. En redes compartidas o administradas, se recomienda utilizar switches gestionables y configurar QoS, IGMP u otras funciones de red según las recomendaciones de Audinate.
+- En redes dedicadas y simples, Dante puede operar con switches Ethernet Gigabit estándar. En redes compartidas o administradas, se recomienda utilizar switches gestionables y configurar QoS, IGMP u otras funciones de red según las recomendaciones de Audinate.
 - No utilizar Wi-Fi para el tráfico de audio Dante.
 - La topología habitual es en estrella, con los dispositivos Dante conectados a un switch central. No utilizar el puerto secundario de Dante para encadenar dispositivos, salvo que el fabricante indique explícitamente otro modo de operación.
 - En instalaciones con redundancia Dante, las redes Primary y Secondary deben ser redes físicas separadas, montadas sobre switches independientes. La conmutación frente a falla de una red es automática cuando los dispositivos soportan redundancia.
 - El puerto Ethernet **Remote Control** de UNIDEX puede compartir la infraestructura de red si el diseño de la instalación lo permite. En instalaciones críticas, se recomienda validar esta decisión con el responsable técnico de red.
 
-## Configuración en la red Dante
+## Configuración de UNIDEX en la red Dante
 
 En UNIDEX, la pantalla **Settings - AoIP** informa el estado del módulo Dante/AES67 y de la red.
+
+![Unidex Pantalla Dante](/images/unidex/unidex_pantalla_dante.png "Unidex Pantalla Dante")
 
 La gestión de dispositivos, canales de entrada, canales de salida y ruteos Dante se realiza desde una computadora conectada a la red mediante **Dante Controller**, software de Audinate para configurar y rutear audio y video en redes Dante.
 
@@ -53,7 +55,9 @@ En una instalación típica con UNIDEX, la consola puede operar como reloj líde
 
 Si no se define manualmente un reloj líder, Dante elige automáticamente uno de los dispositivos disponibles. Esta configuración se realiza desde **Dante Controller**, no desde UNIDEX.
 
-Las indicaciones disponibles en UNIDEX, tanto en la pantalla táctil como en la interfaz web, son informativas respecto del estado del módulo Dante/AES67 y de la red. El parámetro que se define desde la consola es el comportamiento del reloj del motor de mezcla.
+![Unidex Dante Controller Sync](/images/unidex/unidex_dante_controller_sync.png "Unidex Dante Controller Sync")
+
+Las indicaciones disponibles en UNIDEX, tanto en la pantalla táctil como en la interfaz web, son informativas respecto del estado del módulo Dante/AES67 y de la red. El parámetro que se define desde la consola es el comportamiento del reloj del motor de mezcla (MIXER MAIN CLOCK).
 
 Según la configuración de la red AoIP, cuando UNIDEX participa del sincronismo Dante, la referencia de reloj puede provenir de:
 

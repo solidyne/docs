@@ -77,12 +77,12 @@
                   {
                     "group": "INSTALACION",
                     "pages": [
+                      "es/unidex/resets",
                       "es/unidex/instalacion-entradas",
                       "es/unidex/instalacion-salidas",
                       "es/unidex/instalacion-usb",
                       "es/unidex/instalacion-red",
-                      "es/unidex/instalacion-gpio",
-                      "es/unidex/resets"
+                      "es/unidex/instalacion-gpio"
                     ]
                   },
                   {
@@ -112,6 +112,12 @@
                 "anchor": "UX24",
                 "icon": "book-open",
                 "groups": [
+                  {
+                    "group": "INSTALACIÓN",
+                    "pages": [
+                      "es/ux24/ux24_tone_phase"
+                    ]
+                  },
                   {
                     "group": "CONFIGURACIÓN",
                     "pages": [
@@ -868,12 +874,12 @@
                   {
                     "group": "INSTALLATION",
                     "pages": [
+                      "en/unidex/resets",
                       "en/unidex/instalacion-entradas",
                       "en/unidex/instalacion-salidas",
                       "en/unidex/instalacion-usb",
                       "en/unidex/instalacion-red",
-                      "en/unidex/instalacion-gpio",
-                      "en/unidex/resets"
+                      "en/unidex/instalacion-gpio"
                     ]
                   },
                   {
@@ -903,6 +909,12 @@
                 "anchor": "UX24",
                 "icon": "book-open",
                 "groups": [
+                  {
+                    "group": "INSTALLATION",
+                    "pages": [
+                      "untitled-page"
+                    ]
+                  },
                   {
                     "group": "CONFIGURATION",
                     "pages": [
@@ -1651,12 +1663,12 @@
                   {
                     "group": "INSTALAÇÃO",
                     "pages": [
+                      "pt/unidex/resets",
                       "pt/unidex/instalacion-entradas",
                       "pt/unidex/instalacion-salidas",
                       "pt/unidex/instalacion-usb",
                       "pt/unidex/instalacion-red",
-                      "pt/unidex/instalacion-gpio",
-                      "pt/unidex/resets"
+                      "pt/unidex/instalacion-gpio"
                     ]
                   },
                   {
