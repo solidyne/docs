@@ -1,5 +1,6 @@
 import { parseMdxSections } from "./mdx-section-parser.mjs";
 import { postProcessMdx, validateMdx } from "./mdx-postprocess.mjs";
+import { localizeInternalDocumentLinks, protectLinkTargets } from "./internal-link-localizer.mjs";
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
@@ -244,6 +245,7 @@ ${notes || "- None"}
 async function translateContent(rules, glossary, content, targetLang) {
 
   const targetLanguage = LANGUAGE_MAP[targetLang] || targetLang;
+  const protectedLinks = protectLinkTargets(content);
 
   const prompt = `
 ${rules}
@@ -262,7 +264,7 @@ Return ONLY the translated MDX.
       max_tokens: MAX_TOKENS,
       messages: [
         { role: "system", content: prompt },
-        { role: "user", content: content }
+        { role: "user", content: protectedLinks.content }
       ]
     },
     {
@@ -318,7 +320,7 @@ ${out.slice(-2000)}
     out += "\n\n" + more;
   }
 
-  return out;
+  return protectedLinks.restore(out);
 }
 
 async function processLanguage(sourceFolder, lang) {
@@ -345,6 +347,7 @@ async function processLanguage(sourceFolder, lang) {
   let reusedSections = 0;
   let failedSections = 0;
   let migratedFiles = 0;
+  const localizationCandidates = [];
 
   console.log(`\n🌍 Language: ${lang}`);
   console.log(`📂 Files found: ${files.length}\n`);
@@ -429,12 +432,33 @@ async function processLanguage(sourceFolder, lang) {
           failedSections += fileResult.failedSections;
         }
         const status = fileResult.migrated || fileResult.skipped ? "Omitido" : "Done";
+        localizationCandidates.push(file);
         console.log(`   ✅ ${status}:`, relativePath, "\n");
       } catch (err) {
         errors++;
         console.log("   ❌ Error:", err.message, "\n");
       }
     }
+    let linkLocalization = {
+      filesChanged: 0,
+      linksChanged: 0,
+      anchorsChanged: 0,
+      warnings: []
+    };
+    if (!DRY_RUN) {
+      linkLocalization = await localizeInternalDocumentLinks({
+        docsRoot: path.resolve(__dirname, ".."),
+        sourceFolder,
+        targetFolder,
+        sourceFiles: localizationCandidates,
+        targetLang: lang
+      });
+      console.log(`🔗 Enlaces internos localizados: ${linkLocalization.linksChanged} en ${linkLocalization.filesChanged} archivos (${linkLocalization.anchorsChanged} con subtítulo).`);
+      for (const warning of linkLocalization.warnings) {
+        console.warn(`   ⚠️ ${warning.file}${warning.link ? `: ${warning.link}` : ""} — ${warning.reason}`);
+      }
+    }
+
     return {
       translated,
       skipped,
@@ -446,7 +470,8 @@ async function processLanguage(sourceFolder, lang) {
       translatedSections,
       reusedSections,
       failedSections,
-      migratedFiles
+      migratedFiles,
+      linkLocalization
     };
 }
 async function processFileGranular(esFilePath, targetFilePath, metaPath, targetLang, rules, glossary) {

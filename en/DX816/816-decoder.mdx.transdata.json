@@ -9,7 +9,7 @@
     },
     {
       "hash": "d5cfab439b9dc2689ac8e0ab835f1deedcbe9f23b67609798155b1efabaa3e64",
-      "translation": "### Receiver Configuration (Decoder)\n\n1. Access the IP module from a web browser (see [IP Module Access](/es/DX816/816-stl)).\n2. In the top menu, click **Location**.\n3. \\*\\*Change \\*\\*the mode to **→** **Transmitter Decoder**.\n   - Factory setting: **Studio Encoder**, generates a unidirectional streaming.\n   - As **Decoder**, default values are adopted (only modify IP and ports).\n4. Go to **Configuration → Streaming**.\n5. In **Port**, enter the port used on the encoder (the transmitting equipment).\n6. In **URL**, keep **0.0.0.0**.\n7. Click **Apply** to confirm.",
+      "translation": "### Receiver Configuration (Decoder)\n\n1. Access the IP module from a web browser (see [IP Module Access](/en/DX816/816-stl)).\n2. In the top menu, click **Location**.\n3. \\*\\*Change \\*\\*the mode to **→** **Transmitter Decoder**.\n   - Factory setting: **Studio Encoder**, generates a unidirectional streaming.\n   - As **Decoder**, default values are adopted (only modify IP and ports).\n4. Go to **Configuration → Streaming**.\n5. In **Port**, enter the port used on the encoder (the transmitting equipment).\n6. In **URL**, keep **0.0.0.0**.\n7. Click **Apply** to confirm.",
       "title": "Configuración de recepción (Decoder)",
       "level": 3
     },

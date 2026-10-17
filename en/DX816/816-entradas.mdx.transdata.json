@@ -9,7 +9,7 @@
     },
     {
       "hash": "3898760be6c1159ef0fee91616dce8edcb5d8b09c4c08d943a5ef69b0d721246",
-      "translation": "### Balanced Input Connections\n\nThe balanced inputs use shielded **RJ45** connectors and require shielded category 5 multipair cables. The preassembled cable kit **MNGDX822** is available, which includes all necessary cables for connection.\n\n<Tip>\n  [Pinout diagrams and adapter cables for custom cabling](/es/DX816/816-conexiones-rj45).\n</Tip>\n\n---",
+      "translation": "### Balanced Input Connections\n\nThe balanced inputs use shielded **RJ45** connectors and require shielded category 5 multipair cables. The preassembled cable kit **MNGDX822** is available, which includes all necessary cables for connection.\n\n<Tip>\n  [Pinout diagrams and adapter cables for custom cabling](/en/DX816/816-conexiones-rj45).\n</Tip>\n\n---",
       "title": "Conexión de las entradas balanceadas",
       "level": 3
     },

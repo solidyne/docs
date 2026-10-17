@@ -9,7 +9,7 @@
     },
     {
       "hash": "7cd484ed567dbdc9047c4e35cb98d3af11f1d3e3a62885a55fb9a0a8ab61207a",
-      "translation": "## Connecting UNIDEX to the Network\n\n<Icon icon=\"network-wired\" iconType=\"solid\" color=\"#ff6600\" size={22} />  [**LAN Connection**](/es/unidex/instalacion-red)",
+      "translation": "## Connecting UNIDEX to the Network\n\n<Icon icon=\"network-wired\" iconType=\"solid\" color=\"#ff6600\" size={22} />  [**LAN Connection**](/en/unidex/instalacion-red)",
       "title": "Conección de UNIDEX a la red",
       "level": 2
     },

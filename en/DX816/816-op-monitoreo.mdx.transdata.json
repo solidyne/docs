@@ -9,7 +9,7 @@
     },
     {
       "hash": "093944d98ab33d63d58486c2a885e2474f53284973234f475adbd6e626bfbd9a",
-      "translation": "### **Studio Monitor**\n\n- Provides four signal sources: CUE, PGM, REC and ON-AIR \\[4\\].\n- The console sends signals with fixed level to both headphones and speakers.\n- For level distribution and control in the Studio, a **headphone distribution amplifier** is required, such as the optional Solidyne HD3 and HD5 modules.\n\n<Info>\n  See wiring in Installation ⟶ [Monitoring](/en-US/DX816/816-monitoring)\n</Info>",
+      "translation": "### **Studio Monitor**\n\n- Provides four signal sources: CUE, PGM, REC and ON-AIR \\[4\\].\n- The console sends signals with fixed level to both headphones and speakers.\n- For level distribution and control in the Studio, a **headphone distribution amplifier** is required, such as the optional Solidyne HD3 and HD5 modules.\n\n<Info>\n  See wiring in Installation ⟶ [Monitoring](/en/DX816/816-monitoreo)\n</Info>",
       "title": "**Studio Monitor**",
       "level": 3
     },

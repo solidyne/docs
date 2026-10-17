@@ -63,13 +63,13 @@
     },
     {
       "hash": "6579575e98a9931dc0a724d9b647da9c09018a4ec1b987e0afa49dd57f274f7a",
-      "translation": "## Pairing UDX TEL+BT with a mobile phone\n\n<Frame>\n  <img\n    src=\"/images/UDX_TELBT-connection.png\"\n    alt=\"UDX TELBT Connection\"\n    style={{ width:\"82%\" }}\n  />\n</Frame>\n\nThe image shows a connection example to UNIDEX UX24.\n\nAfter completing the corresponding configurations, the Bluetooth channel appears on the TELCO screen. The next step is to pair a phone with the device.\n\nTo learn how to pair and work with a mobile phone on the UNIDEX console, see the TELCO section of the corresponding model:\n\n[_OPERATION→ TELCO - Communications_ in UX24](/es/ux24/ux24-op-telco#Operación-con-teléfonos-móviles) \\\n[_OPERATION→ TELCO - Communications_ in UX24](/es/ux18/ux18-op-telco#Operación-con-teléfonos-móviles)\n\n---",
+      "translation": "## Pairing UDX TEL+BT with a mobile phone\n\n<Frame>\n  <img\n    src=\"/images/UDX_TELBT-connection.png\"\n    alt=\"UDX TELBT Connection\"\n    style={{ width:\"82%\" }}\n  />\n</Frame>\n\nThe image shows a connection example to UNIDEX UX24.\n\nAfter completing the corresponding configurations, the Bluetooth channel appears on the TELCO screen. The next step is to pair a phone with the device.\n\nTo learn how to pair and work with a mobile phone on the UNIDEX console, see the TELCO section of the corresponding model:\n\n[_OPERATION→ TELCO - Communications_ in UX24](/en/ux24/ux24-op-telco#operation-with-mobile-phones) \\\n[_OPERATION→ TELCO - Communications_ in UX24](/en/ux18/ux18-op-telco#operation-with-mobile-phones)\n\n---",
       "title": "Vincular UDX TEL\\+BT a un teléfono móvil",
       "level": 2
     },
     {
       "hash": "4550723256bb048ec9b1a4e9e1071da93367e77be62dca3772da624b3a64da79",
-      "translation": "## Connecting UDX TEL+BT to a Phone Line\n\nThe steps to connect the land line (POTS) are:\n\n1. Connection to the phone line.\n2. Connection of an associated phone.\n3. Adjustment of the rejection factor.\n\nThe procedure is detailed for the dual phone line adapter UDX 2TEL. [Click here to go to the explanation.](/es/extensiones/UDX-2TEL#Conexión-a-líneas-telefónicas)",
+      "translation": "## Connecting UDX TEL+BT to a Phone Line\n\nThe steps to connect the land line (POTS) are:\n\n1. Connection to the phone line.\n2. Connection of an associated phone.\n3. Adjustment of the rejection factor.\n\nThe procedure is detailed for the dual phone line adapter UDX 2TEL. [Click here to go to the explanation.](/en/extensiones/UDX-2TEL#phone-line-connections)",
       "title": "Conexión de UDX TEL\\+BT a una línea telefónica",
       "level": 2
     }

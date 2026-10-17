@@ -63,13 +63,13 @@
     },
     {
       "hash": "6579575e98a9931dc0a724d9b647da9c09018a4ec1b987e0afa49dd57f274f7a",
-      "translation": "## Emparelhar UDX TEL+BT a um telefone celular\n\n<Frame>\n  <img\n    src=\"/images/UDX_TELBT-connection.png\"\n    alt=\"Conexão UDX TELBT\"\n    style={{ width:\"82%\" }}\n  />\n</Frame>\n\nA imagem mostra um exemplo de conexão ao UNIDEX UX24.\n\nApós realizar as configurações correspondentes, o canal Bluetooth aparece na tela TELCO. O próximo passo é emparelhar um celular ao dispositivo.\n\nPara saber como emparelhar e trabalhar com o telefone celular na console UNIDEX, consulte a seção TELCO do modelo correspondente:\n\n[_OPERAÇÃO→ TELCO - Comunicações_ no UX24](/es/ux24/ux24-op-telco#Operación-con-teléfonos-móviles) \\\n[_OPERAÇÃO→ TELCO - Comunicações_ no UX24](/es/ux18/ux18-op-telco#Operación-con-teléfonos-móviles)\n\n---",
+      "translation": "## Emparelhar UDX TEL+BT a um telefone celular\n\n<Frame>\n  <img\n    src=\"/images/UDX_TELBT-connection.png\"\n    alt=\"Conexão UDX TELBT\"\n    style={{ width:\"82%\" }}\n  />\n</Frame>\n\nA imagem mostra um exemplo de conexão ao UNIDEX UX24.\n\nApós realizar as configurações correspondentes, o canal Bluetooth aparece na tela TELCO. O próximo passo é emparelhar um celular ao dispositivo.\n\nPara saber como emparelhar e trabalhar com o telefone celular na console UNIDEX, consulte a seção TELCO do modelo correspondente:\n\n[_OPERAÇÃO→ TELCO - Comunicações_ no UX24](/pt/ux24/ux24-op-telco#operação-com-telefones-celulares) \\\n[_OPERAÇÃO→ TELCO - Comunicações_ no UX24](/pt/ux18/ux18-op-telco#operação-com-telefones-móveis)\n\n---",
       "title": "Vincular UDX TEL\\+BT a un teléfono móvil",
       "level": 2
     },
     {
       "hash": "4550723256bb048ec9b1a4e9e1071da93367e77be62dca3772da624b3a64da79",
-      "translation": "## Conexão do UDX TEL+BT a uma linha telefônica\n\nOs passos para conectar a linha telefônica fixa (POTS) são:\n\n1. Conexão à linha telefônica.\n2. Conexão de um telefone associado.\n3. Ajuste do fator de rejeição.\n\nO procedimento é detalhado para o adaptador de linha telefônica dupla UDX 2TEL. [Clique aqui para ir à explicação.](/es/extensiones/UDX-2TEL#Conexión-a-líneas-telefónicas)",
+      "translation": "## Conexão do UDX TEL+BT a uma linha telefônica\n\nOs passos para conectar a linha telefônica fixa (POTS) são:\n\n1. Conexão à linha telefônica.\n2. Conexão de um telefone associado.\n3. Ajuste do fator de rejeição.\n\nO procedimento é detalhado para o adaptador de linha telefônica dupla UDX 2TEL. [Clique aqui para ir à explicação.](/pt/extensiones/UDX-2TEL#conexão-a-linhas-telefônicas)",
       "title": "Conexión de UDX TEL\\+BT a una línea telefónica",
       "level": 2
     }

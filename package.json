@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "links:check": "node scripts/link-health/check-internal-links.mjs"
+  },
   "dependencies": {
     "js-yaml": "^4.1.1",
     "mintlify": "^4.2.876"

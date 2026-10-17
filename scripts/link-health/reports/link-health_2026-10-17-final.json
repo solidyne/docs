@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-17T23:34:58.790Z",
+  "docsRoot": "C:\\SOLIDYNE\\Mintlify\\docs",
+  "appliedSafeFixes": null,
+  "summary": {
+    "analyzedSourcePages": 748,
+    "syntaxErrors": 0,
+    "manualReviewItems": 0,
+    "byKind": {},
+    "byScope": {}
+  },
+  "syntaxErrors": [],
+  "manualReview": []
+}

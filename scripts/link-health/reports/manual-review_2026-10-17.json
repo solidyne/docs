@@ -1,0 +1,1221 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-17T21:34:42.630Z",
+  "docsRoot": "C:\\SOLIDYNE\\Mintlify\\docs",
+  "appliedSafeFixes": {
+    "filesChanged": 50,
+    "actionsApplied": 77,
+    "replacementsApplied": 79,
+    "changes": [
+      {
+        "file": "en/362/362-escenarios.mdx",
+        "from": "/es/362/362-instalacion-audio",
+        "to": "/en/362/362-instalacion-audio",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/362/362-instalacion-audio.mdx",
+        "from": "/es/diagramas/RJ45-pinout",
+        "to": "/en/diagramas/RJ45-pinout",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/accesorios/cables-y-adaptadores/kits-de-cables.mdx",
+        "from": "/es/accesorios/cables-y-adaptadores/catalogo",
+        "to": "/en/accesorios/cables-y-adaptadores/catalogo",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/DX816/816-decoder.mdx",
+        "from": "/es/DX816/816-stl",
+        "to": "/en/DX816/816-stl",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/DX816/816-entradas.mdx",
+        "from": "/es/DX816/816-conexiones-rj45",
+        "to": "/en/DX816/816-conexiones-rj45",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/DX816/816-mantenimiento.mdx",
+        "from": "/es/otros_docs/schematics",
+        "to": "/en/otros_docs/schematics",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/DX816/816-op-bluetooth.mdx",
+        "from": "/es/DX816/816-telco",
+        "to": "/en/DX816/816-telco",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/DX816/816-op-hibrido.mdx",
+        "from": "/en-US/DX816/816-telco",
+        "to": "/en/DX816/816-telco",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/DX816/816-op-monitoreo.mdx",
+        "from": "/en-US/DX816/816-monitoring",
+        "to": "/en/DX816/816-monitoreo",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/DX816/816-salidas.mdx",
+        "from": "/en/DX816/816-rj45-connections",
+        "to": "/en/DX816/816-conexiones-rj45",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/DX816/816-stl.mdx",
+        "from": "/en-US/DX816/816-discovery",
+        "to": "/en/DX816/816-discovery",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-hibridos.mdx",
+        "from": "blt200/blt200-resumen",
+        "to": "/en/blt200/blt200-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-hibridos.mdx",
+        "from": "HL240/hl240-resumen",
+        "to": "/en/HL240/hl240-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-linea-classic.mdx",
+        "from": "612/612-resumen",
+        "to": "/en/612/612-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-linea-classic.mdx",
+        "from": "DX816/816-resumen",
+        "to": "/en/DX816/816-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-linea-classic.mdx",
+        "from": "minimixer/minimixer-resumen",
+        "to": "/en/minimixer/minimixer-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-portatiles.mdx",
+        "from": "mx2100/mx2100-resumen",
+        "to": "/en/mx2100/mx2100-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-portatiles.mdx",
+        "from": "mx2200/mx2200-resumen",
+        "to": "/en/mx2200/mx2200-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-procesadores.mdx",
+        "from": "362/362-resumen",
+        "to": "/en/362/362-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/index-procesadores.mdx",
+        "from": "542/542-resumen",
+        "to": "/en/542/542-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/mx2200/mx2200-config-acceso.mdx",
+        "from": "/es/mx2200/mx2200-discovery",
+        "to": "/en/mx2200/mx2200-discovery",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/mx2200/mx2200-enlace-telefonico.mdx",
+        "from": "/es/mx2200/mx2200-op-lineas-intro",
+        "to": "/en/mx2200/mx2200-op-lineas-intro",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/unidex/instalacion-red.mdx",
+        "from": "/es/unidex/unidex-discovery",
+        "to": "/en/unidex/unidex-discovery",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 2,
+        "replacements": 2
+      },
+      {
+        "file": "en/unidex/instalacion-usb.mdx",
+        "from": "/es/otros_docs/downloads",
+        "to": "/en/otros_docs/downloads",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/unidex/remote-interfaz.mdx",
+        "from": "/es/unidex/instalacion-red",
+        "to": "/en/unidex/instalacion-red",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/unidex/unidex-resumen.mdx",
+        "from": "/en/ux18/ux18-summary",
+        "to": "/en/ux18/ux18-resumen",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/unidex/unidex-resumen.mdx",
+        "from": "/en/ux24/ux24-summary",
+        "to": "/en/ux24/ux24-resumen",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux18/ux18-config-streaming.mdx",
+        "from": "/unidex/unidex_appnote_downstream",
+        "to": "/en/unidex/unidex_appnote_downstream",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux18/ux18-resumen.mdx",
+        "from": "/en/unidex/unidex-overview",
+        "to": "/en/unidex/unidex-resumen",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-cableado_monitoreo",
+        "to": "/en/unidex/instalacion-cableado_monitoreo",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-entradas",
+        "to": "/en/unidex/instalacion-entradas",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-gpio",
+        "to": "/en/unidex/instalacion-gpio",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-red",
+        "to": "/en/unidex/instalacion-red",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-salidas",
+        "to": "/en/unidex/instalacion-salidas",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-usb",
+        "to": "/en/unidex/instalacion-usb",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "en/ux24/ux24-resumen.mdx",
+        "from": "/en/unidex/unidex-summary",
+        "to": "/en/unidex/unidex-resumen",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-hibridos.mdx",
+        "from": "blt200/blt200-resumen",
+        "to": "/es/blt200/blt200-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-hibridos.mdx",
+        "from": "HL240/hl240-resumen",
+        "to": "/es/HL240/hl240-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-linea-classic.mdx",
+        "from": "612/612-resumen",
+        "to": "/es/612/612-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-linea-classic.mdx",
+        "from": "DX816/816-resumen",
+        "to": "/es/DX816/816-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-linea-classic.mdx",
+        "from": "minimixer/minimixer-resumen",
+        "to": "/es/minimixer/minimixer-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-portatiles.mdx",
+        "from": "mx2100/mx2100-resumen",
+        "to": "/es/mx2100/mx2100-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-portatiles.mdx",
+        "from": "mx2200/mx2200-resumen",
+        "to": "/es/mx2200/mx2200-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-procesadores.mdx",
+        "from": "362/362-resumen",
+        "to": "/es/362/362-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/index-procesadores.mdx",
+        "from": "542/542-resumen",
+        "to": "/es/542/542-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "es/ux18/ux18-config-streaming.mdx",
+        "from": "/unidex/unidex_appnote_downstream",
+        "to": "/es/unidex/unidex_appnote_downstream",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/DX816/816-decoder.mdx",
+        "from": "/es/DX816/816-stl",
+        "to": "/pt/DX816/816-stl",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/DX816/816-entradas.mdx",
+        "from": "/es/DX816/816-conexiones-rj45",
+        "to": "/pt/DX816/816-conexiones-rj45",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/DX816/816-mantenimiento.mdx",
+        "from": "/es/otros_docs/schematics",
+        "to": "/pt/otros_docs/schematics",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/DX816/816-op-bluetooth.mdx",
+        "from": "/pt-BR/DX816/816-telco",
+        "to": "/pt/DX816/816-telco",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/DX816/816-op-hibrido.mdx",
+        "from": "/es/DX816/816-telco",
+        "to": "/pt/DX816/816-telco",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/DX816/816-op-monitoreo.mdx",
+        "from": "/pt-BR/DX816/816-monitoracao",
+        "to": "/pt/DX816/816-monitoreo",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/DX816/816-salidas.mdx",
+        "from": "/es/DX816/816-conexiones-rj45",
+        "to": "/pt/DX816/816-conexiones-rj45",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/DX816/816-stl.mdx",
+        "from": "/es/DX816/816-discovery",
+        "to": "/pt/DX816/816-discovery",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-hibridos.mdx",
+        "from": "blt200/blt200-resumen",
+        "to": "/pt/blt200/blt200-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-hibridos.mdx",
+        "from": "HL240/hl240-resumen",
+        "to": "/pt/HL240/hl240-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-linea-classic.mdx",
+        "from": "612/612-resumen",
+        "to": "/pt/612/612-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-linea-classic.mdx",
+        "from": "DX816/816-resumen",
+        "to": "/pt/DX816/816-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-linea-classic.mdx",
+        "from": "minimixer/minimixer-resumen",
+        "to": "/pt/minimixer/minimixer-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-portatiles.mdx",
+        "from": "mx2100/mx2100-resumen",
+        "to": "/pt/mx2100/mx2100-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-portatiles.mdx",
+        "from": "mx2200/mx2200-resumen",
+        "to": "/pt/mx2200/mx2200-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-procesadores.mdx",
+        "from": "362/362-resumen",
+        "to": "/pt/362/362-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/index-procesadores.mdx",
+        "from": "542/542-resumen",
+        "to": "/pt/542/542-resumen",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/unidex/config-entradas-salidas.mdx",
+        "from": "/pt-br/ux18/ux18-doble-talkback",
+        "to": "/pt/ux18/ux18-doble-talkback",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/unidex/instalacion-red.mdx",
+        "from": "/es/unidex/unidex-discovery",
+        "to": "/pt/unidex/unidex-discovery",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 2,
+        "replacements": 2
+      },
+      {
+        "file": "pt/unidex/instalacion-usb.mdx",
+        "from": "/es/otros_docs/downloads",
+        "to": "/pt/otros_docs/downloads",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/unidex/unidex-resumen.mdx",
+        "from": "/pt-br/ux18/ux18-resumo",
+        "to": "/pt/ux18/ux18-resumen",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/unidex/unidex-resumen.mdx",
+        "from": "/pt-br/ux24/ux24-resumo",
+        "to": "/pt/ux24/ux24-resumen",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux18/ux18-config-streaming.mdx",
+        "from": "/unidex/unidex_appnote_downstream",
+        "to": "/pt/unidex/unidex_appnote_downstream",
+        "reason": "filename único dentro del idioma; la ruta actual no coincide",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux18/ux18-resumen.mdx",
+        "from": "/pt-br/unidex/unidex-resumo",
+        "to": "/pt/unidex/unidex-resumen",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-cableado_monitoreo",
+        "to": "/pt/unidex/instalacion-cableado_monitoreo",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-entradas",
+        "to": "/pt/unidex/instalacion-entradas",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-gpio",
+        "to": "/pt/unidex/instalacion-gpio",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-red",
+        "to": "/pt/unidex/instalacion-red",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-salidas",
+        "to": "/pt/unidex/instalacion-salidas",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+        "from": "/es/unidex/instalacion-usb",
+        "to": "/pt/unidex/instalacion-usb",
+        "reason": "misma ruta relativa en el idioma del documento origen",
+        "occurrences": 1,
+        "replacements": 1
+      },
+      {
+        "file": "pt/ux24/ux24-resumen.mdx",
+        "from": "/pt-br/unidex/unidex-resumo",
+        "to": "/pt/unidex/unidex-resumen",
+        "reason": "filename canónico recuperado del enlace equivalente en ES",
+        "occurrences": 1,
+        "replacements": 1
+      }
+    ],
+    "translationCache": {
+      "filesChanged": 37,
+      "actionsApplied": 49,
+      "replacementsApplied": 51,
+      "changes": [
+        {
+          "file": "en/362/362-escenarios.mdx",
+          "from": "/es/362/362-instalacion-audio",
+          "to": "/en/362/362-instalacion-audio",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/362/362-instalacion-audio.mdx",
+          "from": "/es/diagramas/RJ45-pinout",
+          "to": "/en/diagramas/RJ45-pinout",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/accesorios/cables-y-adaptadores/kits-de-cables.mdx",
+          "from": "/es/accesorios/cables-y-adaptadores/catalogo",
+          "to": "/en/accesorios/cables-y-adaptadores/catalogo",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/DX816/816-decoder.mdx",
+          "from": "/es/DX816/816-stl",
+          "to": "/en/DX816/816-stl",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/DX816/816-entradas.mdx",
+          "from": "/es/DX816/816-conexiones-rj45",
+          "to": "/en/DX816/816-conexiones-rj45",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/DX816/816-mantenimiento.mdx",
+          "from": "/es/otros_docs/schematics",
+          "to": "/en/otros_docs/schematics",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/DX816/816-op-bluetooth.mdx",
+          "from": "/es/DX816/816-telco",
+          "to": "/en/DX816/816-telco",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/DX816/816-op-hibrido.mdx",
+          "from": "/en-US/DX816/816-telco",
+          "to": "/en/DX816/816-telco",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/DX816/816-op-monitoreo.mdx",
+          "from": "/en-US/DX816/816-monitoring",
+          "to": "/en/DX816/816-monitoreo",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/DX816/816-salidas.mdx",
+          "from": "/en/DX816/816-rj45-connections",
+          "to": "/en/DX816/816-conexiones-rj45",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/DX816/816-stl.mdx",
+          "from": "/en-US/DX816/816-discovery",
+          "to": "/en/DX816/816-discovery",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/mx2200/mx2200-config-acceso.mdx",
+          "from": "/es/mx2200/mx2200-discovery",
+          "to": "/en/mx2200/mx2200-discovery",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/mx2200/mx2200-enlace-telefonico.mdx",
+          "from": "/es/mx2200/mx2200-op-lineas-intro",
+          "to": "/en/mx2200/mx2200-op-lineas-intro",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/unidex/instalacion-red.mdx",
+          "from": "/es/unidex/unidex-discovery",
+          "to": "/en/unidex/unidex-discovery",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 2,
+          "replacements": 2
+        },
+        {
+          "file": "en/unidex/instalacion-usb.mdx",
+          "from": "/es/otros_docs/downloads",
+          "to": "/en/otros_docs/downloads",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/unidex/remote-interfaz.mdx",
+          "from": "/es/unidex/instalacion-red",
+          "to": "/en/unidex/instalacion-red",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/unidex/unidex-resumen.mdx",
+          "from": "/en/ux18/ux18-summary",
+          "to": "/en/ux18/ux18-resumen",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/unidex/unidex-resumen.mdx",
+          "from": "/en/ux24/ux24-summary",
+          "to": "/en/ux24/ux24-resumen",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux18/ux18-config-streaming.mdx",
+          "from": "/unidex/unidex_appnote_downstream",
+          "to": "/en/unidex/unidex_appnote_downstream",
+          "reason": "filename único dentro del idioma; la ruta actual no coincide",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux18/ux18-resumen.mdx",
+          "from": "/en/unidex/unidex-overview",
+          "to": "/en/unidex/unidex-resumen",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-cableado_monitoreo",
+          "to": "/en/unidex/instalacion-cableado_monitoreo",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-entradas",
+          "to": "/en/unidex/instalacion-entradas",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-gpio",
+          "to": "/en/unidex/instalacion-gpio",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-red",
+          "to": "/en/unidex/instalacion-red",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-salidas",
+          "to": "/en/unidex/instalacion-salidas",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-usb",
+          "to": "/en/unidex/instalacion-usb",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "en/ux24/ux24-resumen.mdx",
+          "from": "/en/unidex/unidex-summary",
+          "to": "/en/unidex/unidex-resumen",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/DX816/816-decoder.mdx",
+          "from": "/es/DX816/816-stl",
+          "to": "/pt/DX816/816-stl",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/DX816/816-entradas.mdx",
+          "from": "/es/DX816/816-conexiones-rj45",
+          "to": "/pt/DX816/816-conexiones-rj45",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/DX816/816-mantenimiento.mdx",
+          "from": "/es/otros_docs/schematics",
+          "to": "/pt/otros_docs/schematics",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/DX816/816-op-bluetooth.mdx",
+          "from": "/pt-BR/DX816/816-telco",
+          "to": "/pt/DX816/816-telco",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/DX816/816-op-hibrido.mdx",
+          "from": "/es/DX816/816-telco",
+          "to": "/pt/DX816/816-telco",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/DX816/816-op-monitoreo.mdx",
+          "from": "/pt-BR/DX816/816-monitoracao",
+          "to": "/pt/DX816/816-monitoreo",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/DX816/816-salidas.mdx",
+          "from": "/es/DX816/816-conexiones-rj45",
+          "to": "/pt/DX816/816-conexiones-rj45",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/DX816/816-stl.mdx",
+          "from": "/es/DX816/816-discovery",
+          "to": "/pt/DX816/816-discovery",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/unidex/config-entradas-salidas.mdx",
+          "from": "/pt-br/ux18/ux18-doble-talkback",
+          "to": "/pt/ux18/ux18-doble-talkback",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/unidex/instalacion-red.mdx",
+          "from": "/es/unidex/unidex-discovery",
+          "to": "/pt/unidex/unidex-discovery",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 2,
+          "replacements": 2
+        },
+        {
+          "file": "pt/unidex/instalacion-usb.mdx",
+          "from": "/es/otros_docs/downloads",
+          "to": "/pt/otros_docs/downloads",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/unidex/unidex-resumen.mdx",
+          "from": "/pt-br/ux18/ux18-resumo",
+          "to": "/pt/ux18/ux18-resumen",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/unidex/unidex-resumen.mdx",
+          "from": "/pt-br/ux24/ux24-resumo",
+          "to": "/pt/ux24/ux24-resumen",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux18/ux18-config-streaming.mdx",
+          "from": "/unidex/unidex_appnote_downstream",
+          "to": "/pt/unidex/unidex_appnote_downstream",
+          "reason": "filename único dentro del idioma; la ruta actual no coincide",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux18/ux18-resumen.mdx",
+          "from": "/pt-br/unidex/unidex-resumo",
+          "to": "/pt/unidex/unidex-resumen",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-cableado_monitoreo",
+          "to": "/pt/unidex/instalacion-cableado_monitoreo",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-entradas",
+          "to": "/pt/unidex/instalacion-entradas",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-gpio",
+          "to": "/pt/unidex/instalacion-gpio",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-red",
+          "to": "/pt/unidex/instalacion-red",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-salidas",
+          "to": "/pt/unidex/instalacion-salidas",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+          "from": "/es/unidex/instalacion-usb",
+          "to": "/pt/unidex/instalacion-usb",
+          "reason": "misma ruta relativa en el idioma del documento origen",
+          "occurrences": 1,
+          "replacements": 1
+        },
+        {
+          "file": "pt/ux24/ux24-resumen.mdx",
+          "from": "/pt-br/unidex/unidex-resumo",
+          "to": "/pt/unidex/unidex-resumen",
+          "reason": "filename canónico recuperado del enlace equivalente en ES",
+          "occurrences": 1,
+          "replacements": 1
+        }
+      ]
+    }
+  },
+  "summary": {
+    "analyzedSourcePages": 748,
+    "syntaxErrors": 0,
+    "manualReviewItems": 25,
+    "byKind": {
+      "missing_page": 10,
+      "missing_anchor": 5,
+      "wrong_language": 10
+    },
+    "byScope": {
+      "en": 8,
+      "es": 7,
+      "pt": 8,
+      "snippets": 2
+    }
+  },
+  "syntaxErrors": [],
+  "manualReview": [
+    {
+      "file": "en/542/542-firmware.mdx",
+      "scope": "en",
+      "kind": "missing_page",
+      "link": "/en/542/542-acceso-web",
+      "suggestion": "ver correccion en ES"
+    },
+    {
+      "file": "en/612/612-op-hibrido.mdx",
+      "scope": "en",
+      "kind": "missing_anchor",
+      "link": "#conferencias",
+      "suggestion": "se debe agregar el marcador en el documento de origen"
+    },
+    {
+      "file": "en/extensiones/studioBox-operacion.mdx",
+      "scope": "en",
+      "kind": "missing_page",
+      "link": "/en/unidex/ux-StudioBox-conexiones",
+      "suggestion": "ver correccion en ES"
+    },
+    {
+      "file": "en/extensiones/udx-tel-bt.mdx",
+      "scope": "en",
+      "kind": "wrong_language",
+      "link": "/es/extensiones/UDX-2TEL#Conexión-a-líneas-telefónicas",
+      "suggestion": "se debe reemplazar el titulo original por el titulo traducido respetando la sintaxis de este tipo de referencias a marcadores"
+    },
+    {
+      "file": "en/extensiones/udx-tel-bt.mdx",
+      "scope": "en",
+      "kind": "wrong_language",
+      "link": "/es/ux18/ux18-op-telco#Operación-con-teléfonos-móviles",
+      "suggestion": "se de"
+    },
+    {
+      "file": "en/extensiones/udx-tel-bt.mdx",
+      "scope": "en",
+      "kind": "wrong_language",
+      "link": "/es/ux24/ux24-op-telco#Operación-con-teléfonos-móviles",
+      "suggestion": "se debe reemplazar el titulo original por el titulo traducido respetando la sintaxis de este tipo de referencias a marcadores"
+    },
+    {
+      "file": "en/ux18/ux18-instalacion-trasero.mdx",
+      "scope": "en",
+      "kind": "missing_page",
+      "link": "/en/puesta-a-tierra",
+      "suggestion": "ver correccion en ES"
+    },
+    {
+      "file": "en/ux24/ux24-instalacion-trasero.mdx",
+      "scope": "en",
+      "kind": "wrong_language",
+      "link": "/en-US/grounding",
+      "suggestion": null
+    },
+    {
+      "file": "es/542/542-firmware.mdx",
+      "scope": "es",
+      "kind": "missing_page",
+      "link": "/es/542/542-acceso-web",
+      "suggestion": "corregido manualmente"
+    },
+    {
+      "file": "es/extensiones/studioBox-operacion.mdx",
+      "scope": "es",
+      "kind": "missing_page",
+      "link": "/es/unidex/ux-StudioBox-conexiones",
+      "suggestion": "corregido manualmente. Se elimino la referencia."
+    },
+    {
+      "file": "es/extensiones/udx-tel-bt.mdx",
+      "scope": "es",
+      "kind": "missing_anchor",
+      "link": "/es/extensiones/UDX-2TEL#Conexión-a-líneas-telefónicas",
+      "suggestion": "funciona correctamente tanto en ejecucion local como desplegado en Mintlify"
+    },
+    {
+      "file": "es/extensiones/udx-tel-bt.mdx",
+      "scope": "es",
+      "kind": "missing_anchor",
+      "link": "/es/ux18/ux18-op-telco#Operación-con-teléfonos-móviles",
+      "suggestion": "funciona correctamente tanto en ejecucion local como desplegado en Mintlify"
+    },
+    {
+      "file": "es/extensiones/udx-tel-bt.mdx",
+      "scope": "es",
+      "kind": "missing_anchor",
+      "link": "/es/ux24/ux24-op-telco#Operación-con-teléfonos-móviles",
+      "suggestion": "funciona correctamente tanto en ejecucion local como desplegado en Mintlify"
+    },
+    {
+      "file": "es/ux18/ux18-instalacion-trasero.mdx",
+      "scope": "es",
+      "kind": "missing_page",
+      "link": "/es/puesta-a-tierra",
+      "suggestion": "corregido manualmente."
+    },
+    {
+      "file": "es/ux24/ux24-instalacion-trasero.mdx",
+      "scope": "es",
+      "kind": "missing_page",
+      "link": "/es/puesta-a-tierra",
+      "suggestion": "corregido manualmente."
+    },
+    {
+      "file": "pt/542/542-firmware.mdx",
+      "scope": "pt",
+      "kind": "missing_page",
+      "link": "/pt/542/542-acesso-web",
+      "suggestion": "ver correccion en ES"
+    },
+    {
+      "file": "pt/612/612-op-hibrido.mdx",
+      "scope": "pt",
+      "kind": "missing_anchor",
+      "link": "#conferencias",
+      "suggestion": "corregido manualmente."
+    },
+    {
+      "file": "pt/extensiones/studioBox-operacion.mdx",
+      "scope": "pt",
+      "kind": "missing_page",
+      "link": "/pt/unidex/ux-StudioBox-conexiones",
+      "suggestion": "ver correccion en ES"
+    },
+    {
+      "file": "pt/extensiones/udx-tel-bt.mdx",
+      "scope": "pt",
+      "kind": "wrong_language",
+      "link": "/es/extensiones/UDX-2TEL#Conexión-a-líneas-telefónicas",
+      "suggestion": "corregido manualmente. No solo esta mal el idioma, sino que es una referencia a un subtitulo dentro de la pagina. Estos casos hay que analizarlos en el script de traduccion pues seguramente no estan contemplados. Un link que hace referencia a un titulo interno, requiere reemplazar el titulo original por el titulo traducido respetando la sintaxis de este tipo de referencias a marcadores"
+    },
+    {
+      "file": "pt/extensiones/udx-tel-bt.mdx",
+      "scope": "pt",
+      "kind": "wrong_language",
+      "link": "/es/ux18/ux18-op-telco#Operación-con-teléfonos-móviles",
+      "suggestion": "IDEM CASO ANTERIOR. Se debe reemplazar el titulo original por el titulo traducido respetando la sintaxis de este tipo de referencias a marcadores"
+    },
+    {
+      "file": "pt/extensiones/udx-tel-bt.mdx",
+      "scope": "pt",
+      "kind": "wrong_language",
+      "link": "/es/ux24/ux24-op-telco#Operación-con-teléfonos-móviles",
+      "suggestion": "Idem CASO ANTERIOR. Se debe reemplazar el titulo original por el titulo traducido respetando la sintaxis de este tipo de referencias a marcadores"
+    },
+    {
+      "file": "pt/ux18/ux18-instalacion-trasero.mdx",
+      "scope": "pt",
+      "kind": "missing_page",
+      "link": "/pt/puesta-a-tierra",
+      "suggestion": "ver correccion en ES"
+    },
+    {
+      "file": "pt/ux24/ux24-instalacion-trasero.mdx",
+      "scope": "pt",
+      "kind": "wrong_language",
+      "link": "/es/puesta-a-tierra",
+      "suggestion": "Corregido manualmente."
+    },
+    {
+      "file": "snippets/discovery-pt.mdx",
+      "scope": "snippets",
+      "kind": "wrong_language",
+      "link": "/es/otros_docs/downloads#herramientas",
+      "suggestion": "Se debe reemplazar el titulo original por el titulo traducido respetando la sintaxis de este tipo de referencias a marcadores"
+    },
+    {
+      "file": "snippets/multi-discovery-pt.mdx",
+      "scope": "snippets",
+      "kind": "wrong_language",
+      "link": "/es/otros_docs/downloads#herramientas",
+      "suggestion": "Se debe"
+    }
+  ]
+}

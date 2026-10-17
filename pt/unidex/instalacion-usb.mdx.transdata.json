@@ -15,7 +15,7 @@
     },
     {
       "hash": "d7c4fc42b1d7189ba5874234282f7f6a67797de9eda984eadad42d2b0c77e7ca",
-      "translation": "### Passos para a instalação:\n\n1. Conectar a porta USB da console ao PC utilizando o cabo **USB A/B** fornecido.\n\n<Danger>\n  O uso de cabos de **baixa qualidade ou danificados** pode fazer com que o computador não reconheça corretamente o dispositivo USB ou o identifique com falhas.\n</Danger>\n\n2. Baixar o driver: [Centro de Downloads](/es/otros_docs/downloads)\n3. Executar o instalador e seguir as instruções.",
+      "translation": "### Passos para a instalação:\n\n1. Conectar a porta USB da console ao PC utilizando o cabo **USB A/B** fornecido.\n\n<Danger>\n  O uso de cabos de **baixa qualidade ou danificados** pode fazer com que o computador não reconheça corretamente o dispositivo USB ou o identifique com falhas.\n</Danger>\n\n2. Baixar o driver: [Centro de Downloads](/pt/otros_docs/downloads)\n3. Executar o instalador e seguir as instruções.",
       "title": "Pasos para la instalación:",
       "level": 3
     },

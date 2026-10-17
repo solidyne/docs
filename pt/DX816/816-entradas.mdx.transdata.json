@@ -9,7 +9,7 @@
     },
     {
       "hash": "3898760be6c1159ef0fee91616dce8edcb5d8b09c4c08d943a5ef69b0d721246",
-      "translation": "### Conexão das entradas balanceadas\n\nAs entradas balanceadas utilizam conectores **RJ45** blindados e requerem cabo multipar blindado categoria 5. Pode ser adquirido o kit de cabos pré-montados **MNGDX822**, que inclui os cabos necessários para a conexão.\n\n<Tip>\n  [Diagramas de pinos e cabos adaptadores para montagem de cabos](/es/DX816/816-conexiones-rj45).\n</Tip>\n\n---",
+      "translation": "### Conexão das entradas balanceadas\n\nAs entradas balanceadas utilizam conectores **RJ45** blindados e requerem cabo multipar blindado categoria 5. Pode ser adquirido o kit de cabos pré-montados **MNGDX822**, que inclui os cabos necessários para a conexão.\n\n<Tip>\n  [Diagramas de pinos e cabos adaptadores para montagem de cabos](/pt/DX816/816-conexiones-rj45).\n</Tip>\n\n---",
       "title": "Conexión de las entradas balanceadas",
       "level": 3
     },
