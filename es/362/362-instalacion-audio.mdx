@@ -20,7 +20,7 @@ tags: ["procesadores", "362", "Audimax 362"]
 | **1**             | Entradas balanceadas (XLR hembra) | \+4 dBu           | balanceadas electrónicamente <br />600 Ohms                                                |
 | **2**             | Entradas no balanceadas (RCA)     | –10 dBV aprox.    | Mayor ganancia, pensadas para señales más débiles. Impedancia 10 KOhms                     |
 | **3**             | Entrada balanceada estéreo (RJ45) | \+4 dBu           | [Diagramas de pines y cables adaptadores para armado de cables](/es/diagramas/RJ45-pinout) |
-| **4**             | Salidas balanceadas (XLR macho)   | \+4 dBu           | balanceadas electrónicamente <br />600 Ohms / 10 KOhms                                     |
+| **4** | Salidas balanceadas (XLR macho) | +4 dBu | balanceadas electrónicamente <br />600 Ohms / 10 KOhms. Entrga el audio procesado de-enfatizado. |
 
 <Info>
   La conexión para XLR es estándar: malla al **pin 1** los conductores internos a **2 (señal \+)** y **3 (señal –)**
@@ -30,13 +30,16 @@ tags: ["procesadores", "362", "Audimax 362"]
 
 El modelo **Audimax 362HD/USB** incluye un módulo opcional para enviar y recibir audio mediante conexión a una PC con un cable USB A/B estándar.
 
-- Al conectarse a un computador con **<sup>Windows©</sup>**, el sistema reconoce automáticamente al procesador e instala los controladores necesarios.\
-  No se requieren drivers adicionales.
-- El equipo es reconocido como una **placa de audio estéreo**:
+- Al conectarse a un computador Windows<sup>©</sup>, el S.O. reconoce automáticamente al procesador e instala los controladores necesarios.<br />No se requieren drivers adicionales.
+- El equipo es reconocido como una **placa de audio estéreo convencional**:
   - Dispositivo de **reproducción USB** → corresponde a la **entrada de audio hacia el procesador**.
   - Dispositivo de **captura USB** → corresponde a la **salida de audio del procesador**.
 
-### Sobre la detección USB
+Señal de audio en USB
+
+La 
+
+### USB y la importancia de una buena conexión a tierra
 
 - Antes de conectar el puerto USB, asegurarse de que la **consola y la PC estén correctamente conectadas a tierra** a través de fichas de alimentación de tres terminales.
 
@@ -45,7 +48,7 @@ El modelo **Audimax 362HD/USB** incluye un módulo opcional para enviar y recibi
   La lectura debe ser 0 V. De lo contrario, podría dañarse la entrada USB del procesador o del computador.
 </Danger>
 
-- Evitar cambiar los cables USB de puerto, ya que Windows puede reasignar el orden de los dispositivos.
+- Evitar cambiar los cables USB de puerto, ya que Windows puede reasignar el orden de los dispositivos o alterar la asignación en el software.
 
 ---
 
