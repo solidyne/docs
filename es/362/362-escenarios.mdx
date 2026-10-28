@@ -1,14 +1,23 @@
 ---
 title: "Escenarios de trabajo"
 description: "Casos de aplicación"
-keywords: ["MPX", "streaming", "acceso remoto", "retransmisión", "modo HD", "AGC", "compresión multibanda"]
-tags: ["procesadores", "362", "Audimax 362"]
+keywords:
+  - "MPX"
+  - "streaming"
+  - "acceso remoto"
+  - "retransmisión"
+  - "modo HD"
+  - "AGC"
+  - "compresión multibanda"
+tags:
+  - "procesadores"
+  - "362"
+  - "Audimax 362"
 ---
 
-## Procesador y codificador estéreo en FM
+## Procesador de  FM
 
-Este es el uso normal como **procesador de audio para FM**.\
-El equipo se ubica en la **planta transmisora** y se conecta, vía **salida MPX**, al transmisor principal.
+Este es el uso normal como **procesador de audio para FM**.<br />El equipo se ubica en la **planta transmisora** y se conecta, vía **salida MPX**, al transmisor principal.
 
 - La **salida MPX secundaria** permite conectar un segundo transmisor de respaldo.
 - La señal de programa ingresa por las **entradas analógicas**.
@@ -19,38 +28,39 @@ El equipo se ubica en la **planta transmisora** y se conecta, vía **salida MPX*
 
 Cuando la planta transmisora está alejada del estudio, el procesador se instala en la planta y recibe el audio de programa (PGM) mediante un enlace punto a punto, que puede ser:
 
-- Audio por RF.
-- Audio digital vía fibra óptica o UHF.
+- Audio analógico por RF.
+- Audio digital vía enlace IP físico o inalámbrico.
 
----
+## FM + streaming 
 
-### Envío USB para streaming externo
-
-Requiere el modelo **Audimax 362HD/USB**.\
-El uso de la conexión **USB es independiente de MPX**, lo que permite usar el mismo procesado de aire también para transmisión por Internet.
-
-- El procesador recibe la señal de programa por las entradas analógicas.
-- Envía el audio procesado a la **salida digital USB** (de-anfatizado) y a las **salidas MPX** (con pre-énfasis).
-- Un computador recibe el audio vía USB para realizar el streaming.
+Para los casos de emisoras de baja potencia que tienen el estudio, el equipo de transmisión y la antena en la misma locación, puede ser útil usar las salidas de audio del procesador como envío de audio a la computadora encargada del streaming, incluso si ésta se encarga del streaming de audio y video. 
 
 De este modo:
 
 - **MPX** → transmisor FM.
-- **USB** → computadora encargada del streaming.
+- **Salidas XLR o USB** → computadora encargada del streaming.
 
-<Note>
-  Se recomienda instalar en el computador un software de **acceso remoto**, para facilitar la supervisión del sistema de streaming.
-</Note>
+<Info>
+  Las salidas de audio XLR y USB (opcional) del equipo son de-enfatizadas, es decir, entregan la señal de audio procesado que se envía al aire vía MPX, pero con compensasión de pre-énfasis. Equivale a tener el audio de la radio sintonizada, pero sin la cadena de transmisión de por medio.
+</Info>
+
+En instalaciones en las que la platnta transmisora está alejada del Estudio, usar las salidas de audio para streaming es poco práctico pues requiere una computadora en planta solo para el streaming de audio. Y si el streaming es audiovisual, requiere un transporte bidireccional entre estudio y planta para traer el audio analógico del Audimax 362. En estos casos es más simple:
+
+- Usar como fuente de audio para streaming la señal sintonizada de aire. Una solución económica y simple, pero requiere buen sintonizador y buena recepción local.
+- Usar un segundo procesador para el streaming. Es la opción recomendada. Un segundo Audimax 362 en modo HD podría cumplir esa función.
+
+<Tip>
+  Hay otras soluciones más costosas y complejas, que escapan del contexto de este análisis. Usar en planta un procesador capaz de generar un stream de audio para traerlo por enlace IP; o una cadena de procesado por sorftware en la misma computadora de streaming.
+</Tip>
 
 ---
 
 ## Retransmisión de streaming entrante en FM
 
-Este esquema también requiere el modelo **Audimax 362HD/USB** y un computador externo.\
-Se utiliza, por ejemplo, en **emisoras repetidoras de señal**.
+Este esquema requiere el modelo **Audimax 362HD/USB** y un computador externo.<br />Se utiliza, por ejemplo, en **emisoras repetidoras de señal**.
 
 - Un computador externo recibe el streaming desde la estación principal (vía Internet o LAN).
-- Lo decodifica y lo envía en **PCM** al procesador a través de la conexión USB.
+- Lo decodifica y lo envía **PCM** al procesador a través de la conexión USB.
 - El Audimax 362 procesa el audio y lo entrega a las **salidas MPX**, que alimentan al transmisor FM.
 
 <Note>
@@ -59,9 +69,13 @@ Se utiliza, por ejemplo, en **emisoras repetidoras de señal**.
 
 ---
 
-## Usos como procesador de audio (modo HD)
+## HD Radio, procesador de streaming y refuerzo de sonido (modo HD)
 
-En **modo HD (High Definition)**, el Audimax 362HD puede utilizarse en aplicaciones que requieren control dinámico o incremento de sonoridad **sin transmisión de FM** (MPX desactivado; ver [Modo HD](/es/362/362-instalacion-audio)).
+En **modo HD (High Definition)**, el Audimax 362HD puede utilizarse en todo tipo de aplicaciones de audio que requieren control dinámico o incremento de sonoridad **sin transmisión de FM** (MPX desactivado; ver [Modo HD](/es/362/362-instalacion-audio)).
+
+<Check>
+  En este modo el procesador desactiva el modo FM y brinda una respuesta en frecuencia completa y elimina el pre-énfasis. 
+</Check>
 
 ### Ejemplos de aplicación:
 
