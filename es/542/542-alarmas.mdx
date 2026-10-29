@@ -7,20 +7,20 @@ tags: ["procesadores", "542"]
 
 ## Alarmas
 
-Se accede desde **SYSTEM → pestaña ALARMS**.
-
-<Danger>
-  Los parámetros que disparan alarmas se basan en la señal del**sintonizador FM** .
-
-  - Si RF Level \< 40 dB o multipath \> 10%, las mediciones no son válidas.
-  - En ese caso, los campos aparecen oscurecidos y no se generan alarmas.
-</Danger>
-
-El 542APC puede enviar alertas por correo electrónico en los siguientes eventos:
+Se accede desde **SYSTEM → pestaña ALARMS**. El 542APC puede enviar alertas por correo electrónico en los siguientes eventos:
 
 1. **AUDIO SILENCE**
 2. **OVERMODULATION**
 3. **LOW RF POWER**
+
+Los parámetros que disparan alarmas se basan en la señal del **sintonizador FM** .
+
+- Si RF Level \<40 dB o multipath >10%, las mediciones no son válidas.
+- En ese caso, los campos aparecen oscurecidos y no se generan alarmas.
+
+<Warning>
+  Los correos se envían desde la cuenta interna solidyne542@solidynepro.com Lógicamente la red a la cual se conecta el 542APC debe contar con acceso a Internet y permisos para el envío de correo. La topología de la red, su configuración y la distribución de los accesos a Internet en Estudio y Planta Transmisora deben ser configurados por técnicos capacitados en la materia.
+</Warning>
 
 ### Configuración de alarmas
 
@@ -60,7 +60,7 @@ El 542APC puede enviar alertas por correo electrónico en los siguientes eventos
 ### Status y Logs
 
 <Frame>
-  ![542 System Status](/images/542_system_status.png)
+  ![542 System Status](/images/542/542_system_status.png)
 </Frame>
 
 - **SYSTEM STATUS**
