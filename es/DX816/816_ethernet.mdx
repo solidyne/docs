@@ -1,0 +1,57 @@
+---
+title: "Conexión Ethernet"
+description: "Conexión y del módulo streamer a la red"
+keywords:
+  - "streamer"
+  - "stl"
+  - "enlace"
+  - "streaming"
+tags:
+  - "consolas de estudio"
+  - "linea Classic"
+  - "DX816/AoIP"
+  - "DX822/AoIP"
+---
+
+## Alimentación de los módulos AoIP
+
+Los módulos AoIP se alimentan desde las conexiones **USB**. Requieren que al menos un USB esté conectado a una computadora **encendida**.
+
+<Warning>
+  Si la consola no está conectada a un computador USB, o si este está apagado, el servicio IP **no estará disponible**.
+</Warning>
+
+<Note>
+  En ausencia de computador, es posible conectar una **fuente de alimentación USB estándar (5V)** para energizar los módulos AoIP.
+</Note>
+
+---
+
+## Conexión a la LAN y acceso
+
+1. Conectar el puerto AoIP de la consola a la red mediante cable **Ethernet**.
+2. Verificar **LEDs** en el conector Ethernet: indican que los módulos AoIP están **alimentados por USB** (al menos un USB a PC encendida o fuente USB externa). Los LEDs deben destellar.
+3. La red asigna **IP por DHCP**. Con IP obtenida, el LED verde de RJ45 queda destellando.<br />Si no hay DHCP, el módulo buscará una **IP libre** (puede demorar unos minutos).
+4. Para conocer la IP asignada, descargar la herramienta **Solidyne Multi-Discovery**.
+
+<Note>
+  **Solidyne Multi-Discovery**
+
+  Para encontrar dispositivos Solidyne en la red y conocer sus direcciones IP [**descargar la herramienta Multi-Discovery**](/es/DX816/816-discovery)(Windows)
+</Note>
+
+5. Abrir un navegador (Firefox/Chrome) e ingresar la **IP** encontrada. Aparecerá el **Panel de Control IP** de la consola.
+
+### Escuchar la IP por audio
+
+Un método alternativo para conocer la IP del módulo streamer /AoIP es conectar la salida de audio AoIP a una entrada balanceada, usando un patch RJ45 a RJ45. 
+
+Cuando se inicializa, el módulo AoIP anuncia por audio la dirección IP actualmente asignada. Como el módulo se alimenta por USB, para que se reinicie y repita la dirección IP será necesario desconectar y volver a conectar el/los puertos USB.
+
+<Card title="IP fija fuera de rango" type="tip">
+  Este método es especialmente útil si el módulo AoIP quedó configurado en una IP fija fuera del rango de la LAN actual. En ese caso, Multi-Discovery no podrá encontrar al equipo, que deberá ser conectado directo al puerto Ethernet de una computadora, usando un cable cruzado, o un hub/router y cables estándar. 
+
+  Tras conocer la IP, la conexión directa permitirá acceder al módulo usando un navegador. 
+</Card>
+
+---

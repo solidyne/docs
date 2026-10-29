@@ -273,6 +273,7 @@
                     "group": "STREAMING",
                     "pages": [
                       "es/DX816/816-streaming",
+                      "es/DX816/816_ethernet",
                       "es/DX816/816-stl",
                       "es/DX816/816-decoder",
                       "es/DX816/816-icecast",
