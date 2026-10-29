@@ -44,12 +44,14 @@ Los módulos AoIP se alimentan desde las conexiones **USB**. Requieren que al me
 
 ### Escuchar la IP por audio
 
-Un método alternativo para conocer la IP del módulo streamer /AoIP es conectar la salida de audio AoIP a una entrada balanceada, usando un patch RJ45 a RJ45. 
+Un método alternativo para conocer la IP del módulo streamer /AoIP es conectar la salida **Audio Out to Bal Line** a una entrada balanceada, usando un patch RJ45 a RJ45 audio. 
 
 Cuando se inicializa, el módulo AoIP anuncia por audio la dirección IP actualmente asignada. Como el módulo se alimenta por USB, para que se reinicie y repita la dirección IP será necesario desconectar y volver a conectar el/los puertos USB.
 
+Escuchando la entrada balanceada se podrá conocer la direccón IP.
+
 <Card title="IP fija fuera de rango" type="tip">
-  Este método es especialmente útil si el módulo AoIP quedó configurado en una IP fija fuera del rango de la LAN actual. En ese caso, Multi-Discovery no podrá encontrar al equipo, que deberá ser conectado directo al puerto Ethernet de una computadora, usando un cable cruzado, o un hub/router y cables estándar. 
+  El metodo de escuchar la IP es especialmente útil si el módulo AoIP quedó configurado en una IP fija fuera del rango de la LAN actual. En ese caso, Multi-Discovery no podrá encontrar al equipo, que deberá ser conectado directo al puerto Ethernet de una computadora, usando un cable cruzado, o un hub/router y cables estándar. 
 
   Tras conocer la IP, la conexión directa permitirá acceder al módulo usando un navegador. 
 </Card>
