@@ -45,7 +45,7 @@
     },
     {
       "hash": "93f34caac3dca2db34b018dd43b0ec58e8325ac32a0c3bb37b8307fc32bf47c3",
-      "translation": "### **INTERCOM**\n\nThe Intercom buttons (see item 6 in the image) are linked to audio outputs from the console to configure advanced talkback circuits. When an Intercom button is pressed, the talkback microphone audio interrupts the audio on the output associated with that Intercom.\n\n<Tip>\n  **Use cases:**\n\n  - Set up differentiated headphone groups to speak to everyone (with Talk-Back) or to a specific group (with Intercom).\n  - Set up a Talk-Back button for a Studio B.\n</Tip>\n\n<Note>\n  **Using HD3 as Intercom**\n\n  Download a guide to install a [Solidyne StudioBox HD3 as Intercom](http://solidyne.dx.com.ar/DW/doc-guides/Studiobox-HD3_as_UX24s_Intercom_set.pdf).\n</Note>",
+      "translation": "### **INTERCOM**\n\nThe Intercom buttons (see item 6 in the image) are linked to audio outputs from the console to configure advanced talkback circuits. When an Intercom button is pressed, the talkback microphone audio interrupts the audio on the output associated with that Intercom.\n\n<Tip>\n  **Use cases:**\n\n  - Set up differentiated headphone groups to speak to everyone (with Talk-Back) or to a specific group (with Intercom).\n  - Set up a Talk-Back button for a Studio B.\n</Tip>\n\n<Note>\n  **Using HD3 as Intercom**\n\n  Download a guide to install a [Solidyne StudioBox HD3 as Intercom](http://solidyne.port0.org/DW/doc-guides/Studiobox-HD3_as_UX24s_Intercom_set.pdf).\n</Note>",
       "title": "**INTERCOM**",
       "level": 3
     },

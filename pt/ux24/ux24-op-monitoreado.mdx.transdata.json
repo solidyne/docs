@@ -45,7 +45,7 @@
     },
     {
       "hash": "93f34caac3dca2db34b018dd43b0ec58e8325ac32a0c3bb37b8307fc32bf47c3",
-      "translation": "### **INTERCOM**\n\nOs botões Intercom (ver item 6 na imagem) são vinculados a saídas de áudio da console para configurar circuitos de talkback avançados. Quando um botão Intercom é pressionado, o áudio do microfone de talkback (Talk-Back) interrompe o áudio na saída associada a esse Intercom.\n\n<Tip>\n  **Casos de aplicação:**\n\n  - Configurar grupos de fones de ouvido diferenciados, para falar com todos (com Talk-Back) ou com um grupo específico (com Intercom).\n  - Configurar um botão Talk-Back para um Estúdio B.\n</Tip>\n\n<Note>\n  **Usar HD3 como Intercom**\n\n  Baixar um guia para instalar uma [Solidyne StudioBox HD3 como Intercom](http://solidyne.dx.com.ar/DW/doc-guides/Studiobox-HD3_as_UX24s_Intercom_set.pdf).\n</Note>",
+      "translation": "### **INTERCOM**\n\nOs botões Intercom (ver item 6 na imagem) são vinculados a saídas de áudio da console para configurar circuitos de talkback avançados. Quando um botão Intercom é pressionado, o áudio do microfone de talkback (Talk-Back) interrompe o áudio na saída associada a esse Intercom.\n\n<Tip>\n  **Casos de aplicação:**\n\n  - Configurar grupos de fones de ouvido diferenciados, para falar com todos (com Talk-Back) ou com um grupo específico (com Intercom).\n  - Configurar um botão Talk-Back para um Estúdio B.\n</Tip>\n\n<Note>\n  **Usar HD3 como Intercom**\n\n  Baixar um guia para instalar uma [Solidyne StudioBox HD3 como Intercom](http://solidyne.port0.org/DW/doc-guides/Studiobox-HD3_as_UX24s_Intercom_set.pdf).\n</Note>",
       "title": "**INTERCOM**",
       "level": 3
     },

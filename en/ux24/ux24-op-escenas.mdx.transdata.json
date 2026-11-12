@@ -63,7 +63,7 @@
     },
     {
       "hash": "d8f31471c6a8fd3c311e25a5890a1df4373a60162a935a4faab34b8735fe7387",
-      "translation": "### Factory Scenes\n\nAny of the 12 scenes can be reset to a default configuration. Additionally, UNIDEX comes from the factory with scenes designed with different configurations and UDX expansions, intended to serve as the foundation or example for creating new configurations.\n\n<Note>\n  Download [infographic about the default scene configuration](http://solidyne.dx.com.ar/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF)\n</Note>",
+      "translation": "### Factory Scenes\n\nAny of the 12 scenes can be reset to a default configuration. Additionally, UNIDEX comes from the factory with scenes designed with different configurations and UDX expansions, intended to serve as the foundation or example for creating new configurations.\n\n<Note>\n  Download [infographic about the default scene configuration](http://solidyne.port0.org/DW/doc-guides/UX24_Quickguide_Inputs_and_Outputs_features.pdf) (PDF)\n</Note>",
       "title": "Escenas de fábrica",
       "level": 3
     },
