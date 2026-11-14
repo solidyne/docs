@@ -511,36 +511,39 @@ async function processFileGranular(esFilePath, targetFilePath, metaPath, targetL
     return { frontmatterStr: frontmatterBlock, frontmatter: fm, body };
   }
 
-  // Traducción de arrays y campos simples
-   async function translateList(arr) {
+  // Las keywords se traducen individualmente: nunca se acepta una respuesta
+  // multilínea o con sintaxis MDX/YAML como valor de frontmatter.
+  function isValidKeyword(value) {
+    const normalized = String(value || "").replace(/\s+/g, " ").trim();
+    return Boolean(normalized) && normalized.length <= 120 && !/[\r\n#*:\[\]{}<>`]/.test(normalized);
+  }
+
+  async function translateList(arr) {
     if (!Array.isArray(arr)) return arr;
-    // Filtrar solo strings no vacías y limpias
-    let cleanArr = arr.filter(e => typeof e === "string" && e.trim().length > 0);
-    if (!cleanArr.length) return [];
-    let joined = cleanArr.join(", ");
-    let translated = (await translateContent(rules, glossary, joined, targetLang)).trim();
-    // Si el LLM devolvió un markdown block/código, fallback al input original limpio
-    if (/no visible text|no hay contenido visible|```|```mdx/i.test(translated)) {
-      return cleanArr; // Fallback sensato
+    const cleanArr = arr
+      .filter((entry) => typeof entry === "string" && entry.trim().length > 0)
+      .map((entry) => entry.trim());
+    const translated = [];
+
+    for (const keyword of cleanArr) {
+      const candidate = await safeTranslateField(keyword, rules, glossary, targetLang, "keyword") || keyword;
+      if (isValidKeyword(candidate)) {
+        translated.push(String(candidate).replace(/\s+/g, " ").trim());
+      } else {
+        console.warn(`⚠️ Keyword inválida recibida del traductor; se conserva el valor original: ${keyword}`);
+        translated.push(keyword);
+      }
     }
-    // Devuelve array, limpia comillas/code y evita entradas vacías/rotas
-    return translated
-      .split(/\s*,\s*/)
-      .map(e =>
-        e
-          .replace(/^[\"'`]+|[\"'`]+$/g, "") // remueve comillas/backtick extremos
-          .replace(/\n+/g, " ") // quita saltos de línea raros
-          .trim()
-      )
-      .filter(Boolean);
+
+    return translated;
   }
 
   function asYamlInlineArray(arr) {
     if (!Array.isArray(arr)) return "[]";
-    // Solo mantiene entradas no vacías y normales
-    let arrClean = arr.filter(Boolean).map(x =>
-      `"${String(x).replace(/\\\"/g, '\\"').replace(/\n/g, ' ').replace(/[`'\\]+/g, '')}"`
-    );
+    // JSON.stringify produce strings YAML válidos y escapa comillas internas.
+    const arrClean = arr
+      .filter(Boolean)
+      .map((value) => JSON.stringify(String(value).replace(/\s+/g, " ").trim()));
     return `[${arrClean.join(", ")}]`;
   }
 
@@ -570,7 +573,12 @@ translation:
       } else {
         continue; // Si campo vacío o no string, lo ignora
       }
-      const regex = new RegExp(`^(${key}:\\s*).*$`, 'm');
+      // Para arrays también se eliminan los ítems de una lista YAML previa.
+      // Sin esto, un valor inline nuevo puede quedar seguido de los `- item`
+      // originales y dejar el frontmatter inválido.
+      const regex = Array.isArray(newVals[key])
+        ? new RegExp(`^(${key}:\\s*).*(?:\\n[\\t ]+-.*)*`, 'm')
+        : new RegExp(`^(${key}:\\s*).*$`, 'm');
       if (result.match(regex)) {
         result = result.replace(regex, `$1${repValue}`);
       } else {
@@ -598,7 +606,7 @@ translation:
       for (let attempts = 0; attempts < 3; attempts++) {
         try {
           // Contexto especial para título/desc
-          let isShort = (fieldName === "title" || fieldName === "description");
+            let isShort = (fieldName === "title" || fieldName === "description" || fieldName === "keyword");
           let customPrompt = isShort
             ? `${rules}\nTranslate only this field (\"${fieldName}\") from Spanish to ${targetLang}.\nField content:\n\"${value}\"\nReturn ONLY the translated text, no extra formatting.`
             : rules;
@@ -781,6 +789,15 @@ translation:
     (outFrontmatterBlock ? `---\n${outFrontmatterBlock.trim()}\n---` : null),
     newContentArr.join("\n\n")
   ].filter(Boolean).join("\n\n").replace(/\n{3,}/g, "\n\n");
+
+  const outputFrontmatter = finalMdx.match(/^---\s*\n([\s\S]*?)\n---/);
+  if (outputFrontmatter) {
+    try {
+      yaml.load(outputFrontmatter[1]);
+    } catch (error) {
+      throw new Error(`Frontmatter inválido; no se escribió ${path.basename(targetFilePath)}: ${error.message}`);
+    }
+  }
 
   console.log("  Total secciones procesadas:", newSectionMeta.length);
   console.log(`  Resumen de secciones — Traducidas: ${translatedSections}, Reusadas: ${reusedSections}, Falladas: ${failedSections}`);
