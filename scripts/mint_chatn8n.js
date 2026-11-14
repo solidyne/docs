@@ -8,7 +8,7 @@ agentInitScript2.innerHTML = `
     "metadata": {}, // Include any custom data to send with each message to your n8n workflow
     "theme": {
       "button": {
-        "backgroundColor": "#51ff2e",
+        "backgroundColor": "#4c5dc3",
         "right": 20,
         "bottom": 20,
         "size": 50,
@@ -68,7 +68,7 @@ agentInitScript2.innerHTML = `
           "placeholder": "Escribe tu consulta / Type your query",
           "backgroundColor": "#ffffff",
           "textColor": "#1e1e1f",
-          "sendButtonColor": "#f36539",
+          "sendButtonColor": "#da8a19",
           "maxChars": 100,
           "maxCharsWarningMessage": "You exceeded the characters limit. Please input less than 100 characters.\\nTe excediste en la cantidad máxima de 50 caracteres",
           "autoFocus": false,
