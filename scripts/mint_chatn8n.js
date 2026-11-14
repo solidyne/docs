@@ -12,7 +12,7 @@ agentInitScript2.innerHTML = `
         "right": 20,
         "bottom": 20,
         "size": 50,
-        "iconColor": "#373434",
+        "iconColor": "ecedec",
         "customIconSrc": "https://www.svgrepo.com/show/339963/chat-bot.svg",
         "customIconSize": 60,
         "customIconBorderRadius": 15,
