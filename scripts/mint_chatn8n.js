@@ -8,7 +8,7 @@ agentInitScript2.innerHTML = `
     "metadata": {}, // Include any custom data to send with each message to your n8n workflow
     "theme": {
       "button": {
-        "backgroundColor": "#4c5dc3",
+        "backgroundColor": "#00569d",
         "right": 20,
         "bottom": 20,
         "size": 50,
@@ -25,7 +25,7 @@ agentInitScript2.innerHTML = `
       "tooltip": {
         "showTooltip": true,
         "tooltipMessage": "Ask AI 🚀",
-        "tooltipBackgroundColor": "#e5ffdb",
+        "tooltipBackgroundColor": "#454545",
         "tooltipTextColor": "#1c1c1c",
         "tooltipFontSize": 15
       },
@@ -34,7 +34,7 @@ agentInitScript2.innerHTML = `
         "avatarBorderRadius": 25,
         "messageBorderRadius": 6,
         "showTitle": true,
-        "title": "SOLIDYNE AI",
+        "title": "Asistente SOLIDYNE",
         "titleAvatarSrc": "https://www.svgrepo.com/show/339963/chat-bot.svg",
         "avatarSize": 34,
         "welcomeMessage": "Hola ! puedes consultar y te responderé solo con información de nuestra documentación.\\n\\nHello! You can ask questions and I will respond with information from the documentation. \\n\\n",
