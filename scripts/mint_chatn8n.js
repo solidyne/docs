@@ -26,7 +26,7 @@ agentInitScript2.innerHTML = `
         "showTooltip": true,
         "tooltipMessage": "Ask AI 🚀",
         "tooltipBackgroundColor": "#454545",
-        "tooltipTextColor": "#1c1c1c",
+        "tooltipTextColor": "#ecedec",
         "tooltipFontSize": 15
       },
       "chatWindow": {
